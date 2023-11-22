@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+    <title>Тимбер Дом - Главная</title>
+    <meta name="description" content="Описание страницы">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.comcss2?family=Unbounded:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header js-header">
+            <div class="header__inner">
+                <div class="header__top">
+                    <div class="header__container container">
+                        <div class="header__row header__row_first">
+                            <div class="header__top-left">
+                                <div class="header__logo-wrapper">
+                                    <a href="/" class="header__logo logo">
+                                        <svg class="logo__img" width="201" height="54" viewBox="0 0 201 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M19.8494 0C8.88688 0 0 8.88689 0 19.8494V28.12C0 34.3884 2.90564 39.9781 7.44352 43.6158V23.6767C7.44352 21.6296 8.53996 19.7393 10.3169 18.7229L30.0478 7.43667C31.8477 6.40714 34.0644 6.43483 35.838 7.50901L39.3523 9.63746C24.8037 16.1521 14.4204 30.2401 13.2747 46.8546C14.4779 47.2769 15.7341 47.5865 17.0307 47.7708C17.8969 31.3789 28.605 17.5641 43.4035 12.0911L52.4274 17.5564C37.3056 19.9043 25.5928 32.4928 24.6785 47.9694H28.4908C29.4763 33.2641 41.5106 21.5396 56.4434 20.9881C56.8469 21.7788 57.067 22.6651 57.067 23.5821V28.5626C46.0869 28.8008 37.1378 37.2402 36.1609 47.9694H39.9852C40.9447 39.3577 48.1754 32.6024 57.067 32.3684V44.8081C62.5409 41.2741 66.1647 35.1202 66.1647 28.12V19.8494C66.1647 8.88688 57.2778 0 46.3153 0H19.8494Z"></path>
+                                            <path d="M81.4264 5.89454H86.1827V21H81.4264V5.89454ZM74.8708 3.80866H92.7384V8.03773H74.8708V3.80866ZM94.7642 21V3.80866H99.4632V18.4901L98.1452 18.215L107.887 3.80866H114.099V21H109.4V6.04353L110.729 6.31859L100.804 21H94.7642ZM142.417 3.80866V21H137.901V5.50487L138.921 5.60802L132.251 21H127.449L120.79 5.66532L121.81 5.55071V21H117.283V3.80866H124.63L130.784 18.5703H128.962L135.082 3.80866H142.417ZM156.292 10.3414C157.698 10.3414 158.875 10.5591 159.822 10.9946C160.769 11.4302 161.476 12.049 161.942 12.8513C162.408 13.6536 162.641 14.5972 162.641 15.6821C162.641 16.7518 162.385 17.6878 161.874 18.4901C161.369 19.2923 160.64 19.9112 159.684 20.3467C158.729 20.7822 157.599 21 156.292 21H145.106L146.436 12.072L145.106 3.80866H161.312V7.41884H148.063L149.863 5.21835L150.963 11.9917L149.782 19.7278L147.96 17.5388H155.673C156.132 17.5388 156.529 17.4624 156.865 17.3096C157.201 17.1491 157.457 16.9199 157.633 16.6219C157.816 16.324 157.908 15.9725 157.908 15.5675C157.908 15.1549 157.816 14.8035 157.633 14.5131C157.457 14.2151 157.197 13.9859 156.854 13.8255C156.517 13.665 156.12 13.5848 155.662 13.5848H148.693V10.3414H156.292ZM179.61 10.6737V14.1349H167.038V10.6737H179.61ZM170.27 12.4043L169.147 19.3152L167.221 17.1491H180.39V21H164.402L165.708 12.4043L164.402 3.80866H180.275V7.65952H167.221L169.147 5.49341L170.27 12.4043ZM192.766 3.80866C194.195 3.80866 195.433 4.05315 196.48 4.54215C197.526 5.03115 198.329 5.72263 198.886 6.61657C199.444 7.51053 199.723 8.54965 199.723 9.73394C199.723 10.9182 199.444 11.9574 198.886 12.8513C198.329 13.7453 197.526 14.4367 196.48 14.9257C195.433 15.4147 194.195 15.6592 192.766 15.6592H185.317V11.8542H192.491C192.995 11.8542 193.431 11.7702 193.798 11.6021C194.164 11.434 194.443 11.1933 194.634 10.88C194.825 10.5591 194.921 10.1771 194.921 9.73394C194.921 9.29842 194.825 8.92404 194.634 8.61077C194.443 8.28987 194.164 8.04537 193.798 7.87727C193.431 7.70154 192.995 7.61367 192.491 7.61367H185.741L187.872 5.41318V21H183.116V3.80866H192.766ZM74.8708 47.4612V39.8053H78.5727L80.0855 39.8512H92.0278L93.2197 39.8053H98.2052V47.4612H93.7584V44H79.3176V47.4612H74.8708ZM78.4466 26.8087H95.2368V42.682H90.4806V28.8029L92.6237 30.9575H80.9795L82.9278 29.3759C83.0348 30.033 83.1036 30.6748 83.1341 31.3013C83.1723 31.9279 83.1914 32.5888 83.1914 33.2841C83.1914 35.0872 83.0348 36.6001 82.7215 37.8226C82.4083 39.0374 81.9384 39.9581 81.3118 40.5847C80.693 41.2035 79.9213 41.513 78.9967 41.513L77.0025 39.8741C77.6138 39.1559 78.0646 38.1779 78.3549 36.9401C78.6453 35.6947 78.7904 34.1513 78.7904 32.3099C78.7904 30.8276 78.6758 28.9939 78.4466 26.8087ZM109.491 44.3782C107.474 44.3782 105.69 44.0038 104.139 43.255C102.596 42.5063 101.4 41.4557 100.552 40.1033C99.7037 38.7433 99.2797 37.1769 99.2797 35.4043C99.2797 33.6317 99.7037 32.0692 100.552 30.7168C101.4 29.3568 102.596 28.3024 104.139 27.5536C105.69 26.8048 107.474 26.4304 109.491 26.4304C111.508 26.4304 113.289 26.8048 114.832 27.5536C116.375 28.3024 117.571 29.3568 118.419 30.7168C119.275 32.0692 119.703 33.6317 119.703 35.4043C119.703 37.1769 119.275 38.7433 118.419 40.1033C117.571 41.4557 116.375 42.5063 114.832 43.255C113.289 44.0038 111.508 44.3782 109.491 44.3782ZM109.491 40.1262C110.592 40.1262 111.547 39.939 112.357 39.5646C113.174 39.1826 113.801 38.6363 114.236 37.9257C114.679 37.2151 114.901 36.3747 114.901 35.4043C114.901 34.434 114.679 33.5935 114.236 32.8829C113.801 32.1724 113.174 31.6299 112.357 31.2555C111.547 30.8735 110.592 30.6824 109.491 30.6824C108.383 30.6824 107.421 30.8735 106.603 31.2555C105.793 31.6299 105.171 32.1724 104.735 32.8829C104.3 33.5935 104.082 34.434 104.082 35.4043C104.082 36.3747 104.3 37.2151 104.735 37.9257C105.171 38.6363 105.793 39.1826 106.603 39.5646C107.421 39.939 108.383 40.1262 109.491 40.1262ZM147.274 26.8087V44H142.759V28.5049L143.779 28.608L137.108 44H132.306L125.648 28.6653L126.668 28.5507V44H122.141V26.8087H129.487L135.642 41.5703H133.819L139.939 26.8087H147.274Z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="header__description">
+                                    Строительство экологичных домов и&nbsp;бань
+                                </div>
+                            </div>
+                            <div class="header__top-right">
+                                <div class="menu header__menu js-menu">
+                                    <div class="menu__backdrop js-menu-backdrop"></div>
+                                    <button class="menu__burger js-menu-burger" type="button" aria-label="Навигационное меню">
+                                        <span class="menu__burger-text">Меню</span>
+                                        <span class="menu__burger-icon"></span>
+                                    </button>
+                                    <div class="menu__popup js-menu-popup" aria-disabled="true">
+                                        <nav class="menu__container">
+                                            <div class="menu__content js-menu-content">
+                                                <ul class="menu__list">
+                                                    <li>
+                                                        <a href="" class="menu__link"><span>О компании</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu__link"><span>Новости и статьи</span></a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="" class="menu__link"><span>Контакты</span></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="menu__bottom">
+                                                <div class="socials menu__socials">
+                                                    <a href="#" class="socials__link" title="Instagram">
+                                                        <svg class="ui-icon ui-icon-instagram socials__icon">
+                                                            <use xlink:href="img/icons.svg#instagram"></use>
+                                                        </svg>
+                                                    </a><a href="#" class="socials__link" title="Youtube">
+                                                        <svg class="ui-icon ui-icon-youtube socials__icon">
+                                                            <use xlink:href="img/icons.svg#youtube"></use>
+                                                        </svg>
+                                                    </a><a href="#" class="socials__link" title="Telegram">
+                                                        <svg class="ui-icon ui-icon-telegram socials__icon">
+                                                            <use xlink:href="img/icons.svg#telegram"></use>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </nav>
+                                        <!-- <button type="button" class="menu__close js-menu-close" aria-label="Закрыть"></button> -->
+                                    </div>
+                                </div>
+                                <div class="header__contacts-wrapper">
+                                    <div class="header__contacts" data-da=".js-contacts-adaptive, 1024.98, first">
+                                        <a href="tel:79215723999" class="header__contacts-phone">+7 (921) 572-39-99</a>
+                                        <div class="header__contacts-button-wrapper">
+                                            <button type="button" class="ui-button ui-button_size_xs ui-button_style_outline header__contacts-button"><span class="ui-button__text">
+                                                    Заказать звонок
+                                                </span><svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                                </svg></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__bottom">
+                    <div class="header__container container">
+                        <div class="header__row header__row_second">
+                            <div class="header__contacts-adaptive js-contacts-adaptive"></div>
+                            <ul class="header__catalog-menu" data-da=".js-menu-content, 1024.98, first">
+                                <li><a href="" class="header__catalog-menu-link">Проекты домов</a></li>
+                                <li><a href="" class="header__catalog-menu-link">Бани</a></li>
+                                <li><a href="" class="header__catalog-menu-link">Построенные дома</a></li>
+                                <li><a href="" class="header__catalog-menu-link">Услуги</a></li>
+                            </ul>
+                            <div class="header__grid-columns">
+                                <button type="button" class="header__control-button header__search-button js-header-search-button">
+                                    <svg class="ui-icon ui-icon-search icon">
+                                        <use xlink:href="img/icons.svg#search"></use>
+                                    </svg>
+                                    <span>Поиск</span>
+                                </button>
+                                <button type="button" class="header__control-button">
+                                    <svg class="ui-icon ui-icon-favorite icon">
+                                        <use xlink:href="img/icons.svg#favorite"></use>
+                                    </svg>
+                                    <span>4</span>
+                                </button>
+                                <button type="button" class="header__control-button">
+                                    <svg class="ui-icon ui-icon-arrows icon">
+                                        <use xlink:href="img/icons.svg#arrows"></use>
+                                    </svg>
+                                    <span>0</span>
+                                </button>
+                            </div>
+                            <div class="header__search js-header-search">
+                                <div class="header__search-backdrop js-header-search-backdrop"></div>
+                                <div class="container">
+                                    <form action="#" class="search-form js-search-form header__search-form">
+                                        <div class="search-form__box">
+                                            <input class="ui-input search-form__input js-search-form-input js-header-search-input" type="text" data-placeholder="Начните вводить поисковый запрос" data-placeholder-mobile="Найти">
+                                            <button type="submit" class="search-form__submit" type="submit" title="Найти">
+                                                <svg class="ui-icon ui-icon-search search-form__submit-icon">
+                                                    <use xlink:href="img/icons.svg#search"></use>
+                                                </svg>
+                                            </button>
+                                            <button class="search-form__clear js-search-form-clear " type="button" title="Очистить">
+                                                <svg class="search-form__clear-icon" width="32" height="32" viewBox="0 0 32 32">
+                                                    <path d="M22.6668 10.4159L21.5842 9.33325L16.0002 14.9173L10.4161 9.33325L9.3335 10.4159L14.9175 15.9999L9.3335 21.584L10.4161 22.6666L16.0002 17.0826L21.5842 22.6666L22.6668 21.584L17.0828 15.9999L22.6668 10.4159Z"></path>
+                                                </svg>
+                                            </button>
+                                        </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <main class="main">
+
+            <section class="section home-section">
+                <div class="home-section__inner">
+                    <!-- <div class="home-section__slider-images-wrapper"> -->
+                    <div class="swiper home-section__slider-images js-home-slider-images">
+
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide home-section__slide-image">
+
+                                <div class="home-section__image-box" data-swiper-parallax-x="30%">
+                                    <img class="home-section__image lazy" data-src="img/home-slider/slide-1.jpg" data-srcset="img/home-slider/slide-1@2x.jpg 2x" width="1068" height="519" alt="">
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide home-section__slide-image">
+
+                                <div class="home-section__image-box" data-swiper-parallax-x="30%">
+                                    <img class="home-section__image lazy" data-src="img/home-slider/slide-2.jpg" data-srcset="img/home-slider/slide-2@2x.jpg 2x" width="1068" height="519" alt="">
+                                </div>
+
+                            </div>
+                            <div class="swiper-slide home-section__slide-image">
+
+                                <div class="home-section__image-box" data-swiper-parallax-x="30%">
+                                    <img class="home-section__image lazy" data-src="img/home-slider/slide-3.jpg" data-srcset="img/home-slider/slide-3@2x.jpg 2x" width="1068" height="519" alt="">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="home-section__control swiper-control">
+                            <div class="swiper-button-prev home-section__slider-prev js-home-slider-prev">
+                                <svg class="ui-icon ui-icon-arrow">
+                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                </svg>
+                            </div>
+                            <div class="swiper-button-next home-section__slider-next js-home-slider-next">
+                                <svg class="ui-icon ui-icon-arrow">
+                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                </svg>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- </div> -->
+                    <div class="home-section__container container">
+                        <div class="swiper home-section__slider js-home-slider">
+
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide home-section__slide">
+
+                                    <div class="home-section__head">
+                                        <div class="home-section__title section-title js-home-slider-title">Дома из бруса</div>
+                                        <div class="home-section__text">Домокомплект из&nbsp;Эко бруса вакууумной сушки</div>
+                                    </div>
+                                    <div class="home-section__bottom">
+                                        <a href="" class="ui-button ui-button_size_sm ui-button_style_outline home-section__button"><span class="ui-button__text">
+
+                                                <span class="u-hidden-mobile">Смотреть</span> проекты
+
+                                            </span><svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                <use xlink:href="img/icons.svg#arrow"></use>
+                                            </svg></a>
+                                        <div class="home-section__price">
+                                            <span>24&nbsp;500&nbsp;руб.&nbsp;за&nbsp;м&sup3;</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide home-section__slide">
+
+                                    <div class="home-section__head">
+                                        <div class="home-section__title section-title js-home-slider-title">Дома из каркаса</div>
+                                        <div class="home-section__text">Домокомплект из&nbsp;деревянного каркаса</div>
+                                    </div>
+                                    <div class="home-section__bottom">
+                                        <a href="" class="ui-button ui-button_size_sm ui-button_style_outline home-section__button"><span class="ui-button__text">
+
+                                                <span class="u-hidden-mobile">Смотреть</span> проекты
+
+                                            </span><svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                <use xlink:href="img/icons.svg#arrow"></use>
+                                            </svg></a>
+                                        <div class="home-section__price">
+                                            <span>21&nbsp;500&nbsp;руб.&nbsp;за&nbsp;м&sup3;</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <div class="swiper-slide home-section__slide">
+
+                                    <div class="home-section__head">
+                                        <div class="home-section__title section-title js-home-slider-title">Дома в&nbsp;стиле шале</div>
+                                        <div class="home-section__text">Домокомплект из&nbsp;деревянного каркаса</div>
+                                    </div>
+                                    <div class="home-section__bottom">
+                                        <a href="" class="ui-button ui-button_size_sm ui-button_style_outline home-section__button"><span class="ui-button__text">
+
+                                                <span class="u-hidden-mobile">Смотреть</span> проекты
+
+                                            </span><svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                <use xlink:href="img/icons.svg#arrow"></use>
+                                            </svg></a>
+                                        <div class="home-section__price">
+                                            <span>24&nbsp;500&nbsp;руб.&nbsp;за&nbsp;м&sup3;</span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="swiper home-section__slider-preview js-home-slider-preview">
+
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide home-section__slider-preview-slide">
+
+                                    <div class="home-section__text js-slider-next-title">Дома из бруса</div>
+
+                                </div>
+                                <div class="swiper-slide home-section__slider-preview-slide">
+
+                                    <div class="home-section__text js-slider-next-title">Дома из каркаса</div>
+
+                                </div>
+                                <div class="swiper-slide home-section__slider-preview-slide">
+
+                                    <div class="home-section__text js-slider-next-title">Дома в&nbsp;стиле шале</div>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section what-building">
+                <div class="container">
+                    <div class="what-building__content content-border">
+                        <h2 class="what-building__title">Что мы строим</h2>
+                        <div class="what-building__text section-title">
+                            <span>Каркасные дома и&nbsp;бани из профилированного</span>
+                            <span>клееного</span>
+                            <img class="what-building__image lazy" data-src="img/what-building/1.png" data-srcset="img/what-building/1@2x.png 2x" width="269" height="64" alt="">
+                            <span>бруса</span>
+                            <img class="what-building__image lazy" data-src="img/what-building/2.png" data-srcset="img/what-building/2@2x.png 2x" width="269" height="64" alt="">
+                            <span>и&nbsp;камня</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section services-section services-section_home">
+                <div class="container">
+                    <div class="services-section__content content-border">
+                        <div class="services-section__row l-grid">
+                            <div class="services-section__column services-section__column_left">
+                                <h2 class="services-section__title section-title">А&nbsp;еще мы строим</h2>
+                                <div class="services-section__button-wrapper">
+                                    <a href="" class="ui-button ui-button_size_sm ui-button_style_outline services-section__button"><span class="ui-button__text">
+                                            Все услуги
+                                        </span><svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                        </svg></a>
+                                </div>
+                            </div>
+                            <div class="services-section__column services-section__column_right">
+                                <div class="swiper services-section__slider js-services-slider">
+
+                                    <div class="swiper-wrapper">
+                                        <div class="project-item services-section__item swiper-slide">
+                                            <a href="#" class="project-item__link"></a>
+                                            <div class="project-item__image-box">
+                                                <img class="project-item__image lazy" data-src="img/what-building/image-1.jpg" data-srcset="img/what-building/image-1@2x.jpg 2x" width="500" height="280" alt="">
+
+                                            </div>
+                                            <div class="project-item__content">
+
+                                                <div class="project-item__title">Бани из экобруса</div>
+
+                                            </div>
+                                        </div>
+                                        <div class="project-item services-section__item swiper-slide">
+                                            <a href="#" class="project-item__link"></a>
+                                            <div class="project-item__image-box">
+                                                <img class="project-item__image lazy" data-src="img/what-building/image-2.jpg" data-srcset="img/what-building/image-2@2x.jpg 2x" width="500" height="280" alt="">
+
+                                            </div>
+                                            <div class="project-item__content">
+
+                                                <div class="project-item__title">Дома в стиле Шале</div>
+
+                                            </div>
+                                        </div>
+                                        <div class="project-item services-section__item swiper-slide">
+                                            <a href="#" class="project-item__link"></a>
+                                            <div class="project-item__image-box">
+                                                <img class="project-item__image lazy" data-src="img/what-building/image-3.jpg" data-srcset="img/what-building/image-3@2x.jpg 2x" width="500" height="280" alt="">
+
+                                            </div>
+                                            <div class="project-item__content">
+
+                                                <div class="project-item__title">Дополнительные услуги</div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section catalog-section">
+                <div class="container">
+                    <div class="catalog-section__content content-border">
+                        <div class="catalog-section__row l-grid l-grid-cols-2">
+                            <div class="catalog-section__column">
+                                <div class="catalog-section__text description">
+                                    <p>
+                                        Благодаря своим высоким качествам, таким как теплоизоляция
+                                        и&nbsp;экологичность, профилированный брус вакуумной сушки, или как его ещё называют&nbsp;&mdash; эко-брус, относится к&nbsp;линейки современных материалов, и&nbsp;является на&nbsp;сегодняшний день лучшим из&nbsp;вариантов массива, применяемых в&nbsp;деревянном строительстве
+                                    </p>
+                                    <div class="read-more js-read-more">
+                                        <div class="read-more__text js-read-more-text">
+
+                                            <p>
+                                                Благодаря своим высоким качествам, таким как теплоизоляция
+                                                и&nbsp;экологичность, профилированный брус вакуумной сушки, или как его ещё называют&nbsp;&mdash; эко-брус, относится к&nbsp;линейки современных материалов, и&nbsp;является на&nbsp;сегодняшний день лучшим из&nbsp;вариантов массива, применяемых в&nbsp;деревянном строительстве
+                                            </p>
+
+                                        </div>
+                                        <button class="read-more__button js-read-more-button">
+                                            <span class="js-read-more-button-text" data-toggle-text="Читать меньше">Читать еще</span>
+                                            <svg class="ui-icon ui-icon-arrow read-more__button-icon">
+                                                <use xlink:href="img/icons.svg#arrow"></use>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="catalog-section__column">
+                                <h2 class="catalog-section__title section-title">Деревянные и&nbsp;каменные дома под&nbsp;ключ</h2>
+                                <div class="tab-menu catalog-section__tab-menu">
+                                    <div class="tab-menu__list">
+                                        <a href="" class="tab-menu__item is-active">Все проекты</a><a href="" class="tab-menu__item">Дома из бруса</a><a href="" class="tab-menu__item">Каркасные дома</a><a href="" class="tab-menu__item">Дома из камня</a><a href="" class="tab-menu__item">Дома в стиле шале</a><a href="" class="tab-menu__item">Бани</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-section__items l-grid l-grid-cols-4">
+                            <div class="project-item catalog-section__project _size_lg">
+                                <a href="#" class="project-item__link"></a>
+                                <div class="project-item__image-box">
+                                    <img class="project-item__image lazy" data-src="img/catalog-section/1.jpg" data-srcset="img/catalog-section/1@2x.jpg 2x" width="500" height="280" alt="">
+
+                                </div>
+                                <div class="project-item__content">
+                                    <div class="project-item__info">
+                                        <div class="project-item__info-item">137 м²</div>
+                                        <div class="project-item__info-item">Брус</div>
+                                        <div class="project-item__controls">
+                                            <button type="button" class="ui-button ui-button_size_sm ui-button_style_outline project-item__control-button" title="Добавить в избранное"><svg class="ui-icon ui-icon-favorite ui-button__icon">
+                                                    <use xlink:href="img/icons.svg#favorite"></use>
+                                                </svg></button>
+                                            <button type="button" class="ui-button ui-button_size_sm ui-button_style_outline project-item__control-button" title="Добавить в сравнение"><svg class="ui-icon ui-icon-arrows ui-button__icon">
+                                                    <use xlink:href="img/icons.svg#arrows"></use>
+                                                </svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="project-item__title">Кернель 137</div>
+                                    <div class="project-item__price-row">
+
+                                        <div class="project-item__price">от 5 950 000 руб.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-item catalog-section__project">
+                                <a href="#" class="project-item__link"></a>
+                                <div class="project-item__image-box">
+                                    <img class="project-item__image lazy" data-src="img/catalog-section/2.jpg" data-srcset="img/catalog-section/2@2x.jpg 2x" width="500" height="280" alt="">
+
+                                </div>
+                                <div class="project-item__content">
+                                    <div class="project-item__info">
+                                        <div class="project-item__info-item">210 м²</div>
+                                        <div class="project-item__info-item">Каркас</div>
+                                        <div class="project-item__controls">
+                                            <button type="button" class="ui-button ui-button_size_sm ui-button_style_outline project-item__control-button" title="Добавить в избранное"><svg class="ui-icon ui-icon-favorite ui-button__icon">
+                                                    <use xlink:href="img/icons.svg#favorite"></use>
+                                                </svg></button>
+                                            <button type="button" class="ui-button ui-button_size_sm ui-button_style_outline project-item__control-button" title="Добавить в сравнение"><svg class="ui-icon ui-icon-arrows ui-button__icon">
+                                                    <use xlink:href="img/icons.svg#arrows"></use>
+                                                </svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="project-item__title">ДЖАМБУ 210</div>
+                                    <div class="project-item__price-row">
+
+                                        <div class="project-item__price">от 3 600 000 руб.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-item catalog-section__project">
+                                <a href="#" class="project-item__link"></a>
+                                <div class="project-item__image-box">
+                                    <img class="project-item__image lazy" data-src="img/catalog-section/3.jpg" data-srcset="img/catalog-section/3@2x.jpg 2x" width="500" height="280" alt="">
+                                    <div class="project-item__tags">
+                                        <div class="project-item__tag">-20%</div>
+                                    </div>
+                                </div>
+                                <div class="project-item__content">
+                                    <div class="project-item__info">
+                                        <div class="project-item__info-item">158 м²</div>
+                                        <div class="project-item__info-item">Каркас</div>
+                                        <div class="project-item__controls">
+                                            <button type="button" class="ui-button ui-button_size_sm ui-button_style_outline project-item__control-button" title="Добавить в избранное"><svg class="ui-icon ui-icon-favorite ui-button__icon">
+                                                    <use xlink:href="img/icons.svg#favorite"></use>
+                                                </svg></button>
+                                            <button type="button" class="ui-button ui-button_size_sm ui-button_style_outline project-item__control-button" title="Добавить в сравнение"><svg class="ui-icon ui-icon-arrows ui-button__icon">
+                                                    <use xlink:href="img/icons.svg#arrows"></use>
+                                                </svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="project-item__title">СЕЙБА 158</div>
+                                    <div class="project-item__price-row">
+
+                                        <div class="project-item__price">от 3 900 000 руб.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-item catalog-section__project">
+                                <a href="#" class="project-item__link"></a>
+                                <div class="project-item__image-box">
+                                    <img class="project-item__image lazy" data-src="img/catalog-section/4.jpg" data-srcset="img/catalog-section/4@2x.jpg 2x" width="500" height="280" alt="">
+                                    <div class="project-item__tags">
+                                        <div class="project-item__tag">-20%</div>
+                                    </div>
+                                </div>
+                                <div class="project-item__content">
+                                    <div class="project-item__info">
+                                        <div class="project-item__info-item">70 м²</div>
+                                        <div class="project-item__info-item">Каркас</div>
+                                        <div class="project-item__controls">
+                                            <button type="button" class="ui-button ui-button_size_sm ui-button_style_outline project-item__control-button" title="Добавить в избранное"><svg class="ui-icon ui-icon-favorite ui-button__icon">
+                                                    <use xlink:href="img/icons.svg#favorite"></use>
+                                                </svg></button>
+                                            <button type="button" class="ui-button ui-button_size_sm ui-button_style_outline project-item__control-button" title="Добавить в сравнение"><svg class="ui-icon ui-icon-arrows ui-button__icon">
+                                                    <use xlink:href="img/icons.svg#arrows"></use>
+                                                </svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="project-item__title">ГИНКГО 70</div>
+                                    <div class="project-item__price-row">
+                                        <div class="project-item__old-price">от 4 600 000 руб.</div>
+                                        <div class="project-item__price">от 1 800 000 руб.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-item catalog-section__project">
+                                <a href="#" class="project-item__link"></a>
+                                <div class="project-item__image-box">
+                                    <img class="project-item__image lazy" data-src="img/catalog-section/5.jpg" data-srcset="img/catalog-section/5@2x.jpg 2x" width="500" height="280" alt="">
+
+                                </div>
+                                <div class="project-item__content">
+                                    <div class="project-item__info">
+                                        <div class="project-item__info-item">178 м²</div>
+                                        <div class="project-item__info-item">Каркас</div>
+                                        <div class="project-item__controls">
+                                            <button type="button" class="ui-button ui-button_size_sm ui-button_style_outline project-item__control-button" title="Добавить в избранное"><svg class="ui-icon ui-icon-favorite ui-button__icon">
+                                                    <use xlink:href="img/icons.svg#favorite"></use>
+                                                </svg></button>
+                                            <button type="button" class="ui-button ui-button_size_sm ui-button_style_outline project-item__control-button" title="Добавить в сравнение"><svg class="ui-icon ui-icon-arrows ui-button__icon">
+                                                    <use xlink:href="img/icons.svg#arrows"></use>
+                                                </svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="project-item__title">БУРМИС 178</div>
+                                    <div class="project-item__price-row">
+
+                                        <div class="project-item__price">от 3 600 000 руб.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-item catalog-section__project">
+                                <a href="#" class="project-item__link"></a>
+                                <div class="project-item__image-box">
+                                    <img class="project-item__image lazy" data-src="img/catalog-section/6.jpg" data-srcset="img/catalog-section/6@2x.jpg 2x" width="500" height="280" alt="">
+
+                                </div>
+                                <div class="project-item__content">
+                                    <div class="project-item__info">
+                                        <div class="project-item__info-item">214 м²</div>
+                                        <div class="project-item__info-item">Каркас</div>
+                                        <div class="project-item__controls">
+                                            <button type="button" class="ui-button ui-button_size_sm ui-button_style_outline project-item__control-button" title="Добавить в избранное"><svg class="ui-icon ui-icon-favorite ui-button__icon">
+                                                    <use xlink:href="img/icons.svg#favorite"></use>
+                                                </svg></button>
+                                            <button type="button" class="ui-button ui-button_size_sm ui-button_style_outline project-item__control-button" title="Добавить в сравнение"><svg class="ui-icon ui-icon-arrows ui-button__icon">
+                                                    <use xlink:href="img/icons.svg#arrows"></use>
+                                                </svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="project-item__title">ПРОЕКТ ТД-11</div>
+                                    <div class="project-item__price-row">
+
+                                        <div class="project-item__price">от 3 700 000 руб.</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="project-item catalog-section__project">
+                                <a href="#" class="project-item__link"></a>
+                                <div class="project-item__image-box">
+                                    <img class="project-item__image lazy" data-src="img/catalog-section/7.jpg" data-srcset="img/catalog-section/7@2x.jpg 2x" width="500" height="280" alt="">
+
+                                </div>
+                                <div class="project-item__content">
+                                    <div class="project-item__info">
+                                        <div class="project-item__info-item">158 м²</div>
+                                        <div class="project-item__info-item">Брус</div>
+                                        <div class="project-item__controls">
+                                            <button type="button" class="ui-button ui-button_size_sm ui-button_style_outline project-item__control-button" title="Добавить в избранное"><svg class="ui-icon ui-icon-favorite ui-button__icon">
+                                                    <use xlink:href="img/icons.svg#favorite"></use>
+                                                </svg></button>
+                                            <button type="button" class="ui-button ui-button_size_sm ui-button_style_outline project-item__control-button" title="Добавить в сравнение"><svg class="ui-icon ui-icon-arrows ui-button__icon">
+                                                    <use xlink:href="img/icons.svg#arrows"></use>
+                                                </svg></button>
+                                        </div>
+                                    </div>
+                                    <div class="project-item__title">ПРОЕКТ СЕЙБА 158</div>
+                                    <div class="project-item__price-row">
+
+                                        <div class="project-item__price">от 3 900 000 руб.</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="catalog-section__all">
+                            <a href="" class="ui-button ui-button_size_sm ui-button_style_outline catalog-section__all-button"><span class="ui-button__text">
+                                    Все проекты
+                                </span><svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                </svg></a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section_bg about-section">
+                <div class="container">
+                    <div class="about-section__content">
+                        <div class="about-section__row l-grid l-grid-cols-2">
+                            <div class="about-section__column">
+                                <div class="about-section__leader">
+                                    <div class="about-section__leader-content">
+                                        <div class="about-section__leader-name">Павел Арутюнян</div>
+                                        <div class="about-section__leader-position">Руководитель компании «Тимбердом»</div>
+                                    </div>
+                                    <div class="about-section__leader-photo">
+                                        <img class="about-section__leader-photo-image lazy" data-src="img/about-section/leader-photo.png" data-srcset="img/about-section/leader-photo@2x.png 2x" width="350" height="350" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="about-section__column">
+                                <h2 class="about-section__title section-title section-title_size_sm">Тимбер дом&nbsp;&mdash; мы&nbsp;строим дома из&nbsp;сухого профилированного бруса</h2>
+                                <div class="about-section__text description">
+                                    <p>Профессионализм не&nbsp;нуждается в&nbsp;дополнительных подтверждениях&nbsp;&mdash; опыт и&nbsp;мастерство наших специалистов говорят сами за&nbsp;себя. Вся продукция проходит тщательное исследование перед поступлением
+                                        на&nbsp;стройплощадку.</p>
+                                </div>
+                                <div class="about-section__button-wrapper">
+                                    <a href="" class="ui-button ui-button_size_sm ui-button_style_outline about-section__button"><span class="ui-button__text">
+                                            О компании
+                                        </span><svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                        </svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section_bg why-us">
+                <div class="container">
+                    <div class="why-us__content content-border">
+                        <h2 class="why-us__title section-title">Почему мы?</h2>
+                        <div class="why-us__row l-grid l-grid-cols-2">
+                            <div class="why-us__column">
+                                <div class="why-us__advantage why-us__advantage_main">
+                                    <div class="why-us__advantage-icon-box">
+                                        <img class="why-us__advantage-icon lazy" data-src="img/why-us/advantage-1.svg" width="96" height="96" alt="">
+                                    </div>
+                                    <div class="why-us__advantage-title">Собственное производство</div>
+                                </div>
+                                <div class="why-us__text description">
+                                    <p>Дома из&nbsp;бруса &laquo;Тимбер дом&raquo;&nbsp;&mdash; практично, надежно, реально! Мы&nbsp;не&nbsp;голословны в&nbsp;своих утверждениях, приглашаем Вас в&nbsp;галерею построенных объектов</p>
+                                </div>
+                                <div class="why-us__button-wrapper">
+                                    <a href="" class="ui-button ui-button_size_sm ui-button_style_outline why-us__button"><span class="ui-button__text">
+                                            Подробнее
+                                        </span><svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                        </svg></a>
+                                </div>
+                            </div>
+                            <div class="why-us__column">
+                                <div class="why-us__items l-grid l-grid-cols-2">
+                                    <div class="why-us__advantage">
+                                        <div class="why-us__advantage-icon-box">
+                                            <img class="why-us__advantage-icon lazy" data-src="img/why-us/advantage-2.svg" width="96" height="96" alt="">
+                                        </div>
+                                        <div class="why-us__advantage-title">Технический надзор</div>
+                                    </div>
+                                    <div class="why-us__advantage">
+                                        <div class="why-us__advantage-icon-box">
+                                            <img class="why-us__advantage-icon lazy" data-src="img/why-us/advantage-3.svg" width="96" height="96" alt="">
+                                        </div>
+                                        <div class="why-us__advantage-title">Экологически чистые материалы</div>
+                                    </div>
+                                    <div class="why-us__advantage">
+                                        <div class="why-us__advantage-icon-box">
+                                            <img class="why-us__advantage-icon lazy" data-src="img/why-us/advantage-4.svg" width="96" height="96" alt="">
+                                        </div>
+                                        <div class="why-us__advantage-title">Гарантия на все работы</div>
+                                    </div>
+                                    <div class="why-us__advantage">
+                                        <div class="why-us__advantage-icon-box">
+                                            <img class="why-us__advantage-icon lazy" data-src="img/why-us/advantage-5.svg" width="96" height="96" alt="">
+                                        </div>
+                                        <div class="why-us__advantage-title">Доступные цены</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section_bg reviews-section">
+                <div class="container">
+                    <div class="reviews-section__content content-border">
+                        <div class="reviews-section__row l-grid">
+                            <div class="reviews-section__column reviews-section__column_content">
+                                <h2 class="reviews-section__title section-title">Отзывы клиентов</h2>
+                            </div>
+                            <div class="reviews-section__column reviews-section__column_slider">
+                                <div class="swiper reviews-section__slider js-reviews-slider">
+
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide reviews-section__item">
+
+                                            <a href="#" class="reviews-section__item-link">
+                                                <img class="reviews-section__item-image lazy" data-src="img/reviews/review-1.png" data-srcset="img/reviews/review-1@2x.png 2x" width="186" height="265" alt="">
+                                            </a>
+
+                                        </div>
+                                        <div class="swiper-slide reviews-section__item">
+
+                                            <a href="#" class="reviews-section__item-link">
+                                                <img class="reviews-section__item-image lazy" data-src="img/reviews/review-2.png" data-srcset="img/reviews/review-2@2x.png 2x" width="186" height="265" alt="">
+                                            </a>
+
+                                        </div>
+                                        <div class="swiper-slide reviews-section__item">
+
+                                            <a href="#" class="reviews-section__item-link">
+                                                <img class="reviews-section__item-image lazy" data-src="img/reviews/review-3.png" data-srcset="img/reviews/review-3@2x.png 2x" width="186" height="265" alt="">
+                                            </a>
+
+                                        </div>
+                                        <div class="swiper-slide reviews-section__item">
+
+                                            <a href="#" class="reviews-section__item-link">
+                                                <img class="reviews-section__item-image lazy" data-src="img/reviews/review-4.png" data-srcset="img/reviews/review-4@2x.png 2x" width="186" height="265" alt="">
+                                            </a>
+
+                                        </div>
+                                        <div class="swiper-slide reviews-section__item">
+
+                                            <a href="#" class="reviews-section__item-link">
+                                                <img class="reviews-section__item-image lazy" data-src="img/reviews/review-1.png" data-srcset="img/reviews/review-1@2x.png 2x" width="186" height="265" alt="">
+                                            </a>
+
+                                        </div>
+                                        <div class="swiper-slide reviews-section__item">
+
+                                            <a href="#" class="reviews-section__item-link">
+                                                <img class="reviews-section__item-image lazy" data-src="img/reviews/review-2.png" data-srcset="img/reviews/review-2@2x.png 2x" width="186" height="265" alt="">
+                                            </a>
+
+                                        </div>
+                                        <div class="swiper-slide reviews-section__item">
+
+                                            <a href="#" class="reviews-section__item-link">
+                                                <img class="reviews-section__item-image lazy" data-src="img/reviews/review-3.png" data-srcset="img/reviews/review-3@2x.png 2x" width="186" height="265" alt="">
+                                            </a>
+
+                                        </div>
+                                        <div class="swiper-slide reviews-section__item">
+
+                                            <a href="#" class="reviews-section__item-link">
+                                                <img class="reviews-section__item-image lazy" data-src="img/reviews/review-4.png" data-srcset="img/reviews/review-4@2x.png 2x" width="186" height="265" alt="">
+                                            </a>
+
+                                        </div>
+                                        <div class="swiper-slide reviews-section__item">
+
+                                            <a href="#" class="reviews-section__item-link">
+                                                <img class="reviews-section__item-image lazy" data-src="img/reviews/review-1.png" data-srcset="img/reviews/review-1@2x.png 2x" width="186" height="265" alt="">
+                                            </a>
+
+                                        </div>
+                                        <div class="swiper-slide reviews-section__item">
+
+                                            <a href="#" class="reviews-section__item-link">
+                                                <img class="reviews-section__item-image lazy" data-src="img/reviews/review-2.png" data-srcset="img/reviews/review-2@2x.png 2x" width="186" height="265" alt="">
+                                            </a>
+
+                                        </div>
+                                        <div class="swiper-slide reviews-section__item">
+
+                                            <a href="#" class="reviews-section__item-link">
+                                                <img class="reviews-section__item-image lazy" data-src="img/reviews/review-3.png" data-srcset="img/reviews/review-3@2x.png 2x" width="186" height="265" alt="">
+                                            </a>
+
+                                        </div>
+                                        <div class="swiper-slide reviews-section__item">
+
+                                            <a href="#" class="reviews-section__item-link">
+                                                <img class="reviews-section__item-image lazy" data-src="img/reviews/review-4.png" data-srcset="img/reviews/review-4@2x.png 2x" width="186" height="265" alt="">
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="reviews-section__slider-control swiper-control">
+                                        <div class="swiper-button-prev reviews-section__slider-prev js-reviews-slider-prev">
+                                            <svg class="ui-icon ui-icon-arrow">
+                                                <use xlink:href="img/icons.svg#arrow"></use>
+                                            </svg>
+                                        </div>
+                                        <div class="swiper-button-next reviews-section__slider-next js-reviews-slider-next">
+                                            <svg class="ui-icon ui-icon-arrow">
+                                                <use xlink:href="img/icons.svg#arrow"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section_bg advantages-section advantages-section_home">
+                <div class="container">
+                    <div class="advantages-section__content content-border">
+                        <div class="advantages-section__main-title">Технология</div>
+                        <div class="advantages-section__title section-title">
+                            <div>
+                                <span>Преимущества</span><span>строительства домов <span class="u-hidden-mobile">и бань</span></span>
+                            </div>
+                            <img class="advantages-section__title-image advantages-section__title-image_1 lazy" data-src="img/advantages/title-image-1.png" data-srcset="img/advantages/title-image-1@2x.png 2x" width="306" height="64" alt="">
+                            <span>из эко бруса</span>
+                            <img class="advantages-section__title-image advantages-section__title-image_2 lazy" data-src="img/advantages/title-image-2.png" data-srcset="img/advantages/title-image-2@2x.png 2x" width="306" height="64" alt="">
+                            <span>и&nbsp;камня</span>
+                        </div>
+                        <div class="advantages-section__rows-wrapper">
+                            <div class="advantages-section__row l-grid l-grid-cols-2">
+                                <div class="advantages-section__column">
+                                    <div class="advantages-section__text description">
+                                        <p>Основное преимущество домов и&nbsp;бань из&nbsp;ЭКО бруса вакуумной сушки, перед клееным брусом&nbsp;&mdash; это отсутствие клеевых соединений. Даже самый современный клей имеет в&nbsp;своём составе вредные для человека элементы, которые выделяются при работе отопления, пусть в&nbsp;допустимых по&nbsp;нормам количествах.</p>
+                                        <p>Эко-брус является массивом, в&nbsp;нашем случае массивом отборной ели, поэтому в&nbsp;стенах своего дома или бани, Вы&nbsp;увидите только материал высочайшего качества, прошедший несколько этапов сортировки.</p>
+
+                                        <div class="read-more js-read-more">
+                                            <div class="read-more__text js-read-more-text">
+
+                                                <p>Так как все изменения геометрии происходят в&nbsp;вакуумной камере при сушке, стеновой комплект получается по&nbsp;точности исполнения близким к&nbsp;идеалу.</p>
+                                                <p>Стоимость строительства, если рассматривать дом под ключ из&nbsp;эко бруса вакуумной сушки, будет горазда более приемлемой по&nbsp;цене чем стоимость строительства из&nbsp;бруса клееного.</p>
+
+                                            </div>
+                                            <button class="read-more__button js-read-more-button">
+                                                <span class="js-read-more-button-text" data-toggle-text="Читать меньше">Читать еще</span>
+                                                <svg class="ui-icon ui-icon-arrow read-more__button-icon">
+                                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="advantages-section__column">
+                                    <div class="advantages-section__images advantages-section__images_1">
+                                        <div class="advantages-section__images-column advantages-section__images-column_large">
+                                            <div class="advantages-section__image-box _size_big">
+                                                <img class="advantages-section__image lazy" data-src="img/advantages/forest.jpg" data-srcset="img/advantages/forest@2x.jpg 2x" width="459" height="520" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="advantages-section__images-column">
+                                            <div class="advantages-section__image-box _size_sm">
+                                                <img class="advantages-section__image lazy" data-src="img/advantages/house-1.jpg" data-srcset="img/advantages/house-1@2x.jpg 2x" width="226" height="255" alt="">
+                                            </div>
+                                            <div class="advantages-section__image-box _size_sm">
+                                                <img class="advantages-section__image lazy" data-src="img/advantages/house-2.jpg" data-srcset="img/advantages/house-2@2x.jpg 2x" width="226" height="255" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="advantages-section__row l-grid l-grid-cols-2">
+                                <div class="advantages-section__column">
+                                    <div class="advantages-section__text description">
+                                        <h3>Дома в&nbsp;стиле Шале</h3>
+                                        <p>Комбинация различных материалов, таких например
+                                            как дерево и&nbsp;камень, всегда даёт великолепный эстетических эффект. Эко-брус широко применяется при строительстве деревянных домов в&nbsp;стиле шале. Он&nbsp;имеет схожую усадку
+                                            с&nbsp;клееным брусом и&nbsp;идентичный внешний вид. Дома из&nbsp;эко-бруса сочетают в&nbsp;себе самые хорошие характеристики дерева</p>
+
+                                        <div class="read-more js-read-more">
+                                            <div class="read-more__text js-read-more-text">
+
+                                                <ul>
+                                                    <li>простота создания построек;</li>
+                                                    <li>скорость проведения работ;</li>
+                                                    <li>долговечность;</li>
+                                                    <li>эстетический внешний вид;</li>
+                                                    <li>показатель усадки составляет менее&nbsp;3%.</li>
+                                                </ul>
+                                                <p>Отдельно нужно выделить вопрос о&nbsp;пожаробезопасности. Последние исследования доказали, что эксплуатация деревянных домов обработанных новыми противопожарными материалами менее подвержены риску возгорания. Показатели стойкости профилированного бруса вакуумной сушки выше, чем значения сопротивляемости металлоконструкций, которые при воздействии температуры приобретают мягкость, в&nbsp;отличие от&nbsp;бруса. Именно поэтому таким балкам присваивается высокий класс пожаробезопасности &laquo;R&nbsp;6&raquo;.</p>
+                                                <p>Брус в&nbsp;камере находится в&nbsp;парах освобожденной влаги и&nbsp;благодаря этому наружные слои бруса размягчаются и&nbsp;растрескивание появляется минимальное.</p>
+                                                <h3>Технология вакуумной сушки бруса</h3>
+                                                <p>Брус в&nbsp;камере находится в&nbsp;парах освобожденной влаги и&nbsp;благодаря этому наружные слои бруса размягчаются и&nbsp;растрескивание появляется минимальное. Мы&nbsp;греем брус при помощи&nbsp;ИК излучателей, которые прокладываем между рядами.</p>
+
+                                            </div>
+                                            <button class="read-more__button js-read-more-button">
+                                                <span class="js-read-more-button-text" data-toggle-text="Читать меньше">Читать еще</span>
+                                                <svg class="ui-icon ui-icon-arrow read-more__button-icon">
+                                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="advantages-section__column">
+                                    <div class="advantages-section__images advantages-section__images_2">
+                                        <div class="advantages-section__images-column advantages-section__images-column_large">
+                                            <div class="advantages-section__image-box _size_big">
+                                                <img class="advantages-section__image lazy" data-src="img/advantages/chalet.jpg" data-srcset="img/advantages/chalet@2x.jpg 2x" width="459" height="520" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="advantages-section__images-column">
+                                            <div class="advantages-section__image-box _size_sm">
+                                                <img class="advantages-section__image lazy" data-src="img/advantages/material.jpg" data-srcset="img/advantages/material@2x.jpg 2x" width="226" height="217" alt="">
+                                            </div>
+                                            <div class="advantages-section__image-box _size_sm">
+                                                <img class="advantages-section__image lazy" data-src="img/advantages/material-2.jpg" data-srcset="img/advantages/material-2@2x.jpg 2x" width="226" height="217" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section_bg completed-projects">
+                <div class="completed-projects__inner">
+                    <div class="container">
+                        <div class="completed-projects__content">
+                            <div class="completed-projects__images">
+                                <div class="completed-projects__image-box completed-projects__image-box_1 _size_sm">
+                                    <img class="completed-projects__image lazy" data-src="img/completed-projects/image-1.jpg" data-srcset="img/completed-projects/image-1@2x.jpg 2x" width="108" height="60" alt="">
+                                </div>
+                                <div class="completed-projects__image-box completed-projects__image-box_2 _size_lg">
+                                    <img class="completed-projects__image lazy" data-src="img/completed-projects/image-2.jpg" data-srcset="img/completed-projects/image-2@2x.jpg 2x" width="225" height="126" alt="">
+                                </div>
+                                <div class="completed-projects__image-box completed-projects__image-box_3 _size_lg">
+                                    <img class="completed-projects__image lazy" data-src="img/completed-projects/image-3.jpg" data-srcset="img/completed-projects/image-3@2x.jpg 2x" width="225" height="126" alt="">
+                                </div>
+                                <div class="completed-projects__image-box completed-projects__image-box_4 _size_sm">
+                                    <img class="completed-projects__image lazy" data-src="img/completed-projects/image-4.jpg" data-srcset="img/completed-projects/image-4@2x.jpg 2x" width="108" height="60" alt="">
+                                </div>
+                            </div>
+                            <div class="completed-projects__image-box-main">
+                                <img class="completed-projects__image lazy" data-src="img/completed-projects/image-main.jpg" data-srcset="img/completed-projects/image-main@2x.jpg 2x" width="460" height="260" alt="">
+                            </div>
+                            <div class="completed-projects__title-wrapper">
+                                <div class="completed-projects__title section-title">
+                                    <span>Наши</span>
+                                    <span>реализованные</span>
+                                    <span>объекты</span>
+                                    <a href="" class="ui-button ui-button_size_sm ui-button_style_outline completed-projects__button"><span class="ui-button__text">
+                                            Смотреть
+                                        </span><svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                        </svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section_bg articles-section">
+                <div class="container">
+                    <div class="articles-section__content content-border">
+                        <div class="articles-section__row l-grid">
+                            <div class="articles-section__column">
+                                <h2 class="articles-section__title section-title">Новости и&nbsp;статьи</h2>
+                            </div>
+                            <div class="articles-section__column">
+                                <div class="articles-section__items l-grid l-gap-40">
+                                    <article class="article-item articles-section__item">
+                                        <div class="article-item__head">
+                                            <div class="article-item__date">11 янв 2024</div>
+
+                                        </div>
+                                        <div class="article-item__content">
+                                            <div class="article-item__title">
+                                                <a href="#" class="article-item__title-link">Каркасное домостроение</a>
+                                            </div>
+                                            <div class="article-item__text">
+                                                <p>Финские технологии потребительского сегмента известны свой добротностью, основательностью и&nbsp;удобством</p>
+                                            </div>
+                                            <a href="#" class="article-item__read-more">
+                                                <span>Читать далее</span>
+                                                <svg class="ui-icon ui-icon-arrow">
+                                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div class="article-item__image-box">
+                                            <a href="" class="article-item__image-link" tabindex="-1">
+                                                <img class="article-item__image lazy" data-src="img/articles-section/image-1.jpg" data-srcset="img/articles-section/image-1@2x.jpg 2x" width="600" height="350" alt="">
+                                            </a>
+                                        </div>
+                                    </article>
+                                    <article class="article-item articles-section__item">
+                                        <div class="article-item__head">
+                                            <div class="article-item__date">21 дек 2023</div>
+
+                                        </div>
+                                        <div class="article-item__content">
+                                            <div class="article-item__title">
+                                                <a href="#" class="article-item__title-link">Кровля: качество превыше всего</a>
+                                            </div>
+                                            <div class="article-item__text">
+                                                <p>Кровля&nbsp;&mdash; надежная защита здания от&nbsp;любых внешних воздействий</p>
+                                            </div>
+                                            <a href="#" class="article-item__read-more">
+                                                <span>Читать далее</span>
+                                                <svg class="ui-icon ui-icon-arrow">
+                                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div class="article-item__image-box">
+                                            <a href="" class="article-item__image-link" tabindex="-1">
+                                                <img class="article-item__image lazy" data-src="img/articles-section/image-2.jpg" data-srcset="img/articles-section/image-2@2x.jpg 2x" width="600" height="350" alt="">
+                                            </a>
+                                        </div>
+                                    </article>
+                                    <article class="article-item articles-section__item">
+                                        <div class="article-item__head">
+                                            <div class="article-item__date">06 сен 2023</div>
+
+                                        </div>
+                                        <div class="article-item__content">
+                                            <div class="article-item__title">
+                                                <a href="#" class="article-item__title-link">Фундамент</a>
+                                            </div>
+                                            <div class="article-item__text">
+                                                <p>Фундаменты&nbsp;&mdash; практичная и&nbsp;надежная основа для дома из&nbsp;бруса</p>
+                                            </div>
+                                            <a href="#" class="article-item__read-more">
+                                                <span>Читать далее</span>
+                                                <svg class="ui-icon ui-icon-arrow">
+                                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                                </svg>
+                                            </a>
+                                        </div>
+                                        <div class="article-item__image-box">
+                                            <a href="" class="article-item__image-link" tabindex="-1">
+                                                <img class="article-item__image lazy" data-src="img/articles-section/image-3.jpg" data-srcset="img/articles-section/image-3@2x.jpg 2x" width="600" height="350" alt="">
+                                            </a>
+                                        </div>
+                                    </article>
+                                </div>
+                                <div class="articles-section__button-wrapper">
+                                    <a href="" class="ui-button ui-button_size_sm ui-button_style_outline articles-section__button"><span class="ui-button__text">
+                                            Смотреть все
+                                        </span><svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                        </svg></a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+        </main>
+        <footer class="footer js-footer">
+            <div class="footer__container container">
+                <div class="footer__section footer__section_cols_2 footer__section_primary">
+                    <div class="footer__column footer__column_logo">
+                        <div class="footer__logo-wrapper">
+                            <a href="/" class="footer__logo logo">
+                                <svg class="logo__img" width="201" height="54" viewBox="0 0 201 54" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.8494 0C8.88688 0 0 8.88689 0 19.8494V28.12C0 34.3884 2.90564 39.9781 7.44352 43.6158V23.6767C7.44352 21.6296 8.53996 19.7393 10.3169 18.7229L30.0478 7.43667C31.8477 6.40714 34.0644 6.43483 35.838 7.50901L39.3523 9.63746C24.8037 16.1521 14.4204 30.2401 13.2747 46.8546C14.4779 47.2769 15.7341 47.5865 17.0307 47.7708C17.8969 31.3789 28.605 17.5641 43.4035 12.0911L52.4274 17.5564C37.3056 19.9043 25.5928 32.4928 24.6785 47.9694H28.4908C29.4763 33.2641 41.5106 21.5396 56.4434 20.9881C56.8469 21.7788 57.067 22.6651 57.067 23.5821V28.5626C46.0869 28.8008 37.1378 37.2402 36.1609 47.9694H39.9852C40.9447 39.3577 48.1754 32.6024 57.067 32.3684V44.8081C62.5409 41.2741 66.1647 35.1202 66.1647 28.12V19.8494C66.1647 8.88688 57.2778 0 46.3153 0H19.8494Z"></path>
+                                    <path d="M81.4264 5.89454H86.1827V21H81.4264V5.89454ZM74.8708 3.80866H92.7384V8.03773H74.8708V3.80866ZM94.7642 21V3.80866H99.4632V18.4901L98.1452 18.215L107.887 3.80866H114.099V21H109.4V6.04353L110.729 6.31859L100.804 21H94.7642ZM142.417 3.80866V21H137.901V5.50487L138.921 5.60802L132.251 21H127.449L120.79 5.66532L121.81 5.55071V21H117.283V3.80866H124.63L130.784 18.5703H128.962L135.082 3.80866H142.417ZM156.292 10.3414C157.698 10.3414 158.875 10.5591 159.822 10.9946C160.769 11.4302 161.476 12.049 161.942 12.8513C162.408 13.6536 162.641 14.5972 162.641 15.6821C162.641 16.7518 162.385 17.6878 161.874 18.4901C161.369 19.2923 160.64 19.9112 159.684 20.3467C158.729 20.7822 157.599 21 156.292 21H145.106L146.436 12.072L145.106 3.80866H161.312V7.41884H148.063L149.863 5.21835L150.963 11.9917L149.782 19.7278L147.96 17.5388H155.673C156.132 17.5388 156.529 17.4624 156.865 17.3096C157.201 17.1491 157.457 16.9199 157.633 16.6219C157.816 16.324 157.908 15.9725 157.908 15.5675C157.908 15.1549 157.816 14.8035 157.633 14.5131C157.457 14.2151 157.197 13.9859 156.854 13.8255C156.517 13.665 156.12 13.5848 155.662 13.5848H148.693V10.3414H156.292ZM179.61 10.6737V14.1349H167.038V10.6737H179.61ZM170.27 12.4043L169.147 19.3152L167.221 17.1491H180.39V21H164.402L165.708 12.4043L164.402 3.80866H180.275V7.65952H167.221L169.147 5.49341L170.27 12.4043ZM192.766 3.80866C194.195 3.80866 195.433 4.05315 196.48 4.54215C197.526 5.03115 198.329 5.72263 198.886 6.61657C199.444 7.51053 199.723 8.54965 199.723 9.73394C199.723 10.9182 199.444 11.9574 198.886 12.8513C198.329 13.7453 197.526 14.4367 196.48 14.9257C195.433 15.4147 194.195 15.6592 192.766 15.6592H185.317V11.8542H192.491C192.995 11.8542 193.431 11.7702 193.798 11.6021C194.164 11.434 194.443 11.1933 194.634 10.88C194.825 10.5591 194.921 10.1771 194.921 9.73394C194.921 9.29842 194.825 8.92404 194.634 8.61077C194.443 8.28987 194.164 8.04537 193.798 7.87727C193.431 7.70154 192.995 7.61367 192.491 7.61367H185.741L187.872 5.41318V21H183.116V3.80866H192.766ZM74.8708 47.4612V39.8053H78.5727L80.0855 39.8512H92.0278L93.2197 39.8053H98.2052V47.4612H93.7584V44H79.3176V47.4612H74.8708ZM78.4466 26.8087H95.2368V42.682H90.4806V28.8029L92.6237 30.9575H80.9795L82.9278 29.3759C83.0348 30.033 83.1036 30.6748 83.1341 31.3013C83.1723 31.9279 83.1914 32.5888 83.1914 33.2841C83.1914 35.0872 83.0348 36.6001 82.7215 37.8226C82.4083 39.0374 81.9384 39.9581 81.3118 40.5847C80.693 41.2035 79.9213 41.513 78.9967 41.513L77.0025 39.8741C77.6138 39.1559 78.0646 38.1779 78.3549 36.9401C78.6453 35.6947 78.7904 34.1513 78.7904 32.3099C78.7904 30.8276 78.6758 28.9939 78.4466 26.8087ZM109.491 44.3782C107.474 44.3782 105.69 44.0038 104.139 43.255C102.596 42.5063 101.4 41.4557 100.552 40.1033C99.7037 38.7433 99.2797 37.1769 99.2797 35.4043C99.2797 33.6317 99.7037 32.0692 100.552 30.7168C101.4 29.3568 102.596 28.3024 104.139 27.5536C105.69 26.8048 107.474 26.4304 109.491 26.4304C111.508 26.4304 113.289 26.8048 114.832 27.5536C116.375 28.3024 117.571 29.3568 118.419 30.7168C119.275 32.0692 119.703 33.6317 119.703 35.4043C119.703 37.1769 119.275 38.7433 118.419 40.1033C117.571 41.4557 116.375 42.5063 114.832 43.255C113.289 44.0038 111.508 44.3782 109.491 44.3782ZM109.491 40.1262C110.592 40.1262 111.547 39.939 112.357 39.5646C113.174 39.1826 113.801 38.6363 114.236 37.9257C114.679 37.2151 114.901 36.3747 114.901 35.4043C114.901 34.434 114.679 33.5935 114.236 32.8829C113.801 32.1724 113.174 31.6299 112.357 31.2555C111.547 30.8735 110.592 30.6824 109.491 30.6824C108.383 30.6824 107.421 30.8735 106.603 31.2555C105.793 31.6299 105.171 32.1724 104.735 32.8829C104.3 33.5935 104.082 34.434 104.082 35.4043C104.082 36.3747 104.3 37.2151 104.735 37.9257C105.171 38.6363 105.793 39.1826 106.603 39.5646C107.421 39.939 108.383 40.1262 109.491 40.1262ZM147.274 26.8087V44H142.759V28.5049L143.779 28.608L137.108 44H132.306L125.648 28.6653L126.668 28.5507V44H122.141V26.8087H129.487L135.642 41.5703H133.819L139.939 26.8087H147.274Z"></path>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="footer__description">Строительство экологичных домов и&nbsp;бань</div>
+                    </div>
+                    <div class="footer__column footer__column_menu">
+                        <div class="footer__menu">
+                            <div class="footer__menu-column">
+                                <ul class="footer__menu-list">
+                                    <li>
+                                        <a href="#" class="footer__menu-link">Проекты домов</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="footer__menu-link">Дома из бруса</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="footer__menu-link">Дома из каркаса</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="footer__menu-link">Построенные дома</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="footer__menu-link">Бани из бруса</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="footer__menu-column">
+                                <ul class="footer__menu-list">
+                                    <li>
+                                        <a href="#" class="footer__menu-link">О компании</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="footer__menu-link">Технологии</a>
+                                    </li>
+                                    <li>
+                                        <a href="#" class="footer__menu-link">Контакты</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="footer__request">
+                            <button type="button" class="ui-button ui-button_size_xs ui-button_style_outline footer__request-button"><span class="ui-button__text">
+                                    Оставить заявку
+                                </span><svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                </svg></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__section footer__section_subscribe">
+                    <div class="footer__subscribe js-subscribe">
+                        <div class="footer__subscribe-title section-title">Подписаться на&nbsp;рассылку</div>
+                        <div class="footer__subscribe-error-title section-title">Неверный формат почты</div>
+                        <div class="footer__subscribe-success-title section-title">Подписка оформлена</div>
+                        <form action="" class="footer__subscribe-form js-subscribe-form">
+                            <input type="email" name="email" class="footer__subscribe-input js-subscribe-email" placeholder="Ваш email" data-other-placeholder="Другой email" required>
+                            <button type="submit" class="footer__subscribe-submit js-subscribe-submit" title="Подписаться">
+                                <svg width="31" height="27" viewBox="0 0 31 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0.26 10.64H17.92L25.54 11.42V15.48L17.92 16.3H0.26V10.64ZM18.26 0.439999L30.72 13.46L18.26 26.5L14.68 23.08L25.98 11.56V15.38L14.68 3.84L18.26 0.439999Z"></path>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+                <div class="footer__section footer__section_cols_2 footer__section_contacts">
+                    <div class="footer__column">
+                        <div class="socials footer__socials">
+                            <a href="#" class="socials__link" title="Instagram">
+                                <svg class="ui-icon ui-icon-instagram socials__icon">
+                                    <use xlink:href="img/icons.svg#instagram"></use>
+                                </svg>
+                            </a><a href="#" class="socials__link" title="Youtube">
+                                <svg class="ui-icon ui-icon-youtube socials__icon">
+                                    <use xlink:href="img/icons.svg#youtube"></use>
+                                </svg>
+                            </a><a href="#" class="socials__link" title="Telegram">
+                                <svg class="ui-icon ui-icon-telegram socials__icon">
+                                    <use xlink:href="img/icons.svg#telegram"></use>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__column">
+                        <div class="footer__contacts">
+                            <a href="tel:79215723999" class="footer__contacts-phone">+7 (921) 572-39-99</a>
+                            <a href="mailto:timberdom@bk.ru" class="footer__contacts-email">timberdom@bk.ru</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__section footer__section_timber">
+                    <div class="footer__timber-group">
+                        <img class="footer__timber-group-logo lazy" data-src="img/timber-group.svg" width="91" height="106" alt="">
+                    </div>
+                </div>
+                <div class="footer__section footer__section_bottom">
+                    <div class="footer__bottom">
+                        <div class="footer__copyright">ООО Стройлюкс 2023</div>
+                        <div class="footer__address">Санкт-Петербург, ЛО, д.&nbsp;Вартемяги, ул.&nbsp;Смольнинская,&nbsp;2.</div>
+                        <div class="footer__bottom-menu footer__menu">
+                            <ul class="footer__menu-list">
+                                <li>
+                                    <a href="#" class="footer__menu-link">Политика конфиденциальности</a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer__menu-link">Cookies</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="footer__no-offer">Данный вебсайт не&nbsp;является публичной офертой</div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
