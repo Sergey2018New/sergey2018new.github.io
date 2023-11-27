@@ -5,6 +5,9 @@
     <symbol viewBox="0 0 32 32" id="arrows" xmlns="http://www.w3.org/2000/svg">
         <path d="M9.333 22.666v-16m0 0-4 2.75m4-2.75 4 2.75M22.667 9.334v16m0 0-4-2.75m4 2.75 4-2.75" />
     </symbol>
+    <symbol viewBox="0 0 24 24" id="bucket" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19 7.111h-3.889V5.556A1.556 1.556 0 0 0 13.556 4h-3.112A1.556 1.556 0 0 0 8.89 5.556V7.11H5v1.556h1.486l1.053 11.666h8.922l1.053-11.666H19V7.11Zm-8.556-1.555h3.112V7.11h-3.112V5.556Zm4.595 13.222H8.961L8.047 8.667h7.906l-.914 10.11Z" />
+    </symbol>
     <symbol viewBox="0 0 24 24" id="check" xmlns="http://www.w3.org/2000/svg">
         <path d="M10.132 17.925 4 11.792l1.057-1.056 5.075 5.076L18.944 7 20 8.057l-9.868 9.868Z" />
     </symbol>
@@ -13,6 +16,9 @@
     </symbol>
     <symbol viewBox="0 0 32 32" id="favorite" xmlns="http://www.w3.org/2000/svg">
         <path d="M8 25.333V6.667h16v18.666l-8-4-8 4Z" />
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="info" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 7.88a.733.733 0 1 0 0 1.467.733.733 0 0 0 0-1.467ZM12 4a8 8 0 1 0 0 16 8 8 0 0 0 0-16Zm0 14.8a6.8 6.8 0 1 1 6.8-6.8 6.808 6.808 0 0 1-6.8 6.8Zm-.6-2.8h1.2v-5.2h-1.2V16Z" />
     </symbol>
     <symbol viewBox="0 0 32 32" id="instagram" xmlns="http://www.w3.org/2000/svg">
         <path d="M15.995 20.665a4.667 4.667 0 0 1-4.667-4.668 4.667 4.667 0 1 1 9.333 0 4.667 4.667 0 0 1-4.666 4.668Z" />

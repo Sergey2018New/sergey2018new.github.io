@@ -9,8 +9,8 @@
     <meta name="description" content="Описание страницы">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.comcss2?family=Unbounded:wght@500&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap" rel="stylesheet">
+    <script src="https://api-maps.yandex.ru/v3/?apikey=56b811ee-10e3-43fb-a32a-80fc7205fba7&lang=ru_RU"></script>
     <link rel="stylesheet" href="css/style.css" />
     <script type="module" src="js/main.js"></script>
 </head>
@@ -98,12 +98,14 @@
                     <div class="header__container container">
                         <div class="header__row header__row_second">
                             <div class="header__contacts-adaptive js-contacts-adaptive"></div>
-                            <ul class="header__catalog-menu" data-da=".js-menu-content, 1024.98, first">
-                                <li><a href="" class="header__catalog-menu-link">Проекты домов</a></li>
-                                <li><a href="" class="header__catalog-menu-link">Бани</a></li>
-                                <li><a href="" class="header__catalog-menu-link">Построенные дома</a></li>
-                                <li><a href="" class="header__catalog-menu-link">Услуги</a></li>
-                            </ul>
+                            <div class="header__catalog-menu-wrapper">
+                                <ul class="header__catalog-menu" data-da=".js-menu-content, 1024.98, first">
+                                    <li><a href="" class="header__catalog-menu-link">Проекты домов</a></li>
+                                    <li><a href="" class="header__catalog-menu-link">Бани</a></li>
+                                    <li><a href="" class="header__catalog-menu-link">Построенные дома</a></li>
+                                    <li><a href="" class="header__catalog-menu-link">Услуги</a></li>
+                                </ul>
+                            </div>
                             <div class="header__grid-columns">
                                 <button type="button" class="header__control-button header__search-button js-header-search-button">
                                     <svg class="ui-icon ui-icon-search icon">
@@ -325,7 +327,7 @@
                                         <div class="project-item services-section__item swiper-slide">
                                             <a href="#" class="project-item__link"></a>
                                             <div class="project-item__image-box">
-                                                <img class="project-item__image lazy" data-src="img/what-building/image-1.jpg" data-srcset="img/what-building/image-1@2x.jpg 2x" width="500" height="280" alt="">
+                                                <img class="project-item__image lazy" data-src="img/what-building/image-1.jpg" data-srcset="img/what-building/image-1@2x.jpg 2x" width="343" height="444" alt="">
 
                                             </div>
                                             <div class="project-item__content">
@@ -337,7 +339,7 @@
                                         <div class="project-item services-section__item swiper-slide">
                                             <a href="#" class="project-item__link"></a>
                                             <div class="project-item__image-box">
-                                                <img class="project-item__image lazy" data-src="img/what-building/image-2.jpg" data-srcset="img/what-building/image-2@2x.jpg 2x" width="500" height="280" alt="">
+                                                <img class="project-item__image lazy" data-src="img/what-building/image-2.jpg" data-srcset="img/what-building/image-2@2x.jpg 2x" width="343" height="444" alt="">
 
                                             </div>
                                             <div class="project-item__content">
@@ -349,7 +351,7 @@
                                         <div class="project-item services-section__item swiper-slide">
                                             <a href="#" class="project-item__link"></a>
                                             <div class="project-item__image-box">
-                                                <img class="project-item__image lazy" data-src="img/what-building/image-3.jpg" data-srcset="img/what-building/image-3@2x.jpg 2x" width="500" height="280" alt="">
+                                                <img class="project-item__image lazy" data-src="img/what-building/image-3.jpg" data-srcset="img/what-building/image-3@2x.jpg 2x" width="343" height="444" alt="">
 
                                             </div>
                                             <div class="project-item__content">
@@ -398,7 +400,7 @@
                                 <h2 class="catalog-section__title section-title">Деревянные и&nbsp;каменные дома под&nbsp;ключ</h2>
                                 <div class="tab-menu catalog-section__tab-menu">
                                     <div class="tab-menu__list">
-                                        <a href="" class="tab-menu__item">Все проекты</a><a href="" class="tab-menu__item">Дома из бруса</a><a href="" class="tab-menu__item">Каркасные дома</a><a href="" class="tab-menu__item">Дома из камня</a><a href="" class="tab-menu__item">Дома в стиле шале</a><a href="" class="tab-menu__item">Бани</a>
+                                        <a href="#" class="tab-menu__item">Все проекты</a><a href="#" class="tab-menu__item">Дома из бруса</a><a href="#" class="tab-menu__item">Каркасные дома</a><a href="#" class="tab-menu__item">Дома из камня</a><a href="#" class="tab-menu__item">Дома в стиле шале</a><a href="#" class="tab-menu__item">Бани</a>
                                     </div>
                                 </div>
                             </div>
@@ -412,8 +414,12 @@
                                 </div>
                                 <div class="project-item__content">
                                     <div class="project-item__info">
-                                        <div class="project-item__info-item">137 м²</div>
-                                        <div class="project-item__info-item">Брус</div>
+                                        <div class="tag project-item__info-tag">
+                                            137 м²
+                                        </div>
+                                        <div class="tag project-item__info-tag">
+                                            Брус
+                                        </div>
                                         <div class="project-item__controls">
                                             <button type="button" class="ui-button ui-button_size_sm ui-button_style_outline project-item__control-button" title="Добавить в избранное"><svg class="ui-icon ui-icon-favorite ui-button__icon">
                                                     <use xlink:href="img/icons.svg#favorite"></use>
@@ -422,8 +428,10 @@
                                                     <use xlink:href="img/icons.svg#arrows"></use>
                                                 </svg></button>
                                         </div>
+
                                     </div>
                                     <div class="project-item__title">Кернель 137</div>
+
                                     <div class="project-item__price-row">
 
                                         <div class="project-item__price">от 5 950 000 руб.</div>
@@ -438,8 +446,12 @@
                                 </div>
                                 <div class="project-item__content">
                                     <div class="project-item__info">
-                                        <div class="project-item__info-item">210 м²</div>
-                                        <div class="project-item__info-item">Каркас</div>
+                                        <div class="tag project-item__info-tag">
+                                            210 м²
+                                        </div>
+                                        <div class="tag project-item__info-tag">
+                                            Каркас
+                                        </div>
                                         <div class="project-item__controls">
                                             <button type="button" class="ui-button ui-button_size_sm ui-button_style_outline project-item__control-button" title="Добавить в избранное"><svg class="ui-icon ui-icon-favorite ui-button__icon">
                                                     <use xlink:href="img/icons.svg#favorite"></use>
@@ -448,8 +460,10 @@
                                                     <use xlink:href="img/icons.svg#arrows"></use>
                                                 </svg></button>
                                         </div>
+
                                     </div>
                                     <div class="project-item__title">ДЖАМБУ 210</div>
+
                                     <div class="project-item__price-row">
 
                                         <div class="project-item__price">от 3 600 000 руб.</div>
@@ -461,13 +475,19 @@
                                 <div class="project-item__image-box">
                                     <img class="project-item__image lazy" data-src="img/catalog-section/3.jpg" data-srcset="img/catalog-section/3@2x.jpg 2x" width="500" height="280" alt="">
                                     <div class="project-item__tags">
-                                        <div class="project-item__tag">-20%</div>
+                                        <div class="tag tag_discount project-item__tag">
+                                            -20%
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="project-item__content">
                                     <div class="project-item__info">
-                                        <div class="project-item__info-item">158 м²</div>
-                                        <div class="project-item__info-item">Каркас</div>
+                                        <div class="tag project-item__info-tag">
+                                            158 м²
+                                        </div>
+                                        <div class="tag project-item__info-tag">
+                                            Каркас
+                                        </div>
                                         <div class="project-item__controls">
                                             <button type="button" class="ui-button ui-button_size_sm ui-button_style_outline project-item__control-button" title="Добавить в избранное"><svg class="ui-icon ui-icon-favorite ui-button__icon">
                                                     <use xlink:href="img/icons.svg#favorite"></use>
@@ -476,8 +496,10 @@
                                                     <use xlink:href="img/icons.svg#arrows"></use>
                                                 </svg></button>
                                         </div>
+
                                     </div>
                                     <div class="project-item__title">СЕЙБА 158</div>
+
                                     <div class="project-item__price-row">
 
                                         <div class="project-item__price">от 3 900 000 руб.</div>
@@ -489,13 +511,19 @@
                                 <div class="project-item__image-box">
                                     <img class="project-item__image lazy" data-src="img/catalog-section/4.jpg" data-srcset="img/catalog-section/4@2x.jpg 2x" width="500" height="280" alt="">
                                     <div class="project-item__tags">
-                                        <div class="project-item__tag">-20%</div>
+                                        <div class="tag tag_discount project-item__tag">
+                                            -20%
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="project-item__content">
                                     <div class="project-item__info">
-                                        <div class="project-item__info-item">70 м²</div>
-                                        <div class="project-item__info-item">Каркас</div>
+                                        <div class="tag project-item__info-tag">
+                                            70 м²
+                                        </div>
+                                        <div class="tag project-item__info-tag">
+                                            Каркас
+                                        </div>
                                         <div class="project-item__controls">
                                             <button type="button" class="ui-button ui-button_size_sm ui-button_style_outline project-item__control-button" title="Добавить в избранное"><svg class="ui-icon ui-icon-favorite ui-button__icon">
                                                     <use xlink:href="img/icons.svg#favorite"></use>
@@ -504,8 +532,10 @@
                                                     <use xlink:href="img/icons.svg#arrows"></use>
                                                 </svg></button>
                                         </div>
+
                                     </div>
                                     <div class="project-item__title">ГИНКГО 70</div>
+
                                     <div class="project-item__price-row">
                                         <div class="project-item__old-price">от 4 600 000 руб.</div>
                                         <div class="project-item__price">от 1 800 000 руб.</div>
@@ -520,8 +550,12 @@
                                 </div>
                                 <div class="project-item__content">
                                     <div class="project-item__info">
-                                        <div class="project-item__info-item">178 м²</div>
-                                        <div class="project-item__info-item">Каркас</div>
+                                        <div class="tag project-item__info-tag">
+                                            178 м²
+                                        </div>
+                                        <div class="tag project-item__info-tag">
+                                            Каркас
+                                        </div>
                                         <div class="project-item__controls">
                                             <button type="button" class="ui-button ui-button_size_sm ui-button_style_outline project-item__control-button" title="Добавить в избранное"><svg class="ui-icon ui-icon-favorite ui-button__icon">
                                                     <use xlink:href="img/icons.svg#favorite"></use>
@@ -530,8 +564,10 @@
                                                     <use xlink:href="img/icons.svg#arrows"></use>
                                                 </svg></button>
                                         </div>
+
                                     </div>
                                     <div class="project-item__title">БУРМИС 178</div>
+
                                     <div class="project-item__price-row">
 
                                         <div class="project-item__price">от 3 600 000 руб.</div>
@@ -546,8 +582,12 @@
                                 </div>
                                 <div class="project-item__content">
                                     <div class="project-item__info">
-                                        <div class="project-item__info-item">214 м²</div>
-                                        <div class="project-item__info-item">Каркас</div>
+                                        <div class="tag project-item__info-tag">
+                                            214 м²
+                                        </div>
+                                        <div class="tag project-item__info-tag">
+                                            Каркас
+                                        </div>
                                         <div class="project-item__controls">
                                             <button type="button" class="ui-button ui-button_size_sm ui-button_style_outline project-item__control-button" title="Добавить в избранное"><svg class="ui-icon ui-icon-favorite ui-button__icon">
                                                     <use xlink:href="img/icons.svg#favorite"></use>
@@ -556,8 +596,10 @@
                                                     <use xlink:href="img/icons.svg#arrows"></use>
                                                 </svg></button>
                                         </div>
+
                                     </div>
                                     <div class="project-item__title">ПРОЕКТ ТД-11</div>
+
                                     <div class="project-item__price-row">
 
                                         <div class="project-item__price">от 3 700 000 руб.</div>
@@ -572,8 +614,12 @@
                                 </div>
                                 <div class="project-item__content">
                                     <div class="project-item__info">
-                                        <div class="project-item__info-item">158 м²</div>
-                                        <div class="project-item__info-item">Брус</div>
+                                        <div class="tag project-item__info-tag">
+                                            158 м²
+                                        </div>
+                                        <div class="tag project-item__info-tag">
+                                            Брус
+                                        </div>
                                         <div class="project-item__controls">
                                             <button type="button" class="ui-button ui-button_size_sm ui-button_style_outline project-item__control-button" title="Добавить в избранное"><svg class="ui-icon ui-icon-favorite ui-button__icon">
                                                     <use xlink:href="img/icons.svg#favorite"></use>
@@ -582,8 +628,10 @@
                                                     <use xlink:href="img/icons.svg#arrows"></use>
                                                 </svg></button>
                                         </div>
+
                                     </div>
                                     <div class="project-item__title">ПРОЕКТ СЕЙБА 158</div>
+
                                     <div class="project-item__price-row">
 
                                         <div class="project-item__price">от 3 900 000 руб.</div>
@@ -1175,6 +1223,132 @@
                 </div>
             </div>
         </footer>
+    </div>
+
+    <div class="modal feedback-modal js-modal" id="feedback_modal" aria-hidden="true" tabindex="-1">
+        <div class="modal__wrap">
+            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="">
+                <div class="modal__top">
+                    <div class="modal__heading">Оставить заявку</div>
+                    <button type="button" class="modal__close js-modal-close" title="Закрыть" aria-label="Закрыть">
+                        <svg class="modal__close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 7.81199L16.188 7L12 11.188L7.81199 7L7 7.81199L11.188 12L7 16.188L7.81199 17L12 12.812L16.188 17L17 16.188L12.812 12L17 7.81199Z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal__content">
+
+                    <div class="feedback-modal__row l-grid l-grid-cols-2">
+                        <div class="feedback-modal__column">
+                            <div class="feedback-modal__title modal__title">
+                                Составим для вас индивидуальный проект
+                            </div>
+                        </div>
+                        <div class="feedback-modal__column">
+                            <form action="#" class="feedback-modal__form form" data-js-form>
+                                <div class="ui-radio-block feedback-modal__radio-block">
+                                    <fieldset class="ui-radio-block__fieldset" role="group">
+                                        <label class="ui-radio-block__item">
+                                            <input type="radio" class="ui-radio-block__input" name="type" value="1" checked="true">
+                                            <span class="ui-radio-block__checked"></span>
+                                            <span class="ui-radio-block__text">Пока не выбрал проект</span>
+                                        </label><label class="ui-radio-block__item">
+                                            <input type="radio" class="ui-radio-block__input" name="type" value="2">
+                                            <span class="ui-radio-block__checked"></span>
+                                            <span class="ui-radio-block__text">Дома из бруса</span>
+                                        </label><label class="ui-radio-block__item">
+                                            <input type="radio" class="ui-radio-block__input" name="type" value="3">
+                                            <span class="ui-radio-block__checked"></span>
+                                            <span class="ui-radio-block__text">Каркасные дома</span>
+                                        </label><label class="ui-radio-block__item">
+                                            <input type="radio" class="ui-radio-block__input" name="type" value="4">
+                                            <span class="ui-radio-block__checked"></span>
+                                            <span class="ui-radio-block__text">Дома из камня</span>
+                                        </label><label class="ui-radio-block__item">
+                                            <input type="radio" class="ui-radio-block__input" name="type" value="5">
+                                            <span class="ui-radio-block__checked"></span>
+                                            <span class="ui-radio-block__text">Дома в стиле шале</span>
+                                        </label><label class="ui-radio-block__item">
+                                            <input type="radio" class="ui-radio-block__input" name="type" value="6">
+                                            <span class="ui-radio-block__checked"></span>
+                                            <span class="ui-radio-block__text">Бани</span>
+                                        </label>
+                                    </fieldset>
+                                </div>
+                                <div class="form__grid">
+                                    <div class="field-box js-field-box">
+                                        <label class="field-box__label js-field-box-label" for="feedback_form_name">Ваше имя</label>
+                                        <div class="field-box__content">
+                                            <input id="feedback_form_name" class="ui-input field-box__input js-field-box-input" type="text" name="name" required="" data-js-form-field="">
+                                        </div>
+                                    </div>
+                                    <div class="field-box js-field-box">
+                                        <label class="field-box__label js-field-box-label" for="feedback_form_phone">Номер телефона</label>
+                                        <div class="field-box__content">
+                                            <input id="feedback_form_phone" class="ui-input ui-input-phone field-box__input js-field-box-input" type="text" name="phone" required="" data-js-form-field="">
+                                        </div>
+                                    </div>
+                                    <div class="field-box field-box_textarea js-field-box">
+                                        <label class="field-box__label js-field-box-label" for="feedback_form_message">Сообщение</label>
+                                        <div class="field-box__content">
+                                            <textarea id="feedback_form_message" class="ui-textarea field-box__textarea js-field-box-input" name="message" rows="3"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__agreement">
+                                    <label class="ui-checkbox ui-checkbox_checkbox form__agreement-checkbox">
+                                        <input class="ui-checkbox__input " type="checkbox" name="agreement" checked />
+                                        <span class="ui-checkbox__checked">
+                                            <svg class="ui-icon ui-icon-check ui-checkbox__checked-icon">
+                                                <use xlink:href="img/icons.svg#check"></use>
+                                            </svg>
+                                            <span class="ui-checkbox__focused"></span>
+                                        </span>
+
+                                        <span class="ui-checkbox__text">Даю согласие на&nbsp;обработку персональных данных в&nbsp;соответствии <a href="">политики Конфиденциальности</a></span>
+                                    </label>
+                                </div>
+                                <div class="form__submit">
+                                    <button type="submit" class="ui-button form__submit-button"><span class="ui-button__text">
+                                            Отправить
+                                        </span></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal thanks-modal js-modal" id="thanks_modal" aria-hidden="true" tabindex="-1">
+        <div class="modal__wrap">
+            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="">
+                <div class="modal__top">
+                    <div class="modal__heading">Оставить заявку</div>
+                    <button type="button" class="modal__close js-modal-close" title="Закрыть" aria-label="Закрыть">
+                        <svg class="modal__close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 7.81199L16.188 7L12 11.188L7.81199 7L7 7.81199L11.188 12L7 16.188L7.81199 17L12 12.812L16.188 17L17 16.188L12.812 12L17 7.81199Z"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="modal__content">
+
+                    <div class="thanks-modal__row l-grid l-grid-cols-2">
+                        <div class="thanks-modal__column"></div>
+                        <div class="thanks-modal__column">
+                            <div class="thanks-modal__title modal__title">
+                                Спасибо, скоро мы с&nbsp;Вами свяжемся
+                            </div>
+                            <button type="button" class="ui-button js-modal-close"><span class="ui-button__text">
+                                    Закрыть окно
+                                </span></button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
     </div>
 
 </body>
