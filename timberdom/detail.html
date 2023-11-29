@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap" rel="stylesheet">
-    <script src="https://api-maps.yandex.ru/v3/?apikey=56b811ee-10e3-43fb-a32a-80fc7205fba7&lang=ru_RU"></script>
+
     <link rel="stylesheet" href="css/style.css" />
     <script type="module" src="js/main.js"></script>
 </head>
@@ -79,7 +79,7 @@
                                     </div>
                                 </div>
                                 <div class="header__contacts-wrapper">
-                                    <div class="header__contacts" data-da=".js-contacts-adaptive, 1024.98, first">
+                                    <div class="header__contacts" data-da=".js-contacts-adaptive, 1023.98, first">
                                         <a href="tel:79215723999" class="header__contacts-phone">+7 (921) 572-39-99</a>
                                         <div class="header__contacts-button-wrapper">
                                             <button type="button" class="ui-button ui-button_size_xs ui-button_style_outline header__contacts-button"><span class="ui-button__text">
@@ -99,7 +99,7 @@
                         <div class="header__row header__row_second">
                             <div class="header__contacts-adaptive js-contacts-adaptive"></div>
                             <div class="header__catalog-menu-wrapper">
-                                <ul class="header__catalog-menu" data-da=".js-menu-content, 1024.98, first">
+                                <ul class="header__catalog-menu" data-da=".js-menu-content, 1023.98, first">
                                     <li><a href="" class="header__catalog-menu-link">Проекты домов</a></li>
                                     <li><a href="" class="header__catalog-menu-link">Бани</a></li>
                                     <li><a href="" class="header__catalog-menu-link">Построенные дома</a></li>
@@ -1579,28 +1579,28 @@
                                     </fieldset>
                                 </div>
                                 <div class="form__grid">
-                                    <div class="field-box js-field-box">
-                                        <label class="field-box__label js-field-box-label" for="feedback_form_name">Ваше имя</label>
+                                    <div class="field-box form__fieldbox js-field-box">
+                                        <label class="field-box__label js-field-box-label" for="modal_feedback_name">Ваше имя</label>
                                         <div class="field-box__content">
-                                            <input id="feedback_form_name" class="ui-input field-box__input js-field-box-input" type="text" name="name" required="" data-js-form-field="">
+                                            <input id="modal_feedback_name" class="ui-input field-box__input js-field-box-input" type="text" name="name" required="" data-js-form-field="">
                                         </div>
                                     </div>
-                                    <div class="field-box js-field-box">
-                                        <label class="field-box__label js-field-box-label" for="feedback_form_phone">Номер телефона</label>
+                                    <div class="field-box form__fieldbox js-field-box">
+                                        <label class="field-box__label js-field-box-label" for="modal_feedback_phone">Номер телефона</label>
                                         <div class="field-box__content">
-                                            <input id="feedback_form_phone" class="ui-input ui-input-phone field-box__input js-field-box-input" type="text" name="phone" required="" data-js-form-field="">
+                                            <input id="modal_feedback_phone" class="ui-input ui-input-phone field-box__input js-field-box-input" type="text" name="phone" required="" data-js-form-field="">
                                         </div>
                                     </div>
-                                    <div class="field-box field-box_textarea js-field-box">
-                                        <label class="field-box__label js-field-box-label" for="feedback_form_message">Сообщение</label>
+                                    <div class="field-box field-box_textarea form__fieldbox js-field-box">
+                                        <label class="field-box__label js-field-box-label" for="modal_feedback_message">Сообщение</label>
                                         <div class="field-box__content">
-                                            <textarea id="feedback_form_message" class="ui-textarea field-box__textarea js-field-box-input" name="message" rows="3"></textarea>
+                                            <textarea id="modal_feedback_message" class="ui-textarea field-box__textarea js-field-box-input" name="message" rows="3"></textarea>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form__agreement">
                                     <label class="ui-checkbox ui-checkbox_checkbox form__agreement-checkbox">
-                                        <input class="ui-checkbox__input " type="checkbox" name="agreement" checked />
+                                        <input class="ui-checkbox__input " type="checkbox" name="agreement" checked data-js-form-field />
                                         <span class="ui-checkbox__checked">
                                             <svg class="ui-icon ui-icon-check ui-checkbox__checked-icon">
                                                 <use xlink:href="img/icons.svg#check"></use>

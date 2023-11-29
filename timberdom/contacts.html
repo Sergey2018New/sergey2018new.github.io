@@ -5,12 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
-    <title>Тимбер Дом - Проекты домов</title>
+    <title>Тимбер Дом - Контакты</title>
     <meta name="description" content="Описание страницы">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap" rel="stylesheet">
-
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=56b811ee-10e3-43fb-a32a-80fc7205fba7"></script>
     <link rel="stylesheet" href="css/style.css" />
     <script type="module" src="js/main.js"></script>
 </head>
@@ -155,9 +155,9 @@
         </header>
         <main class="main">
 
-            <div class="p-section p-catalog p-catalog_houses">
+            <div class="p-section p-contacts">
                 <div class="container">
-                    <div class="p-catalog__heading page-heading">
+                    <div class="p-contacts__heading page-heading">
                         <div class="breadcrumbs">
                             <nav class="breadcrumbs__inner" aria-label="breadcrumbs">
                                 <ol class="breadcrumbs__list">
@@ -169,278 +169,175 @@
                             </nav>
                         </div>
                         <div class="page-title">
-                            <h1>
-                                <span class="u-hidden-mobile-sm">Построенные дома</span>
-                                <span class="u-visible-mobile-sm">Проекты домов</span>
-                            </h1>
+                            <h1>Контакты</h1>
                         </div>
                     </div>
-                    <div class="p-catalog__row l-grid">
-                        <div class="tab-menu p-catalog__tab-menu-filters js-tab-menu">
-                            <div class="tab-menu__list">
-                                <a href="javascript:" class="tab-menu__item is-active js-tab-menu-item">Все проекты</a><a href="javascript:" class="tab-menu__item js-tab-menu-item">Дома из бруса</a><a href="javascript:" class="tab-menu__item js-tab-menu-item">Каркасные дома</a><a href="javascript:" class="tab-menu__item js-tab-menu-item">Дома из камня</a><a href="javascript:" class="tab-menu__item js-tab-menu-item">Дома в стиле шале</a><a href="javascript:" class="tab-menu__item js-tab-menu-item">Бани</a>
+                    <div class="p-contacts__row l-grid l-grid-cols-4">
+                        <div class="p-contacts__item p-contacts__item_address l-column-2">
+                            <div class="p-contacts__item-title">Адрес</div>
+                            <div class="p-contacts__item-text">Санкт-Петербург, ЛО, д.&nbsp;Вартемяги, ул.&nbsp;Смольнинская,&nbsp;2</div>
+                        </div>
+                        <div class="p-contacts__item p-contacts__item_phone">
+                            <div class="p-contacts__item-title">Телефон</div>
+                            <div class="p-contacts__item-text">
+                                <a href="tel:79215723999">+7 (921) 572-39-99</a>
                             </div>
                         </div>
-                        <div class="tab-menu p-catalog__tab-menu js-tab-menu">
-                            <div class="tab-menu__list">
-                                <a href="javascript:" class="tab-menu__item is-active js-tab-menu-item">Списком</a><a href="javascript:" class="tab-menu__item js-tab-menu-item">На карте</a>
+                        <div class="p-contacts__item p-contacts__item_email">
+                            <div class="p-contacts__item-title">Почта</div>
+                            <div class="p-contacts__item-text">
+                                <a href="mailto:timberdom@bk.ru">timberdom@bk.ru</a>
                             </div>
                         </div>
-                    </div>
-
-                    <div class="p-catalog__items l-grid l-grid-cols-3">
-                        <div class="project-item p-catalog__project">
-                            <a href="#" class="project-item__link"></a>
-                            <div class="project-item__image-box">
-                                <img class="project-item__image lazy" data-src="img/catalog/1.jpg" data-srcset="img/catalog/1@2x.jpg 2x" width="500" height="280" alt="">
-
-                            </div>
-                            <div class="project-item__content">
-
-                                <a class="tag project-item__category" href="#">
-                                    Профилированный брус вакуумной сушки
-                                </a>
-                                <div class="project-item__title">СОСНОВО</div>
-                                <div class="project-item__date">Январь 2024</div>
-
-                            </div>
-                        </div>
-                        <div class="project-item p-catalog__project">
-                            <a href="#" class="project-item__link"></a>
-                            <div class="project-item__image-box">
-                                <img class="project-item__image lazy" data-src="img/catalog/2.jpg" data-srcset="img/catalog/2@2x.jpg 2x" width="500" height="280" alt="">
-
-                            </div>
-                            <div class="project-item__content">
-
-                                <a class="tag project-item__category" href="#">
-                                    каркасная технология
-                                </a>
-                                <div class="project-item__title">КП Солнечный Берег</div>
-                                <div class="project-item__date">Июнь 2023</div>
-
+                        <div class="p-contacts__item p-contacts__item_map l-column-3">
+                            <div class="p-contacts__map">
+                                <div id="contacts_map" style="width: 100%; height: 100%"></div>
+                                <script>
+                                    var myMap = new ymaps.Map('map', {
+                                            center: [60.182216, 30.324959],
+                                            zoom: 9
+                                        }),
+                                        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
+                                            iconLayout: 'default#image',
+                                            // Своё изображение иконки метки.
+                                            iconImageHref: 'img/location-marker.svg',
+                                            // Размеры метки.
+                                            iconImageSize: [67, 63],
+                                            // Смещение левого верхнего угла иконки относительно
+                                            // её "ножки" (точки привязки).
+                                            iconImageOffset: [-38, -31]
+                                        });
+                                    myMap.geoObjects.add(myPlacemark);
+                                </script>
                             </div>
                         </div>
-                        <div class="project-item p-catalog__project">
-                            <a href="#" class="project-item__link"></a>
-                            <div class="project-item__image-box">
-                                <img class="project-item__image lazy" data-src="img/catalog/3.jpg" data-srcset="img/catalog/3@2x.jpg 2x" width="500" height="280" alt="">
-
-                            </div>
-                            <div class="project-item__content">
-
-                                <a class="tag project-item__category" href="#">
-                                    Профилированный брус вакуумной сушки
-                                </a>
-                                <div class="project-item__title">КП Сувантоярви</div>
-                                <div class="project-item__date">Декабрь 2022</div>
-
+                        <div class="p-contacts__item p-contacts__item_schedule">
+                            <div class="p-contacts__item-title">График работы</div>
+                            <div class="p-contacts__item-text">
+                                <p>Понедельник&mdash;Суббота <br>
+                                    с&nbsp;10:00 до&nbsp;19:00 <br>
+                                    Без перерывов и&nbsp;выходных</p>
+                                <p>
+                                    Звонки принимаются <br>
+                                    с&nbsp;09:00 до&nbsp;20:00
+                                </p>
                             </div>
                         </div>
-                        <div class="project-item p-catalog__project">
-                            <a href="#" class="project-item__link"></a>
-                            <div class="project-item__image-box">
-                                <img class="project-item__image lazy" data-src="img/catalog/4.jpg" data-srcset="img/catalog/4@2x.jpg 2x" width="500" height="280" alt="">
-
-                            </div>
-                            <div class="project-item__content">
-
-                                <a class="tag project-item__category" href="#">
-                                    Камень и дерево
-                                </a>
-                                <div class="project-item__title">КАРМОЛИНО</div>
-                                <div class="project-item__date">Январь 2023</div>
-
-                            </div>
-                        </div>
-                        <div class="project-item p-catalog__project">
-                            <a href="#" class="project-item__link"></a>
-                            <div class="project-item__image-box">
-                                <img class="project-item__image lazy" data-src="img/catalog/5.jpg" data-srcset="img/catalog/5@2x.jpg 2x" width="500" height="280" alt="">
-
-                            </div>
-                            <div class="project-item__content">
-
-                                <a class="tag project-item__category" href="#">
-                                    Профилированный брус вакуумной сушки
-                                </a>
-                                <div class="project-item__title">ДНП прилесный</div>
-                                <div class="project-item__date">Июнь 2023</div>
-
-                            </div>
-                        </div>
-                        <div class="project-item p-catalog__project">
-                            <a href="#" class="project-item__link"></a>
-                            <div class="project-item__image-box">
-                                <img class="project-item__image lazy" data-src="img/catalog/6.jpg" data-srcset="img/catalog/6@2x.jpg 2x" width="500" height="280" alt="">
-
-                            </div>
-                            <div class="project-item__content">
-
-                                <a class="tag project-item__category" href="#">
-                                    Каркасная технология
-                                </a>
-                                <div class="project-item__title">БЕЛООСТРОВ</div>
-                                <div class="project-item__date">Декабрь 2022</div>
-
-                            </div>
-                        </div>
-                        <div class="project-item p-catalog__project">
-                            <a href="#" class="project-item__link"></a>
-                            <div class="project-item__image-box">
-                                <img class="project-item__image lazy" data-src="img/catalog/7.jpg" data-srcset="img/catalog/7@2x.jpg 2x" width="500" height="280" alt="">
-
-                            </div>
-                            <div class="project-item__content">
-
-                                <a class="tag project-item__category" href="#">
-                                    Профилированный брус вакуумной сушки
-                                </a>
-                                <div class="project-item__title">МЕДНОЕ озеро</div>
-                                <div class="project-item__date">Январь 2019</div>
-
-                            </div>
-                        </div>
-                        <div class="project-item p-catalog__project">
-                            <a href="#" class="project-item__link"></a>
-                            <div class="project-item__image-box">
-                                <img class="project-item__image lazy" data-src="img/catalog/8.jpg" data-srcset="img/catalog/8@2x.jpg 2x" width="500" height="280" alt="">
-
-                            </div>
-                            <div class="project-item__content">
-
-                                <a class="tag project-item__category" href="#">
-                                    Профилированный брус вакуумной сушки
-                                </a>
-                                <div class="project-item__title">КП Солнечный Берег</div>
-                                <div class="project-item__date">Июнь 2018</div>
-
-                            </div>
-                        </div>
-                        <div class="project-item p-catalog__project">
-                            <a href="#" class="project-item__link"></a>
-                            <div class="project-item__image-box">
-                                <img class="project-item__image lazy" data-src="img/catalog/9.jpg" data-srcset="img/catalog/9@2x.jpg 2x" width="500" height="280" alt="">
-
-                            </div>
-                            <div class="project-item__content">
-
-                                <a class="tag project-item__category" href="#">
-                                    Профилированный брус вакуумной сушки
-                                </a>
-                                <div class="project-item__title">МЕДНОЕ</div>
-                                <div class="project-item__date">Декабрь 2016</div>
-
-                            </div>
-                        </div>
-                        <div class="project-item p-catalog__project">
-                            <a href="#" class="project-item__link"></a>
-                            <div class="project-item__image-box">
-                                <img class="project-item__image lazy" data-src="img/catalog/10.jpg" data-srcset="img/catalog/10@2x.jpg 2x" width="500" height="280" alt="">
-
-                            </div>
-                            <div class="project-item__content">
-
-                                <a class="tag project-item__category" href="#">
-                                    Каркасная технология
-                                </a>
-                                <div class="project-item__title">КОМАРОВО</div>
-                                <div class="project-item__date">Январь 2019</div>
-
-                            </div>
-                        </div>
-                        <div class="project-item p-catalog__project">
-                            <a href="#" class="project-item__link"></a>
-                            <div class="project-item__image-box">
-                                <img class="project-item__image lazy" data-src="img/catalog/11.jpg" data-srcset="img/catalog/11@2x.jpg 2x" width="500" height="280" alt="">
-
-                            </div>
-                            <div class="project-item__content">
-
-                                <a class="tag project-item__category" href="#">
-                                    Каркасная технология
-                                </a>
-                                <div class="project-item__title">КОМАРОВО</div>
-                                <div class="project-item__date">Декабрь 2016</div>
-
-                            </div>
-                        </div>
-                        <div class="project-item p-catalog__project">
-                            <a href="#" class="project-item__link"></a>
-                            <div class="project-item__image-box">
-                                <img class="project-item__image lazy" data-src="img/catalog/12.jpg" data-srcset="img/catalog/12@2x.jpg 2x" width="500" height="280" alt="">
-
-                            </div>
-                            <div class="project-item__content">
-
-                                <a class="tag project-item__category" href="#">
-                                    Профилированный брус вакуумной сушки
-                                </a>
-                                <div class="project-item__title">ЛУГА</div>
-                                <div class="project-item__date">Декабрь 2016</div>
-
-                            </div>
-                        </div>
-                        <div class="project-item p-catalog__project">
-                            <a href="#" class="project-item__link"></a>
-                            <div class="project-item__image-box">
-                                <img class="project-item__image lazy" data-src="img/catalog/13.jpg" data-srcset="img/catalog/13@2x.jpg 2x" width="500" height="280" alt="">
-
-                            </div>
-                            <div class="project-item__content">
-
-                                <a class="tag project-item__category" href="#">
-                                    Камень и дерево
-                                </a>
-                                <div class="project-item__title">ГОРЕЛОВО</div>
-                                <div class="project-item__date">Январь 2016</div>
-
-                            </div>
-                        </div>
-                        <div class="project-item p-catalog__project">
-                            <a href="#" class="project-item__link"></a>
-                            <div class="project-item__image-box">
-                                <img class="project-item__image lazy" data-src="img/catalog/14.jpg" data-srcset="img/catalog/14@2x.jpg 2x" width="500" height="280" alt="">
-
-                            </div>
-                            <div class="project-item__content">
-
-                                <a class="tag project-item__category" href="#">
-                                    Профилированный брус вакуумной сушки
-                                </a>
-                                <div class="project-item__title">АГАЛАТОВО</div>
-                                <div class="project-item__date">Июнь 2016</div>
-
-                            </div>
-                        </div>
-                        <div class="project-item p-catalog__project">
-                            <a href="#" class="project-item__link"></a>
-                            <div class="project-item__image-box">
-                                <img class="project-item__image lazy" data-src="img/catalog/15.jpg" data-srcset="img/catalog/15@2x.jpg 2x" width="500" height="280" alt="">
-
-                            </div>
-                            <div class="project-item__content">
-
-                                <a class="tag project-item__category" href="#">
-                                    Каркасная технология
-                                </a>
-                                <div class="project-item__title">ПАВЛОВСК</div>
-                                <div class="project-item__date">Декабрь 2015</div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="p-catalog__more">
-                        <a href="" class="ui-button ui-button_style_outline ui-button_center p-catalog__more-button"><span class="ui-button__text">
-                                показать больше
-                            </span></a>
                     </div>
                 </div>
             </div>
+            <section class="section feedback-section">
+                <div class="container">
+                    <div class="feedback-section__content content-border">
+                        <div class="feedback-section__row l-grid l-grid-cols-2">
+                            <div class="feedback-section__column">
+                                <div class="feedback-section__text">
+                                    <p>ОБЩЕСТВО С&nbsp;ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ &laquo;СТРОЙ ЛЮКС&raquo;</p>
+                                    <p>186653, Ленинградская область, Всеволожский район, д.&nbsp;Вартемяги, ул.&nbsp;Смольнинская д.&nbsp;2</p>
+                                    <p>
+                                        ОГРН 1127847246922 <br>
+                                        ИНН 7802787988 <br>
+                                        КПП 470601001 <br>
+                                        Расчетный счет 40702810803500031526 <br>
+                                        Корреспондентский счет 30101810745374525104 <br>
+                                        ООО &laquo;Банк Точка&raquo; <br>
+                                        БИК 044525104
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="feedback-section__column">
+                                <h2 class="feedback-section__title section-title">Напишите нам</h2>
+                                <form action="#" class="feedback-section__form form" data-js-form>
+                                    <div class="form__grid">
+                                        <div class="field-box form__fieldbox js-field-box">
+                                            <label class="field-box__label js-field-box-label" for="feedback_name">Ваше имя</label>
+                                            <div class="field-box__content">
+                                                <input id="feedback_name" class="ui-input field-box__input js-field-box-input" type="text" name="name" required="" data-js-form-field="">
+                                            </div>
+                                        </div>
+                                        <div class="field-box form__fieldbox js-field-box">
+                                            <label class="field-box__label js-field-box-label" for="feedback_phone">Номер телефона</label>
+                                            <div class="field-box__content">
+                                                <input id="feedback_phone" class="ui-input ui-input-phone field-box__input js-field-box-input" type="text" name="phone" required="" data-js-form-field="">
+                                            </div>
+                                        </div>
+                                        <div class="field-box field-box_textarea form__fieldbox js-field-box">
+                                            <label class="field-box__label js-field-box-label" for="feedback_message">Сообщение</label>
+                                            <div class="field-box__content">
+                                                <textarea id="feedback_message" class="ui-textarea field-box__textarea js-field-box-input" name="message" rows="3"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__submit">
+                                        <button type="submit" class="ui-button form__submit-button"><span class="ui-button__text">
+                                                Отправить
+                                            </span></button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="section section_bg why-us">
+                <div class="container">
+                    <div class="why-us__content content-border">
+                        <h2 class="why-us__title section-title">Почему мы?</h2>
+                        <div class="why-us__row l-grid l-grid-cols-2">
+                            <div class="why-us__column">
+                                <div class="why-us__advantage why-us__advantage_main">
+                                    <div class="why-us__advantage-icon-box">
+                                        <img class="why-us__advantage-icon lazy" data-src="img/why-us/advantage-1.svg" width="96" height="96" alt="">
+                                    </div>
+                                    <div class="why-us__advantage-title">Собственное производство</div>
+                                </div>
+                                <div class="why-us__text description">
+                                    <p>Дома из&nbsp;бруса &laquo;Тимбер дом&raquo;&nbsp;&mdash; практично, надежно, реально! Мы&nbsp;не&nbsp;голословны в&nbsp;своих утверждениях, приглашаем Вас в&nbsp;галерею построенных объектов</p>
+                                </div>
+                                <div class="why-us__button-wrapper">
+                                    <a href="" class="ui-button ui-button_size_sm ui-button_style_outline why-us__button"><span class="ui-button__text">
+                                            Подробнее
+                                        </span><svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                        </svg></a>
+                                </div>
+                            </div>
+                            <div class="why-us__column">
+                                <div class="why-us__items l-grid l-grid-cols-2">
+                                    <div class="why-us__advantage">
+                                        <div class="why-us__advantage-icon-box">
+                                            <img class="why-us__advantage-icon lazy" data-src="img/why-us/advantage-2.svg" width="96" height="96" alt="">
+                                        </div>
+                                        <div class="why-us__advantage-title">Технический надзор</div>
+                                    </div>
+                                    <div class="why-us__advantage">
+                                        <div class="why-us__advantage-icon-box">
+                                            <img class="why-us__advantage-icon lazy" data-src="img/why-us/advantage-3.svg" width="96" height="96" alt="">
+                                        </div>
+                                        <div class="why-us__advantage-title">Экологически чистые материалы</div>
+                                    </div>
+                                    <div class="why-us__advantage">
+                                        <div class="why-us__advantage-icon-box">
+                                            <img class="why-us__advantage-icon lazy" data-src="img/why-us/advantage-4.svg" width="96" height="96" alt="">
+                                        </div>
+                                        <div class="why-us__advantage-title">Гарантия на все работы</div>
+                                    </div>
+                                    <div class="why-us__advantage">
+                                        <div class="why-us__advantage-icon-box">
+                                            <img class="why-us__advantage-icon lazy" data-src="img/why-us/advantage-5.svg" width="96" height="96" alt="">
+                                        </div>
+                                        <div class="why-us__advantage-title">Доступные цены</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="section section_bg advantages-section">
                 <div class="container">
                     <div class="advantages-section__content content-border">
-
+                        <div class="advantages-section__main-title">Технология</div>
                         <div class="advantages-section__title section-title">
                             <div>
                                 <span>Преимущества</span><span>строительства домов <span class="u-hidden-mobile">и бань</span></span>
