@@ -10,6 +10,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
 
     <link rel="stylesheet" href="css/style.css" />
     <script type="module" src="js/main.js"></script>
@@ -113,13 +130,13 @@
                                     </svg>
                                     <span>Поиск</span>
                                 </button>
-                                <button type="button" class="header__control-button">
+                                <button type="button" class="header__control-button header__favorite-button">
                                     <svg class="ui-icon ui-icon-favorite icon">
                                         <use xlink:href="img/icons.svg#favorite"></use>
                                     </svg>
                                     <span>4</span>
                                 </button>
-                                <button type="button" class="header__control-button">
+                                <button type="button" class="header__control-button header__compare-button">
                                     <svg class="ui-icon ui-icon-arrows icon">
                                         <use xlink:href="img/icons.svg#arrows"></use>
                                     </svg>
@@ -295,7 +312,7 @@
                 <div class="container">
                     <div class="what-building__content content-border">
                         <h2 class="what-building__title">Что мы строим</h2>
-                        <div class="what-building__text section-title">
+                        <div class="what-building__text section-title anim anim_fadeInUp js-animation">
                             <span>Каркасные дома и&nbsp;бани из профилированного</span>
                             <span>клееного</span>
                             <img class="what-building__image lazy" data-src="img/what-building/1.png" data-srcset="img/what-building/1@2x.png 2x" width="269" height="64" alt="">
@@ -308,7 +325,7 @@
             </section>
             <section class="section services-section services-section_home">
                 <div class="container">
-                    <div class="services-section__content content-border">
+                    <div class="services-section__content content-border anim anim_fadeInUp js-animation">
                         <div class="services-section__row l-grid">
                             <div class="services-section__column services-section__column_left">
                                 <h2 class="services-section__title section-title">А&nbsp;еще мы строим</h2>
@@ -382,7 +399,7 @@
                     <div class="catalog-section__content content-border">
                         <div class="catalog-section__row l-grid l-grid-cols-2">
                             <div class="catalog-section__column">
-                                <div class="catalog-section__text description">
+                                <div class="catalog-section__text description anim js-animation">
                                     <p>
                                         Благодаря своим высоким качествам, таким как теплоизоляция
                                         и&nbsp;экологичность, профилированный брус вакуумной сушки, или как его ещё называют&nbsp;&mdash; эко-брус, относится к&nbsp;линейки современных материалов, и&nbsp;является на&nbsp;сегодняшний день лучшим из&nbsp;вариантов массива, применяемых в&nbsp;деревянном строительстве
@@ -405,9 +422,9 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="catalog-section__column">
+                            <div class="catalog-section__column catalog-section__column_right">
                                 <h2 class="catalog-section__title section-title">Деревянные и&nbsp;каменные дома под&nbsp;ключ</h2>
-                                <div class="tab-menu catalog-section__tab-menu">
+                                <div class="tab-menu catalog-section__tab-menu anim anim_fadeInUp js-animation">
                                     <div class="tab-menu__list">
                                         <a href="#" class="tab-menu__item">Все проекты</a><a href="#" class="tab-menu__item">Дома из бруса</a><a href="#" class="tab-menu__item">Каркасные дома</a><a href="#" class="tab-menu__item">Дома из камня</a><a href="#" class="tab-menu__item">Дома в стиле шале</a><a href="#" class="tab-menu__item">Бани</a>
                                     </div>
@@ -415,7 +432,7 @@
                             </div>
                         </div>
                         <div class="catalog-section__items l-grid l-grid-cols-4">
-                            <div class="project-item catalog-section__project _size_lg">
+                            <div class="project-item catalog-section__project _size_lg anim anim_fadeInUp js-animation">
                                 <a href="#" class="project-item__link"></a>
                                 <div class="project-item__image-box">
                                     <img class="project-item__image lazy" data-src="img/catalog-section/1.jpg" data-srcset="img/catalog-section/1@2x.jpg 2x" width="500" height="280" alt="">
@@ -451,7 +468,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="project-item catalog-section__project _size_sm">
+                            <div class="project-item catalog-section__project _size_sm anim anim_fadeInUp js-animation">
                                 <a href="#" class="project-item__link"></a>
                                 <div class="project-item__image-box">
                                     <img class="project-item__image lazy" data-src="img/catalog-section/2.jpg" data-srcset="img/catalog-section/2@2x.jpg 2x" width="500" height="280" alt="">
@@ -487,7 +504,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="project-item catalog-section__project _size_sm">
+                            <div class="project-item catalog-section__project _size_sm anim anim_fadeInUp js-animation">
                                 <a href="#" class="project-item__link"></a>
                                 <div class="project-item__image-box">
                                     <img class="project-item__image lazy" data-src="img/catalog-section/3.jpg" data-srcset="img/catalog-section/3@2x.jpg 2x" width="500" height="280" alt="">
@@ -527,7 +544,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="project-item catalog-section__project _size_sm">
+                            <div class="project-item catalog-section__project _size_sm anim anim_fadeInUp js-animation">
                                 <a href="#" class="project-item__link"></a>
                                 <div class="project-item__image-box">
                                     <img class="project-item__image lazy" data-src="img/catalog-section/4.jpg" data-srcset="img/catalog-section/4@2x.jpg 2x" width="500" height="280" alt="">
@@ -567,7 +584,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="project-item catalog-section__project _size_sm">
+                            <div class="project-item catalog-section__project _size_sm anim anim_fadeInUp js-animation">
                                 <a href="#" class="project-item__link"></a>
                                 <div class="project-item__image-box">
                                     <img class="project-item__image lazy" data-src="img/catalog-section/5.jpg" data-srcset="img/catalog-section/5@2x.jpg 2x" width="500" height="280" alt="">
@@ -603,7 +620,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="project-item catalog-section__project _size_sm">
+                            <div class="project-item catalog-section__project _size_sm anim anim_fadeInUp js-animation">
                                 <a href="#" class="project-item__link"></a>
                                 <div class="project-item__image-box">
                                     <img class="project-item__image lazy" data-src="img/catalog-section/6.jpg" data-srcset="img/catalog-section/6@2x.jpg 2x" width="500" height="280" alt="">
@@ -639,7 +656,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="project-item catalog-section__project _size_sm">
+                            <div class="project-item catalog-section__project _size_sm anim anim_fadeInUp js-animation">
                                 <a href="#" class="project-item__link"></a>
                                 <div class="project-item__image-box">
                                     <img class="project-item__image lazy" data-src="img/catalog-section/7.jpg" data-srcset="img/catalog-section/7@2x.jpg 2x" width="500" height="280" alt="">
@@ -692,16 +709,16 @@
                         <div class="about-section__row l-grid l-grid-cols-2">
                             <div class="about-section__column about-section__column_left">
                                 <div class="about-section__leader">
-                                    <div class="about-section__leader-content">
+                                    <div class="about-section__leader-content anim anim_fadeInLeft js-animation">
                                         <div class="about-section__leader-name">Павел Арутюнян</div>
                                         <div class="about-section__leader-position">Руководитель компании «Тимбердом»</div>
                                     </div>
-                                    <div class="about-section__leader-photo">
+                                    <div class="about-section__leader-photo anim anim_fadeInRight js-animation">
                                         <img class="about-section__leader-photo-image lazy" data-src="img/about-section/leader-photo.png" data-srcset="img/about-section/leader-photo@2x.png 2x" width="350" height="350" alt="">
                                     </div>
                                 </div>
                             </div>
-                            <div class="about-section__column about-section__column_right">
+                            <div class="about-section__column about-section__column_right anim anim_fadeInUp js-animation">
                                 <h2 class="about-section__title section-title section-title_size_sm">Тимбер дом&nbsp;&mdash; мы&nbsp;строим дома из&nbsp;сухого профилированного бруса</h2>
                                 <div class="about-section__text description">
                                     <p>Профессионализм не&nbsp;нуждается в&nbsp;дополнительных подтверждениях&nbsp;&mdash; опыт и&nbsp;мастерство наших специалистов говорят сами за&nbsp;себя. Вся продукция проходит тщательное исследование перед поступлением
@@ -721,7 +738,7 @@
             </section>
             <section class="section section_bg why-us">
                 <div class="container">
-                    <div class="why-us__content content-border">
+                    <div class="why-us__content content-border anim anim_fadeInUp js-animation">
                         <h2 class="why-us__title section-title">Почему мы?</h2>
                         <div class="why-us__row l-grid l-grid-cols-2">
                             <div class="why-us__column">
@@ -776,7 +793,7 @@
             </section>
             <section class="section section_bg reviews-section">
                 <div class="container">
-                    <div class="reviews-section__content content-border">
+                    <div class="reviews-section__content content-border anim anim_fadeInUp js-animation">
                         <div class="reviews-section__row l-grid">
                             <div class="reviews-section__column reviews-section__column_content">
                                 <h2 class="reviews-section__title section-title">Отзывы клиентов</h2>
@@ -868,7 +885,7 @@
                     <div class="advantages-section__content content-border">
                         <div class="advantages-section__main-title">Технология</div>
 
-                        <div class="advantages-section__title section-title">
+                        <div class="advantages-section__title section-title anim anim_fadeInUp js-animation">
                             <div>
                                 <span>Преимущества</span><span>строительства домов <span class="u-hidden-mobile">и бань</span></span>
                             </div>
@@ -880,7 +897,7 @@
 
                         <div class="advantages-section__rows-wrapper">
                             <div class="advantages-section__row l-grid l-grid-cols-2">
-                                <div class="advantages-section__column">
+                                <div class="advantages-section__column anim anim_fadeInUp js-animation">
                                     <div class="advantages-section__text description">
                                         <p>Основное преимущество домов и&nbsp;бань из&nbsp;ЭКО бруса вакуумной сушки, перед клееным брусом&nbsp;&mdash; это отсутствие клеевых соединений. Даже самый современный клей имеет в&nbsp;своём составе вредные для человека элементы, которые выделяются при работе отопления, пусть в&nbsp;допустимых по&nbsp;нормам количествах.</p>
                                         <p>Эко-брус является массивом, в&nbsp;нашем случае массивом отборной ели, поэтому в&nbsp;стенах своего дома или бани, Вы&nbsp;увидите только материал высочайшего качества, прошедший несколько этапов сортировки.</p>
@@ -902,7 +919,7 @@
                                     </div>
 
                                 </div>
-                                <div class="advantages-section__column">
+                                <div class="advantages-section__column anim anim_fadeInUp js-animation">
                                     <div class="pictures-block advantages-section__pictures">
                                         <div class="pictures-block__column pictures-block__column_large">
                                             <div class="pictures-block__image-box _size_big">
@@ -920,7 +937,7 @@
                             </div>
 
                             <div class="advantages-section__row l-grid l-grid-cols-2">
-                                <div class="advantages-section__column">
+                                <div class="advantages-section__column anim anim_fadeInUp js-animation">
                                     <div class="advantages-section__text description">
                                         <h3>Дома в&nbsp;стиле Шале</h3>
                                         <p>Комбинация различных материалов, таких например
@@ -952,7 +969,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="advantages-section__column">
+                                <div class="advantages-section__column anim anim_fadeInUp js-animation">
                                     <div class="pictures-block advantages-section__pictures">
                                         <div class="pictures-block__column pictures-block__column_large">
                                             <div class="pictures-block__image-box _size_big">
@@ -976,23 +993,34 @@
                 <div class="completed-projects__inner">
                     <div class="container">
                         <div class="completed-projects__content">
-                            <div class="completed-projects__images">
+                            <div class="completed-projects__image-box-main">
+                                <div class="completed-projects__image-box-main-inner anim anim_zoomOut js-animation">
+                                    <img class="completed-projects__image lazy" data-src="img/completed-projects/image-main.jpg" data-srcset="img/completed-projects/image-main@2x.jpg 2x" width="460" height="260" alt="">
+                                </div>
+                            </div>
+                            <div class="completed-projects__images anim js-animation">
                                 <div class="completed-projects__image-box completed-projects__image-box_1 _size_sm">
-                                    <img class="completed-projects__image lazy" data-src="img/completed-projects/image-1.jpg" data-srcset="img/completed-projects/image-1@2x.jpg 2x" width="108" height="60" alt="">
+                                    <div class="completed-projects__image-box-inner">
+                                        <img class="completed-projects__image lazy" data-src="img/completed-projects/image-1.jpg" data-srcset="img/completed-projects/image-1@2x.jpg 2x" width="108" height="60" alt="">
+                                    </div>
                                 </div>
                                 <div class="completed-projects__image-box completed-projects__image-box_2 _size_lg">
-                                    <img class="completed-projects__image lazy" data-src="img/completed-projects/image-2.jpg" data-srcset="img/completed-projects/image-2@2x.jpg 2x" width="225" height="126" alt="">
+                                    <div class="completed-projects__image-box-inner ">
+                                        <img class="completed-projects__image lazy" data-src="img/completed-projects/image-2.jpg" data-srcset="img/completed-projects/image-2@2x.jpg 2x" width="225" height="126" alt="">
+                                    </div>
                                 </div>
                                 <div class="completed-projects__image-box completed-projects__image-box_3 _size_lg">
-                                    <img class="completed-projects__image lazy" data-src="img/completed-projects/image-3.jpg" data-srcset="img/completed-projects/image-3@2x.jpg 2x" width="225" height="126" alt="">
+                                    <div class="completed-projects__image-box-inner ">
+                                        <img class="completed-projects__image lazy" data-src="img/completed-projects/image-3.jpg" data-srcset="img/completed-projects/image-3@2x.jpg 2x" width="225" height="126" alt="">
+                                    </div>
                                 </div>
                                 <div class="completed-projects__image-box completed-projects__image-box_4 _size_sm">
-                                    <img class="completed-projects__image lazy" data-src="img/completed-projects/image-4.jpg" data-srcset="img/completed-projects/image-4@2x.jpg 2x" width="108" height="60" alt="">
+                                    <div class="completed-projects__image-box-inner">
+                                        <img class="completed-projects__image lazy" data-src="img/completed-projects/image-4.jpg" data-srcset="img/completed-projects/image-4@2x.jpg 2x" width="108" height="60" alt="">
+                                    </div>
                                 </div>
                             </div>
-                            <div class="completed-projects__image-box-main">
-                                <img class="completed-projects__image lazy" data-src="img/completed-projects/image-main.jpg" data-srcset="img/completed-projects/image-main@2x.jpg 2x" width="460" height="260" alt="">
-                            </div>
+
                             <div class="completed-projects__title-wrapper">
                                 <div class="completed-projects__title section-title">
                                     <span>Наши</span>
@@ -1019,7 +1047,7 @@
                                 </div>
                                 <div class="articles-section__column">
                                     <div class="articles-section__items l-grid l-gap-40">
-                                        <article class="article-item articles-section__item">
+                                        <article class="article-item articles-section__item anim anim_fadeInUp js-animation">
                                             <div class="article-item__head">
                                                 <div class="article-item__date">11 янв 2024</div>
 
@@ -1045,7 +1073,7 @@
                                                 </a>
                                             </div>
                                         </article>
-                                        <article class="article-item articles-section__item">
+                                        <article class="article-item articles-section__item anim anim_fadeInUp js-animation">
                                             <div class="article-item__head">
                                                 <div class="article-item__date">21 дек 2023</div>
 
@@ -1071,7 +1099,7 @@
                                                 </a>
                                             </div>
                                         </article>
-                                        <article class="article-item articles-section__item">
+                                        <article class="article-item articles-section__item anim anim_fadeInUp js-animation">
                                             <div class="article-item__head">
                                                 <div class="article-item__date">06 сен 2023</div>
 
@@ -1322,7 +1350,7 @@
                                         <span class="ui-checkbox__text">Даю согласие на&nbsp;обработку персональных данных в&nbsp;соответствии <a href="">политики Конфиденциальности</a></span>
                                     </label>
                                 </div>
-                                <div class="form__submit">
+                                <div class="feedback-modal__form-submit form__submit">
                                     <button type="submit" class="ui-button form__submit-button"><span class="ui-button__text">
                                             Отправить
                                         </span></button>

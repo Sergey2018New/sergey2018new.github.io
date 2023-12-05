@@ -10,6 +10,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=56b811ee-10e3-43fb-a32a-80fc7205fba7"></script>
     <link rel="stylesheet" href="css/style.css" />
     <script type="module" src="js/main.js"></script>
@@ -113,13 +130,13 @@
                                     </svg>
                                     <span>Поиск</span>
                                 </button>
-                                <button type="button" class="header__control-button">
+                                <button type="button" class="header__control-button header__favorite-button">
                                     <svg class="ui-icon ui-icon-favorite icon">
                                         <use xlink:href="img/icons.svg#favorite"></use>
                                     </svg>
                                     <span>4</span>
                                 </button>
-                                <button type="button" class="header__control-button">
+                                <button type="button" class="header__control-button header__compare-button">
                                     <svg class="ui-icon ui-icon-arrows icon">
                                         <use xlink:href="img/icons.svg#arrows"></use>
                                     </svg>
@@ -505,7 +522,7 @@
             </section>
             <section class="section section_bg why-us">
                 <div class="container">
-                    <div class="why-us__content content-border">
+                    <div class="why-us__content content-border ">
                         <h2 class="why-us__title section-title">Почему мы?</h2>
                         <div class="why-us__row l-grid l-grid-cols-2">
                             <div class="why-us__column">
@@ -563,7 +580,7 @@
                     <div class="advantages-section__content content-border">
                         <div class="advantages-section__main-title">Технология</div>
 
-                        <div class="advantages-section__title section-title">
+                        <div class="advantages-section__title section-title ">
                             <div>
                                 <span>Преимущества</span><span>строительства домов <span class="u-hidden-mobile">и бань</span></span>
                             </div>
@@ -575,7 +592,7 @@
 
                         <div class="advantages-section__rows-wrapper">
                             <div class="advantages-section__row l-grid l-grid-cols-2">
-                                <div class="advantages-section__column">
+                                <div class="advantages-section__column ">
                                     <div class="advantages-section__text description">
                                         <p>Основное преимущество домов и&nbsp;бань из&nbsp;ЭКО бруса вакуумной сушки, перед клееным брусом&nbsp;&mdash; это отсутствие клеевых соединений. Даже самый современный клей имеет в&nbsp;своём составе вредные для человека элементы, которые выделяются при работе отопления, пусть в&nbsp;допустимых по&nbsp;нормам количествах.</p>
                                         <p>Эко-брус является массивом, в&nbsp;нашем случае массивом отборной ели, поэтому в&nbsp;стенах своего дома или бани, Вы&nbsp;увидите только материал высочайшего качества, прошедший несколько этапов сортировки.</p>
@@ -597,7 +614,7 @@
                                     </div>
 
                                 </div>
-                                <div class="advantages-section__column">
+                                <div class="advantages-section__column ">
                                     <div class="pictures-block advantages-section__pictures">
                                         <div class="pictures-block__column pictures-block__column_large">
                                             <div class="pictures-block__image-box _size_big">
@@ -615,7 +632,7 @@
                             </div>
 
                             <div class="advantages-section__row l-grid l-grid-cols-2">
-                                <div class="advantages-section__column">
+                                <div class="advantages-section__column ">
                                     <div class="advantages-section__text description">
                                         <h3>Дома в&nbsp;стиле Шале</h3>
                                         <p>Комбинация различных материалов, таких например
@@ -647,7 +664,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="advantages-section__column">
+                                <div class="advantages-section__column ">
                                     <div class="pictures-block advantages-section__pictures">
                                         <div class="pictures-block__column pictures-block__column_large">
                                             <div class="pictures-block__image-box _size_big">
@@ -877,7 +894,7 @@
                                         <span class="ui-checkbox__text">Даю согласие на&nbsp;обработку персональных данных в&nbsp;соответствии <a href="">политики Конфиденциальности</a></span>
                                     </label>
                                 </div>
-                                <div class="form__submit">
+                                <div class="feedback-modal__form-submit form__submit">
                                     <button type="submit" class="ui-button form__submit-button"><span class="ui-button__text">
                                             Отправить
                                         </span></button>
