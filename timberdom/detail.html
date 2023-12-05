@@ -99,7 +99,7 @@
                                     <div class="header__contacts" data-da=".js-contacts-adaptive, 1023.98, first">
                                         <a href="tel:79215723999" class="header__contacts-phone">+7 (921) 572-39-99</a>
                                         <div class="header__contacts-button-wrapper">
-                                            <button type="button" class="ui-button ui-button_size_xs ui-button_style_outline header__contacts-button"><span class="ui-button__text">
+                                            <button type="button" class="ui-button ui-button_size_xs ui-button_style_outline header__contacts-button" data-modal-open="#feedback_modal"><span class="ui-button__text">
                                                     Заказать звонок
                                                 </span><svg class="ui-icon ui-icon-arrow ui-button__icon">
                                                     <use xlink:href="img/icons.svg#arrow"></use>
@@ -1500,7 +1500,7 @@
                             </div>
                         </div>
                         <div class="footer__request">
-                            <button type="button" class="ui-button ui-button_size_xs ui-button_style_outline footer__request-button"><span class="ui-button__text">
+                            <button type="button" class="ui-button ui-button_size_xs ui-button_style_outline footer__request-button" data-modal-open="#feedback_modal"><span class="ui-button__text">
                                     Оставить заявку
                                 </span><svg class="ui-icon ui-icon-arrow ui-button__icon">
                                     <use xlink:href="img/icons.svg#arrow"></use>
@@ -1645,6 +1645,18 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="form__captcha">
+                                    <div class="form__captcha-title">Введите код с&nbsp;картинки</div>
+                                    <div class="form__captcha-row">
+                                        <div class="form__captcha-image-box">
+                                            <img class="form__captcha-image" src="img/captcha.png" alt="" width="180" height="52">
+                                        </div>
+                                        <div class="form__captcha-field">
+                                            <input class="ui-input form__captcha-input" type="text" name="captcha" data-js-form-field="">
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="form__agreement">
                                     <label class="ui-checkbox ui-checkbox_checkbox form__agreement-checkbox">
                                         <input class="ui-checkbox__input " type="checkbox" name="agreement" checked data-js-form-field />
@@ -1663,6 +1675,7 @@
                                             Отправить
                                         </span></button>
                                 </div>
+
                             </form>
                         </div>
                     </div>
