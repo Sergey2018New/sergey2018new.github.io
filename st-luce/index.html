@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg">
+    <title>ST Luce</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="main">
+
+            <div class="container">
+                <div class="site-pages">
+                    <h1 class="site-pages__title">ST Luce</h1>
+                    <div class="site-pages__table">
+                        <div class="site-pages__head">
+                            <div>Страница</div>
+                            <div>Статус</div>
+                        </div>
+                        <div class="site-pages__item">
+                            <a class="site-pages__link" href="ui.html">UI Kit</a>
+                            <div class="site-pages__status">В процессе</div>
+                        </div>
+                        <div class="site-pages__item">
+                            <a class="site-pages__link" href="main.html">Главная</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</body>
+
+</html>
+
+<style>
+    .site-pages {
+        padding-top: 6rem;
+        padding-bottom: 10rem;
+    }
+
+    .site-pages__title {
+        margin-top: 0;
+        margin-bottom: 4rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid;
+        font-weight: 400;
+        font-size: 3.2rem;
+    }
+
+    .site-pages__head {
+        display: grid;
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+        color: white;
+        background: #0C20FF;
+    }
+
+    @media (max-width: 575px) {
+        .site-pages__head {
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+        }
+    }
+
+    .site-pages__head>* {
+        padding: 1rem 1.5rem;
+    }
+
+    @media (max-width: 575px) {
+        .site-pages__head>div:nth-child(2) {
+            display: none;
+        }
+    }
+
+    .site-pages__item {
+        display: grid;
+        grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    }
+
+    @media (max-width: 575px) {
+        .site-pages__item {
+            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+            padding: 1rem 0;
+        }
+    }
+
+    .site-pages__item:nth-child(2n) {
+        background: #F7F7F7;
+    }
+
+    .site-pages__item>* {
+        padding: 1rem 1.5rem;
+    }
+
+    @media (max-width: 575px) {
+        .site-pages__item>* {
+            padding-top: 0.2rem;
+            padding-bottom: 0.2rem;
+        }
+    }
+
+    .site-pages__item.disabled {
+        opacity: 0.3;
+        pointer-events: none;
+    }
+
+    .site-pages__item.disabled .site-pages__link {
+        opacity: 0;
+    }
+
+    .site-pages__link {
+        width: fit-content;
+        text-decoration: none;
+        color: #0C20FF;
+    }
+
+    .site-pages__link:hover {
+        color: rgb(105, 105, 248)
+    }
+
+    @media (max-width: 575px) {
+        .site-pages__link {
+            order: 1;
+        }
+    }
+
+    @media (max-width: 575px) {
+        .site-pages__table {
+            margin-left: -1.5rem;
+            margin-right: -1.5rem;
+        }
+    }
+
+    .site-pages__status {
+        grid-row: span 2;
+    }
+</style>

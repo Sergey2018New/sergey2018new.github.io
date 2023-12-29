@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>ST Luce - Ui Kit</title>
+    <meta name="description" content="Описание страницы">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.body.classList.add('is-loaded');
+            }, 10)
+        });
+    </script>
+
+    <div class="wrapper">
+
+        <main class="main">
+
+            <section class="section st-luce-ui">
+                <div class="container">
+                    <h1 class="st-luce-ui__title heading-title">ST Luce - Ui Kit</h1>
+                    <h2 class="section-title">Кнопки</h2>
+                    <div class="st-luce-ui">
+                        <div class="st-luce-ui__row">
+                            <a href="" class="ui-button ui-button_style_outline">
+                                <span class="ui-button__text">
+                                    Смотреть каталог
+                                </span>
+                                <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                </svg></a>
+                            <a href="" class="ui-button ui-button_style_outline is-disabled" tabindex="-1">
+                                <span class="ui-button__text">
+                                    Смотреть каталог
+                                </span>
+                                <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                </svg></a>
+                        </div>
+                        <div class="st-luce-ui__row">
+                            <button type="button" class="ui-button ui-button_style_black">
+                                <span class="ui-button__text">
+                                    В корзину
+                                </span>
+                                <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                </svg></button>
+                            <button type="button" class="ui-button ui-button_style_black" disabled="disabled">
+                                <span class="ui-button__text">
+                                    В корзину
+                                </span>
+                                <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                </svg></button>
+                        </div>
+                        <div class="st-luce-ui__row">
+                            <button type="button" class="ui-button ui-button_size_sm">
+                                <span class="ui-button__text">
+                                    Кнопка поменьше
+                                </span>
+                            </button>
+                            <button type="button" class="ui-button ui-button_size_sm" disabled="disabled">
+                                <span class="ui-button__text">
+                                    Кнопка поменьше
+                                </span>
+                            </button>
+                        </div>
+                        <div class="st-luce-ui__row">
+                            <button type="button" class="ui-button">
+                                <span class="ui-button__text">
+                                    Показать еще
+                                </span>
+                            </button>
+                            <button type="button" class="ui-button" disabled="disabled">
+                                <span class="ui-button__text">
+                                    Показать еще
+                                </span>
+                            </button>
+                        </div>
+                    </div>
+                    <h2 class="section-title">Иконочные кнопки</h2>
+                    <div class="st-luce-ui">
+                        <div class="st-luce-ui__row">
+                            <a href="" class="ui-button-icon"><svg class="ui-icon ui-icon-heart ui-button-icon__icon">
+                                    <use xlink:href="img/icons.svg#heart"></use>
+                                </svg>
+
+                            </a>
+                            <a href="" class="ui-button-icon"><svg class="ui-icon ui-icon-compare ui-button-icon__icon">
+                                    <use xlink:href="img/icons.svg#compare"></use>
+                                </svg>
+
+                            </a>
+                            <a href="" class="ui-button-icon" amount="12"><svg class="ui-icon ui-icon-cart-2 ui-button-icon__icon">
+                                    <use xlink:href="img/icons.svg#cart-2"></use>
+                                </svg>
+
+                            </a>
+                            <a href="" class="ui-button-icon"><svg class="ui-icon ui-icon-user ui-button-icon__icon">
+                                    <use xlink:href="img/icons.svg#user"></use>
+                                </svg>
+
+                            </a>
+                        </div>
+                    </div>
+                    <h2 class="section-title">Навигационные кнопки</h2>
+                    <div class="st-luce-ui">
+                        <div class="st-luce-ui__row">
+                            <button type="button" class="ui-button-icon swiper-button-prev undefined">
+                                <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.008.765a.567.567 0 0 0-.33.26c-.049.091-.052.353-.006.442.017.032.812.84 1.767 1.795L6.175 5 4.439 6.737c-.955.956-1.75 1.764-1.767 1.796-.046.089-.043.351.006.442a.61.61 0 0 0 .239.227c.112.057.31.055.425-.006.062-.033.596-.557 2.158-2.12L7.575 5 5.5 2.924C3.956 1.379 3.405.837 3.345.806a.589.589 0 0 0-.337-.041" fill-rule="evenodd"></path>
+                                </svg>
+
+                                <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.20277 1.12372C4.99495 0.941877 4.67907 0.962936 4.49723 1.17075C4.31539 1.37857 4.33645 1.69445 4.54426 1.8763L7.54279 4.50001H0.873516C0.597374 4.50001 0.373516 4.72386 0.373516 5.00001C0.373516 5.27615 0.597374 5.50001 0.873516 5.50001H7.54279L4.54426 8.12372C4.33645 8.30556 4.31539 8.62144 4.49723 8.82926C4.67907 9.03708 4.99495 9.05814 5.20277 8.8763L9.20277 5.3763L9.63281 5.00001L9.20277 4.62372L5.20277 1.12372Z"></path>
+                                </svg>
+
+                            </button>
+                            <button type="button" class="ui-button-icon swiper-button-next undefined">
+                                <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.008.765a.567.567 0 0 0-.33.26c-.049.091-.052.353-.006.442.017.032.812.84 1.767 1.795L6.175 5 4.439 6.737c-.955.956-1.75 1.764-1.767 1.796-.046.089-.043.351.006.442a.61.61 0 0 0 .239.227c.112.057.31.055.425-.006.062-.033.596-.557 2.158-2.12L7.575 5 5.5 2.924C3.956 1.379 3.405.837 3.345.806a.589.589 0 0 0-.337-.041" fill-rule="evenodd"></path>
+                                </svg>
+
+                                <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.20277 1.12372C4.99495 0.941877 4.67907 0.962936 4.49723 1.17075C4.31539 1.37857 4.33645 1.69445 4.54426 1.8763L7.54279 4.50001H0.873516C0.597374 4.50001 0.373516 4.72386 0.373516 5.00001C0.373516 5.27615 0.597374 5.50001 0.873516 5.50001H7.54279L4.54426 8.12372C4.33645 8.30556 4.31539 8.62144 4.49723 8.82926C4.67907 9.03708 4.99495 9.05814 5.20277 8.8763L9.20277 5.3763L9.63281 5.00001L9.20277 4.62372L5.20277 1.12372Z"></path>
+                                </svg>
+
+                            </button>
+                            <button type="button" class="ui-button-icon swiper-button-prev swiper-button-disabled" tabindex="-1">
+                                <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.008.765a.567.567 0 0 0-.33.26c-.049.091-.052.353-.006.442.017.032.812.84 1.767 1.795L6.175 5 4.439 6.737c-.955.956-1.75 1.764-1.767 1.796-.046.089-.043.351.006.442a.61.61 0 0 0 .239.227c.112.057.31.055.425-.006.062-.033.596-.557 2.158-2.12L7.575 5 5.5 2.924C3.956 1.379 3.405.837 3.345.806a.589.589 0 0 0-.337-.041" fill-rule="evenodd"></path>
+                                </svg>
+
+                                <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.20277 1.12372C4.99495 0.941877 4.67907 0.962936 4.49723 1.17075C4.31539 1.37857 4.33645 1.69445 4.54426 1.8763L7.54279 4.50001H0.873516C0.597374 4.50001 0.373516 4.72386 0.373516 5.00001C0.373516 5.27615 0.597374 5.50001 0.873516 5.50001H7.54279L4.54426 8.12372C4.33645 8.30556 4.31539 8.62144 4.49723 8.82926C4.67907 9.03708 4.99495 9.05814 5.20277 8.8763L9.20277 5.3763L9.63281 5.00001L9.20277 4.62372L5.20277 1.12372Z"></path>
+                                </svg>
+
+                            </button>
+                            <button type="button" class="ui-button-icon swiper-button-next swiper-button-disabled" tabindex="-1">
+                                <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.008.765a.567.567 0 0 0-.33.26c-.049.091-.052.353-.006.442.017.032.812.84 1.767 1.795L6.175 5 4.439 6.737c-.955.956-1.75 1.764-1.767 1.796-.046.089-.043.351.006.442a.61.61 0 0 0 .239.227c.112.057.31.055.425-.006.062-.033.596-.557 2.158-2.12L7.575 5 5.5 2.924C3.956 1.379 3.405.837 3.345.806a.589.589 0 0 0-.337-.041" fill-rule="evenodd"></path>
+                                </svg>
+
+                                <svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M5.20277 1.12372C4.99495 0.941877 4.67907 0.962936 4.49723 1.17075C4.31539 1.37857 4.33645 1.69445 4.54426 1.8763L7.54279 4.50001H0.873516C0.597374 4.50001 0.373516 4.72386 0.373516 5.00001C0.373516 5.27615 0.597374 5.50001 0.873516 5.50001H7.54279L4.54426 8.12372C4.33645 8.30556 4.31539 8.62144 4.49723 8.82926C4.67907 9.03708 4.99495 9.05814 5.20277 8.8763L9.20277 5.3763L9.63281 5.00001L9.20277 4.62372L5.20277 1.12372Z"></path>
+                                </svg>
+
+                            </button>
+                        </div>
+                    </div>
+                    <h2 class="section-title">Дополнительные кнопки</h2>
+                    <div class="st-luce-ui">
+                        <div class="st-luce-ui__row">
+                            <button type="button" class="ui-button ui-button_style_link js-copy-button" isCopy="true" data-copied-success="Ссылка скопирована" data-link="http://site">
+                                <span class="ui-button__text js-copy-button-text">
+                                    Скопировать ссылку на корзину
+                                </span>
+                                <svg class="ui-icon ui-icon-copy ui-button__icon">
+                                    <use xlink:href="img/icons.svg#copy"></use>
+                                </svg></button>
+                        </div>
+                    </div>
+                    <h2 class="section-title">Контролы</h2>
+                    <div class="st-luce-ui">
+                        <div class="st-luce-ui__row">
+                            <label class="ui-checkbox ui-checkbox_checkbox">
+                                <input class="ui-checkbox__input " type="checkbox" name="checkbox" />
+                                <span class="ui-checkbox__checked">
+                                    <svg class="ui-icon ui-icon-check ui-checkbox__checked-icon">
+                                        <use xlink:href="img/icons.svg#check"></use>
+                                    </svg>
+                                    <span class="ui-checkbox__focused"></span>
+                                </span>
+
+                                <span class="ui-checkbox__text">Checkbox</span>
+                            </label>
+                            <label class="ui-checkbox ui-checkbox_checkbox">
+                                <input class="ui-checkbox__input " type="checkbox" name="checkbox_disabled" />
+                                <span class="ui-checkbox__checked">
+                                    <svg class="ui-icon ui-icon-check ui-checkbox__checked-icon">
+                                        <use xlink:href="img/icons.svg#check"></use>
+                                    </svg>
+                                    <span class="ui-checkbox__focused"></span>
+                                </span>
+
+                                <span class="ui-checkbox__text">Checkbox</span>
+                            </label>
+                        </div>
+                        <div class="st-luce-ui__row">
+                            <label class="ui-checkbox ui-checkbox_radio">
+                                <input class="ui-checkbox__input " type="radio" name="radio" value="1" checked />
+                                <span class="ui-checkbox__checked">
+                                    <svg class="ui-icon ui-icon-check ui-checkbox__checked-icon">
+                                        <use xlink:href="img/icons.svg#check"></use>
+                                    </svg>
+                                    <span class="ui-checkbox__focused"></span>
+                                </span>
+
+                                <span class="ui-checkbox__text">Radio</span>
+                            </label>
+                            <label class="ui-checkbox ui-checkbox_radio">
+                                <input class="ui-checkbox__input " type="radio" name="radio" value="2" />
+                                <span class="ui-checkbox__checked">
+                                    <svg class="ui-icon ui-icon-check ui-checkbox__checked-icon">
+                                        <use xlink:href="img/icons.svg#check"></use>
+                                    </svg>
+                                    <span class="ui-checkbox__focused"></span>
+                                </span>
+
+                                <span class="ui-checkbox__text">Radio</span>
+                            </label>
+                            <label class="ui-checkbox ui-checkbox_radio">
+                                <input class="ui-checkbox__input " type="radio" name="radio" value="3" />
+                                <span class="ui-checkbox__checked">
+                                    <svg class="ui-icon ui-icon-check ui-checkbox__checked-icon">
+                                        <use xlink:href="img/icons.svg#check"></use>
+                                    </svg>
+                                    <span class="ui-checkbox__focused"></span>
+                                </span>
+
+                                <span class="ui-checkbox__text">Radio</span>
+                            </label>
+
+                        </div>
+                    </div>
+                    <h2 class="section-title">Инпуты</h2>
+                    <div class="st-luce-ui">
+                        <div class="st-luce-ui__grid st-luce-ui__grid_col_4">
+                            <div class="field-box js-field-box">
+                                <label class="field-box__label" for="fieldName_1">Label <span class="u-text-required">*</span></label>
+                                <div class="field-box__content">
+                                    <input id="fieldName_1" class="ui-input field-box__input js-field-box-input" type="text" name="name" placeholder="Text" required="" data-js-form-field="">
+                                </div>
+                            </div>
+                            <div class="field-box js-field-box">
+                                <label class="field-box__label" for="fieldName_2">Label <span class="u-text-required">*</span></label>
+                                <div class="field-box__content">
+                                    <input id="fieldName_2" class="ui-input field-box__input js-field-box-input" type="text" name="name" placeholder="Text" value="Text" required="" data-js-form-field="">
+                                </div>
+                            </div>
+                            <div class="field-box js-field-box is-success">
+                                <label class="field-box__label" for="fieldName_3">Label <span class="u-text-required">*</span></label>
+                                <div class="field-box__content">
+                                    <input id="fieldName_3" class="ui-input field-box__input js-field-box-input" type="text" name="name" placeholder="Text" value="Text" isSuccess="true" required="" data-js-form-field="">
+                                </div>
+                            </div>
+                            <div class="field-box js-field-box">
+                                <label class="field-box__label" for="fieldName_4">Label</label>
+                                <div class="field-box__content">
+                                    <input id="fieldName_4" class="ui-input field-box__input js-field-box-input" type="text" name="name" placeholder="Text" disabled="">
+                                </div>
+                            </div>
+                            <div class="field-box js-field-box">
+                                <label class="field-box__label" for="field_phone">Номер телефона</label>
+                                <div class="field-box__content">
+                                    <input id="field_phone" class="ui-input ui-input-phone field-box__input js-phone-mask js-field-box-input" type="text" name="phone" placeholder="+7 (   )">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="st-luce-ui__grid">
+                            <div class="field-box field-box_textarea js-field-box">
+                                <label class="field-box__label" for="fieldText_1">Label</label>
+                                <div class="field-box__content">
+                                    <textarea id="fieldText_1" class="ui-textarea field-box__textarea js-field-box-input" name="text" placeholder="Text" rows="3"></textarea>
+                                </div>
+                            </div>
+                            <div class="field-box field-box_textarea js-field-box">
+                                <label class="field-box__label" for="fieldText_2">Label</label>
+                                <div class="field-box__content">
+                                    <textarea id="fieldText_2" class="ui-textarea field-box__textarea js-field-box-input" name="text" placeholder="Text" rows="3">Описание текста</textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="st-luce-ui__grid st-luce-ui__grid_col_4">
+                            <div class="field-box field-box_password js-field-box" data-field-type="password">
+                                <label class="field-box__label" for="fieldPassword_1">Старый пароль <span class="u-text-required">*</span></label>
+                                <div class="field-box__content">
+                                    <input id="fieldPassword_1" class="ui-input field-box__input js-field-box-input" type="password" name="old_password" value="*********" required="" data-js-form-field=""><button type="button" class="field-box__password-button js-field-box-password-button" title="Показать пароль" data-title="Скрыть пароль"><span></span></button>
+                                </div>
+                            </div>
+                            <div class="field-box field-box_password js-field-box" data-field-type="password">
+                                <label class="field-box__label" for="fieldPassword_2">Новый пароль <span class="u-text-required">*</span></label>
+                                <div class="field-box__content">
+                                    <input id="fieldPassword_2" class="ui-input field-box__input js-field-box-input" type="password" name="new_password" value="*********" required="" data-js-form-field=""><button type="button" class="field-box__password-button js-field-box-password-button" title="Показать пароль" data-title="Скрыть пароль"><span></span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="section-title">Счётчик количества</h2>
+                    <div class="st-luce-ui">
+                        <div class="st-luce-ui__row">
+                            <div class="ui-counter js-counter">
+                                <button type="button" class="ui-button-icon ui-button-icon_size_sm ui-counter__button ui-counter__button_decrease js-counter-decrease" title="Уменьшить">
+                                    <span class="ui-counter__button-icon"></span>
+
+                                </button>
+
+                                <input type="number" name="counter" value="1" min="1" max="100" class="ui-counter__input  js-counter-input" data-value-min="1" data-value-max="100" readonly>
+
+                                <button type="button" class="ui-button-icon ui-button-icon_size_sm ui-counter__button ui-counter__button_increase js-counter-increase" title="Увеличить">
+                                    <span class="ui-counter__button-icon"></span>
+
+                                </button>
+                            </div>
+                            <div class="ui-counter ui-counter_style_outline js-counter">
+                                <button type="button" class="ui-button-icon ui-button-icon_size_sm ui-counter__button ui-counter__button_decrease js-counter-decrease" title="Уменьшить">
+                                    <span class="ui-counter__button-icon"></span>
+
+                                </button>
+
+                                <input type="number" name="counter" value="10" min="1" max="100" class="ui-counter__input  js-counter-input" data-value-min="1" data-value-max="100" readonly>
+
+                                <button type="button" class="ui-button-icon ui-button-icon_size_sm ui-counter__button ui-counter__button_increase js-counter-increase" title="Увеличить">
+                                    <span class="ui-counter__button-icon"></span>
+
+                                </button>
+                            </div>
+                            <div class="ui-counter ui-counter_style_outline ui-counter_size_lg js-counter">
+                                <button type="button" class="ui-button-icon ui-button-icon_size_sm ui-counter__button ui-counter__button_decrease js-counter-decrease" title="Уменьшить">
+                                    <span class="ui-counter__button-icon"></span>
+
+                                </button>
+
+                                <input type="number" name="counter" value="100" min="1" max="100" class="ui-counter__input  js-counter-input" data-value-min="1" data-value-max="100" readonly>
+
+                                <button type="button" class="ui-button-icon ui-button-icon_size_sm ui-counter__button ui-counter__button_increase js-counter-increase" title="Увеличить">
+                                    <span class="ui-counter__button-icon"></span>
+
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="section-title">Выпадающие списки / меню</h2>
+                    <div class="st-luce-ui">
+                        <div class="st-luce-ui__grid">
+                            <div class="ui-dropdown ui-dropdown_menu is-placeholder js-dropdown" data-dropdown="menu">
+                                <button class="ui-dropdown__button js-dropdown-button" type="button" aria-haspopup="true" aria-expanded="false">
+                                    <span class="ui-dropdown__button-text">
+                                        Выпадающее меню
+                                    </span>
+                                    <span class="ui-dropdown__button-icon-box"><span class="ui-dropdown__button-icon"></span></span>
+                                </button>
+
+                                <div class="ui-dropdown__popup js-dropdown-popup" aria-hidden="true">
+                                    <div class="ui-dropdown__scroll js-dropdown-scroll js-scrollbar">
+                                        <div class="ui-dropdown__menu">
+                                            <a href="" class="ui-dropdown__menu-link ">
+                                                Ссылка меню 1
+                                            </a><a href="" class="ui-dropdown__menu-link ">
+                                                Ссылка меню 2
+                                            </a><a href="" class="ui-dropdown__menu-link ">
+                                                Ссылка меню 3
+                                            </a><a href="" class="ui-dropdown__menu-link ">
+                                                Ссылка меню 4
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="st-luce-ui__grid st-luce-ui__grid_col_4">
+                            <div class="ui-dropdown ui-dropdown_select js-dropdown" data-dropdown="select" selectedText="С этикеткой">
+                                <button class="ui-dropdown__button js-dropdown-button" type="button" role="combobox">
+                                    <span class="ui-dropdown__button-text js-dropdown-button-text" role="textbox">
+                                        С этикеткой
+                                    </span>
+                                    <span class="ui-dropdown__button-icon-box"><span class="ui-dropdown__button-icon"></span></span>
+                                </button>
+                                <input type="hidden" class="ui-dropdown__input js-dropdown-input" value="1" name="package">
+                                <div class="ui-dropdown__popup js-dropdown-popup" aria-hidden="true">
+                                    <div class="ui-dropdown__scroll js-dropdown-scroll">
+                                        <div class="ui-dropdown__list js-dropdown-list" tabindex="0" role="listbox">
+                                            <div class="ui-dropdown__option is-selected js-dropdown-option" data-value="1" role="option" aria-selected="false">
+                                                С этикеткой
+                                            </div>
+                                            <div class="ui-dropdown__option js-dropdown-option" data-value="2" role="option" aria-selected="false">
+                                                Без этикетки
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="section-title">Прикрепление картинок и файлов</h2>
+                    <div class="st-luce-ui">
+                        <!-- <div class="st-luce-ui__grid">
+                    <Attach type="pictures" name="attach_photos[]" extensions="PNG, JPG, GIF" accept=".png,.jpg,.jpeg,.gif" isMultiple={true}></Attach>
+                    <Attach name="attach"></Attach>
+                    <Attach text="Загрузите несколько файлов" infoText="Форматы: DOC, DOCX, XLS, XLSX" name="attaches_files[]" extensions="DOC, DOCX, XLS, XLSX" accept=".doc,.docx,.xls,.xlsx" isMultiple={true}></Attach>
+                </div> -->
+                    </div>
+                    <!-- <h2 class="section-title">Блоки выбора checkbox</h2>
+            <div class="st-luce-ui">
+                <div class="st-luce-ui__grid st-luce-ui__grid_col_4">
+                    <CheckboxBlock name="delivery" subtitle="Самовывоз Борисоглебск" title="Бесплатно" text="Самовывоз из&nbsp;города Борисоглебск"  isChecked={true}></CheckboxBlock>
+                </div>
+            </div> -->
+                    <!-- <h2 class="section-title">Вкладки</h2>
+            <div class="st-luce-ui">
+                <div class="st-luce-ui__grid">
+                    <TabMenu list={[
+                        {
+                            text: 'Акции',
+                            isActive: true,
+                        },
+                        {
+                            text: 'Женщинам',
+                        },
+                        {
+                            text: 'Мужчинам',
+                        },
+                        {
+                            text: 'Детям',
+                        },
+                        {
+                            text: 'Новорожденным',
+                        },
+                    ]}></TabMenu>
+                </div>
+            </div> -->
+                    <h2 class="section-title">Аккордионы</h2>
+                    <div class="st-luce-ui">
+                        <div class="st-luce-ui__grid js-accordions">
+                            <div class="accordion js-accordion">
+                                <button type="button" class="accordion__header js-accordion-button">
+                                    <span class="accordion__title">Название заголовка</span>
+                                    <span class="accordion__icon"></span>
+                                </button>
+                                <div class="accordion__content js-accordion-content">
+                                    <div class="accordion__inner">
+                                        <p>Описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста опис</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion js-accordion">
+                                <button type="button" class="accordion__header js-accordion-button">
+                                    <span class="accordion__title">Название заголовка 2</span>
+                                    <span class="accordion__icon"></span>
+                                </button>
+                                <div class="accordion__content js-accordion-content">
+                                    <div class="accordion__inner">
+                                        <p>Описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста описание текста</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="accordion js-accordion">
+                                <button type="button" class="accordion__header js-accordion-button">
+                                    <span class="accordion__title">Название заголовка 3</span>
+                                    <span class="accordion__icon"></span>
+                                </button>
+                                <div class="accordion__content js-accordion-content">
+                                    <div class="accordion__inner">
+                                        <p>Описание текста описание текста описание текста описание текс</p>
+                                        <p>Описание текста описание текста описание текста описание текс</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="section-title">Пагинация</h2>
+                    <div class="st-luce-ui">
+                        <div class="st-luce-ui__grid js-accordions">
+                            <div class="pagination">
+                                <a href="" class="pagination__nav pagination__nav_prev">
+                                    <svg class="pagination__nav-icon" width="19" height="18" viewBox="0 0 19 18" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.2677 16.1833C5.04097 15.9811 5.04097 15.6527 5.2677 15.4505L12.5089 9.00711L5.2677 2.55108C5.04097 2.34893 5.04097 2.02044 5.2677 1.8183C5.49444 1.61615 5.86287 1.61615 6.08961 1.8183L13.7276 8.62809C13.841 8.72916 13.8977 8.8555 13.8977 8.99448C13.8977 9.12082 13.841 9.25979 13.7276 9.36087L6.0896 16.1707C5.86287 16.3854 5.49443 16.3854 5.2677 16.1833Z"></path>
+                                    </svg>
+                                </a>
+                                <div class="pagination__list">
+                                    <a href="" class="pagination__link is-active">1</a>
+                                    <a href="" class="pagination__link">2</a>
+                                    <a href="" class="pagination__link">3</a>
+                                    <a href="" class="pagination__link">...</a>
+                                    <a href="" class="pagination__link">4</a>
+                                </div>
+                                <a href="" class="pagination__nav pagination__nav_next">
+                                    <svg class="pagination__nav-icon" width="19" height="18" viewBox="0 0 19 18" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.2677 16.1833C5.04097 15.9811 5.04097 15.6527 5.2677 15.4505L12.5089 9.00711L5.2677 2.55108C5.04097 2.34893 5.04097 2.02044 5.2677 1.8183C5.49444 1.61615 5.86287 1.61615 6.08961 1.8183L13.7276 8.62809C13.841 8.72916 13.8977 8.8555 13.8977 8.99448C13.8977 9.12082 13.841 9.25979 13.7276 9.36087L6.0896 16.1707C5.86287 16.3854 5.49443 16.3854 5.2677 16.1833Z"></path>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <h2 class="section-title">Форма поиска</h2>
+                    <div class="st-luce-ui">
+                        <div class="st-luce-ui__grid">
+                            <form action="#" class="search-form js-search-form">
+                                <div class="search-form__box">
+                                    <svg class="ui-icon ui-icon-search search-form__icon">
+                                        <use xlink:href="img/icons.svg#search"></use>
+                                    </svg>
+                                    <input class="ui-input search-form__input js-search-form-input" type="text" placeholder="Что вы хотите найти" value="Носки мужские">
+                                    <button class="search-form__clear js-search-form-clear " type="button" title="Очистить строку поиска">
+                                        <svg class="search-form__clear-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+                                            <path d="M17.2578 3.92247L16.0794 2.74414L10.0019 8.82167L3.92443 2.74414L2.74609 3.92247L8.82359 10L2.74609 16.0775L3.92443 17.2558L10.0019 11.1783L16.0794 17.2558L17.2578 16.0775L11.1803 10L17.2578 3.92247Z"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <h2 class="section-title">Социальные сети</h2>
+                    <div class="st-luce-ui">
+                        <div class="st-luce-ui__grid">
+                            <div class="socials">
+                                <div class="socials__list">
+                                    <a href="#" class="socials__link socials__link_vk" title="ВКонтакте">
+                                        <svg class="ui-icon ui-icon-vk socials__icon">
+                                            <use xlink:href="img/icons.svg#vk"></use>
+                                        </svg>
+                                    </a><a href="#" class="socials__link socials__link_pinterest" title="Pinterest">
+                                        <svg class="ui-icon ui-icon-pinterest socials__icon">
+                                            <use xlink:href="img/icons.svg#pinterest"></use>
+                                        </svg>
+                                    </a><a href="#" class="socials__link socials__link_telegram" title="Telegram">
+                                        <svg class="ui-icon ui-icon-telegram socials__icon">
+                                            <use xlink:href="img/icons.svg#telegram"></use>
+                                        </svg>
+                                    </a><a href="#" class="socials__link socials__link_dzen" title="Дзен">
+                                        <svg class="ui-icon ui-icon-dzen socials__icon">
+                                            <use xlink:href="img/icons.svg#dzen"></use>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+
+</html>
+
+<style>
+    .st-luce-ui {
+        margin-bottom: 6rem;
+    }
+
+    .st-luce-ui__title {
+        margin-top: 0;
+        margin-bottom: 4rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid;
+        font-weight: 500;
+        font-size: 4rem;
+    }
+
+    .st-luce-ui__row {
+        position: relative;
+        display: flex;
+        margin-bottom: 2rem;
+    }
+
+    .st-luce-ui__row:last-child {
+        margin-bottom: 0;
+    }
+
+    .st-luce-ui__row>* {
+        position: relative;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        margin: 0 1rem 1rem 0;
+        transform: none;
+    }
+
+    .st-luce-ui__grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 1rem;
+        margin-bottom: 2rem;
+    }
+
+    .st-luce-ui__grid_col_3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .st-luce-ui__grid_col_4 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .st-luce-ui__grid_col_5 {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+</style>
