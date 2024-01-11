@@ -163,7 +163,7 @@
                         </div>
                         <div class="header__search js-header-search">
                             <div class="header__search-content">
-                                <form action="#" class="search-form js-search-form header__search-form">
+                                <form action="#" class="header__search-form search-form js-search-form">
                                     <div class="search-form__box">
                                         <svg class="ui-icon ui-icon-search search-form__icon">
                                             <use xlink:href="img/icons.svg#search"></use>
@@ -237,7 +237,7 @@
                                         <div class="search-result__column">
                                             <div class="search-result__title">5 категорий</div>
                                             <div class="search-result__categories">
-                                                <div class="category-item search-result__category">
+                                                <div class="search-result__category category-item">
                                                     <a href="#" class="category-item__link">
                                                         <div class="category-item__image-box">
                                                             <img class="category-item__image lazy" data-src="img/categories-lamps/1.png" data-srcset="img/categories-lamps/1@2x.png 2x" width="158" height="158" alt="">
@@ -245,7 +245,7 @@
                                                         <div class="category-item__title">Подвесные</div>
                                                     </a>
                                                 </div>
-                                                <div class="category-item search-result__category">
+                                                <div class="search-result__category category-item">
                                                     <a href="#" class="category-item__link">
                                                         <div class="category-item__image-box">
                                                             <img class="category-item__image lazy" data-src="img/categories-lamps/2.png" data-srcset="img/categories-lamps/2@2x.png 2x" width="158" height="158" alt="">
@@ -253,7 +253,7 @@
                                                         <div class="category-item__title">Потолочные</div>
                                                     </a>
                                                 </div>
-                                                <div class="category-item search-result__category">
+                                                <div class="search-result__category category-item">
                                                     <a href="#" class="category-item__link">
                                                         <div class="category-item__image-box">
                                                             <img class="category-item__image lazy" data-src="img/categories-lamps/3.png" data-srcset="img/categories-lamps/3@2x.png 2x" width="158" height="158" alt="">
@@ -261,7 +261,7 @@
                                                         <div class="category-item__title">Настенные</div>
                                                     </a>
                                                 </div>
-                                                <div class="category-item search-result__category">
+                                                <div class="search-result__category category-item">
                                                     <a href="#" class="category-item__link">
                                                         <div class="category-item__image-box">
                                                             <img class="category-item__image lazy" data-src="img/categories-lamps/5.png" data-srcset="img/categories-lamps/5@2x.png 2x" width="158" height="158" alt="">
@@ -296,7 +296,7 @@
                                         <use xlink:href="img/icons.svg#copy"></use>
                                     </svg>
                                 </a>
-                                <div class="popup-notification header__popup header__compare-popup js-header-popup-window is-hidden">
+                                <div class="header__popup header__compare-popup js-header-popup-window popup-notification is-hidden">
                                     <div class="popup-notification__content">
 
                                         <div class="popup-notification__head">
@@ -365,7 +365,7 @@
                                         <use xlink:href="img/icons.svg#basket"></use>
                                     </svg>
                                 </a>
-                                <div class="popup-notification header__popup header__cart-popup js-header-popup-window is-hidden">
+                                <div class="header__popup header__cart-popup js-header-popup-window popup-notification is-hidden">
                                     <div class="popup-notification__content">
 
                                         <div class="popup-notification__head">
@@ -2153,7 +2153,7 @@
 
                                     </div>
                                     <div class="p-checkout__delivery-items">
-                                        <label class="checkbox-block p-checkout__delivery-item">
+                                        <label class="p-checkout__delivery-item checkbox-block">
                                             <input type="radio" name="delivery" class="checkbox-block__input" checked="">
 
                                             <span class="checkbox-block__focused"></span>
@@ -2168,7 +2168,7 @@
                                                     </span>
                                                 </a>
                                             </span>
-                                        </label><label class="checkbox-block p-checkout__delivery-item">
+                                        </label><label class="p-checkout__delivery-item checkbox-block">
                                             <input type="radio" name="delivery" class="checkbox-block__input">
 
                                             <span class="checkbox-block__focused"></span>
@@ -2178,7 +2178,7 @@
                                                 <span class="checkbox-block__price">1 000 р</span>
 
                                             </span>
-                                        </label><label class="checkbox-block p-checkout__delivery-item">
+                                        </label><label class="p-checkout__delivery-item checkbox-block">
                                             <input type="radio" name="delivery" class="checkbox-block__input">
 
                                             <span class="checkbox-block__focused"></span>
@@ -2198,7 +2198,7 @@
                                 </div>
                                 <div class="p-checkout__payment">
                                     <div class="p-checkout__payment-items">
-                                        <label class="checkbox-block p-checkout__payment-item">
+                                        <label class="p-checkout__payment-item checkbox-block">
                                             <input type="radio" name="payment" class="checkbox-block__input" checked="">
 
                                             <span class="checkbox-block__focused"></span>
@@ -2206,19 +2206,20 @@
 
                                             <span class="checkbox-block__footer">
 
-                                                <span class="checkbox-block__payment">
-                                                    <img class="checkbox-block__payment-image lazy" data-src="img/payment/visa.svg" width="44" height="28" alt="">
-                                                    <img class="checkbox-block__payment-image lazy" data-src="img/payment/MasterCard.svg" width="44" height="28" alt="">
-                                                </span>
+                                                <span class="payment-methods checkbox-block__payment"><span class="payment-methods__item">
+                                                        <img class="payment-methods__image lazy" data-src="img/payment/visa.svg" width="34" height="10">
+                                                    </span><span class="payment-methods__item">
+                                                        <img class="payment-methods__image lazy" data-src="img/payment/MasterCard.svg" width="30" height="18">
+                                                    </span></span>
 
                                             </span>
-                                        </label><label class="checkbox-block p-checkout__payment-item">
+                                        </label><label class="p-checkout__payment-item checkbox-block">
                                             <input type="radio" name="payment" class="checkbox-block__input">
 
                                             <span class="checkbox-block__focused"></span>
                                             <span class="checkbox-block__title">Наличными в&nbsp;офисе</span>
 
-                                        </label><label class="checkbox-block p-checkout__payment-item">
+                                        </label><label class="p-checkout__payment-item checkbox-block">
                                             <input type="radio" name="payment" class="checkbox-block__input">
 
                                             <span class="checkbox-block__focused"></span>
@@ -2254,7 +2255,7 @@
                                         <div class="p-checkout__cart-content js-accordion-content">
                                             <div class="p-checkout__cart-inner">
                                                 <div class="p-checkout__cart-items">
-                                                    <div class="product-card p-checkout__cart-product">
+                                                    <div class="p-checkout__cart-product product-card">
                                                         <div class="product-card__inner">
                                                             <div class="product-card__image-box">
                                                                 <a href="#" class="product-card__image-link" tabindex="-1">
@@ -2289,7 +2290,7 @@
 
                                                         </div>
                                                     </div>
-                                                    <div class="product-card p-checkout__cart-product">
+                                                    <div class="p-checkout__cart-product product-card">
                                                         <div class="product-card__inner">
                                                             <div class="product-card__image-box">
                                                                 <a href="#" class="product-card__image-link" tabindex="-1">
@@ -2334,7 +2335,7 @@
                                                     </div>
                                                 </div>
                                                 <div class="p-checkout__cart-items">
-                                                    <div class="product-card p-checkout__cart-product">
+                                                    <div class="p-checkout__cart-product product-card">
                                                         <div class="product-card__inner">
                                                             <div class="product-card__image-box">
                                                                 <a href="#" class="product-card__image-link" tabindex="-1">
@@ -2383,7 +2384,7 @@
                                         <div class="sticky-sidebar__content">
 
                                             <div class="p-checkout__column-row">
-                                                <div class="order-summary p-checkout__order-summary">
+                                                <div class="p-checkout__order-summary order-summary">
                                                     <div class="order-summary__info">
                                                         <div class="order-summary__info-item">
                                                             <div class="order-summary__info-name">Сумма без скидки</div>
@@ -2427,7 +2428,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="personal-manager p-checkout__personal-manager">
+                                                <div class="p-checkout__personal-manager personal-manager">
                                                     <div class="personal-manager__title">Персональный менеджер</div>
                                                     <div class="personal-manager__person">
                                                         <div class="personal-manager__person-photo">
@@ -2575,7 +2576,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="socials footer__socials">
+                        <div class="footer__socials socials">
                             <div class="socials__list">
                                 <a href="#" class="socials__link socials__link_vk" title="ВКонтакте">
                                     <svg class="ui-icon ui-icon-vk socials__icon">
@@ -2661,7 +2662,7 @@
         </footer>
     </div>
 
-    <div class="popup-notification popup-added-favorites is-hidden is-fixed" id="popup_added_favorites">
+    <div class="popup-added-favorites popup-notification is-hidden is-fixed" id="popup_added_favorites">
         <div class="popup-notification__content">
 
             <div class="popup-notification__product">
