@@ -77,8 +77,12 @@
                             <a class="site-pages__link" href="about.html">О компании</a>
                             <div class="site-pages__status">Готова (пока без видео эффекта)</div>
                         </div>
-                        <div class="site-pages__item">
+                        <div class="site-pages__item disabled">
                             <a class="site-pages__link" href="designers.html">Дизайнерам и архитекторам</a>
+                            <div class="site-pages__status">В процессе</div>
+                        </div>
+                        <div class="site-pages__item disabled">
+                            <a class="site-pages__link" href="wholesale_buyers.html">Оптовым покупателям</a>
                             <div class="site-pages__status">В процессе</div>
                         </div>
                         <div class="site-pages__item">
@@ -93,9 +97,9 @@
                             <a class="site-pages__link" href="compare.html">Сравнение</a>
                             <div class="site-pages__status">Готова</div>
                         </div>
-                        <div class="site-pages__item">
-                            <a class="site-pages__link" href="compare_empty.html">Сравнение (пусто)</a>
-                            <div class="site-pages__status">Готова</div>
+                        <div class="site-pages__item disabled">
+                            <a class="site-pages__link" href="favorites.html">Избранное</a>
+                            <div class="site-pages__status">В процессе</div>
                         </div>
                     </div>
                 </div>
@@ -175,10 +179,6 @@
     .site-pages__item.disabled {
         opacity: 0.3;
         pointer-events: none;
-    }
-
-    .site-pages__item.disabled .site-pages__link {
-        opacity: 0;
     }
 
     .site-pages__link {
