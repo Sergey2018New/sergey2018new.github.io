@@ -2446,7 +2446,7 @@
     <div class="modal-quick-view modal js-modal" id="modal_quick_view" aria-hidden="true" tabindex="-1">
         <div class="modal__wrap">
             <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="">
-                <div class="modal__content">
+                <div class="modal__inner">
                     <div class="modal__heading">
 
                         <button type="button" class="ui-button-icon ui-button-icon_style_black modal__close js-modal-close" title="Закрыть"><svg class="ui-icon ui-icon-cross ui-button-icon__icon">
@@ -2455,191 +2455,193 @@
 
                         </button>
                     </div>
+                    <div class="modal__content js-modal-content">
 
-                    <div class="modal-quick-view__row l-grid l-grid-cols-2">
-                        <div class="modal-quick-view__column modal-quick-view__column_slider">
-                            <div class="product-slider js-product-slider modal-quick-view__product-slider">
-                                <div class="swiper product-slider__swiper js-product-slider-swiper">
+                        <div class="modal-quick-view__row l-grid l-grid-cols-2">
+                            <div class="modal-quick-view__column modal-quick-view__column_slider">
+                                <div class="product-slider js-product-slider modal-quick-view__product-slider">
+                                    <div class="swiper product-slider__swiper js-product-slider-swiper">
 
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide product-slider__item">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide product-slider__item">
 
-                                            <div class="product-slider__image-box">
-                                                <img class="product-slider__image lazy" data-src="img/product-page/product-image-1.jpg" data-srcset="img/product-page/product-image-1@2x.jpg 2x" width="974" height="850" alt="">
+                                                <div class="product-slider__image-box">
+                                                    <img class="product-slider__image lazy" data-src="img/product-page/product-image-1.jpg" data-srcset="img/product-page/product-image-1@2x.jpg 2x" width="974" height="850" alt="">
+                                                </div>
+
+                                            </div>
+                                            <div class="swiper-slide product-slider__item">
+
+                                                <div class="product-slider__image-box">
+                                                    <img class="product-slider__image lazy" data-src="img/product-page/product-image-2.jpg" data-srcset="img/product-page/product-image-2@2x.jpg 2x" width="974" height="850" alt="">
+                                                </div>
+
+                                            </div>
+                                            <div class="swiper-slide product-slider__item">
+
+                                                <div class="product-slider__image-box">
+                                                    <img class="product-slider__image lazy" data-src="img/product-page/product-image-1.jpg" data-srcset="img/product-page/product-image-1@2x.jpg 2x" width="974" height="850" alt="">
+                                                </div>
+
+                                            </div>
+                                            <div class="swiper-slide product-slider__item">
+
+                                                <div class="product-slider__image-box">
+                                                    <img class="product-slider__image lazy" data-src="img/product-page/product-image-2.jpg" data-srcset="img/product-page/product-image-2@2x.jpg 2x" width="974" height="850" alt="">
+                                                </div>
+
                                             </div>
 
                                         </div>
-                                        <div class="swiper-slide product-slider__item">
 
-                                            <div class="product-slider__image-box">
-                                                <img class="product-slider__image lazy" data-src="img/product-page/product-image-2.jpg" data-srcset="img/product-page/product-image-2@2x.jpg 2x" width="974" height="850" alt="">
+                                        <div class="swiper-pagination product-slider__pagination js-product-slider-pagination"></div>
+                                        <button type="button" class="ui-button-icon swiper-button-prev swiper-button-cursor js-swiper-button-cursor product-slider__prev js-product-slider-prev"><span class="swiper-button-cursor-circle js-swiper-button-cursor-circle">
+                                                <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.008.765a.567.567 0 0 0-.33.26c-.049.091-.052.353-.006.442.017.032.812.84 1.767 1.795L6.175 5 4.439 6.737c-.955.956-1.75 1.764-1.767 1.796-.046.089-.043.351.006.442a.61.61 0 0 0 .239.227c.112.057.31.055.425-.006.062-.033.596-.557 2.158-2.12L7.575 5 5.5 2.924C3.956 1.379 3.405.837 3.345.806a.589.589 0 0 0-.337-.041" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </span>
+
+                                        </button>
+                                        <button type="button" class="ui-button-icon swiper-button-next swiper-button-cursor js-swiper-button-cursor product-slider__next js-product-slider-next"><span class="swiper-button-cursor-circle js-swiper-button-cursor-circle">
+                                                <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M3.008.765a.567.567 0 0 0-.33.26c-.049.091-.052.353-.006.442.017.032.812.84 1.767 1.795L6.175 5 4.439 6.737c-.955.956-1.75 1.764-1.767 1.796-.046.089-.043.351.006.442a.61.61 0 0 0 .239.227c.112.057.31.055.425-.006.062-.033.596-.557 2.158-2.12L7.575 5 5.5 2.924C3.956 1.379 3.405.837 3.345.806a.589.589 0 0 0-.337-.041" fill-rule="evenodd"></path>
+                                                </svg>
+                                            </span>
+
+                                        </button>
+
+                                    </div>
+                                    <div class="swiper product-slider__thumbs js-product-slider-thumbs" data-direction="horizontal">
+
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide product-slider__thumb">
+
+                                                <div class="product-slider__thumb-inner">
+                                                    <img class="product-slider__thumb-image lazy" data-src="img/product-page/product-thumb-1.jpg" data-srcset="img/product-page/product-thumb-1@2x.jpg 2x" width="80" height="80" alt="">
+                                                </div>
+
                                             </div>
+                                            <div class="swiper-slide product-slider__thumb">
 
-                                        </div>
-                                        <div class="swiper-slide product-slider__item">
+                                                <div class="product-slider__thumb-inner">
+                                                    <img class="product-slider__thumb-image lazy" data-src="img/product-page/product-thumb-2.jpg" data-srcset="img/product-page/product-thumb-2@2x.jpg 2x" width="80" height="80" alt="">
+                                                </div>
 
-                                            <div class="product-slider__image-box">
-                                                <img class="product-slider__image lazy" data-src="img/product-page/product-image-1.jpg" data-srcset="img/product-page/product-image-1@2x.jpg 2x" width="974" height="850" alt="">
                                             </div>
+                                            <div class="swiper-slide product-slider__thumb">
 
-                                        </div>
-                                        <div class="swiper-slide product-slider__item">
+                                                <div class="product-slider__thumb-inner">
+                                                    <img class="product-slider__thumb-image lazy" data-src="img/product-page/product-thumb-1.jpg" data-srcset="img/product-page/product-thumb-1@2x.jpg 2x" width="80" height="80" alt="">
+                                                </div>
 
-                                            <div class="product-slider__image-box">
-                                                <img class="product-slider__image lazy" data-src="img/product-page/product-image-2.jpg" data-srcset="img/product-page/product-image-2@2x.jpg 2x" width="974" height="850" alt="">
                                             </div>
+                                            <div class="swiper-slide product-slider__thumb">
 
+                                                <div class="product-slider__thumb-inner">
+                                                    <img class="product-slider__thumb-image lazy" data-src="img/product-page/product-thumb-2.jpg" data-srcset="img/product-page/product-thumb-2@2x.jpg 2x" width="80" height="80" alt="">
+                                                </div>
+
+                                            </div>
                                         </div>
 
                                     </div>
-
-                                    <div class="swiper-pagination product-slider__pagination js-product-slider-pagination"></div>
-                                    <button type="button" class="ui-button-icon swiper-button-prev swiper-button-cursor js-swiper-button-cursor product-slider__prev js-product-slider-prev"><span class="swiper-button-cursor-circle js-swiper-button-cursor-circle">
-                                            <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M3.008.765a.567.567 0 0 0-.33.26c-.049.091-.052.353-.006.442.017.032.812.84 1.767 1.795L6.175 5 4.439 6.737c-.955.956-1.75 1.764-1.767 1.796-.046.089-.043.351.006.442a.61.61 0 0 0 .239.227c.112.057.31.055.425-.006.062-.033.596-.557 2.158-2.12L7.575 5 5.5 2.924C3.956 1.379 3.405.837 3.345.806a.589.589 0 0 0-.337-.041" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </span>
-
-                                    </button>
-                                    <button type="button" class="ui-button-icon swiper-button-next swiper-button-cursor js-swiper-button-cursor product-slider__next js-product-slider-next"><span class="swiper-button-cursor-circle js-swiper-button-cursor-circle">
-                                            <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M3.008.765a.567.567 0 0 0-.33.26c-.049.091-.052.353-.006.442.017.032.812.84 1.767 1.795L6.175 5 4.439 6.737c-.955.956-1.75 1.764-1.767 1.796-.046.089-.043.351.006.442a.61.61 0 0 0 .239.227c.112.057.31.055.425-.006.062-.033.596-.557 2.158-2.12L7.575 5 5.5 2.924C3.956 1.379 3.405.837 3.345.806a.589.589 0 0 0-.337-.041" fill-rule="evenodd"></path>
-                                            </svg>
-                                        </span>
-
-                                    </button>
-
-                                </div>
-                                <div class="swiper product-slider__thumbs js-product-slider-thumbs" data-direction="horizontal">
-
-                                    <div class="swiper-wrapper">
-                                        <div class="swiper-slide product-slider__thumb">
-
-                                            <div class="product-slider__thumb-inner">
-                                                <img class="product-slider__thumb-image lazy" data-src="img/product-page/product-thumb-1.jpg" data-srcset="img/product-page/product-thumb-1@2x.jpg 2x" width="80" height="80" alt="">
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide product-slider__thumb">
-
-                                            <div class="product-slider__thumb-inner">
-                                                <img class="product-slider__thumb-image lazy" data-src="img/product-page/product-thumb-2.jpg" data-srcset="img/product-page/product-thumb-2@2x.jpg 2x" width="80" height="80" alt="">
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide product-slider__thumb">
-
-                                            <div class="product-slider__thumb-inner">
-                                                <img class="product-slider__thumb-image lazy" data-src="img/product-page/product-thumb-1.jpg" data-srcset="img/product-page/product-thumb-1@2x.jpg 2x" width="80" height="80" alt="">
-                                            </div>
-
-                                        </div>
-                                        <div class="swiper-slide product-slider__thumb">
-
-                                            <div class="product-slider__thumb-inner">
-                                                <img class="product-slider__thumb-image lazy" data-src="img/product-page/product-thumb-2.jpg" data-srcset="img/product-page/product-thumb-2@2x.jpg 2x" width="80" height="80" alt="">
-                                            </div>
-
-                                        </div>
-                                    </div>
-
                                 </div>
                             </div>
-                        </div>
-                        <div class="modal-quick-view__column modal-quick-view__column_info">
-                            <div class="modal-quick-view__info product-info">
-                                <div class="product-info__main-block">
-                                    <div class="product-info__head">
-                                        <div class="product-info__head-info">
-                                            <div class="product-info__tag product-tag product-tag_new">New</div>
-                                            <div class="product-info__vendor-code">SLE1099-312-06</div>
+                            <div class="modal-quick-view__column modal-quick-view__column_info">
+                                <div class="modal-quick-view__info product-info">
+                                    <div class="product-info__main-block">
+                                        <div class="product-info__head">
+                                            <div class="product-info__head-info">
+                                                <div class="product-info__tag product-tag product-tag_new">New</div>
+                                                <div class="product-info__vendor-code">SLE1099-312-06</div>
+                                            </div>
+                                            <div class="product-info__head-control">
+                                                <button type="button" class="product-info__control-button js-tooltip" data-tooltip-content="Добавить в избранное" aria-label="Добавить в избранное">
+                                                    <svg class="ui-icon ui-icon-heart">
+                                                        <use xlink:href="img/icons.svg#heart"></use>
+                                                    </svg>
+                                                </button>
+                                                <button type="button" class="product-info__control-button js-tooltip" data-tooltip-content="Добавить в сравнение" aria-label="Добавить в сравнение">
+                                                    <svg class="ui-icon ui-icon-copy">
+                                                        <use xlink:href="img/icons.svg#copy"></use>
+                                                    </svg>
+                                                </button>
+                                            </div>
                                         </div>
-                                        <div class="product-info__head-control">
-                                            <button type="button" class="product-info__control-button js-tooltip" data-tooltip-content="Добавить в избранное" aria-label="Добавить в избранное">
-                                                <svg class="ui-icon ui-icon-heart">
-                                                    <use xlink:href="img/icons.svg#heart"></use>
-                                                </svg>
-                                            </button>
-                                            <button type="button" class="product-info__control-button js-tooltip" data-tooltip-content="Добавить в сравнение" aria-label="Добавить в сравнение">
-                                                <svg class="ui-icon ui-icon-copy">
-                                                    <use xlink:href="img/icons.svg#copy"></use>
-                                                </svg>
-                                            </button>
+                                        <div class="product-info__title page-title page-title_size_xs">
+                                            <h1>Светильник потолочный Латунь/Коньячный</h1>
+                                        </div>
+                                        <div class="product-info__price-block">
+                                            <div class="product-info__price">9 650 ₽</div>
                                         </div>
                                     </div>
-                                    <div class="product-info__title page-title page-title_size_xs">
-                                        <h1>Светильник потолочный Латунь/Коньячный</h1>
-                                    </div>
-                                    <div class="product-info__price-block">
-                                        <div class="product-info__price">9 650 ₽</div>
-                                    </div>
-                                </div>
 
-                                <div class="product-info__availability-block">
-                                    <div class="product-info__availability-row">
-                                        <div class="product-info__color">
-                                            <div class="product-info__color-label">Цвет</div>
-                                            <div class="product-info__color-value">Латунь</div>
+                                    <div class="product-info__availability-block">
+                                        <div class="product-info__availability-row">
+                                            <div class="product-info__color">
+                                                <div class="product-info__color-label">Цвет</div>
+                                                <div class="product-info__color-value">Латунь</div>
+                                            </div>
+
+                                        </div>
+                                        <div class="product-info__color-selection">
+                                            <a class="product-info__color-selection-item is-active">
+                                                <img class="product-info__color-selection-image lazy" data-src="img/product-selection.png" data-srcset="img/product-selection@2x.png 2x" width="50" height="50" alt="">
+                                            </a>
+                                            <a href="#" class="product-info__color-selection-item">
+                                                <img class="product-info__color-selection-image lazy" data-src="img/product-selection-2.png" data-srcset="img/product-selection-2@2x.png 2x" width="50" height="50" alt="">
+                                            </a>
+                                        </div>
+                                    </div>
+
+                                    <div class="product-info__buttons">
+
+                                        <button type="button" class="ui-button ui-button_style_black product-info__button product-info__add-to-cart-button">
+                                            <span class="ui-button__text">
+                                                В корзину
+                                            </span>
+                                            <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                <use xlink:href="img/icons.svg#arrow"></use>
+                                            </svg></button>
+
+                                        <button type="button" class="ui-button ui-button_style_white product-info__button product-info__where-buy-button">
+                                            <span class="ui-button__text">
+                                                Где купить
+                                            </span>
+                                        </button>
+
+                                    </div>
+
+                                    <div class="product-info__total-parameters">
+                                        <div class="product-info__total-parameters-title">Общие характеристики</div>
+                                        <div class="product-info__total-parameters-row">
+                                            <div>Артикул</div>
+                                            <div>SLE1099-312-06</div>
+                                        </div>
+                                        <div class="product-info__total-parameters-row">
+                                            <div>Тип товара</div>
+                                            <div>Светильник</div>
+                                        </div>
+                                        <div class="product-info__total-parameters-row">
+                                            <div>Бренд</div>
+                                            <div><a href="#">St Luce</a></div>
+                                        </div>
+                                        <div class="product-info__total-parameters-row">
+                                            <div>Коллекция</div>
+                                            <div><a href="#">Acazio</a></div>
                                         </div>
 
                                     </div>
-                                    <div class="product-info__color-selection">
-                                        <a class="product-info__color-selection-item is-active">
-                                            <img class="product-info__color-selection-image lazy" data-src="img/product-selection.png" data-srcset="img/product-selection@2x.png 2x" width="50" height="50" alt="">
-                                        </a>
-                                        <a href="#" class="product-info__color-selection-item">
-                                            <img class="product-info__color-selection-image lazy" data-src="img/product-selection-2.png" data-srcset="img/product-selection-2@2x.png 2x" width="50" height="50" alt="">
-                                        </a>
-                                    </div>
                                 </div>
-
-                                <div class="product-info__buttons">
-
-                                    <button type="button" class="ui-button ui-button_style_black product-info__button product-info__add-to-cart-button">
-                                        <span class="ui-button__text">
-                                            В корзину
-                                        </span>
-                                        <svg class="ui-icon ui-icon-arrow ui-button__icon">
-                                            <use xlink:href="img/icons.svg#arrow"></use>
-                                        </svg></button>
-
-                                    <button type="button" class="ui-button ui-button_style_white product-info__button product-info__where-buy-button">
-                                        <span class="ui-button__text">
-                                            Где купить
-                                        </span>
-                                    </button>
-
-                                </div>
-
-                                <div class="product-info__total-parameters">
-                                    <div class="product-info__total-parameters-title">Общие характеристики</div>
-                                    <div class="product-info__total-parameters-row">
-                                        <div>Артикул</div>
-                                        <div>SLE1099-312-06</div>
-                                    </div>
-                                    <div class="product-info__total-parameters-row">
-                                        <div>Тип товара</div>
-                                        <div>Светильник</div>
-                                    </div>
-                                    <div class="product-info__total-parameters-row">
-                                        <div>Бренд</div>
-                                        <div><a href="#">St Luce</a></div>
-                                    </div>
-                                    <div class="product-info__total-parameters-row">
-                                        <div>Коллекция</div>
-                                        <div><a href="#">Acazio</a></div>
-                                    </div>
-
-                                </div>
+                                <a href="" class="ui-button ui-button_style_link modal-quick-view__more-button">
+                                    <span class="ui-button__text">
+                                        Подробнее о&nbsp;товаре
+                                    </span>
+                                </a>
                             </div>
-                            <a href="" class="ui-button ui-button_style_link modal-quick-view__more-button">
-                                <span class="ui-button__text">
-                                    Подробнее о&nbsp;товаре
-                                </span>
-                            </a>
                         </div>
+
                     </div>
-
                 </div>
             </div>
         </div>
