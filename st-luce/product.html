@@ -296,7 +296,7 @@
                                         <use xlink:href="img/icons.svg#copy"></use>
                                     </svg>
                                 </a>
-                                <div class="header__popup header__compare-popup js-header-popup-window notification is-hidden">
+                                <div class="header__popup header__compare-popup js-header-popup-window notification js-notification is-hidden" data-is-closing="">
                                     <div class="notification__content">
 
                                         <div class="notification__head">
@@ -308,36 +308,41 @@
                                         </div>
 
                                         <div class="notification__products">
-                                            <div class="notification__product">
-                                                <div class="notification__product-image-box">
-                                                    <a href="#">
-                                                        <img class="notification__product-image lazy" data-src="img/header-cart-product.png" data-srcset="img/header-cart-product@2x.png 2x" width="70" height="70" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="notification__product-content">
-                                                    <div class="notification__product-title">
-                                                        <a href="#">Светильник потолочный Латунь</a>
+                                            <div class="notification__products-scrollbar simplebar js-scrollbar">
+                                                <div class="notification__products-items">
+                                                    <div class="notification__product">
+                                                        <div class="notification__product-image-box">
+                                                            <a href="#">
+                                                                <img class="notification__product-image lazy" data-src="img/header-cart-product.png" data-srcset="img/header-cart-product@2x.png 2x" width="70" height="70" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="notification__product-content">
+                                                            <div class="notification__product-title">
+                                                                <a href="#">Светильник потолочный Латунь</a>
+                                                            </div>
+                                                            <div class="notification__product-price">9 650 ₽</div>
+                                                        </div>
                                                     </div>
-                                                    <div class="notification__product-price">9 650 ₽</div>
-                                                </div>
-                                            </div>
-                                            <div class="notification__product">
-                                                <div class="notification__product-image-box">
-                                                    <a href="#">
-                                                        <img class="notification__product-image lazy" data-src="img/header-cart-product2.png" data-srcset="img/header-cart-product2@2x.png 2x" width="70" height="70" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="notification__product-content">
-                                                    <div class="notification__product-title">
-                                                        <a href="#">Светильник потолочный Латунь</a>
+                                                    <div class="notification__product">
+                                                        <div class="notification__product-image-box">
+                                                            <a href="#">
+                                                                <img class="notification__product-image lazy" data-src="img/header-cart-product2.png" data-srcset="img/header-cart-product2@2x.png 2x" width="70" height="70" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="notification__product-content">
+                                                            <div class="notification__product-title">
+                                                                <a href="#">Светильник потолочный Латунь</a>
+                                                            </div>
+                                                            <div class="notification__product-price">18 630 ₽</div>
+                                                        </div>
                                                     </div>
-                                                    <div class="notification__product-price">18 630 ₽</div>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="notification__button-wrapper">
-                                            <a href="" class="ui-button ui-button_style_black ui-button_fill notification__button">
+
+                                            <a href="" class="ui-button ui-button_style_black notification__button">
                                                 <span class="ui-button__text">
                                                     Перейти в сравнение
                                                 </span>
@@ -349,12 +354,72 @@
                                     </div>
                                 </div>
                             </div>
-                            <a href="#" class="header__control-button header__favorites-button u-hidden-mobile-sm" title="Избранные товары">
-                                <svg class="ui-icon ui-icon-heart">
-                                    <use xlink:href="img/icons.svg#heart"></use>
-                                </svg>
-                            </a>
-                            <a href="#" class="header__control-button header__user-button u-hidden-mobile-sm" title="Личный кабинет">
+                            <div class="header__favorites header__popup-wrapper js-header-popup u-hidden-mobile-sm">
+                                <a href="#" class="header__control-button header__favorites-button js-header-popup-button" title="Избранные товары">
+                                    <svg class="ui-icon ui-icon-heart">
+                                        <use xlink:href="img/icons.svg#heart"></use>
+                                    </svg>
+                                </a>
+                                <div class="header__popup header__favorites-popup js-header-popup-window notification js-notification is-hidden" data-is-closing="">
+                                    <div class="notification__content">
+
+                                        <div class="notification__head">
+                                            <svg class="ui-icon ui-icon-heart notification__head-icon">
+                                                <use xlink:href="img/icons.svg#heart"></use>
+                                            </svg>
+                                            <div class="notification__head-title">Товары в избранном</div>
+                                            <div class="notification__head-count">2</div>
+                                        </div>
+
+                                        <div class="notification__products">
+                                            <div class="notification__products-scrollbar simplebar js-scrollbar">
+                                                <div class="notification__products-items">
+                                                    <div class="notification__product">
+                                                        <div class="notification__product-image-box">
+                                                            <a href="#">
+                                                                <img class="notification__product-image lazy" data-src="img/header-cart-product.png" data-srcset="img/header-cart-product@2x.png 2x" width="70" height="70" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="notification__product-content">
+                                                            <div class="notification__product-title">
+                                                                <a href="#">Светильник потолочный Латунь</a>
+                                                            </div>
+                                                            <div class="notification__product-price">9 650 ₽</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="notification__product">
+                                                        <div class="notification__product-image-box">
+                                                            <a href="#">
+                                                                <img class="notification__product-image lazy" data-src="img/header-cart-product2.png" data-srcset="img/header-cart-product2@2x.png 2x" width="70" height="70" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="notification__product-content">
+                                                            <div class="notification__product-title">
+                                                                <a href="#">Светильник потолочный Латунь</a>
+                                                            </div>
+                                                            <div class="notification__product-price">18 630 ₽</div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="notification__button-wrapper">
+
+                                            <a href="" class="ui-button ui-button_style_black notification__button">
+                                                <span class="ui-button__text">
+                                                    Перейти в избранное
+                                                </span>
+                                                <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                                </svg></a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <a href="#" class="header__control-button header__user-button u-hidden-mobile-sm" title="Личный кабинет" data-modal-open="#modal_login">
                                 <svg class="ui-icon ui-icon-user">
                                     <use xlink:href="img/icons.svg#user"></use>
                                 </svg>
@@ -365,7 +430,7 @@
                                         <use xlink:href="img/icons.svg#basket"></use>
                                     </svg>
                                 </a>
-                                <div class="header__popup header__cart-popup js-header-popup-window notification is-hidden">
+                                <div class="header__popup header__cart-popup js-header-popup-window notification js-notification is-hidden" data-is-closing="">
                                     <div class="notification__content">
 
                                         <div class="notification__head">
@@ -377,36 +442,41 @@
                                         </div>
 
                                         <div class="notification__products">
-                                            <div class="notification__product">
-                                                <div class="notification__product-image-box">
-                                                    <a href="#">
-                                                        <img class="notification__product-image lazy" data-src="img/header-cart-product.png" data-srcset="img/header-cart-product@2x.png 2x" width="70" height="70" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="notification__product-content">
-                                                    <div class="notification__product-title">
-                                                        <a href="#">Светильник потолочный Латунь</a>
+                                            <div class="notification__products-scrollbar simplebar js-scrollbar">
+                                                <div class="notification__products-items">
+                                                    <div class="notification__product">
+                                                        <div class="notification__product-image-box">
+                                                            <a href="#">
+                                                                <img class="notification__product-image lazy" data-src="img/header-cart-product.png" data-srcset="img/header-cart-product@2x.png 2x" width="70" height="70" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="notification__product-content">
+                                                            <div class="notification__product-title">
+                                                                <a href="#">Светильник потолочный Латунь</a>
+                                                            </div>
+                                                            <div class="notification__product-price">9 650 ₽</div>
+                                                        </div>
                                                     </div>
-                                                    <div class="notification__product-price">9 650 ₽</div>
-                                                </div>
-                                            </div>
-                                            <div class="notification__product">
-                                                <div class="notification__product-image-box">
-                                                    <a href="#">
-                                                        <img class="notification__product-image lazy" data-src="img/header-cart-product2.png" data-srcset="img/header-cart-product2@2x.png 2x" width="70" height="70" alt="">
-                                                    </a>
-                                                </div>
-                                                <div class="notification__product-content">
-                                                    <div class="notification__product-title">
-                                                        <a href="#">Светильник потолочный Латунь</a>
+                                                    <div class="notification__product">
+                                                        <div class="notification__product-image-box">
+                                                            <a href="#">
+                                                                <img class="notification__product-image lazy" data-src="img/header-cart-product2.png" data-srcset="img/header-cart-product2@2x.png 2x" width="70" height="70" alt="">
+                                                            </a>
+                                                        </div>
+                                                        <div class="notification__product-content">
+                                                            <div class="notification__product-title">
+                                                                <a href="#">Светильник потолочный Латунь</a>
+                                                            </div>
+                                                            <div class="notification__product-price">18 630 ₽</div>
+                                                        </div>
                                                     </div>
-                                                    <div class="notification__product-price">18 630 ₽</div>
                                                 </div>
                                             </div>
                                         </div>
 
                                         <div class="notification__button-wrapper">
-                                            <a href="" class="ui-button ui-button_style_black ui-button_fill notification__button">
+
+                                            <a href="" class="ui-button ui-button_style_black notification__button">
                                                 <span class="ui-button__text">
                                                     Перейти в корзину
                                                 </span>
@@ -2010,30 +2080,34 @@
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide product-slider__item">
 
-                                            <div class="product-slider__image-box">
-                                                <img class="product-slider__image lazy" data-src="img/product-page/product-image-1.jpg" data-srcset="img/product-page/product-image-1@2x.jpg 2x" width="974" height="850" alt="">
-                                            </div>
+                                            <picture class="product-slider__image-box">
+                                                <source media="(max-width: 575px)" data-srcset="img/product-page/product-image-1-575.jpg 1x, img/product-page/product-image-1-575@2x.jpg 2x">
+                                                <img class="product-slider__image lazy" data-src="img/product-page/product-image-1.jpg" data-srcset="img/product-page/product-image-1@2x.jpg 2x" width="1024" height="990" alt="">
+                                            </picture>
 
                                         </div>
                                         <div class="swiper-slide product-slider__item">
 
-                                            <div class="product-slider__image-box">
-                                                <img class="product-slider__image lazy" data-src="img/product-page/product-image-2.jpg" data-srcset="img/product-page/product-image-2@2x.jpg 2x" width="974" height="850" alt="">
-                                            </div>
+                                            <picture class="product-slider__image-box">
+                                                <source media="(max-width: 575px)" data-srcset="img/product-page/product-image-2-575.jpg 1x, img/product-page/product-image-2-575@2x.jpg 2x">
+                                                <img class="product-slider__image lazy" data-src="img/product-page/product-image-2.jpg" data-srcset="img/product-page/product-image-2@2x.jpg 2x" width="1024" height="990" alt="">
+                                            </picture>
 
                                         </div>
                                         <div class="swiper-slide product-slider__item">
 
-                                            <div class="product-slider__image-box">
-                                                <img class="product-slider__image lazy" data-src="img/product-page/product-image-1.jpg" data-srcset="img/product-page/product-image-1@2x.jpg 2x" width="974" height="850" alt="">
-                                            </div>
+                                            <picture class="product-slider__image-box">
+                                                <source media="(max-width: 575px)" data-srcset="img/product-page/product-image-1-575.jpg 1x, img/product-page/product-image-1-575@2x.jpg 2x">
+                                                <img class="product-slider__image lazy" data-src="img/product-page/product-image-1.jpg" data-srcset="img/product-page/product-image-1@2x.jpg 2x" width="1024" height="990" alt="">
+                                            </picture>
 
                                         </div>
                                         <div class="swiper-slide product-slider__item">
 
-                                            <div class="product-slider__image-box">
-                                                <img class="product-slider__image lazy" data-src="img/product-page/product-image-2.jpg" data-srcset="img/product-page/product-image-2@2x.jpg 2x" width="974" height="850" alt="">
-                                            </div>
+                                            <picture class="product-slider__image-box">
+                                                <source media="(max-width: 575px)" data-srcset="img/product-page/product-image-2-575.jpg 1x, img/product-page/product-image-2-575@2x.jpg 2x">
+                                                <img class="product-slider__image lazy" data-src="img/product-page/product-image-2.jpg" data-srcset="img/product-page/product-image-2@2x.jpg 2x" width="1024" height="990" alt="">
+                                            </picture>
 
                                         </div>
 
@@ -2093,8 +2167,8 @@
                             </div>
                         </div>
                         <div class="p-product__column p-product__column_right">
-                            <div class="p-product__sticky sticky-sidebar">
-                                <div class="sticky-sidebar__sticky js-sticky">
+                            <div class="p-product__sticky sticky-sidebar js-sticky-sidebar">
+                                <div class="sticky-sidebar__sticky js-sticky" data-sticky-min-width="1025">
                                     <div class="sticky-sidebar__inner">
                                         <div class="sticky-sidebar__content">
 
@@ -2106,12 +2180,12 @@
                                                             <div class="product-info__vendor-code">SLE1099-312-06</div>
                                                         </div>
                                                         <div class="product-info__head-control">
-                                                            <button type="button" class="product-info__control-button js-tooltip" data-tooltip-content="Добавить в избранное" aria-label="Добавить в избранное">
+                                                            <button type="button" class="product-info__control-button js-tooltip" data-tooltip-content="Добавить в избранное" aria-label="Добавить в избранное" data-notification-open="#notification_added_favorites">
                                                                 <svg class="ui-icon ui-icon-heart">
                                                                     <use xlink:href="img/icons.svg#heart"></use>
                                                                 </svg>
                                                             </button>
-                                                            <button type="button" class="product-info__control-button js-tooltip" data-tooltip-content="Добавить в сравнение" aria-label="Добавить в сравнение">
+                                                            <button type="button" class="product-info__control-button js-tooltip" data-tooltip-content="Добавить в сравнение" aria-label="Добавить в сравнение" data-notification-open="#notification_added_compare">
                                                                 <svg class="ui-icon ui-icon-copy">
                                                                     <use xlink:href="img/icons.svg#copy"></use>
                                                                 </svg>
@@ -2146,7 +2220,7 @@
 
                                                 <div class="product-info__buttons u-visible-desktop js-trigger-fixed-block" data-block-id="product_bottom_fixed_block">
 
-                                                    <button type="button" class="ui-button ui-button_style_black product-info__button product-info__add-to-cart-button">
+                                                    <button type="button" class="ui-button ui-button_style_black product-info__button product-info__add-to-cart-button" data-notification-open="#notification_added_cart">
                                                         <span class="ui-button__text">
                                                             В корзину
                                                         </span>
@@ -2424,7 +2498,7 @@
                                         Где купить
                                     </span>
                                 </a>
-                                <button type="button" class="ui-button ui-button_style_black p-product__fixed-block-button">
+                                <button type="button" class="ui-button ui-button_style_black p-product__fixed-block-button" data-notification-open="#notification_added_cart">
                                     <span class="ui-button__text">
                                         В&nbsp;корзину
                                     </span>
@@ -2444,25 +2518,11 @@
 
                                 <div class="gallery__image-box" data-swiper-parallax="80%">
                                     <a href="img/gallery/1.jpg" class="gallery__fancybox-link" data-fancybox="product_gallery" data-thumb="img/gallery/1_thumb.jpg">
-                                        <img class="gallery__image lazy" data-src="img/gallery/1.jpg" width="1600" height="800" alt="">
-                                    </a>
-                                </div>
-
-                            </div>
-                            <div class="swiper-slide gallery__slide">
-
-                                <div class="gallery__image-box" data-swiper-parallax="80%">
-                                    <a href="img/gallery/1.jpg" class="gallery__fancybox-link" data-fancybox="product_gallery" data-thumb="img/gallery/1_thumb.jpg">
-                                        <img class="gallery__image lazy" data-src="img/gallery/1.jpg" width="1600" height="800" alt="">
-                                    </a>
-                                </div>
-
-                            </div>
-                            <div class="swiper-slide gallery__slide">
-
-                                <div class="gallery__image-box" data-swiper-parallax="80%">
-                                    <a href="img/gallery/1.jpg" class="gallery__fancybox-link" data-fancybox="product_gallery" data-thumb="img/gallery/1_thumb.jpg">
-                                        <img class="gallery__image lazy" data-src="img/gallery/1.jpg" width="1600" height="800" alt="">
+                                        <picture class="gallery__picture">
+                                            <source media="(max-width: 575px)" data-srcset="img/gallery/1-600.jpg 1x, img/gallery/1-600@2x.jpg 2x">
+                                            <source media="(max-width: 1024px)" data-srcset="img/gallery/1-1024.jpg 1x, img/gallery/1-1024@2x.jpg 2x">
+                                            <img class="gallery__image lazy" data-src="img/gallery/1.jpg" data-srcset="img/gallery/1@2x.jpg 2x" width="1600" height="800" alt="">
+                                        </picture>
                                     </a>
                                 </div>
 
@@ -2499,7 +2559,7 @@
                 </div>
             </div>
             <section class="products-section products-section_slider section section_space_lg">
-                <div class="container">
+                <div class="products-section__container container">
                     <div class="products-section__content">
                         <div class="products-section__heading">
                             <h2 class="products-section__title section-title">Товары коллекции</h2>
@@ -2524,16 +2584,16 @@
                                     <a href="#" class="product__link"></a>
                                     <div class="product__image-wrapper">
                                         <div class="product__image-box">
-                                            <img class="product__image lazy" data-src="img/products/1.png" width="500" height="500" alt="">
+                                            <img class="product__image lazy" data-src="img/products/1.png" data-srcset="img/products/1.png 2x" width="500" height="500" alt="">
                                         </div>
 
                                         <div class="product__controls">
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#heart-fill"></use>
                                                 </svg>
 
                                             </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение" data-notification-open="#notification_added_compare"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#copy"></use>
                                                 </svg>
 
@@ -2562,7 +2622,7 @@
                                             </div>
                                             <div class="product__cart-block">
 
-                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
                                                         <use xlink:href="img/icons.svg#basket"></use>
                                                     </svg>
 
@@ -2575,19 +2635,19 @@
                                     <a href="#" class="product__link"></a>
                                     <div class="product__image-wrapper">
                                         <div class="product__image-box">
-                                            <img class="product__image lazy" data-src="img/products/2.png" width="500" height="500" alt="">
+                                            <img class="product__image lazy" data-src="img/products/2.png" data-srcset="img/products/2.png 2x" width="500" height="500" alt="">
                                         </div>
                                         <div class="product__tags">
                                             <div class="product__tag product-tag product-tag_sale">Sale</div>
                                         </div>
 
                                         <div class="product__controls">
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#heart-fill"></use>
                                                 </svg>
 
                                             </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение" data-notification-open="#notification_added_compare"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#copy"></use>
                                                 </svg>
 
@@ -2616,7 +2676,7 @@
                                             </div>
                                             <div class="product__cart-block">
 
-                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
                                                         <use xlink:href="img/icons.svg#basket"></use>
                                                     </svg>
 
@@ -2629,16 +2689,16 @@
                                     <a href="#" class="product__link"></a>
                                     <div class="product__image-wrapper">
                                         <div class="product__image-box">
-                                            <img class="product__image lazy" data-src="img/products/3.png" width="500" height="500" alt="">
+                                            <img class="product__image lazy" data-src="img/products/3.png" data-srcset="img/products/3.png 2x" width="500" height="500" alt="">
                                         </div>
 
                                         <div class="product__controls">
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#heart-fill"></use>
                                                 </svg>
 
                                             </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение" data-notification-open="#notification_added_compare"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#copy"></use>
                                                 </svg>
 
@@ -2667,7 +2727,7 @@
                                             </div>
                                             <div class="product__cart-block">
 
-                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
                                                         <use xlink:href="img/icons.svg#basket"></use>
                                                     </svg>
 
@@ -2680,19 +2740,19 @@
                                     <a href="#" class="product__link"></a>
                                     <div class="product__image-wrapper">
                                         <div class="product__image-box">
-                                            <img class="product__image lazy" data-src="img/products/4.png" width="500" height="500" alt="">
+                                            <img class="product__image lazy" data-src="img/products/4.png" data-srcset="img/products/4.png 2x" width="500" height="500" alt="">
                                         </div>
                                         <div class="product__tags">
                                             <div class="product__tag product-tag product-tag_sale">Sale</div>
                                         </div>
 
                                         <div class="product__controls">
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#heart-fill"></use>
                                                 </svg>
 
                                             </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение" data-notification-open="#notification_added_compare"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#copy"></use>
                                                 </svg>
 
@@ -2721,7 +2781,7 @@
                                             </div>
                                             <div class="product__cart-block">
 
-                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
                                                         <use xlink:href="img/icons.svg#basket"></use>
                                                     </svg>
 
@@ -2734,16 +2794,16 @@
                                     <a href="#" class="product__link"></a>
                                     <div class="product__image-wrapper">
                                         <div class="product__image-box">
-                                            <img class="product__image lazy" data-src="img/products/1.png" width="500" height="500" alt="">
+                                            <img class="product__image lazy" data-src="img/products/1.png" data-srcset="img/products/1.png 2x" width="500" height="500" alt="">
                                         </div>
 
                                         <div class="product__controls">
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#heart-fill"></use>
                                                 </svg>
 
                                             </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение" data-notification-open="#notification_added_compare"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#copy"></use>
                                                 </svg>
 
@@ -2772,7 +2832,7 @@
                                             </div>
                                             <div class="product__cart-block">
 
-                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
                                                         <use xlink:href="img/icons.svg#basket"></use>
                                                     </svg>
 
@@ -2785,19 +2845,19 @@
                                     <a href="#" class="product__link"></a>
                                     <div class="product__image-wrapper">
                                         <div class="product__image-box">
-                                            <img class="product__image lazy" data-src="img/products/2.png" width="500" height="500" alt="">
+                                            <img class="product__image lazy" data-src="img/products/2.png" data-srcset="img/products/2.png 2x" width="500" height="500" alt="">
                                         </div>
                                         <div class="product__tags">
                                             <div class="product__tag product-tag product-tag_sale">Sale</div>
                                         </div>
 
                                         <div class="product__controls">
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#heart-fill"></use>
                                                 </svg>
 
                                             </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение" data-notification-open="#notification_added_compare"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#copy"></use>
                                                 </svg>
 
@@ -2826,7 +2886,7 @@
                                             </div>
                                             <div class="product__cart-block">
 
-                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
                                                         <use xlink:href="img/icons.svg#basket"></use>
                                                     </svg>
 
@@ -2839,16 +2899,16 @@
                                     <a href="#" class="product__link"></a>
                                     <div class="product__image-wrapper">
                                         <div class="product__image-box">
-                                            <img class="product__image lazy" data-src="img/products/3.png" width="500" height="500" alt="">
+                                            <img class="product__image lazy" data-src="img/products/3.png" data-srcset="img/products/3.png 2x" width="500" height="500" alt="">
                                         </div>
 
                                         <div class="product__controls">
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#heart-fill"></use>
                                                 </svg>
 
                                             </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение" data-notification-open="#notification_added_compare"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#copy"></use>
                                                 </svg>
 
@@ -2877,7 +2937,7 @@
                                             </div>
                                             <div class="product__cart-block">
 
-                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
                                                         <use xlink:href="img/icons.svg#basket"></use>
                                                     </svg>
 
@@ -2890,19 +2950,19 @@
                                     <a href="#" class="product__link"></a>
                                     <div class="product__image-wrapper">
                                         <div class="product__image-box">
-                                            <img class="product__image lazy" data-src="img/products/4.png" width="500" height="500" alt="">
+                                            <img class="product__image lazy" data-src="img/products/4.png" data-srcset="img/products/4.png 2x" width="500" height="500" alt="">
                                         </div>
                                         <div class="product__tags">
                                             <div class="product__tag product-tag product-tag_sale">Sale</div>
                                         </div>
 
                                         <div class="product__controls">
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#heart-fill"></use>
                                                 </svg>
 
                                             </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение" data-notification-open="#notification_added_compare"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#copy"></use>
                                                 </svg>
 
@@ -2931,7 +2991,7 @@
                                             </div>
                                             <div class="product__cart-block">
 
-                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
                                                         <use xlink:href="img/icons.svg#basket"></use>
                                                     </svg>
 
@@ -2972,7 +3032,7 @@
                 </div>
             </section>
             <section class="products-section products-section_slider section section_space_lg">
-                <div class="container">
+                <div class="products-section__container container">
                     <div class="products-section__content">
                         <div class="products-section__heading">
                             <h2 class="products-section__title section-title">Похожие товары</h2>
@@ -2997,16 +3057,16 @@
                                     <a href="#" class="product__link"></a>
                                     <div class="product__image-wrapper">
                                         <div class="product__image-box">
-                                            <img class="product__image lazy" data-src="img/products/1.png" width="500" height="500" alt="">
+                                            <img class="product__image lazy" data-src="img/products/1.png" data-srcset="img/products/1.png 2x" width="500" height="500" alt="">
                                         </div>
 
                                         <div class="product__controls">
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#heart-fill"></use>
                                                 </svg>
 
                                             </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение" data-notification-open="#notification_added_compare"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#copy"></use>
                                                 </svg>
 
@@ -3035,7 +3095,7 @@
                                             </div>
                                             <div class="product__cart-block">
 
-                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
                                                         <use xlink:href="img/icons.svg#basket"></use>
                                                     </svg>
 
@@ -3048,19 +3108,19 @@
                                     <a href="#" class="product__link"></a>
                                     <div class="product__image-wrapper">
                                         <div class="product__image-box">
-                                            <img class="product__image lazy" data-src="img/products/2.png" width="500" height="500" alt="">
+                                            <img class="product__image lazy" data-src="img/products/2.png" data-srcset="img/products/2.png 2x" width="500" height="500" alt="">
                                         </div>
                                         <div class="product__tags">
                                             <div class="product__tag product-tag product-tag_sale">Sale</div>
                                         </div>
 
                                         <div class="product__controls">
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#heart-fill"></use>
                                                 </svg>
 
                                             </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение" data-notification-open="#notification_added_compare"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#copy"></use>
                                                 </svg>
 
@@ -3089,7 +3149,7 @@
                                             </div>
                                             <div class="product__cart-block">
 
-                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
                                                         <use xlink:href="img/icons.svg#basket"></use>
                                                     </svg>
 
@@ -3102,16 +3162,16 @@
                                     <a href="#" class="product__link"></a>
                                     <div class="product__image-wrapper">
                                         <div class="product__image-box">
-                                            <img class="product__image lazy" data-src="img/products/3.png" width="500" height="500" alt="">
+                                            <img class="product__image lazy" data-src="img/products/3.png" data-srcset="img/products/3.png 2x" width="500" height="500" alt="">
                                         </div>
 
                                         <div class="product__controls">
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#heart-fill"></use>
                                                 </svg>
 
                                             </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение" data-notification-open="#notification_added_compare"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#copy"></use>
                                                 </svg>
 
@@ -3140,7 +3200,7 @@
                                             </div>
                                             <div class="product__cart-block">
 
-                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
                                                         <use xlink:href="img/icons.svg#basket"></use>
                                                     </svg>
 
@@ -3153,19 +3213,19 @@
                                     <a href="#" class="product__link"></a>
                                     <div class="product__image-wrapper">
                                         <div class="product__image-box">
-                                            <img class="product__image lazy" data-src="img/products/4.png" width="500" height="500" alt="">
+                                            <img class="product__image lazy" data-src="img/products/4.png" data-srcset="img/products/4.png 2x" width="500" height="500" alt="">
                                         </div>
                                         <div class="product__tags">
                                             <div class="product__tag product-tag product-tag_sale">Sale</div>
                                         </div>
 
                                         <div class="product__controls">
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#heart-fill"></use>
                                                 </svg>
 
                                             </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение" data-notification-open="#notification_added_compare"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#copy"></use>
                                                 </svg>
 
@@ -3194,7 +3254,7 @@
                                             </div>
                                             <div class="product__cart-block">
 
-                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
                                                         <use xlink:href="img/icons.svg#basket"></use>
                                                     </svg>
 
@@ -3207,16 +3267,16 @@
                                     <a href="#" class="product__link"></a>
                                     <div class="product__image-wrapper">
                                         <div class="product__image-box">
-                                            <img class="product__image lazy" data-src="img/products/1.png" width="500" height="500" alt="">
+                                            <img class="product__image lazy" data-src="img/products/1.png" data-srcset="img/products/1.png 2x" width="500" height="500" alt="">
                                         </div>
 
                                         <div class="product__controls">
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#heart-fill"></use>
                                                 </svg>
 
                                             </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение" data-notification-open="#notification_added_compare"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#copy"></use>
                                                 </svg>
 
@@ -3245,7 +3305,7 @@
                                             </div>
                                             <div class="product__cart-block">
 
-                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
                                                         <use xlink:href="img/icons.svg#basket"></use>
                                                     </svg>
 
@@ -3258,19 +3318,19 @@
                                     <a href="#" class="product__link"></a>
                                     <div class="product__image-wrapper">
                                         <div class="product__image-box">
-                                            <img class="product__image lazy" data-src="img/products/2.png" width="500" height="500" alt="">
+                                            <img class="product__image lazy" data-src="img/products/2.png" data-srcset="img/products/2.png 2x" width="500" height="500" alt="">
                                         </div>
                                         <div class="product__tags">
                                             <div class="product__tag product-tag product-tag_sale">Sale</div>
                                         </div>
 
                                         <div class="product__controls">
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#heart-fill"></use>
                                                 </svg>
 
                                             </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение" data-notification-open="#notification_added_compare"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#copy"></use>
                                                 </svg>
 
@@ -3299,7 +3359,7 @@
                                             </div>
                                             <div class="product__cart-block">
 
-                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
                                                         <use xlink:href="img/icons.svg#basket"></use>
                                                     </svg>
 
@@ -3312,16 +3372,16 @@
                                     <a href="#" class="product__link"></a>
                                     <div class="product__image-wrapper">
                                         <div class="product__image-box">
-                                            <img class="product__image lazy" data-src="img/products/3.png" width="500" height="500" alt="">
+                                            <img class="product__image lazy" data-src="img/products/3.png" data-srcset="img/products/3.png 2x" width="500" height="500" alt="">
                                         </div>
 
                                         <div class="product__controls">
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#heart-fill"></use>
                                                 </svg>
 
                                             </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение" data-notification-open="#notification_added_compare"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#copy"></use>
                                                 </svg>
 
@@ -3350,7 +3410,7 @@
                                             </div>
                                             <div class="product__cart-block">
 
-                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
                                                         <use xlink:href="img/icons.svg#basket"></use>
                                                     </svg>
 
@@ -3363,19 +3423,19 @@
                                     <a href="#" class="product__link"></a>
                                     <div class="product__image-wrapper">
                                         <div class="product__image-box">
-                                            <img class="product__image lazy" data-src="img/products/4.png" width="500" height="500" alt="">
+                                            <img class="product__image lazy" data-src="img/products/4.png" data-srcset="img/products/4.png 2x" width="500" height="500" alt="">
                                         </div>
                                         <div class="product__tags">
                                             <div class="product__tag product-tag product-tag_sale">Sale</div>
                                         </div>
 
                                         <div class="product__controls">
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button product__control-favorite js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart-fill ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#heart-fill"></use>
                                                 </svg>
 
                                             </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
+                                            <button type="button" class="ui-button-icon ui-button-icon_size_sm product__control-button js-tooltip" aria-label="Добавить в сравнение" data-tooltip-content="Добавить в сравнение" data-notification-open="#notification_added_compare"><svg class="ui-icon ui-icon-copy ui-button-icon__icon">
                                                     <use xlink:href="img/icons.svg#copy"></use>
                                                 </svg>
 
@@ -3404,7 +3464,7 @@
                                             </div>
                                             <div class="product__cart-block">
 
-                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_sm product__add-to-cart js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon">
                                                         <use xlink:href="img/icons.svg#basket"></use>
                                                     </svg>
 
@@ -3645,7 +3705,7 @@
         </footer>
     </div>
 
-    <div class="notification-added-favorites notification is-hidden is-fixed" id="notification_added_favorites">
+    <div class="notification-added-favorites notification js-notification is-fixed" data-is-closing="" id="notification_added_favorites">
         <div class="notification__content">
 
             <div class="notification__product">
@@ -3671,7 +3731,7 @@
                 <div class="notification__login-text">
                     <p>Пожалуйста, войдите в&nbsp;личный кабинет, чтобы сохранить товары в избранном</p>
                 </div>
-                <a href="" class="ui-button ui-button_style_black ui-button_fill notification__login-button">
+                <a href="" class="ui-button ui-button_style_black ui-button_fill notification__login-button" data-modal-open="#modal_login">
                     <span class="ui-button__text">
                         Войти
                     </span>
@@ -3681,7 +3741,7 @@
             </div>
         </div>
     </div>
-    <div class="notification-added-cart notification is-hidden is-fixed" id="notification_added_cart">
+    <div class="notification-added-cart notification js-notification is-fixed" data-is-closing="" id="notification_added_cart">
         <div class="notification__content">
 
             <div class="notification__product">
@@ -3707,7 +3767,7 @@
                 <div class="notification__login-text">
                     <p>Пожалуйста, войдите в&nbsp;личный кабинет, чтобы сохранить товары в&nbsp;корзине</p>
                 </div>
-                <a href="" class="ui-button ui-button_style_black ui-button_fill notification__login-button">
+                <a href="" class="ui-button ui-button_style_black ui-button_fill notification__login-button" data-modal-open="#modal_login">
                     <span class="ui-button__text">
                         Войти
                     </span>
@@ -3717,7 +3777,7 @@
             </div>
         </div>
     </div>
-    <div class="notification-added-compare notification is-hidden is-fixed" id="notification_added_compare">
+    <div class="notification-added-compare notification js-notification is-fixed" data-is-closing="" id="notification_added_compare">
         <div class="notification__content">
 
             <div class="notification__product">
@@ -3740,7 +3800,8 @@
             </div>
 
             <div class="notification__button-wrapper">
-                <a href="" class="ui-button ui-button_style_black ui-button_fill notification__button">
+
+                <a href="" class="ui-button ui-button_style_black notification__button">
                     <span class="ui-button__text">
                         Перейти в сравнение
                     </span>
@@ -3751,7 +3812,7 @@
 
         </div>
     </div>
-    <div class="notification-message notification is-hidden is-fixed" id="notification_message">
+    <div class="notification-message notification js-notification is-fixed" data-is-closing="" id="notification_message">
         <div class="notification__content">
             <div class="notification__title">Спасибо!</div>
 
@@ -3760,6 +3821,293 @@
         </div>
     </div>
 
+    <div class="modal-contact-manager modal js-modal modal_direction_right" id="modal_contact_manager" aria-hidden="true" tabindex="-1">
+        <div class="modal__wrap">
+            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="Обратиться к менеджеру">
+                <div class="modal__picture">
+                    <img class="modal__picture-image lazy" data-src="img/modal.jpg" data-srcset="img/modal@2x.jpg" width="220" height="911" alt="">
+                </div>
+
+                <div class="modal__inner">
+                    <div class="modal__heading">
+                        <div class="modal__title">Обратиться к менеджеру</div>
+
+                        <button type="button" class="ui-button-icon ui-button-icon_style_black modal__close js-modal-close" title="Закрыть"><svg class="ui-icon ui-icon-cross ui-button-icon__icon">
+                                <use xlink:href="img/icons.svg#cross"></use>
+                            </svg>
+
+                        </button>
+                    </div>
+                    <div class="modal__content js-modal-content">
+
+                        <div class="modal__text">
+                            <p>Уточните, пожалуйста, ваш запрос, и мы свяжемся с вами как можно скорее.</p>
+                        </div>
+
+                        <form action="#" class="modal__form form" data-js-form>
+                            <div class="form__errors-messages" data-js-form-errors-container></div>
+                            <div class="modal__form-grid l-grid l-gap-30">
+                                <div class="form__column">
+                                    <input class="ui-input" type="text" name="name" placeholder="Имя" required="" data-js-form-field="">
+                                </div>
+                                <div class="form__column">
+                                    <input class="ui-input" type="email" name="email" placeholder="E-mail" required="" data-js-form-field="">
+                                </div>
+                                <div class="form__column">
+                                    <input class="ui-input ui-input-phone" type="text" name="phone" placeholder="+7 (999) 123-11-11" required="" data-js-form-field="">
+                                </div>
+                                <div class="form__column">
+                                    <textarea class="ui-textarea" name="message" placeholder="Комментарий (опционно)"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal__form-footer">
+                                <button type="submit" class="ui-button ui-button_style_black ui-button_fill modal__form-submit">
+                                    <span class="ui-button__text">
+                                        отправить
+                                    </span>
+                                    <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                        <use xlink:href="img/icons.svg#arrow"></use>
+                                    </svg></button>
+                                <div class="modal__form-agreement form__agreement form__agreement_center">
+                                    Нажимая кнопку, вы&nbsp;соглашаетесь с<a href="#">&nbsp;политикой конфиденциальности</a>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-login modal js-modal modal_direction_right" id="modal_login" aria-hidden="true" tabindex="-1">
+        <div class="modal__wrap">
+            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="Войти">
+                <div class="modal__picture">
+                    <img class="modal__picture-image lazy" data-src="img/login-modal.jpg" data-srcset="img/login-modal@2x.jpg" width="220" height="911" alt="">
+                </div>
+
+                <div class="modal__inner">
+                    <div class="modal__heading">
+
+                        <button type="button" class="ui-button-icon ui-button-icon_style_black modal__close js-modal-close" title="Закрыть"><svg class="ui-icon ui-icon-cross ui-button-icon__icon">
+                                <use xlink:href="img/icons.svg#cross"></use>
+                            </svg>
+
+                        </button>
+                    </div>
+                    <div class="modal__content js-modal-content">
+                        <div class="modal__title">Войти</div>
+
+                        <form action="#" class="modal__form form" data-js-form>
+                            <div class="form__errors-messages" data-js-form-errors-container></div>
+                            <div class="modal__form-grid l-grid l-gap-30">
+
+                                <div class="form__column">
+                                    <input class="ui-input" type="email" name="email" placeholder="E-mail" required="" data-js-form-field="">
+                                </div>
+                                <div class="form__column">
+                                    <div class="field-box field-box_password js-field-box" data-field-type="password">
+
+                                        <div class="field-box__content">
+                                            <input class="field-box__input js-field-box-input ui-input" type="password" name="password" placeholder="Пароль" required="" data-js-form-field=""><button type="button" class="ui-button ui-button_style_link field-box__remember-button" data-modal-open="#modal_restore_password">
+                                                <span class="ui-button__text">
+                                                    Не&nbsp;помню
+                                                </span>
+                                            </button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal__form-footer">
+                                <button type="submit" class="ui-button ui-button_style_black ui-button_fill modal__form-submit">
+                                    <span class="ui-button__text">
+                                        Войти
+                                    </span>
+                                    <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                        <use xlink:href="img/icons.svg#arrow"></use>
+                                    </svg></button>
+                                <div class="modal__form-agreement form__agreement form__agreement_center">
+                                    Нажимая кнопку, вы&nbsp;соглашаетесь с<a href="#">&nbsp;политикой конфиденциальности</a>
+                                </div>
+                                <a href="" class="ui-button ui-button_style_link ui-button_center modal__form-second-button">
+                                    <span class="ui-button__text">
+                                        Зарегистрироваться
+                                    </span>
+                                </a>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-login modal js-modal modal_direction_right" id="modal_restore_password" aria-hidden="true" tabindex="-1">
+        <div class="modal__wrap">
+            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="Восстановить пароль">
+                <div class="modal__picture">
+                    <img class="modal__picture-image lazy" data-src="img/restore-modal.jpg" data-srcset="img/restore-modal@2x.jpg" width="220" height="911" alt="">
+                </div>
+
+                <div class="modal__inner">
+                    <div class="modal__heading">
+
+                        <button type="button" class="ui-button-icon ui-button-icon_style_black modal__close js-modal-close" title="Закрыть"><svg class="ui-icon ui-icon-cross ui-button-icon__icon">
+                                <use xlink:href="img/icons.svg#cross"></use>
+                            </svg>
+
+                        </button>
+                    </div>
+                    <div class="modal__content js-modal-content">
+                        <div class="modal__title">Восстановить пароль</div>
+                        <div class="modal__text">
+                            <p>Если вы забыли пароль, введите свой email и нажмите кнопку. Если введённый email правильный, на него придёт письмо со ссылкой, по которой вы сможете сбросить пароль.</p>
+                        </div>
+
+                        <form action="#" class="modal__form form" data-js-form>
+                            <div class="form__errors-messages" data-js-form-errors-container></div>
+                            <div class="modal__form-grid l-grid l-gap-30">
+                                <div class="form__column">
+                                    <input class="ui-input" type="email" name="email" placeholder="E-mail" required="" data-js-form-field="">
+                                </div>
+                            </div>
+                            <div class="modal__form-footer">
+                                <button type="submit" class="ui-button ui-button_style_black ui-button_fill modal__form-submit">
+                                    <span class="ui-button__text">
+                                        Отправить
+                                    </span>
+                                    <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                        <use xlink:href="img/icons.svg#arrow"></use>
+                                    </svg></button>
+                                <button type="button" class="ui-button ui-button_style_link ui-button_center modal__form-second-button" data-modal-open="#modal_login">
+                                    <span class="ui-button__text">
+                                        Вернуться на&nbsp;страницу входа
+                                    </span>
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-cooperation modal js-modal modal_direction_right" id="modal_cooperation" aria-hidden="true" tabindex="-1">
+        <div class="modal__wrap">
+            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="Зарегистрироваться">
+                <div class="modal__picture">
+                    <img class="modal__picture-image lazy" data-src="img/cooperation-modal.jpg" data-srcset="img/cooperation-modal@2x.jpg" width="220" height="911" alt="">
+                </div>
+
+                <div class="modal__inner">
+                    <div class="modal__heading">
+                        <div class="modal__title">Зарегистрироваться</div>
+
+                        <button type="button" class="ui-button-icon ui-button-icon_style_black modal__close js-modal-close" title="Закрыть"><svg class="ui-icon ui-icon-cross ui-button-icon__icon">
+                                <use xlink:href="img/icons.svg#cross"></use>
+                            </svg>
+
+                        </button>
+                    </div>
+                    <div class="modal__content js-modal-content">
+
+                        <div class="modal-cooperation__tabs js-tabs" data-tabs="tabs_cooperation">
+                            <div class="modal-cooperation__tabs-menu tab-menu js-tabs-menu">
+                                <div class="tab-menu__inner">
+                                    <div class="tab-menu__list">
+                                        <button class="tab-menu__item js-tabs-item is-active" data-tabs-id="designers">
+
+                                            <span>Дизайнерам и архитекторам</span>
+                                        </button><button class="tab-menu__item js-tabs-item" data-tabs-id="wholesale_buyers">
+
+                                            <span>Оптовым покупателям</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs-content">
+                                <div class="tabs-pane js-tabs-pane is-active" data-tabs-pane="designers">
+                                    <form action="#" class="modal__form form" data-js-form>
+                                        <div class="form__errors-messages" data-js-form-errors-container></div>
+                                        <div class="modal__form-grid l-grid l-gap-30">
+                                            <div class="form__column">
+                                                <input class="ui-input" type="text" name="name" placeholder="Имя" required="" data-js-form-field="">
+                                            </div>
+                                            <div class="form__column">
+                                                <input class="ui-input" type="email" name="email" placeholder="E-mail" required="" data-js-form-field="">
+                                            </div>
+                                            <div class="form__column">
+                                                <input class="ui-input ui-input-phone" type="text" name="phone" placeholder="+7 (999) 123-11-11" required="" data-js-form-field="">
+                                            </div>
+                                            <div class="form__column">
+                                                <input class="ui-input" type="text" name="social" placeholder="Ссылка на портфолио или соц сети*">
+                                            </div>
+                                            <div class="form__column">
+                                                <input class="ui-input" type="text" name="company_name" placeholder="Название компании">
+                                            </div>
+                                            <div class="form__column">
+                                                <textarea class="ui-textarea" name="message" placeholder="Обращение"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="modal__form-footer">
+                                            <button type="submit" class="ui-button ui-button_style_black ui-button_fill modal__form-submit">
+                                                <span class="ui-button__text">
+                                                    Зарегистрироваться
+                                                </span>
+                                                <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                                </svg></button>
+                                            <div class="modal__form-agreement form__agreement form__agreement_center">
+                                                Нажимая кнопку, вы&nbsp;соглашаетесь с<a href="#">&nbsp;политикой конфиденциальности</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="tabs-pane js-tabs-pane" data-tabs-pane="wholesale_buyers">
+                                    <form action="#" class="modal__form form" data-js-form>
+                                        <div class="form__errors-messages" data-js-form-errors-container></div>
+                                        <div class="modal__form-grid l-grid l-gap-30">
+                                            <div class="form__column">
+                                                <input class="ui-input" type="text" name="name" placeholder="Имя" required="" data-js-form-field="">
+                                            </div>
+                                            <div class="form__column">
+                                                <input class="ui-input" type="email" name="email" placeholder="E-mail" required="" data-js-form-field="">
+                                            </div>
+                                            <div class="form__column">
+                                                <input class="ui-input ui-input-phone" type="text" name="phone" placeholder="+7 (999) 123-11-11" required="" data-js-form-field="">
+                                            </div>
+                                            <div class="form__column">
+                                                <input class="ui-input" type="text" name="company_name" placeholder="Название компании">
+                                            </div>
+                                            <div class="form__column">
+                                                <textarea class="ui-textarea" name="message" placeholder="Обращение"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="modal__form-footer">
+                                            <button type="submit" class="ui-button ui-button_style_black ui-button_fill modal__form-submit">
+                                                <span class="ui-button__text">
+                                                    Зарегистрироваться
+                                                </span>
+                                                <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                                </svg></button>
+                                            <div class="modal__form-agreement form__agreement form__agreement_center">
+                                                Нажимая кнопку, вы&nbsp;соглашаетесь с<a href="#">&nbsp;политикой конфиденциальности</a>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="modal-quick-view modal js-modal" id="modal_quick_view" aria-hidden="true" tabindex="-1">
         <div class="modal__wrap">
             <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="">
@@ -3783,30 +4131,34 @@
                                         <div class="swiper-wrapper">
                                             <div class="swiper-slide product-slider__item">
 
-                                                <div class="product-slider__image-box">
-                                                    <img class="product-slider__image lazy" data-src="img/product-page/product-image-1.jpg" data-srcset="img/product-page/product-image-1@2x.jpg 2x" width="974" height="850" alt="">
-                                                </div>
+                                                <picture class="product-slider__image-box">
+                                                    <source media="(max-width: 575px)" data-srcset="img/product-page/product-image-1-575.jpg 1x, img/product-page/product-image-1-575@2x.jpg 2x">
+                                                    <img class="product-slider__image lazy" data-src="img/product-page/product-image-1.jpg" data-srcset="img/product-page/product-image-1@2x.jpg 2x" width="1024" height="990" alt="">
+                                                </picture>
 
                                             </div>
                                             <div class="swiper-slide product-slider__item">
 
-                                                <div class="product-slider__image-box">
-                                                    <img class="product-slider__image lazy" data-src="img/product-page/product-image-2.jpg" data-srcset="img/product-page/product-image-2@2x.jpg 2x" width="974" height="850" alt="">
-                                                </div>
+                                                <picture class="product-slider__image-box">
+                                                    <source media="(max-width: 575px)" data-srcset="img/product-page/product-image-2-575.jpg 1x, img/product-page/product-image-2-575@2x.jpg 2x">
+                                                    <img class="product-slider__image lazy" data-src="img/product-page/product-image-2.jpg" data-srcset="img/product-page/product-image-2@2x.jpg 2x" width="1024" height="990" alt="">
+                                                </picture>
 
                                             </div>
                                             <div class="swiper-slide product-slider__item">
 
-                                                <div class="product-slider__image-box">
-                                                    <img class="product-slider__image lazy" data-src="img/product-page/product-image-1.jpg" data-srcset="img/product-page/product-image-1@2x.jpg 2x" width="974" height="850" alt="">
-                                                </div>
+                                                <picture class="product-slider__image-box">
+                                                    <source media="(max-width: 575px)" data-srcset="img/product-page/product-image-1-575.jpg 1x, img/product-page/product-image-1-575@2x.jpg 2x">
+                                                    <img class="product-slider__image lazy" data-src="img/product-page/product-image-1.jpg" data-srcset="img/product-page/product-image-1@2x.jpg 2x" width="1024" height="990" alt="">
+                                                </picture>
 
                                             </div>
                                             <div class="swiper-slide product-slider__item">
 
-                                                <div class="product-slider__image-box">
-                                                    <img class="product-slider__image lazy" data-src="img/product-page/product-image-2.jpg" data-srcset="img/product-page/product-image-2@2x.jpg 2x" width="974" height="850" alt="">
-                                                </div>
+                                                <picture class="product-slider__image-box">
+                                                    <source media="(max-width: 575px)" data-srcset="img/product-page/product-image-2-575.jpg 1x, img/product-page/product-image-2-575@2x.jpg 2x">
+                                                    <img class="product-slider__image lazy" data-src="img/product-page/product-image-2.jpg" data-srcset="img/product-page/product-image-2@2x.jpg 2x" width="1024" height="990" alt="">
+                                                </picture>
 
                                             </div>
 
@@ -3874,12 +4226,12 @@
                                                 <div class="product-info__vendor-code">SLE1099-312-06</div>
                                             </div>
                                             <div class="product-info__head-control">
-                                                <button type="button" class="product-info__control-button js-tooltip" data-tooltip-content="Добавить в избранное" aria-label="Добавить в избранное">
+                                                <button type="button" class="product-info__control-button js-tooltip" data-tooltip-content="Добавить в избранное" aria-label="Добавить в избранное" data-notification-open="#notification_added_favorites">
                                                     <svg class="ui-icon ui-icon-heart">
                                                         <use xlink:href="img/icons.svg#heart"></use>
                                                     </svg>
                                                 </button>
-                                                <button type="button" class="product-info__control-button js-tooltip" data-tooltip-content="Добавить в сравнение" aria-label="Добавить в сравнение">
+                                                <button type="button" class="product-info__control-button js-tooltip" data-tooltip-content="Добавить в сравнение" aria-label="Добавить в сравнение" data-notification-open="#notification_added_compare">
                                                     <svg class="ui-icon ui-icon-copy">
                                                         <use xlink:href="img/icons.svg#copy"></use>
                                                     </svg>
@@ -3914,7 +4266,7 @@
 
                                     <div class="product-info__buttons">
 
-                                        <button type="button" class="ui-button ui-button_style_black product-info__button product-info__add-to-cart-button">
+                                        <button type="button" class="ui-button ui-button_style_black product-info__button product-info__add-to-cart-button" data-notification-open="#notification_added_cart">
                                             <span class="ui-button__text">
                                                 В корзину
                                             </span>
@@ -3974,6 +4326,7 @@
                 <div class="modal__inner">
                     <div class="modal__heading">
                         <div class="modal__title">Добавить в проект</div>
+
                         <button type="button" class="ui-button-icon ui-button-icon_style_black modal__close js-modal-close" title="Закрыть"><svg class="ui-icon ui-icon-cross ui-button-icon__icon">
                                 <use xlink:href="img/icons.svg#cross"></use>
                             </svg>
@@ -3981,6 +4334,7 @@
                         </button>
                     </div>
                     <div class="modal__content js-modal-content">
+
                         <div class="modal__text">
                             <p>Вы сможете делится вашим проектом по ссылке, скачивать товары из проекта в .xls и .pdf и добавлять все товары в корзину</p>
                         </div>
@@ -4459,6 +4813,7 @@
                 <div class="modal__inner">
                     <div class="modal__heading">
                         <div class="modal__title">Создать проект</div>
+
                         <button type="button" class="ui-button-icon ui-button-icon_style_black modal__close js-modal-close" title="Закрыть"><svg class="ui-icon ui-icon-cross ui-button-icon__icon">
                                 <use xlink:href="img/icons.svg#cross"></use>
                             </svg>
@@ -4466,11 +4821,13 @@
                         </button>
                     </div>
                     <div class="modal__content js-modal-content">
+
                         <div class="modal__text">
                             <p>Вы сможете делится вашим проектом по ссылке, скачивать товары из проекта в .xls и .pdf и добавлять все товары в корзину</p>
                         </div>
 
                         <form action="#" class="modal__form form" data-js-form>
+                            <div class="form__errors-messages" data-js-form-errors-container></div>
                             <div class="modal__form-grid l-grid l-gap-30">
                                 <div class="form__column">
                                     <div class="field-box js-field-box" data-max-length="30">
@@ -4611,6 +4968,7 @@
                 <div class="modal__inner">
                     <div class="modal__heading">
                         <div class="modal__title">Уведомить о поступлении</div>
+
                         <button type="button" class="ui-button-icon ui-button-icon_style_black modal__close js-modal-close" title="Закрыть"><svg class="ui-icon ui-icon-cross ui-button-icon__icon">
                                 <use xlink:href="img/icons.svg#cross"></use>
                             </svg>
@@ -4618,11 +4976,13 @@
                         </button>
                     </div>
                     <div class="modal__content js-modal-content">
+
                         <div class="modal__text">
                             <p>Оставьте свои данные, и мы свяжемся с вами, как только товар поступит на склад.</p>
                         </div>
 
                         <form action="#" class="modal__form form" data-js-form>
+                            <div class="form__errors-messages" data-js-form-errors-container></div>
                             <div class="modal__form-grid l-grid l-gap-30">
                                 <div class="form__column">
                                     <input class="ui-input" type="text" name="name" placeholder="Имя" required="" data-js-form-field="">
