@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <symbol viewBox="0 0 24 24" id="arrow" xmlns="http://www.w3.org/2000/svg">
+        <path d="m6 9 6 6 6-6" />
+    </symbol>
+    <symbol viewBox="0 0 24 25" id="arrow-right" xmlns="http://www.w3.org/2000/svg">
+        <path d="m9 5.317 7 7-7 7" />
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="arrow-up" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 19V5M5 12l7-7 7 7" />
+    </symbol>
+    <symbol viewBox="0 0 30 30" id="cart" xmlns="http://www.w3.org/2000/svg">
+        <path d="M11.25 27.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM25 27.5a1.25 1.25 0 1 0 0-2.5 1.25 1.25 0 0 0 0 2.5ZM1.25 1.25h5L9.6 17.988A2.5 2.5 0 0 0 12.1 20h12.15a2.5 2.5 0 0 0 2.5-2.012l2-10.488H7.5" />
+    </symbol>
+    <symbol viewBox="0 0 20 20" id="check" xmlns="http://www.w3.org/2000/svg">
+        <path d="m8.5 12.379 6.894-6.895 1.06 1.06L8.5 14.5 3.727 9.727l1.06-1.06L8.5 12.378Z" />
+    </symbol>
+    <symbol viewBox="0 0 24 24" id="trash" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3 6h18M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2m3 0v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6h14ZM10 11v6M14 11v6" />
+    </symbol>
+</svg>
