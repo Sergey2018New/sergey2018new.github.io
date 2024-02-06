@@ -193,7 +193,9 @@
                                                             <div class="search-result__product-title">Подвесной светильник Rondella</div>
                                                             <div class="search-result__product-vendor-code">Арт.: SL153.701.02</div>
                                                         </div>
-                                                        <div class="search-result__product-price">15 480 ₽</div>
+                                                        <div class="search-result__product-price-block">
+                                                            <div class="search-result__product-price">15 480 ₽</div>
+                                                        </div>
                                                     </a>
                                                 </div>
                                                 <div class="search-result__product">
@@ -202,10 +204,12 @@
                                                             <img class="search-result__product-image" src="img/quick-search/2.png" srcset="img/quick-search/2.png 2x" width="50" height="50" alt="">
                                                         </div>
                                                         <div class="search-result__product-content">
-                                                            <div class="search-result__product-title">Потолочные</div>
+                                                            <div class="search-result__product-title">Подвесной светильник Nection</div>
                                                             <div class="search-result__product-vendor-code">Арт.: SL153.701.02</div>
                                                         </div>
-                                                        <div class="search-result__product-price">7 650 ₽</div>
+                                                        <div class="search-result__product-price-block">
+                                                            <div class="search-result__product-price">7 650 ₽</div>
+                                                        </div>
                                                     </a>
                                                 </div>
                                                 <div class="search-result__product">
@@ -214,10 +218,12 @@
                                                             <img class="search-result__product-image" src="img/quick-search/3.png" srcset="img/quick-search/3.png 2x" width="50" height="50" alt="">
                                                         </div>
                                                         <div class="search-result__product-content">
-                                                            <div class="search-result__product-title">Настенные</div>
+                                                            <div class="search-result__product-title">Подвесной светильник Gocce</div>
                                                             <div class="search-result__product-vendor-code">Арт.: SL153.701.02</div>
                                                         </div>
-                                                        <div class="search-result__product-price">18 630 ₽</div>
+                                                        <div class="search-result__product-price-block">
+                                                            <div class="search-result__product-price">18 630 ₽</div>
+                                                        </div>
                                                     </a>
                                                 </div>
                                                 <div class="search-result__product">
@@ -226,10 +232,12 @@
                                                             <img class="search-result__product-image" src="img/quick-search/4.png" srcset="img/quick-search/4.png 2x" width="50" height="50" alt="">
                                                         </div>
                                                         <div class="search-result__product-content">
-                                                            <div class="search-result__product-title">Встраиваемые</div>
+                                                            <div class="search-result__product-title">Светильник потолочный Латунь/Коньячный</div>
                                                             <div class="search-result__product-vendor-code">Арт.: SL153.701.02</div>
                                                         </div>
-                                                        <div class="search-result__product-price">11 950 ₽</div>
+                                                        <div class="search-result__product-price-block">
+                                                            <div class="search-result__product-price">11 950 ₽</div>
+                                                        </div>
                                                     </a>
                                                 </div>
                                             </div>
@@ -272,8 +280,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <a href="" class="ui-button ui-button_fill search-result__all-results">
+                                </div><a href="" class="ui-button ui-button_fill search-result__all-results">
                                     <span class="ui-button__text">
 
                                         Все результаты
@@ -281,7 +288,9 @@
                                     </span>
                                     <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                         <use xlink:href="img/icons.svg#arrow"></use>
-                                    </svg></a>
+                                    </svg>
+
+                                </a>
                             </div>
                         </div>
                         <div class="header__controls">
@@ -348,7 +357,9 @@
                                                 </span>
                                                 <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                                     <use xlink:href="img/icons.svg#arrow"></use>
-                                                </svg></a>
+                                                </svg>
+
+                                            </a>
                                         </div>
 
                                     </div>
@@ -412,7 +423,9 @@
                                                 </span>
                                                 <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                                     <use xlink:href="img/icons.svg#arrow"></use>
-                                                </svg></a>
+                                                </svg>
+
+                                            </a>
                                         </div>
 
                                     </div>
@@ -482,7 +495,9 @@
                                                 </span>
                                                 <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                                     <use xlink:href="img/icons.svg#arrow"></use>
-                                                </svg></a>
+                                                </svg>
+
+                                            </a>
                                         </div>
 
                                     </div>
@@ -2284,7 +2299,9 @@
                                                 </span>
                                                 <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                                     <use xlink:href="img/icons.svg#arrow"></use>
-                                                </svg></button>
+                                                </svg>
+
+                                            </button>
 
                                         </div>
                                     </div>
@@ -2330,223 +2347,225 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="p-favorites__controls">
-                                <div class="p-favorites__controls-left">
-                                    <label class="ui-checkbox ui-checkbox_checkbox p-favorites__check-all">
-                                        <input class="ui-checkbox__input js-favorites-check-all" type="checkbox" name="select_all" />
-                                        <span class="ui-checkbox__checked">
-                                            <span class="ui-checkbox__checked-icon"></span>
-                                            <span class="ui-checkbox__focused"></span>
-                                        </span>
+                            <div class="p-favorites__products js-select-products">
+                                <div class="p-favorites__controls">
+                                    <div class="p-favorites__controls-left">
+                                        <label class="ui-checkbox ui-checkbox_checkbox p-favorites__check-all">
+                                            <input class="ui-checkbox__input js-select-products-check-all" type="checkbox" name="select_all" />
+                                            <span class="ui-checkbox__checked">
+                                                <span class="ui-checkbox__checked-icon"></span>
+                                                <span class="ui-checkbox__focused"></span>
+                                            </span>
 
-                                        <span class="ui-checkbox__text">Выделить все</span>
-                                    </label>
-                                </div>
-                                <div class="p-favorites__controls-right">
-                                    <button type="button" class="p-favorites__control-button js-favorites-control-button" disabled>В&nbsp;корзину</button>
-                                    <button type="button" class="p-favorites__control-button js-favorites-control-button" disabled>В&nbsp;сравнение</button>
-                                    <button type="button" class="p-favorites__control-button p-favorites__control-remove js-favorites-control-button" disabled>Удалить</button>
-                                </div>
-                            </div>
-                            <div class="p-favorites__project-goods js-favorites-products">
-                                <div class="p-favorites__product-card product-card">
-                                    <label class="ui-checkbox ui-checkbox_checkbox product-card__checkbox-select">
-                                        <input class="ui-checkbox__input js-product-checkbox" type="checkbox" name="checkbox" />
-                                        <span class="ui-checkbox__checked">
-                                            <span class="ui-checkbox__checked-icon"></span>
-                                            <span class="ui-checkbox__focused"></span>
-                                        </span>
-
-                                    </label>
-                                    <div class="product-card__inner">
-                                        <div class="product-card__image-box">
-                                            <a href="#" class="product-card__image-link" tabindex="-1">
-                                                <img class="product-card__image lazy" data-src="img/cart/1.jpg" width="158" height="190" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="product-card__content">
-                                            <div class="product-card__title">
-                                                <a class="product-card__title-link" href="#">Подвесной светильник Gocce</a>
-                                            </div>
-                                            <div class="product-card__info">
-                                                <div class="product-card__info-item">
-                                                    <div class="product-card__info-name">Арт.</div>
-                                                    <div class="product-card__info-value">SL874.103.03</div>
-                                                </div>
-                                                <div class="product-card__info-item">
-                                                    <div class="product-card__info-name">Цвет</div>
-                                                    <div class="product-card__info-value">Черный</div>
-                                                </div>
-                                                <div class="product-card__info-item">
-                                                    <div class="product-card__info-name">В&nbsp;наличии</div>
-                                                    <div class="product-card__info-value">12 шт</div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="product-card__cart-block">
-
-                                            <div class="product-card__quantity">
-                                                <span>1 шт</span>
-                                            </div>
-                                            <div class="product-card__sum">
-                                                <span>15 500 ₽</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-card__controls">
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon ui-button-icon__icon_size_sm">
-                                                    <use xlink:href="img/icons.svg#basket"></use>
-                                                </svg>
-
-                                            </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart ui-button-icon__icon ui-button-icon__icon_size_sm">
-                                                    <use xlink:href="img/icons.svg#heart"></use>
-                                                </svg>
-
-                                            </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в проект" data-tooltip-content="Добавить в проект" data-modal-open="#modal_add_to_project"><svg class="ui-icon ui-icon-save-add ui-button-icon__icon ui-button-icon__icon_size_sm">
-                                                    <use xlink:href="img/icons.svg#save-add"></use>
-                                                </svg>
-
-                                            </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Удалить из избранного" data-tooltip-content="Удалить из избранного"><svg class="ui-icon ui-icon-cross-thin ui-button-icon__icon ui-button-icon__icon_size_sm">
-                                                    <use xlink:href="img/icons.svg#cross-thin"></use>
-                                                </svg>
-
-                                            </button>
-                                        </div>
+                                            <span class="ui-checkbox__text">Выделить все</span>
+                                        </label>
+                                    </div>
+                                    <div class="p-favorites__controls-right">
+                                        <button type="button" class="p-favorites__control-button js-select-products-control" disabled>В&nbsp;корзину</button>
+                                        <button type="button" class="p-favorites__control-button js-select-products-control" disabled>В&nbsp;сравнение</button>
+                                        <button type="button" class="p-favorites__control-button p-favorites__control-remove js-select-products-control" disabled>Удалить</button>
                                     </div>
                                 </div>
-                                <div class="p-favorites__product-card product-card">
-                                    <label class="ui-checkbox ui-checkbox_checkbox product-card__checkbox-select">
-                                        <input class="ui-checkbox__input js-product-checkbox" type="checkbox" name="checkbox" />
-                                        <span class="ui-checkbox__checked">
-                                            <span class="ui-checkbox__checked-icon"></span>
-                                            <span class="ui-checkbox__focused"></span>
-                                        </span>
+                                <div class="p-favorites__project-goods js-favorites-products">
+                                    <div class="p-favorites__product-card product-card">
+                                        <label class="ui-checkbox ui-checkbox_checkbox product-card__checkbox-select">
+                                            <input class="ui-checkbox__input js-product-checkbox" type="checkbox" name="checkbox" />
+                                            <span class="ui-checkbox__checked">
+                                                <span class="ui-checkbox__checked-icon"></span>
+                                                <span class="ui-checkbox__focused"></span>
+                                            </span>
 
-                                    </label>
-                                    <div class="product-card__inner">
-                                        <div class="product-card__image-box">
-                                            <a href="#" class="product-card__image-link" tabindex="-1">
-                                                <img class="product-card__image lazy" data-src="img/cart/2.jpg" width="158" height="190" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="product-card__content">
-                                            <div class="product-card__title">
-                                                <a class="product-card__title-link" href="#">Светильник потолочный Латунь/Коньячный</a>
+                                        </label>
+                                        <div class="product-card__inner">
+                                            <div class="product-card__image-box">
+                                                <a href="#" class="product-card__image-link" tabindex="-1">
+                                                    <img class="product-card__image lazy" data-src="img/cart/1.jpg" width="158" height="190" alt="">
+                                                </a>
                                             </div>
-                                            <div class="product-card__info">
-                                                <div class="product-card__info-item">
-                                                    <div class="product-card__info-name">Арт.</div>
-                                                    <div class="product-card__info-value">SL874.103.03</div>
+                                            <div class="product-card__content">
+                                                <div class="product-card__title">
+                                                    <a class="product-card__title-link" href="#">Подвесной светильник Gocce</a>
                                                 </div>
-                                                <div class="product-card__info-item">
-                                                    <div class="product-card__info-name">Цвет</div>
-                                                    <div class="product-card__info-value">Черный</div>
+                                                <div class="product-card__info">
+                                                    <div class="product-card__info-item">
+                                                        <div class="product-card__info-name">Арт.</div>
+                                                        <div class="product-card__info-value">SL874.103.03</div>
+                                                    </div>
+                                                    <div class="product-card__info-item">
+                                                        <div class="product-card__info-name">Цвет</div>
+                                                        <div class="product-card__info-value">Черный</div>
+                                                    </div>
+                                                    <div class="product-card__info-item">
+                                                        <div class="product-card__info-name">В&nbsp;наличии</div>
+                                                        <div class="product-card__info-value">12 шт</div>
+                                                    </div>
                                                 </div>
-                                                <div class="product-card__info-item">
-                                                    <div class="product-card__info-name">В&nbsp;наличии</div>
-                                                    <div class="product-card__info-value">12 шт</div>
+                                            </div>
+                                            <div class="product-card__cart-block">
+
+                                                <div class="product-card__quantity">
+                                                    <span>1 шт</span>
+                                                </div>
+                                                <div class="product-card__sum">
+                                                    <span>15 500 ₽</span>
                                                 </div>
                                             </div>
-                                        </div>
-                                        <div class="product-card__cart-block">
+                                            <div class="product-card__controls">
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon ui-button-icon__icon_size_sm">
+                                                        <use xlink:href="img/icons.svg#basket"></use>
+                                                    </svg>
 
-                                            <div class="product-card__quantity">
-                                                <span>1 шт</span>
+                                                </button>
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart ui-button-icon__icon ui-button-icon__icon_size_sm">
+                                                        <use xlink:href="img/icons.svg#heart"></use>
+                                                    </svg>
+
+                                                </button>
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в проект" data-tooltip-content="Добавить в проект" data-modal-open="#modal_add_to_project"><svg class="ui-icon ui-icon-save-add ui-button-icon__icon ui-button-icon__icon_size_sm">
+                                                        <use xlink:href="img/icons.svg#save-add"></use>
+                                                    </svg>
+
+                                                </button>
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Удалить из избранного" data-tooltip-content="Удалить из избранного"><svg class="ui-icon ui-icon-cross-thin ui-button-icon__icon ui-button-icon__icon_size_sm">
+                                                        <use xlink:href="img/icons.svg#cross-thin"></use>
+                                                    </svg>
+
+                                                </button>
                                             </div>
-                                            <div class="product-card__sum">
-                                                <span>7 650 ₽</span>
-                                            </div>
-                                        </div>
-                                        <div class="product-card__controls">
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon ui-button-icon__icon_size_sm">
-                                                    <use xlink:href="img/icons.svg#basket"></use>
-                                                </svg>
-
-                                            </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart ui-button-icon__icon ui-button-icon__icon_size_sm">
-                                                    <use xlink:href="img/icons.svg#heart"></use>
-                                                </svg>
-
-                                            </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в проект" data-tooltip-content="Добавить в проект" data-modal-open="#modal_add_to_project"><svg class="ui-icon ui-icon-save-add ui-button-icon__icon ui-button-icon__icon_size_sm">
-                                                    <use xlink:href="img/icons.svg#save-add"></use>
-                                                </svg>
-
-                                            </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Удалить из избранного" data-tooltip-content="Удалить из избранного"><svg class="ui-icon ui-icon-cross-thin ui-button-icon__icon ui-button-icon__icon_size_sm">
-                                                    <use xlink:href="img/icons.svg#cross-thin"></use>
-                                                </svg>
-
-                                            </button>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="p-favorites__product-card product-card">
-                                    <label class="ui-checkbox ui-checkbox_checkbox product-card__checkbox-select">
-                                        <input class="ui-checkbox__input js-product-checkbox" type="checkbox" name="checkbox" />
-                                        <span class="ui-checkbox__checked">
-                                            <span class="ui-checkbox__checked-icon"></span>
-                                            <span class="ui-checkbox__focused"></span>
-                                        </span>
+                                    <div class="p-favorites__product-card product-card">
+                                        <label class="ui-checkbox ui-checkbox_checkbox product-card__checkbox-select">
+                                            <input class="ui-checkbox__input js-product-checkbox" type="checkbox" name="checkbox" />
+                                            <span class="ui-checkbox__checked">
+                                                <span class="ui-checkbox__checked-icon"></span>
+                                                <span class="ui-checkbox__focused"></span>
+                                            </span>
 
-                                    </label>
-                                    <div class="product-card__inner">
-                                        <div class="product-card__image-box">
-                                            <a href="#" class="product-card__image-link" tabindex="-1">
-                                                <img class="product-card__image lazy" data-src="img/cart/3.jpg" width="158" height="190" alt="">
-                                            </a>
-                                        </div>
-                                        <div class="product-card__content">
-                                            <div class="product-card__title">
-                                                <a class="product-card__title-link" href="#">Подвесной светильник Nection</a>
+                                        </label>
+                                        <div class="product-card__inner">
+                                            <div class="product-card__image-box">
+                                                <a href="#" class="product-card__image-link" tabindex="-1">
+                                                    <img class="product-card__image lazy" data-src="img/cart/2.jpg" width="158" height="190" alt="">
+                                                </a>
                                             </div>
-                                            <div class="product-card__info">
-                                                <div class="product-card__info-item">
-                                                    <div class="product-card__info-name">Арт.</div>
-                                                    <div class="product-card__info-value">SL874.103.03</div>
+                                            <div class="product-card__content">
+                                                <div class="product-card__title">
+                                                    <a class="product-card__title-link" href="#">Светильник потолочный Латунь/Коньячный</a>
                                                 </div>
-                                                <div class="product-card__info-item">
-                                                    <div class="product-card__info-name">Цвет</div>
-                                                    <div class="product-card__info-value">Черный</div>
+                                                <div class="product-card__info">
+                                                    <div class="product-card__info-item">
+                                                        <div class="product-card__info-name">Арт.</div>
+                                                        <div class="product-card__info-value">SL874.103.03</div>
+                                                    </div>
+                                                    <div class="product-card__info-item">
+                                                        <div class="product-card__info-name">Цвет</div>
+                                                        <div class="product-card__info-value">Черный</div>
+                                                    </div>
+                                                    <div class="product-card__info-item">
+                                                        <div class="product-card__info-name">В&nbsp;наличии</div>
+                                                        <div class="product-card__info-value">12 шт</div>
+                                                    </div>
                                                 </div>
-                                                <div class="product-card__info-item">
-                                                    <div class="product-card__info-name">В&nbsp;наличии</div>
-                                                    <div class="product-card__info-value">12 шт</div>
+                                            </div>
+                                            <div class="product-card__cart-block">
+
+                                                <div class="product-card__quantity">
+                                                    <span>1 шт</span>
                                                 </div>
+                                                <div class="product-card__sum">
+                                                    <span>7 650 ₽</span>
+                                                </div>
+                                            </div>
+                                            <div class="product-card__controls">
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon ui-button-icon__icon_size_sm">
+                                                        <use xlink:href="img/icons.svg#basket"></use>
+                                                    </svg>
+
+                                                </button>
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart ui-button-icon__icon ui-button-icon__icon_size_sm">
+                                                        <use xlink:href="img/icons.svg#heart"></use>
+                                                    </svg>
+
+                                                </button>
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в проект" data-tooltip-content="Добавить в проект" data-modal-open="#modal_add_to_project"><svg class="ui-icon ui-icon-save-add ui-button-icon__icon ui-button-icon__icon_size_sm">
+                                                        <use xlink:href="img/icons.svg#save-add"></use>
+                                                    </svg>
+
+                                                </button>
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Удалить из избранного" data-tooltip-content="Удалить из избранного"><svg class="ui-icon ui-icon-cross-thin ui-button-icon__icon ui-button-icon__icon_size_sm">
+                                                        <use xlink:href="img/icons.svg#cross-thin"></use>
+                                                    </svg>
+
+                                                </button>
                                             </div>
                                         </div>
-                                        <div class="product-card__cart-block">
+                                    </div>
+                                    <div class="p-favorites__product-card product-card">
+                                        <label class="ui-checkbox ui-checkbox_checkbox product-card__checkbox-select">
+                                            <input class="ui-checkbox__input js-product-checkbox" type="checkbox" name="checkbox" />
+                                            <span class="ui-checkbox__checked">
+                                                <span class="ui-checkbox__checked-icon"></span>
+                                                <span class="ui-checkbox__focused"></span>
+                                            </span>
 
-                                            <div class="product-card__quantity">
-                                                <span>1 шт</span>
+                                        </label>
+                                        <div class="product-card__inner">
+                                            <div class="product-card__image-box">
+                                                <a href="#" class="product-card__image-link" tabindex="-1">
+                                                    <img class="product-card__image lazy" data-src="img/cart/3.jpg" width="158" height="190" alt="">
+                                                </a>
                                             </div>
-                                            <div class="product-card__sum">
-                                                <span>18 630 ₽</span>
+                                            <div class="product-card__content">
+                                                <div class="product-card__title">
+                                                    <a class="product-card__title-link" href="#">Подвесной светильник Nection</a>
+                                                </div>
+                                                <div class="product-card__info">
+                                                    <div class="product-card__info-item">
+                                                        <div class="product-card__info-name">Арт.</div>
+                                                        <div class="product-card__info-value">SL874.103.03</div>
+                                                    </div>
+                                                    <div class="product-card__info-item">
+                                                        <div class="product-card__info-name">Цвет</div>
+                                                        <div class="product-card__info-value">Черный</div>
+                                                    </div>
+                                                    <div class="product-card__info-item">
+                                                        <div class="product-card__info-name">В&nbsp;наличии</div>
+                                                        <div class="product-card__info-value">12 шт</div>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div class="product-card__controls">
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon ui-button-icon__icon_size_sm">
-                                                    <use xlink:href="img/icons.svg#basket"></use>
-                                                </svg>
+                                            <div class="product-card__cart-block">
 
-                                            </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart ui-button-icon__icon ui-button-icon__icon_size_sm">
-                                                    <use xlink:href="img/icons.svg#heart"></use>
-                                                </svg>
+                                                <div class="product-card__quantity">
+                                                    <span>1 шт</span>
+                                                </div>
+                                                <div class="product-card__sum">
+                                                    <span>18 630 ₽</span>
+                                                </div>
+                                            </div>
+                                            <div class="product-card__controls">
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon ui-button-icon__icon_size_sm">
+                                                        <use xlink:href="img/icons.svg#basket"></use>
+                                                    </svg>
 
-                                            </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в проект" data-tooltip-content="Добавить в проект" data-modal-open="#modal_add_to_project"><svg class="ui-icon ui-icon-save-add ui-button-icon__icon ui-button-icon__icon_size_sm">
-                                                    <use xlink:href="img/icons.svg#save-add"></use>
-                                                </svg>
+                                                </button>
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart ui-button-icon__icon ui-button-icon__icon_size_sm">
+                                                        <use xlink:href="img/icons.svg#heart"></use>
+                                                    </svg>
 
-                                            </button>
-                                            <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Удалить из избранного" data-tooltip-content="Удалить из избранного"><svg class="ui-icon ui-icon-cross-thin ui-button-icon__icon ui-button-icon__icon_size_sm">
-                                                    <use xlink:href="img/icons.svg#cross-thin"></use>
-                                                </svg>
+                                                </button>
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в проект" data-tooltip-content="Добавить в проект" data-modal-open="#modal_add_to_project"><svg class="ui-icon ui-icon-save-add ui-button-icon__icon ui-button-icon__icon_size_sm">
+                                                        <use xlink:href="img/icons.svg#save-add"></use>
+                                                    </svg>
 
-                                            </button>
+                                                </button>
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Удалить из избранного" data-tooltip-content="Удалить из избранного"><svg class="ui-icon ui-icon-cross-thin ui-button-icon__icon ui-button-icon__icon_size_sm">
+                                                        <use xlink:href="img/icons.svg#cross-thin"></use>
+                                                    </svg>
+
+                                                </button>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -2565,6 +2584,7 @@
                                     <span class="ui-button__text">
                                         Смотреть все
                                     </span>
+
                                 </a>
 
                             </div>
@@ -2600,7 +2620,9 @@
                                                 </span>
                                                 <svg class="ui-icon ui-icon-eye ui-button__icon">
                                                     <use xlink:href="img/icons.svg#eye"></use>
-                                                </svg></button>
+                                                </svg>
+
+                                            </button>
                                         </div>
                                     </div>
                                     <div class="product__content">
@@ -2666,7 +2688,9 @@
                                                 </span>
                                                 <svg class="ui-icon ui-icon-eye ui-button__icon">
                                                     <use xlink:href="img/icons.svg#eye"></use>
-                                                </svg></button>
+                                                </svg>
+
+                                            </button>
                                         </div>
                                     </div>
                                     <div class="product__content">
@@ -2729,7 +2753,9 @@
                                                 </span>
                                                 <svg class="ui-icon ui-icon-eye ui-button__icon">
                                                     <use xlink:href="img/icons.svg#eye"></use>
-                                                </svg></button>
+                                                </svg>
+
+                                            </button>
                                         </div>
                                     </div>
                                     <div class="product__content">
@@ -2795,7 +2821,9 @@
                                                 </span>
                                                 <svg class="ui-icon ui-icon-eye ui-button__icon">
                                                     <use xlink:href="img/icons.svg#eye"></use>
-                                                </svg></button>
+                                                </svg>
+
+                                            </button>
                                         </div>
                                     </div>
                                     <div class="product__content">
@@ -2858,7 +2886,9 @@
                                                 </span>
                                                 <svg class="ui-icon ui-icon-eye ui-button__icon">
                                                     <use xlink:href="img/icons.svg#eye"></use>
-                                                </svg></button>
+                                                </svg>
+
+                                            </button>
                                         </div>
                                     </div>
                                     <div class="product__content">
@@ -2924,7 +2954,9 @@
                                                 </span>
                                                 <svg class="ui-icon ui-icon-eye ui-button__icon">
                                                     <use xlink:href="img/icons.svg#eye"></use>
-                                                </svg></button>
+                                                </svg>
+
+                                            </button>
                                         </div>
                                     </div>
                                     <div class="product__content">
@@ -2987,7 +3019,9 @@
                                                 </span>
                                                 <svg class="ui-icon ui-icon-eye ui-button__icon">
                                                     <use xlink:href="img/icons.svg#eye"></use>
-                                                </svg></button>
+                                                </svg>
+
+                                            </button>
                                         </div>
                                     </div>
                                     <div class="product__content">
@@ -3053,7 +3087,9 @@
                                                 </span>
                                                 <svg class="ui-icon ui-icon-eye ui-button__icon">
                                                     <use xlink:href="img/icons.svg#eye"></use>
-                                                </svg></button>
+                                                </svg>
+
+                                            </button>
                                         </div>
                                     </div>
                                     <div class="product__content">
@@ -3115,7 +3151,9 @@
                             </span>
                             <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                 <use xlink:href="img/icons.svg#arrow"></use>
-                            </svg></a>
+                            </svg>
+
+                        </a>
 
                     </div>
                 </div>
@@ -3353,7 +3391,9 @@
                     </span>
                     <svg class="ui-icon ui-icon-arrow ui-button__icon">
                         <use xlink:href="img/icons.svg#arrow"></use>
-                    </svg></a>
+                    </svg>
+
+                </a>
             </div>
         </div>
     </div>
@@ -3389,7 +3429,9 @@
                     </span>
                     <svg class="ui-icon ui-icon-arrow ui-button__icon">
                         <use xlink:href="img/icons.svg#arrow"></use>
-                    </svg></a>
+                    </svg>
+
+                </a>
             </div>
         </div>
     </div>
@@ -3423,7 +3465,9 @@
                     </span>
                     <svg class="ui-icon ui-icon-arrow ui-button__icon">
                         <use xlink:href="img/icons.svg#arrow"></use>
-                    </svg></a>
+                    </svg>
+
+                </a>
             </div>
 
         </div>
@@ -3483,7 +3527,9 @@
                                     </span>
                                     <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                         <use xlink:href="img/icons.svg#arrow"></use>
-                                    </svg></button>
+                                    </svg>
+
+                                </button>
                                 <div class="modal__form-agreement form__agreement form__agreement_center">
                                     Нажимая кнопку, вы&nbsp;соглашаетесь с<a href="#">&nbsp;политикой конфиденциальности</a>
                                 </div>
@@ -3530,6 +3576,7 @@
                                                 <span class="ui-button__text">
                                                     Не&nbsp;помню
                                                 </span>
+
                                             </button>
 
                                         </div>
@@ -3543,7 +3590,9 @@
                                     </span>
                                     <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                         <use xlink:href="img/icons.svg#arrow"></use>
-                                    </svg></button>
+                                    </svg>
+
+                                </button>
                                 <div class="modal__form-agreement form__agreement form__agreement_center">
                                     Нажимая кнопку, вы&nbsp;соглашаетесь с<a href="#">&nbsp;политикой конфиденциальности</a>
                                 </div>
@@ -3551,6 +3600,7 @@
                                     <span class="ui-button__text">
                                         Зарегистрироваться
                                     </span>
+
                                 </a>
                             </div>
                         </form>
@@ -3596,11 +3646,14 @@
                                     </span>
                                     <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                         <use xlink:href="img/icons.svg#arrow"></use>
-                                    </svg></button>
+                                    </svg>
+
+                                </button>
                                 <button type="button" class="ui-button ui-button_style_link ui-button_center modal__form-second-button" data-modal-open="#modal_login">
                                     <span class="ui-button__text">
                                         Вернуться на&nbsp;страницу входа
                                     </span>
+
                                 </button>
                             </div>
                         </form>
@@ -3675,7 +3728,9 @@
                                                 </span>
                                                 <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                                     <use xlink:href="img/icons.svg#arrow"></use>
-                                                </svg></button>
+                                                </svg>
+
+                                            </button>
                                             <div class="modal__form-agreement form__agreement form__agreement_center">
                                                 Нажимая кнопку, вы&nbsp;соглашаетесь с<a href="#">&nbsp;политикой конфиденциальности</a>
                                             </div>
@@ -3709,7 +3764,9 @@
                                                 </span>
                                                 <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                                     <use xlink:href="img/icons.svg#arrow"></use>
-                                                </svg></button>
+                                                </svg>
+
+                                            </button>
                                             <div class="modal__form-agreement form__agreement form__agreement_center">
                                                 Нажимая кнопку, вы&nbsp;соглашаетесь с<a href="#">&nbsp;политикой конфиденциальности</a>
                                             </div>
@@ -3888,12 +3945,15 @@
                                             </span>
                                             <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                                 <use xlink:href="img/icons.svg#arrow"></use>
-                                            </svg></button>
+                                            </svg>
+
+                                        </button>
 
                                         <button type="button" class="ui-button ui-button_style_link product-info__button product-info__where-buy-button">
                                             <span class="ui-button__text">
                                                 Где купить
                                             </span>
+
                                         </button>
 
                                     </div>
@@ -3923,6 +3983,7 @@
                                     <span class="ui-button__text">
                                         Подробнее о&nbsp;товаре
                                     </span>
+
                                 </a>
                             </div>
                         </div>
@@ -4403,6 +4464,7 @@
                                     <span class="ui-button__text">
                                         Создать новый проект
                                     </span>
+
                                 </button>
                                 <button type="submit" class="ui-button ui-button_style_black modal__form-submit js-form-add-to-project-submit" disabled="disabled">
                                     <span class="ui-button__text">
@@ -4410,7 +4472,9 @@
                                     </span>
                                     <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                         <use xlink:href="img/icons.svg#arrow"></use>
-                                    </svg></button>
+                                    </svg>
+
+                                </button>
                             </div>
                         </form>
 
@@ -4564,7 +4628,9 @@
                                     </span>
                                     <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                         <use xlink:href="img/icons.svg#arrow"></use>
-                                    </svg></button>
+                                    </svg>
+
+                                </button>
                             </div>
                         </form>
 
