@@ -2232,6 +2232,90 @@
                                         <div class="p-account__title page-title page-title_size_md">
                                             <h1>Аналитика</h1>
                                         </div>
+                                        <div class="p-account__datapicker-calendar datepicker-calendar js-datepicker-calendar" data-default-period="week">
+                                            <div class="datepicker-calendar__backdrop js-datepicker-calendar-backdrop"></div>
+                                            <button type="button" class="datepicker-calendar__dropdown-button js-datepicker-calendar-button" title="Выбрать период">
+
+                                                <svg class="ui-icon ui-icon-calendar">
+                                                    <use xlink:href="img/icons.svg#calendar"></use>
+                                                </svg>
+                                                <span class="datepicker-calendar__date-displayed js-datepicker-calendar-selected-date">25 сент — 1 окт 2023</span>
+                                            </button>
+
+                                            <div class="datepicker-calendar__popup js-datepicker-calendar-popup">
+                                                <div class="datepicker-calendar__header">
+                                                    <div class="datepicker-calendar__title">Выбор периода</div>
+                                                    <button type="button" class="datepicker-calendar__close js-datepicker-calendar-close" title="Закрыть">
+                                                        <svg class="ui-icon ui-icon-cross">
+                                                            <use xlink:href="img/icons.svg#cross"></use>
+                                                        </svg>
+                                                    </button>
+                                                </div>
+                                                <div class="datepicker-calendar__period">
+                                                    <button type="button" class="datepicker-calendar__period-button js-datepicker-calendar-period" data-period="today">
+                                                        <span class="datepicker-calendar__radio-icon"></span>
+                                                        <span>Сегодня</span>
+                                                        <span class="datepicker-calendar__period-date js-datepicker-calendar-period-date"></span>
+                                                    </button><button type="button" class="datepicker-calendar__period-button js-datepicker-calendar-period" data-period="yesterday">
+                                                        <span class="datepicker-calendar__radio-icon"></span>
+                                                        <span>Вчера</span>
+                                                        <span class="datepicker-calendar__period-date js-datepicker-calendar-period-date"></span>
+                                                    </button><button type="button" class="datepicker-calendar__period-button js-datepicker-calendar-period" data-period="week">
+                                                        <span class="datepicker-calendar__radio-icon"></span>
+                                                        <span>Неделя</span>
+                                                        <span class="datepicker-calendar__period-date js-datepicker-calendar-period-date"></span>
+                                                    </button><button type="button" class="datepicker-calendar__period-button js-datepicker-calendar-period" data-period="month">
+                                                        <span class="datepicker-calendar__radio-icon"></span>
+                                                        <span>Месяц</span>
+                                                        <span class="datepicker-calendar__period-date js-datepicker-calendar-period-date"></span>
+                                                    </button><button type="button" class="datepicker-calendar__period-button js-datepicker-calendar-period" data-period="quarter">
+                                                        <span class="datepicker-calendar__radio-icon"></span>
+                                                        <span>Квартал</span>
+                                                        <span class="datepicker-calendar__period-date js-datepicker-calendar-period-date"></span>
+                                                    </button><button type="button" class="datepicker-calendar__period-button js-datepicker-calendar-period" data-period="year">
+                                                        <span class="datepicker-calendar__radio-icon"></span>
+                                                        <span>Год</span>
+                                                        <span class="datepicker-calendar__period-date js-datepicker-calendar-period-date"></span>
+                                                    </button>
+                                                </div>
+                                                <div class="datepicker-calendar__timeline-box js-datepicker-calendar-timeline-box">
+                                                    <div class="datepicker-calendar__timeline js-datepicker-calendar-timeline">
+                                                        <div class="datepicker-calendar__timeline-container js-datepicker-calendar-timeline-container">
+                                                            <div class="datepicker-calendar__timeline-dragger js-datepicker-calendar-timeline-dragger" title="Переместите, чтобы выбрать нужный период"></div>
+                                                            <div class="datepicker-calendar__timeline-period js-datepicker-calendar-timeline-period"></div>
+                                                            <div class="datepicker-calendar__timeline-years js-datepicker-calendar-years"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="datepicker-calendar__calendar">
+                                                    <div class="js-datepicker-calendar-flatpickr" data-min-date="01.01.2016" data-max-date="31.12.2030"></div>
+                                                </div>
+                                                <div class="datepicker-calendar__footer">
+                                                    <div class="datepicker-calendar__fields">
+                                                        <button type="button" class="datepicker-calendar__radio-icon datepicker-calendar__checkbox-button js-datepicker-calendar-checkbox-button"></button>
+                                                        <input class="datepicker-calendar__input js-datepicker-calendar-input-from ui-input" type="text">
+                                                        <span class="datepicker-calendar__fields-devide">—</span>
+                                                        <input class="datepicker-calendar__input js-datepicker-calendar-input-to ui-input" type="text">
+                                                    </div>
+                                                    <button type="button" class="ui-button ui-button_style_black datepicker-calendar__button-apply js-datepicker-calendar-apply">
+                                                        <span class="ui-button__text">
+
+                                                            Применить
+
+                                                        </span>
+                                                        <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                                        </svg>
+                                                        <span class="ui-button-icon ui-button-icon_style_black datepicker-calendar__button-apply-icon-box"><svg class="ui-icon ui-icon-arrow ui-button-icon__icon ui-button-icon__icon_size_xs">
+                                                                <use xlink:href="img/icons.svg#arrow"></use>
+                                                            </svg>
+
+                                                        </span>
+
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="p-account__section-heading">
                                         <div class="p-account__section-title section-title section-title_size_xs">
@@ -2712,7 +2796,7 @@
         <div class="notification__content">
             <div class="notification__title">Спасибо!</div>
 
-            <div class="notification__text">Мы уведомим Вас, как только товар будет в наличии.</div>
+            <div class="notification__text">Мы&nbsp;уведомим Вас, как только товар будет в&nbsp;наличии.</div>
 
         </div>
     </div>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>ST Luce - Возвраты</title>
+    <title>ST Luce - Новости</title>
     <meta name="description" content="Описание страницы">
     <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
@@ -2064,142 +2064,179 @@
         </header>
         <main class="main">
 
-            <div class="p-section p-account">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__container container">
+                    <nav class="breadcrumbs__inner" role="navigation" aria-label="breadcrumbs">
+                        <ol class="breadcrumbs__list">
+                            <li class="breadcrumbs__item breadcrumbs__item_back">
+                                <a href="#" class="breadcrumbs__link "><span>Назад</span></a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a href="/" class="breadcrumbs__link"><span>Главная</span></a>
+                            </li>
+
+                            <li class="breadcrumbs__item" aria-current="page"><span>Новости</span></li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="p-section p-articles">
                 <div class="container">
-                    <div class="p-account__row l-grid">
-                        <div class="p-account__column">
-                            <div class="p-account__sticky sticky-sidebar js-sticky-sidebar">
+                    <div class="p-articles__header">
+                        <div class="p-articles__title-wrapper">
+                            <div class="p-articles__title page-title animation animation_fadeInUp js-animation" data-animation-type="fadeInUp" data-animation-ease="power2.inOut">
+                                <h1>Новости</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-articles__top-header">
+                        <div class="p-articles__tabs js-tabs">
+                            <div class="p-articles__tab-menu tab-menu js-tabs-menu">
+                                <div class="tab-menu__inner">
+                                    <div class="tab-menu__list">
+                                        <button class="tab-menu__item js-tabs-item">
+
+                                            <span>Все новости</span>
+                                        </button><button class="tab-menu__item js-tabs-item">
+
+                                            <span>Событие</span>
+                                        </button><button class="tab-menu__item js-tabs-item is-active">
+
+                                            <span>Проекты</span>
+                                        </button><button class="tab-menu__item js-tabs-item">
+
+                                            <span>Новости компании</span>
+                                        </button><button class="tab-menu__item js-tabs-item">
+
+                                            <span>Продукция</span>
+                                        </button><button class="tab-menu__item js-tabs-item">
+
+                                            <span>Шоурум</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-articles__top-header-right">
+                            <div class="ui-dropdown ui-dropdown_select p-articles__sorting-dropdown js-dropdown" data-dropdown="select" name="sorting">
+                                <button class="ui-dropdown__button js-dropdown-button" type="button" role="combobox">
+                                    <span class="ui-dropdown__button-text js-dropdown-button-text" role="textbox">
+                                        По популярности
+                                    </span>
+
+                                    <span class="ui-dropdown__button-icon-box"><span class="ui-dropdown__button-icon"></span></span>
+                                </button>
+                                <input type="hidden" class="ui-dropdown__input js-dropdown-input">
+                                <div class="ui-dropdown__popup js-dropdown-popup" aria-hidden="true">
+                                    <div class="ui-dropdown__scroll js-dropdown-scroll js-scrollbar">
+                                        <div class="ui-dropdown__list js-dropdown-list" tabindex="0" role="listbox">
+                                            <div class="ui-dropdown__option is-selected js-dropdown-option" data-value="1" data-text-value="По популярности" role="option" aria-selected="true">
+                                                По популярности
+                                            </div>
+                                            <div class="ui-dropdown__option js-dropdown-option" data-value="2" data-text-value="По новизне" role="option" aria-selected="false">
+                                                По новизне
+                                            </div>
+                                            <div class="ui-dropdown__option js-dropdown-option" data-value="3" data-text-value="Сначала дорогие" role="option" aria-selected="false">
+                                                Сначала дорогие
+                                            </div>
+                                            <div class="ui-dropdown__option js-dropdown-option" data-value="4" data-text-value="Сначала дешевые" role="option" aria-selected="false">
+                                                Сначала дешевые
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-articles__row">
+                        <div class="p-articles__column u-visible-desktop-md">
+                            <div class="p-articles__sticky sticky-sidebar js-sticky-sidebar">
                                 <div class="sticky-sidebar__sticky js-sticky" data-sticky-min-width="1200">
                                     <div class="sticky-sidebar__inner">
                                         <div class="sticky-sidebar__content">
 
-                                            <div class="p-account__sidebar-box">
-                                                <div class="p-account__sidebar-menu sidebar-menu js-sidebar-menu sidebar-menu_account">
-                                                    <div class="sidebar-menu__inner">
-                                                        <div class="sidebar-menu__section">
-                                                            <button type="button" class="sidebar-menu__toggle-button js-sidebar-menu-button">
-                                                                <span>Возвраты</span>
-                                                                <svg class="ui-icon ui-icon-arrow-down-sm sidebar-menu__toggle-icon">
-                                                                    <use xlink:href="img/icons.svg#arrow-down-sm"></use>
-                                                                </svg>
-                                                            </button>
-                                                            <div class="sidebar-menu__popup">
-                                                                <ul class="sidebar-menu__list">
-                                                                    <li class="sidebar-menu__item">
-                                                                        <a href="#" class="sidebar-menu__link">Главная</a>
-                                                                    </li>
-                                                                    <li class="sidebar-menu__item">
-                                                                        <a href="#" class="sidebar-menu__link">История заказов</a>
-                                                                    </li>
-                                                                    <li class="sidebar-menu__item">
-                                                                        <a href="#" class="sidebar-menu__link">Лист ожидания</a>
-                                                                    </li>
-                                                                    <li class="sidebar-menu__item">
-                                                                        <a href="#" class="sidebar-menu__link">График платежей</a>
-                                                                    </li>
-                                                                    <li class="sidebar-menu__item">
-                                                                        <a href="#" class="sidebar-menu__link">Рекламации</a>
-                                                                    </li>
-                                                                    <li class="sidebar-menu__item is-active">
-                                                                        <a href="#" class="sidebar-menu__link">Возвраты</a>
-                                                                    </li>
-                                                                </ul>
-                                                                <ul class="sidebar-menu__list">
-                                                                    <li class="sidebar-menu__item">
-                                                                        <a href="#" class="sidebar-menu__link">Аналитика</a>
-                                                                    </li>
-                                                                    <li class="sidebar-menu__item">
-                                                                        <a href="#" class="sidebar-menu__link">Документы</a>
-                                                                    </li>
-                                                                    <li class="sidebar-menu__item">
-                                                                        <a href="#" class="sidebar-menu__link">Маркетинговая поддержка</a>
-                                                                    </li>
-                                                                    <li class="sidebar-menu__item">
-                                                                        <a href="#" class="sidebar-menu__link">Помощь</a>
-                                                                    </li>
-                                                                    <li class="sidebar-menu__item">
-                                                                        <a href="#" class="sidebar-menu__link">Настройки</a>
-                                                                    </li>
-                                                                </ul>
-                                                                <ul class="sidebar-menu__list sidebar-menu__list_logout">
-                                                                    <li class="sidebar-menu__item">
-                                                                        <a href="#" class="sidebar-menu__link sidebar-menu__link_logout">
-                                                                            <svg class="ui-icon ui-icon-logout">
-                                                                                <use xlink:href="img/icons.svg#logout"></use>
-                                                                            </svg>
-                                                                            <span>Выйти</span>
-                                                                        </a>
-                                                                    </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
+                                            <div class="ui-dropdown ui-dropdown_control is-placeholder p-articles__tags-control js-dropdown" data-dropdown="control">
+                                                <button type="button" class="ui-button-icon ui-button-icon_size_xs ui-button-icon_style_black ui-dropdown__button js-dropdown-button"><svg class="ui-icon ui-icon-plus ui-button-icon__icon ui-button-icon__icon_size_sm">
+                                                        <use xlink:href="img/icons.svg#plus"></use>
+                                                    </svg>
+
+                                                </button>
+
+                                                <div class="ui-dropdown__popup js-dropdown-popup" aria-hidden="true">
+                                                    <div class="ui-dropdown__control-menu">
+                                                        <a href="#" class="ui-dropdown__control-button">
+                                                            Все новости
+
+                                                        </a><a href="#" class="ui-dropdown__control-button">
+                                                            Событие
+
+                                                        </a><a href="#" class="ui-dropdown__control-button is-active">
+                                                            Проекты
+
+                                                        </a><a href="#" class="ui-dropdown__control-button">
+                                                            Новости компании
+
+                                                        </a><a href="#" class="ui-dropdown__control-button">
+                                                            Продукция
+
+                                                        </a><a href="#" class="ui-dropdown__control-button">
+                                                            Шоурум
+
+                                                        </a>
                                                     </div>
                                                 </div>
-                                                <div class="p-account__balance">
-                                                    <div class="ui-dropdown ui-dropdown_select p-account__balance-dropdown js-dropdown" data-dropdown="select">
-                                                        <button class="ui-dropdown__button js-dropdown-button" type="button" aria-label="Баланс по договору" role="combobox">
-                                                            <span class="ui-dropdown__button-text js-dropdown-button-text" data-before-text="Баланс по договору" role="textbox">
-                                                                176442
-                                                            </span>
 
-                                                            <span class="ui-dropdown__button-icon-box"><span class="ui-dropdown__button-icon"></span></span>
+                                            </div>
+                                            <div class="p-articles__sidebar-menu sidebar-menu js-sidebar-menu sidebar-menu_company">
+                                                <div class="sidebar-menu__inner">
+                                                    <div class="sidebar-menu__section">
+                                                        <button type="button" class="sidebar-menu__toggle-button js-sidebar-menu-button">
+                                                            <span>Проекты</span>
+                                                            <svg class="ui-icon ui-icon-arrow-down-sm sidebar-menu__toggle-icon">
+                                                                <use xlink:href="img/icons.svg#arrow-down-sm"></use>
+                                                            </svg>
                                                         </button>
-                                                        <input type="hidden" class="ui-dropdown__input js-dropdown-input" value="182930" name="contract">
-                                                        <div class="ui-dropdown__popup js-dropdown-popup" aria-hidden="true">
-                                                            <div class="ui-dropdown__scroll js-dropdown-scroll js-scrollbar">
-                                                                <div class="ui-dropdown__list js-dropdown-list" tabindex="0" role="listbox">
-                                                                    <div class="ui-dropdown__option js-dropdown-option" data-value="Общий" data-text-value="Общий" role="option" aria-selected="false">
-                                                                        Общий
-                                                                    </div>
-                                                                    <div class="ui-dropdown__option is-selected js-dropdown-option" data-value="182930" data-text-value="182930" role="option" aria-selected="true">
-                                                                        182930
-                                                                    </div>
-                                                                    <div class="ui-dropdown__option js-dropdown-option" data-value="182930" data-text-value="176442" role="option" aria-selected="false">
-                                                                        176442
-                                                                    </div>
-                                                                </div>
-                                                            </div>
+                                                        <div class="sidebar-menu__popup">
+                                                            <ul class="sidebar-menu__list">
+                                                                <li class="sidebar-menu__item">
+                                                                    <a href="#" class="sidebar-menu__link">О нас</a>
+                                                                </li>
+                                                                <li class="sidebar-menu__item">
+                                                                    <a href="#" class="sidebar-menu__link">Вакансии</a>
+                                                                </li>
+                                                                <li class="sidebar-menu__item">
+                                                                    <a href="#" class="sidebar-menu__link">Доставка и оплата</a>
+                                                                </li>
+                                                                <li class="sidebar-menu__item">
+                                                                    <a href="#" class="sidebar-menu__link">Возврат и гарантия</a>
+                                                                </li>
+                                                                <li class="sidebar-menu__item">
+                                                                    <a href="#" class="sidebar-menu__link">Дизайнерам и архитекторам</a>
+                                                                </li>
+                                                                <li class="sidebar-menu__item">
+                                                                    <a href="#" class="sidebar-menu__link">Оптовым покупателям</a>
+                                                                </li>
+                                                                <li class="sidebar-menu__item">
+                                                                    <a href="#" class="sidebar-menu__link">База знаний</a>
+                                                                </li>
+                                                                <li class="sidebar-menu__item is-active">
+                                                                    <a href="#" class="sidebar-menu__link">Проекты</a>
+                                                                </li>
+                                                                <li class="sidebar-menu__item">
+                                                                    <a href="#" class="sidebar-menu__link">Новости</a>
+                                                                </li>
+                                                                <li class="sidebar-menu__item">
+                                                                    <a href="#" class="sidebar-menu__link">Контакты</a>
+                                                                </li>
+                                                                <li class="sidebar-menu__item">
+                                                                    <a href="#" class="sidebar-menu__link">Где купить</a>
+                                                                </li>
+                                                            </ul>
+
                                                         </div>
-
-                                                    </div>
-                                                    <div class="p-account__balance-sum">0 ₽</div>
-                                                </div>
-                                            </div>
-                                            <div class="p-account__personal-manager u-visible-desktop-md personal-manager">
-                                                <div class="personal-manager__title">Персональный менеджер</div>
-                                                <div class="personal-manager__person">
-                                                    <div class="personal-manager__person-photo">
-                                                        <img class="personal-manager__photo-image lazy" data-src="img/personal-manager.png" data-srcset="img/personal-manager@2x.png 2x" width="88" height="88" alt="">
-                                                    </div>
-                                                    <div class="personal-manager__person-content">
-                                                        <div class="personal-manager__name">Смирнова Елена Федоровна</div>
-                                                        <div class="personal-manager__contacts">
-                                                            <a href="tel:+74953749406">+7 (495) 374-94-06</a>
-                                                            <a href="mailto:smirnova@stluce.ru">smirnova@stluce.ru</a>
-                                                            <div>Пн-Пт 09:00-18:00</div>
-                                                        </div>
                                                     </div>
                                                 </div>
-                                                <button type="button" class="ui-button ui-button_style_outline ui-button_fill personal-manager__button" data-modal-open="#modal_contact_manager">
-                                                    <span class="ui-button__text">
-                                                        Задать вопрос
-                                                    </span>
-                                                    <svg class="ui-icon ui-icon-arrow ui-button__icon">
-                                                        <use xlink:href="img/icons.svg#arrow"></use>
-                                                    </svg>
-
-                                                </button>
-                                            </div>
-                                            <div class="p-account__personal-manager-fixed u-hidden-desktop-md js-bottom-fixed-block">
-                                                <button type="button" class="ui-button ui-button_fill p-account__personal-manager-fixed-button" data-modal-open="#modal_contact_manager">
-                                                    <span class="ui-button__text">
-                                                        Задать вопрос персональному менеджеру
-                                                    </span>
-                                                    <svg class="ui-icon ui-icon-arrow ui-button__icon">
-                                                        <use xlink:href="img/icons.svg#arrow"></use>
-                                                    </svg>
-
-                                                </button>
                                             </div>
 
                                         </div>
@@ -2207,149 +2244,248 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="p-account__column">
-                            <div class="breadcrumbs">
-                                <div class="breadcrumbs__container container">
-                                    <nav class="breadcrumbs__inner" role="navigation" aria-label="breadcrumbs">
-                                        <ol class="breadcrumbs__list">
-                                            <li class="breadcrumbs__item breadcrumbs__item_back">
-                                                <a href="#" class="breadcrumbs__link "><span>Назад</span></a>
-                                            </li>
-                                            <li class="breadcrumbs__item">
-                                                <a href="/" class="breadcrumbs__link"><span>Главная</span></a>
-                                            </li>
-                                            <li class="breadcrumbs__item">
-                                                <a href="" class="breadcrumbs__link"><span>Личный кабинет</span></a>
-                                            </li>
-                                            <li class="breadcrumbs__item" aria-current="page"><span>Возвраты</span></li>
-                                        </ol>
-                                    </nav>
-                                </div>
-                            </div>
-                            <div class="p-account__main-content">
-                                <div class="p-account__header">
-                                    <div class="p-account__title page-title page-title_size_md">
-                                        <h1>Возвраты</h1>
-                                    </div>
-                                    <a href="#" class="p-account__create-button">
-                                        <span>Оформить возврат</span>
-                                        <div class="ui-button-icon ui-button-icon_size_sm ui-button-icon_style_black p-account__create-button-icon"><svg class="ui-icon ui-icon-plus ui-button-icon__icon ui-button-icon__icon_size_xs">
-                                                <use xlink:href="img/icons.svg#plus"></use>
-                                            </svg>
+                        <div class="p-articles__column">
+                            <div class="p-articles__items">
+                                <div class="p-articles__item animation animation_fadeInUp js-animation article-item" data-animation-type="fadeInUp">
+                                    <a href="#" class="article-item__link">
+                                        <div class="article-item__date">
+                                            <span class="article-item__date-number">11</span>
+                                            <span>Июля <br>2023</span>
+                                        </div>
+                                        <div class="article-item__content">
+                                            <div class="article-item__title">Новый проект “ЖК Остров Офис Донстрой”</div>
+                                            <div class="article-item__category">Проекты</div>
+                                        </div>
+                                        <div class="article-item__image-box">
+                                            <img class="article-item__image lazy" data-src="img/articles/2.jpg" width="852" height="500" alt="">
+                                        </div>
+                                        <div class="ui-button-icon ui-button-icon_anim_arrow article-item__arrow-box">
 
+                                            <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.008.765a.567.567 0 0 0-.33.26c-.049.091-.052.353-.006.442.017.032.812.84 1.767 1.795L6.175 5 4.439 6.737c-.955.956-1.75 1.764-1.767 1.796-.046.089-.043.351.006.442a.61.61 0 0 0 .239.227c.112.057.31.055.425-.006.062-.033.596-.557 2.158-2.12L7.575 5 5.5 2.924C3.956 1.379 3.405.837 3.345.806a.589.589 0 0 0-.337-.041" fill-rule="evenodd"></path>
+                                            </svg><svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.20277 1.12372C4.99495 0.941877 4.67907 0.962936 4.49723 1.17075C4.31539 1.37857 4.33645 1.69445 4.54426 1.8763L7.54279 4.50001H0.873516C0.597374 4.50001 0.373516 4.72386 0.373516 5.00001C0.373516 5.27615 0.597374 5.50001 0.873516 5.50001H7.54279L4.54426 8.12372C4.33645 8.30556 4.31539 8.62144 4.49723 8.82926C4.67907 9.03708 4.99495 9.05814 5.20277 8.8763L9.20277 5.3763L9.63281 5.00001L9.20277 4.62372L5.20277 1.12372Z"></path>
+                                            </svg>
                                         </div>
                                     </a>
                                 </div>
-                                <div class="p-account__orders">
-                                    <div class="p-account__tabs js-tabs">
-                                        <div class="p-account__tabs-menu tab-menu js-tabs-menu">
-                                            <div class="tab-menu__inner">
-                                                <div class="tab-menu__list">
-                                                    <button class="tab-menu__item js-tabs-item is-active">
-
-                                                        <span>Все возвраты</span>
-                                                    </button><button class="tab-menu__item js-tabs-item">
-
-                                                        <span>Текущие</span>
-                                                    </button><button class="tab-menu__item js-tabs-item">
-
-                                                        <span>Закрытые</span>
-                                                    </button>
-                                                </div>
-                                            </div>
+                                <div class="p-articles__item animation animation_fadeInUp js-animation article-item" data-animation-type="fadeInUp">
+                                    <a href="#" class="article-item__link">
+                                        <div class="article-item__date">
+                                            <span class="article-item__date-number">30</span>
+                                            <span>Июля <br>2023</span>
                                         </div>
-                                    </div>
-                                    <div class="data-table data-table_returns p-account__data-table">
-                                        <div class="data-table__scrollbar js-scrollbar">
-                                            <div class="data-table__content">
-                                                <div class="data-table__head">
-                                                    <div class="data-table__row">
-                                                        <div class="data-table__column data-table__column-number">№</div>
-                                                        <div class="data-table__column data-table__column-date">Дата возврата</div>
-                                                        <div class="data-table__column data-table__column-order">Номер заказа</div>
-                                                        <div class="data-table__column data-table__column-reason">Причина</div>
-                                                        <div class="data-table__column data-table__column-status">Статус</div>
-                                                    </div>
-                                                </div>
-                                                <div class="data-table__body">
-                                                    <div class="data-table__row">
-
-                                                        <div class="data-table__column data-table__column-number">
-                                                            00019256
-                                                        </div>
-                                                        <div class="data-table__column data-table__column-date">
-                                                            05.07.2023
-                                                        </div>
-                                                        <div class="data-table__column data-table__column-order">
-                                                            124141135
-                                                        </div>
-                                                        <div class="data-table__column data-table__column-reason">
-                                                            Товар не&nbsp;подошел
-                                                        </div>
-                                                        <div class="data-table__column data-table__column-status">
-                                                            Отгружено с&nbsp;ремонта
-                                                        </div>
-                                                    </div>
-                                                    <div class="data-table__row">
-
-                                                        <div class="data-table__column data-table__column-number">
-                                                            00019256
-                                                        </div>
-                                                        <div class="data-table__column data-table__column-date">
-                                                            05.07.2023
-                                                        </div>
-                                                        <div class="data-table__column data-table__column-order">
-                                                            124141135
-                                                        </div>
-                                                        <div class="data-table__column data-table__column-reason">
-                                                            Пришел другой товар
-                                                        </div>
-                                                        <div class="data-table__column data-table__column-status">
-                                                            Списание
-                                                        </div>
-                                                    </div>
-                                                    <div class="data-table__row">
-
-                                                        <div class="data-table__column data-table__column-number">
-                                                            00019256
-                                                        </div>
-                                                        <div class="data-table__column data-table__column-date">
-                                                            05.07.2023
-                                                        </div>
-                                                        <div class="data-table__column data-table__column-order">
-                                                            124141135
-                                                        </div>
-                                                        <div class="data-table__column data-table__column-reason">
-                                                            Другое
-                                                        </div>
-                                                        <div class="data-table__column data-table__column-status">
-                                                            Зарегистрирован
-                                                        </div>
-                                                    </div>
-                                                    <div class="data-table__row">
-
-                                                        <div class="data-table__column data-table__column-number">
-                                                            00019256
-                                                        </div>
-                                                        <div class="data-table__column data-table__column-date">
-                                                            05.07.2023
-                                                        </div>
-                                                        <div class="data-table__column data-table__column-order">
-                                                            124141135
-                                                        </div>
-                                                        <div class="data-table__column data-table__column-reason">
-                                                            Товар не&nbsp;подошел
-                                                        </div>
-                                                        <div class="data-table__column data-table__column-status">
-                                                            Возврат средств
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                            </div>
+                                        <div class="article-item__content">
+                                            <div class="article-item__title">Открытие нового шоурума в&nbsp;Москве</div>
+                                            <div class="article-item__category">События</div>
                                         </div>
-                                    </div>
+                                        <div class="article-item__image-box">
+                                            <img class="article-item__image lazy" data-src="img/articles/3.jpg" width="852" height="500" alt="">
+                                        </div>
+                                        <div class="ui-button-icon ui-button-icon_anim_arrow article-item__arrow-box">
+
+                                            <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.008.765a.567.567 0 0 0-.33.26c-.049.091-.052.353-.006.442.017.032.812.84 1.767 1.795L6.175 5 4.439 6.737c-.955.956-1.75 1.764-1.767 1.796-.046.089-.043.351.006.442a.61.61 0 0 0 .239.227c.112.057.31.055.425-.006.062-.033.596-.557 2.158-2.12L7.575 5 5.5 2.924C3.956 1.379 3.405.837 3.345.806a.589.589 0 0 0-.337-.041" fill-rule="evenodd"></path>
+                                            </svg><svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.20277 1.12372C4.99495 0.941877 4.67907 0.962936 4.49723 1.17075C4.31539 1.37857 4.33645 1.69445 4.54426 1.8763L7.54279 4.50001H0.873516C0.597374 4.50001 0.373516 4.72386 0.373516 5.00001C0.373516 5.27615 0.597374 5.50001 0.873516 5.50001H7.54279L4.54426 8.12372C4.33645 8.30556 4.31539 8.62144 4.49723 8.82926C4.67907 9.03708 4.99495 9.05814 5.20277 8.8763L9.20277 5.3763L9.63281 5.00001L9.20277 4.62372L5.20277 1.12372Z"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
                                 </div>
+                                <div class="p-articles__item animation animation_fadeInUp js-animation article-item" data-animation-type="fadeInUp">
+                                    <a href="#" class="article-item__link">
+                                        <div class="article-item__date">
+                                            <span class="article-item__date-number">17</span>
+                                            <span>Июля <br>2023</span>
+                                        </div>
+                                        <div class="article-item__content">
+                                            <div class="article-item__title">St&nbsp;Luce на&nbsp;Московской неделе интерьера</div>
+                                            <div class="article-item__category">Событие</div>
+                                        </div>
+                                        <div class="article-item__image-box">
+                                            <img class="article-item__image lazy" data-src="img/articles/4.jpg" width="852" height="500" alt="">
+                                        </div>
+                                        <div class="ui-button-icon ui-button-icon_anim_arrow article-item__arrow-box">
+
+                                            <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.008.765a.567.567 0 0 0-.33.26c-.049.091-.052.353-.006.442.017.032.812.84 1.767 1.795L6.175 5 4.439 6.737c-.955.956-1.75 1.764-1.767 1.796-.046.089-.043.351.006.442a.61.61 0 0 0 .239.227c.112.057.31.055.425-.006.062-.033.596-.557 2.158-2.12L7.575 5 5.5 2.924C3.956 1.379 3.405.837 3.345.806a.589.589 0 0 0-.337-.041" fill-rule="evenodd"></path>
+                                            </svg><svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.20277 1.12372C4.99495 0.941877 4.67907 0.962936 4.49723 1.17075C4.31539 1.37857 4.33645 1.69445 4.54426 1.8763L7.54279 4.50001H0.873516C0.597374 4.50001 0.373516 4.72386 0.373516 5.00001C0.373516 5.27615 0.597374 5.50001 0.873516 5.50001H7.54279L4.54426 8.12372C4.33645 8.30556 4.31539 8.62144 4.49723 8.82926C4.67907 9.03708 4.99495 9.05814 5.20277 8.8763L9.20277 5.3763L9.63281 5.00001L9.20277 4.62372L5.20277 1.12372Z"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="p-articles__item animation animation_fadeInUp js-animation article-item" data-animation-type="fadeInUp">
+                                    <a href="#" class="article-item__link">
+                                        <div class="article-item__date">
+                                            <span class="article-item__date-number">11</span>
+                                            <span>Июля <br>2023</span>
+                                        </div>
+                                        <div class="article-item__content">
+                                            <div class="article-item__title">IX&nbsp;сезон Международной премии ADD Awards</div>
+                                            <div class="article-item__category">Проекты</div>
+                                        </div>
+                                        <div class="article-item__image-box">
+                                            <img class="article-item__image lazy" data-src="img/articles/5.jpg" width="852" height="500" alt="">
+                                        </div>
+                                        <div class="ui-button-icon ui-button-icon_anim_arrow article-item__arrow-box">
+
+                                            <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.008.765a.567.567 0 0 0-.33.26c-.049.091-.052.353-.006.442.017.032.812.84 1.767 1.795L6.175 5 4.439 6.737c-.955.956-1.75 1.764-1.767 1.796-.046.089-.043.351.006.442a.61.61 0 0 0 .239.227c.112.057.31.055.425-.006.062-.033.596-.557 2.158-2.12L7.575 5 5.5 2.924C3.956 1.379 3.405.837 3.345.806a.589.589 0 0 0-.337-.041" fill-rule="evenodd"></path>
+                                            </svg><svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.20277 1.12372C4.99495 0.941877 4.67907 0.962936 4.49723 1.17075C4.31539 1.37857 4.33645 1.69445 4.54426 1.8763L7.54279 4.50001H0.873516C0.597374 4.50001 0.373516 4.72386 0.373516 5.00001C0.373516 5.27615 0.597374 5.50001 0.873516 5.50001H7.54279L4.54426 8.12372C4.33645 8.30556 4.31539 8.62144 4.49723 8.82926C4.67907 9.03708 4.99495 9.05814 5.20277 8.8763L9.20277 5.3763L9.63281 5.00001L9.20277 4.62372L5.20277 1.12372Z"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="p-articles__item animation animation_fadeInUp js-animation article-item" data-animation-type="fadeInUp">
+                                    <a href="#" class="article-item__link">
+                                        <div class="article-item__date">
+                                            <span class="article-item__date-number">11</span>
+                                            <span>Июля <br>2023</span>
+                                        </div>
+                                        <div class="article-item__content">
+                                            <div class="article-item__title">Новый проект &laquo;Офис Ксении Собчак&raquo;</div>
+                                            <div class="article-item__category">Проекты</div>
+                                        </div>
+                                        <div class="article-item__image-box">
+                                            <img class="article-item__image lazy" data-src="img/articles/6.jpg" width="852" height="500" alt="">
+                                        </div>
+                                        <div class="ui-button-icon ui-button-icon_anim_arrow article-item__arrow-box">
+
+                                            <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.008.765a.567.567 0 0 0-.33.26c-.049.091-.052.353-.006.442.017.032.812.84 1.767 1.795L6.175 5 4.439 6.737c-.955.956-1.75 1.764-1.767 1.796-.046.089-.043.351.006.442a.61.61 0 0 0 .239.227c.112.057.31.055.425-.006.062-.033.596-.557 2.158-2.12L7.575 5 5.5 2.924C3.956 1.379 3.405.837 3.345.806a.589.589 0 0 0-.337-.041" fill-rule="evenodd"></path>
+                                            </svg><svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.20277 1.12372C4.99495 0.941877 4.67907 0.962936 4.49723 1.17075C4.31539 1.37857 4.33645 1.69445 4.54426 1.8763L7.54279 4.50001H0.873516C0.597374 4.50001 0.373516 4.72386 0.373516 5.00001C0.373516 5.27615 0.597374 5.50001 0.873516 5.50001H7.54279L4.54426 8.12372C4.33645 8.30556 4.31539 8.62144 4.49723 8.82926C4.67907 9.03708 4.99495 9.05814 5.20277 8.8763L9.20277 5.3763L9.63281 5.00001L9.20277 4.62372L5.20277 1.12372Z"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="p-articles__item animation animation_fadeInUp js-animation article-item" data-animation-type="fadeInUp">
+                                    <a href="#" class="article-item__link">
+                                        <div class="article-item__date">
+                                            <span class="article-item__date-number">11</span>
+                                            <span>Июля <br>2023</span>
+                                        </div>
+                                        <div class="article-item__content">
+                                            <div class="article-item__title">Новый проект “ЖК Остров Офис Донстрой”</div>
+                                            <div class="article-item__category">Проекты</div>
+                                        </div>
+                                        <div class="article-item__image-box">
+                                            <img class="article-item__image lazy" data-src="img/articles/2.jpg" width="852" height="500" alt="">
+                                        </div>
+                                        <div class="ui-button-icon ui-button-icon_anim_arrow article-item__arrow-box">
+
+                                            <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.008.765a.567.567 0 0 0-.33.26c-.049.091-.052.353-.006.442.017.032.812.84 1.767 1.795L6.175 5 4.439 6.737c-.955.956-1.75 1.764-1.767 1.796-.046.089-.043.351.006.442a.61.61 0 0 0 .239.227c.112.057.31.055.425-.006.062-.033.596-.557 2.158-2.12L7.575 5 5.5 2.924C3.956 1.379 3.405.837 3.345.806a.589.589 0 0 0-.337-.041" fill-rule="evenodd"></path>
+                                            </svg><svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.20277 1.12372C4.99495 0.941877 4.67907 0.962936 4.49723 1.17075C4.31539 1.37857 4.33645 1.69445 4.54426 1.8763L7.54279 4.50001H0.873516C0.597374 4.50001 0.373516 4.72386 0.373516 5.00001C0.373516 5.27615 0.597374 5.50001 0.873516 5.50001H7.54279L4.54426 8.12372C4.33645 8.30556 4.31539 8.62144 4.49723 8.82926C4.67907 9.03708 4.99495 9.05814 5.20277 8.8763L9.20277 5.3763L9.63281 5.00001L9.20277 4.62372L5.20277 1.12372Z"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="p-articles__item animation animation_fadeInUp js-animation article-item" data-animation-type="fadeInUp">
+                                    <a href="#" class="article-item__link">
+                                        <div class="article-item__date">
+                                            <span class="article-item__date-number">30</span>
+                                            <span>Июля <br>2023</span>
+                                        </div>
+                                        <div class="article-item__content">
+                                            <div class="article-item__title">Открытие нового шоурума в&nbsp;Москве</div>
+                                            <div class="article-item__category">События</div>
+                                        </div>
+                                        <div class="article-item__image-box">
+                                            <img class="article-item__image lazy" data-src="img/articles/3.jpg" width="852" height="500" alt="">
+                                        </div>
+                                        <div class="ui-button-icon ui-button-icon_anim_arrow article-item__arrow-box">
+
+                                            <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.008.765a.567.567 0 0 0-.33.26c-.049.091-.052.353-.006.442.017.032.812.84 1.767 1.795L6.175 5 4.439 6.737c-.955.956-1.75 1.764-1.767 1.796-.046.089-.043.351.006.442a.61.61 0 0 0 .239.227c.112.057.31.055.425-.006.062-.033.596-.557 2.158-2.12L7.575 5 5.5 2.924C3.956 1.379 3.405.837 3.345.806a.589.589 0 0 0-.337-.041" fill-rule="evenodd"></path>
+                                            </svg><svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.20277 1.12372C4.99495 0.941877 4.67907 0.962936 4.49723 1.17075C4.31539 1.37857 4.33645 1.69445 4.54426 1.8763L7.54279 4.50001H0.873516C0.597374 4.50001 0.373516 4.72386 0.373516 5.00001C0.373516 5.27615 0.597374 5.50001 0.873516 5.50001H7.54279L4.54426 8.12372C4.33645 8.30556 4.31539 8.62144 4.49723 8.82926C4.67907 9.03708 4.99495 9.05814 5.20277 8.8763L9.20277 5.3763L9.63281 5.00001L9.20277 4.62372L5.20277 1.12372Z"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="p-articles__item animation animation_fadeInUp js-animation article-item" data-animation-type="fadeInUp">
+                                    <a href="#" class="article-item__link">
+                                        <div class="article-item__date">
+                                            <span class="article-item__date-number">17</span>
+                                            <span>Июля <br>2023</span>
+                                        </div>
+                                        <div class="article-item__content">
+                                            <div class="article-item__title">St&nbsp;Luce на&nbsp;Московской неделе интерьера</div>
+                                            <div class="article-item__category">Событие</div>
+                                        </div>
+                                        <div class="article-item__image-box">
+                                            <img class="article-item__image lazy" data-src="img/articles/4.jpg" width="852" height="500" alt="">
+                                        </div>
+                                        <div class="ui-button-icon ui-button-icon_anim_arrow article-item__arrow-box">
+
+                                            <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.008.765a.567.567 0 0 0-.33.26c-.049.091-.052.353-.006.442.017.032.812.84 1.767 1.795L6.175 5 4.439 6.737c-.955.956-1.75 1.764-1.767 1.796-.046.089-.043.351.006.442a.61.61 0 0 0 .239.227c.112.057.31.055.425-.006.062-.033.596-.557 2.158-2.12L7.575 5 5.5 2.924C3.956 1.379 3.405.837 3.345.806a.589.589 0 0 0-.337-.041" fill-rule="evenodd"></path>
+                                            </svg><svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.20277 1.12372C4.99495 0.941877 4.67907 0.962936 4.49723 1.17075C4.31539 1.37857 4.33645 1.69445 4.54426 1.8763L7.54279 4.50001H0.873516C0.597374 4.50001 0.373516 4.72386 0.373516 5.00001C0.373516 5.27615 0.597374 5.50001 0.873516 5.50001H7.54279L4.54426 8.12372C4.33645 8.30556 4.31539 8.62144 4.49723 8.82926C4.67907 9.03708 4.99495 9.05814 5.20277 8.8763L9.20277 5.3763L9.63281 5.00001L9.20277 4.62372L5.20277 1.12372Z"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="p-articles__item animation animation_fadeInUp js-animation article-item" data-animation-type="fadeInUp">
+                                    <a href="#" class="article-item__link">
+                                        <div class="article-item__date">
+                                            <span class="article-item__date-number">11</span>
+                                            <span>Июля <br>2023</span>
+                                        </div>
+                                        <div class="article-item__content">
+                                            <div class="article-item__title">IX&nbsp;сезон Международной премии ADD Awards</div>
+                                            <div class="article-item__category">Проекты</div>
+                                        </div>
+                                        <div class="article-item__image-box">
+                                            <img class="article-item__image lazy" data-src="img/articles/7.jpg" width="852" height="500" alt="">
+                                        </div>
+                                        <div class="ui-button-icon ui-button-icon_anim_arrow article-item__arrow-box">
+
+                                            <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M3.008.765a.567.567 0 0 0-.33.26c-.049.091-.052.353-.006.442.017.032.812.84 1.767 1.795L6.175 5 4.439 6.737c-.955.956-1.75 1.764-1.767 1.796-.046.089-.043.351.006.442a.61.61 0 0 0 .239.227c.112.057.31.055.425-.006.062-.033.596-.557 2.158-2.12L7.575 5 5.5 2.924C3.956 1.379 3.405.837 3.345.806a.589.589 0 0 0-.337-.041" fill-rule="evenodd"></path>
+                                            </svg><svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.20277 1.12372C4.99495 0.941877 4.67907 0.962936 4.49723 1.17075C4.31539 1.37857 4.33645 1.69445 4.54426 1.8763L7.54279 4.50001H0.873516C0.597374 4.50001 0.373516 4.72386 0.373516 5.00001C0.373516 5.27615 0.597374 5.50001 0.873516 5.50001H7.54279L4.54426 8.12372C4.33645 8.30556 4.31539 8.62144 4.49723 8.82926C4.67907 9.03708 4.99495 9.05814 5.20277 8.8763L9.20277 5.3763L9.63281 5.00001L9.20277 4.62372L5.20277 1.12372Z"></path>
+                                            </svg>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="p-articles__pagination pagination">
+                                <div class="pagination__nav-block">
+                                    <button type="button" class="ui-button-icon ui-button-icon_anim_arrow-left pagination__nav pagination__nav_prev" disabled="disabled">
+
+                                        <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.008.765a.567.567 0 0 0-.33.26c-.049.091-.052.353-.006.442.017.032.812.84 1.767 1.795L6.175 5 4.439 6.737c-.955.956-1.75 1.764-1.767 1.796-.046.089-.043.351.006.442a.61.61 0 0 0 .239.227c.112.057.31.055.425-.006.062-.033.596-.557 2.158-2.12L7.575 5 5.5 2.924C3.956 1.379 3.405.837 3.345.806a.589.589 0 0 0-.337-.041" fill-rule="evenodd"></path>
+                                        </svg><svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.20277 1.12372C4.99495 0.941877 4.67907 0.962936 4.49723 1.17075C4.31539 1.37857 4.33645 1.69445 4.54426 1.8763L7.54279 4.50001H0.873516C0.597374 4.50001 0.373516 4.72386 0.373516 5.00001C0.373516 5.27615 0.597374 5.50001 0.873516 5.50001H7.54279L4.54426 8.12372C4.33645 8.30556 4.31539 8.62144 4.49723 8.82926C4.67907 9.03708 4.99495 9.05814 5.20277 8.8763L9.20277 5.3763L9.63281 5.00001L9.20277 4.62372L5.20277 1.12372Z"></path>
+                                        </svg></button>
+                                    <button type="button" class="ui-button-icon ui-button-icon_anim_arrow pagination__nav pagination__nav_next">
+
+                                        <svg width="10" height="10" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M3.008.765a.567.567 0 0 0-.33.26c-.049.091-.052.353-.006.442.017.032.812.84 1.767 1.795L6.175 5 4.439 6.737c-.955.956-1.75 1.764-1.767 1.796-.046.089-.043.351.006.442a.61.61 0 0 0 .239.227c.112.057.31.055.425-.006.062-.033.596-.557 2.158-2.12L7.575 5 5.5 2.924C3.956 1.379 3.405.837 3.345.806a.589.589 0 0 0-.337-.041" fill-rule="evenodd"></path>
+                                        </svg><svg width="10" height="10" viewBox="0 0 10 10" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M5.20277 1.12372C4.99495 0.941877 4.67907 0.962936 4.49723 1.17075C4.31539 1.37857 4.33645 1.69445 4.54426 1.8763L7.54279 4.50001H0.873516C0.597374 4.50001 0.373516 4.72386 0.373516 5.00001C0.373516 5.27615 0.597374 5.50001 0.873516 5.50001H7.54279L4.54426 8.12372C4.33645 8.30556 4.31539 8.62144 4.49723 8.82926C4.67907 9.03708 4.99495 9.05814 5.20277 8.8763L9.20277 5.3763L9.63281 5.00001L9.20277 4.62372L5.20277 1.12372Z"></path>
+                                        </svg></button>
+                                </div>
+                                <div class="pagination__list">
+                                    <a href="" class="pagination__link is-active">1</a>
+                                    <span class="pagination__divide">—</span>
+                                    <a href="#" class="pagination__link">2</a>
+                                    <a href="#" class="pagination__link">3</a>
+                                    <a href="#" class="pagination__link">4</a>
+                                    <a href="#" class="pagination__link">...</a>
+                                    <a href="#" class="pagination__link">8</a>
+                                </div>
+                                <button type="button" class="ui-button pagination__more-button">
+                                    <span class="ui-button__text">
+                                        Показать еще
+                                    </span>
+
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -3830,286 +3966,6 @@
                                 </button>
                             </div>
                         </form>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal-order modal js-modal modal_direction_right" id="modal_order" aria-hidden="true" tabindex="-1">
-        <div class="modal__wrap">
-            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="">
-
-                <div class="modal__inner">
-                    <div class="modal__heading">
-
-                        <div class="modal__order">
-                            <div class="modal__title">Заказ 124141135</div>
-                            <div class="modal__order-status order-status order-status_completed">Выполнен</div>
-                        </div>
-                        <button type="button" class="ui-button-icon ui-button-icon_style_black modal__close js-modal-close" title="Закрыть"><svg class="ui-icon ui-icon-cross ui-button-icon__icon">
-                                <use xlink:href="img/icons.svg#cross"></use>
-                            </svg>
-
-                        </button>
-                    </div>
-                    <div class="modal__content js-modal-content">
-
-                        <div class="modal-order__fields-grid l-grid l-grid-cols-3">
-                            <div class="field-data">
-                                <div class="field-data__label">Способ получения</div>
-                                <div class="field-data__value">Самовывоз со&nbsp;склада</div>
-                            </div>
-                            <div class="field-data">
-                                <div class="field-data__label">Стоимость доставки</div>
-                                <div class="field-data__value">0 ₽</div>
-                            </div>
-                            <div class="field-data">
-                                <div class="field-data__label">Способ оплаты</div>
-                                <div class="field-data__value">Картой онлайн</div>
-                            </div>
-                            <div class="field-data">
-                                <div class="field-data__label">Наименование организации</div>
-                                <div class="field-data__value">ООО &laquo;Светильники Спб&raquo;</div>
-                            </div>
-                            <div class="field-data">
-                                <div class="field-data__label">Получатель</div>
-                                <div class="field-data__value">Евдокимова Анастасия Ивановна</div>
-                            </div>
-                            <div class="field-data">
-                                <div class="field-data__label">Дата заказа</div>
-                                <div class="field-data__value">23.07.2023</div>
-                            </div>
-                            <div class="l-column-fill field-data">
-                                <div class="field-data__label">Адрес</div>
-                                <div class="field-data__value">Московская обл., Мытищи, деревня Грибки, Дмитровское шоссе, 31А/1</div>
-                            </div>
-                        </div>
-                        <div class="modal-order__controls">
-                            <div class="modal-order__controls-left">
-                                <button type="button" class="modal-order__control-button">
-                                    Сохранить
-                                    <span class="u-text-highlighted ext">.pdf</span>
-                                </button>
-                                <button type="button" class="modal-order__control-button">
-                                    Сохранить
-                                    <span class="u-text-highlighted ext">.xls</span>
-                                </button>
-                                <button type="button" class="modal-order__control-button">Распечатать</button>
-                            </div>
-                            <div class="modal-order__controls-right">
-                                <label class="ui-checkbox ui-checkbox_checkbox modal-order__control-checkbox">
-                                    <input class="ui-checkbox__input " type="checkbox" name="purchase_price" />
-                                    <span class="ui-checkbox__checked">
-                                        <span class="ui-checkbox__checked-icon"></span>
-                                        <span class="ui-checkbox__focused"></span>
-                                    </span>
-
-                                    <span class="ui-checkbox__text">Закупочная цена</span>
-                                </label>
-                                <label class="ui-checkbox ui-checkbox_checkbox modal-order__control-checkbox">
-                                    <input class="ui-checkbox__input " type="checkbox" name="hide_price" />
-                                    <span class="ui-checkbox__checked">
-                                        <span class="ui-checkbox__checked-icon"></span>
-                                        <span class="ui-checkbox__focused"></span>
-                                    </span>
-
-                                    <span class="ui-checkbox__text">Скрыть цену</span>
-                                </label>
-                            </div>
-                        </div>
-                        <div class="modal-order__products">
-                            <div class="modal-order__product-card product-card">
-
-                                <div class="product-card__inner">
-                                    <div class="product-card__image-box">
-                                        <a href="#" class="product-card__image-link" tabindex="-1">
-                                            <img class="product-card__image lazy" data-src="img/cart/3.jpg" width="158" height="190" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="product-card__content">
-                                        <div class="product-card__title">
-                                            <a class="product-card__title-link" href="#">Подвесной светильник Nection</a>
-                                        </div>
-                                        <div class="product-card__info">
-                                            <div class="product-card__info-item">
-                                                <div class="product-card__info-name">Арт.</div>
-                                                <div class="product-card__info-value">SL874.103.03</div>
-                                            </div>
-                                            <div class="product-card__info-item">
-                                                <div class="product-card__info-name">Цвет</div>
-                                                <div class="product-card__info-value">Черный</div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="product-card__cart-block">
-
-                                        <div class="product-card__quantity">
-                                            <span>1 шт</span>
-                                        </div>
-                                        <div class="product-card__sum">
-                                            <span>18 630 ₽</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-card__controls">
-                                        <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon ui-button-icon__icon_size_sm">
-                                                <use xlink:href="img/icons.svg#basket"></use>
-                                            </svg>
-
-                                        </button>
-                                        <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart ui-button-icon__icon ui-button-icon__icon_size_sm">
-                                                <use xlink:href="img/icons.svg#heart"></use>
-                                            </svg>
-
-                                        </button>
-                                        <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в проект" data-tooltip-content="Добавить в проект" data-modal-open="#modal_add_to_project"><svg class="ui-icon ui-icon-save-add ui-button-icon__icon ui-button-icon__icon_size_sm">
-                                                <use xlink:href="img/icons.svg#save-add"></use>
-                                            </svg>
-
-                                        </button>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-order__product-card product-card">
-
-                                <div class="product-card__inner">
-                                    <div class="product-card__image-box">
-                                        <a href="#" class="product-card__image-link" tabindex="-1">
-                                            <img class="product-card__image lazy" data-src="img/cart/1.jpg" width="158" height="190" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="product-card__content">
-                                        <div class="product-card__title">
-                                            <a class="product-card__title-link" href="#">Подвесной светильник Gocce</a>
-                                        </div>
-                                        <div class="product-card__info">
-                                            <div class="product-card__info-item">
-                                                <div class="product-card__info-name">Арт.</div>
-                                                <div class="product-card__info-value">SL874.103.03</div>
-                                            </div>
-                                            <div class="product-card__info-item">
-                                                <div class="product-card__info-name">Цвет</div>
-                                                <div class="product-card__info-value">Черный</div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="product-card__cart-block">
-
-                                        <div class="product-card__quantity">
-                                            <span>1 шт</span>
-                                        </div>
-                                        <div class="product-card__sum">
-                                            <span>15 500 ₽</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-card__controls">
-                                        <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon ui-button-icon__icon_size_sm">
-                                                <use xlink:href="img/icons.svg#basket"></use>
-                                            </svg>
-
-                                        </button>
-                                        <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart ui-button-icon__icon ui-button-icon__icon_size_sm">
-                                                <use xlink:href="img/icons.svg#heart"></use>
-                                            </svg>
-
-                                        </button>
-                                        <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в проект" data-tooltip-content="Добавить в проект" data-modal-open="#modal_add_to_project"><svg class="ui-icon ui-icon-save-add ui-button-icon__icon ui-button-icon__icon_size_sm">
-                                                <use xlink:href="img/icons.svg#save-add"></use>
-                                            </svg>
-
-                                        </button>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="modal-order__product-card product-card">
-
-                                <div class="product-card__inner">
-                                    <div class="product-card__image-box">
-                                        <a href="#" class="product-card__image-link" tabindex="-1">
-                                            <img class="product-card__image lazy" data-src="img/cart/2.jpg" width="158" height="190" alt="">
-                                        </a>
-                                    </div>
-                                    <div class="product-card__content">
-                                        <div class="product-card__title">
-                                            <a class="product-card__title-link" href="#">Светильник потолочный Латунь/Коньячный</a>
-                                        </div>
-                                        <div class="product-card__info">
-                                            <div class="product-card__info-item">
-                                                <div class="product-card__info-name">Арт.</div>
-                                                <div class="product-card__info-value">SL874.103.03</div>
-                                            </div>
-                                            <div class="product-card__info-item">
-                                                <div class="product-card__info-name">Цвет</div>
-                                                <div class="product-card__info-value">Черный</div>
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="product-card__cart-block">
-
-                                        <div class="product-card__quantity">
-                                            <span>1 шт</span>
-                                        </div>
-                                        <div class="product-card__sum">
-                                            <span>7 650 ₽</span>
-                                        </div>
-                                    </div>
-                                    <div class="product-card__controls">
-                                        <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в корзину" data-tooltip-content="Добавить в корзину" data-notification-open="#notification_added_cart"><svg class="ui-icon ui-icon-basket ui-button-icon__icon ui-button-icon__icon_size_sm">
-                                                <use xlink:href="img/icons.svg#basket"></use>
-                                            </svg>
-
-                                        </button>
-                                        <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в избранное" data-tooltip-content="Добавить в избранное" data-notification-open="#notification_added_favorites"><svg class="ui-icon ui-icon-heart ui-button-icon__icon ui-button-icon__icon_size_sm">
-                                                <use xlink:href="img/icons.svg#heart"></use>
-                                            </svg>
-
-                                        </button>
-                                        <button type="button" class="ui-button-icon ui-button-icon_size_xs product-card__control-button js-tooltip" aria-label="Добавить в проект" data-tooltip-content="Добавить в проект" data-modal-open="#modal_add_to_project"><svg class="ui-icon ui-icon-save-add ui-button-icon__icon ui-button-icon__icon_size_sm">
-                                                <use xlink:href="img/icons.svg#save-add"></use>
-                                            </svg>
-
-                                        </button>
-
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="modal-order__total">
-                            <div class="modal-order__total-title">Итого</div>
-                            <div class="modal-order__total-sum">50 180 ₽</div>
-                        </div>
-                        <a href="" class="ui-button ui-button_style_link modal-order__button-receipt">
-                            <span class="ui-button__text">
-                                Скачать чек по&nbsp;операции
-                            </span>
-                            <svg class="ui-icon ui-icon-download-sm ui-button__icon">
-                                <use xlink:href="img/icons.svg#download-sm"></use>
-                            </svg>
-
-                        </a>
-                        <div class="modal-order__buttons">
-                            <a href="" class="ui-button ui-button_style_black modal-order__button">
-                                <span class="ui-button__text">
-                                    Повторить заказ
-                                </span>
-                                <svg class="ui-icon ui-icon-arrow ui-button__icon">
-                                    <use xlink:href="img/icons.svg#arrow"></use>
-                                </svg>
-
-                            </a>
-                            <a href="" class="ui-button ui-button_style_link modal-order__button">
-                                <span class="ui-button__text">
-                                    Создать рекламацию
-                                </span>
-
-                            </a>
-                        </div>
 
                     </div>
                 </div>
