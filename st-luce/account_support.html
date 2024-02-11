@@ -23,6 +23,7 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+
     <link rel="stylesheet" href="css/style.css" />
     <script type="module" src="js/main.js"></script>
 </head>
@@ -2771,6 +2772,66 @@
         </div>
     </div>
 
+    <div class="modal-contact modal js-modal modal_direction_right" id="modal_contact" aria-hidden="true" tabindex="-1">
+        <div class="modal__wrap">
+            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="Связаться с нами">
+                <div class="modal__picture">
+                    <img class="modal__picture-image lazy" data-src="img/contact-modal.jpg" data-srcset="img/contact-modal@2x.jpg" width="220" height="911" alt="">
+                </div>
+
+                <div class="modal__inner">
+                    <div class="modal__heading">
+                        <div class="modal__title">Связаться с нами</div>
+
+                        <button type="button" class="ui-button-icon ui-button-icon_style_black modal__close js-modal-close" title="Закрыть"><svg class="ui-icon ui-icon-cross ui-button-icon__icon">
+                                <use xlink:href="img/icons.svg#cross"></use>
+                            </svg>
+
+                        </button>
+                    </div>
+                    <div class="modal__content js-modal-content">
+
+                        <div class="modal__text">
+                            <p>Уточните, пожалуйста, ваш запрос, и мы свяжемся с вами как можно скорее.</p>
+                        </div>
+
+                        <form action="#" class="modal__form form" data-js-form>
+                            <div class="form__errors-messages" data-js-form-errors-container></div>
+                            <div class="modal__form-grid l-grid l-gap-30">
+                                <div class="form__column">
+                                    <input class="ui-input" type="text" name="name" placeholder="Имя" required="" data-js-form-field="">
+                                </div>
+                                <div class="form__column">
+                                    <input class="ui-input" type="email" name="email" placeholder="E-mail" required="" data-js-form-field="">
+                                </div>
+                                <div class="form__column">
+                                    <input class="ui-input ui-input-phone" type="text" name="phone" placeholder="+7 (999) 123-11-11" required="" data-js-form-field="">
+                                </div>
+                                <div class="form__column">
+                                    <textarea class="ui-textarea" name="message" placeholder="Комментарий (опционно)"></textarea>
+                                </div>
+                            </div>
+                            <div class="modal__form-footer">
+                                <button type="submit" class="ui-button ui-button_style_black ui-button_fill modal__form-submit">
+                                    <span class="ui-button__text">
+                                        Отправить
+                                    </span>
+                                    <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                        <use xlink:href="img/icons.svg#arrow"></use>
+                                    </svg>
+
+                                </button>
+                                <div class="modal__form-agreement form__agreement form__agreement_center">
+                                    Нажимая кнопку, вы&nbsp;соглашаетесь с<a href="#">&nbsp;политикой конфиденциальности</a>
+                                </div>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <div class="modal-contact-manager modal js-modal modal_direction_right" id="modal_contact_manager" aria-hidden="true" tabindex="-1">
         <div class="modal__wrap">
             <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="Обратиться к менеджеру">
