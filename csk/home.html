@@ -451,111 +451,143 @@
                                 <div class="header__search-popup js-header-search-popup">
                                     <div class="header__search-content">
                                         <form action="#" class="header__search-form search-form js-search-form">
-                                            <div class="search-form__box"> <svg class="ui-icon ui-icon-search search-form__icon">
-                                                    <use xlink:href="img/icons.svg#search"></use>
-                                                </svg> <input class="search-form__input js-search-form-input js-header-search-input ui-input" type="text" placeholder="Что вы хотите найти"> <button class="search-form__clear js-search-form-clear js-header-search-clear" type="button" title="Очистить строку поиска"> <svg class="search-form__clear-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
-                                                        <path d="M17.2578 3.92247L16.0794 2.74414L10.0019 8.82167L3.92443 2.74414L2.74609 3.92247L8.82359 10L2.74609 16.0775L3.92443 17.2558L10.0019 11.1783L16.0794 17.2558L17.2578 16.0775L11.1803 10L17.2578 3.92247Z"></path>
-                                                    </svg> </button> </div>
-                                        </form> <button type="button" class="header__search-close-button js-header-search-close" aria-label="Закрыть поиск">Закрыть</button>
+                                            <div class="search-form__box">
+                                                <div class="ui-button-icon search-form__icon-box"><svg class="ui-icon ui-icon-search ui-button-icon__icon ">
+                                                        <use xlink:href="img/icons.svg#search"></use>
+                                                    </svg> </div> <input class="search-form__input js-search-form-input js-header-search-input ui-input" type="text" placeholder="Введите, что вы хотите найти"> <button class="search-form__clear js-search-form-clear js-header-search-clear" type="button" aria-label="Очистить строку поиска"> <span class="search-form__clear-text">Очистить</span> <span class="ui-button-icon search-form__clear-button"><svg class="ui-icon ui-icon-cross ui-button-icon__icon ">
+                                                            <use xlink:href="img/icons.svg#cross"></use>
+                                                        </svg> </span> </button>
+                                            </div>
+                                        </form>
                                     </div>
                                     <div class="search-result header__search-result js-header-search-result">
-                                        <div class="search-result__scrollbar">
+                                        <div class="search-result__scrollbar js-scrollbar">
                                             <div class="search-result__container container">
-                                                <div class="search-result__row l-grid l-grid-cols-2">
+                                                <div class="search-result__row l-grid">
                                                     <div class="search-result__column">
-                                                        <div class="search-result__title">1 210 товаров</div>
-                                                        <div class="search-result__products">
-                                                            <div class="search-result__product"> <a href="#" class="search-result__product-link">
-                                                                    <div class="search-result__product-image-box"> <img class="search-result__product-image" src="img/quick-search/1.png" srcset="img/quick-search/1.png 2x" width="50" height="50" alt=""> </div>
-                                                                    <div class="search-result__product-content">
-                                                                        <div class="search-result__product-title">Подвесной светильник Rondella</div>
-                                                                        <div class="search-result__product-vendor-code">Арт.: SL153.701.02</div>
-                                                                    </div>
-                                                                    <div class="search-result__product-price-block">
-                                                                        <div class="search-result__product-price">15 480 ₽</div>
+                                                        <div class="search-result__title">Категории</div>
+                                                        <div class="search-result__categories">
+                                                            <div class="search-result__category"> <a href="#" class="search-result__category-link">
+                                                                    <div class="search-result__category-image-box"> <img class="search-result__category-image" src="img/search-categories/1.png" alt="" width="80" height="60"> </div>
+                                                                    <div class="search-result__category-content">
+                                                                        <div class="search-result__category-title">Крепеж перфорированный</div>
+                                                                        <div class="search-result__category-quantity">3 862</div>
                                                                     </div>
                                                                 </a> </div>
-                                                            <div class="search-result__product"> <a href="#" class="search-result__product-link">
-                                                                    <div class="search-result__product-image-box"> <img class="search-result__product-image" src="img/quick-search/2.png" srcset="img/quick-search/2.png 2x" width="50" height="50" alt=""> </div>
-                                                                    <div class="search-result__product-content">
-                                                                        <div class="search-result__product-title">Подвесной светильник Nection</div>
-                                                                        <div class="search-result__product-vendor-code">Арт.: SL153.701.02</div>
-                                                                    </div>
-                                                                    <div class="search-result__product-price-block">
-                                                                        <div class="search-result__product-price">7 650 ₽</div>
+                                                            <div class="search-result__category"> <a href="#" class="search-result__category-link">
+                                                                    <div class="search-result__category-image-box"> <img class="search-result__category-image" src="img/search-categories/2.png" alt="" width="80" height="60"> </div>
+                                                                    <div class="search-result__category-content">
+                                                                        <div class="search-result__category-title">Метизы</div>
+                                                                        <div class="search-result__category-quantity">4 302</div>
                                                                     </div>
                                                                 </a> </div>
-                                                            <div class="search-result__product"> <a href="#" class="search-result__product-link">
-                                                                    <div class="search-result__product-image-box"> <img class="search-result__product-image" src="img/quick-search/3.png" srcset="img/quick-search/3.png 2x" width="50" height="50" alt=""> </div>
-                                                                    <div class="search-result__product-content">
-                                                                        <div class="search-result__product-title">Подвесной светильник Gocce</div>
-                                                                        <div class="search-result__product-vendor-code">Арт.: SL153.701.02</div>
-                                                                    </div>
-                                                                    <div class="search-result__product-price-block">
-                                                                        <div class="search-result__product-price">18 630 ₽</div>
+                                                            <div class="search-result__category"> <a href="#" class="search-result__category-link">
+                                                                    <div class="search-result__category-image-box"> <img class="search-result__category-image" src="img/search-categories/3.png" alt="" width="80" height="60"> </div>
+                                                                    <div class="search-result__category-content">
+                                                                        <div class="search-result__category-title">Саморезы, шурупы</div>
+                                                                        <div class="search-result__category-quantity">1 258</div>
                                                                     </div>
                                                                 </a> </div>
-                                                            <div class="search-result__product"> <a href="#" class="search-result__product-link">
-                                                                    <div class="search-result__product-image-box"> <img class="search-result__product-image" src="img/quick-search/4.png" srcset="img/quick-search/4.png 2x" width="50" height="50" alt=""> </div>
-                                                                    <div class="search-result__product-content">
-                                                                        <div class="search-result__product-title">Светильник потолочный Латунь/Коньячный</div>
-                                                                        <div class="search-result__product-vendor-code">Арт.: SL153.701.02</div>
+                                                            <div class="search-result__category"> <a href="#" class="search-result__category-link">
+                                                                    <div class="search-result__category-image-box"> <img class="search-result__category-image" src="img/search-categories/4.png" alt="" width="80" height="60"> </div>
+                                                                    <div class="search-result__category-content">
+                                                                        <div class="search-result__category-title">Заклепки</div>
+                                                                        <div class="search-result__category-quantity">876</div>
                                                                     </div>
-                                                                    <div class="search-result__product-price-block">
-                                                                        <div class="search-result__product-price">11 950 ₽</div>
+                                                                </a> </div>
+                                                            <div class="search-result__category"> <a href="#" class="search-result__category-link">
+                                                                    <div class="search-result__category-image-box"> <img class="search-result__category-image" src="img/search-categories/5.png" alt="" width="80" height="60"> </div>
+                                                                    <div class="search-result__category-content">
+                                                                        <div class="search-result__category-title">Дюбели</div>
+                                                                        <div class="search-result__category-quantity">543</div>
                                                                     </div>
                                                                 </a> </div>
                                                         </div>
                                                     </div>
                                                     <div class="search-result__column">
-                                                        <div class="search-result__title">5 категорий</div>
-                                                        <div class="search-result__categories">
-                                                            <div class="search-result__category category-item"> <a href="#" class="category-item__link">
-                                                                    <div class="category-item__image-box"> <img class="category-item__image lazy" data-src="img/categories-lamps/1.png" data-srcset="img/categories-lamps/1@2x.png 2x" alt=""> </div>
-                                                                    <div class="category-item__content">
-                                                                        <div class="category-item__title">Подвесные</div>
-                                                                        <div class="ui-button-icon category-item__arrow-button"><svg class="ui-icon ui-icon-arrow ui-button-icon__icon ui-button-icon__icon_size_xs">
-                                                                                <use xlink:href="img/icons.svg#arrow"></use>
-                                                                            </svg> </div>
+                                                        <div class="search-result__title">Товары</div>
+                                                        <div class="search-result__products">
+                                                            <div class="search-result__products-row">
+                                                                <div class="search-result__product product"> <a href="#" class="product__link"></a>
+                                                                    <div class="product__header">
+                                                                        <div class="product__tags">
+                                                                            <div class="product__tag product-tag product-tag_new">Новинка</div>
+                                                                        </div>
+                                                                        <div class="product__controls"> <button type="button" class="product__control product__control-favorite " title="Добавить в избранное"><svg class="ui-icon ui-icon-heart">
+                                                                                    <use xlink:href="img/icons.svg#heart"></use>
+                                                                                </svg></button> <button type="button" class="product__control product__control-add-to-cart" title="Добавить в корзину" data-modal-open="#modal-add-to-cart"><svg class="ui-icon ui-icon-cart">
+                                                                                    <use xlink:href="img/icons.svg#cart"></use>
+                                                                                </svg></button> </div>
                                                                     </div>
-                                                                </a> </div>
-                                                            <div class="search-result__category category-item"> <a href="#" class="category-item__link">
-                                                                    <div class="category-item__image-box"> <img class="category-item__image lazy" data-src="img/categories-lamps/2.png" data-srcset="img/categories-lamps/2@2x.png 2x" alt=""> </div>
-                                                                    <div class="category-item__content">
-                                                                        <div class="category-item__title">Потолочные</div>
-                                                                        <div class="ui-button-icon category-item__arrow-button"><svg class="ui-icon ui-icon-arrow ui-button-icon__icon ui-button-icon__icon_size_xs">
-                                                                                <use xlink:href="img/icons.svg#arrow"></use>
-                                                                            </svg> </div>
+                                                                    <div class="product__image-wrapper">
+                                                                        <div class="product__image-box"> <img class="product__image lazy" data-src="img/hits/1.jpg" data-srcset="img/hits/1@2x.jpg 2x" width="312" height="312" alt=""> </div>
                                                                     </div>
-                                                                </a> </div>
-                                                            <div class="search-result__category category-item"> <a href="#" class="category-item__link">
-                                                                    <div class="category-item__image-box"> <img class="category-item__image lazy" data-src="img/categories-lamps/3.png" data-srcset="img/categories-lamps/3@2x.png 2x" alt=""> </div>
-                                                                    <div class="category-item__content">
-                                                                        <div class="category-item__title">Настенные</div>
-                                                                        <div class="ui-button-icon category-item__arrow-button"><svg class="ui-icon ui-icon-arrow ui-button-icon__icon ui-button-icon__icon_size_xs">
-                                                                                <use xlink:href="img/icons.svg#arrow"></use>
-                                                                            </svg> </div>
+                                                                    <div class="product__content">
+                                                                        <div class="product__title">Винт Reyher DIN 912, 1 1/4&quot;х6&Prime; UNC</div>
+                                                                        <div class="product__price-block">
+                                                                            <div class="product__price">1 017 ₽</div>
+                                                                        </div>
                                                                     </div>
-                                                                </a> </div>
-                                                            <div class="search-result__category category-item"> <a href="#" class="category-item__link">
-                                                                    <div class="category-item__image-box"> <img class="category-item__image lazy" data-src="img/categories-lamps/5.png" data-srcset="img/categories-lamps/5@2x.png 2x" alt=""> </div>
-                                                                    <div class="category-item__content">
-                                                                        <div class="category-item__title">Встраиваемые</div>
-                                                                        <div class="ui-button-icon category-item__arrow-button"><svg class="ui-icon ui-icon-arrow ui-button-icon__icon ui-button-icon__icon_size_xs">
-                                                                                <use xlink:href="img/icons.svg#arrow"></use>
-                                                                            </svg> </div>
+                                                                    <div class="product__buttons-wrapper">
+                                                                        <div class="product__buttons"> <button type="button" data-modal-open="#modal-add-to-cart" class="ui-button product__button"><span class="ui-button__text"> Добавить в&nbsp;корзину </span> </button> </div>
                                                                     </div>
-                                                                </a> </div>
+                                                                </div>
+                                                                <div class="search-result__product product"> <a href="#" class="product__link"></a>
+                                                                    <div class="product__header">
+                                                                        <div class="product__controls"> <button type="button" class="product__control product__control-favorite " title="Добавить в избранное"><svg class="ui-icon ui-icon-heart">
+                                                                                    <use xlink:href="img/icons.svg#heart"></use>
+                                                                                </svg></button> <button type="button" class="product__control product__control-add-to-cart" title="Добавить в корзину" data-modal-open="#modal-add-to-cart"><svg class="ui-icon ui-icon-cart">
+                                                                                    <use xlink:href="img/icons.svg#cart"></use>
+                                                                                </svg></button> </div>
+                                                                    </div>
+                                                                    <div class="product__image-wrapper">
+                                                                        <div class="product__image-box"> <img class="product__image lazy" data-src="img/hits/2.jpg" data-srcset="img/hits/2@2x.jpg 2x" width="312" height="312" alt=""> </div>
+                                                                    </div>
+                                                                    <div class="product__content">
+                                                                        <div class="product__title">Угловая шлифмашина MAKITA, 2000&nbsp;В</div>
+                                                                        <div class="product__price-block">
+                                                                            <div class="product__price">12 290 ₽</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product__buttons-wrapper">
+                                                                        <div class="product__buttons"> <button type="button" data-modal-open="#modal-add-to-cart" class="ui-button product__button"><span class="ui-button__text"> Добавить в&nbsp;корзину </span> </button> </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="search-result__product product"> <a href="#" class="product__link"></a>
+                                                                    <div class="product__header">
+                                                                        <div class="product__tags">
+                                                                            <div class="product__tag product-tag product-tag_promotion">Акция</div>
+                                                                        </div>
+                                                                        <div class="product__controls"> <button type="button" class="product__control product__control-favorite " title="Добавить в избранное"><svg class="ui-icon ui-icon-heart">
+                                                                                    <use xlink:href="img/icons.svg#heart"></use>
+                                                                                </svg></button> <button type="button" class="product__control product__control-add-to-cart" title="Добавить в корзину" data-modal-open="#modal-add-to-cart"><svg class="ui-icon ui-icon-cart">
+                                                                                    <use xlink:href="img/icons.svg#cart"></use>
+                                                                                </svg></button> </div>
+                                                                    </div>
+                                                                    <div class="product__image-wrapper">
+                                                                        <div class="product__image-box"> <img class="product__image lazy" data-src="img/hits/4.jpg" data-srcset="img/hits/4@2x.jpg 2x" width="312" height="312" alt=""> </div>
+                                                                    </div>
+                                                                    <div class="product__content">
+                                                                        <div class="product__title">Ножовка по&nbsp;дереву Gross Pirahna 400&nbsp;мм</div>
+                                                                        <div class="product__price-block">
+                                                                            <div class="product__price">1 081 ₽</div>
+                                                                            <div class="product__old-price">1 317 ₽</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product__buttons-wrapper">
+                                                                        <div class="product__buttons"> <button type="button" data-modal-open="#modal-add-to-cart" class="ui-button product__button"><span class="ui-button__text"> Добавить в&nbsp;корзину </span> </button> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </div> <a href="" class="ui-button ui-button_fill ui-button_is-circle search-result__all-results"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                        <use xlink:href="img/icons.svg#arrow"></use>
+                                                    </svg> </span><span class="ui-button__text">
+                                                    Смотреть все результаты
+                                                </span> </a>
                                         </div>
-                                        <a href="" class="ui-button ui-button_fill search-result__all-results"><span class="ui-button__text">
-                                                Все результаты
-                                            </span> <svg class="ui-icon ui-icon-arrow ui-button__icon">
-                                                <use xlink:href="img/icons.svg#arrow"></use>
-                                            </svg> </a>
                                     </div>
                                 </div>
                             </div>
@@ -563,9 +595,9 @@
                         <div class="menu header__menu js-menu"> <!-- <div class="menu__backdrop js-menu-backdrop"></div> --> <button class="menu__burger js-menu-burger" type="button" aria-label="Навигационное меню"> <span></span> <span></span> <span></span> </button>
                             <div class="menu__popup js-menu-popup" aria-disabled="true">
                                 <nav class="menu__container js-menu-container">
-                                    <div class="menu__controls u-visible-mobile-sm"> <a href="#" class="menu__control-button menu__search-button" title="Открыть строку поиска"> <svg class="ui-icon ui-icon-search">
+                                    <div class="menu__controls u-visible-mobile-sm"> <button type="button" class="menu__control-button menu__search-button js-header-search-open" title="Открыть строку поиска"> <svg class="ui-icon ui-icon-search">
                                                 <use xlink:href="img/icons.svg#search"></use>
-                                            </svg> </a> <a href="#" class="menu__control-button menu__favorites-button" title="Избранные товары"> <svg class="ui-icon ui-icon-heart">
+                                            </svg> </button> <a href="#" class="menu__control-button menu__favorites-button" title="Избранные товары"> <svg class="ui-icon ui-icon-heart">
                                                 <use xlink:href="img/icons.svg#heart"></use>
                                             </svg> </a> <a href="#" class="menu__control-button menu__login-button" title="Войти в личный кабинет"> <svg class="ui-icon ui-icon-login">
                                                 <use xlink:href="img/icons.svg#login"></use>
@@ -801,35 +833,37 @@
                 </div>
             </section>
             <section class="advantages-section section js-advantages">
-                <h2 class="advantages-section__title section-title section-title_center">Нас постоянно рекомендуют тысячи довольных покупателей</h2>
-                <div class="advantages-section__image-wrapper">
-                    <picture class="advantages-section__image-box js-advantages-image-box" id="image">
-                        <source srcset="img/bg-advantages-575.jpg, img/bg-advantages-575@2x.jpg 2x" media="(max-width: 575px)"> <img class="advantages-section__image" src="img/bg-advantages.jpg" srcset="img/bg-advantages@2x.jpg 2x" width="740" height="480" alt="" loading="lazy">
-                    </picture>
-                </div>
-                <div class="content js-advantages-content">
-                    <div class="advantages-section__spacer"></div>
-                    <div class="advantages-section__container container">
-                        <div class="advantages-section__items">
-                            <div class="advantages-section__item">
-                                <div class="advantages-section__item-number"> 01/03 </div>
-                                <div class="advantages-section__item-title">Низкие цены</div>
-                                <div class="advantages-section__item-text">
-                                    <p>Мы&nbsp;сохраняем низкие цены благодаря прямым поставкам от&nbsp;проверенных поставщиков.</p>
+                <div class="advantages-section__container">
+                    <h2 class="advantages-section__title section-title section-title_center">Нас постоянно рекомендуют тысячи довольных покупателей</h2>
+                    <div class="advantages-section__image-wrapper">
+                        <picture class="advantages-section__image-box js-advantages-image-box" id="image">
+                            <source srcset="img/bg-advantages-575.jpg, img/bg-advantages-575@2x.jpg 2x" media="(max-width: 575px)"> <img class="advantages-section__image" src="img/bg-advantages.jpg" srcset="img/bg-advantages@2x.jpg 2x" width="740" height="480" alt="" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="content js-advantages-content">
+                        <div class="advantages-section__spacer"></div>
+                        <div class="advantages-section__container container">
+                            <div class="advantages-section__items">
+                                <div class="advantages-section__item">
+                                    <div class="advantages-section__item-number"> 01/03 </div>
+                                    <div class="advantages-section__item-title">Низкие цены</div>
+                                    <div class="advantages-section__item-text">
+                                        <p>Мы&nbsp;сохраняем низкие цены благодаря прямым поставкам от&nbsp;проверенных поставщиков.</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="advantages-section__item">
-                                <div class="advantages-section__item-number"> 02/03 </div>
-                                <div class="advantages-section__item-title">Гарантия качества</div>
-                                <div class="advantages-section__item-text">
-                                    <p>В&nbsp;нашем интернет-магазине только оригинальные товары самого высокого качества.</p>
+                                <div class="advantages-section__item">
+                                    <div class="advantages-section__item-number"> 02/03 </div>
+                                    <div class="advantages-section__item-title">Гарантия качества</div>
+                                    <div class="advantages-section__item-text">
+                                        <p>В&nbsp;нашем интернет-магазине только оригинальные товары самого высокого качества.</p>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="advantages-section__item">
-                                <div class="advantages-section__item-number"> 03/03 </div>
-                                <div class="advantages-section__item-title">Широкий ассортимент</div>
-                                <div class="advantages-section__item-text">
-                                    <p>Всегда в&nbsp;наличии на&nbsp;складе более 6000&nbsp;товаров.</p>
+                                <div class="advantages-section__item">
+                                    <div class="advantages-section__item-number"> 03/03 </div>
+                                    <div class="advantages-section__item-title">Широкий ассортимент</div>
+                                    <div class="advantages-section__item-text">
+                                        <p>Всегда в&nbsp;наличии на&nbsp;складе более 6000&nbsp;товаров.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -846,6 +880,100 @@
                         </div>
                         <div class="swiper products-section__swiper js-swiper-products">
                             <div class="swiper-wrapper">
+                                <div class="swiper-slide products-section__swiper-item">
+                                    <div class="products-section__item product"> <a href="#" class="product__link"></a>
+                                        <div class="product__header">
+                                            <div class="product__tags">
+                                                <div class="product__tag product-tag product-tag_new">Новинка</div>
+                                            </div>
+                                            <div class="product__controls"> <button type="button" class="product__control product__control-favorite " title="Добавить в избранное"><svg class="ui-icon ui-icon-heart">
+                                                        <use xlink:href="img/icons.svg#heart"></use>
+                                                    </svg></button> <button type="button" class="product__control product__control-login" title="Войти" data-modal-open="#modal-login"><svg class="ui-icon ui-icon-login">
+                                                        <use xlink:href="img/icons.svg#login"></use>
+                                                    </svg></button> </div>
+                                        </div>
+                                        <div class="product__image-wrapper">
+                                            <div class="product__image-box"> <img class="product__image lazy" data-src="img/hits/1.jpg" data-srcset="img/hits/1@2x.jpg 2x" width="312" height="312" alt=""> </div>
+                                        </div>
+                                        <div class="product__content">
+                                            <div class="product__title">Винт Reyher DIN 912, 1 1/4&quot;х6&Prime; UNC</div>
+                                        </div>
+                                        <div class="product__buttons-wrapper">
+                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> Зарегистрироваться </span> </button>
+                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide products-section__swiper-item">
+                                    <div class="products-section__item product"> <a href="#" class="product__link"></a>
+                                        <div class="product__header">
+                                            <div class="product__controls"> <button type="button" class="product__control product__control-favorite " title="Добавить в избранное"><svg class="ui-icon ui-icon-heart">
+                                                        <use xlink:href="img/icons.svg#heart"></use>
+                                                    </svg></button> <button type="button" class="product__control product__control-login" title="Войти" data-modal-open="#modal-login"><svg class="ui-icon ui-icon-login">
+                                                        <use xlink:href="img/icons.svg#login"></use>
+                                                    </svg></button> </div>
+                                        </div>
+                                        <div class="product__image-wrapper">
+                                            <div class="product__image-box"> <img class="product__image lazy" data-src="img/hits/2.jpg" data-srcset="img/hits/2@2x.jpg 2x" width="312" height="312" alt=""> </div>
+                                        </div>
+                                        <div class="product__content">
+                                            <div class="product__title">Угловая шлифмашина MAKITA, 2000&nbsp;В</div>
+                                        </div>
+                                        <div class="product__buttons-wrapper">
+                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> Зарегистрироваться </span> </button>
+                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide products-section__swiper-item">
+                                    <div class="products-section__item product"> <a href="#" class="product__link"></a>
+                                        <div class="product__header">
+                                            <div class="product__controls"> <button type="button" class="product__control product__control-favorite " title="Добавить в избранное"><svg class="ui-icon ui-icon-heart">
+                                                        <use xlink:href="img/icons.svg#heart"></use>
+                                                    </svg></button> <button type="button" class="product__control product__control-login" title="Войти" data-modal-open="#modal-login"><svg class="ui-icon ui-icon-login">
+                                                        <use xlink:href="img/icons.svg#login"></use>
+                                                    </svg></button> </div>
+                                        </div>
+                                        <div class="product__image-wrapper">
+                                            <div class="product__image-box"> <img class="product__image lazy" data-src="img/hits/3.jpg" data-srcset="img/hits/3@2x.jpg 2x" width="312" height="312" alt=""> </div>
+                                        </div>
+                                        <div class="product__content">
+                                            <div class="product__title">Рулетка VIRA by&nbsp;RAGE 8&nbsp;м х&nbsp;25&nbsp;мм</div>
+                                        </div>
+                                        <div class="product__buttons-wrapper">
+                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> Зарегистрироваться </span> </button>
+                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide products-section__swiper-item">
+                                    <div class="products-section__item product"> <a href="#" class="product__link"></a>
+                                        <div class="product__header">
+                                            <div class="product__tags">
+                                                <div class="product__tag product-tag product-tag_promotion">Акция</div>
+                                            </div>
+                                            <div class="product__controls"> <button type="button" class="product__control product__control-favorite " title="Добавить в избранное"><svg class="ui-icon ui-icon-heart">
+                                                        <use xlink:href="img/icons.svg#heart"></use>
+                                                    </svg></button> <button type="button" class="product__control product__control-login" title="Войти" data-modal-open="#modal-login"><svg class="ui-icon ui-icon-login">
+                                                        <use xlink:href="img/icons.svg#login"></use>
+                                                    </svg></button> </div>
+                                        </div>
+                                        <div class="product__image-wrapper">
+                                            <div class="product__image-box"> <img class="product__image lazy" data-src="img/hits/4.jpg" data-srcset="img/hits/4@2x.jpg 2x" width="312" height="312" alt=""> </div>
+                                        </div>
+                                        <div class="product__content">
+                                            <div class="product__title">Ножовка по&nbsp;дереву Gross Pirahna 400&nbsp;мм</div>
+                                        </div>
+                                        <div class="product__buttons-wrapper">
+                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> Зарегистрироваться </span> </button>
+                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="swiper-slide products-section__swiper-item">
                                     <div class="products-section__item product"> <a href="#" class="product__link"></a>
                                         <div class="product__header">
