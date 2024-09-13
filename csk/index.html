@@ -21,10 +21,76 @@
                             <div>Статус</div>
                         </div>
                         <div class="site-pages__item"> <a class="site-pages__link" href="home.html">Главная</a>
-                            <div class="site-pages__status">В процессе</div>
+                            <div class="site-pages__status">Готова</div>
                         </div>
-                        <div class="site-pages__item"> <a class="site-pages__link" href="home-registered.html">Главная (Зарегистрированный пользователь)</a>
-                            <div class="site-pages__status">В процессе</div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="home-registered.html">Главная (зарегистрированный)</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="search-result.html">Результаты поиска</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="search-not-found.html">Результаты поиска (ничего не найдено)</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="catalog-brands.html">Каталог (бренды)</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="catalog.html">Каталог (разводящая)</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="catalog-subcategory.html">Каталог (подкатегория)</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="catalog-list-auth.html">Каталог (карточки списком, авторизован)</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="catalog-list.html">Каталог (карточки списком, неавторизован)</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="product.html">Страница товара (незарегистированный)</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="product-registered.html">Страница товара (зарегистированный)</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="product-no-select.html">Страница товара (без параметров выбора)</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="product-with-sizes.html">Страница товара (выбор размера)</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="product-added-to-cart.html">Страница товара (товар добавлен в корзину)</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="product-pre-order.html">Страница товара (оформить предзаказ)</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="product-added-to-favorites-registered.html">Страница товара (зарегистрированный, товар добавлен в избранное)</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="product-added-to-favorites.html">Страница товара (незарегистированный, товар добавлен в избранное)</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="cart-empty.html">Корзина (пусто)</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="cart.html">Корзина</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="checkout.html">Оформление</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="checkout-thanks.html">Оформление (заказ оформлен)</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="favorites-empty.html">Избранное (пусто)</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="favorites-registered.html">Избранное (зарегистированный)</a>
+                            <div class="site-pages__status">Готова</div>
+                        </div>
+                        <div class="site-pages__item"> <a class="site-pages__link" href="favorites.html">Избранное (незарегистированный)</a>
+                            <div class="site-pages__status">Готова</div>
                         </div>
                     </div>
                 </div>
@@ -58,18 +124,12 @@
 
     @media (max-width: 575px) {
         .site-pages__head {
-            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+            grid-template-columns: minmax(0, 4fr) minmax(0, 2fr);
         }
     }
 
     .site-pages__head>* {
         padding: 1rem 1.5rem;
-    }
-
-    @media (max-width: 575px) {
-        .site-pages__head>div:nth-child(2) {
-            display: none;
-        }
     }
 
     .site-pages__item {
@@ -79,7 +139,7 @@
 
     @media (max-width: 575px) {
         .site-pages__item {
-            grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+            grid-template-columns: minmax(0, 4fr) minmax(0, 2fr);
             padding: 1rem 0;
         }
     }
@@ -105,6 +165,7 @@
     }
 
     .site-pages__link {
+        display: block;
         width: fit-content;
         text-decoration: none;
         color: var(--color-base);
