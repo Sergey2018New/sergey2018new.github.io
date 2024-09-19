@@ -1,0 +1,1371 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>CSK - Инструкция пользователя ЛК</title>
+    <meta name="description" content="Описание страницы">
+    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preload" as="font" fetchpriority="high" href="/fonts/GolosText/GolosText-Regular.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" fetchpriority="high" href="/fonts/GolosText/GolosText-Medium.woff2" type="font/woff2" crossorigin="anonymous">
+    <style>
+        @font-face {
+            font-family: 'Golos Text';
+            font-weight: 400;
+            font-display: swap;
+            src: url('fonts/GolosText/GolosText-Regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Golos Text';
+            font-weight: 500;
+            font-display: swap;
+            src: url('fonts/GolosText/GolosText-Medium.woff2') format('woff2');
+        }
+    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            setTimeout(function() {
+                document.body.classList.add('is-loaded');
+            }, 10)
+        });
+    </script>
+    <div class="wrapper">
+        <header class="header js-header"> <!-- <div class="header__backdrop js-header-backdrop"></div> -->
+            <div class="header__inner">
+                <div class="header__container container">
+                    <div class="header__nav">
+                        <div class="header__logo-wrapper"> <a href="/" class="header__logo logo"> <img class="logo__img" src="img/logo.svg" width="100" height="44" alt="CSK"> </a> </div>
+                        <div class="header__catalog-with-search">
+                            <div class="header-catalog header__catalog js-header-catalog">
+                                <nav class="header-catalog__container"> <button type="button" class="header-catalog__button js-header-catalog-button"> <span class="header-catalog__button-text">Каталог</span> <span class="ui-button-icon ui-button-icon_style_accent header-catalog__button-icon-box"><svg class="ui-icon ui-icon-grid ui-button-icon__icon ">
+                                                <use xlink:href="img/icons.svg#grid"></use>
+                                            </svg> <span class="cross"></span> </span> </button>
+                                    <div class="catalog-popup header-catalog__popup js-header-catalog-popup js-catalog-popup">
+                                        <div class="catalog-popup__container container">
+                                            <div class="catalog-popup__inner">
+                                                <div class="catalog-popup__menu js-catalog-popup-menu">
+                                                    <div class="catalog-popup__menu-scrollbar js-scrollbar">
+                                                        <div class="catalog-popup__menu-content">
+                                                            <ul class="catalog-popup__menu-list">
+                                                                <li class="catalog-popup__menu-item js-catalog-popup-item is-active"> <a href="#" class="catalog-popup__menu-link js-catalog-popup-link"> <span>Крепеж</span> <span class="catalog-popup__menu-quantity">10 254</span> </a> </li>
+                                                                <li class="catalog-popup__menu-item js-catalog-popup-item"> <a href="#" class="catalog-popup__menu-link js-catalog-popup-link"> <span>Инструмент и оборудование</span> <span class="catalog-popup__menu-quantity">8 122</span> </a> </li>
+                                                                <li class="catalog-popup__menu-item js-catalog-popup-item"> <a href="#" class="catalog-popup__menu-link js-catalog-popup-link"> <span>СИЗ</span> <span class="catalog-popup__menu-quantity">4 197</span> </a> </li>
+                                                                <li class="catalog-popup__menu-item js-catalog-popup-item"> <a href="#" class="catalog-popup__menu-link js-catalog-popup-link"> <span>Прочие товары</span> <span class="catalog-popup__menu-quantity">6 471</span> </a> </li>
+                                                                <li class="catalog-popup__menu-item js-catalog-popup-item catalog-popup__menu-item_brands"> <a href="#" class="catalog-popup__menu-link js-catalog-popup-link"> <span>Бренды</span> <span class="catalog-popup__menu-quantity">125</span> </a> </li>
+                                                            </ul>
+                                                            <div class="catalog-popup__menu-brands l-grid l-grid-cols-3">
+                                                                <div class="catalog-popup__menu-brand-item brand-item brand-item_is-hover">
+                                                                    <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                                                            <div class="brand-item__content">
+                                                                                <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/sibrtec.png" srcset="img/brands/sibrtec@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                                            </div>
+                                                                        </a> </div>
+                                                                </div>
+                                                                <div class="catalog-popup__menu-brand-item brand-item brand-item_is-hover">
+                                                                    <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                                                            <div class="brand-item__content">
+                                                                                <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/kronwerk.png" srcset="img/brands/kronwerk@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                                            </div>
+                                                                        </a> </div>
+                                                                </div>
+                                                                <div class="catalog-popup__menu-brand-item brand-item brand-item_is-hover">
+                                                                    <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                                                            <div class="brand-item__content">
+                                                                                <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/gross.png" srcset="img/brands/gross@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                                            </div>
+                                                                        </a> </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="catalog-popup__categories">
+                                                    <div class="catalog-popup__categories-layout js-catalog-popup-categories is-active"> <button type="button" class="catalog-popup__categories-back js-catalog-popup-back"> <span>Крепеж</span> <span class="catalog-popup__categories-quantity">10 254</span> </button>
+                                                        <div class="catalog-popup__categories-scrollbar js-scrollbar">
+                                                            <div class="catalog-popup__categories-row js-catalog-popup-masonry">
+                                                                <div class="catalog-popup__category">
+                                                                    <div class="catalog-popup__category-image-box"> <a href="#"> <img class="catalog-popup__category-image" data-src="img/catalog/fasteners/1.png" data-srcset="img/catalog/fasteners/1@2x.png 2x" width="130" height="100" alt=""> </a> </div>
+                                                                    <div class="catalog-popup__category-title"> <a href="#">Крепеж перфорированный</a> </div>
+                                                                    <ul class="catalog-popup__category-list">
+                                                                        <li> <a href="#">Перфорированный крепеж</a> </li>
+                                                                        <li> <a href="#">Ленты</a> </li>
+                                                                        <li> <a href="#">Пластины</a> </li>
+                                                                        <li> <a href="#">Профили</a> </li>
+                                                                        <li> <a href="#">Опоры для бруса</a> </li>
+                                                                        <li> <a href="#">Анкеры</a> </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="catalog-popup__category">
+                                                                    <div class="catalog-popup__category-image-box"> <a href="#"> <img class="catalog-popup__category-image" data-src="img/catalog/fasteners/2.png" data-srcset="img/catalog/fasteners/2@2x.png 2x" width="130" height="100" alt=""> </a> </div>
+                                                                    <div class="catalog-popup__category-title"> <a href="#">Заклепки</a> </div>
+                                                                    <ul class="catalog-popup__category-list">
+                                                                        <li> <a href="#">Вытяжные заклепки</a> </li>
+                                                                        <li> <a href="#">Заклепки окрашенные RAL</a> </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="catalog-popup__category">
+                                                                    <div class="catalog-popup__category-image-box"> <a href="#"> <img class="catalog-popup__category-image" data-src="img/catalog/fasteners/3.png" data-srcset="img/catalog/fasteners/3@2x.png 2x" width="130" height="100" alt=""> </a> </div>
+                                                                    <div class="catalog-popup__category-title"> <a href="#">Саморезы, шурупы</a> </div>
+                                                                    <ul class="catalog-popup__category-list">
+                                                                        <li> <a href="#">Саморезы для листовых материалов</a> </li>
+                                                                        <li> <a href="#">Кровельные саморезы</a> </li>
+                                                                        <li> <a href="#">Кровельные саморезы RAL</a> </li>
+                                                                        <li> <a href="#">Шурупы</a> </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="catalog-popup__category">
+                                                                    <div class="catalog-popup__category-image-box"> <a href="#"> <img class="catalog-popup__category-image" data-src="img/catalog/fasteners/4.png" data-srcset="img/catalog/fasteners/4@2x.png 2x" width="130" height="100" alt=""> </a> </div>
+                                                                    <div class="catalog-popup__category-title"> <a href="#">Дюбели</a> </div>
+                                                                    <ul class="catalog-popup__category-list">
+                                                                        <li> <a href="#">Для твердых оснований</a> </li>
+                                                                        <li> <a href="#">Дюбели</a> </li>
+                                                                        <li> <a href="#">Для гипсокартона и мягких материалов</a> </li>
+                                                                        <li> <a href="#">Для строительных лесов и фасадов</a> </li>
+                                                                        <li> <a href="#">Для теплоизоляции</a> </li>
+                                                                        <li> <a href="#">Дюбель-гвозди</a> </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="catalog-popup__category">
+                                                                    <div class="catalog-popup__category-image-box"> <a href="#"> <img class="catalog-popup__category-image" data-src="img/catalog/fasteners/5.png" data-srcset="img/catalog/fasteners/5@2x.png 2x" width="130" height="100" alt=""> </a> </div>
+                                                                    <div class="catalog-popup__category-title"> <a href="#">Метизы</a> </div>
+                                                                    <ul class="catalog-popup__category-list">
+                                                                        <li> <a href="#">Гвозди</a> </li>
+                                                                        <li> <a href="#">Болты и гайки</a> </li>
+                                                                        <li> <a href="#">Шайбы</a> </li>
+                                                                        <li> <a href="#">Винты</a> </li>
+                                                                        <li> <a href="#">Шпильки</a> </li>
+                                                                        <li> <a href="#">Замочно-скобяные изделия</a> </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="catalog-popup__category">
+                                                                    <div class="catalog-popup__category-image-box"> <a href="#"> <img class="catalog-popup__category-image" data-src="img/catalog/fasteners/6.png" data-srcset="img/catalog/fasteners/6@2x.png 2x" width="130" height="100" alt=""> </a> </div>
+                                                                    <div class="catalog-popup__category-title"> <a href="#">Прочие крепежи</a> </div>
+                                                                    <ul class="catalog-popup__category-list">
+                                                                        <li> <a href="#">Метрика</a> </li>
+                                                                        <li> <a href="#">Такелаж</a> </li>
+                                                                        <li> <a href="#">Уплотнители для кровли</a> </li>
+                                                                        <li> <a href="#">Фиксаторы арматуры</a> </li>
+                                                                        <li> <a href="#">Электромонтажный и&nbsp;сантехнический крепеж</a> </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="catalog-popup__categories-layout js-catalog-popup-categories"> <button type="button" class="catalog-popup__categories-back js-catalog-popup-back"> <span>Инструмент и оборудование</span> <span class="catalog-popup__categories-quantity">8 122</span> </button>
+                                                        <div class="catalog-popup__categories-scrollbar js-scrollbar">
+                                                            <div class="catalog-popup__categories-row js-catalog-popup-masonry">
+                                                                <div class="catalog-popup__category">
+                                                                    <div class="catalog-popup__category-image-box"> <a href="#"> <img class="catalog-popup__category-image" data-src="img/catalog/tools/1.png" data-srcset="img/catalog/tools/1@2x.png 2x" width="130" height="100" alt=""> </a> </div>
+                                                                    <div class="catalog-popup__category-title"> <a href="#">Электроинструмент</a> </div>
+                                                                    <ul class="catalog-popup__category-list">
+                                                                        <li> <a href="#">Дрели ударные</a> </li>
+                                                                        <li> <a href="#">Дрели безударные</a> </li>
+                                                                        <li> <a href="#">Дрели-миксеры и смесители</a> </li>
+                                                                        <li> <a href="#">Дрели-шуруповерты</a> </li>
+                                                                        <li> <a href="#">Лобзики</a> </li>
+                                                                        <li> <a href="#">Пилы циркулярные</a> </li>
+                                                                        <li> <a href="#">Пилы торцовочные отрезные</a> </li>
+                                                                        <li> <a href="#">Строительные фены</a> </li>
+                                                                        <li> <a href="#">Отбойные молотки</a> </li>
+                                                                        <li> <a href="#">Перфораторы</a> </li>
+                                                                        <li> <a href="#">Рубанки</a> </li>
+                                                                        <li> <a href="#">Резаки</a> </li>
+                                                                        <li> <a href="#">Фрезеры</a> </li>
+                                                                        <li> <a href="#">Шлифмашины</a> </li>
+                                                                        <li> <a href="#">Штроборезы</a> </li>
+                                                                        <li> <a href="#">Шуруповерты</a> </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="catalog-popup__category">
+                                                                    <div class="catalog-popup__category-image-box"> <a href="#"> <img class="catalog-popup__category-image" data-src="img/catalog/tools/2.png" data-srcset="img/catalog/tools/2@2x.png 2x" width="130" height="100" alt=""> </a> </div>
+                                                                    <div class="catalog-popup__category-title"> <a href="#">Ручной инструмент</a> </div>
+                                                                    <ul class="catalog-popup__category-list">
+                                                                        <li> <a href="#">Молотки, кувалды, киянки, топоры</a> </li>
+                                                                        <li> <a href="#">Степлеры, скобы</a> </li>
+                                                                        <li> <a href="#">Заклепочники</a> </li>
+                                                                        <li> <a href="#">Лопаты</a> </li>
+                                                                        <li> <a href="#">Долото, скарпель, стамеска</a> </li>
+                                                                        <li> <a href="#">Ключи, головки, трещотки</a> </li>
+                                                                        <li> <a href="#">Ящики, боксы для инструмента</a> </li>
+                                                                        <li> <a href="#">Ножи, ножовки, ножницы</a> </li>
+                                                                        <li> <a href="#">Отвертки</a> </li>
+                                                                        <li> <a href="#">Рулетки</a> </li>
+                                                                        <li> <a href="#">Малярные валики</a> </li>
+                                                                        <li> <a href="#">Гладилки, кельмы,шпатели, миксеры</a> </li>
+                                                                        <li> <a href="#">Емкости для строительных смесей</a> </li>
+                                                                        <li> <a href="#">Кисти</a> </li>
+                                                                        <li> <a href="#">Штукатурно-малярный инструмент</a> </li>
+                                                                        <li> <a href="#">Гайковерты</a> </li>
+                                                                        <li> <a href="#">Фонари</a> </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="catalog-popup__category">
+                                                                    <div class="catalog-popup__category-image-box"> <a href="#"> <img class="catalog-popup__category-image" data-src="img/catalog/tools/3.png" data-srcset="img/catalog/tools/3@2x.png 2x" width="130" height="100" alt=""> </a> </div>
+                                                                    <div class="catalog-popup__category-title"> <a href="#">Станки</a> </div>
+                                                                    <ul class="catalog-popup__category-list">
+                                                                        <li> <a href="#">Плиткорезы</a> </li>
+                                                                        <li> <a href="#">Станки распиловочные</a> </li>
+                                                                        <li> <a href="#">Станки заточные</a> </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="catalog-popup__category">
+                                                                    <div class="catalog-popup__category-image-box"> <a href="#"> <img class="catalog-popup__category-image" data-src="img/catalog/tools/4.png" data-srcset="img/catalog/tools/4@2x.png 2x" width="130" height="100" alt=""> </a> </div>
+                                                                    <div class="catalog-popup__category-title"> <a href="#">Садовый инструмент</a> </div>
+                                                                    <ul class="catalog-popup__category-list">
+                                                                        <li> <a href="#">Газонокосилки</a> </li>
+                                                                        <li> <a href="#">Бензокосы и культиваторы</a> </li>
+                                                                        <li> <a href="#">Тачки</a> </li>
+                                                                        <li> <a href="#">Цепные пилы</a> </li>
+                                                                        <li> <a href="#">Горюче-смазочные материалы</a> </li>
+                                                                        <li> <a href="#">Насосы</a> </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="catalog-popup__category">
+                                                                    <div class="catalog-popup__category-image-box"> <a href="#"> <img class="catalog-popup__category-image" data-src="img/catalog/tools/5.png" data-srcset="img/catalog/tools/5@2x.png 2x" width="130" height="100" alt=""> </a> </div>
+                                                                    <div class="catalog-popup__category-title"> <a href="#">Измерительная и разметочная техника</a> </div>
+                                                                    <ul class="catalog-popup__category-list">
+                                                                        <li> <a href="#">Дальномеры</a> </li>
+                                                                        <li> <a href="#">Мультиметры</a> </li>
+                                                                        <li> <a href="#">Лазерные уровни и нивелиры</a> </li>
+                                                                        <li> <a href="#">Пузырьковые уровни</a> </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="catalog-popup__category">
+                                                                    <div class="catalog-popup__category-image-box"> <a href="#"> <img class="catalog-popup__category-image" data-src="img/catalog/tools/6.png" data-srcset="img/catalog/tools/6@2x.png 2x" width="130" height="100" alt=""> </a> </div>
+                                                                    <div class="catalog-popup__category-title"> <a href="#">Сварочные аппараты</a> </div>
+                                                                    <ul class="catalog-popup__category-list">
+                                                                        <li> <a href="#">Сварочные инверторы </a> </li>
+                                                                        <li> <a href="#">Полуавтоматические сварочные аппараты</a> </li>
+                                                                        <li> <a href="#">Плазморезы</a> </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="catalog-popup__category">
+                                                                    <div class="catalog-popup__category-image-box"> <a href="#"> <img class="catalog-popup__category-image" data-src="img/catalog/tools/7.png" data-srcset="img/catalog/tools/7@2x.png 2x" width="130" height="100" alt=""> </a> </div>
+                                                                    <div class="catalog-popup__category-title"> <a href="#">Прочий инструмент</a> </div>
+                                                                    <ul class="catalog-popup__category-list">
+                                                                        <li> <a href="#">Бензогенераторы и стабилизаторы</a> </li>
+                                                                        <li> <a href="#">Бетоносмесители</a> </li>
+                                                                        <li> <a href="#">Тепловые электропушки</a> </li>
+                                                                        <li> <a href="#">Пылесосы, щетки и мешки</a> </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="catalog-popup__categories-layout js-catalog-popup-categories"> <button type="button" class="catalog-popup__categories-back js-catalog-popup-back"> <span>СИЗ</span> <span class="catalog-popup__categories-quantity">4 197</span> </button>
+                                                        <div class="catalog-popup__categories-scrollbar js-scrollbar">
+                                                            <div class="catalog-popup__categories-row js-catalog-popup-masonry">
+                                                                <div class="catalog-popup__category">
+                                                                    <div class="catalog-popup__category-image-box"> <a href="#"> <img class="catalog-popup__category-image" data-src="img/catalog/ciz/1.png" data-srcset="img/catalog/ciz/1@2x.png 2x" width="130" height="100" alt=""> </a> </div>
+                                                                    <div class="catalog-popup__category-title"> <a href="#">СИЗ</a> </div>
+                                                                    <ul class="catalog-popup__category-list">
+                                                                        <li> <a href="#">Аптечки и мед. средства</a> </li>
+                                                                        <li> <a href="#">Строительные каски</a> </li>
+                                                                        <li> <a href="#">Защита лица (сварочные щитки, маски, очки)</a> </li>
+                                                                        <li> <a href="#">Респираторы и фильтры</a> </li>
+                                                                        <li> <a href="#">Наушники и беруши</a> </li>
+                                                                        <li> <a href="#">Перчатки и краги</a> </li>
+                                                                        <li> <a href="#">Обувь и наколенники</a> </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="catalog-popup__categories-layout js-catalog-popup-categories"> <button type="button" class="catalog-popup__categories-back js-catalog-popup-back"> <span>Прочие товары</span> <span class="catalog-popup__categories-quantity">6 471</span> </button>
+                                                        <div class="catalog-popup__categories-scrollbar js-scrollbar">
+                                                            <div class="catalog-popup__categories-row js-catalog-popup-masonry">
+                                                                <div class="catalog-popup__category">
+                                                                    <div class="catalog-popup__category-image-box"> <a href="#"> <img class="catalog-popup__category-image" data-src="img/catalog/other/1.png" data-srcset="img/catalog/other/1@2x.png 2x" width="130" height="100" alt=""> </a> </div>
+                                                                    <div class="catalog-popup__category-title"> <a href="#">Стройматериалы</a> </div>
+                                                                    <ul class="catalog-popup__category-list">
+                                                                        <li> <a href="#">Герметики и монтажная пена</a> </li>
+                                                                        <li> <a href="#">Изолента, скотч, уплотнители</a> </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="catalog-popup__category">
+                                                                    <div class="catalog-popup__category-image-box"> <a href="#"> <img class="catalog-popup__category-image" data-src="img/catalog/other/2.png" data-srcset="img/catalog/other/2@2x.png 2x" width="130" height="100" alt=""> </a> </div>
+                                                                    <div class="catalog-popup__category-title"> <a href="#">Аккумуляторный инструмент</a> </div>
+                                                                    <ul class="catalog-popup__category-list">
+                                                                        <li> <a href="#">Аккумуляторы</a> </li>
+                                                                        <li> <a href="#">Зарядные устройства</a> </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="catalog-popup__category">
+                                                                    <div class="catalog-popup__category-image-box"> <a href="#"> <img class="catalog-popup__category-image" data-src="img/catalog/other/3.png" data-srcset="img/catalog/other/3@2x.png 2x" width="130" height="100" alt=""> </a> </div>
+                                                                    <div class="catalog-popup__category-title"> <a href="#">Изделия канатно-веревочные</a> </div>
+                                                                    <ul class="catalog-popup__category-list">
+                                                                        <li> <a href="#">Канаты</a> </li>
+                                                                        <li> <a href="#">Веревки</a> </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="catalog-popup__category">
+                                                                    <div class="catalog-popup__category-image-box"> <a href="#"> <img class="catalog-popup__category-image" data-src="img/catalog/other/4.png" data-srcset="img/catalog/other/4@2x.png 2x" width="130" height="100" alt=""> </a> </div>
+                                                                    <div class="catalog-popup__category-title"> <a href="#">Отделочный инструмент</a> </div>
+                                                                    <ul class="catalog-popup__category-list">
+                                                                        <li> <a href="#">Краски</a> </li>
+                                                                        <li> <a href="#">Грунтовка</a> </li>
+                                                                        <li> <a href="#">Краскопульт</a> </li>
+                                                                    </ul>
+                                                                </div>
+                                                                <div class="catalog-popup__category">
+                                                                    <div class="catalog-popup__category-image-box"> <a href="#"> <img class="catalog-popup__category-image" data-src="img/catalog/other/5.png" data-srcset="img/catalog/other/5@2x.png 2x" width="130" height="100" alt=""> </a> </div>
+                                                                    <div class="catalog-popup__category-title"> <a href="#">Прочее</a> </div>
+                                                                    <ul class="catalog-popup__category-list">
+                                                                        <li> <a href="#">Лестницы</a> </li>
+                                                                        <li> <a href="#">Оснастка для электроинструмента</a> </li>
+                                                                        <li> <a href="#">Профили алюминиевые</a> </li>
+                                                                        <li> <a href="#">Удлинители</a> </li>
+                                                                        <li> <a href="#">Смазка-спрей</a> </li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="catalog-popup__categories-layout js-catalog-popup-categories"> <button type="button" class="catalog-popup__categories-back js-catalog-popup-back"> <span>Бренды</span> <span class="catalog-popup__categories-quantity">125</span> </button>
+                                                        <div class="catalog-popup__categories-scrollbar js-scrollbar">
+                                                            <div class="catalog-popup__brands">
+                                                                <div class="catalog-popup__brands-title">
+                                                                    Собственные марки
+                                                                </div>
+                                                                <div class="catalog-popup__brands-items l-grid l-grid-cols-4">
+                                                                    <div class="catalog-popup__brand-item brand-item brand-item_is-hover">
+                                                                        <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                                                                <div class="brand-item__content">
+                                                                                    <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/sibrtec.png" srcset="img/brands/sibrtec@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                                                </div>
+                                                                            </a> </div>
+                                                                    </div>
+                                                                    <div class="catalog-popup__brand-item brand-item brand-item_is-hover">
+                                                                        <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                                                                <div class="brand-item__content">
+                                                                                    <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/kronwerk.png" srcset="img/brands/kronwerk@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                                                </div>
+                                                                            </a> </div>
+                                                                    </div>
+                                                                    <div class="catalog-popup__brand-item brand-item brand-item_is-hover">
+                                                                        <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                                                                <div class="brand-item__content">
+                                                                                    <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/gross.png" srcset="img/brands/gross@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                                                </div>
+                                                                            </a> </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="catalog-popup__brands-title">
+                                                                    Популярные марки
+                                                                </div>
+                                                                <div class="catalog-popup__brands-items l-grid l-grid-cols-4">
+                                                                    <div class="catalog-popup__brand-item brand-item brand-item_is-hover">
+                                                                        <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                                                                <div class="brand-item__content">
+                                                                                    <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/denzel.png" srcset="img/brands/denzel@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                                                </div>
+                                                                            </a> </div>
+                                                                    </div>
+                                                                    <div class="catalog-popup__brand-item brand-item brand-item_is-hover">
+                                                                        <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                                                                <div class="brand-item__content">
+                                                                                    <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/makita.png" srcset="img/brands/makita@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                                                </div>
+                                                                            </a> </div>
+                                                                    </div>
+                                                                    <div class="catalog-popup__brand-item brand-item brand-item_is-hover">
+                                                                        <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                                                                <div class="brand-item__content">
+                                                                                    <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/matrix.png" srcset="img/brands/matrix@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                                                </div>
+                                                                            </a> </div>
+                                                                    </div>
+                                                                    <div class="catalog-popup__brand-item brand-item brand-item_is-hover">
+                                                                        <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                                                                <div class="brand-item__content">
+                                                                                    <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/sibrtec.png" srcset="img/brands/sibrtec@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                                                </div>
+                                                                            </a> </div>
+                                                                    </div>
+                                                                    <div class="catalog-popup__brand-item brand-item brand-item_is-hover">
+                                                                        <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                                                                <div class="brand-item__content">
+                                                                                    <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/bars.png" srcset="img/brands/bars@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                                                </div>
+                                                                            </a> </div>
+                                                                    </div>
+                                                                    <div class="catalog-popup__brand-item brand-item brand-item_is-hover">
+                                                                        <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                                                                <div class="brand-item__content">
+                                                                                    <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/palisad.png" srcset="img/brands/palisad@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                                                </div>
+                                                                            </a> </div>
+                                                                    </div>
+                                                                    <div class="catalog-popup__brand-item brand-item brand-item_is-hover">
+                                                                        <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                                                                <div class="brand-item__content">
+                                                                                    <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/sparta.png" srcset="img/brands/sparta@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                                                </div>
+                                                                            </a> </div>
+                                                                    </div>
+                                                                    <div class="catalog-popup__brand-item brand-item brand-item_is-hover">
+                                                                        <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                                                                <div class="brand-item__content">
+                                                                                    <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/keyang.png" srcset="img/brands/keyang@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                                                </div>
+                                                                            </a> </div>
+                                                                    </div>
+                                                                </div> <a href="" class="ui-button ui-button_center ui-button_is-circle catalog-popup__brands-button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                                                        </svg> </span><span class="ui-button__text"> Смотреть все бренды </span> </a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="header__search js-header-search"> <button type="button" title="Открыть строку поиска" class="ui-button-icon header__control-button header__search-button js-header-search-open u-hidden-mobile-m"><svg class="ui-icon ui-icon-search ui-button-icon__icon ">
+                                        <use xlink:href="img/icons.svg#search"></use>
+                                    </svg> </button>
+                                <div class="header__search-popup js-header-search-popup">
+                                    <div class="header__search-content">
+                                        <form action="#" class="header__search-form search-form js-search-form">
+                                            <div class="search-form__box">
+                                                <div class="ui-button-icon search-form__icon-box"><svg class="ui-icon ui-icon-search ui-button-icon__icon ">
+                                                        <use xlink:href="img/icons.svg#search"></use>
+                                                    </svg> </div> <input class="search-form__input js-search-form-input js-header-search-input ui-input" type="text" placeholder="Введите, что вы хотите найти"> <button class="search-form__clear js-search-form-clear js-header-search-clear" type="button" aria-label="Очистить строку поиска"> <span class="search-form__clear-text">Очистить</span> <span class="ui-button-icon search-form__clear-button"><svg class="ui-icon ui-icon-cross ui-button-icon__icon ">
+                                                            <use xlink:href="img/icons.svg#cross"></use>
+                                                        </svg> </span> </button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <div class="search-result header__search-result js-header-search-result">
+                                        <div class="search-result__scrollbar js-scrollbar">
+                                            <div class="search-result__container container">
+                                                <div class="search-result__row l-grid">
+                                                    <div class="search-result__column">
+                                                        <div class="search-result__title">Категории</div>
+                                                        <div class="search-result__categories">
+                                                            <div class="search-result__category"> <a href="#" class="search-result__category-link">
+                                                                    <div class="search-result__category-image-box"> <img class="search-result__category-image" src="img/search-categories/1.png" alt="" width="80" height="60"> </div>
+                                                                    <div class="search-result__category-content">
+                                                                        <div class="search-result__category-title">Крепеж перфорированный</div>
+                                                                        <div class="search-result__category-quantity">3 862</div>
+                                                                    </div>
+                                                                </a> </div>
+                                                            <div class="search-result__category"> <a href="#" class="search-result__category-link">
+                                                                    <div class="search-result__category-image-box"> <img class="search-result__category-image" src="img/search-categories/2.png" alt="" width="80" height="60"> </div>
+                                                                    <div class="search-result__category-content">
+                                                                        <div class="search-result__category-title">Метизы</div>
+                                                                        <div class="search-result__category-quantity">4 302</div>
+                                                                    </div>
+                                                                </a> </div>
+                                                            <div class="search-result__category"> <a href="#" class="search-result__category-link">
+                                                                    <div class="search-result__category-image-box"> <img class="search-result__category-image" src="img/search-categories/3.png" alt="" width="80" height="60"> </div>
+                                                                    <div class="search-result__category-content">
+                                                                        <div class="search-result__category-title">Саморезы, шурупы</div>
+                                                                        <div class="search-result__category-quantity">1 258</div>
+                                                                    </div>
+                                                                </a> </div>
+                                                            <div class="search-result__category"> <a href="#" class="search-result__category-link">
+                                                                    <div class="search-result__category-image-box"> <img class="search-result__category-image" src="img/search-categories/4.png" alt="" width="80" height="60"> </div>
+                                                                    <div class="search-result__category-content">
+                                                                        <div class="search-result__category-title">Заклепки</div>
+                                                                        <div class="search-result__category-quantity">876</div>
+                                                                    </div>
+                                                                </a> </div>
+                                                            <div class="search-result__category"> <a href="#" class="search-result__category-link">
+                                                                    <div class="search-result__category-image-box"> <img class="search-result__category-image" src="img/search-categories/5.png" alt="" width="80" height="60"> </div>
+                                                                    <div class="search-result__category-content">
+                                                                        <div class="search-result__category-title">Дюбели</div>
+                                                                        <div class="search-result__category-quantity">543</div>
+                                                                    </div>
+                                                                </a> </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="search-result__column">
+                                                        <div class="search-result__title">Товары</div>
+                                                        <div class="search-result__products">
+                                                            <div class="search-result__products-row">
+                                                                <div class="search-result__product-item product"> <a href="#" class="product__link"></a>
+                                                                    <div class="product__image-wrapper">
+                                                                        <div class="product__image-box"> <img class="product__image" src="img/hits/1.jpg" srcset="img/hits/1@2x.jpg 2x" width="312" height="312" alt="" loading="lazy"> </div>
+                                                                    </div>
+                                                                    <div class="product__header">
+                                                                        <div class="product__tags">
+                                                                            <div class="product__tag product-tag product-tag_new">Новинка</div>
+                                                                        </div>
+                                                                        <div class="product__controls"> <button type="button" class="product__control product__control-favorite js-add-to-favorites-button " title="Добавить в избранное"><svg class="ui-icon ui-icon-heart">
+                                                                                    <use xlink:href="img/icons.svg#heart"></use>
+                                                                                </svg> </button> <button type="button" class="product__control product__control-add-to-cart" title="Добавить в корзину" data-modal-open="#modal-add-to-cart"><svg class="ui-icon ui-icon-cart">
+                                                                                    <use xlink:href="img/icons.svg#cart"></use>
+                                                                                </svg></button> </div>
+                                                                    </div>
+                                                                    <div class="product__content">
+                                                                        <div class="product__content-inner">
+                                                                            <div class="product__title">Винт Reyher DIN 912, 1 1/4&quot;х6&Prime; UNC</div>
+                                                                        </div>
+                                                                        <div class="product__price-block">
+                                                                            <div class="product__price">1 017 ₽</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product__buttons-wrapper">
+                                                                        <div class="product__buttons"> <button type="button" data-modal-open="#modal-add-to-cart" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Добавить</span>
+                                                                                    в&nbsp;корзину
+                                                                                </span> </button> </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="search-result__product-item product"> <a href="#" class="product__link"></a>
+                                                                    <div class="product__image-wrapper">
+                                                                        <div class="product__image-box"> <img class="product__image" src="img/hits/2.jpg" srcset="img/hits/2@2x.jpg 2x" width="312" height="312" alt="" loading="lazy"> </div>
+                                                                    </div>
+                                                                    <div class="product__header">
+                                                                        <div class="product__controls"> <button type="button" class="product__control product__control-favorite js-add-to-favorites-button " title="Добавить в избранное"><svg class="ui-icon ui-icon-heart">
+                                                                                    <use xlink:href="img/icons.svg#heart"></use>
+                                                                                </svg> </button> <button type="button" class="product__control product__control-add-to-cart" title="Добавить в корзину" data-modal-open="#modal-add-to-cart"><svg class="ui-icon ui-icon-cart">
+                                                                                    <use xlink:href="img/icons.svg#cart"></use>
+                                                                                </svg></button> </div>
+                                                                    </div>
+                                                                    <div class="product__content">
+                                                                        <div class="product__content-inner">
+                                                                            <div class="product__title">Угловая шлифмашина MAKITA, 2000&nbsp;В</div>
+                                                                        </div>
+                                                                        <div class="product__price-block">
+                                                                            <div class="product__price">12 290 ₽</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product__buttons-wrapper">
+                                                                        <div class="product__buttons"> <button type="button" data-modal-open="#modal-add-to-cart" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Добавить</span>
+                                                                                    в&nbsp;корзину
+                                                                                </span> </button> </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="search-result__product-item product"> <a href="#" class="product__link"></a>
+                                                                    <div class="product__image-wrapper">
+                                                                        <div class="product__image-box"> <img class="product__image" src="img/hits/4.jpg" srcset="img/hits/4@2x.jpg 2x" width="312" height="312" alt="" loading="lazy"> </div>
+                                                                    </div>
+                                                                    <div class="product__header">
+                                                                        <div class="product__tags">
+                                                                            <div class="product__tag product-tag product-tag_promotion">Акция</div>
+                                                                        </div>
+                                                                        <div class="product__controls"> <button type="button" class="product__control product__control-favorite js-add-to-favorites-button " title="Добавить в избранное"><svg class="ui-icon ui-icon-heart">
+                                                                                    <use xlink:href="img/icons.svg#heart"></use>
+                                                                                </svg> </button> <button type="button" class="product__control product__control-add-to-cart" title="Добавить в корзину" data-modal-open="#modal-add-to-cart"><svg class="ui-icon ui-icon-cart">
+                                                                                    <use xlink:href="img/icons.svg#cart"></use>
+                                                                                </svg></button> </div>
+                                                                    </div>
+                                                                    <div class="product__content">
+                                                                        <div class="product__content-inner">
+                                                                            <div class="product__title">Ножовка по&nbsp;дереву Gross Pirahna 400&nbsp;мм</div>
+                                                                        </div>
+                                                                        <div class="product__price-block">
+                                                                            <div class="product__price">1 081 ₽</div>
+                                                                            <div class="product__old-price">1 317 ₽</div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="product__buttons-wrapper">
+                                                                        <div class="product__buttons"> <button type="button" data-modal-open="#modal-add-to-cart" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Добавить</span>
+                                                                                    в&nbsp;корзину
+                                                                                </span> </button> </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div> <a href="" class="ui-button ui-button_fill ui-button_is-circle search-result__all-results"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                        <use xlink:href="img/icons.svg#arrow"></use>
+                                                    </svg> </span><span class="ui-button__text">
+                                                    Смотреть все результаты
+                                                </span> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="menu header__menu js-menu"> <!-- <div class="menu__backdrop js-menu-backdrop"></div> --> <button class="menu__burger js-menu-burger" type="button" aria-label="Навигационное меню"> <span></span> <span></span> <span></span> </button>
+                            <div class="menu__popup js-menu-popup" aria-disabled="true">
+                                <nav class="menu__container js-menu-container">
+                                    <div class="menu__controls u-visible-mobile-sm"> <button type="button" class="menu__control-button menu__search-button js-header-search-open" title="Открыть строку поиска"> <svg class="ui-icon ui-icon-search">
+                                                <use xlink:href="img/icons.svg#search"></use>
+                                            </svg> </button> <a href="#" class="menu__control-button menu__favorites-button" title="Избранные товары"> <svg class="ui-icon ui-icon-heart">
+                                                <use xlink:href="img/icons.svg#heart"></use>
+                                            </svg> </a> <button data-modal-open="#modal-login" class="menu__control-button menu__login-button" title="Войти в личный кабинет"> <svg class="ui-icon ui-icon-login">
+                                                <use xlink:href="img/icons.svg#login"></use>
+                                            </svg> </button> </div>
+                                    <ul class="menu__list">
+                                        <li class="menu__item"> <a href="#" class="menu__link">Калькулятор</a> </li>
+                                        <li class="menu__item"> <a href="#" class="menu__link">Сотрудничество</a> </li>
+                                        <li class="menu__item menu__dropdown js-menu-dropdown"> <a href="#" class="menu__link js-menu-link">Клиентам</a>
+                                            <div class="menu__submenu js-menu-submenu">
+                                                <ul class="menu__submenu-list">
+                                                    <li><a href="#" class="menu__submenu-link">Сотрудничество для брендов</a></li>
+                                                    <li><a href="#" class="menu__submenu-link">Оплата и доставка</a></li>
+                                                    <li><a href="#" class="menu__submenu-link">Инструкция пользователя&nbsp;ЛК</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="menu__item menu__dropdown js-menu-dropdown"> <a href="#" class="menu__link js-menu-link">Компания</a>
+                                            <div class="menu__submenu js-menu-submenu">
+                                                <ul class="menu__submenu-list">
+                                                    <li><a href="#" class="menu__submenu-link">О&nbsp;компании</a></li>
+                                                    <li><a href="#" class="menu__submenu-link">Новости</a></li>
+                                                    <li><a href="#" class="menu__submenu-link">Контакты</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                    <div class="menu__footer js-menu-footer u-hidden-desktop-md">
+                                        <div class="menu__contacts"> <a class="menu__contacts-phone" href="tel:+73432860321">+ 7 (343) 286-03-21</a> <a class="menu__contacts-callback" href="#" data-modal-open="#modal-callback">Обратный звонок</a> </div>
+                                    </div>
+                                </nav> <!-- <button type="button" class="menu__close js-menu-close" aria-label="Закрыть"></button> -->
+                            </div>
+                        </div>
+                        <div class="header__contacts u-visible-desktop-sm">
+                            <div class="header__contacts-block" data-da=".js-menu-content, 1024.98, last"> <a class="header__contacts-phone" href="tel:+73432860321">+ 7 (343) 286-03-21</a> <a href="#" class="header__contacts-callback" data-modal-open="#modal-callback">Обратный звонок</a> </div>
+                        </div>
+                        <div class="header__controls"> <a href="#" title="Корзина" class="ui-button-icon header__control-button header__cart-button"><svg class="ui-icon ui-icon-cart ui-button-icon__icon ">
+                                    <use xlink:href="img/icons.svg#cart"></use>
+                                </svg> </a> <a href="#" title="Избранные товары" class="ui-button-icon header__control-button header__favorites-button u-hidden-mobile-m"><svg class="ui-icon ui-icon-heart ui-button-icon__icon ">
+                                    <use xlink:href="img/icons.svg#heart"></use>
+                                </svg> </a> <a href="#" title="Личный кабинет" class="ui-button-icon header__control-button header__user-button u-hidden-mobile-m"><svg class="ui-icon ui-icon-user ui-button-icon__icon ">
+                                    <use xlink:href="img/icons.svg#user"></use>
+                                </svg> </a> </div>
+                        <div class="header__popups">
+                            <div class="header__popup js-header-popup js-added-to-cart-popup">
+                                <div class="header__popup-product">
+                                    <div class="header__popup-product-image-box image-box"> <a href="#"> <img class="header__popup-product-image" src="img/header-cart-product.png" srcset="img/header-cart-product@2x.png 2x" width="80" height="80" alt=""> </a> </div>
+                                    <div class="header__popup-product-content">
+                                        <div class="header__popup-product-subtitle"> Товар добавлен в&nbsp;корзину </div>
+                                        <div class="header__popup-product-title-block">
+                                            <div class="header__popup-product-title"> <a href="#">Кровельный окрашенный саморез Roofing Fasteners RAL 6005</a> </div>
+                                            <div class="header__popup-product-price">
+                                                60 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header__popup-buttons"> <button type="button" class="ui-button ui-button_style_outline header__popup-button js-header-popup-close"><span class="ui-button__text"> Продолжить покупки </span> </button> <a href="" class="ui-button ui-button_is-circle header__popup-button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                <use xlink:href="img/icons.svg#arrow"></use>
+                                            </svg> </span><span class="ui-button__text"> Перейти в&nbsp;корзину </span> </a> </div>
+                            </div>
+                            <div class="header__popup js-header-popup js-added-to-favorites-popup">
+                                <div class="header__popup-product">
+                                    <div class="header__popup-product-image-box image-box"> <a href="#"> <img class="header__popup-product-image" src="img/header-cart-product.png" srcset="img/header-cart-product@2x.png 2x" width="80" height="80" alt=""> </a> </div>
+                                    <div class="header__popup-product-content">
+                                        <div class="header__popup-product-subtitle">
+                                            Товар добавлен в&nbsp;избранное
+                                        </div>
+                                        <div class="header__popup-product-title-block">
+                                            <div class="header__popup-product-title"> <a href="#">Кровельный окрашенный саморез Roofing Fasteners RAL 6005</a> </div>
+                                            <div class="header__popup-product-price">
+                                                60 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header__popup-buttons"> <a href="" class="ui-button ui-button_is-circle header__popup-button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                <use xlink:href="img/icons.svg#arrow"></use>
+                                            </svg> </span><span class="ui-button__text"> Перейти в&nbsp;избранное </span> </a> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__container container">
+                    <nav class="breadcrumbs__inner" role="navigation" aria-label="breadcrumbs">
+                        <ol class="breadcrumbs__list">
+                            <li class="breadcrumbs__item"> <a href="/" class="breadcrumbs__link"><span>Главная</span></a> </li>
+                            <li class="breadcrumbs__item" aria-current="page"> <span>Инструкция пользователя ЛК</span> </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="p-section p-instruction">
+                <div class="container">
+                    <div class="p-instruction__title page-title page-title_size_lg">
+                        <h1>Инструкция пользователя ЛК</h1>
+                    </div>
+                    <div class="p-instruction__layout-row l-grid">
+                        <div class="p-instruction__layout-column">
+                            <div class="p-instruction__banner-section banner-section banner-section_second">
+                                <div class="container container_sm banner-section__container">
+                                    <div class="banner-section__box">
+                                        <div class="banner-section__content">
+                                            <div class="banner-section__subtitle">Скидки</div>
+                                            <div class="banner-section__title section-title section-title_size_sm">Размести заказ через личный кабинет и получи персональную скидку</div>
+                                        </div>
+                                        <div class="banner-section__image-wrapper">
+                                            <picture class="banner-section__image-box">
+                                                <source media="(max-width: 575px)" srcset="img/banner-575.jpg 1x, img/banner-575@2x.jpg 2x"> <img class="banner-section__image" src="img/banner.jpg" srcset="img/banner@2x.jpg 2x" width="1120" height="300" alt="" loading="lazy">
+                                            </picture>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-instruction__layout-column u-visible-desktop-md">
+                            <div class="p-instruction__personal-manager personal-manager">
+                                <div class="personal-manager__person">
+                                    <div class="personal-manager__person-photo"> <img class="personal-manager__photo-image" src="img/personal-manager.png" srcset="img/personal-manager@2x.png 2x" width="50" height="50" alt="" loading="lazy"> </div>
+                                    <div class="personal-manager__person-content">
+                                        <div class="personal-manager__person-position">Персональный менеджер</div>
+                                        <div class="personal-manager__person-name">Смирнова Елена Федоровна</div>
+                                    </div>
+                                </div>
+                                <div class="personal-manager__contacts">
+                                    <div class="personal-manager__phones"> <a href="tel:+74953749406">+7 (495) 374-94-06</a> </div> <a href="mailto:smirnova@csk.ru">smirnova@csk.ru</a>
+                                    <div>ПН-ПТ 10:00-19:00</div>
+                                </div> <button type="button" class="ui-button ui-button_style_outline ui-button_fill ui-button_is-circle personal-manager__button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                        </svg> </span><span class="ui-button__text"> Задать вопрос </span> </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-instruction__fixed-block fixed-block js-bottom-fixed-block u-hidden-desktop-md">
+                        <div class="container">
+                            <div class="fixed-block__row">
+                                <div class="fixed-block__buttons fixed-block__buttons_fill"> <button type="button" class="ui-button ui-button_fill ui-button_is-circle fixed-block__button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                <use xlink:href="img/icons.svg#arrow"></use>
+                                            </svg> </span><span class="ui-button__text"> Задать вопрос менеджеру </span> </button> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="advantages-section section advantages-section_cabinet js-advantages">
+                <div class="advantages-section__container">
+                    <h2 class="advantages-section__title section-title section-title_center">Нашим личным кабинетом пользуются более 10 тысяч покупателей</h2>
+                    <div class="advantages-section__image-wrapper">
+                        <picture class="advantages-section__image-box js-advantages-image-box">
+                            <source srcset="img/bg-advantages-2-mobile.jpg, img/bg-advantages-2-mobile@2x.jpg 2x" media="(max-width: 575px)"> <img class="advantages-section__image" src="img/bg-advantages-2.jpg" srcset="img/bg-advantages-2@2x.jpg 2x" width="1920" height="1245" alt="" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="content js-advantages-content">
+                        <div class="advantages-section__spacer"></div>
+                        <div class="advantages-section__container container">
+                            <div class="advantages-section__items">
+                                <div class="advantages-section__item">
+                                    <div class="advantages-section__item-number"> 01/03 </div>
+                                    <div class="advantages-section__item-title">Быстрая обработка заказов</div>
+                                    <div class="advantages-section__item-text">
+                                        <p>Наши менеджеры отвечают в&nbsp;течение суток</p>
+                                    </div>
+                                </div>
+                                <div class="advantages-section__item">
+                                    <div class="advantages-section__item-number"> 02/03 </div>
+                                    <div class="advantages-section__item-title">Дополнительная скидка на&nbsp;заказы</div>
+                                    <div class="advantages-section__item-text">
+                                        <p>Чем больше заказов&nbsp;&mdash; тем выше скидка для вас!</p>
+                                    </div>
+                                </div>
+                                <div class="advantages-section__item">
+                                    <div class="advantages-section__item-number"> 03/03 </div>
+                                    <div class="advantages-section__item-title">Документация</div>
+                                    <div class="advantages-section__item-text">
+                                        <p>Счёт на&nbsp;оплату по&nbsp;заказу поступает в&nbsp;ЛК с&nbsp;возможностью скачивания.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="articles-section section">
+                <div class="container">
+                    <div class="articles-section__content js-swiper-articles-section">
+                        <div class="articles-section__heading">
+                            <h2 class="articles-section__title section-title">Видеоинструкции</h2> <a href="" class="ui-button ui-button_is-circle articles-section__button u-hidden-mobile"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                        <use xlink:href="img/icons.svg#arrow"></use>
+                                    </svg> </span><span class="ui-button__text"> Смотреть все </span> </a>
+                        </div>
+                        <div class="swiper articles-section__swiper js-swiper-articles">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide articles-section__swiper-item">
+                                    <div class="articles-section__item article-item article-item_video"> <a href="#" class="article-item__link" data-fancybox="">
+                                            <div class="article-item__image-wrapper">
+                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/video/1.jpg" srcset="img/video/1@2x.jpg 2x" width="487" height="359" alt="" loading="lazy"> </div>
+                                                <div class="article-item__play">
+                                                    <div class="article-item__play-inner">
+                                                        <div class="article-item__play-icon-box"> <svg class="ui-icon ui-icon-play">
+                                                                <use xlink:href="img/icons.svg#play"></use>
+                                                            </svg> </div>
+                                                        <div class="article-item__play-info">
+                                                            Смотреть
+                                                            <div class="article-item__play-info-time">
+                                                                / 01:58
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="article-item__content">
+                                                <div class="article-item__title">Как сделать заказ в&nbsp;личном кабинете?</div>
+                                            </div>
+                                        </a> </div>
+                                </div>
+                                <div class="swiper-slide articles-section__swiper-item">
+                                    <div class="articles-section__item article-item article-item_video"> <a href="#" class="article-item__link" data-fancybox="">
+                                            <div class="article-item__image-wrapper">
+                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/video/2.jpg" srcset="img/video/2@2x.jpg 2x" width="487" height="359" alt="" loading="lazy"> </div>
+                                                <div class="article-item__play">
+                                                    <div class="article-item__play-inner">
+                                                        <div class="article-item__play-icon-box"> <svg class="ui-icon ui-icon-play">
+                                                                <use xlink:href="img/icons.svg#play"></use>
+                                                            </svg> </div>
+                                                        <div class="article-item__play-info">
+                                                            Смотреть
+                                                            <div class="article-item__play-info-time">
+                                                                / 01:58
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="article-item__content">
+                                                <div class="article-item__title">Редактирование моих данных</div>
+                                            </div>
+                                        </a> </div>
+                                </div>
+                                <div class="swiper-slide articles-section__swiper-item">
+                                    <div class="articles-section__item article-item article-item_video"> <a href="#" class="article-item__link" data-fancybox="">
+                                            <div class="article-item__image-wrapper">
+                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/video/3.jpg" srcset="img/video/3@2x.jpg 2x" width="487" height="359" alt="" loading="lazy"> </div>
+                                                <div class="article-item__play">
+                                                    <div class="article-item__play-inner">
+                                                        <div class="article-item__play-icon-box"> <svg class="ui-icon ui-icon-play">
+                                                                <use xlink:href="img/icons.svg#play"></use>
+                                                            </svg> </div>
+                                                        <div class="article-item__play-info">
+                                                            Смотреть
+                                                            <div class="article-item__play-info-time">
+                                                                / 01:58
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="article-item__content">
+                                                <div class="article-item__title">Мои заказы</div>
+                                            </div>
+                                        </a> </div>
+                                </div>
+                                <div class="swiper-slide articles-section__swiper-item">
+                                    <div class="articles-section__item article-item article-item_video"> <a href="#" class="article-item__link" data-fancybox="">
+                                            <div class="article-item__image-wrapper">
+                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/video/1.jpg" srcset="img/video/1@2x.jpg 2x" width="487" height="359" alt="" loading="lazy"> </div>
+                                                <div class="article-item__play">
+                                                    <div class="article-item__play-inner">
+                                                        <div class="article-item__play-icon-box"> <svg class="ui-icon ui-icon-play">
+                                                                <use xlink:href="img/icons.svg#play"></use>
+                                                            </svg> </div>
+                                                        <div class="article-item__play-info">
+                                                            Смотреть
+                                                            <div class="article-item__play-info-time">
+                                                                / 01:58
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="article-item__content">
+                                                <div class="article-item__title">Как сделать заказ в&nbsp;личном кабинете?</div>
+                                            </div>
+                                        </a> </div>
+                                </div>
+                                <div class="swiper-slide articles-section__swiper-item">
+                                    <div class="articles-section__item article-item article-item_video"> <a href="#" class="article-item__link" data-fancybox="">
+                                            <div class="article-item__image-wrapper">
+                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/video/2.jpg" srcset="img/video/2@2x.jpg 2x" width="487" height="359" alt="" loading="lazy"> </div>
+                                                <div class="article-item__play">
+                                                    <div class="article-item__play-inner">
+                                                        <div class="article-item__play-icon-box"> <svg class="ui-icon ui-icon-play">
+                                                                <use xlink:href="img/icons.svg#play"></use>
+                                                            </svg> </div>
+                                                        <div class="article-item__play-info">
+                                                            Смотреть
+                                                            <div class="article-item__play-info-time">
+                                                                / 01:58
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="article-item__content">
+                                                <div class="article-item__title">Редактирование моих данных</div>
+                                            </div>
+                                        </a> </div>
+                                </div>
+                                <div class="swiper-slide articles-section__swiper-item">
+                                    <div class="articles-section__item article-item article-item_video"> <a href="#" class="article-item__link" data-fancybox="">
+                                            <div class="article-item__image-wrapper">
+                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/video/3.jpg" srcset="img/video/3@2x.jpg 2x" width="487" height="359" alt="" loading="lazy"> </div>
+                                                <div class="article-item__play">
+                                                    <div class="article-item__play-inner">
+                                                        <div class="article-item__play-icon-box"> <svg class="ui-icon ui-icon-play">
+                                                                <use xlink:href="img/icons.svg#play"></use>
+                                                            </svg> </div>
+                                                        <div class="article-item__play-info">
+                                                            Смотреть
+                                                            <div class="article-item__play-info-time">
+                                                                / 01:58
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="article-item__content">
+                                                <div class="article-item__title">Мои заказы</div>
+                                            </div>
+                                        </a> </div>
+                                </div>
+                            </div>
+                            <div class="articles-section__swiper-control swiper-control"> <button type="button" class="ui-button-icon ui-button-icon_style_outline swiper-button-prev  articles-section__slider-prev js-swiper-articles-prev"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.9375 0.87793L7.05945 4.99988L2.9375 9.12183" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg> </button> <button type="button" class="ui-button-icon ui-button-icon_style_outline swiper-button-next  articles-section__slider-next js-swiper-articles-next"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M2.9375 0.87793L7.05945 4.99988L2.9375 9.12183" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg> </button> </div>
+                        </div> <a href="" class="ui-button ui-button_fill ui-button_is-circle articles-section__button articles-section__button_bottom u-visible-mobile"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                </svg> </span><span class="ui-button__text">
+                                Смотреть все </span> </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer js-footer">
+            <div class="footer__section footer__section_subscription footer__subscription">
+                <div class="footer__subscription-container container">
+                    <div class="footer__subscription-images">
+                        <div class="footer__subscription-image-box footer__subscription-image-box_left"> <img class="footer__subscription-image lazy" data-src="img/subscribe-image-left.png" data-srcset="img/subscribe-image-left@2x.png 2x" width="828" height="828" alt=""> </div>
+                        <div class="footer__subscription-image-box footer__subscription-image-box_right"> <img class="footer__subscription-image lazy" data-src="img/subscribe-image-right.png" data-srcset="img/subscribe-image-right@2x.png 2x" width="747" height="747" alt=""> </div>
+                    </div>
+                    <div class="footer__subscription-content">
+                        <h3 class="footer__subscription-title">Подписка на&nbsp;новости</h3>
+                        <form action="#" class="footer__subscription-form form js-subscribe-form">
+                            <div class="footer__subscription-form-box">
+                                <div class="footer__subscription-field"> <input class="footer__subscription-input js-subscribe-email ui-input" type="text" name="email" required="" autocomplete="off">
+                                    <div class="footer__subscription-placeholder">
+                                        your@mail.ru
+                                    </div>
+                                </div> <button type="submit" title="Подписаться" class="ui-button-icon ui-button-icon_style_black footer__subscription-submit"><svg class="ui-icon ui-icon-arrow ui-button-icon__icon ui-button-icon__icon_size_xs">
+                                        <use xlink:href="img/icons.svg#arrow"></use>
+                                    </svg> </button>
+                            </div>
+                            <div class="footer__subscription-agreement form__agreement form__agreement_center">
+                                Нажимая кнопку, вы&nbsp;соглашаетесь с&nbsp;<a href="#">политикой конфиденциальности</a> </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__section footer__section_primary">
+                <div class="footer__container footer__container_primary container">
+                    <div class="footer__column footer__column_contacts">
+                        <div class="footer__contacts footer__contacts_main">
+                            <div class="footer__contacts-item footer__contacts-item_callback"> <a href="#" class="footer__contacts-callback" data-modal-open="#modal-callback">Заказать обратный звонок</a> </div>
+                            <div class="footer__contacts-item"> <a href="tel:+73432860321" class="footer__contacts-phone">+ 7 (343) 286-03-21</a> </div>
+                            <div class="footer__contacts-item"> <a href="mailto:info@csk66.ru" class="footer__contacts-email">info@csk66.ru</a> </div>
+                        </div>
+                    </div>
+                    <div class="footer__column footer__column_catalog">
+                        <div class="footer__block">
+                            <div class="footer__title">Каталог</div>
+                            <ul class="footer__menu">
+                                <li> <a href="#" class="footer__menu-link">Крепеж</a> </li>
+                                <li> <a href="#" class="footer__menu-link">Инструменты и оборудование</a> </li>
+                                <li> <a href="#" class="footer__menu-link">СИЗ</a> </li>
+                                <li> <a href="#" class="footer__menu-link">Прочие товары</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__column footer__column_clients">
+                        <div class="footer__block">
+                            <div class="footer__title">Клиентам</div>
+                            <ul class="footer__menu">
+                                <li> <a href="#" class="footer__menu-link">Калькулятор</a> </li>
+                                <li> <a href="#" class="footer__menu-link">Сотрудничество для брендов</a> </li>
+                                <li> <a href="#" class="footer__menu-link">Доставка и&nbsp;оплата</a> </li>
+                                <li> <a href="#" class="footer__menu-link">Возврат и&nbsp;гарантия</a> </li>
+                                <li> <a href="#" class="footer__menu-link">Инструкция пользователя&nbsp;ЛК</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__column footer__column_company">
+                        <div class="footer__block">
+                            <div class="footer__title">Компания</div>
+                            <ul class="footer__menu">
+                                <li> <a href="#" class="footer__menu-link">О&nbsp;компании</a> </li>
+                                <li> <a href="#" class="footer__menu-link">Новости</a> </li>
+                                <li> <a href="#" class="footer__menu-link">Контакты</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__column footer__column_address">
+                        <div class="footer__contacts footer__contacts_address">
+                            <div class="footer__contacts-item footer__contacts-item_address">
+                                Екатеринбург, ул. Окружная 88&nbsp;Э (3&nbsp;этаж)
+                            </div>
+                            <div class="footer__contacts-item footer__contacts-item_hours">
+                                ПН-ПТ 10:00&nbsp;&ndash; 19:00, СБ&nbsp;10:00&nbsp;&ndash; 16:00
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__column footer__column_socials">
+                        <div class="footer__socials socials socials_style_white">
+                            <div class="socials__list"> <a href="#" class="socials__link socials__link_telegram" title="Telegram"> <svg class="ui-icon ui-icon-telegram socials__icon">
+                                        <use xlink:href="img/icons.svg#telegram"></use>
+                                    </svg> </a><a href="#" class="socials__link socials__link_vk" title="ВКонтакте"> <svg class="ui-icon ui-icon-vk socials__icon">
+                                        <use xlink:href="img/icons.svg#vk"></use>
+                                    </svg> </a> </div>
+                        </div>
+                    </div>
+                    <div class="footer__column footer__column_up">
+                        <div class="footer__button-up-wrapper js-button-up-wrapper"> <button type="button" title="Наверх" class="ui-button-icon ui-button-icon_style_accent footer__button-up js-button-up"><svg class="ui-icon ui-icon-arrow ui-button-icon__icon ">
+                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                </svg> </button> </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__section footer__section_second">
+                <div class="footer__container footer__container_second container">
+                    <div class="footer__column footer__column_copy">
+                        <div class="footer__copyright">
+                            &copy;2024 CSK. Все права защищены.
+                        </div>
+                    </div>
+                    <div class="footer__column footer__column_privacy"> <a href="#" class="footer__privacy-policy">Политика конфиденциальности</a> </div>
+                    <div class="footer__column footer__column_dev">
+                        <div class="footer__dev">
+                            Разработка сайта – <a href="#" class="footer__dev-link" target="_blank">Марина Барская</a></div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="modal-contact modal js-modal modal_direction_right" id="modal-callback" aria-hidden="true" tabindex="-1">
+        <div class="modal__wrap">
+            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="Обратный звонок">
+                <picture class="modal__picture">
+                    <source media="(max-width: 575px)" data-srcset="img/callback-mobile.jpg 1x, img/callback-mobile@2x.jpg 2x"> <img class="modal__picture-image lazy" data-src="img/callback.jpg" data-srcset="img/callback@2x.jpg" width="539" height="869" alt="">
+                </picture>
+                <div class="modal__inner js-modal-scrollbar">
+                    <div class="modal__inner-content">
+                        <div class="modal__header">
+                            <div class="modal__title">Обратный звонок</div> <!-- {
+                            isOrder ?
+                            <div class="modal__order">
+                                {
+                                    <div class:list={['modal__title', titleClass]} set:html={'Заказ 124141135'}></div>
+                                }
+                                {
+                                    <OrderStatus class="modal__order-status" status="completed"></OrderStatus>
+                                }
+                            </div>
+                            : ''
+                        } --> <button type="button" title="Закрыть" class="ui-button-icon ui-button-icon_style_outline modal__close js-modal-close "><svg class="ui-icon ui-icon-cross ui-button-icon__icon ">
+                                    <use xlink:href="img/icons.svg#cross"></use>
+                                </svg> </button>
+                        </div>
+                        <div class="modal__content js-modal-content">
+                            <form action="#" class="modal__form form js-form-validation">
+                                <div class="modal__form-grid l-grid l-gap-30">
+                                    <div class="form__column">
+                                        <div class="field-box js-field-box"> <label class="field-box__label">Как к вам обращаться?</label>
+                                            <div class="field-box__content"> <input class="field-box__input js-validate-field js-field-box-input ui-input" type="text" name="name" placeholder="Как к вам обращаться?" required="" data-js-form-field="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="field-box js-field-box"> <label class="field-box__label">Телефон</label>
+                                            <div class="field-box__content"> <input class="field-box__input js-validate-field js-validate-field-phone js-field-box-input ui-input ui-input-phone" type="text" name="phone" placeholder="+7 (999) 123-12-12" required="" data-js-form-field="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="ui-dropdown ui-dropdown_select ui-dropdown_style_select js-dropdown" data-dropdown="select"> <input class="ui-dropdown__input js-dropdown-input" name="select" tabindex="-1"> <button class="ui-dropdown__button js-dropdown-button" type="button" role="combobox"> <span class="ui-dropdown__button-text js-dropdown-button-text" role="textbox"> Позвонить в ближайшее время </span> <span class="ui-dropdown__button-icon-box"><span class="ui-dropdown__button-icon"></span></span> </button>
+                                            <div class="ui-dropdown__popup js-dropdown-popup" aria-hidden="true">
+                                                <div class="ui-dropdown__scroll js-dropdown-scroll">
+                                                    <div class="ui-dropdown__list js-dropdown-list" tabindex="0" role="listbox">
+                                                        <div class="ui-dropdown__option is-selected js-dropdown-option" data-value="1" data-text-value="Позвонить в ближайшее время" role="option" aria-selected="true"> Позвонить в ближайшее время </div>
+                                                        <div class="ui-dropdown__option  js-dropdown-option" data-value="2" data-text-value="Выбор 2" role="option" aria-selected="false"> Выбор 2 </div>
+                                                        <div class="ui-dropdown__option  js-dropdown-option" data-value="3" data-text-value="Выбор 3" role="option" aria-selected="false"> Выбор 3 </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="field-box field-box_textarea js-field-box"> <label class="field-box__label">Ваш комментарий (опционально)</label>
+                                            <div class="field-box__content"> <textarea class=" field-box__textarea  js-field-box-input ui-textarea" name="message" placeholder="Ваш комментарий (опционально)" rows="6"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__form-footer"> <button type="submit" class="ui-button ui-button_fill ui-button_is-circle modal__form-submit"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                <use xlink:href="img/icons.svg#arrow"></use>
+                                            </svg> </span><span class="ui-button__text"> Отправить заявку </span> </button>
+                                    <div class="modal__form-agreement form__agreement form__agreement_center">
+                                        Нажимая кнопку, вы&nbsp;соглашаетесь с<a href="#">&nbsp;политикой конфиденциальности</a> </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-auth modal js-modal modal_direction_right" id="modal-login" aria-hidden="true" tabindex="-1">
+        <div class="modal__wrap">
+            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="Войти">
+                <picture class="modal__picture"> <img class="modal__picture-image lazy" data-src="img/login-modal.jpg" data-srcset="img/login-modal@2x.jpg" width="539" height="869" alt=""> </picture>
+                <div class="modal__inner js-modal-scrollbar">
+                    <div class="modal__inner-content">
+                        <div class="modal__header">
+                            <div class="modal__title">Войти</div> <!-- {
+                            isOrder ?
+                            <div class="modal__order">
+                                {
+                                    <div class:list={['modal__title', titleClass]} set:html={'Заказ 124141135'}></div>
+                                }
+                                {
+                                    <OrderStatus class="modal__order-status" status="completed"></OrderStatus>
+                                }
+                            </div>
+                            : ''
+                        } --> <button type="button" title="Закрыть" class="ui-button-icon ui-button-icon_style_outline modal__close js-modal-close "><svg class="ui-icon ui-icon-cross ui-button-icon__icon ">
+                                    <use xlink:href="img/icons.svg#cross"></use>
+                                </svg> </button>
+                        </div>
+                        <div class="modal__content js-modal-content">
+                            <form action="#" class="modal__form form js-form-validation">
+                                <div class="modal__form-grid l-grid l-gap-30">
+                                    <div class="form__column">
+                                        <div class="field-box js-field-box"> <label class="field-box__label">E-mail</label>
+                                            <div class="field-box__content"> <input class="field-box__input js-validate-field js-validate-field-email js-field-box-input ui-input" type="text" name="email" placeholder="E-mail" required="" data-js-form-field="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="field-box field-box_password field-box_show-password js-field-box" data-field-type="password"> <label class="field-box__label">Пароль</label>
+                                            <div class="field-box__content"> <input class="field-box__input js-validate-field js-field-box-input ui-input" type="password" name="password" placeholder="Пароль" required="" data-js-form-field="">
+                                                <button type="button" class="field-box__password-button js-field-box-password-button" title="Показать пароль" data-title="Скрыть пароль"><span></span></button>
+                                            </div>
+                                        </div>
+                                        <div class="modal__form-text u-text-align-right "> <button type="button" data-modal-open="#modal-recovery" class="ui-button ui-button_style_link"><span class="ui-button__text"> Забыли пароль? </span> </button> </div>
+                                    </div>
+                                </div>
+                                <div class="modal__form-footer"> <button type="submit" class="ui-button ui-button_fill ui-button_is-circle modal__form-submit"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                <use xlink:href="img/icons.svg#arrow"></use>
+                                            </svg> </span><span class="ui-button__text"> Войти </span> </button> </div>
+                            </form>
+                        </div>
+                        <div class="modal__footer">
+                            <div class="modal__form-text u-text-align-center">Нет аккаунта?
+                                <button type="button" data-modal-open="#modal-registration" class="ui-button ui-button_style_link ui-button_inline"><span class="ui-button__text"> Зарегистрироваться </span> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-auth modal-recovery modal js-modal modal_direction_right" id="modal-recovery" aria-hidden="true" tabindex="-1">
+        <div class="modal__wrap">
+            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="Восстановить пароль">
+                <picture class="modal__picture"> <img class="modal__picture-image lazy" data-src="img/login-modal.jpg" data-srcset="img/login-modal@2x.jpg" width="539" height="869" alt=""> </picture>
+                <div class="modal__inner js-modal-scrollbar">
+                    <div class="modal__inner-content">
+                        <div class="modal__header">
+                            <div class="modal__title">Восстановить пароль</div> <!-- {
+                            isOrder ?
+                            <div class="modal__order">
+                                {
+                                    <div class:list={['modal__title', titleClass]} set:html={'Заказ 124141135'}></div>
+                                }
+                                {
+                                    <OrderStatus class="modal__order-status" status="completed"></OrderStatus>
+                                }
+                            </div>
+                            : ''
+                        } --> <button type="button" title="Закрыть" class="ui-button-icon ui-button-icon_style_outline modal__close js-modal-close "><svg class="ui-icon ui-icon-cross ui-button-icon__icon ">
+                                    <use xlink:href="img/icons.svg#cross"></use>
+                                </svg> </button>
+                        </div>
+                        <div class="modal__content js-modal-content">
+                            <form action="#" class="modal__form modal-recovery__form modal-recovery-form form js-recovery-form">
+                                <div class="modal__form-main-text  modal-recovery-form__main-text">
+                                    Если вы&nbsp;забыли пароль, введите свой email и&nbsp;нажмите кнопку. Если введённый email правильный, на&nbsp;него придёт письмо со&nbsp;ссылкой, по&nbsp;которой вы&nbsp;сможете сбросить пароль.
+                                </div>
+                                <div class="modal__form-message modal-recovery-form__message">На&nbsp;ваш email отправлено письмо. Перейдите по&nbsp;ссылке, чтобы сбросить пароль.</div>
+                                <div class="modal__form-grid l-grid l-gap-30 modal-recovery-form__grid">
+                                    <div class="form__column">
+                                        <div class="field-box js-field-box"> <label class="field-box__label">E-mail</label>
+                                            <div class="field-box__content"> <input class="field-box__input js-recovery-form-email js-field-box-input ui-input" type="text" name="email" placeholder="E-mail" required="" data-js-form-field="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__form-footer"> <button type="submit" class="ui-button ui-button_fill ui-button_is-circle modal__form-submit modal-recovery-form__submit js-recovery-form-submit"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                <use xlink:href="img/icons.svg#arrow"></use>
+                                            </svg> </span><span class="ui-button__text"> Восстановить </span> </button> <button type="button" class="ui-button ui-button_fill ui-button_is-circle modal__form-submit modal-recovery-form__resend js-recovery-form-resend"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                <use xlink:href="img/icons.svg#arrow"></use>
+                                            </svg> </span><span class="ui-button__text"> Отправить повторно </span> </button> </div>
+                            </form>
+                        </div>
+                        <div class="modal__footer">
+                            <div class="modal__form-text u-text-align-center"> <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_link ui-button_inline"><span class="ui-button__text"> Вернуться на&nbsp;страницу входа </span> </button> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-auth modal-registration modal js-modal modal_direction_right" id="modal-registration" aria-hidden="true" tabindex="-1">
+        <div class="modal__wrap">
+            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="Регистрация">
+                <picture class="modal__picture"> <img class="modal__picture-image lazy" data-src="img/registration-modal.jpg" data-srcset="img/registration-modal@2x.jpg" width="539" height="869" alt=""> </picture>
+                <div class="modal__inner js-modal-scrollbar">
+                    <div class="modal__inner-content">
+                        <div class="modal__header">
+                            <div class="modal__title">Регистрация</div> <!-- {
+                            isOrder ?
+                            <div class="modal__order">
+                                {
+                                    <div class:list={['modal__title', titleClass]} set:html={'Заказ 124141135'}></div>
+                                }
+                                {
+                                    <OrderStatus class="modal__order-status" status="completed"></OrderStatus>
+                                }
+                            </div>
+                            : ''
+                        } --> <button type="button" title="Закрыть" class="ui-button-icon ui-button-icon_style_outline modal__close js-modal-close "><svg class="ui-icon ui-icon-cross ui-button-icon__icon ">
+                                    <use xlink:href="img/icons.svg#cross"></use>
+                                </svg> </button>
+                        </div>
+                        <div class="modal__content js-modal-content">
+                            <form action="#" class="modal__form modal-registration__form form js-form-validation">
+                                <div class="modal__form-main-text">
+                                    Для того, чтобы стать партнёром нашей компании, заполните анкету. После чего с&nbsp;вами свяжется менеджер для уточнения деталей и&nbsp;подписания договора.
+                                </div>
+                                <div class="modal__form-grid l-grid l-gap-30">
+                                    <div class="form__column">
+                                        <div class="field-box js-field-box"> <label class="field-box__label">ИНН</label>
+                                            <div class="field-box__content"> <input class="field-box__input js-validate-field js-field-box-input ui-input" type="text" name="inn" placeholder="ИНН" required="" data-js-form-field="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="field-box js-field-box"> <label class="field-box__label">Наименование компании</label>
+                                            <div class="field-box__content"> <input class="field-box__input js-validate-field js-field-box-input ui-input" type="text" name="company" placeholder="Наименование компании" required="" data-js-form-field="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="field-box js-field-box"> <label class="field-box__label">Как к вам обращаться?</label>
+                                            <div class="field-box__content"> <input class="field-box__input js-validate-field js-field-box-input ui-input" type="text" name="name" placeholder="Как к вам обращаться?" required="" data-js-form-field="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="field-box js-field-box"> <label class="field-box__label">Телефон</label>
+                                            <div class="field-box__content"> <input class="field-box__input js-validate-field js-validate-field-phone js-field-box-input ui-input ui-input-phone" type="text" name="phone" placeholder="+7 (999) 123-12-12" required="" data-js-form-field="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="field-box js-field-box"> <label class="field-box__label">E-mail</label>
+                                            <div class="field-box__content"> <input class="field-box__input js-validate-field js-validate-field-email js-field-box-input ui-input" type="text" name="email" placeholder="E-mail" required="" data-js-form-field="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="field-box field-box_password js-field-box" data-field-type="password"> <label class="field-box__label">Пароль</label>
+                                            <div class="field-box__content"> <input class="field-box__input js-validate-field js-validate-field-password js-field-box-input ui-input" type="password" name="password" placeholder="Пароль" required="" data-js-form-field="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="field-box field-box_password js-field-box" data-field-type="password"> <label class="field-box__label">Повторите пароль</label>
+                                            <div class="field-box__content"> <input class="field-box__input js-validate-field js-validate-field-repeat-password js-field-box-input ui-input" type="password" name="repeat_password" placeholder="Повторите пароль" required="" data-js-form-field="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__form-footer"> <button type="submit" class="ui-button ui-button_fill ui-button_is-circle modal__form-submit"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                <use xlink:href="img/icons.svg#arrow"></use>
+                                            </svg> </span><span class="ui-button__text"> Зарегистрироваться </span> </button>
+                                    <div class="modal__form-agreement form__agreement form__agreement_center">
+                                        Нажимая кнопку, вы&nbsp;соглашаетесь с<a href="#">&nbsp;политикой конфиденциальности</a> </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal__footer">
+                            <div class="modal__form-text u-text-align-center">Уже есть аккаунт?
+                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_link ui-button_inline"><span class="ui-button__text"> Войти </span> </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-add-to-cart js-modal-add-to-cart modal js-modal modal_direction_right" id="modal-add-to-cart" aria-hidden="true" tabindex="-1">
+        <div class="modal__wrap">
+            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="Добавить в корзину">
+                <picture class="modal__picture"> <img class="modal__picture-image lazy" data-src="img/modal-product.png" data-srcset="img/modal-product@2x.png" width="758" height="758" alt=""> </picture>
+                <div class="modal__inner js-modal-scrollbar">
+                    <div class="modal__inner-content">
+                        <div class="modal__header">
+                            <div class="modal__title">Добавить в корзину</div> <!-- {
+                            isOrder ?
+                            <div class="modal__order">
+                                {
+                                    <div class:list={['modal__title', titleClass]} set:html={'Заказ 124141135'}></div>
+                                }
+                                {
+                                    <OrderStatus class="modal__order-status" status="completed"></OrderStatus>
+                                }
+                            </div>
+                            : ''
+                        } --> <button type="button" title="Закрыть" class="ui-button-icon ui-button-icon_style_outline modal__close js-modal-close "><svg class="ui-icon ui-icon-cross ui-button-icon__icon ">
+                                    <use xlink:href="img/icons.svg#cross"></use>
+                                </svg> </button>
+                        </div>
+                        <div class="modal__content js-modal-content">
+                            <div class="modal__options-list"> <button type="button" class="modal__options-list-button js-modal-add-to-cart-option"> 164-80-88 </button><button type="button" class="modal__options-list-button js-modal-add-to-cart-option"> 164-84-92 </button><button type="button" class="modal__options-list-button js-modal-add-to-cart-option"> 164-88-96 </button><button type="button" class="modal__options-list-button js-modal-add-to-cart-option"> 164-96-104 </button><button type="button" class="modal__options-list-button js-modal-add-to-cart-option"> 164-100-108 </button><button type="button" class="modal__options-list-button js-modal-add-to-cart-option"> 164-104-112 </button><button type="button" class="modal__options-list-button js-modal-add-to-cart-option"> 164-108-116 </button> </div>
+                            <div class="modal__footer modal__footer_bottom"> <button type="button" disabled="disabled" class="ui-button ui-button_fill ui-button_is-circle modal__button js-add-to-cart-button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                        </svg> </span><span class="ui-button__text"> Добавить в корзину </span> </button> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
