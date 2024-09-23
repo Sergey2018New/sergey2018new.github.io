@@ -531,7 +531,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="product__buttons-wrapper">
-                                                                        <div class="product__buttons"> <button type="button" data-modal-open="#modal-add-to-cart" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Добавить</span>
+                                                                        <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-add-to-cart" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Добавить</span>
                                                                                     в&nbsp;корзину
                                                                                 </span> </button> </div>
                                                                     </div>
@@ -556,7 +556,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="product__buttons-wrapper">
-                                                                        <div class="product__buttons"> <button type="button" data-modal-open="#modal-add-to-cart" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Добавить</span>
+                                                                        <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-add-to-cart" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Добавить</span>
                                                                                     в&nbsp;корзину
                                                                                 </span> </button> </div>
                                                                     </div>
@@ -585,7 +585,7 @@
                                                                         </div>
                                                                     </div>
                                                                     <div class="product__buttons-wrapper">
-                                                                        <div class="product__buttons"> <button type="button" data-modal-open="#modal-add-to-cart" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Добавить</span>
+                                                                        <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-add-to-cart" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Добавить</span>
                                                                                     в&nbsp;корзину
                                                                                 </span> </button> </div>
                                                                     </div>
@@ -666,7 +666,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="header__popup-buttons"> <button type="button" class="ui-button ui-button_style_outline header__popup-button js-header-popup-close"><span class="ui-button__text"> Продолжить покупки </span> </button> <a href="" class="ui-button ui-button_is-circle header__popup-button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                <div class="header__popup-buttons"> <button type="button" href="#" class="ui-button ui-button_style_outline header__popup-button js-header-popup-close"><span class="ui-button__text"> Продолжить покупки </span> </button> <a href="" class="ui-button ui-button_is-circle header__popup-button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                                 <use xlink:href="img/icons.svg#arrow"></use>
                                             </svg> </span><span class="ui-button__text"> Перейти в&nbsp;корзину </span> </a> </div>
                             </div>
@@ -685,8 +685,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="header__popup-buttons"> <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_outline header__popup-button"><span class="ui-button__text"> Войти в ЛК </span> </button>
-                                    <button type="button" data-modal-open="#modal-registrations" class="ui-button ui-button_is-circle header__popup-button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                <div class="header__popup-buttons"> <button type="button" href="#" data-modal-open="#modal-login" class="ui-button ui-button_style_outline header__popup-button"><span class="ui-button__text"> Войти в ЛК </span> </button>
+                                    <button type="button" href="#" data-modal-open="#modal-registrations" class="ui-button ui-button_is-circle header__popup-button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                                 <use xlink:href="img/icons.svg#arrow"></use>
                                             </svg> </span><span class="ui-button__text"> Регистрация </span> </button>
                                 </div>
@@ -698,7 +698,7 @@
         </header>
         <main class="main">
             <section class="home-section section">
-                <div class="home-section__inner">
+                <div class="home-section__inner js-parallax" data-parallax-orientation="down" data-parallax-scale="2" data-parallax-delay="0">
                     <div class="swiper home-section__slider js-home-slider">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide home-section__slide is-animation">
@@ -865,11 +865,13 @@
                 <div class="advantages-section__container">
                     <h2 class="advantages-section__title section-title section-title_center">Нас постоянно рекомендуют тысячи довольных покупателей</h2>
                     <div class="advantages-section__image-wrapper">
-                        <picture class="advantages-section__image-box js-advantages-image-box">
-                            <source srcset="img/bg-advantages-mobile.jpg, img/bg-advantages-mobile@2x.jpg 2x" media="(max-width: 575px)"> <img class="advantages-section__image" src="img/bg-advantages.jpg" srcset="img/bg-advantages@2x.jpg 2x" width="1920" height="1245" alt="" loading="lazy">
-                        </picture>
+                        <div class="advantages-section__image-block js-advantages-image-block">
+                            <picture class="advantages-section__image-box js-advantages-image-box">
+                                <source srcset="img/bg-advantages-mobile.jpg, img/bg-advantages-mobile@2x.jpg 2x" media="(max-width: 575px)"> <img class="advantages-section__image js-advantages-image" src="img/bg-advantages.jpg" srcset="img/bg-advantages@2x.jpg 2x" width="1920" height="1245" alt="" loading="lazy">
+                            </picture>
+                        </div>
                     </div>
-                    <div class="content js-advantages-content">
+                    <div class="advantages-section__content js-advantages-content">
                         <div class="advantages-section__spacer"></div>
                         <div class="advantages-section__container container">
                             <div class="advantages-section__items">
@@ -930,8 +932,8 @@
                                             </div>
                                         </div>
                                         <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
-                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
+                                                <button type="button" href="#" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
                                             </div>
                                         </div>
                                     </div>
@@ -954,8 +956,8 @@
                                             </div>
                                         </div>
                                         <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
-                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
+                                                <button type="button" href="#" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
                                             </div>
                                         </div>
                                     </div>
@@ -978,8 +980,8 @@
                                             </div>
                                         </div>
                                         <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
-                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
+                                                <button type="button" href="#" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
                                             </div>
                                         </div>
                                     </div>
@@ -1005,8 +1007,8 @@
                                             </div>
                                         </div>
                                         <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
-                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
+                                                <button type="button" href="#" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
                                             </div>
                                         </div>
                                     </div>
@@ -1032,8 +1034,8 @@
                                             </div>
                                         </div>
                                         <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
-                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
+                                                <button type="button" href="#" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
                                             </div>
                                         </div>
                                     </div>
@@ -1056,8 +1058,8 @@
                                             </div>
                                         </div>
                                         <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
-                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
+                                                <button type="button" href="#" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
                                             </div>
                                         </div>
                                     </div>
@@ -1080,8 +1082,8 @@
                                             </div>
                                         </div>
                                         <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
-                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
+                                                <button type="button" href="#" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
                                             </div>
                                         </div>
                                     </div>
@@ -1107,8 +1109,8 @@
                                             </div>
                                         </div>
                                         <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
-                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
+                                                <button type="button" href="#" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
                                             </div>
                                         </div>
                                     </div>
@@ -1140,7 +1142,7 @@
                             </div>
                             <div class="our-promotions__row">
                                 <div class="our-promotions__items">
-                                    <div class="our-promotions__product-item animation animation_zoomIn js-animation product" data-animation-type="zoomIn" data-animation-scale="0.8"> <a href="#" class="product__link"></a>
+                                    <div class="our-promotions__product-item animation animation_visible animation_zoomIn js-animation product" data-animation-type="zoomIn" data-animation-duration="1.5" data-animation-start="top 95%"> <a href="#" class="product__link"></a>
                                         <div class="product__image-wrapper">
                                             <div class="product__image-box"> <img class="product__image" src="img/novelty/1.jpg" srcset="img/novelty/1@2x.jpg 2x" width="312" height="312" alt="" loading="lazy"> </div>
                                         </div>
@@ -1160,12 +1162,12 @@
                                             </div>
                                         </div>
                                         <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
-                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
+                                                <button type="button" href="#" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="our-promotions__product-item animation animation_zoomIn js-animation product" data-animation-type="zoomIn" data-animation-scale="0.8"> <a href="#" class="product__link"></a>
+                                    <div class="our-promotions__product-item animation animation_visible animation_zoomIn js-animation product" data-animation-type="zoomIn" data-animation-duration="1.5" data-animation-start="top 95%"> <a href="#" class="product__link"></a>
                                         <div class="product__image-wrapper">
                                             <div class="product__image-box"> <img class="product__image" src="img/novelty/2.jpg" srcset="img/novelty/2@2x.jpg 2x" width="312" height="312" alt="" loading="lazy"> </div>
                                         </div>
@@ -1185,12 +1187,12 @@
                                             </div>
                                         </div>
                                         <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
-                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
+                                                <button type="button" href="#" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="our-promotions__product-item animation animation_zoomIn js-animation product" data-animation-type="zoomIn" data-animation-scale="0.8"> <a href="#" class="product__link"></a>
+                                    <div class="our-promotions__product-item animation animation_visible animation_zoomIn js-animation product" data-animation-type="zoomIn" data-animation-duration="1.5" data-animation-start="top 95%"> <a href="#" class="product__link"></a>
                                         <div class="product__image-wrapper">
                                             <div class="product__image-box"> <img class="product__image" src="img/novelty/3.jpg" srcset="img/novelty/3@2x.jpg 2x" width="312" height="312" alt="" loading="lazy"> </div>
                                         </div>
@@ -1210,8 +1212,8 @@
                                             </div>
                                         </div>
                                         <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
-                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
+                                                <button type="button" href="#" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
                                             </div>
                                         </div>
                                     </div>
@@ -1257,8 +1259,8 @@
                                             </div>
                                         </div>
                                         <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
-                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
+                                                <button type="button" href="#" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
                                             </div>
                                         </div>
                                     </div>
@@ -1284,8 +1286,8 @@
                                             </div>
                                         </div>
                                         <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
-                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
+                                                <button type="button" href="#" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
                                             </div>
                                         </div>
                                     </div>
@@ -1311,8 +1313,8 @@
                                             </div>
                                         </div>
                                         <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
-                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
+                                                <button type="button" href="#" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
                                             </div>
                                         </div>
                                     </div>
@@ -1338,8 +1340,8 @@
                                             </div>
                                         </div>
                                         <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
-                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
+                                                <button type="button" href="#" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
                                             </div>
                                         </div>
                                     </div>
@@ -1365,8 +1367,8 @@
                                             </div>
                                         </div>
                                         <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
-                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
+                                                <button type="button" href="#" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
                                             </div>
                                         </div>
                                     </div>
@@ -1392,8 +1394,8 @@
                                             </div>
                                         </div>
                                         <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
-                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
+                                                <button type="button" href="#" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
                                             </div>
                                         </div>
                                     </div>
@@ -1419,8 +1421,8 @@
                                             </div>
                                         </div>
                                         <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
-                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
+                                                <button type="button" href="#" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
                                             </div>
                                         </div>
                                     </div>
@@ -1446,8 +1448,8 @@
                                             </div>
                                         </div>
                                         <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
-                                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
+                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-registration" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Зарегистрироваться</span> <span class="u-visible-mobile">Регистрация</span> </span> </button>
+                                                <button type="button" href="#" data-modal-open="#modal-login" class="ui-button ui-button_style_white product__button product__button_login"><span class="ui-button__text"> Войти в&nbsp;личный кабинет </span> </button>
                                             </div>
                                         </div>
                                     </div>
@@ -1494,7 +1496,7 @@
                         <div class="swiper articles-section__swiper js-swiper-articles">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide articles-section__swiper-item">
-                                    <div class="articles-section__item article-item article-item_video"> <a href="#" class="article-item__link" data-fancybox="">
+                                    <div class="articles-section__item article-item article-item_video"> <a href="https://www.youtube.com/watch?v=_hHwz1UWJmI&t=2s" class="article-item__link" data-fancybox="">
                                             <div class="article-item__image-wrapper">
                                                 <div class="article-item__image-box"> <img class="article-item__image" src="img/video/1.jpg" srcset="img/video/1@2x.jpg 2x" width="487" height="359" alt="" loading="lazy"> </div>
                                                 <div class="article-item__play">
@@ -1521,7 +1523,7 @@
                                         </a> </div>
                                 </div>
                                 <div class="swiper-slide articles-section__swiper-item">
-                                    <div class="articles-section__item article-item article-item_video"> <a href="#" class="article-item__link" data-fancybox="">
+                                    <div class="articles-section__item article-item article-item_video"> <a href="https://www.youtube.com/watch?v=_hHwz1UWJmI&t=2s" class="article-item__link" data-fancybox="">
                                             <div class="article-item__image-wrapper">
                                                 <div class="article-item__image-box"> <img class="article-item__image" src="img/video/2.jpg" srcset="img/video/2@2x.jpg 2x" width="487" height="359" alt="" loading="lazy"> </div>
                                                 <div class="article-item__play">
@@ -1548,7 +1550,7 @@
                                         </a> </div>
                                 </div>
                                 <div class="swiper-slide articles-section__swiper-item">
-                                    <div class="articles-section__item article-item article-item_video"> <a href="#" class="article-item__link" data-fancybox="">
+                                    <div class="articles-section__item article-item article-item_video"> <a href="https://www.youtube.com/watch?v=_hHwz1UWJmI&t=2s" class="article-item__link" data-fancybox="">
                                             <div class="article-item__image-wrapper">
                                                 <div class="article-item__image-box"> <img class="article-item__image" src="img/video/3.jpg" srcset="img/video/3@2x.jpg 2x" width="487" height="359" alt="" loading="lazy"> </div>
                                                 <div class="article-item__play">
@@ -1575,7 +1577,7 @@
                                         </a> </div>
                                 </div>
                                 <div class="swiper-slide articles-section__swiper-item">
-                                    <div class="articles-section__item article-item article-item_video"> <a href="#" class="article-item__link" data-fancybox="">
+                                    <div class="articles-section__item article-item article-item_video"> <a href="https://www.youtube.com/watch?v=_hHwz1UWJmI&t=2s" class="article-item__link" data-fancybox="">
                                             <div class="article-item__image-wrapper">
                                                 <div class="article-item__image-box"> <img class="article-item__image" src="img/video/1.jpg" srcset="img/video/1@2x.jpg 2x" width="487" height="359" alt="" loading="lazy"> </div>
                                                 <div class="article-item__play">
@@ -1602,7 +1604,7 @@
                                         </a> </div>
                                 </div>
                                 <div class="swiper-slide articles-section__swiper-item">
-                                    <div class="articles-section__item article-item article-item_video"> <a href="#" class="article-item__link" data-fancybox="">
+                                    <div class="articles-section__item article-item article-item_video"> <a href="https://www.youtube.com/watch?v=_hHwz1UWJmI&t=2s" class="article-item__link" data-fancybox="">
                                             <div class="article-item__image-wrapper">
                                                 <div class="article-item__image-box"> <img class="article-item__image" src="img/video/2.jpg" srcset="img/video/2@2x.jpg 2x" width="487" height="359" alt="" loading="lazy"> </div>
                                                 <div class="article-item__play">
@@ -1629,7 +1631,7 @@
                                         </a> </div>
                                 </div>
                                 <div class="swiper-slide articles-section__swiper-item">
-                                    <div class="articles-section__item article-item article-item_video"> <a href="#" class="article-item__link" data-fancybox="">
+                                    <div class="articles-section__item article-item article-item_video"> <a href="https://www.youtube.com/watch?v=_hHwz1UWJmI&t=2s" class="article-item__link" data-fancybox="">
                                             <div class="article-item__image-wrapper">
                                                 <div class="article-item__image-box"> <img class="article-item__image" src="img/video/3.jpg" srcset="img/video/3@2x.jpg 2x" width="487" height="359" alt="" loading="lazy"> </div>
                                                 <div class="article-item__play">
@@ -1686,8 +1688,8 @@
                 </div>
             </section>
             <section class="brands-section section">
-                <div class="container">
-                    <div class="brands-section__content js-swiper-brands-section">
+                <div class="brands-section__container container">
+                    <div class="brands-section__content js-swiper-brands-section ">
                         <div class="brands-section__heading">
                             <h2 class="brands-section__title section-title">Бренды</h2> <a href="" class="ui-button ui-button_is-circle brands-section__button u-hidden-mobile"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                         <use xlink:href="img/icons.svg#arrow"></use>
@@ -1874,7 +1876,7 @@
                         <div class="swiper articles-section__swiper js-swiper-articles">
                             <div class="swiper-wrapper">
                                 <div class="swiper-slide articles-section__swiper-item">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
+                                    <div class="articles-section__item article-item"> <a href="" class="article-item__link">
                                             <div class="article-item__image-wrapper">
                                                 <div class="article-item__image-box"> <img class="article-item__image" src="img/news/1.jpg" srcset="img/news/1@2x.jpg 2x" width="487" height="359" alt="" loading="lazy"> </div>
                                             </div>
@@ -1888,7 +1890,7 @@
                                         </a> </div>
                                 </div>
                                 <div class="swiper-slide articles-section__swiper-item">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
+                                    <div class="articles-section__item article-item"> <a href="" class="article-item__link">
                                             <div class="article-item__image-wrapper">
                                                 <div class="article-item__image-box"> <img class="article-item__image" src="img/news/2.jpg" srcset="img/news/2@2x.jpg 2x" width="487" height="359" alt="" loading="lazy"> </div>
                                             </div>
@@ -1902,7 +1904,7 @@
                                         </a> </div>
                                 </div>
                                 <div class="swiper-slide articles-section__swiper-item">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
+                                    <div class="articles-section__item article-item"> <a href="" class="article-item__link">
                                             <div class="article-item__image-wrapper">
                                                 <div class="article-item__image-box"> <img class="article-item__image" src="img/news/3.jpg" srcset="img/news/3@2x.jpg 2x" width="487" height="359" alt="" loading="lazy"> </div>
                                             </div>
@@ -1916,7 +1918,7 @@
                                         </a> </div>
                                 </div>
                                 <div class="swiper-slide articles-section__swiper-item">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
+                                    <div class="articles-section__item article-item"> <a href="" class="article-item__link">
                                             <div class="article-item__image-wrapper">
                                                 <div class="article-item__image-box"> <img class="article-item__image" src="img/news/1.jpg" srcset="img/news/1@2x.jpg 2x" width="487" height="359" alt="" loading="lazy"> </div>
                                             </div>
@@ -1930,7 +1932,7 @@
                                         </a> </div>
                                 </div>
                                 <div class="swiper-slide articles-section__swiper-item">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
+                                    <div class="articles-section__item article-item"> <a href="" class="article-item__link">
                                             <div class="article-item__image-wrapper">
                                                 <div class="article-item__image-box"> <img class="article-item__image" src="img/news/2.jpg" srcset="img/news/2@2x.jpg 2x" width="487" height="359" alt="" loading="lazy"> </div>
                                             </div>
@@ -1944,7 +1946,7 @@
                                         </a> </div>
                                 </div>
                                 <div class="swiper-slide articles-section__swiper-item">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
+                                    <div class="articles-section__item article-item"> <a href="" class="article-item__link">
                                             <div class="article-item__image-wrapper">
                                                 <div class="article-item__image-box"> <img class="article-item__image" src="img/news/3.jpg" srcset="img/news/3@2x.jpg 2x" width="487" height="359" alt="" loading="lazy"> </div>
                                             </div>
@@ -1986,7 +1988,7 @@
                             <div class="cooperation-section__title section-title">
                                 <p>Компания CSK нацелена на&nbsp;долгосрочное сотрудничество</p>
                             </div>
-                            <div class="cooperation-section__buttons"> <button type="button" data-modal-open="#modal-callback" class="ui-button ui-button_style_white ui-button_is-circle cooperation-section__button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                            <div class="cooperation-section__buttons"> <button type="button" href="#" data-modal-open="#modal-callback" class="ui-button ui-button_style_white ui-button_is-circle cooperation-section__button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                             <use xlink:href="img/icons.svg#arrow"></use>
                                         </svg> </span><span class="ui-button__text"> Связаться с&nbsp;нами </span> </button> <a href="" class="ui-button cooperation-section__button"><span class="ui-button__text"> Подробнее </span> </a> </div>
                         </div>
@@ -2162,7 +2164,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal__form-footer"> <button type="submit" class="ui-button ui-button_fill ui-button_is-circle modal__form-submit"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                <div class="modal__form-footer"> <button type="submit" href="#" class="ui-button ui-button_fill ui-button_is-circle modal__form-submit"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                                 <use xlink:href="img/icons.svg#arrow"></use>
                                             </svg> </span><span class="ui-button__text"> Отправить заявку </span> </button>
                                     <div class="modal__form-agreement form__agreement form__agreement_center">
@@ -2212,17 +2214,17 @@
                                                 <button type="button" class="field-box__password-button js-field-box-password-button" title="Показать пароль" data-title="Скрыть пароль"><span></span></button>
                                             </div>
                                         </div>
-                                        <div class="modal__form-text u-text-align-right "> <button type="button" data-modal-open="#modal-recovery" class="ui-button ui-button_style_link"><span class="ui-button__text"> Забыли пароль? </span> </button> </div>
+                                        <div class="modal__form-text u-text-align-right "> <button type="button" href="#" data-modal-open="#modal-recovery" class="ui-button ui-button_style_link"><span class="ui-button__text"> Забыли пароль? </span> </button> </div>
                                     </div>
                                 </div>
-                                <div class="modal__form-footer"> <button type="submit" class="ui-button ui-button_fill ui-button_is-circle modal__form-submit"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                <div class="modal__form-footer"> <button type="submit" href="#" class="ui-button ui-button_fill ui-button_is-circle modal__form-submit"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                                 <use xlink:href="img/icons.svg#arrow"></use>
                                             </svg> </span><span class="ui-button__text"> Войти </span> </button> </div>
                             </form>
                         </div>
                         <div class="modal__footer">
                             <div class="modal__form-text u-text-align-center">Нет аккаунта?
-                                <button type="button" data-modal-open="#modal-registration" class="ui-button ui-button_style_link ui-button_inline"><span class="ui-button__text"> Зарегистрироваться </span> </button>
+                                <button type="button" href="#" data-modal-open="#modal-registration" class="ui-button ui-button_style_link ui-button_inline"><span class="ui-button__text"> Зарегистрироваться </span> </button>
                             </div>
                         </div>
                     </div>
@@ -2266,15 +2268,15 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal__form-footer"> <button type="submit" class="ui-button ui-button_fill ui-button_is-circle modal__form-submit modal-recovery-form__submit js-recovery-form-submit"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                <div class="modal__form-footer"> <button type="submit" href="#" class="ui-button ui-button_fill ui-button_is-circle modal__form-submit modal-recovery-form__submit js-recovery-form-submit"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                                 <use xlink:href="img/icons.svg#arrow"></use>
-                                            </svg> </span><span class="ui-button__text"> Восстановить </span> </button> <button type="button" class="ui-button ui-button_fill ui-button_is-circle modal__form-submit modal-recovery-form__resend js-recovery-form-resend"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                            </svg> </span><span class="ui-button__text"> Восстановить </span> </button> <button type="button" href="#" class="ui-button ui-button_fill ui-button_is-circle modal__form-submit modal-recovery-form__resend js-recovery-form-resend"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                                 <use xlink:href="img/icons.svg#arrow"></use>
                                             </svg> </span><span class="ui-button__text"> Отправить повторно </span> </button> </div>
                             </form>
                         </div>
                         <div class="modal__footer">
-                            <div class="modal__form-text u-text-align-center"> <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_link ui-button_inline"><span class="ui-button__text"> Вернуться на&nbsp;страницу входа </span> </button> </div>
+                            <div class="modal__form-text u-text-align-center"> <button type="button" href="#" data-modal-open="#modal-login" class="ui-button ui-button_style_link ui-button_inline"><span class="ui-button__text"> Вернуться на&nbsp;страницу входа </span> </button> </div>
                         </div>
                     </div>
                 </div>
@@ -2352,7 +2354,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="modal__form-footer"> <button type="submit" class="ui-button ui-button_fill ui-button_is-circle modal__form-submit"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                <div class="modal__form-footer"> <button type="submit" href="#" class="ui-button ui-button_fill ui-button_is-circle modal__form-submit"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                                 <use xlink:href="img/icons.svg#arrow"></use>
                                             </svg> </span><span class="ui-button__text"> Зарегистрироваться </span> </button>
                                     <div class="modal__form-agreement form__agreement form__agreement_center">
@@ -2362,7 +2364,7 @@
                         </div>
                         <div class="modal__footer">
                             <div class="modal__form-text u-text-align-center">Уже есть аккаунт?
-                                <button type="button" data-modal-open="#modal-login" class="ui-button ui-button_style_link ui-button_inline"><span class="ui-button__text"> Войти </span> </button>
+                                <button type="button" href="#" data-modal-open="#modal-login" class="ui-button ui-button_style_link ui-button_inline"><span class="ui-button__text"> Войти </span> </button>
                             </div>
                         </div>
                     </div>
@@ -2394,7 +2396,7 @@
                         </div>
                         <div class="modal__content js-modal-content">
                             <div class="modal__options-list"> <button type="button" class="modal__options-list-button js-modal-add-to-cart-option"> 164-80-88 </button><button type="button" class="modal__options-list-button js-modal-add-to-cart-option"> 164-84-92 </button><button type="button" class="modal__options-list-button js-modal-add-to-cart-option"> 164-88-96 </button><button type="button" class="modal__options-list-button js-modal-add-to-cart-option"> 164-96-104 </button><button type="button" class="modal__options-list-button js-modal-add-to-cart-option"> 164-100-108 </button><button type="button" class="modal__options-list-button js-modal-add-to-cart-option"> 164-104-112 </button><button type="button" class="modal__options-list-button js-modal-add-to-cart-option"> 164-108-116 </button> </div>
-                            <div class="modal__footer modal__footer_bottom"> <button type="button" disabled="disabled" class="ui-button ui-button_fill ui-button_is-circle modal__button js-add-to-cart-button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                            <div class="modal__footer modal__footer_bottom"> <button type="button" href="#" disabled="disabled" class="ui-button ui-button_fill ui-button_is-circle modal__button js-add-to-cart-button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                             <use xlink:href="img/icons.svg#arrow"></use>
                                         </svg> </span><span class="ui-button__text"> Добавить в корзину </span> </button> </div>
                         </div>
