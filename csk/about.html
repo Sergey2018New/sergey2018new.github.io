@@ -894,7 +894,9 @@
                 <div class="container">
                     <div class="video-section__video video video_size_lg"> <a href="https://www.youtube.com/watch?v=_hHwz1UWJmI&t=2s" class="video__link" data-fancybox>
                             <div class="video__inner">
-                                <div class="video__image-box"> <img class="video__image" src="/img/video.jpg" srcset="/img/video@2x.jpg 2x" width="1500" height="800" alt="" loading="lazy"> </div>
+                                <picture class="video__image-box">
+                                    <source media="(max-width: 575px)" srcset="/img/video-575.jpg 1x, /img/video-575@2x.jpg"> <img class="video__image" src="/img/video.jpg" srcset="/img/video@2x.jpg 2x" width="1500" height="800" alt="" loading="lazy">
+                                </picture>
                                 <div class="video__play">
                                     <div class="video__play-inner">
                                         <div class="video__play-icon-box"> <svg class="ui-icon ui-icon-play">
