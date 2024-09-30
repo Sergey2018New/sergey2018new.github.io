@@ -24,6 +24,70 @@
     <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 
+    <link rel="preload" as="font" fetchpriority="high" href="fonts/Verdana/VerdanaPro-Regular.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" fetchpriority="high" href="fonts/Verdana/VerdanaPro-SemiBold.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" fetchpriority="high" href="fonts/Cruinn/CruinnRegular.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" fetchpriority="high" href="fonts/Cruinn/CruinnMedium.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" fetchpriority="high" href="fonts/Cruinn/CruinnBold.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" fetchpriority="high" href="fonts/NeueMachina-Medium.woff2" type="font/woff2" crossorigin="anonymous">
+
+    <style>
+        @font-face {
+            font-family: 'VerdanaPro';
+            font-weight: 400;
+            font-display: swap;
+            src: url('fonts/Verdana/VerdanaPro-Regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'VerdanaPro';
+            font-weight: 500;
+            font-display: swap;
+            src: url('fonts/Verdana/VerdanaPro-Regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'VerdanaPro';
+            font-weight: 600;
+            font-display: swap;
+            src: url('fonts/Verdana/VerdanaPro-SemiBold.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Cruinn';
+            font-weight: 400;
+            font-display: swap;
+            src: url('fonts/Cruinn/CruinnBold.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Cruinn';
+            font-weight: 500;
+            font-display: swap;
+            src: url('fonts/Cruinn/CruinnMedium.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Cruinn';
+            font-weight: 600;
+            font-display: swap;
+            src: url('fonts/Cruinn/CruinnBold.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'NeueMachina-Medium';
+            font-weight: 500;
+            font-display: swap;
+            src: url('fonts/NeueMachina-Medium.woff2') format('woff2');
+        }
+
+        :root {
+            --font-family: "VerdanaPro", "Arial", sans-serif;
+            --font-family-second: "Cruinn", "Arial", sans-serif;
+            --font-family-neue-machina: "Neue Machina", "Arial", sans-serif;
+        }
+    </style>
+
     <link rel="stylesheet" href="css/style.css" />
     <script type="module" src="js/main.js"></script>
 </head>
