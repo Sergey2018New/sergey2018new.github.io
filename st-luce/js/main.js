@@ -6,7 +6,9 @@ function YD(s="max"){const e="_dynamic_adapt_",t="data-da",i=r();a(i).forEach(m=
                                 </div>`,_.insertAdjacentHTML("beforeend",L)}},T.readAsDataURL(m)}}else L=`<div class="ui-attach__file js-attach-file" data-id="${m.lastModified}" data-name="${m.name}">
                     <div class="ui-attach__file-box">
                     <span class="ui-attach__file-icon ui-attach__file-icon_${x.trim()}"></span>
-                    <div class="ui-attach__file-name">${m.name}</div>
+                    <div class="ui-attach__file-name">
+                    <div class="ui-attach__file-name-text">${m.name.slice(0,m.name.length-x.trim().length-1)}</div>
+                    <div class="ui-attach__file-ext">.${x.trim()}</div></div>
                     <button type="button" class="ui-attach__file-remove js-attach-remove" title="Удалить" aria-label="Удалить"
                     ></button>
                     </div>

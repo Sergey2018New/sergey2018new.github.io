@@ -1299,15 +1299,6 @@
                         <div class="p-cart__column">
                             <div class="p-cart__checkboxes">
                                 <label class="ui-checkbox ui-checkbox_checkbox">
-                                    <input class="ui-checkbox__input " type="checkbox" name="purchase_price" checked />
-                                    <span class="ui-checkbox__checked">
-                                        <span class="ui-checkbox__checked-icon"></span>
-                                        <span class="ui-checkbox__focused"></span>
-                                    </span>
-
-                                    <span class="ui-checkbox__text">Закупочная цена</span>
-                                </label>
-                                <label class="ui-checkbox ui-checkbox_checkbox">
                                     <input class="ui-checkbox__input " type="checkbox" name="hide_price" />
                                     <span class="ui-checkbox__checked">
                                         <span class="ui-checkbox__checked-icon"></span>
@@ -1316,6 +1307,9 @@
 
                                     <span class="ui-checkbox__text">Скрыть цену</span>
                                 </label>
+                                <button type="button" class="p-cart__control-button" data-modal-open="#modal_upload">
+                                    Загрузить в&nbsp;<span class="u-text-highlighted">.Excel</span>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -3998,6 +3992,54 @@
                                 </button>
                             </div>
                         </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal-upload modal js-modal" id="modal_upload" aria-hidden="true" tabindex="-1">
+        <div class="modal__wrap">
+            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="Загрузить excel">
+
+                <div class="modal__inner">
+                    <div class="modal__heading">
+                        <div class="modal__title">Загрузить excel</div>
+
+                        <button type="button" class="ui-button-icon ui-button-icon_style_black modal__close js-modal-close" title="Закрыть"><svg class="ui-icon ui-icon-cross ui-button-icon__icon">
+                                <use xlink:href="img/icons.svg#cross"></use>
+                            </svg>
+
+                        </button>
+                    </div>
+                    <div class="modal__content js-modal-content">
+
+                        <div class="ui-attach ui-attach_files modal__upload js-attach">
+                            <div class="ui-attach__files js-attach-files"></div>
+                            <label class="ui-attach__label">
+                                <input type="file" class="ui-attach__input js-attach-input" name="files[]" aria-label="Загрузите файл" accept=".xls,.xlsx" data-message-extension="Допустимые форматы файлов: XLS, XLSX" data-max-size="10" data-message-max-size="Максимальный размер файла 10 мб" data-max-files="1">
+                                <span class="ui-attach__focused"></span>
+                                <span class="ui-attach__icon-box">
+                                    <svg class="ui-icon ui-icon-attach ui-attach__icon">
+                                        <use xlink:href="img/icons.svg#attach"></use>
+                                    </svg>
+                                </span><span class="ui-attach__text">Пожалуйста, выберите или перетащите файл Excel</span>
+                                <span class="ui-attach__drag-area js-attach-drag-area"></span>
+                            </label>
+
+                        </div>
+                        <div class="modal__form-footer">
+                            <button type="button" class="ui-button ui-button_style_outline ui-button_fill modal__form-submit js-modal-close">
+                                <span class="ui-button__text">
+                                    Загрузить
+                                </span>
+                                <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                </svg>
+
+                            </button>
+                        </div>
 
                     </div>
                 </div>

@@ -1385,6 +1385,14 @@
 
                         </button>
                     </p>
+                    <p>
+                        <button type="button" class="ui-button" data-modal-open="#modal_qreate_password">
+                            <span class="ui-button__text">
+                                Создать пароль
+                            </span>
+
+                        </button>
+                    </p>
                 </div>
             </div>
 
@@ -3728,6 +3736,77 @@
                                 <button type="submit" class="ui-button ui-button_style_black ui-button_fill modal__form-submit js-modal-close">
                                     <span class="ui-button__text">
                                         Выбрать
+                                    </span>
+                                    <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                        <use xlink:href="img/icons.svg#arrow"></use>
+                                    </svg>
+
+                                </button>
+                            </div>
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-login modal js-modal modal_direction_right" id="modal_qreate_password" aria-hidden="true" tabindex="-1">
+        <div class="modal__wrap">
+            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="Создать пароль">
+                <div class="modal__picture">
+                    <img class="modal__picture-image lazy" data-src="img/modal.jpg" data-srcset="img/modal@2x.jpg" width="220" height="911" alt="">
+                </div>
+
+                <div class="modal__inner">
+                    <div class="modal__heading">
+
+                        <button type="button" class="ui-button-icon ui-button-icon_style_black modal__close js-modal-close" title="Закрыть"><svg class="ui-icon ui-icon-cross ui-button-icon__icon">
+                                <use xlink:href="img/icons.svg#cross"></use>
+                            </svg>
+
+                        </button>
+                    </div>
+                    <div class="modal__content js-modal-content">
+                        <div class="modal__title">Создать пароль</div>
+                        <div class="modal__text">
+                            <p>Придумайте пароль для входа в личный кабинет</p>
+                        </div>
+
+                        <form action="#" class="modal__form form" data-js-form>
+                            <div class="form__errors-messages" data-js-form-errors-container></div>
+                            <div class="modal__form-grid l-grid l-gap-30">
+                                <div class="form__column">
+                                    <div class="field-box js-field-box">
+
+                                        <div class="field-box__content">
+                                            <input class="field-box__input js-field-box-input ui-input" type="text" name="name" placeholder="Имя" value="Smoking99941" readonly="">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__column">
+                                    <div class="field-box field-box_password js-field-box" data-field-type="password">
+
+                                        <div class="field-box__content">
+                                            <input class="field-box__input js-field-box-input ui-input" type="password" name="password" placeholder="Придумайте пароль" required="" data-js-form-field="">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__column">
+                                    <div class="field-box field-box_password js-field-box" data-field-type="password">
+
+                                        <div class="field-box__content">
+                                            <input class="field-box__input js-field-box-input ui-input" type="password" name="confirm_password" placeholder="Подтвердите пароль" required="" data-js-form-field="">
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="modal__form-footer">
+                                <button type="submit" class="ui-button ui-button_style_black ui-button_fill modal__form-submit">
+                                    <span class="ui-button__text">
+                                        Создать
                                     </span>
                                     <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                         <use xlink:href="img/icons.svg#arrow"></use>
