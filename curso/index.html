@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Главная | CURSO</title>
+    <meta name="description" content="description">
+
+    <link rel="preload" as="font" fetchpriority="high" href="fonts/HarmonyOS/HarmonyOS_Sans.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" fetchpriority="high" href="fonts/HarmonyOS/HarmonyOS_Sans_Medium.woff2" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" as="font" fetchpriority="high" href="fonts/HarmonyOS/HarmonyOS_Sans_Bold.woff2" type="font/woff2" crossorigin="anonymous">
+
+    <style>
+        @font-face {
+            font-family: 'HarmonyOS';
+            font-weight: 400;
+            font-display: swap;
+            src: url('fonts/HarmonyOS/HarmonyOS_Sans.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'HarmonyOS';
+            font-weight: 500;
+            font-display: swap;
+            src: url('fonts/HarmonyOS/HarmonyOS_Sans_Medium.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'HarmonyOS';
+            font-weight: 700;
+            font-display: swap;
+            src: url('fonts/HarmonyOS/HarmonyOS_Sans_Bold.woff2') format('woff2');
+        }
+    </style>
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module">
+        function x() {
+            const t = () => {
+                    const i = `${window.innerWidth-document.body.offsetWidth}px`;
+                    document.documentElement.style.setProperty("--scrollbar-width", i)
+                },
+                l = () => {
+                    document.documentElement.style.setProperty("--vh", `${(window.innerHeight*.01).toFixed(2)}px`)
+                },
+                c = () => {
+                    document.documentElement.style.setProperty("--dvh", `${(window.innerHeight*.01).toFixed(2)}px`)
+                };
+            c(), l(), t(), window.addEventListener("resize", () => {
+                t(), c()
+            }), window.addEventListener("scroll", () => {})
+        }
+
+        function S(t = 991, l = 400, c = 400) {
+            const i = document.querySelector(".js-menu"),
+                m = document.querySelector(".js-header");
+            if (i) {
+                const o = i.querySelector(".js-menu-burger"),
+                    s = i.querySelector(".js-menu-popup"),
+                    b = i.querySelector(".js-menu-container"),
+                    r = i.querySelector(".js-menu-backdrop"),
+                    p = i.querySelector(".js-menu-close"),
+                    h = i.querySelectorAll(".js-menu-dropdown");
+                let d = !0,
+                    v = !1;
+                const L = () => window.innerWidth <= t,
+                    w = () => {
+                        const e = `${window.innerWidth-document.body.offsetWidth}px`;
+                        document.documentElement.style.setProperty("--menu-scrollbar-compensate", e), document.body.classList.add("is-menu-active")
+                    },
+                    E = () => {
+                        document.documentElement.style.removeProperty("--menu-scrollbar-compensate"), document.body.classList.remove("is-menu-active")
+                    },
+                    k = () => {
+                        d && (d = !1, m && !m.classList.contains("is-fixed") && window.scroll(0, 0), o && o.classList.add("is-active"), r && r.classList.add("is-active"), s && (s.classList.add("is-visible"), s.setAttribute("aria-disabled", !1), setTimeout(() => {
+                            s.classList.add("is-active")
+                        }, 1)), v = !0, w(), b && b.scroll(0, 0), setTimeout(() => {
+                            d = !0, p && p.focus()
+                        }, l))
+                    },
+                    u = () => {
+                        if (d) {
+                            const e = document.querySelector(".js-catalog-popup-item.is-active-mobile"),
+                                f = document.querySelector(".js-catalog-popup-categories.is-active-mobile"),
+                                n = document.querySelectorAll(".js-catalog-popup-categories-block.is-active");
+                            d = !1, o && (o.classList.remove("is-active"), o.focus()), r && r.classList.remove("is-active"), s && (s.classList.remove("is-active"), s.setAttribute("aria-disabled", !0), setTimeout(() => {
+                                s.classList.remove("is-visible", "is-catalog-popup")
+                            }, l)), v = !1, E(), setTimeout(() => {
+                                d = !0, f && f.classList.remove("is-active-mobile"), e && e.classList.remove("is-active-mobile");
+                                for (let a = 0; a < n.length; a++) n[a].classList.remove("is-active", "is-visible")
+                            }, l)
+                        }
+                    },
+                    y = () => {
+                        s && (L() ? (s.setAttribute("role", "dialog"), s.setAttribute("aria-modal", !0)) : (s.removeAttribute("role"), s.removeAttribute("aria-modal")))
+                    };
+                y(), h.forEach(e => {
+                    const f = e.querySelector(".js-menu-link"),
+                        n = e.querySelector(".js-menu-submenu");
+                    let a = !0;
+                    f && f.addEventListener("click", g => {
+                        g.preventDefault(), L() ? a && (a = !1, n.style.maxHeight = null, e.classList.contains("is-visible") ? (n.style.maxHeight = `${n.scrollHeight}px`, setTimeout(() => {
+                            n.style.maxHeight = "0px"
+                        }, 1)) : n.style.maxHeight = `${n.scrollHeight}px`, setTimeout(() => {
+                            a = !0, n.style.maxHeight = null, e.classList.contains("is-active") ? e.classList.remove("is-active") : e.classList.add("is-active")
+                        }, c), e.classList.toggle("is-visible")) : (e.classList.toggle("is-active"), e.classList.toggle("is-visible"))
+                    }), e.addEventListener("mouseenter", () => {
+                        L() || e.classList.add("is-active", "is-visible")
+                    }), e.addEventListener("mouseleave", () => {
+                        L() || e.classList.remove("is-active", "is-visible")
+                    })
+                }), o && o.addEventListener("click", () => {
+                    o.classList.contains("is-active") ? u() : k()
+                }), p && p.addEventListener("click", () => {
+                    u()
+                }), r && r.addEventListener("click", () => {
+                    u()
+                }), document.addEventListener("keydown", e => {
+                    (e.code === "Escape" || e.key === "Escape") && v && u()
+                }), document.addEventListener("keyup", e => {
+                    (e.code === "Tab" || e.key === "Tab") && v && !document.activeElement.closest(".js-menu") && u()
+                }), document.addEventListener("click", e => {
+                    v && !e.target.classList.contains("js-menu") && !e.target.closest(".js-menu") && u()
+                }), window.addEventListener("resize", y)
+            }
+        }
+
+        function j() {
+            const t = document.querySelector(".js-header");
+            if (t) {
+                const l = "is-fixed";
+                let c = 0,
+                    i, m = 0;
+                const o = () => {
+                    c = window.scrollY, i = t.offsetHeight, c > i * 1.25 ? (t.classList.add(l), c > m && c >= window.innerHeight * .5 ? t.classList.add("is-hidden") : t.classList.remove("is-hidden")) : (t.classList.remove(l), t.classList.remove("is-hidden")), m = c
+                };
+                o(), window.addEventListener("scroll", () => {
+                    o()
+                })
+            }
+        }
+        x();
+        S(959);
+        j();
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header js-header">
+            <div class="header__backdrop js-header-backdrop"></div>
+            <div class="header__inner">
+                <div class="header__container container">
+                    <div class="header__row">
+                        <div class="header__logo-wrapper">
+                            <a href="/" class="header__logo logo">
+                                <img class="logo__img" src="img/logo.svg" width="150" height="34" alt="CURSO">
+                            </a>
+                        </div>
+                        <div class="menu header__menu js-menu">
+                            <div class="menu__backdrop js-menu-backdrop"></div>
+                            <button class="menu__burger js-menu-burger" type="button" aria-label="Navigation menu">
+                                <svg width="34" height="34" viewBox="0 0 34 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M31.7333 17C31.7333 16.2652 31.0949 15.6696 30.3075 15.6696H3.69241C2.90496 15.6696 2.2666 16.2652 2.2666 17C2.2666 17.7348 2.90496 18.3304 3.69241 18.3304H30.3075C31.0949 18.3304 31.7333 17.7348 31.7333 17Z"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M31.7333 8.13042C31.7333 7.39564 31.0949 6.79999 30.3075 6.79999H3.69241C2.90496 6.79999 2.2666 7.39564 2.2666 8.13042C2.2666 8.8652 2.90496 9.46086 3.69241 9.46086H30.3075C31.0949 9.46086 31.7333 8.8652 31.7333 8.13042Z"></path>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M31.7333 25.8696C31.7333 25.1348 31.0949 24.5391 30.3075 24.5391H3.69241C2.90496 24.5391 2.2666 25.1348 2.2666 25.8696C2.2666 26.6043 2.90496 27.2 3.69241 27.2H30.3075C31.0949 27.2 31.7333 26.6043 31.7333 25.8696Z"></path>
+                                </svg>
+
+                            </button>
+                            <div class="menu__popup js-menu-popup" aria-disabled="true">
+                                <nav class="menu__container js-menu-container">
+                                    <div class="menu__popup-header u-hidden-desktop-sm">
+                                        <button type="button" class="menu__close js-menu-close" aria-label="Close menu">
+                                            <svg width="35" height="34" viewBox="0 0 35 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M27.1769 9.84736C27.8741 9.15025 27.8741 8.02 27.1769 7.32289C26.4798 6.62577 25.3496 6.62577 24.6525 7.32289L17.4998 14.4756L10.3471 7.32289C9.65002 6.62577 8.51978 6.62577 7.82266 7.32289C7.12555 8.02 7.12555 9.15025 7.82266 9.84736L14.9753 17L7.82264 24.1527C7.12553 24.8498 7.12553 25.9801 7.82264 26.6772C8.51975 27.3743 9.65 27.3743 10.3471 26.6772L17.4998 19.5245L24.6525 26.6772C25.3496 27.3743 26.4799 27.3743 27.177 26.6772C27.8741 25.9801 27.8741 24.8499 27.177 24.1527L20.0243 17L27.1769 9.84736Z"></path>
+                                            </svg>
+
+                                        </button>
+                                    </div>
+                                    <ul class="menu__list">
+                                        <li>
+                                            <a href="#" class="menu__link is-active">Home</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="menu__link">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="menu__link">Docs</a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="menu__link">FAQ</a>
+                                        </li>
+                                    </ul>
+                                </nav>
+
+                            </div>
+                        </div>
+                        <a href="#" class="ui-button header__button u-visible-desktop-sm">
+                            <span class="ui-button__text">
+                                Start streaming
+                            </span>
+
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+
+            <section class="home-section section">
+                <div class="home-section__container container">
+                    <div class="home-section__box u-box">
+                        <svg preserveAspectRatio="none" class="home-section__curve" width="1605" height="414" viewBox="0 0 1605 414" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M30 384C44.0952 356.965 58.5907 331.295 77.5571 306.397C101.557 274.891 128.593 240.611 161.79 215.461C202.6 184.542 251.632 168.013 304 159C359.891 149.381 419.08 145.981 475.948 154.353C601.78 172.877 718.974 222.11 843.709 245.032C949.142 264.408 1057.06 269.802 1164.72 264.519C1271.59 259.274 1399.06 250.146 1480.49 183.326C1529.91 142.775 1556.53 84.835 1575 30" stroke="#292929" stroke-width="60" stroke-linecap="round"></path>
+                        </svg>
+
+                        <div class="home-section__box-content">
+                            <h1 class="home-section__title title title_size_lg title_uppercase title_center">Just let your money flow</h1>
+                            <div class="home-section__text">
+                                <p>Connect to&nbsp;CURSO and experience the ease of&nbsp;our groundbreaking streaming payment technology&nbsp;&mdash; making secure, hassle-free payments from anywhere in&nbsp;the world.</p>
+                            </div>
+                            <a href="#" class="ui-button ui-button_center home-section__button u-hidden-desktop-sm">
+                                <span class="ui-button__text">
+                                    Start streaming
+                                </span>
+
+                            </a>
+                            <div class="home-section__image-box">
+                                <img class="home-section__image" src="img/curso-1.png" width="432" height="390" alt="" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about-section section">
+                <div class="about-section__container container">
+                    <div class="about-section__text-wrapper">
+                        <div class="about-section__text text-lg u-text-center">
+                            <p><span class="u-text-accent">CURSO</span> is&nbsp;an&nbsp;advanced payment system powered by&nbsp;real-time streaming payments, <span class="u-text-accent">allowing funds to&nbsp;be&nbsp;transferred by&nbsp;the second,</span> directly from the sender to&nbsp;the receiver.</p>
+                        </div>
+                    </div>
+                    <div class="about-section__box u-box">
+                        <div class="about-section__box-column">
+                            <div class="about-section__box-text u-text-grey">
+                                <p>Money streaming guarantees security for both parties. When a&nbsp;payment stream is&nbsp;initiated, the funds are temporarily held in&nbsp;the sender&rsquo;s account, giving the receiver confidence in&nbsp;the sender&rsquo;s financial reliability.</p>
+
+                                <p>Meanwhile, the sender has the flexibility to&nbsp;cancel the transaction at&nbsp;any time if&nbsp;something unexpected comes&nbsp;up, ensuring their funds are protected and minimizing potential losses.</p>
+                            </div>
+                        </div>
+                        <div class="about-section__box-column about-section__box-column_image">
+                            <div class="about-section__image-box">
+                                <img class="about-section__image" src="img/curso-2.png" alt="" loading="lazy" width="432" height="874">
+                            </div>
+                        </div>
+                        <div class="about-section__box-column">
+                            <div class="about-section__box-text u-text-grey">
+                                <p>One of&nbsp;the major advantages of&nbsp;streaming payments is&nbsp;that you can access your money immediately, without waiting for a&nbsp;specific payday or&nbsp;due date. It&rsquo;s instant and convenient.</p>
+                                <p>
+                                    With streaming payments, trust becomes possible, even with strangers. CURSO lets you send payments with confidence&nbsp;&mdash; no&nbsp;surprises, no&nbsp;risks, no&nbsp;stress about your money. Just let it&nbsp;flow.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <svg preserveAspectRatio="none" class="about-section__curve" width="1802" height="493" viewBox="0 0 1802 493" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M30 30.4343C51.3899 86.0213 76.5223 139.311 110.682 188.636C155.012 252.645 213.402 300.498 279.089 342.188C310.391 362.054 331.62 375.06 366.414 390.384C446.618 425.706 530.368 436.639 618.105 439.056C705.36 441.459 823.723 435.142 909.82 427.281C1049.54 414.524 1187.28 387.188 1326.84 373.451C1433.27 362.975 1548.44 354.961 1650.79 391.946C1713.95 414.769 1713.36 429.505 1771.54 462.237" stroke="#292929" stroke-width="60" stroke-linecap="round"></path>
+                    </svg>
+
+                </div>
+            </section>
+            <section class="streaming-fits section">
+                <div class="streaming-fits__container container">
+                    <h2 class="streaming-fits__title title title_uppercase title_center">
+                        Streaming fits <span class="u-text-accent">everywhere</span>
+                    </h2>
+                    <div class="streaming-fits__items">
+                        <div class="streaming-fits__item">
+                            <a class="streaming-fits__item-link" href="#">Services</a>
+                        </div>
+                        <div class="streaming-fits__item">
+                            <a class="streaming-fits__item-link" href="#">Wages</a>
+                        </div>
+                        <div class="streaming-fits__item">
+                            <a class="streaming-fits__item-link" href="#">Subscriptions</a>
+                        </div>
+                        <div class="streaming-fits__item">
+                            <a class="streaming-fits__item-link" href="#">Consultations</a>
+                        </div>
+                        <div class="streaming-fits__item">
+                            <a class="streaming-fits__item-link" href="#">Savings</a>
+                        </div>
+                        <div class="streaming-fits__item">
+                            <a class="streaming-fits__item-link" href="#">Rent</a>
+                        </div>
+                        <div class="streaming-fits__item">
+                            <a class="streaming-fits__item-link" href="#">Family allowance</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="why-curso section">
+                <div class="why-curso__container container">
+                    <h2 class="why-curso__title title title_center title_uppercase">
+                        Why curso?
+                    </h2>
+                    <div class="why-curso__row l-grid l-grid-cols-2">
+                        <div class="why-curso__column why-curso__column_first">
+                            <div class="why-curso__items">
+                                <div class="why-curso__item u-box">
+                                    <h3 class="why-curso__item-title">Sophisticated tech made simple</h3>
+                                    <div class="why-curso__item-text u-text-grey">
+                                        <p>Although the technology of&nbsp;financial streaming is&nbsp;based on&nbsp;blockchain, CURSO provides an&nbsp;intuitive interface that makes it&nbsp;easy and convenient to&nbsp;use. We&nbsp;only use one cryptocurrency&nbsp;&mdash; USDC, a&nbsp;stablecoin that makes payments feel as&nbsp;easy as&nbsp;using dollars, but in&nbsp;crypto.</p>
+                                    </div>
+                                </div>
+                                <div class="why-curso__item u-box">
+                                    <h3 class="why-curso__item-title">A universal payment system</h3>
+                                    <div class="why-curso__item-text u-text-grey">
+                                        <p>Streaming payments are versatile and can be&nbsp;used in&nbsp;a&nbsp;variety of&nbsp;situations. We&nbsp;offer a&nbsp;range of&nbsp;streaming options to&nbsp;suit your specific needs. You can customize the payment process or&nbsp;use pre-set streams. Our team is&nbsp;always here to&nbsp;help.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="why-curso__column why-curso__column_image">
+                            <div class="why-curso__image-box">
+                                <img class="why-curso__image" src="img/curso-3.png" width="638" height="1291" alt="" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="why-curso__column why-curso__column_second">
+                            <div class="why-curso__items">
+                                <div class="why-curso__item u-box">
+                                    <h3 class="why-curso__item-title">A&nbsp;safe solution</h3>
+                                    <div class="why-curso__item-text u-text-grey">
+                                        <p>We&nbsp;use a&nbsp;standard protocol based on&nbsp;the secure and reliable Polygon blockchain, as&nbsp;well as&nbsp;the well-known and trusted USDC&nbsp;stablecoin. This ensures that there are no&nbsp;risks or&nbsp;deception.</p>
+                                    </div>
+                                </div>
+                                <div class="why-curso__item u-box">
+                                    <h3 class="why-curso__item-title">Decentralized finance is&nbsp;the future</h3>
+                                    <div class="why-curso__item-text u-text-grey">
+                                        <p>Our goal is&nbsp;to&nbsp;make cryptocurrency and decentralized financial tools more accessible to&nbsp;everyone. We&nbsp;believe that everyone, regardless of&nbsp;their location, should have the right to&nbsp;use a&nbsp;reliable and modern payment system. It&nbsp;should easy to&nbsp;use for all.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <svg preserveAspectRatio="none" class="why-curso__curve" width="1787" height="337" viewBox="0 0 1787 337" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1756.03 30C1679.54 80.5699 1549.43 153.319 1430.62 181.671C1144.87 249.857 522.63 146.541 341.5 149.5C185.979 152.04 49.2823 250.236 30.6389 306.354" stroke="#292929" stroke-width="60" stroke-linecap="round"></path>
+                    </svg>
+
+                </div>
+            </section>
+            <section class="with-curso section">
+                <div class="with-curso__container container">
+                    <div class="with-curso__text text-lg u-text-center">
+                        <p>With CURSO, you don&rsquo;t depend on&nbsp;banks, verification processes, or&nbsp;political situations. It&rsquo;s just you, CURSO, and the person you&rsquo;re paying. That&rsquo;s all you need to&nbsp;<a href="#">START STREAMING.</a></p>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+        <footer class="footer">
+            <div class="footer__container container">
+                <div class="footer__box u-box">
+                    <div class="footer__logo-wrapper">
+                        <a href="/" class="footer__logo logo">
+                            <img class="logo__img" src="img/logo.svg" width="150" height="34" alt="CURSO">
+                        </a>
+                    </div>
+                    <ul class="footer__menu">
+                        <li>
+                            <a href="#" class="footer__menu-link is-active">Home</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__menu-link">Blog</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__menu-link">Docs</a>
+                        </li>
+                        <li>
+                            <a href="#" class="footer__menu-link">FAQ</a>
+                        </li>
+                    </ul>
+                    <div class="footer__socials socials">
+                        <div class="socials__list">
+                            <a href="#" class="socials__link socials__link_telegram" title="Telegram" target="_blank">
+                                <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M29.28 14.1C28.98 17.26 27.68 24.94 27.02 28.48C26.74 29.98 26.18 30.48 25.66 30.54C24.5 30.64 23.62 29.78 22.5 29.04C20.74 27.88 19.74 27.16 18.04 26.04C16.06 24.74 17.34 24.02 18.48 22.86C18.78 22.56 23.9 17.9 24 17.48C24.0139 17.4164 24.012 17.3503 23.9946 17.2876C23.9772 17.2249 23.9447 17.1673 23.9 17.12C23.78 17.02 23.62 17.06 23.48 17.08C23.3 17.12 20.5 18.98 15.04 22.66C14.24 23.2 13.52 23.48 12.88 23.46C12.16 23.44 10.8 23.06 9.78 22.72C8.52 22.32 7.54 22.1 7.62 21.4C7.66 21.04 8.16 20.68 9.1 20.3C14.94 17.76 18.82 16.08 20.76 15.28C26.32 12.96 27.46 12.56 28.22 12.56C28.38 12.56 28.76 12.6 29 12.8C29.2 12.96 29.26 13.18 29.28 13.34C29.26 13.46 29.3 13.82 29.28 14.1Z" fill="white" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20 0.5C8.96 0.5 0 9.46 0 20.5C0 31.54 8.96 40.5 20 40.5C31.04 40.5 40 31.54 40 20.5C40 9.46 31.04 0.5 20 0.5ZM27.02 28.48C27.68 24.94 28.98 17.26 29.28 14.1C29.3 13.82 29.26 13.46 29.28 13.34C29.26 13.18 29.2 12.96 29 12.8C28.76 12.6 28.38 12.56 28.22 12.56C27.46 12.56 26.32 12.96 20.76 15.28C18.82 16.08 14.94 17.76 9.1 20.3C8.16 20.68 7.66 21.04 7.62 21.4C7.54 22.1 8.52 22.32 9.78 22.72C10.8 23.06 12.16 23.44 12.88 23.46C13.52 23.48 14.24 23.2 15.04 22.66C20.5 18.98 23.3 17.12 23.48 17.08C23.62 17.06 23.78 17.02 23.9 17.12C23.9447 17.1673 23.9772 17.2249 23.9946 17.2876C24.012 17.3503 24.0139 17.4164 24 17.48C23.9 17.9 18.78 22.56 18.48 22.86C17.34 24.02 16.06 24.74 18.04 26.04C19.74 27.16 20.74 27.88 22.5 29.04C23.62 29.78 24.5 30.64 25.66 30.54C26.18 30.48 26.74 29.98 27.02 28.48Z" />
+                                </svg>
+
+                            </a><a href="#" class="socials__link socials__link_github" title="Github" target="_blank">
+                                <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M40 20.5C40 31.5457 31.0457 40.5 20 40.5C8.9543 40.5 0 31.5457 0 20.5C0 9.4543 8.9543 0.5 20 0.5C31.0457 0.5 40 9.4543 40 20.5Z" />
+                                    <path d="M32 20.3277C32 23.507 31.4671 26.0859 30.8097 26.0859C30.1522 26.0859 29.6196 23.5077 29.6196 20.3277C29.6196 17.1477 30.1524 14.5694 30.8097 14.5694C31.4669 14.5694 32 17.1475 32 20.3277Z" fill="white" />
+                                    <path d="M28.9628 20.3277C28.9628 23.877 27.4476 26.7555 25.5784 26.7555C23.7092 26.7555 22.194 23.877 22.194 20.3277C22.194 16.7784 23.709 13.9 25.5782 13.9C27.4473 13.9 28.9628 16.7775 28.9628 20.3277Z" fill="white" />
+                                    <path d="M21.5374 20.3277C21.5374 24.0984 18.5069 27.1552 14.7688 27.1552C11.0307 27.1552 8 24.0977 8 20.3277C8 16.5577 11.0305 13.5 14.7688 13.5C18.5072 13.5 21.5374 16.557 21.5374 20.3277Z" fill="white" />
+                                </svg>
+
+                            </a><a href="#" class="socials__link socials__link_pinterest" title="Pinterest" target="_blank">
+                                <svg width="40" height="41" viewBox="0 0 40 41" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M40 20.5C40 31.5457 31.0457 40.5 20 40.5C8.9543 40.5 0 31.5457 0 20.5C0 9.4543 8.9543 0.5 20 0.5C31.0457 0.5 40 9.4543 40 20.5Z" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M20.0003 9C17.1515 9.00148 14.3961 10.0105 12.2269 11.8465C10.0576 13.6826 8.6159 16.226 8.15954 19.022C7.70319 21.818 8.26193 24.6842 9.73587 27.1082C11.2098 29.5321 13.5028 31.3558 16.2049 32.253C16.8011 32.3636 17.0256 31.9941 17.0256 31.68C17.0256 31.3658 17.0137 30.455 17.0097 29.4592C13.6714 30.1804 12.966 28.0505 12.966 28.0505C12.4215 26.6674 11.6346 26.3039 11.6346 26.3039C10.5457 25.565 11.7161 25.5788 11.7161 25.5788C12.9223 25.6637 13.5562 26.8097 13.5562 26.8097C14.6252 28.6333 16.3639 28.1058 17.0475 27.7976C17.1548 27.0251 17.4667 26.4995 17.8105 26.2012C15.1438 25.9008 12.342 24.8774 12.342 20.3054C12.3255 19.1197 12.768 17.9731 13.578 17.1027C13.4548 16.8024 13.0435 15.5892 13.6952 13.9414C13.6952 13.9414 14.7027 13.6214 16.9958 15.1644C18.9627 14.6296 21.0379 14.6296 23.0047 15.1644C25.2958 13.6214 26.3013 13.9414 26.3013 13.9414C26.9551 15.5853 26.5437 16.7984 26.4205 17.1027C27.2331 17.9732 27.6765 19.1218 27.6585 20.3094C27.6585 24.8912 24.8507 25.9008 22.1801 26.1952C22.6093 26.5667 22.9928 27.2918 22.9928 28.4061C22.9928 30.0026 22.9789 31.2868 22.9789 31.68C22.9789 31.9981 23.1955 32.3695 23.8035 32.253C26.5059 31.3557 28.7992 29.5317 30.2731 27.1073C31.747 24.683 32.3055 21.8163 31.8486 19.0201C31.3917 16.2238 29.9493 13.6804 27.7793 11.8446C25.6094 10.0089 22.8533 9.00054 20.0042 9H20.0003Z" fill="white" />
+                                    <path d="M16.0278 28.4753C16.0278 28.5721 15.9166 28.6551 15.7735 28.657C15.6304 28.659 15.5132 28.58 15.5132 28.4832C15.5132 28.3864 15.6245 28.3034 15.7675 28.3014C15.9106 28.2994 16.0278 28.3765 16.0278 28.4753Z" fill="white" />
+                                    <path d="M16.9419 28.3231C16.9598 28.4199 16.8604 28.5207 16.7174 28.5444C16.5743 28.5681 16.4491 28.5108 16.4312 28.416C16.4133 28.3212 16.5167 28.2184 16.6558 28.1927C16.7948 28.1671 16.924 28.2263 16.9419 28.3231Z" fill="white" />
+                                    <path d="M15.0462 28.4081C15.0164 28.501 14.8812 28.5424 14.7461 28.5029C14.611 28.4634 14.5216 28.3528 14.5474 28.2579C14.5732 28.1631 14.7104 28.1196 14.8475 28.1631C14.9846 28.2066 15.072 28.3113 15.0462 28.4081Z" fill="white" />
+                                    <path d="M14.1461 28.0208C14.0805 28.0939 13.9473 28.0742 13.8381 27.9754C13.7288 27.8766 13.7029 27.7423 13.7685 27.6711C13.8341 27.6 13.9672 27.6198 14.0805 27.7166C14.1937 27.8134 14.2156 27.9497 14.1461 28.0208Z" fill="white" />
+                                    <path d="M13.5042 27.357C13.4307 27.4084 13.3055 27.357 13.236 27.2542C13.2167 27.2358 13.2015 27.2137 13.191 27.1893C13.1806 27.1648 13.1752 27.1385 13.1752 27.112C13.1752 27.0854 13.1806 27.0591 13.191 27.0347C13.2015 27.0103 13.2167 26.9882 13.236 26.9697C13.3095 26.9203 13.4347 26.9697 13.5042 27.0705C13.5738 27.1713 13.5758 27.3056 13.5042 27.357Z" fill="white" />
+                                    <path d="M13.0313 26.6714C12.9901 26.692 12.9431 26.6978 12.8981 26.6877C12.8532 26.6776 12.8131 26.6523 12.7849 26.6161C12.7074 26.5331 12.6915 26.4185 12.7511 26.3671C12.8107 26.3157 12.918 26.3395 12.9955 26.4224C13.073 26.5054 13.0909 26.62 13.0313 26.6714Z" fill="white" />
+                                    <path d="M12.5444 26.132C12.5186 26.1913 12.4232 26.2091 12.3457 26.1676C12.2682 26.1261 12.2106 26.049 12.2384 25.9878C12.2662 25.9265 12.3596 25.9107 12.4371 25.9522C12.5146 25.9937 12.5742 26.0727 12.5444 26.132Z" fill="white" />
+                                </svg>
+
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>
