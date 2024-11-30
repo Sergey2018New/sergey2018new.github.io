@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>CSK - Личный кабинет - Мои обращения</title>
+    <title>CSK - Каталог - Саморезы, шурупы</title>
     <meta name="description" content="Описание страницы">
     <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
@@ -52,7 +52,7 @@
             }, 10)
         });
     </script>
-    <div class="wrapper">
+    <div class="wrapper page-catalog">
         <header class="header js-header"> <!-- <div class="header__backdrop js-header-backdrop"></div> -->
             <div class="header__inner">
                 <div class="header__container container">
@@ -695,85 +695,230 @@
             </div>
         </header>
         <main class="main">
-            <div class="p-section p-account">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__container container">
+                    <nav class="breadcrumbs__inner" role="navigation" aria-label="breadcrumbs">
+                        <ol class="breadcrumbs__list">
+                            <li class="breadcrumbs__item"> <a href="/" class="breadcrumbs__link"><span>Главная</span></a> </li>
+                            <li class="breadcrumbs__item"> <a href="" class="breadcrumbs__link"><span>Крепежи</span></a> </li>
+                            <li class="breadcrumbs__item" aria-current="page"> <span>Саморезы, шурупы</span> </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="p-section p-catalog">
                 <div class="container">
-                    <div class="p-account__row l-grid">
-                        <div class="p-account__column">
-                            <div class="p-account__sticky sticky-sidebar js-sticky-sidebar">
+                    <div class="p-catalog__title page-title page-title_size_lg">
+                        <h1>Саморезы, шурупы</h1>
+                    </div>
+                    <div class="p-catalog__row l-grid">
+                        <div class="p-catalog__column">
+                            <div class="p-catalog__found u-visible-desktop-md">3862 товара</div>
+                            <div class="p-catalog__sticky sticky-sidebar js-sticky-sidebar">
                                 <div class="sticky-sidebar__sticky js-sticky" data-sticky-min-width="1200">
                                     <div class="sticky-sidebar__inner">
                                         <div class="sticky-sidebar__content">
-                                            <div class="p-account__sidebar-content">
-                                                <div class="p-account__sidebar-menu sidebar-menu js-sidebar-menu" type="account">
-                                                    <div class="sidebar-menu__inner">
-                                                        <div class="sidebar-menu__section"> <button type="button" class="sidebar-menu__toggle-button u-hidden-desktop-md js-sidebar-menu-button"> <span class="js-sidebar-menu-button-text">Мои обращения</span> <svg class="ui-icon ui-icon-arrow-down-sm sidebar-menu__toggle-icon">
-                                                                    <use xlink:href="img/icons.svg#arrow-down-sm"></use>
-                                                                </svg> </button>
-                                                            <div class="sidebar-menu__popup">
-                                                                <ul class="sidebar-menu__list">
-                                                                    <li class="sidebar-menu__item"> <a href="#" class="sidebar-menu__link">Главная</a> </li>
-                                                                    <li class="sidebar-menu__item"> <a href="#" class="sidebar-menu__link">История заказов</a> </li>
-                                                                    <li class="sidebar-menu__item"> <a href="#" class="sidebar-menu__link">График платежей</a> </li>
-                                                                    <li class="sidebar-menu__item"> <a href="#" class="sidebar-menu__link">Лист ожидания</a> </li>
-                                                                    <li class="sidebar-menu__item is-active"> <a href="#" class="sidebar-menu__link">Мои обращения</a> </li>
-                                                                    <li class="sidebar-menu__item"> <a href="#" class="sidebar-menu__link">Адреса доставки</a> </li>
-                                                                    <li class="sidebar-menu__item"> <a href="#" class="sidebar-menu__link">Мои данные</a> </li>
-                                                                    <li class="sidebar-menu__item sidebar-menu__divided"></li>
-                                                                    <li class="sidebar-menu__item"> <a href="#" class="sidebar-menu__link">
-                                                                            Инструкция по&nbsp;пользованию&nbsp;ЛК
-                                                                        </a> </li>
-                                                                    <li class="sidebar-menu__item"> <a href="#" class="sidebar-menu__link sidebar-menu__link_logout"> <svg class="ui-icon ui-icon-logout">
-                                                                                <use xlink:href="img/icons.svg#logout"></use>
-                                                                            </svg> <span>Выйти</span> </a> </li>
-                                                                </ul>
-                                                            </div>
-                                                        </div>
+                                            <div class="p-catalog__filters filters js-filters">
+                                                <div class="filters__backdrop js-filters-backdrop"></div>
+                                                <div class="filters__content js-filters-content">
+                                                    <div class="filters__header u-hidden-desktop-md">
+                                                        <div class="filters__title">Фильтры</div> <button type="button" class="ui-button-icon ui-button-icon_style_outline filters__close-button js-filters-close"><svg class="ui-icon ui-icon-cross ui-button-icon__icon ">
+                                                                <use xlink:href="img/icons.svg#cross"></use>
+                                                            </svg> </button>
                                                     </div>
-                                                </div>
-                                                <div class="p-account__balance">
-                                                    <div class="p-account__balance-header">
-                                                        <div class="p-account__balance-title u-visible-desktop-md">
-                                                            Текущая задолженность
-                                                        </div> <a href="#" class="p-account__balance-more-link">
-                                                            Подробнее
-                                                        </a>
-                                                    </div>
-                                                    <div class="ui-dropdown ui-dropdown_select p-account__balance-dropdown js-dropdown" data-dropdown="select"> <input class="ui-dropdown__input js-dropdown-input" name="organization" tabindex="-1"> <button class="ui-dropdown__button js-dropdown-button" type="button" role="combobox"> <span class="ui-dropdown__button-text js-dropdown-button-text" role="textbox"> ООО «Компания» </span> <span class="ui-dropdown__button-icon-box"><span class="ui-dropdown__button-icon"></span></span> </button>
-                                                        <div class="ui-dropdown__popup js-dropdown-popup" aria-hidden="true">
-                                                            <div class="ui-dropdown__scroll js-dropdown-scroll">
-                                                                <div class="ui-dropdown__list js-dropdown-list" tabindex="0" role="listbox">
-                                                                    <div class="ui-dropdown__option is-selected js-dropdown-option" data-value="1" data-text-value="ООО «Компания»" role="option" aria-selected="true"> ООО «Компания» </div>
-                                                                    <div class="ui-dropdown__option  js-dropdown-option" data-value="2" data-text-value="ООО «Мир инструмента»" role="option" aria-selected="false"> ООО «Мир инструмента» </div>
-                                                                    <div class="ui-dropdown__option  js-dropdown-option" data-value="3" data-text-value="ИП «Карпенко Д.Ф.»" role="option" aria-selected="false"> ИП «Карпенко Д.Ф.» </div>
-                                                                    <div class="ui-dropdown__option  js-dropdown-option" data-value="4" data-text-value="ООО «Все инструменты»" role="option" aria-selected="false"> ООО «Все инструменты» </div>
+                                                    <div class="filters__inner js-filters-inner">
+                                                        <div class="filters__scrollbar">
+                                                            <div class="filters__items js-accordions">
+                                                                <div class="filters__item u-hidden-desktop-md js-filters-item filter-item filter-item_dropdown is-active is-visible js-accordion"> <button type="button" class="filter-item__button js-accordion-button" aria-haspopup="true" aria-expanded="true"> <span>Сортировать</span> <svg class="ui-icon ui-icon-arrow filter-item__button-icon">
+                                                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                                                        </svg> </button>
+                                                                    <div class="filter-item__content js-accordion-content">
+                                                                        <div class="filter-item__inner">
+                                                                            <div class="filter-item__scrollbar">
+                                                                                <div class="filter-item__checkboxes"> <label class="ui-checkbox ui-checkbox_radio filter-item__checkbox"> <input class="ui-checkbox__input " type="radio" name="sorting" value="1" checked /> <span class="ui-checkbox__checked"> </span> <span class="ui-checkbox__text">По популярности</span> </label><label class="ui-checkbox ui-checkbox_radio filter-item__checkbox"> <input class="ui-checkbox__input " type="radio" name="sorting" value="2" /> <span class="ui-checkbox__checked"> </span> <span class="ui-checkbox__text">По наличию</span> </label><label class="ui-checkbox ui-checkbox_radio filter-item__checkbox"> <input class="ui-checkbox__input " type="radio" name="sorting" value="3" /> <span class="ui-checkbox__checked"> </span> <span class="ui-checkbox__text">Сначала дешевле</span> </label><label class="ui-checkbox ui-checkbox_radio filter-item__checkbox"> <input class="ui-checkbox__input " type="radio" name="sorting" value="4" /> <span class="ui-checkbox__checked"> </span> <span class="ui-checkbox__text">Сначала дороже</span> </label><label class="ui-checkbox ui-checkbox_radio filter-item__checkbox"> <input class="ui-checkbox__input " type="radio" name="sorting" value="5" /> <span class="ui-checkbox__checked"> </span> <span class="ui-checkbox__text">Новинки</span> </label> </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="filters__item  js-filters-item filter-item filter-item_dropdown is-active is-visible js-accordion"> <button type="button" class="filter-item__button js-accordion-button" aria-haspopup="true" aria-expanded="true"> <span>Категории</span> <svg class="ui-icon ui-icon-arrow filter-item__button-icon">
+                                                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                                                        </svg> </button>
+                                                                    <div class="filter-item__content js-accordion-content">
+                                                                        <div class="filter-item__inner">
+                                                                            <div class="filter-item__scrollbar">
+                                                                                <div class="filter-item__checkboxes"> <label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="category" value="1" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Крепеж перфорированный</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="category" value="2" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Заклепки</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="category" value="3" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Метизы</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="category" value="4" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Дюбели</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="category" value="5" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Анкер</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="category" value="6" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Крепеж перфорированный</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="category" value="7" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Заклепки</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="category" value="8" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Метизы</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="category" value="9" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Дюбели</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="category" value="10" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Анкер</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="category" value="11" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Крепеж перфорированный</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="category" value="12" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Заклепки</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="category" value="13" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Метизы</span> </label> </div>
+                                                                            </div>
+                                                                            <button type="button" class="filter-item__show-all js-filters-show-all" data-show-text="Показать еще" data-hidden-text="Свернуть">Показать еще</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="filters__item  js-filters-item filter-item filter-item_dropdown js-accordion"> <button type="button" class="filter-item__button js-accordion-button" aria-haspopup="true" aria-expanded="true"> <span>Длина, мм</span> <svg class="ui-icon ui-icon-arrow filter-item__button-icon">
+                                                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                                                        </svg> </button>
+                                                                    <div class="filter-item__content js-accordion-content">
+                                                                        <div class="filter-item__inner">
+                                                                            <div class="filter-item__range">
+                                                                                <div class="slider filter-item__range-slider js-slider" data-slider-min="0" data-slider-max="1240" data-slider-step="1" data-slider-range>
+                                                                                    <div class="slider__ui ul-slider js-slider-ui"></div>
+                                                                                    <div class="slider__row">
+                                                                                        <div class="slider__column">
+                                                                                            <div class="slider__field">
+                                                                                                <div class="slider__label">от</div> <input type="text" name="length_from" class="slider__input ui-input js-slider-input-min" min="0" max="1240" value="0" aria-label="От" /> <button type="button" title="Очистить" class="ui-button-icon slider__clear-button js-slider-clear-min"><svg class="ui-icon ui-icon-cross-thin ui-button-icon__icon ">
+                                                                                                        <use xlink:href="img/icons.svg#cross-thin"></use>
+                                                                                                    </svg> </button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="slider__column">
+                                                                                            <div class="slider__field">
+                                                                                                <div class="slider__label">до</div> <input type="text" name="length_to" class="slider__input ui-input js-slider-input-max" max="1240" max="1240" value="1240" aria-label="До" /> <button type="button" title="Очистить" class="ui-button-icon slider__clear-button js-slider-clear-max"><svg class="ui-icon ui-icon-cross-thin ui-button-icon__icon ">
+                                                                                                        <use xlink:href="img/icons.svg#cross-thin"></use>
+                                                                                                    </svg> </button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="filters__item  js-filters-item filter-item filter-item_dropdown js-accordion"> <button type="button" class="filter-item__button js-accordion-button" aria-haspopup="true" aria-expanded="true"> <span>Ширина, мм</span> <svg class="ui-icon ui-icon-arrow filter-item__button-icon">
+                                                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                                                        </svg> </button>
+                                                                    <div class="filter-item__content js-accordion-content">
+                                                                        <div class="filter-item__inner">
+                                                                            <div class="filter-item__range">
+                                                                                <div class="slider filter-item__range-slider js-slider" data-slider-min="2" data-slider-max="255" data-slider-step="1" data-slider-range>
+                                                                                    <div class="slider__ui ul-slider js-slider-ui"></div>
+                                                                                    <div class="slider__row">
+                                                                                        <div class="slider__column">
+                                                                                            <div class="slider__field">
+                                                                                                <div class="slider__label">от</div> <input type="text" name="width_from" class="slider__input ui-input js-slider-input-min" min="2" max="255" value="2" aria-label="От" /> <button type="button" title="Очистить" class="ui-button-icon slider__clear-button js-slider-clear-min"><svg class="ui-icon ui-icon-cross-thin ui-button-icon__icon ">
+                                                                                                        <use xlink:href="img/icons.svg#cross-thin"></use>
+                                                                                                    </svg> </button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="slider__column">
+                                                                                            <div class="slider__field">
+                                                                                                <div class="slider__label">до</div> <input type="text" name="width_to" class="slider__input ui-input js-slider-input-max" max="255" max="255" value="255" aria-label="До" /> <button type="button" title="Очистить" class="ui-button-icon slider__clear-button js-slider-clear-max"><svg class="ui-icon ui-icon-cross-thin ui-button-icon__icon ">
+                                                                                                        <use xlink:href="img/icons.svg#cross-thin"></use>
+                                                                                                    </svg> </button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="filters__item  js-filters-item filter-item filter-item_dropdown js-accordion"> <button type="button" class="filter-item__button js-accordion-button" aria-haspopup="true" aria-expanded="true"> <span>Толщина, мм</span> <svg class="ui-icon ui-icon-arrow filter-item__button-icon">
+                                                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                                                        </svg> </button>
+                                                                    <div class="filter-item__content js-accordion-content">
+                                                                        <div class="filter-item__inner">
+                                                                            <div class="filter-item__range">
+                                                                                <div class="slider filter-item__range-slider js-slider" data-slider-min="2" data-slider-max="4" data-slider-step="1" data-slider-range>
+                                                                                    <div class="slider__ui ul-slider js-slider-ui"></div>
+                                                                                    <div class="slider__row">
+                                                                                        <div class="slider__column">
+                                                                                            <div class="slider__field">
+                                                                                                <div class="slider__label">от</div> <input type="text" name="thickness_from" class="slider__input ui-input js-slider-input-min" min="2" max="4" value="2" aria-label="От" /> <button type="button" title="Очистить" class="ui-button-icon slider__clear-button js-slider-clear-min"><svg class="ui-icon ui-icon-cross-thin ui-button-icon__icon ">
+                                                                                                        <use xlink:href="img/icons.svg#cross-thin"></use>
+                                                                                                    </svg> </button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="slider__column">
+                                                                                            <div class="slider__field">
+                                                                                                <div class="slider__label">до</div> <input type="text" name="thickness_to" class="slider__input ui-input js-slider-input-max" max="4" max="4" value="4" aria-label="До" /> <button type="button" title="Очистить" class="ui-button-icon slider__clear-button js-slider-clear-max"><svg class="ui-icon ui-icon-cross-thin ui-button-icon__icon ">
+                                                                                                        <use xlink:href="img/icons.svg#cross-thin"></use>
+                                                                                                    </svg> </button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="filters__item  js-filters-item filter-item filter-item_dropdown js-accordion"> <button type="button" class="filter-item__button js-accordion-button" aria-haspopup="true" aria-expanded="true"> <span>Диаметр, мм</span> <svg class="ui-icon ui-icon-arrow filter-item__button-icon">
+                                                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                                                        </svg> </button>
+                                                                    <div class="filter-item__content js-accordion-content">
+                                                                        <div class="filter-item__inner">
+                                                                            <div class="filter-item__range">
+                                                                                <div class="slider filter-item__range-slider js-slider" data-slider-min="0.5" data-slider-max="200" data-slider-step="1" data-slider-range>
+                                                                                    <div class="slider__ui ul-slider js-slider-ui"></div>
+                                                                                    <div class="slider__row">
+                                                                                        <div class="slider__column">
+                                                                                            <div class="slider__field">
+                                                                                                <div class="slider__label">от</div> <input type="text" name="diameter_from" class="slider__input ui-input js-slider-input-min" min="0.5" max="200" value="0.5" aria-label="От" /> <button type="button" title="Очистить" class="ui-button-icon slider__clear-button js-slider-clear-min"><svg class="ui-icon ui-icon-cross-thin ui-button-icon__icon ">
+                                                                                                        <use xlink:href="img/icons.svg#cross-thin"></use>
+                                                                                                    </svg> </button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="slider__column">
+                                                                                            <div class="slider__field">
+                                                                                                <div class="slider__label">до</div> <input type="text" name="diameter_to" class="slider__input ui-input js-slider-input-max" max="200" max="200" value="200" aria-label="До" /> <button type="button" title="Очистить" class="ui-button-icon slider__clear-button js-slider-clear-max"><svg class="ui-icon ui-icon-cross-thin ui-button-icon__icon ">
+                                                                                                        <use xlink:href="img/icons.svg#cross-thin"></use>
+                                                                                                    </svg> </button>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="filters__item  js-filters-item filter-item filter-item_dropdown js-accordion"> <button type="button" class="filter-item__button js-accordion-button" aria-haspopup="true" aria-expanded="true"> <span>Бренд</span> <svg class="ui-icon ui-icon-arrow filter-item__button-icon">
+                                                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                                                        </svg> </button>
+                                                                    <div class="filter-item__content js-accordion-content">
+                                                                        <div class="filter-item__inner">
+                                                                            <div class="filter-item__scrollbar">
+                                                                                <div class="filter-item__checkboxes"> <label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="brand" value="1" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Denzel</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="brand" value="2" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Gross</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="brand" value="3" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Matrix</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="brand" value="4" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Palisad</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="brand" value="5" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Sparta</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="brand" value="6" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Denzel</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="brand" value="7" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Gross</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="brand" value="8" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Matrix</span> </label> </div>
+                                                                            </div>
+                                                                            <button type="button" class="filter-item__show-all js-filters-show-all" data-show-text="Показать еще" data-hidden-text="Свернуть">Показать еще</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="filters__item  js-filters-item filter-item filter-item_dropdown js-accordion"> <button type="button" class="filter-item__button js-accordion-button" aria-haspopup="true" aria-expanded="true"> <span>Цвет</span> <svg class="ui-icon ui-icon-arrow filter-item__button-icon">
+                                                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                                                        </svg> </button>
+                                                                    <div class="filter-item__content js-accordion-content">
+                                                                        <div class="filter-item__inner">
+                                                                            <div class="filter-item__scrollbar">
+                                                                                <div class="filter-item__checkboxes"> <label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="color" value="1" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Антик медь</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="color" value="2" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Коричневый</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="color" value="3" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Белый</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="color" value="4" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Желтый</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="color" value="5" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Черный</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="color" value="6" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Антик медь</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="color" value="7" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Коричневый</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="color" value="8" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Белый</span> </label> </div>
+                                                                            </div>
+                                                                            <button type="button" class="filter-item__show-all js-filters-show-all" data-show-text="Показать еще" data-hidden-text="Свернуть">Показать еще</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="filters__item  js-filters-item filter-item filter-item_dropdown js-accordion"> <button type="button" class="filter-item__button js-accordion-button" aria-haspopup="true" aria-expanded="true"> <span>Форма</span> <svg class="ui-icon ui-icon-arrow filter-item__button-icon">
+                                                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                                                        </svg> </button>
+                                                                    <div class="filter-item__content js-accordion-content">
+                                                                        <div class="filter-item__inner">
+                                                                            <div class="filter-item__scrollbar">
+                                                                                <div class="filter-item__checkboxes"> <label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="shape" value="1" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">L-образный</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="shape" value="2" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Прямоугольные</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="shape" value="3" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Штифты</span> </label> </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="filters__item  js-filters-item filter-item filter-item_dropdown js-accordion"> <button type="button" class="filter-item__button js-accordion-button" aria-haspopup="true" aria-expanded="true"> <span>Марка стали</span> <svg class="ui-icon ui-icon-arrow filter-item__button-icon">
+                                                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                                                        </svg> </button>
+                                                                    <div class="filter-item__content js-accordion-content">
+                                                                        <div class="filter-item__inner">
+                                                                            <div class="filter-item__scrollbar">
+                                                                                <div class="filter-item__checkboxes"> <label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="steal_grade" value="1" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Q195</span> </label><label class="ui-checkbox ui-checkbox_checkbox filter-item__checkbox"> <input class="ui-checkbox__input " type="checkbox" name="steal_grade" value="2" /> <span class="ui-checkbox__checked"> <span class="ui-checkbox__checked-icon"></span> </span> <span class="ui-checkbox__text">Нержавеющая 304</span> </label> </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="p-account__balance-sum">0 ₽</div>
-                                                </div>
-                                                <div class="p-account__personal-manager u-visible-desktop-md personal-manager">
-                                                    <div class="personal-manager__person">
-                                                        <div class="personal-manager__person-photo"> <img class="personal-manager__photo-image" src="img/personal-manager.png" srcset="img/personal-manager@2x.png 2x" width="50" height="50" alt="" loading="lazy"> </div>
-                                                        <div class="personal-manager__person-content">
-                                                            <div class="personal-manager__person-position">Персональный менеджер</div>
-                                                            <div class="personal-manager__person-name">Смирнова Елена Федоровна</div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="personal-manager__contacts">
-                                                        <div class="personal-manager__phones"> <a href="tel:+74953749406">+7 (495) 374-94-06</a> </div> <a href="mailto:smirnova@csk.ru">smirnova@csk.ru</a>
-                                                        <div>ПН-ПТ 10:00-19:00</div>
-                                                    </div> <button type="button" href="#" data-modal-open="#modal-new-appeal" class="ui-button ui-button_style_outline ui-button_fill ui-button_is-circle personal-manager__button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
-                                                                <use xlink:href="img/icons.svg#arrow"></use>
-                                                            </svg> </span><span class="ui-button__text"> Задать вопрос </span> </button>
-                                                </div>
-                                                <div class="p-account__personal-manager-fixed-block fixed-block js-bottom-fixed-block u-hidden-desktop-md">
-                                                    <div class="container">
-                                                        <div class="fixed-block__row">
-                                                            <div class="fixed-block__buttons fixed-block__buttons_fill "> <button type="button" href="#" class="ui-button ui-button_fill ui-button_is-circle fixed-block__button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
-                                                                            <use xlink:href="img/icons.svg#arrow"></use>
-                                                                        </svg> </span><span class="ui-button__text"> Задать вопрос менеджеру </span> </button> </div>
-                                                        </div>
+                                                        <div class="filters__buttons"> <button type="button" href="#" class="ui-button ui-button_style_outline filters__button filters__reset-button"><span class="ui-button__text">
+                                                                    Сбросить
+                                                                </span> </button> <button type="button" href="#" class="ui-button filters__button js-filters-close"><span class="ui-button__text"> Применить </span> </button> </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -782,357 +927,123 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="p-account__column">
-                            <div class="breadcrumbs">
-                                <div class="breadcrumbs__container container">
-                                    <nav class="breadcrumbs__inner" role="navigation" aria-label="breadcrumbs">
-                                        <ol class="breadcrumbs__list">
-                                            <li class="breadcrumbs__item"> <a href="/" class="breadcrumbs__link"><span>Главная</span></a> </li>
-                                            <li class="breadcrumbs__item"> <a href="" class="breadcrumbs__link"><span>Личный кабинет</span></a> </li>
-                                            <li class="breadcrumbs__item" aria-current="page"> <span>Мои обращения</span> </li>
-                                        </ol>
-                                    </nav>
-                                </div>
-                            </div>
-                            <div class="p-account__main-content">
-                                <div class="p-account__header">
-                                    <div class="p-account__title page-title page-title_size_lg">
-                                        <h1>Мои обращения</h1>
-                                    </div> <button type="button" href="#" data-modal-open="#modal-new-appeal" data-da=".js-new-appeal-place-in-adaptive, 767,98, last" class="ui-button ui-button_is-circle p-account__header-button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
-                                                <use xlink:href="img/icons.svg#arrow"></use>
-                                            </svg> </span><span class="ui-button__text"> Новое обращение </span> </button>
-                                </div>
-                                <div class="p-account__tab-menu-wrapper">
-                                    <div class="p-account__tab-menu tab-menu">
-                                        <div class="tab-menu__inner">
-                                            <div class="tab-menu__list"> <a href="#" class="tab-menu__item is-active"> <span>Все</span> </a><a href="#" class="tab-menu__item"> <span>Возврат</span> </a><a href="#" class="tab-menu__item"> <span>Сервисный центр</span> </a><a href="#" class="tab-menu__item"> <span>Отзывы</span> </a><a href="#" class="tab-menu__item"> <span>Другое</span> </a> </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="p-account__appeals">
-                                    <div class="p-account__appeals-filters">
-                                        <div class="ui-dropdown ui-dropdown_select ui-dropdown_style_select is-placeholder p-account__appeals-dropdown js-dropdown" data-dropdown="select"> <input class="ui-dropdown__input js-dropdown-input" name="status" tabindex="-1"> <button class="ui-dropdown__button js-dropdown-button" type="button" role="combobox"> <span class="ui-dropdown__button-text js-dropdown-button-text" role="textbox"> Все статусы </span> <span class="ui-dropdown__button-icon-box"><span class="ui-dropdown__button-icon"></span></span> </button>
-                                            <div class="ui-dropdown__popup js-dropdown-popup" aria-hidden="true">
-                                                <div class="ui-dropdown__scroll js-dropdown-scroll">
-                                                    <div class="ui-dropdown__list js-dropdown-list" tabindex="0" role="listbox">
-                                                        <div class="ui-dropdown__option  js-dropdown-option" data-value="1" data-text-value="Ожидает вашего ответа" role="option" aria-selected="false"> Ожидает вашего ответа </div>
-                                                        <div class="ui-dropdown__option  js-dropdown-option" data-value="2" data-text-value="Обращение закрыто" role="option" aria-selected="false"> Обращение закрыто </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="p-account__datepicker-calendar datepicker-calendar js-datepicker-calendar datepicker-calendar_direction_right">
-                                            <div class="datepicker-calendar__backdrop js-datepicker-calendar-backdrop"></div> <button type="button" class="datepicker-calendar__dropdown-button js-datepicker-calendar-button" aria-label="Выбрать период"> <span class="datepicker-calendar__date-displayed js-datepicker-calendar-selected-date is-placeholder">Выбор периода</span> <svg class="ui-icon ui-icon-calendar">
-                                                    <use xlink:href="img/icons.svg#calendar"></use>
-                                                </svg> </button>
-                                            <div class="datepicker-calendar__popup js-datepicker-calendar-popup">
-                                                <div class="datepicker-calendar__header">
-                                                    <div class="datepicker-calendar__title">Выбор периода</div> <button type="button" class="datepicker-calendar__close js-datepicker-calendar-close" title="Закрыть"> <svg class="ui-icon ui-icon-cross">
-                                                            <use xlink:href="img/icons.svg#cross"></use>
-                                                        </svg> </button>
-                                                </div>
-                                                <div class="datepicker-calendar__content">
-                                                    <div class="datepicker-calendar__period"> <button type="button" class="datepicker-calendar__period-button js-datepicker-calendar-period" data-period="today"> <span class="datepicker-calendar__radio-icon"></span> <span>Сегодня</span> <span class="datepicker-calendar__period-date js-datepicker-calendar-period-date"></span> </button><button type="button" class="datepicker-calendar__period-button js-datepicker-calendar-period" data-period="week"> <span class="datepicker-calendar__radio-icon"></span> <span>Неделя</span> <span class="datepicker-calendar__period-date js-datepicker-calendar-period-date"></span> </button><button type="button" class="datepicker-calendar__period-button js-datepicker-calendar-period" data-period="month"> <span class="datepicker-calendar__radio-icon"></span> <span>Месяц</span> <span class="datepicker-calendar__period-date js-datepicker-calendar-period-date"></span> </button><button type="button" class="datepicker-calendar__period-button js-datepicker-calendar-period" data-period="quarter"> <span class="datepicker-calendar__radio-icon"></span> <span>Квартал</span> <span class="datepicker-calendar__period-date js-datepicker-calendar-period-date"></span> </button><button type="button" class="datepicker-calendar__period-button js-datepicker-calendar-period" data-period="year"> <span class="datepicker-calendar__radio-icon"></span> <span>Год</span> <span class="datepicker-calendar__period-date js-datepicker-calendar-period-date"></span> </button> </div>
-                                                    <div class="datepicker-calendar__timeline-box js-datepicker-calendar-timeline-box">
-                                                        <div class="datepicker-calendar__timeline js-datepicker-calendar-timeline">
-                                                            <div class="datepicker-calendar__timeline-container js-datepicker-calendar-timeline-container">
-                                                                <div class="datepicker-calendar__timeline-dragger js-datepicker-calendar-timeline-dragger" title="Переместите, чтобы выбрать нужный период"></div>
-                                                                <div class="datepicker-calendar__timeline-period js-datepicker-calendar-timeline-period"></div>
-                                                                <div class="datepicker-calendar__timeline-years js-datepicker-calendar-years"></div>
-                                                            </div>
+                        <div class="p-catalog__column">
+                            <div class="p-catalog__filters-view js-trigger-fixed-block" data-block-id="filters_fixed_block">
+                                <div class="p-catalog__filters-view-row js-bottom-fixed-block" id="filters_fixed_block">
+                                    <div class="p-catalog__filters-view-left">
+                                        <div class="p-catalog__sorting u-visible-desktop-md">
+                                            <div class="p-catalog__sorting-title">Сортировать&nbsp;</div>
+                                            <div class="ui-dropdown ui-dropdown_select p-catalog__sorting-dropdown  js-dropdown" data-dropdown="select" name="sorting"> <input class="ui-dropdown__input js-dropdown-input" tabindex="-1"> <button class="ui-dropdown__button js-dropdown-button" type="button" role="combobox"> <span class="ui-dropdown__button-text js-dropdown-button-text" role="textbox"> По популярности </span> <span class="ui-dropdown__button-icon-box"><span class="ui-dropdown__button-icon"></span></span> </button>
+                                                <div class="ui-dropdown__popup js-dropdown-popup" aria-hidden="true">
+                                                    <div class="ui-dropdown__scroll js-dropdown-scroll">
+                                                        <div class="ui-dropdown__list js-dropdown-list" tabindex="0" role="listbox">
+                                                            <div class="ui-dropdown__option is-selected js-dropdown-option" data-value="1" data-text-value="По популярности" role="option" aria-selected="true"> По популярности </div>
+                                                            <div class="ui-dropdown__option  js-dropdown-option" data-value="2" data-text-value="По наличию" role="option" aria-selected="false"> По наличию </div>
+                                                            <div class="ui-dropdown__option  js-dropdown-option" data-value="3" data-text-value="Сначала дешевле" role="option" aria-selected="false"> Сначала дешевле </div>
+                                                            <div class="ui-dropdown__option  js-dropdown-option" data-value="4" data-text-value="Сначала дороже" role="option" aria-selected="false"> Сначала дороже </div>
+                                                            <div class="ui-dropdown__option  js-dropdown-option" data-value="5" data-text-value="Новинки" role="option" aria-selected="false"> Новинки </div>
                                                         </div>
                                                     </div>
-                                                    <div class="datepicker-calendar__calendar">
-                                                        <div class="js-datepicker-calendar-flatpickr" data-min-date="01.01.2020" data-max-date="31.12.2025"></div>
+                                                </div>
+                                            </div>
+                                        </div> <button type="button" class="p-catalog__filters-button u-hidden-desktop-md js-filters-toggle-button"> <span class="ui-button-icon p-catalog__filters-button-icon-box"><svg class="ui-icon ui-icon-filters ui-button-icon__icon ">
+                                                    <use xlink:href="img/icons.svg#filters"></use>
+                                                </svg> </span> <span>Фильтры</span> </button>
+                                    </div>
+                                    <div class="p-catalog__filters-view-right u-hidden-mobile">
+                                        <div class="p-catalog__filters-view-buttons js-view-buttons"> <button type="button" class="p-catalog__filters-view-button js-view-button is-active" data-view="grid"> <svg class="ui-icon ui-icon-view-grid">
+                                                    <use xlink:href="img/icons.svg#view-grid"></use>
+                                                </svg> </button> <button type="button" class="p-catalog__filters-view-button js-view-button" data-view="list"> <svg class="ui-icon ui-icon-view-rows">
+                                                    <use xlink:href="img/icons.svg#view-rows"></use>
+                                                </svg> </button> </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-catalog__products l-grid l-grid-cols-3 js-view-items is-grid">
+                                <div class="p-catalog__products-item">
+                                    <div class="p-catalog__product product"> <a href="#" class="product__link"></a>
+                                        <div class="product__image-wrapper">
+                                            <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="312" height="312" alt="" loading="lazy"> </div>
+                                        </div>
+                                        <div class="product__header">
+                                            <div class="product__tags">
+                                                <div class="product__tag product-tag product-tag_new">Новинка</div>
+                                            </div>
+                                            <div class="product__controls"> <button type="button" class="product__control product__control-favorite js-add-to-favorites-button " title="Добавить в избранное"><svg class="ui-icon ui-icon-heart">
+                                                        <use xlink:href="img/icons.svg#heart"></use>
+                                                    </svg> </button> <button type="button" class="product__control product__control-add-to-cart" title="Добавить в корзину" data-modal-open="#modal-add-to-cart"><svg class="ui-icon ui-icon-cart">
+                                                        <use xlink:href="img/icons.svg#cart"></use>
+                                                    </svg></button> </div>
+                                        </div>
+                                        <div class="product__content">
+                                            <div class="product__content-inner">
+                                                <div class="product__title">Винт Reyher DIN 912, 1 1/4"х6" UNC</div>
+                                                <div class="product__parameters u-hidden-mobile">
+                                                    <div class="product__parameters-item">
+                                                        <div class="product__parameters-name"> Артикул </div>
+                                                        <div class="product__parameters-text"> <span>1213181763</span> <button class="product__copy-button js-copy-button" type="button" title="Скопировать" data-copy-text="1213181763" data-copy-success="Артикул успешно скопирован"> <svg class="ui-icon ui-icon-copy">
+                                                                    <use xlink:href="img/icons.svg#copy"></use>
+                                                                </svg> </button> </div>
                                                     </div>
-                                                    <div class="datepicker-calendar__footer">
-                                                        <div class="datepicker-calendar__fields"> <button type="button" class="datepicker-calendar__radio-icon datepicker-calendar__checkbox-button js-datepicker-calendar-checkbox-button"></button> <input class="datepicker-calendar__input js-datepicker-calendar-input-from ui-input" type="text" placeholder="Начало"> <input class="datepicker-calendar__input js-datepicker-calendar-input-to ui-input" type="text" placeholder="Конец"> </div> <button type="button" href="#" class="ui-button ui-button_is-circle datepicker-calendar__apply-button js-datepicker-calendar-apply"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
-                                                                    <use xlink:href="img/icons.svg#arrow"></use>
-                                                                </svg> </span><span class="ui-button__text">
-                                                                Применить
-                                                            </span> </button>
+                                                    <div class="product__parameters-item">
+                                                        <div class="product__parameters-name"> Код товара </div>
+                                                        <div class="product__parameters-text"> <span>1763257</span> <button class="product__copy-button js-copy-button" type="button" title="Скопировать" data-copy-text="1763257" data-copy-success="Код товара успешно скопирован"> <svg class="ui-icon ui-icon-copy">
+                                                                    <use xlink:href="img/icons.svg#copy"></use>
+                                                                </svg> </button> </div>
+                                                    </div>
+                                                    <div class="product__parameters-item">
+                                                        <div class="product__parameters-name"> Размер </div>
+                                                        <div class="product__parameters-text"> <span>4,8 х 29 мм</span> </div>
+                                                    </div>
+                                                    <div class="product__parameters-item">
+                                                        <div class="product__parameters-name"> Диаметр </div>
+                                                        <div class="product__parameters-text"> <span>4,8 мм</span> </div>
+                                                    </div>
+                                                    <div class="product__parameters-item">
+                                                        <div class="product__parameters-name"> Длина </div>
+                                                        <div class="product__parameters-text"> <span>29 мм</span> </div>
+                                                    </div>
+                                                    <div class="product__parameters-item">
+                                                        <div class="product__parameters-name"> Ед. в одном товаре </div>
+                                                        <div class="product__parameters-text"> <span>3 000 шт.</span> </div>
                                                     </div>
                                                 </div>
                                             </div>
+                                            <div class="product__price-block">
+                                                <div class="product__price">1 017 ₽</div>
+                                            </div>
+                                        </div>
+                                        <div class="product__buttons-wrapper">
+                                            <div class="product__buttons"> <a href="" class="ui-button ui-button_style_accent ui-button_is-circle product__button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                                        </svg> </span><span class="ui-button__text"> В&nbsp;корзине<br><span class="u-text-size-xs u-d-block">Перейти</span> </span> </a> </div>
                                         </div>
                                     </div>
-                                    <div class="p-account__appeals-list l-grid">
-                                        <div class="appeal-item">
-                                            <div class="appeal-item__main-info">
-                                                <div class="appeal-item__head">
-                                                    <div class="appeal-item__category">Возврат №1424</div>
-                                                    <div class="appeal-item__title">Заказ товара</div>
-                                                </div>
-                                                <div class="appeal-item__date"> 26.09.2024 </div>
-                                            </div>
-                                            <div class="appeal-item__status-block">
-                                                <div class="appeal-item__status appeal-item__status_pending">Ожидает вашего ответа</div>
-                                            </div> <span class="appeal-item__arrow-icon"></span> <button type="button" class="appeal-item__open-button" data-modal-open="#modal-appeal" aria-label="Заказ товара"> <span></span> </button>
-                                        </div>
-                                        <div class="appeal-item">
-                                            <div class="appeal-item__main-info">
-                                                <div class="appeal-item__head">
-                                                    <div class="appeal-item__category">Другое №1256</div>
-                                                    <div class="appeal-item__title">Вопрос по&nbsp;Лк</div>
-                                                </div>
-                                                <div class="appeal-item__date"> 20.09.2024 </div>
-                                            </div>
-                                            <div class="appeal-item__status-block">
-                                                <div class="appeal-item__status appeal-item__status_closed">Обращение закрыто</div>
-                                            </div> <span class="appeal-item__arrow-icon"></span> <button type="button" class="appeal-item__open-button" data-modal-open="#modal-appeal" aria-label="Заказ товара"> <span></span> </button>
-                                        </div>
-                                    </div>
-                                    <div class="p-account__section-button-place u-visible-mobile js-new-appeal-place-in-adaptive"></div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <section class="products-section section">
-                <div class="container">
-                    <div class="products-section__content js-swiper-products-section">
-                        <div class="products-section__heading">
-                            <h2 class="products-section__title section-title">Рекомендуем вам</h2>
+            <section class="cooperation-section section">
+                <div class="cooperation-section__container container">
+                    <div class="cooperation-section__box">
+                        <div class="cooperation-section__image-box">
+                            <picture class="cooperation-section__picture">
+                                <source media="(max-width: 575px)" srcset="img/cooperation-banner/cooperation-banner-575.jpg 1x, img/cooperation-banner/cooperation-banner-575@2x.jpg 2x">
+                                <source media="(max-width: 1024px)" srcset="img/cooperation-banner/cooperation-banner-1024.jpg 1x, img/cooperation-banner/cooperation-banner-1024@2x.jpg 2x"> <img alt="" class="cooperation-section__image" src="img/cooperation-banner/cooperation-banner.jpg" srcset="img/cooperation-banner/cooperation-banner@2x.jpg 2x" width="1920" height="1080" loading="lazy">
+                            </picture>
                         </div>
-                        <div class="swiper products-section__swiper js-swiper-products is-animation js-animation" data-animation-type="trigger">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__item product"> <a href="#" class="product__link"></a>
-                                        <div class="product__image-wrapper">
-                                            <div class="product__image-box"> <img class="product__image" src="img/hits/1.jpg" srcset="img/hits/1@2x.jpg 2x" width="312" height="312" alt="" loading="lazy"> </div>
-                                        </div>
-                                        <div class="product__header">
-                                            <div class="product__tags">
-                                                <div class="product__tag product-tag product-tag_new">Новинка</div>
-                                            </div>
-                                            <div class="product__controls"> <button type="button" class="product__control product__control-favorite js-add-to-favorites-button " title="Добавить в избранное"><svg class="ui-icon ui-icon-heart">
-                                                        <use xlink:href="img/icons.svg#heart"></use>
-                                                    </svg> </button> <button type="button" class="product__control product__control-add-to-cart" title="Добавить в корзину" data-modal-open="#modal-add-to-cart"><svg class="ui-icon ui-icon-cart">
-                                                        <use xlink:href="img/icons.svg#cart"></use>
-                                                    </svg></button> </div>
-                                        </div>
-                                        <div class="product__content">
-                                            <div class="product__content-inner">
-                                                <div class="product__title">Винт Reyher DIN 912, 1 1/4&quot;х6&Prime; UNC</div>
-                                            </div>
-                                            <div class="product__price-block">
-                                                <div class="product__price">1 017 ₽</div>
-                                            </div>
-                                        </div>
-                                        <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-add-to-cart" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Добавить</span>
-                                                        в&nbsp;корзину
-                                                    </span> </button> </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__item product"> <a href="#" class="product__link"></a>
-                                        <div class="product__image-wrapper">
-                                            <div class="product__image-box"> <img class="product__image" src="img/hits/2.jpg" srcset="img/hits/2@2x.jpg 2x" width="312" height="312" alt="" loading="lazy"> </div>
-                                        </div>
-                                        <div class="product__header">
-                                            <div class="product__controls"> <button type="button" class="product__control product__control-favorite js-add-to-favorites-button " title="Добавить в избранное"><svg class="ui-icon ui-icon-heart">
-                                                        <use xlink:href="img/icons.svg#heart"></use>
-                                                    </svg> </button> <button type="button" class="product__control product__control-add-to-cart" title="Добавить в корзину" data-modal-open="#modal-add-to-cart"><svg class="ui-icon ui-icon-cart">
-                                                        <use xlink:href="img/icons.svg#cart"></use>
-                                                    </svg></button> </div>
-                                        </div>
-                                        <div class="product__content">
-                                            <div class="product__content-inner">
-                                                <div class="product__title">Угловая шлифмашина MAKITA, 2000&nbsp;В</div>
-                                            </div>
-                                            <div class="product__price-block">
-                                                <div class="product__price">12 290 ₽</div>
-                                            </div>
-                                        </div>
-                                        <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-add-to-cart" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Добавить</span>
-                                                        в&nbsp;корзину
-                                                    </span> </button> </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__item product"> <a href="#" class="product__link"></a>
-                                        <div class="product__image-wrapper">
-                                            <div class="product__image-box"> <img class="product__image" src="img/hits/3.jpg" srcset="img/hits/3@2x.jpg 2x" width="312" height="312" alt="" loading="lazy"> </div>
-                                        </div>
-                                        <div class="product__header">
-                                            <div class="product__controls"> <button type="button" class="product__control product__control-favorite js-add-to-favorites-button " title="Добавить в избранное"><svg class="ui-icon ui-icon-heart">
-                                                        <use xlink:href="img/icons.svg#heart"></use>
-                                                    </svg> </button> <button type="button" class="product__control product__control-add-to-cart" title="Добавить в корзину" data-modal-open="#modal-add-to-cart"><svg class="ui-icon ui-icon-cart">
-                                                        <use xlink:href="img/icons.svg#cart"></use>
-                                                    </svg></button> </div>
-                                        </div>
-                                        <div class="product__content">
-                                            <div class="product__content-inner">
-                                                <div class="product__title">Рулетка VIRA by&nbsp;RAGE 8&nbsp;м х&nbsp;25&nbsp;мм</div>
-                                            </div>
-                                            <div class="product__price-block">
-                                                <div class="product__price">478 ₽</div>
-                                            </div>
-                                        </div>
-                                        <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-add-to-cart" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Добавить</span>
-                                                        в&nbsp;корзину
-                                                    </span> </button> </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__item product"> <a href="#" class="product__link"></a>
-                                        <div class="product__image-wrapper">
-                                            <div class="product__image-box"> <img class="product__image" src="img/hits/4.jpg" srcset="img/hits/4@2x.jpg 2x" width="312" height="312" alt="" loading="lazy"> </div>
-                                        </div>
-                                        <div class="product__header">
-                                            <div class="product__tags">
-                                                <div class="product__tag product-tag product-tag_promotion">Акция</div>
-                                            </div>
-                                            <div class="product__controls"> <button type="button" class="product__control product__control-favorite js-add-to-favorites-button " title="Добавить в избранное"><svg class="ui-icon ui-icon-heart">
-                                                        <use xlink:href="img/icons.svg#heart"></use>
-                                                    </svg> </button> <button type="button" class="product__control product__control-add-to-cart" title="Добавить в корзину" data-modal-open="#modal-add-to-cart"><svg class="ui-icon ui-icon-cart">
-                                                        <use xlink:href="img/icons.svg#cart"></use>
-                                                    </svg></button> </div>
-                                        </div>
-                                        <div class="product__content">
-                                            <div class="product__content-inner">
-                                                <div class="product__title">Ножовка по&nbsp;дереву Gross Pirahna 400&nbsp;мм</div>
-                                            </div>
-                                            <div class="product__price-block">
-                                                <div class="product__price">1 081 ₽</div>
-                                                <div class="product__old-price">1 317 ₽</div>
-                                            </div>
-                                        </div>
-                                        <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-add-to-cart" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Добавить</span>
-                                                        в&nbsp;корзину
-                                                    </span> </button> </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__item product"> <a href="#" class="product__link"></a>
-                                        <div class="product__image-wrapper">
-                                            <div class="product__image-box"> <img class="product__image" src="img/hits/1.jpg" srcset="img/hits/1@2x.jpg 2x" width="312" height="312" alt="" loading="lazy"> </div>
-                                        </div>
-                                        <div class="product__header">
-                                            <div class="product__tags">
-                                                <div class="product__tag product-tag product-tag_new">Новинка</div>
-                                            </div>
-                                            <div class="product__controls"> <button type="button" class="product__control product__control-favorite js-add-to-favorites-button " title="Добавить в избранное"><svg class="ui-icon ui-icon-heart">
-                                                        <use xlink:href="img/icons.svg#heart"></use>
-                                                    </svg> </button> <button type="button" class="product__control product__control-add-to-cart" title="Добавить в корзину" data-modal-open="#modal-add-to-cart"><svg class="ui-icon ui-icon-cart">
-                                                        <use xlink:href="img/icons.svg#cart"></use>
-                                                    </svg></button> </div>
-                                        </div>
-                                        <div class="product__content">
-                                            <div class="product__content-inner">
-                                                <div class="product__title">Винт Reyher DIN 912, 1 1/4&quot;х6&Prime; UNC</div>
-                                            </div>
-                                            <div class="product__price-block">
-                                                <div class="product__price">1 017 ₽</div>
-                                            </div>
-                                        </div>
-                                        <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-add-to-cart" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Добавить</span>
-                                                        в&nbsp;корзину
-                                                    </span> </button> </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__item product"> <a href="#" class="product__link"></a>
-                                        <div class="product__image-wrapper">
-                                            <div class="product__image-box"> <img class="product__image" src="img/hits/2.jpg" srcset="img/hits/2@2x.jpg 2x" width="312" height="312" alt="" loading="lazy"> </div>
-                                        </div>
-                                        <div class="product__header">
-                                            <div class="product__controls"> <button type="button" class="product__control product__control-favorite js-add-to-favorites-button " title="Добавить в избранное"><svg class="ui-icon ui-icon-heart">
-                                                        <use xlink:href="img/icons.svg#heart"></use>
-                                                    </svg> </button> <button type="button" class="product__control product__control-add-to-cart" title="Добавить в корзину" data-modal-open="#modal-add-to-cart"><svg class="ui-icon ui-icon-cart">
-                                                        <use xlink:href="img/icons.svg#cart"></use>
-                                                    </svg></button> </div>
-                                        </div>
-                                        <div class="product__content">
-                                            <div class="product__content-inner">
-                                                <div class="product__title">Угловая шлифмашина MAKITA, 2000&nbsp;В</div>
-                                            </div>
-                                            <div class="product__price-block">
-                                                <div class="product__price">12 290 ₽</div>
-                                            </div>
-                                        </div>
-                                        <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-add-to-cart" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Добавить</span>
-                                                        в&nbsp;корзину
-                                                    </span> </button> </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__item product"> <a href="#" class="product__link"></a>
-                                        <div class="product__image-wrapper">
-                                            <div class="product__image-box"> <img class="product__image" src="img/hits/3.jpg" srcset="img/hits/3@2x.jpg 2x" width="312" height="312" alt="" loading="lazy"> </div>
-                                        </div>
-                                        <div class="product__header">
-                                            <div class="product__controls"> <button type="button" class="product__control product__control-favorite js-add-to-favorites-button " title="Добавить в избранное"><svg class="ui-icon ui-icon-heart">
-                                                        <use xlink:href="img/icons.svg#heart"></use>
-                                                    </svg> </button> <button type="button" class="product__control product__control-add-to-cart" title="Добавить в корзину" data-modal-open="#modal-add-to-cart"><svg class="ui-icon ui-icon-cart">
-                                                        <use xlink:href="img/icons.svg#cart"></use>
-                                                    </svg></button> </div>
-                                        </div>
-                                        <div class="product__content">
-                                            <div class="product__content-inner">
-                                                <div class="product__title">Рулетка VIRA by&nbsp;RAGE 8&nbsp;м х&nbsp;25&nbsp;мм</div>
-                                            </div>
-                                            <div class="product__price-block">
-                                                <div class="product__price">478 ₽</div>
-                                            </div>
-                                        </div>
-                                        <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-add-to-cart" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Добавить</span>
-                                                        в&nbsp;корзину
-                                                    </span> </button> </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__item product"> <a href="#" class="product__link"></a>
-                                        <div class="product__image-wrapper">
-                                            <div class="product__image-box"> <img class="product__image" src="img/hits/4.jpg" srcset="img/hits/4@2x.jpg 2x" width="312" height="312" alt="" loading="lazy"> </div>
-                                        </div>
-                                        <div class="product__header">
-                                            <div class="product__tags">
-                                                <div class="product__tag product-tag product-tag_promotion">Акция</div>
-                                            </div>
-                                            <div class="product__controls"> <button type="button" class="product__control product__control-favorite js-add-to-favorites-button " title="Добавить в избранное"><svg class="ui-icon ui-icon-heart">
-                                                        <use xlink:href="img/icons.svg#heart"></use>
-                                                    </svg> </button> <button type="button" class="product__control product__control-add-to-cart" title="Добавить в корзину" data-modal-open="#modal-add-to-cart"><svg class="ui-icon ui-icon-cart">
-                                                        <use xlink:href="img/icons.svg#cart"></use>
-                                                    </svg></button> </div>
-                                        </div>
-                                        <div class="product__content">
-                                            <div class="product__content-inner">
-                                                <div class="product__title">Ножовка по&nbsp;дереву Gross Pirahna 400&nbsp;мм</div>
-                                            </div>
-                                            <div class="product__price-block">
-                                                <div class="product__price">1 081 ₽</div>
-                                                <div class="product__old-price">1 317 ₽</div>
-                                            </div>
-                                        </div>
-                                        <div class="product__buttons-wrapper">
-                                            <div class="product__buttons"> <button type="button" href="#" data-modal-open="#modal-add-to-cart" class="ui-button product__button"><span class="ui-button__text"> <span class="u-hidden-mobile">Добавить</span>
-                                                        в&nbsp;корзину
-                                                    </span> </button> </div>
-                                        </div>
-                                    </div>
-                                </div>
+                        <div class="cooperation-section__content">
+                            <h2 class="cooperation-section__subtitle">
+                                Сотрудничество
+                            </h2>
+                            <div class="cooperation-section__title section-title">
+                                <p>Компания CSK нацелена на&nbsp;долгосрочное сотрудничество</p>
                             </div>
-                            <div class="products-section__swiper-control swiper-control"> <button type="button" class="ui-button-icon ui-button-icon_style_outline swiper-button-prev  products-section__slider-prev js-swiper-products-prev"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M2.9375 0.87793L7.05945 4.99988L2.9375 9.12183" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg> </button> <button type="button" class="ui-button-icon ui-button-icon_style_outline swiper-button-next  products-section__slider-next js-swiper-products-next"><svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M2.9375 0.87793L7.05945 4.99988L2.9375 9.12183" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg> </button> </div>
+                            <div class="cooperation-section__buttons"> <button type="button" href="#" data-modal-open="#modal-callback" class="ui-button ui-button_style_white ui-button_is-circle cooperation-section__button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                        </svg> </span><span class="ui-button__text"> Связаться с&nbsp;нами </span> </button> </div>
                         </div>
                     </div>
                 </div>
@@ -1541,222 +1452,6 @@
                             <div class="modal__footer modal__footer_bottom"> <button type="button" href="#" disabled="disabled" class="ui-button ui-button_fill ui-button_is-circle modal__button js-add-to-cart-button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                             <use xlink:href="img/icons.svg#arrow"></use>
                                         </svg> </span><span class="ui-button__text"> Добавить в корзину </span> </button> </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal-new-appeal modal js-modal modal_direction_right" id="modal-new-appeal" aria-hidden="true" tabindex="-1">
-        <div class="modal__wrap">
-            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="Новое обращение">
-                <picture class="modal__picture">
-                    <source media="(max-width: 575px)" data-srcset="img/callback-mobile.jpg 1x, img/callback-mobile@2x.jpg 2x"> <img class="modal__picture-image lazy" data-src="img/callback.jpg" data-srcset="img/callback@2x.jpg" width="539" height="869" alt="">
-                </picture>
-                <div class="modal__inner js-modal-scrollbar">
-                    <div class="modal__inner-content">
-                        <div class="modal__header">
-                            <div class="modal__title">Новое обращение</div> <!-- {
-                            isOrder ?
-                            <div class="modal__order">
-                                {
-                                    <div class:list={['modal__title', titleClass]} set:html={'Заказ 124141135'}></div>
-                                }
-                                {
-                                    <OrderStatus class="modal__order-status" status="completed"></OrderStatus>
-                                }
-                            </div>
-                            : ''
-                        } --> <button type="button" title="Закрыть" class="ui-button-icon ui-button-icon_style_outline modal__close js-modal-close "><svg class="ui-icon ui-icon-cross ui-button-icon__icon ">
-                                    <use xlink:href="img/icons.svg#cross"></use>
-                                </svg> </button>
-                        </div>
-                        <div class="modal__content js-modal-content">
-                            <form action="#" class="modal__form form js-form-validation js-form-new-appeal">
-                                <div class="modal__form-main-text">
-                                    Срок рассмотрения обращения&nbsp;&mdash; 10&nbsp;рабочих дней.
-                                </div>
-                                <div class="modal__form-grid l-grid l-gap-30">
-                                    <div class="form__column">
-                                        <div class="ui-dropdown ui-dropdown_select ui-dropdown_style_select is-placeholder js-dropdown" data-dropdown="select"> <input class="ui-dropdown__input js-dropdown-input js-validate-field js-form-appeal-category js-validate-change-input" name="category" required="required" tabindex="-1"> <button class="ui-dropdown__button js-dropdown-button" type="button" role="combobox"> <span class="ui-dropdown__button-text js-dropdown-button-text" role="textbox"> Выберите категорию </span> <span class="ui-dropdown__button-icon-box"><span class="ui-dropdown__button-icon"></span></span> </button>
-                                            <div class="ui-dropdown__popup js-dropdown-popup" aria-hidden="true">
-                                                <div class="ui-dropdown__scroll js-dropdown-scroll">
-                                                    <div class="ui-dropdown__list js-dropdown-list" tabindex="0" role="listbox">
-                                                        <div class="ui-dropdown__option  js-dropdown-option" data-value="return" data-text-value="Возврат" role="option" aria-selected="false"> Возврат </div>
-                                                        <div class="ui-dropdown__option  js-dropdown-option" data-value="other" data-text-value="Другое" role="option" aria-selected="false"> Другое </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form__column">
-                                        <div class="field-box js-field-box"> <label class="field-box__label">Укажите тему</label>
-                                            <div class="field-box__content"> <input class="field-box__input js-validate-field js-form-appeal-theme js-field-box-input ui-input" type="text" name="theme" placeholder="Укажите тему" required="" data-js-form-field="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form__column js-form-appeal-reason u-hidden">
-                                        <div class="ui-dropdown ui-dropdown_select ui-dropdown_style_select is-placeholder js-dropdown" data-dropdown="select"> <input class="ui-dropdown__input js-dropdown-input js-validate-field js-validate-field-is-hidden" name="reason" required="required" tabindex="-1"> <button class="ui-dropdown__button js-dropdown-button" type="button" role="combobox"> <span class="ui-dropdown__button-text js-dropdown-button-text" role="textbox"> Выберите причину возврата </span> <span class="ui-dropdown__button-icon-box"><span class="ui-dropdown__button-icon"></span></span> </button>
-                                            <div class="ui-dropdown__popup js-dropdown-popup" aria-hidden="true">
-                                                <div class="ui-dropdown__scroll js-dropdown-scroll">
-                                                    <div class="ui-dropdown__list js-dropdown-list" tabindex="0" role="listbox">
-                                                        <div class="ui-dropdown__option  js-dropdown-option" data-value="1" data-text-value="Причина 1" role="option" aria-selected="false"> Причина 1 </div>
-                                                        <div class="ui-dropdown__option  js-dropdown-option" data-value="2" data-text-value="Причина 2" role="option" aria-selected="false"> Причина 2 </div>
-                                                        <div class="ui-dropdown__option  js-dropdown-option" data-value="2" data-text-value="Причина 3" role="option" aria-selected="false"> Причина 3 </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form__column js-form-appeal-order u-hidden">
-                                        <div class="ui-dropdown ui-dropdown_select ui-dropdown_style_select is-placeholder js-dropdown" data-dropdown="select"> <input class="ui-dropdown__input js-dropdown-input js-validate-field js-validate-field-is-hidden" name="order_number" required="required" tabindex="-1"> <button class="ui-dropdown__button js-dropdown-button" type="button" role="combobox"> <span class="ui-dropdown__button-text js-dropdown-button-text" role="textbox"> № заказа </span> <span class="ui-dropdown__button-icon-box"><span class="ui-dropdown__button-icon"></span></span> </button>
-                                            <div class="ui-dropdown__popup js-dropdown-popup" aria-hidden="true">
-                                                <div class="ui-dropdown__scroll js-dropdown-scroll">
-                                                    <div class="ui-dropdown__list js-dropdown-list" tabindex="0" role="listbox">
-                                                        <div class="ui-dropdown__option  js-dropdown-option" data-value="12345" data-text-value="12345" role="option" aria-selected="false"> 12345 </div>
-                                                        <div class="ui-dropdown__option  js-dropdown-option" data-value="36534" data-text-value="36534" role="option" aria-selected="false"> 36534 </div>
-                                                        <div class="ui-dropdown__option  js-dropdown-option" data-value="44678" data-text-value="44678" role="option" aria-selected="false"> 44678 </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form__column">
-                                        <div class="field-box field-box_textarea js-field-box"> <label class="field-box__label">Ваш комментарий (опционально)</label>
-                                            <div class="field-box__content"> <textarea class=" field-box__textarea  js-field-box-input ui-textarea" name="message" placeholder="Ваш комментарий (опционально)" rows="6"></textarea>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form__attaches">
-                                    <div class="ui-attach ui-attach_files form__attach js-form-appeal-attach-file js-attach">
-                                        <div class="ui-attach__files js-attach-files"></div> <label class="ui-attach__label"> <input type="file" class="ui-attach__input js-attach-input" name="file" aria-label="Загрузите файл" accept=".jpg,.png,.jpeg" data-message-extension="Недопустимый формат файла" data-max-size="10" data-message-max-size="Максимальный размер файла 10 мб" data-max-files="1"> <span class="ui-attach__focused"></span> <span class="ui-attach__icon-box"> <svg class="ui-icon ui-icon-attach ui-attach__icon">
-                                                    <use xlink:href="img/icons.svg#attach"></use>
-                                                </svg> </span>
-                                            <span class="ui-attach__text">Прикрепить файл</span> </label> <span class="ui-attach__text-info">Изображение в формате .png .jpg не более 10Мб</span>
-                                    </div>
-                                    <div class="form__attaches-list js-form-appeal-attaches u-hidden">
-                                        <div class="ui-attach ui-attach_files form__attach js-attach">
-                                            <div class="ui-attach__files js-attach-files"></div> <label class="ui-attach__label"> <input type="file" class="ui-attach__input js-attach-input" name="product_file" aria-label="Загрузите файл" accept=".jpg,.png,.jpeg" data-message-extension="Недопустимый формат файла" data-max-size="10" data-message-max-size="Максимальный размер файла 10 мб" data-max-files="1"> <span class="ui-attach__focused"></span> <span class="ui-attach__icon-box"> <svg class="ui-icon ui-icon-attach ui-attach__icon">
-                                                        <use xlink:href="img/icons.svg#attach"></use>
-                                                    </svg> </span>
-                                                <span class="ui-attach__text">Товар целиком</span> </label> <span class="ui-attach__text-info">Изображение в формате .png .jpg не более 10Мб</span>
-                                        </div>
-                                        <div class="ui-attach ui-attach_files form__attach js-attach">
-                                            <div class="ui-attach__files js-attach-files"></div> <label class="ui-attach__label"> <input type="file" class="ui-attach__input js-attach-input" name="packaging_product" aria-label="Загрузите файл" accept=".jpg,.png,.jpeg" data-message-extension="Недопустимый формат файла" data-max-size="10" data-message-max-size="Максимальный размер файла 10 мб" data-max-files="1"> <span class="ui-attach__focused"></span> <span class="ui-attach__icon-box"> <svg class="ui-icon ui-icon-attach ui-attach__icon">
-                                                        <use xlink:href="img/icons.svg#attach"></use>
-                                                    </svg> </span>
-                                                <span class="ui-attach__text">Заводская упаковка</span> </label> <span class="ui-attach__text-info">Изображение в формате .png .jpg не более 10Мб</span>
-                                        </div>
-                                        <div class="ui-attach ui-attach_files form__attach js-attach">
-                                            <div class="ui-attach__files js-attach-files"></div> <label class="ui-attach__label"> <input type="file" class="ui-attach__input js-attach-input" name="defect_file" aria-label="Загрузите файл" accept=".jpg,.png,.jpeg" data-message-extension="Недопустимый формат файла" data-max-size="10" data-message-max-size="Максимальный размер файла 10 мб" data-max-files="1"> <span class="ui-attach__focused"></span> <span class="ui-attach__icon-box"> <svg class="ui-icon ui-icon-attach ui-attach__icon">
-                                                        <use xlink:href="img/icons.svg#attach"></use>
-                                                    </svg> </span>
-                                                <span class="ui-attach__text">Фотография дефекта</span> </label> <span class="ui-attach__text-info">Изображение в формате .png .jpg не более 10Мб</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal__form-footer"> <button type="submit" href="#" class="ui-button ui-button_fill ui-button_is-circle modal__form-submit"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
-                                                <use xlink:href="img/icons.svg#arrow"></use>
-                                            </svg> </span><span class="ui-button__text"> Отправить обращение </span> </button>
-                                    <div class="modal__form-agreement form__agreement form__agreement_center">
-                                        Нажимая кнопку, вы&nbsp;соглашаетесь с<a href="#">&nbsp;политикой конфиденциальности</a> </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="modal-appeal modal js-modal modal_direction_right" id="modal-appeal" aria-hidden="true" tabindex="-1">
-        <div class="modal__wrap">
-            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="Заказ товара">
-                <picture class="modal__picture">
-                    <source media="(max-width: 575px)" data-srcset="img/callback-mobile.jpg 1x, img/callback-mobile@2x.jpg 2x"> <img class="modal__picture-image lazy" data-src="img/callback.jpg" data-srcset="img/callback@2x.jpg" width="539" height="869" alt="">
-                </picture>
-                <div class="modal__inner">
-                    <div class="modal__inner-content">
-                        <div class="modal__header">
-                            <div class="modal__title">Заказ товара</div> <!-- {
-                            isOrder ?
-                            <div class="modal__order">
-                                {
-                                    <div class:list={['modal__title', titleClass]} set:html={'Заказ 124141135'}></div>
-                                }
-                                {
-                                    <OrderStatus class="modal__order-status" status="completed"></OrderStatus>
-                                }
-                            </div>
-                            : ''
-                        } --> <button type="button" title="Закрыть" class="ui-button-icon ui-button-icon_style_outline modal__close js-modal-close "><svg class="ui-icon ui-icon-cross ui-button-icon__icon ">
-                                    <use xlink:href="img/icons.svg#cross"></use>
-                                </svg> </button>
-                        </div>
-                        <div class="modal__content js-modal-content">
-                            <form action="#" class="modal-appeal__form form js-form-validation">
-                                <div class="modal-appeal__head">
-                                    <div class="modal-appeal__category">Возврат №1424</div>
-                                    <div class="modal-appeal__date">Обращение создано 26.09.2024</div>
-                                </div>
-                                <div class="modal-appeal__chat-wrapper">
-                                    <div class="modal-appeal__chat-scrollbar js-modal-scrollbar">
-                                        <div class="modal-appeal__chat chat js-chat">
-                                            <div class="chat__messages">
-                                                <div class="chat__message chat__message_self">
-                                                    <div class="chat__message-header">
-                                                        <div class="chat__person">
-                                                            <div class="chat__person-photo"> <img class="chat__person-image" src="img/chat-person.png" srcset="img/chat-person@2x.png 2x" width="42" height="42" alt=""> </div>
-                                                            <div class="chat__person-content">
-                                                                <div class="chat__person-name">Вы</div>
-                                                                <div class="chat__person-position">asa@csk.ru</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="chat__message-date"> <span>26.09.2024</span> <span>11:32</span> </div>
-                                                    </div>
-                                                    <div class="chat__message-text">
-                                                        <p>Здравствуйте! К&nbsp;сожалению не&nbsp;получилось до&nbsp;вас дозвониться. Как осуществляется доставка товара в&nbsp;другие регионы? Интересует Москва.</p>
-                                                    </div>
-                                                </div>
-                                                <div class="chat__message">
-                                                    <div class="chat__message-header">
-                                                        <div class="chat__person">
-                                                            <div class="chat__person-photo"> <img class="chat__person-image" src="img/chat-person-2.png" srcset="img/chat-person-2@2x.png 2x" width="42" height="42" alt=""> </div>
-                                                            <div class="chat__person-content">
-                                                                <div class="chat__person-name">Вы</div>
-                                                                <div class="chat__person-position">Специалист поддержки</div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="chat__message-date"> <span>27.09.2024</span> <span>08:12</span> </div>
-                                                    </div>
-                                                    <div class="chat__message-text">
-                                                        <p>Добрый день! <br>
-                                                            К&nbsp;сожалению, доставка в&nbsp;Москву осуществляется только силами покупателя. Вы&nbsp;можете оформить доставку любой удобной логистической компанией.
-                                                            <a href="#">Подробнее по&nbsp;ссылке</a>.
-                                                        </p>
-                                                        <p>Если возникнут дополнительные вопросы&nbsp;&mdash; буду рад на&nbsp;них ответить.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="chat__answer">
-                                                <div class="field-box field-box_textarea chat__answer-field js-field-box">
-                                                    <div class="field-box__content"> <textarea class=" field-box__textarea chat__answer-input js-validate-field js-scroll-down-on-focus js-field-box-input ui-textarea" name="answer" placeholder="Напишите ваш ответ" required="" data-js-form-field=""></textarea>
-                                                    </div>
-                                                </div>
-                                                <div class="ui-attach ui-attach_files chat__answer-attach js-attach">
-                                                    <div class="ui-attach__files js-attach-files"></div> <label class="ui-attach__label"> <input type="file" class="ui-attach__input js-attach-input" name="file" aria-label="Загрузите файл" accept=".doc,.docx,.xls,.xlsx,.pdf,.png,.jpg,.jpeg,.gif" data-message-extension="Недопустимый формат файла" data-max-size="10" data-message-max-size="Максимальный размер файла 10 мб" data-max-files="1"> <span class="ui-attach__focused"></span> <span class="ui-attach__icon-box"> <svg class="ui-icon ui-icon-attach ui-attach__icon">
-                                                                <use xlink:href="img/icons.svg#attach"></use>
-                                                            </svg> </span>
-                                                        <span class="ui-attach__text">Прикрепить файл</span> </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="modal__footer modal__footer_fixed"> <button type="button" href="#" class="ui-button ui-button_style_outline modal-appeal__button js-modal-close"><span class="ui-button__text"> Закрыть<span class="u-hidden-mobile-sm"> обращение</span> </span> </button> <button type="submit" href="#" class="ui-button ui-button_is-circle modal-appeal__button modal__form-submit"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
-                                                <use xlink:href="img/icons.svg#arrow"></use>
-                                            </svg> </span><span class="ui-button__text"> Отправить </span> </button> </div>
-                            </form>
                         </div>
                     </div>
                 </div>

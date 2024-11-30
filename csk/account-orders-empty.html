@@ -763,7 +763,7 @@
                                                     <div class="personal-manager__contacts">
                                                         <div class="personal-manager__phones"> <a href="tel:+74953749406">+7 (495) 374-94-06</a> </div> <a href="mailto:smirnova@csk.ru">smirnova@csk.ru</a>
                                                         <div>ПН-ПТ 10:00-19:00</div>
-                                                    </div> <button type="button" href="#" class="ui-button ui-button_style_outline ui-button_fill ui-button_is-circle personal-manager__button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                    </div> <button type="button" href="#" data-modal-open="#modal-new-appeal" class="ui-button ui-button_style_outline ui-button_fill ui-button_is-circle personal-manager__button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                                                 <use xlink:href="img/icons.svg#arrow"></use>
                                                             </svg> </span><span class="ui-button__text"> Задать вопрос </span> </button>
                                                 </div>
@@ -1467,6 +1467,128 @@
                             <div class="modal__footer modal__footer_bottom"> <button type="button" href="#" disabled="disabled" class="ui-button ui-button_fill ui-button_is-circle modal__button js-add-to-cart-button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                             <use xlink:href="img/icons.svg#arrow"></use>
                                         </svg> </span><span class="ui-button__text"> Добавить в корзину </span> </button> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-new-appeal modal js-modal modal_direction_right" id="modal-new-appeal" aria-hidden="true" tabindex="-1">
+        <div class="modal__wrap">
+            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="Новое обращение">
+                <picture class="modal__picture">
+                    <source media="(max-width: 575px)" data-srcset="img/callback-mobile.jpg 1x, img/callback-mobile@2x.jpg 2x"> <img class="modal__picture-image lazy" data-src="img/callback.jpg" data-srcset="img/callback@2x.jpg" width="539" height="869" alt="">
+                </picture>
+                <div class="modal__inner js-modal-scrollbar">
+                    <div class="modal__inner-content">
+                        <div class="modal__header">
+                            <div class="modal__title">Новое обращение</div> <!-- {
+                            isOrder ?
+                            <div class="modal__order">
+                                {
+                                    <div class:list={['modal__title', titleClass]} set:html={'Заказ 124141135'}></div>
+                                }
+                                {
+                                    <OrderStatus class="modal__order-status" status="completed"></OrderStatus>
+                                }
+                            </div>
+                            : ''
+                        } --> <button type="button" title="Закрыть" class="ui-button-icon ui-button-icon_style_outline modal__close js-modal-close "><svg class="ui-icon ui-icon-cross ui-button-icon__icon ">
+                                    <use xlink:href="img/icons.svg#cross"></use>
+                                </svg> </button>
+                        </div>
+                        <div class="modal__content js-modal-content">
+                            <form action="#" class="modal__form form js-form-validation js-form-new-appeal">
+                                <div class="modal__form-main-text">
+                                    Срок рассмотрения обращения&nbsp;&mdash; 10&nbsp;рабочих дней.
+                                </div>
+                                <div class="modal__form-grid l-grid l-gap-30">
+                                    <div class="form__column">
+                                        <div class="ui-dropdown ui-dropdown_select ui-dropdown_style_select is-placeholder js-dropdown" data-dropdown="select"> <input class="ui-dropdown__input js-dropdown-input js-validate-field js-form-appeal-category js-validate-change-input" name="category" required="required" tabindex="-1"> <button class="ui-dropdown__button js-dropdown-button" type="button" role="combobox"> <span class="ui-dropdown__button-text js-dropdown-button-text" role="textbox"> Выберите категорию </span> <span class="ui-dropdown__button-icon-box"><span class="ui-dropdown__button-icon"></span></span> </button>
+                                            <div class="ui-dropdown__popup js-dropdown-popup" aria-hidden="true">
+                                                <div class="ui-dropdown__scroll js-dropdown-scroll">
+                                                    <div class="ui-dropdown__list js-dropdown-list" tabindex="0" role="listbox">
+                                                        <div class="ui-dropdown__option  js-dropdown-option" data-value="return" data-text-value="Возврат" role="option" aria-selected="false"> Возврат </div>
+                                                        <div class="ui-dropdown__option  js-dropdown-option" data-value="other" data-text-value="Другое" role="option" aria-selected="false"> Другое </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="field-box js-field-box"> <label class="field-box__label">Укажите тему</label>
+                                            <div class="field-box__content"> <input class="field-box__input js-validate-field js-form-appeal-theme js-field-box-input ui-input" type="text" name="theme" placeholder="Укажите тему" required="" data-js-form-field="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column js-form-appeal-reason u-hidden">
+                                        <div class="ui-dropdown ui-dropdown_select ui-dropdown_style_select is-placeholder js-dropdown" data-dropdown="select"> <input class="ui-dropdown__input js-dropdown-input js-validate-field js-validate-field-is-hidden" name="reason" required="required" tabindex="-1"> <button class="ui-dropdown__button js-dropdown-button" type="button" role="combobox"> <span class="ui-dropdown__button-text js-dropdown-button-text" role="textbox"> Выберите причину возврата </span> <span class="ui-dropdown__button-icon-box"><span class="ui-dropdown__button-icon"></span></span> </button>
+                                            <div class="ui-dropdown__popup js-dropdown-popup" aria-hidden="true">
+                                                <div class="ui-dropdown__scroll js-dropdown-scroll">
+                                                    <div class="ui-dropdown__list js-dropdown-list" tabindex="0" role="listbox">
+                                                        <div class="ui-dropdown__option  js-dropdown-option" data-value="1" data-text-value="Причина 1" role="option" aria-selected="false"> Причина 1 </div>
+                                                        <div class="ui-dropdown__option  js-dropdown-option" data-value="2" data-text-value="Причина 2" role="option" aria-selected="false"> Причина 2 </div>
+                                                        <div class="ui-dropdown__option  js-dropdown-option" data-value="2" data-text-value="Причина 3" role="option" aria-selected="false"> Причина 3 </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column js-form-appeal-order u-hidden">
+                                        <div class="ui-dropdown ui-dropdown_select ui-dropdown_style_select is-placeholder js-dropdown" data-dropdown="select"> <input class="ui-dropdown__input js-dropdown-input js-validate-field js-validate-field-is-hidden" name="order_number" required="required" tabindex="-1"> <button class="ui-dropdown__button js-dropdown-button" type="button" role="combobox"> <span class="ui-dropdown__button-text js-dropdown-button-text" role="textbox"> № заказа </span> <span class="ui-dropdown__button-icon-box"><span class="ui-dropdown__button-icon"></span></span> </button>
+                                            <div class="ui-dropdown__popup js-dropdown-popup" aria-hidden="true">
+                                                <div class="ui-dropdown__scroll js-dropdown-scroll">
+                                                    <div class="ui-dropdown__list js-dropdown-list" tabindex="0" role="listbox">
+                                                        <div class="ui-dropdown__option  js-dropdown-option" data-value="12345" data-text-value="12345" role="option" aria-selected="false"> 12345 </div>
+                                                        <div class="ui-dropdown__option  js-dropdown-option" data-value="36534" data-text-value="36534" role="option" aria-selected="false"> 36534 </div>
+                                                        <div class="ui-dropdown__option  js-dropdown-option" data-value="44678" data-text-value="44678" role="option" aria-selected="false"> 44678 </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="field-box field-box_textarea js-field-box"> <label class="field-box__label">Ваш комментарий (опционально)</label>
+                                            <div class="field-box__content"> <textarea class=" field-box__textarea  js-field-box-input ui-textarea" name="message" placeholder="Ваш комментарий (опционально)" rows="6"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form__attaches">
+                                    <div class="ui-attach ui-attach_files form__attach js-form-appeal-attach-file js-attach">
+                                        <div class="ui-attach__files js-attach-files"></div> <label class="ui-attach__label"> <input type="file" class="ui-attach__input js-attach-input" name="file" aria-label="Загрузите файл" accept=".jpg,.png,.jpeg" data-message-extension="Недопустимый формат файла" data-max-size="10" data-message-max-size="Максимальный размер файла 10 мб" data-max-files="1"> <span class="ui-attach__focused"></span> <span class="ui-attach__icon-box"> <svg class="ui-icon ui-icon-attach ui-attach__icon">
+                                                    <use xlink:href="img/icons.svg#attach"></use>
+                                                </svg> </span>
+                                            <span class="ui-attach__text">Прикрепить файл</span> </label> <span class="ui-attach__text-info">Изображение в формате .png .jpg не более 10Мб</span>
+                                    </div>
+                                    <div class="form__attaches-list js-form-appeal-attaches u-hidden">
+                                        <div class="ui-attach ui-attach_files form__attach js-attach">
+                                            <div class="ui-attach__files js-attach-files"></div> <label class="ui-attach__label"> <input type="file" class="ui-attach__input js-attach-input" name="product_file" aria-label="Загрузите файл" accept=".jpg,.png,.jpeg" data-message-extension="Недопустимый формат файла" data-max-size="10" data-message-max-size="Максимальный размер файла 10 мб" data-max-files="1"> <span class="ui-attach__focused"></span> <span class="ui-attach__icon-box"> <svg class="ui-icon ui-icon-attach ui-attach__icon">
+                                                        <use xlink:href="img/icons.svg#attach"></use>
+                                                    </svg> </span>
+                                                <span class="ui-attach__text">Товар целиком</span> </label> <span class="ui-attach__text-info">Изображение в формате .png .jpg не более 10Мб</span>
+                                        </div>
+                                        <div class="ui-attach ui-attach_files form__attach js-attach">
+                                            <div class="ui-attach__files js-attach-files"></div> <label class="ui-attach__label"> <input type="file" class="ui-attach__input js-attach-input" name="packaging_product" aria-label="Загрузите файл" accept=".jpg,.png,.jpeg" data-message-extension="Недопустимый формат файла" data-max-size="10" data-message-max-size="Максимальный размер файла 10 мб" data-max-files="1"> <span class="ui-attach__focused"></span> <span class="ui-attach__icon-box"> <svg class="ui-icon ui-icon-attach ui-attach__icon">
+                                                        <use xlink:href="img/icons.svg#attach"></use>
+                                                    </svg> </span>
+                                                <span class="ui-attach__text">Заводская упаковка</span> </label> <span class="ui-attach__text-info">Изображение в формате .png .jpg не более 10Мб</span>
+                                        </div>
+                                        <div class="ui-attach ui-attach_files form__attach js-attach">
+                                            <div class="ui-attach__files js-attach-files"></div> <label class="ui-attach__label"> <input type="file" class="ui-attach__input js-attach-input" name="defect_file" aria-label="Загрузите файл" accept=".jpg,.png,.jpeg" data-message-extension="Недопустимый формат файла" data-max-size="10" data-message-max-size="Максимальный размер файла 10 мб" data-max-files="1"> <span class="ui-attach__focused"></span> <span class="ui-attach__icon-box"> <svg class="ui-icon ui-icon-attach ui-attach__icon">
+                                                        <use xlink:href="img/icons.svg#attach"></use>
+                                                    </svg> </span>
+                                                <span class="ui-attach__text">Фотография дефекта</span> </label> <span class="ui-attach__text-info">Изображение в формате .png .jpg не более 10Мб</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__form-footer"> <button type="submit" href="#" class="ui-button ui-button_fill ui-button_is-circle modal__form-submit"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                <use xlink:href="img/icons.svg#arrow"></use>
+                                            </svg> </span><span class="ui-button__text"> Отправить обращение </span> </button>
+                                    <div class="modal__form-agreement form__agreement form__agreement_center">
+                                        Нажимая кнопку, вы&nbsp;соглашаетесь с<a href="#">&nbsp;политикой конфиденциальности</a> </div>
+                                </div>
+                            </form>
                         </div>
                     </div>
                 </div>

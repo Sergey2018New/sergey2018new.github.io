@@ -729,33 +729,48 @@
                                             <div class="map-block__map">
                                                 <div id="map" style="width: 100%; height: 100%"></div>
                                                 <script>
-                                                    ymaps.ready(function() {
-                                                        const coords = [56.755294, 60.584045];
-                                                        const windowWidth = window.innerWidth;
-                                                        let iconWidth = 70;
-                                                        let iconHeight = 86;
-                                                        if (windowWidth < 768) {
-                                                            iconWidth = 50;
-                                                            iconHeight = 61;
-                                                        }
-                                                        var myMap = new ymaps.Map('map', {
-                                                            center: coords,
-                                                            zoom: 16,
-                                                            controls: [],
-                                                        }, {
-                                                            suppressMapOpenBlock: true
+                                                    const mapObserver = new IntersectionObserver(callback, {
+                                                        rootMargin: "50px",
+                                                    });
+                                                    if (document.querySelector('#map')) {
+                                                        mapObserver.observe(document.querySelector('#map'));
+                                                    }
+
+                                                    function callback(entries, mapObserver) {
+                                                        entries.forEach((entry) => {
+                                                            const target = entry.target;
+                                                            if (entry.isIntersecting) {
+                                                                ymaps.ready(function() {
+                                                                    const coords = [56.755294, 60.584045];
+                                                                    const windowWidth = window.innerWidth;
+                                                                    let iconWidth = 70;
+                                                                    let iconHeight = 86;
+                                                                    if (windowWidth < 768) {
+                                                                        iconWidth = 50;
+                                                                        iconHeight = 61;
+                                                                    }
+                                                                    var myMap = new ymaps.Map('map', {
+                                                                        center: coords,
+                                                                        zoom: 16,
+                                                                        controls: [],
+                                                                    }, {
+                                                                        suppressMapOpenBlock: true
+                                                                    });
+                                                                    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
+                                                                        iconLayout: 'default#image',
+                                                                        iconImageHref: 'img/marker.svg',
+                                                                        iconImageSize: [iconWidth, iconHeight],
+                                                                        iconImageOffset: [iconWidth * -0.5, iconHeight * -1]
+                                                                    });
+                                                                    myMap.geoObjects.add(myPlacemark);
+                                                                    myMap.behaviors.disable('drag');
+                                                                    myMap.behaviors.disable('multiTouch');
+                                                                    myMap.behaviors.disable('scrollZoom');
+                                                                })
+                                                                mapObserver.unobserve(target);
+                                                            }
                                                         });
-                                                        myPlacemark = new ymaps.Placemark(myMap.getCenter(), {}, {
-                                                            iconLayout: 'default#image',
-                                                            iconImageHref: 'img/marker.svg',
-                                                            iconImageSize: [iconWidth, iconHeight],
-                                                            iconImageOffset: [iconWidth * -0.5, iconHeight * -1]
-                                                        });
-                                                        myMap.geoObjects.add(myPlacemark);
-                                                        myMap.behaviors.disable('drag');
-                                                        myMap.behaviors.disable('multiTouch');
-                                                        myMap.behaviors.disable('scrollZoom');
-                                                    })
+                                                    };
                                                 </script>
                                             </div>
                                             <div class="map-block__box">
@@ -767,7 +782,7 @@
                                                     <div class="map-block__contacts-opening-hours">
                                                         ПН-ПТ 10:00&nbsp;&mdash; 19:00, СБ&nbsp;10:00&nbsp;&mdash; 16:00
                                                     </div>
-                                                </div> <button type="button" href="#" class="ui-button ui-button_style_outline ui-button_is-circle map-block__button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                </div> <button type="button" href="#" data-modal-open="#modal-map" class="ui-button ui-button_style_outline ui-button_is-circle map-block__button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                                             <use xlink:href="img/icons.svg#arrow"></use>
                                                         </svg> </span><span class="ui-button__text"> Показать на карте </span> </button>
                                             </div>
