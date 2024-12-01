@@ -804,9 +804,9 @@
                                     <div class="p-account__section-heading">
                                         <div class="p-account__section-title section-title section-title_size_sm">
                                             <h2>Контактные данные</h2>
-                                        </div> <a href="" data-da=".js-change-data-place-in-adaptive, 767,98, last" class="ui-button ui-button_is-circle p-account__section-button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                        </div> <button type="button" data-modal-open="#modal-edit" data-da=".js-change-data-place-in-adaptive, 767,98, last" class="ui-button ui-button_is-circle p-account__section-button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                                     <use xlink:href="img/icons.svg#arrow"></use>
-                                                </svg> </span><span class="ui-button__text"> Редактировать данные </span> </a>
+                                                </svg> </span><span class="ui-button__text"> Редактировать данные </span> </button>
                                     </div>
                                     <div class="p-account__section-text">
                                         Эти данные вы&nbsp;можете изменить через вашего персонального менеджера.
@@ -1770,6 +1770,65 @@
                                 <div class="modal__form-footer"> <button type="submit" class="ui-button ui-button_fill ui-button_is-circle modal__form-submit"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
                                                 <use xlink:href="img/icons.svg#arrow"></use>
                                             </svg> </span><span class="ui-button__text"> Отправить обращение </span> </button>
+                                    <div class="modal__form-agreement form__agreement form__agreement_center">
+                                        Нажимая кнопку, вы&nbsp;соглашаетесь с<a href="#">&nbsp;политикой конфиденциальности</a> </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-edit modal js-modal modal_direction_right" id="modal-edit" aria-hidden="true" tabindex="-1">
+        <div class="modal__wrap">
+            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="Редактировать данные">
+                <picture class="modal__picture">
+                    <source media="(max-width: 575px)" data-srcset="img/modal-add-address-mobile.jpg 1x, img/modal-add-address-mobile@2x.jpg 2x"> <img class="modal__picture-image lazy" data-src="img/modal-add-address.jpg" data-srcset="img/modal-add-address@2x.jpg" width="539" height="869" alt="">
+                </picture>
+                <div class="modal__inner js-modal-scrollbar">
+                    <div class="modal__inner-content">
+                        <div class="modal__header">
+                            <div class="modal__title">Редактировать данные</div> <!-- {
+                            isOrder ?
+                            <div class="modal__order">
+                                {
+                                    <div class:list={['modal__title', titleClass]} set:html={'Заказ 124141135'}></div>
+                                }
+                                {
+                                    <OrderStatus class="modal__order-status" status="completed"></OrderStatus>
+                                }
+                            </div>
+                            : ''
+                        } --> <button type="button" title="Закрыть" class="ui-button-icon ui-button-icon_style_outline modal__close js-modal-close "><svg class="ui-icon ui-icon-cross ui-button-icon__icon ">
+                                    <use xlink:href="img/icons.svg#cross"></use>
+                                </svg> </button>
+                        </div>
+                        <div class="modal__content js-modal-content">
+                            <form action="#" class="modal__form form js-form-validation">
+                                <div class="modal__form-grid l-grid l-gap-30">
+                                    <div class="form__column">
+                                        <div class="field-box js-field-box"> <label class="field-box__label">Имя</label>
+                                            <div class="field-box__content"> <input class="field-box__input js-validate-field js-field-box-input ui-input" type="text" name="name" placeholder="Имя" required="" data-js-form-field="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="field-box js-field-box"> <label class="field-box__label">Телефон</label>
+                                            <div class="field-box__content"> <input class="field-box__input js-validate-field js-validate-field-phone js-field-box-input ui-input ui-input-phone" type="text" name="phone" placeholder="+7 (999) 123-12-12" required="" data-js-form-field="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="field-box js-field-box"> <label class="field-box__label">E-mail</label>
+                                            <div class="field-box__content"> <input class="field-box__input js-validate-field js-validate-field-email js-field-box-input ui-input" type="text" name="email" placeholder="E-mail" required="" data-js-form-field="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__form-footer"> <button type="submit" class="ui-button ui-button_fill ui-button_is-circle modal__form-submit"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                                <use xlink:href="img/icons.svg#arrow"></use>
+                                            </svg> </span><span class="ui-button__text"> Отправить </span> </button>
                                     <div class="modal__form-agreement form__agreement form__agreement_center">
                                         Нажимая кнопку, вы&nbsp;соглашаетесь с<a href="#">&nbsp;политикой конфиденциальности</a> </div>
                                 </div>
