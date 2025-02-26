@@ -1,0 +1,15 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="8" y="33" width="64" height="37" rx="2" fill="#9372F2"/>
+<path d="M22.7196 27.4003L38.7196 14.067C39.4613 13.4489 40.5387 13.4489 41.2804 14.067L57.2804 27.4003C57.7364 27.7803 58 28.3432 58 28.9367V70H22V28.9367C22 28.3432 22.2636 27.7803 22.7196 27.4003Z" fill="#8756CC"/>
+<circle cx="40" cy="25" r="4" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M22 70H58V33H22V70Z" fill="#5D41AB"/>
+<rect x="12" y="72" width="56" height="4" rx="1" fill="#9372F2"/>
+<rect x="29" y="39" width="2" height="4" rx="1" fill="white"/>
+<rect x="29" y="47" width="2" height="4" rx="1" fill="white"/>
+<rect x="39" y="39" width="2" height="4" rx="1" fill="white"/>
+<rect x="39" y="47" width="2" height="4" rx="1" fill="white"/>
+<rect x="49" y="39" width="2" height="4" rx="1" fill="white"/>
+<rect x="49" y="47" width="2" height="4" rx="1" fill="white"/>
+<rect x="39" y="4" width="2" height="12" rx="1" fill="#8756CC"/>
+<path d="M51.5858 4H40V12H51.5858C52.4767 12 52.9229 10.9229 52.2929 10.2929L50 8L52.2929 5.70711C52.9229 5.07714 52.4767 4 51.5858 4Z" fill="#8756CC"/>
+</svg>
