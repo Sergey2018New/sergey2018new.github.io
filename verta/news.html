@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Новости | Verta</title>
+    <meta name="description" content="Описание страницы">
+    <link rel="icon" href="/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/icon-192x192.png">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Fira+Sans+Condensed:wght@500;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header js-header"> <!-- <div class="header__backdrop js-header-backdrop"></div> -->
+            <div class="header__inner">
+                <div class="header__container container">
+                    <div class="header__nav">
+                        <div class="header__logo-wrapper"> <a href="/" class="header__logo"> <img class="header__logo-image" src="img/logo.svg" width="117" height="30" alt="Verta"> </a> </div>
+                        <div class="header__menu-wrapper">
+                            <div class="menu header__menu js-menu"> <!-- <div class="menu__backdrop js-menu-backdrop"></div> --> <button class="menu__burger js-menu-burger" type="button" aria-label="Навигационное меню"> <svg class="menu__burger-icon base-icon base-icon-menu-2">
+                                        <use xlink:href="img/icons.svg#menu-2"></use>
+                                    </svg> </button>
+                                <div class="menu__popup js-menu-popup" aria-disabled="true">
+                                    <nav class="menu__container js-menu-container">
+                                        <div class="menu__header u-hidden-pc"> <a href="/" class="menu__logo"> <img class="menu__logo-image" src="img/logo.svg" width="153" height="40" alt="Verta"> </a> <button class="menu__back js-menu-back" type="button" aria-label="Назад"> <svg width="36" height="24" viewBox="0 0 36 24" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M0.588008 11.6214C0.48698 11.8659 0.486982 12.1405 0.58801 12.385C0.636787 12.5063 0.708855 12.6168 0.80014 12.7103L7.87121 19.7814C8.05874 19.9689 8.3131 20.0743 8.57831 20.0743C8.84353 20.0743 9.09789 19.9689 9.28542 19.7814C9.47296 19.5938 9.57831 19.3395 9.57831 19.0743C9.57831 18.809 9.47296 18.5547 9.28542 18.3672L3.91848 13.0002L20.5011 13.0142C20.6331 13.0147 20.7639 12.9891 20.886 12.9389C21.008 12.8886 21.1189 12.8147 21.2123 12.7213C21.3056 12.628 21.3796 12.5171 21.4298 12.395C21.4801 12.2729 21.5057 12.1421 21.5052 12.0101C21.5057 11.8781 21.4801 11.7473 21.4298 11.6252C21.3796 11.5031 21.3056 11.3922 21.2123 11.2989C21.1189 11.2055 21.008 11.1316 20.886 11.0813C20.7639 11.0311 20.6331 11.0055 20.5011 11.006L3.91848 11.0062L9.28542 5.63923C9.47296 5.45169 9.57832 5.19734 9.57832 4.93212C9.57832 4.66691 9.47296 4.41255 9.28542 4.22502C9.09789 4.03748 8.84353 3.93212 8.57831 3.93212C8.3131 3.93212 8.05874 4.03748 7.87121 4.22501L0.80014 11.2961C0.708854 11.3896 0.636785 11.5001 0.588008 11.6214Z"></path>
+                                                </svg> </button> <button type="button" class="menu__close js-menu-close" aria-label="Закрыть"> <svg class="base-icon base-icon-close">
+                                                    <use xlink:href="img/icons.svg#close"></use>
+                                                </svg> </button> </div>
+                                        <div class="menu__content">
+                                            <ul class="menu__list">
+                                                <li class="menu__item menu__item--catalog">
+                                                    <div class="menu__catalog js-menu-catalog"> <button type="button" class="menu__catalog-button js-menu-catalog-button"> <svg class="menu__catalog-button-icon base-icon base-icon-menu">
+                                                                <use xlink:href="img/icons.svg#menu"></use>
+                                                            </svg> <span class="menu__catalog-button-text">Каталог</span> </button>
+                                                        <div class="menu__catalog-popup js-menu-catalog-popup">
+                                                            <div class="menu__catalog-popup-scroll js-menu-catalog-scroll">
+                                                                <div class="menu__catalog-popup-content">
+                                                                    <div class="menu__catalog-title u-hidden-pc">Каталог</div>
+                                                                    <div class="menu__catalog-row ">
+                                                                        <div class="menu__catalog-column">
+                                                                            <div class="menu__catalog-list">
+                                                                                <div class="menu__catalog-item"> <a href="#" class="menu__catalog-link"> <span>Аккумуляторный инструмент</span> </a> </div>
+                                                                                <div class="menu__catalog-item"> <a href="#" class="menu__catalog-link"> <span>Электроинструмент</span> </a> </div>
+                                                                                <div class="menu__catalog-item js-menu-catalog-dropdown menu__catalog-item--dropdown"> <a href="#" class="menu__catalog-link js-menu-catalog-link"> <span>Оборудование</span> </a>
+                                                                                    <div class="menu__catalog-submenu js-menu-catalog-submenu">
+                                                                                        <div class="menu__catalog-submenu-title u-hidden-desktop-sm"> <a href="#" class="menu__catalog-submenu-link"> <span>Оборудование</span> </a> </div>
+                                                                                        <ul class="menu__catalog-submenu-list">
+                                                                                            <li> <a href="#" class="menu__catalog-submenu-link"> <span>Бетоносмесители</span> </a> </li>
+                                                                                            <li> <a href="#" class="menu__catalog-submenu-link"> <span>Тепловые пушки</span> </a> </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="menu__catalog-item js-menu-catalog-dropdown menu__catalog-item--dropdown"> <a href="#" class="menu__catalog-link js-menu-catalog-link"> <span>Расходные материалы</span> </a>
+                                                                                    <div class="menu__catalog-submenu js-menu-catalog-submenu">
+                                                                                        <div class="menu__catalog-submenu-title u-hidden-desktop-sm"> <a href="#" class="menu__catalog-submenu-link"> <span>Расходные материалы</span> </a> </div>
+                                                                                        <ul class="menu__catalog-submenu-list">
+                                                                                            <li> <a href="#" class="menu__catalog-submenu-link"> <span>Биты</span> </a> </li>
+                                                                                            <li> <a href="#" class="menu__catalog-submenu-link"> <span>Буры</span> </a> </li>
+                                                                                            <li> <a href="#" class="menu__catalog-submenu-link"> <span>Держатели для бит</span> </a> </li>
+                                                                                            <li> <a href="#" class="menu__catalog-submenu-link"> <span>Диски для УШМ</span> </a> </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="menu__catalog-column">
+                                                                            <div class="menu__catalog-list">
+                                                                                <div class="menu__catalog-item js-menu-catalog-dropdown menu__catalog-item--dropdown"> <a href="#" class="menu__catalog-link js-menu-catalog-link"> <span>Запчасти для электроинструмента</span> </a>
+                                                                                    <div class="menu__catalog-submenu js-menu-catalog-submenu">
+                                                                                        <div class="menu__catalog-submenu-title u-hidden-desktop-sm"> <a href="#" class="menu__catalog-submenu-link"> <span>Запчасти для электроинструмента</span> </a> </div>
+                                                                                        <ul class="menu__catalog-submenu-list">
+                                                                                            <li> <a href="#" class="menu__catalog-submenu-link"> <span>Запчасти для гайковёртов</span> </a> </li>
+                                                                                            <li> <a href="#" class="menu__catalog-submenu-link"> <span>Запчасти для лобзиков</span> </a> </li>
+                                                                                            <li> <a href="#" class="menu__catalog-submenu-link"> <span>Запчасти для миксеров</span> </a> </li>
+                                                                                            <li> <a href="#" class="menu__catalog-submenu-link"> <span>Запчасти для перфораторов</span> </a> </li>
+                                                                                            <li> <a href="#" class="menu__catalog-submenu-link"> <span>Запчасти для пил</span> </a> </li>
+                                                                                            <li> <a href="#" class="menu__catalog-submenu-link"> <span>Запчасти для УШМ</span> </a> </li>
+                                                                                            <li> <a href="#" class="menu__catalog-submenu-link"> <span>Запчасти для фенов и воздуходувок</span> </a> </li>
+                                                                                            <li> <a href="#" class="menu__catalog-submenu-link"> <span>Запчасти для шуруповёртов</span> </a> </li>
+                                                                                            <li> <a href="#" class="menu__catalog-submenu-link"> <span>Щётки графитовые</span> </a> </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="menu__catalog-column">
+                                                                            <div class="menu__catalog-list">
+                                                                                <div class="menu__catalog-item js-menu-catalog-dropdown menu__catalog-item--dropdown"> <a href="#" class="menu__catalog-link js-menu-catalog-link"> <span>Ручной инструмент</span> </a>
+                                                                                    <div class="menu__catalog-submenu js-menu-catalog-submenu">
+                                                                                        <div class="menu__catalog-submenu-title u-hidden-desktop-sm"> <a href="#" class="menu__catalog-submenu-link"> <span>Ручной инструмент</span> </a> </div>
+                                                                                        <ul class="menu__catalog-submenu-list">
+                                                                                            <li> <a href="#" class="menu__catalog-submenu-link"> <span>Лезвия</span> </a> </li>
+                                                                                            <li> <a href="#" class="menu__catalog-submenu-link"> <span>Ножи со сменными лезвиями</span> </a> </li>
+                                                                                            <li> <a href="#" class="menu__catalog-submenu-link"> <span>Ножовки</span> </a> </li>
+                                                                                            <li> <a href="#" class="menu__catalog-submenu-link"> <span>Отвёртки</span> </a> </li>
+                                                                                            <li> <a href="#" class="menu__catalog-submenu-link"> <span>Рулетки</span> </a> </li>
+                                                                                        </ul>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li class="menu__item"> <a href="#" class="menu__link"> <span>О бренде</span> </a> </li>
+                                                <li class="menu__item menu__item--dropdown js-menu-dropdown"> <a href="#" class="menu__link js-menu-link"> <span>Блог</span> </a>
+                                                    <div class="menu__submenu js-menu-submenu">
+                                                        <div class="menu__submenu-title u-hidden-desktop-sm"> <span>Блог</span> </div>
+                                                        <ul class="menu__submenu-list">
+                                                            <li><a href="#" class="menu__submenu-link">Новости</a></li>
+                                                            <li><a href="#" class="menu__submenu-link">Статьи</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                                <li class="menu__item"> <a href="#" class="menu__link"> <span>Дилерам</span> </a> </li>
+                                                <li class="menu__item"> <a href="#" class="menu__link"> <span>Поддержка</span> </a> </li>
+                                                <li class="menu__item menu__item--dropdown js-menu-dropdown"> <a href="#" class="menu__link js-menu-link"> <span>Где купить</span> </a>
+                                                    <div class="menu__submenu js-menu-submenu">
+                                                        <div class="menu__submenu-title u-hidden-desktop-sm"> <span>Где купить</span> </div>
+                                                        <ul class="menu__submenu-list">
+                                                            <li><a href="#" class="menu__submenu-link">Контакты</a></li>
+                                                            <li><a href="#" class="menu__submenu-link">Реквизиты</a></li>
+                                                            <li><a href="#" class="menu__submenu-link">Партнёры</a></li>
+                                                            <li><a href="#" class="menu__submenu-link">Доставка</a></li>
+                                                        </ul>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="menu__footer js-menu-footer u-hidden-pc">
+                                            <div class="menu__contacts">
+                                                <div class="menu__contacts-item">
+                                                    <div class="menu__contacts-title">Адрес</div>
+                                                    <div class="menu__contacts-text">г. Екатеринбург, ул. Окружная 88Э</div>
+                                                </div>
+                                                <div class="menu__contacts-item">
+                                                    <div class="menu__contacts-title">Режим работы</div>
+                                                    <div class="menu__contacts-text">Пн. – Пт.: с 9:00 до 18:00</div>
+                                                </div> <button type="button" data-modal-open="#modal-callback" class="menu__contacts-button base-button base-button--primary"> <span class="base-button__inner"> <span class="base-button__content"> Сделать заказ </span> </span> </button>
+                                                <div class="menu__contacts-socials socials">
+                                                    <div class="socials__list"> <a href="#" class="socials__link socials__link--telegram" title="Telegram"> <svg class="socials__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M14.9922 2.5C12.5199 2.5 10.1032 3.23311 8.04756 4.60663C5.99195 5.98015 4.38979 7.93238 3.4437 10.2165C2.4976 12.5005 2.25006 15.0139 2.73238 17.4386C3.21469 19.8634 4.4052 22.0907 6.15336 23.8388C7.90152 25.587 10.1288 26.7775 12.5536 27.2598C14.9783 27.7421 17.4917 27.4946 19.7757 26.5485C22.0598 25.6024 24.012 24.0002 25.3856 21.9446C26.7591 19.889 27.4922 17.4723 27.4922 15C27.4923 13.3584 27.1691 11.7329 26.541 10.2163C25.9128 8.69966 24.9921 7.32162 23.8313 6.16086C22.6706 5.0001 21.2925 4.07936 19.7759 3.45123C18.2593 2.82309 16.6338 2.49986 14.9922 2.5ZM18.9666 21.4406C18.9198 21.5572 18.8486 21.6626 18.7578 21.7495C18.667 21.8364 18.5586 21.9028 18.44 21.9445C18.3214 21.9861 18.1953 22.0018 18.0701 21.9907C17.9449 21.9796 17.8235 21.9418 17.7141 21.88L14.3207 19.2432L12.1428 21.2525C12.0923 21.2898 12.0332 21.3139 11.9709 21.3224C11.9087 21.3309 11.8453 21.3236 11.7866 21.3012L12.2041 17.5656L12.2175 17.5762L12.226 17.5024C12.226 17.5024 18.3322 11.9431 18.581 11.7062C18.8328 11.4699 18.7497 11.4187 18.7497 11.4187C18.7641 11.1305 18.2978 11.4187 18.2978 11.4187L10.2072 16.6237L6.83783 15.4762C6.83783 15.4762 6.32033 15.2906 6.27158 14.8825C6.22033 14.4775 6.85469 14.2575 6.85469 14.2575L20.2509 8.93561C20.2509 8.93561 21.3522 8.44496 21.3522 9.2575L18.9666 21.4406Z" fill="#3AA6EA" />
+                                                            </svg> </a><a href="#" class="socials__link socials__link--vk" title="ВКонтакте"> <svg class="socials__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <path d="M18.8412 2.5H11.1719C4.16664 2.5 2.5 4.16664 2.5 11.1588V18.8281C2.5 25.8333 4.15368 27.5 11.1588 27.5H18.8281C25.8334 27.5 27.5 25.8463 27.5 18.8411V11.1719C27.5 4.16664 25.8463 2.5 18.8412 2.5ZM22.6823 20.3385H20.8594C20.1693 20.3385 19.9609 19.7786 18.724 18.5416C17.6432 17.5 17.1875 17.3698 16.9141 17.3698C16.5365 17.3698 16.4323 17.4739 16.4323 17.9948V19.6354C16.4323 20.0781 16.2891 20.3385 15.1302 20.3385C14.0057 20.263 12.9152 19.9213 11.9486 19.3418C10.982 18.7623 10.1668 17.9614 9.57031 17.0052C8.1542 15.2425 7.16888 13.1738 6.69274 10.9635C6.69274 10.6901 6.79688 10.4427 7.31774 10.4427H9.14062C9.60938 10.4427 9.77868 10.651 9.96094 11.1328C10.8463 13.7369 12.3568 16.0026 12.9688 16.0026C13.2031 16.0026 13.3073 15.8984 13.3073 15.3125V12.6302C13.2291 11.4062 12.5781 11.302 12.5781 10.8594C12.5867 10.7426 12.6404 10.6337 12.728 10.5559C12.8155 10.4781 12.9299 10.4375 13.0469 10.4427H15.9115C16.3021 10.4427 16.4323 10.638 16.4323 11.1067V14.7266C16.4323 15.1172 16.6016 15.2473 16.7188 15.2473C16.9531 15.2473 17.1354 15.1172 17.5651 14.6875C18.4884 13.5615 19.2429 12.307 19.8047 10.9635C19.862 10.8019 19.9707 10.6634 20.1142 10.5694C20.2576 10.4753 20.4279 10.4308 20.599 10.4427H22.4219C22.9688 10.4427 23.0859 10.7161 22.9688 11.1067C22.3055 12.5921 21.4848 14.0021 20.5209 15.3125C20.3256 15.6119 20.2474 15.7682 20.5209 16.1198C20.7031 16.3932 21.3412 16.927 21.7709 17.4348C22.3958 18.0583 22.9148 18.7796 23.3073 19.5703C23.4635 20.0781 23.2031 20.3385 22.6823 20.3385Z" fill="#3385E2" />
+                                                            </svg> </a><a href="#" class="socials__link socials__link--max" title="Max"> <img class="socials__image" src="img/max-logo.png" width="30" height="30" alt="" loading="lazy"> </a> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__controls">
+                            <div class="header__controls-item header__controls-item--search ">
+                                <div class="header__search js-header-search"> <button type="button" title="Открыть строку поиска" class="header__control-button header__search-button js-header-search-open u-hidden-mobile-m base-button base-button--default base-button--text base-button--icon-only"> <span class="base-button__inner"> <span class="base-button__icon"> <svg class="base-icon base-icon-search">
+                                                    <use xlink:href="img/icons.svg#search"></use>
+                                                </svg> </span> </span> </button>
+                                    <div class="header__search-popup js-header-search-popup">
+                                        <div class="header__search-content">
+                                            <form action="#" class="header__search-form search-form js-search-form">
+                                                <div class="search-form__box"> <button type="submit" class="search-form__submit"> <svg class="search-form__submit-icon base-icon base-icon-search">
+                                                            <use xlink:href="img/icons.svg#search"></use>
+                                                        </svg> </button> <input type="text" class="search-form__input js-search-form-input js-header-search-input" placeholder="Найти"> <button class="search-form__clear js-search-form-clear js-header-search-clear" type="button" aria-label="Очистить строку поиска"> <span class="search-form__clear-text">Очистить</span> <svg class="search-form__clear-icon base-icon base-icon-cross">
+                                                            <use xlink:href="img/icons.svg#cross"></use>
+                                                        </svg> </button> </div>
+                                            </form>
+                                        </div>
+                                        <div class="search-result header__search-result js-header-search-result">
+                                            <div class="search-result__scrollbar">
+                                                <div class="search-result__products">
+                                                    <div class="search-result__product"> <a href="#" class="search-result__product-link" title="Дрель-шуруповёрт аккумуляторная VCD-B0518 VERTA">
+                                                            <div class="search-result__product-image-box"> <img class="search-result__product-image" src="img/search/product.png" srcset="img/search/product@2x.png 2x" width="50" height="50" alt=""> </div>
+                                                            <div class="search-result__product-content">
+                                                                <div class="search-result__product-title">Дрель-<span>шуру</span>повёрт аккумуляторная VCD-B0518 VERTA</div>
+                                                            </div>
+                                                        </a> </div>
+                                                    <div class="search-result__product"> <a href="#" class="search-result__product-link" title="Дрель-шуруповёрт аккумуляторная VCD-B0518 VERTA">
+                                                            <div class="search-result__product-image-box"> <img class="search-result__product-image" src="img/search/product.png" srcset="img/search/product@2x.png 2x" width="50" height="50" alt=""> </div>
+                                                            <div class="search-result__product-content">
+                                                                <div class="search-result__product-title">Дрель-<span>шуру</span>повёрт аккумуляторная VCD-B0518 VERTA</div>
+                                                            </div>
+                                                        </a> </div>
+                                                    <div class="search-result__product"> <a href="#" class="search-result__product-link" title="Дрель-шуруповёрт аккумуляторная VCD-B0518 VERTA">
+                                                            <div class="search-result__product-image-box"> <img class="search-result__product-image" src="img/search/product.png" srcset="img/search/product@2x.png 2x" width="50" height="50" alt=""> </div>
+                                                            <div class="search-result__product-content">
+                                                                <div class="search-result__product-title">Дрель-<span>шуру</span>повёрт аккумуляторная VCD-B0518 VERTA</div>
+                                                            </div>
+                                                        </a> </div>
+                                                    <div class="search-result__product"> <a href="#" class="search-result__product-link" title="Дрель-шуруповёрт аккумуляторная VCD-B0518 VERTA">
+                                                            <div class="search-result__product-image-box"> <img class="search-result__product-image" src="img/search/product.png" srcset="img/search/product@2x.png 2x" width="50" height="50" alt=""> </div>
+                                                            <div class="search-result__product-content">
+                                                                <div class="search-result__product-title">Дрель-<span>шуру</span>повёрт аккумуляторная VCD-B0518 VERTA</div>
+                                                            </div>
+                                                        </a> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header__controls-item header__controls-item--contacts">
+                                <div class="header__contacts"> <a class="header__contacts-phone" href="tel:+73432860321"> <svg class="u-hidden-desktop-sm base-icon base-icon-phone">
+                                            <use xlink:href="img/icons.svg#phone"></use>
+                                        </svg> <span class="u-visible-desktop-sm">+7 343 286 03 21</span> </a>
+                                    <div class="header__contacts-popup">
+                                        <div class="header__contacts-item">
+                                            <div class="header__contacts-title">Адрес</div>
+                                            <div class="header__contacts-text">г. Екатеринбург, ул. Окружная 88Э</div>
+                                        </div>
+                                        <div class="header__contacts-item">
+                                            <div class="header__contacts-title">Режим работы</div>
+                                            <div class="header__contacts-text">Пн. – Пт.: с 9:00 до 18:00</div>
+                                        </div> <button type="button" data-modal-open="#order-modal" class="header__contacts-button u-hidden-desktop-sm base-button base-button--primary base-button--block"> <span class="base-button__inner"> <span class="base-button__content"> Сделать заказ </span> </span> </button>
+                                        <div class="header__contacts-socials socials">
+                                            <div class="socials__list"> <a href="#" class="socials__link socials__link--telegram" title="Telegram"> <svg class="socials__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M14.9922 2.5C12.5199 2.5 10.1032 3.23311 8.04756 4.60663C5.99195 5.98015 4.38979 7.93238 3.4437 10.2165C2.4976 12.5005 2.25006 15.0139 2.73238 17.4386C3.21469 19.8634 4.4052 22.0907 6.15336 23.8388C7.90152 25.587 10.1288 26.7775 12.5536 27.2598C14.9783 27.7421 17.4917 27.4946 19.7757 26.5485C22.0598 25.6024 24.012 24.0002 25.3856 21.9446C26.7591 19.889 27.4922 17.4723 27.4922 15C27.4923 13.3584 27.1691 11.7329 26.541 10.2163C25.9128 8.69966 24.9921 7.32162 23.8313 6.16086C22.6706 5.0001 21.2925 4.07936 19.7759 3.45123C18.2593 2.82309 16.6338 2.49986 14.9922 2.5ZM18.9666 21.4406C18.9198 21.5572 18.8486 21.6626 18.7578 21.7495C18.667 21.8364 18.5586 21.9028 18.44 21.9445C18.3214 21.9861 18.1953 22.0018 18.0701 21.9907C17.9449 21.9796 17.8235 21.9418 17.7141 21.88L14.3207 19.2432L12.1428 21.2525C12.0923 21.2898 12.0332 21.3139 11.9709 21.3224C11.9087 21.3309 11.8453 21.3236 11.7866 21.3012L12.2041 17.5656L12.2175 17.5762L12.226 17.5024C12.226 17.5024 18.3322 11.9431 18.581 11.7062C18.8328 11.4699 18.7497 11.4187 18.7497 11.4187C18.7641 11.1305 18.2978 11.4187 18.2978 11.4187L10.2072 16.6237L6.83783 15.4762C6.83783 15.4762 6.32033 15.2906 6.27158 14.8825C6.22033 14.4775 6.85469 14.2575 6.85469 14.2575L20.2509 8.93561C20.2509 8.93561 21.3522 8.44496 21.3522 9.2575L18.9666 21.4406Z" fill="#3AA6EA" />
+                                                    </svg> </a><a href="#" class="socials__link socials__link--vk" title="ВКонтакте"> <svg class="socials__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M18.8412 2.5H11.1719C4.16664 2.5 2.5 4.16664 2.5 11.1588V18.8281C2.5 25.8333 4.15368 27.5 11.1588 27.5H18.8281C25.8334 27.5 27.5 25.8463 27.5 18.8411V11.1719C27.5 4.16664 25.8463 2.5 18.8412 2.5ZM22.6823 20.3385H20.8594C20.1693 20.3385 19.9609 19.7786 18.724 18.5416C17.6432 17.5 17.1875 17.3698 16.9141 17.3698C16.5365 17.3698 16.4323 17.4739 16.4323 17.9948V19.6354C16.4323 20.0781 16.2891 20.3385 15.1302 20.3385C14.0057 20.263 12.9152 19.9213 11.9486 19.3418C10.982 18.7623 10.1668 17.9614 9.57031 17.0052C8.1542 15.2425 7.16888 13.1738 6.69274 10.9635C6.69274 10.6901 6.79688 10.4427 7.31774 10.4427H9.14062C9.60938 10.4427 9.77868 10.651 9.96094 11.1328C10.8463 13.7369 12.3568 16.0026 12.9688 16.0026C13.2031 16.0026 13.3073 15.8984 13.3073 15.3125V12.6302C13.2291 11.4062 12.5781 11.302 12.5781 10.8594C12.5867 10.7426 12.6404 10.6337 12.728 10.5559C12.8155 10.4781 12.9299 10.4375 13.0469 10.4427H15.9115C16.3021 10.4427 16.4323 10.638 16.4323 11.1067V14.7266C16.4323 15.1172 16.6016 15.2473 16.7188 15.2473C16.9531 15.2473 17.1354 15.1172 17.5651 14.6875C18.4884 13.5615 19.2429 12.307 19.8047 10.9635C19.862 10.8019 19.9707 10.6634 20.1142 10.5694C20.2576 10.4753 20.4279 10.4308 20.599 10.4427H22.4219C22.9688 10.4427 23.0859 10.7161 22.9688 11.1067C22.3055 12.5921 21.4848 14.0021 20.5209 15.3125C20.3256 15.6119 20.2474 15.7682 20.5209 16.1198C20.7031 16.3932 21.3412 16.927 21.7709 17.4348C22.3958 18.0583 22.9148 18.7796 23.3073 19.5703C23.4635 20.0781 23.2031 20.3385 22.6823 20.3385Z" fill="#3385E2" />
+                                                    </svg> </a><a href="#" class="socials__link socials__link--max" title="Max"> <img class="socials__image" src="img/max-logo.png" width="30" height="30" alt="" loading="lazy"> </a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header__controls-item u-visible-desktop-sm"> <button type="button" class="header__request-button" data-modal-open="#order-modal">Оставить заявку</button> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__container container">
+                    <nav class="breadcrumbs__inner" role="navigation" aria-label="breadcrumbs">
+                        <ol class="breadcrumbs__list">
+                            <li class="breadcrumbs__item"> <a href="/" class="breadcrumbs__link"><span>Главная</span></a> </li>
+                            <li class="breadcrumbs__item" aria-current="page"> <span>Новости</span> </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="p-section p-blog">
+                <div class="container">
+                    <div class="p-blog__header">
+                        <div class="p-blog__title page-title page-title--size-lg">
+                            <h1>Новости</h1>
+                        </div>
+                        <div class="p-blog__tab-menu-wrapper">
+                            <div class="p-blog__tab-menu tab-menu">
+                                <div class="tab-menu__inner">
+                                    <div class="tab-menu__list"> <a href="#" class="tab-menu__item is-active"> <span>2025</span> </a><a href="#" class="tab-menu__item"> <span>2024</span> </a><a href="#" class="tab-menu__item"> <span>2023</span> </a><a href="#" class="tab-menu__item"> <span>2022</span> </a><a href="#" class="tab-menu__item"> <span>2021</span> </a><a href="#" class="tab-menu__item"> <span>2020</span> </a> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-blog__news l-grid l-gap-20">
+                        <div class="p-blog__news-items l-grid l-grid-cols-3 l-gap-10">
+                            <div class="p-blog__news-item article-item"> <a href="#" class="article-item__link">
+                                    <div class="article-item__image-wrapper">
+                                        <div class="article-item__image-box"> <img class="article-item__image" src="img/news/1.jpg" srcset="img/news/1@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
+                                    </div>
+                                    <div class="article-item__content">
+                                        <div class="article-item__head">
+                                            <div class="article-item__date"> 15 февраля 2021 </div>
+                                        </div>
+                                        <div class="article-item__title">Расширяем границы - новый филиал в Москве</div>
+                                    </div>
+                                </a> </div>
+                            <div class="p-blog__news-item article-item"> <a href="#" class="article-item__link">
+                                    <div class="article-item__image-wrapper">
+                                        <div class="article-item__image-box"> <img class="article-item__image" src="img/news/2.jpg" srcset="img/news/2@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
+                                    </div>
+                                    <div class="article-item__content">
+                                        <div class="article-item__head">
+                                            <div class="article-item__date"> 15 февраля 2021 </div>
+                                        </div>
+                                        <div class="article-item__title">Обновляем конкурс на самых креативных строителей</div>
+                                    </div>
+                                </a> </div>
+                            <div class="p-blog__news-item article-item"> <a href="#" class="article-item__link">
+                                    <div class="article-item__image-wrapper">
+                                        <div class="article-item__image-box"> <img class="article-item__image" src="img/news/3.jpg" srcset="img/news/3@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
+                                    </div>
+                                    <div class="article-item__content">
+                                        <div class="article-item__head">
+                                            <div class="article-item__date"> 15 февраля 2021 </div>
+                                        </div>
+                                        <div class="article-item__title">Новая линейка перфораторов уже в продаже</div>
+                                    </div>
+                                </a> </div>
+                            <div class="p-blog__news-item article-item"> <a href="#" class="article-item__link">
+                                    <div class="article-item__image-wrapper">
+                                        <div class="article-item__image-box"> <img class="article-item__image" src="img/news/1.jpg" srcset="img/news/1@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
+                                    </div>
+                                    <div class="article-item__content">
+                                        <div class="article-item__head">
+                                            <div class="article-item__date"> 15 февраля 2021 </div>
+                                        </div>
+                                        <div class="article-item__title">Расширяем границы - новый филиал в Москве</div>
+                                    </div>
+                                </a> </div>
+                            <div class="p-blog__news-item article-item"> <a href="#" class="article-item__link">
+                                    <div class="article-item__image-wrapper">
+                                        <div class="article-item__image-box"> <img class="article-item__image" src="img/news/2.jpg" srcset="img/news/2@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
+                                    </div>
+                                    <div class="article-item__content">
+                                        <div class="article-item__head">
+                                            <div class="article-item__date"> 15 февраля 2021 </div>
+                                        </div>
+                                        <div class="article-item__title">Обновляем конкурс на самых креативных строителей</div>
+                                    </div>
+                                </a> </div>
+                            <div class="p-blog__news-item article-item"> <a href="#" class="article-item__link">
+                                    <div class="article-item__image-wrapper">
+                                        <div class="article-item__image-box"> <img class="article-item__image" src="img/news/3.jpg" srcset="img/news/3@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
+                                    </div>
+                                    <div class="article-item__content">
+                                        <div class="article-item__head">
+                                            <div class="article-item__date"> 15 февраля 2021 </div>
+                                        </div>
+                                        <div class="article-item__title">Новая линейка перфораторов уже в продаже</div>
+                                    </div>
+                                </a> </div>
+                            <div class="p-blog__news-item article-item"> <a href="#" class="article-item__link">
+                                    <div class="article-item__image-wrapper">
+                                        <div class="article-item__image-box"> <img class="article-item__image" src="img/news/1.jpg" srcset="img/news/1@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
+                                    </div>
+                                    <div class="article-item__content">
+                                        <div class="article-item__head">
+                                            <div class="article-item__date"> 15 февраля 2021 </div>
+                                        </div>
+                                        <div class="article-item__title">Расширяем границы - новый филиал в Москве</div>
+                                    </div>
+                                </a> </div>
+                            <div class="p-blog__news-item article-item"> <a href="#" class="article-item__link">
+                                    <div class="article-item__image-wrapper">
+                                        <div class="article-item__image-box"> <img class="article-item__image" src="img/news/2.jpg" srcset="img/news/2@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
+                                    </div>
+                                    <div class="article-item__content">
+                                        <div class="article-item__head">
+                                            <div class="article-item__date"> 15 февраля 2021 </div>
+                                        </div>
+                                        <div class="article-item__title">Обновляем конкурс на самых креативных строителей</div>
+                                    </div>
+                                </a> </div>
+                            <div class="p-blog__news-item article-item"> <a href="#" class="article-item__link">
+                                    <div class="article-item__image-wrapper">
+                                        <div class="article-item__image-box"> <img class="article-item__image" src="img/news/3.jpg" srcset="img/news/3@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
+                                    </div>
+                                    <div class="article-item__content">
+                                        <div class="article-item__head">
+                                            <div class="article-item__date"> 15 февраля 2021 </div>
+                                        </div>
+                                        <div class="article-item__title">Новая линейка перфораторов уже в продаже</div>
+                                    </div>
+                                </a> </div>
+                            <div class="p-blog__news-item article-item"> <a href="#" class="article-item__link">
+                                    <div class="article-item__image-wrapper">
+                                        <div class="article-item__image-box"> <img class="article-item__image" src="img/news/1.jpg" srcset="img/news/1@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
+                                    </div>
+                                    <div class="article-item__content">
+                                        <div class="article-item__head">
+                                            <div class="article-item__date"> 15 февраля 2021 </div>
+                                        </div>
+                                        <div class="article-item__title">Расширяем границы - новый филиал в Москве</div>
+                                    </div>
+                                </a> </div>
+                            <div class="p-blog__news-item article-item"> <a href="#" class="article-item__link">
+                                    <div class="article-item__image-wrapper">
+                                        <div class="article-item__image-box"> <img class="article-item__image" src="img/news/2.jpg" srcset="img/news/2@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
+                                    </div>
+                                    <div class="article-item__content">
+                                        <div class="article-item__head">
+                                            <div class="article-item__date"> 15 февраля 2021 </div>
+                                        </div>
+                                        <div class="article-item__title">Обновляем конкурс на самых креативных строителей</div>
+                                    </div>
+                                </a> </div>
+                            <div class="p-blog__news-item article-item"> <a href="#" class="article-item__link">
+                                    <div class="article-item__image-wrapper">
+                                        <div class="article-item__image-box"> <img class="article-item__image" src="img/news/3.jpg" srcset="img/news/3@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
+                                    </div>
+                                    <div class="article-item__content">
+                                        <div class="article-item__head">
+                                            <div class="article-item__date"> 15 февраля 2021 </div>
+                                        </div>
+                                        <div class="article-item__title">Новая линейка перфораторов уже в продаже</div>
+                                    </div>
+                                </a> </div>
+                        </div> <button type="button" class="p-blog__more-button base-button base-button--white base-button--size-large base-button--block"> <span class="base-button__inner"> <span class="base-button__content"> Показать ещё </span> </span> </button>
+                        <div class="p-blog__pagination pagination"> <!-- <button
+        class="pagination__nav pagination__nav--first"
+        type="button"
+    >
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+            <path d="M9 9L15 15L9 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 9L21 15L15 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+     <button
+        class="pagination__nav pagination__nav--prev"
+        type="button"
+    >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M9 6L15 12L9 18"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button> -->
+                            <div class="pagination__list"> <a class="pagination__link is-active"> <span>1</span> </a> <a class="pagination__link" href="#"> <span>2</span> </a> <a class="pagination__link" href="#"> <span>3</span> </a> <a class="pagination__link" href="#"> <span>4</span> </a> <a class="pagination__link" href="#"> <span>5</span> </a> <a class="pagination__link" href="#"> <span>6</span> </a> </div> <button class="pagination__nav pagination__nav--next" type="button"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 6L15 12L9 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg> </button> <button class="pagination__nav pagination__nav--last" type="button"> <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <path d="M9 9L15 15L9 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M15 9L21 15L15 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg> </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="request-section section">
+                <div class="request-section__container container">
+                    <div class="request-section__wrapper">
+                        <div class="request-section__image-wrapper u-hidden-mobile">
+                            <div class="request-section__image-box"> <img class="request-section__image" src="img/request/request.png" srcset="img/request/request@2x.png 2x" alt="" loading="lazy" width="496" height="743"> </div>
+                        </div>
+                        <div class="request-section__content">
+                            <h2 class="request-section__title title">Оформите заявку на сайте</h2>
+                            <div class="request-section__text section-text">
+                                <p>Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время и&nbsp;ответим на&nbsp;все интересующие вопросы</p>
+                            </div> <button type="button" data-modal-open="#order-modal" class="request-section__button base-button base-button--secondary"> <span class="base-button__inner"> <span class="base-button__content">
+                                        Задать вопрос
+                                    </span> </span> </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="brand-section section">
+                <div class="brand-section__inner">
+                    <div class="brand-section__container container">
+                        <div class="brand-section__row">
+                            <div class="brand-section__logo"> <img class="brand-section__logo-image" src="img/logo.svg" width="208" height="54" alt="Verta"> </div>
+                            <div class="brand-section__title title">Движение. Действие. Развитие</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer js-footer">
+            <div class="footer__inner">
+                <div class="footer__top">
+                    <div class="footer__container container">
+                        <div class="footer__row">
+                            <div class="footer__column footer__column--logo">
+                                <div class="footer__logo-wrapper"> <a href="/" class="footer__logo"> <img class="footer__logo-image" src="img/logo-black.svg" alt="VERTA" width="99" height="26"> </a> </div>
+                                <div class="footer__copyright">
+                                    &copy;&nbsp;2026&nbsp;VERTA&nbsp;&mdash; зарегистрированный товарный знак. <br class="u-hidden-pc"> Все права защищены.
+                                </div>
+                                <ul class="footer__menu footer__menu--policy">
+                                    <li> <a href="#" class="footer__menu-link">Политика обработки персональных данных</a> </li>
+                                </ul>
+                            </div>
+                            <div class="footer__column footer__column--clients">
+                                <div class="footer__block">
+                                    <div class="footer__title u-hidden-pc">Клиентам</div>
+                                    <ul class="footer__menu">
+                                        <li> <a href="#" class="footer__menu-link">Стать дилером</a> </li>
+                                        <li> <a href="#" class="footer__menu-link">Поддержка</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer__column footer__column--about">
+                                <div class="footer__block">
+                                    <div class="footer__title">О бренде</div>
+                                    <ul class="footer__menu">
+                                        <li> <a href="#" class="footer__menu-link">О бренде</a> </li>
+                                        <li> <a href="#" class="footer__menu-link">Партнеры</a> </li>
+                                        <li> <a href="#" class="footer__menu-link">Реквизиты</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer__column footer__column--catalog">
+                                <div class="footer__block">
+                                    <div class="footer__title">Каталог</div>
+                                    <ul class="footer__menu">
+                                        <li> <a href="#" class="footer__menu-link">Аккумуляторный инструмент</a> </li>
+                                        <li> <a href="#" class="footer__menu-link">Электроинструмент</a> </li>
+                                        <li> <a href="#" class="footer__menu-link">Расходные материалы</a> </li>
+                                        <li> <a href="#" class="footer__menu-link">Запчасти для электроинструмента</a> </li>
+                                        <li> <a href="#" class="footer__menu-link">Оборудование</a> </li>
+                                        <li> <a href="#" class="footer__menu-link">Ручной инструмент</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="footer__column footer__column--contacts">
+                                <div class="footer__title">Контакты</div>
+                                <div class="footer__contacts">
+                                    <div class="footer__contacts-item"> <svg class="footer__contacts-icon base-icon base-icon-phone base-icon--size-small">
+                                            <use xlink:href="img/icons.svg#phone"></use>
+                                        </svg> <a href="tel:+73432210311" class="footer__contacts-phone">+ 7 (343) 221-03-11</a> </div>
+                                    <div class="footer__contacts-item"> <svg class="footer__contacts-icon base-icon base-icon-mail base-icon--size-small">
+                                            <use xlink:href="img/icons.svg#mail"></use>
+                                        </svg> <a href="mailto:info@vertatools.ru" class="footer__contacts-email">info@vertatools.ru</a> </div>
+                                    <div class="footer__contacts-item"> <svg class="footer__contacts-icon base-icon base-icon-location base-icon--size-small">
+                                            <use xlink:href="img/icons.svg#location"></use>
+                                        </svg>
+                                        <div class="footer__contacts-text">г. Екатеринбург, ул.&nbsp;Окружная&nbsp;88Э</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <div class="footer__container container">
+                        <div class="footer__bottom-content">
+                            <div class="footer__bottom-text">
+                                <p>Производитель оставляет за&nbsp;собой право вносить изменения в&nbsp;изделия без предварительного уведомления. Приведенные иллюстрации не&nbsp;являются обязательными. Ответственность за&nbsp;опечатки исключается. Информация, указанная на&nbsp;сайте, не&nbsp;является публичной офертой и&nbsp;носит ознакомительный характер</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="order-modal modal js-modal" id="order-modal" aria-hidden="true" tabindex="-1">
+        <div class="modal__wrap js-modal-wrap">
+            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="Заказать товар">
+                <div class="modal__inner js-modal-scrollbar">
+                    <div class="modal__inner-content">
+                        <div class="modal__header">
+                            <div class="modal__title">Заказать товар</div> <!-- {
+                            isOrder ?
+                            <div class="modal__order">
+                                {
+                                    <div class:list={['modal__title', titleClass]} set:html={'Заказ 124141135'}></div>
+                                }
+                                {
+                                    <OrderStatus class="modal__order-status" status="completed"></OrderStatus>
+                                }
+                            </div>
+                            : ''
+                        } --> <button class="modal__close js-modal-close" type="button" aria-label="Закрыть"> <svg class="modal__close-icon" width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path d="M21.5498 19.6624L15.8875 14L21.5498 8.33765C21.8001 8.08735 21.9407 7.74789 21.9407 7.39392C21.9407 7.03996 21.8001 6.70049 21.5498 6.4502C21.2995 6.1999 20.96 6.05929 20.6061 6.05929C20.2521 6.05929 19.9126 6.1999 19.6624 6.4502L14 12.1125L8.33765 6.4502C8.08735 6.1999 7.74789 6.05929 7.39392 6.05929C7.03996 6.05929 6.70049 6.1999 6.4502 6.4502C6.1999 6.70049 6.05929 7.03996 6.05929 7.39392C6.05929 7.74789 6.1999 8.08735 6.4502 8.33765L12.1125 14L6.4502 19.6624C6.1999 19.9126 6.05929 20.2521 6.05929 20.6061C6.05929 20.96 6.1999 21.2995 6.4502 21.5498C6.70049 21.8001 7.03995 21.9407 7.39392 21.9407C7.74789 21.9407 8.08735 21.8001 8.33765 21.5498L14 15.8875L19.6624 21.5498C19.9126 21.8001 20.2521 21.9407 20.6061 21.9407C20.96 21.9407 21.2995 21.8001 21.5498 21.5498C21.8001 21.2995 21.9407 20.96 21.9407 20.6061C21.9407 20.2521 21.8001 19.9126 21.5498 19.6624Z"></path>
+                                    </g>
+                                </svg> </button>
+                        </div>
+                        <div class="modal__content js-modal-content">
+                            <div class="modal__text">
+                                <p>Менеджеры компании с&nbsp;радостью ответят на&nbsp;ваши вопросы и&nbsp;произведут расчет стоимости услуг и&nbsp;подготовят индивидуальное коммерческое предложение</p>
+                            </div>
+                            <form action="#" class="modal__form form l-grid l-gap-25 js-validate-form">
+                                <div class="modal__form-grid l-grid l-gap-15">
+                                    <div class="form__column">
+                                        <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
+                                            <div class="base-text-field__control js-base-text-field-control">
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-w2g7o16px"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-w2g7o16px" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
+                                            </div>
+                                            <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
+                                            <div class="base-text-field__control js-base-text-field-control">
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-1vwgc0ygl"> <span>Номер телефона</span> </label> <input id="base-text-field-1vwgc0ygl" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
+                                            <div class="base-text-field__control js-base-text-field-control">
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-vjc3zp2jk"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-vjc3zp2jk" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
+                                            </div>
+                                            <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
+                                            <div class="base-text-field__control js-base-text-field-control">
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-ox7gagbuz"> <span>Интересующий товар/услуга</span> </label> <input id="base-text-field-ox7gagbuz" type="text" name="email" value class="base-text-field__input js-base-text-field-input"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--textarea base-text-field--float-label">
+                                            <div class="base-text-field__control js-base-text-field-control">
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-7y3ioh9op"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-7y3ioh9op" name="message" rows="5" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
+                                            </div>
+                                            <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__form-footer l-grid l-gap-30">
+                                    <div class="modal__form-agreement form__agreement">
+                                        <div class="form__agreement-checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input js-agreement-checkbox" name="agreement" class="js-agreement-checkbox"> </span> <span class="base-checkbox__content">
+                                                    Я&nbsp;ознакомлен с&nbsp;<a href="#">политикой в&nbsp;отношении обработки персональных данных</a> и&nbsp;даю согласие на&nbsp;<a href="#">обработку моих персональных данных</a> </span> </label> </div>
+                                    </div>
+                                    <div class="modal__form-button-wrapper"> <button type="submit" disabled class="modal__form-submit js-agreement-button base-button base-button--primary is-disabled"> <span class="base-button__inner"> <span class="base-button__content"> Отправить </span> </span> </button> </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="success-modal modal js-modal" id="success-modal" aria-hidden="true" tabindex="-1">
+        <div class="modal__wrap js-modal-wrap">
+            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="Спасибо за вашу заявку!">
+                <div class="modal__inner js-modal-scrollbar">
+                    <div class="modal__inner-content">
+                        <div class="modal__header">
+                            <div class="modal__title u-center">Спасибо за вашу заявку!</div> <!-- {
+                            isOrder ?
+                            <div class="modal__order">
+                                {
+                                    <div class:list={['modal__title', titleClass]} set:html={'Заказ 124141135'}></div>
+                                }
+                                {
+                                    <OrderStatus class="modal__order-status" status="completed"></OrderStatus>
+                                }
+                            </div>
+                            : ''
+                        } --> <button class="modal__close js-modal-close" type="button" aria-label="Закрыть"> <svg class="modal__close-icon" width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path d="M21.5498 19.6624L15.8875 14L21.5498 8.33765C21.8001 8.08735 21.9407 7.74789 21.9407 7.39392C21.9407 7.03996 21.8001 6.70049 21.5498 6.4502C21.2995 6.1999 20.96 6.05929 20.6061 6.05929C20.2521 6.05929 19.9126 6.1999 19.6624 6.4502L14 12.1125L8.33765 6.4502C8.08735 6.1999 7.74789 6.05929 7.39392 6.05929C7.03996 6.05929 6.70049 6.1999 6.4502 6.4502C6.1999 6.70049 6.05929 7.03996 6.05929 7.39392C6.05929 7.74789 6.1999 8.08735 6.4502 8.33765L12.1125 14L6.4502 19.6624C6.1999 19.9126 6.05929 20.2521 6.05929 20.6061C6.05929 20.96 6.1999 21.2995 6.4502 21.5498C6.70049 21.8001 7.03995 21.9407 7.39392 21.9407C7.74789 21.9407 8.08735 21.8001 8.33765 21.5498L14 15.8875L19.6624 21.5498C19.9126 21.8001 20.2521 21.9407 20.6061 21.9407C20.96 21.9407 21.2995 21.8001 21.5498 21.5498C21.8001 21.2995 21.9407 20.96 21.9407 20.6061C21.9407 20.2521 21.8001 19.9126 21.5498 19.6624Z"></path>
+                                    </g>
+                                </svg> </button>
+                        </div>
+                        <div class="modal__content js-modal-content">
+                            <div class="modal__text u-center">
+                                <p>Мы свяжемся с&nbsp;вами в ближайшее время.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!--
+        <ModalLogin></ModalLogin>
+        <ModalRecovery></ModalRecovery>
+        <ModalRegistration></ModalRegistration>
+        <ModalAddToCart></ModalAddToCart> -->
+    <script type="module" src="js/main.js"></script>
+    <script src="js/validation.js"></script>
+</body>
+
+</html>
