@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Расходные материалы | Verta</title>
+    <title>Биты | Verta</title>
     <meta name="description" content="Описание страницы">
     <link rel="icon" href="/favicon/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
@@ -251,7 +251,8 @@
                         <ol class="breadcrumbs__list">
                             <li class="breadcrumbs__item"> <a href="/" class="breadcrumbs__link"><span>Главная</span></a> </li>
                             <li class="breadcrumbs__item"> <a href="" class="breadcrumbs__link"><span>Каталог</span></a> </li>
-                            <li class="breadcrumbs__item" aria-current="page"> <span>Расходные материалы</span> </li>
+                            <li class="breadcrumbs__item"> <a href="" class="breadcrumbs__link"><span>Расходные материалы</span></a> </li>
+                            <li class="breadcrumbs__item" aria-current="page"> <span>Биты</span> </li>
                         </ol>
                     </nav>
                 </div>
@@ -259,436 +260,502 @@
             <div class="p-section p-catalog">
                 <div class="container">
                     <div class="p-catalog__page-title page-title page-title--size-xl">
-                        <h1>Расходные материалы</h1>
+                        <h1>Биты</h1>
                     </div>
-                    <div class="p-catalog__categories l-grid l-grid-cols-3 l-gap-10">
-                        <div class="p-catalog__category-item catalog-item">
-                            <div class="catalog-item__content">
-                                <div class="catalog-item__title"> <a class="catalog-item__title-link" href="#"> <span>Биты</span> </a> </div>
+                    <div class="p-catalog__filters-view">
+                        <div class="p-catalog__filters-view-row">
+                            <div class="p-catalog__filters-view-left">
+                                <div class="p-catalog__found">
+                                    Найдено 123 товаров
+                                </div>
                             </div>
-                            <div class="catalog-item__image-wrapper">
-                                <div class="catalog-item__image-box"> <img class="catalog-item__image" src="img/categories/1.png" srcset="img/categories/1@2x.png 2x" alt="" width="96" height="96" loading="lazy"> </div>
+                            <div class="p-catalog__filters-view-center">
+                                <div class="p-catalog__sorting u-visible-pc">
+                                    <div class="p-catalog__sorting-title">Сортировать&nbsp;</div>
+                                    <div class="dropdown dropdown_select p-catalog__sorting-dropdown  js-dropdown" data-dropdown="select" name="sorting"> <input class="dropdown__input js-dropdown-input" tabindex="-1"> <button class="dropdown__button js-dropdown-button" type="button" role="combobox"> <span class="dropdown__button-text js-dropdown-button-text" role="textbox"> По популярности </span> <span class="dropdown__button-icon-box"><span class="dropdown__button-icon"></span></span> </button>
+                                        <div class="dropdown__popup js-dropdown-popup" aria-hidden="true">
+                                            <div class="dropdown__scroll js-dropdown-scroll">
+                                                <div class="dropdown__list js-dropdown-list" tabindex="0" role="listbox">
+                                                    <div class="dropdown__option is-selected js-dropdown-option" data-value="1" data-text-value="По наличию" role="option" aria-selected="true"> По наличию </div>
+                                                    <div class="dropdown__option  js-dropdown-option" data-value="2" data-text-value="По популярности" role="option" aria-selected="false"> По популярности </div>
+                                                    <div class="dropdown__option  js-dropdown-option" data-value="3" data-text-value="По убыванию цены" role="option" aria-selected="false"> По убыванию цены </div>
+                                                    <div class="dropdown__option  js-dropdown-option" data-value="4" data-text-value="По возрастанию цены" role="option" aria-selected="false"> По возрастанию цены </div>
+                                                    <div class="dropdown__option  js-dropdown-option" data-value="5" data-text-value="По новинкам" role="option" aria-selected="false"> По новинкам </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> <button type="button" class="p-catalog__filters-button u-hidden-pc js-filters-toggle-button"> <span class="p-catalog__filters-button-icon-box base-button base-button--white base-button--icon-only"> <span class="base-button__inner"> <span class="base-button__icon"> <svg class="base-icon base-icon-filters">
+                                                    <use xlink:href="img/icons.svg#filters"></use>
+                                                </svg> </span> </span> </span> <span>Фильтры</span> </button>
                             </div>
-                        </div>
-                        <div class="p-catalog__category-item catalog-item">
-                            <div class="catalog-item__content">
-                                <div class="catalog-item__title"> <a class="catalog-item__title-link" href="#"> <span>Буры</span> </a> </div>
-                            </div>
-                            <div class="catalog-item__image-wrapper">
-                                <div class="catalog-item__image-box"> <img class="catalog-item__image" src="img/categories/2.png" srcset="img/categories/2@2x.png 2x" alt="" width="96" height="96" loading="lazy"> </div>
-                            </div>
-                        </div>
-                        <div class="p-catalog__category-item catalog-item">
-                            <div class="catalog-item__content">
-                                <div class="catalog-item__title"> <a class="catalog-item__title-link" href="#"> <span>Держатели для бит</span> </a> </div>
-                            </div>
-                            <div class="catalog-item__image-wrapper">
-                                <div class="catalog-item__image-box"> <img class="catalog-item__image" src="img/categories/3.png" srcset="img/categories/3@2x.png 2x" alt="" width="96" height="96" loading="lazy"> </div>
-                            </div>
-                        </div>
-                        <div class="p-catalog__category-item catalog-item">
-                            <div class="catalog-item__content">
-                                <div class="catalog-item__title"> <a class="catalog-item__title-link" href="#"> <span>Диски и чашки для УШМ</span> </a> </div>
-                            </div>
-                            <div class="catalog-item__image-wrapper">
-                                <div class="catalog-item__image-box"> <img class="catalog-item__image" src="img/categories/4.png" srcset="img/categories/4@2x.png 2x" alt="" width="96" height="96" loading="lazy"> </div>
-                            </div>
-                        </div>
-                        <div class="p-catalog__category-item catalog-item">
-                            <div class="catalog-item__content">
-                                <div class="catalog-item__title"> <a class="catalog-item__title-link" href="#"> <span>Зубила</span> </a> </div>
-                            </div>
-                            <div class="catalog-item__image-wrapper">
-                                <div class="catalog-item__image-box"> <img class="catalog-item__image" src="img/categories/5.png" srcset="img/categories/5@2x.png 2x" alt="" width="96" height="96" loading="lazy"> </div>
+                            <div class="p-catalog__filters-view-right u-hidden-mobile">
+                                <div class="p-catalog__filters-view-buttons js-view-buttons"> <button type="button" data-view="grid" class="p-catalog__filters-view-button js-view-button is-active base-button base-button--white base-button--icon-only"> <span class="base-button__inner"> <span class="base-button__icon"> <svg class="base-icon base-icon-grid">
+                                                    <use xlink:href="img/icons.svg#grid"></use>
+                                                </svg> </span> </span> </button> <button type="button" data-view="list" class="p-catalog__filters-view-button js-view-button base-button base-button--white base-button--icon-only"> <span class="base-button__inner"> <span class="base-button__icon"> <svg class="base-icon base-icon-list">
+                                                    <use xlink:href="img/icons.svg#list"></use>
+                                                </svg> </span> </span> </button> </div>
                             </div>
                         </div>
-                        <div class="p-catalog__category-item catalog-item">
-                            <div class="catalog-item__content">
-                                <div class="catalog-item__title"> <a class="catalog-item__title-link" href="#"> <span>Коронки</span> </a> </div>
-                            </div>
-                            <div class="catalog-item__image-wrapper">
-                                <div class="catalog-item__image-box"> <img class="catalog-item__image" src="img/categories/6.png" srcset="img/categories/6@2x.png 2x" alt="" width="96" height="96" loading="lazy"> </div>
+                    </div>
+                    <div class="p-catalog__layout-row">
+                        <div class="p-catalog__sidebar">
+                            <div class="p-catalog__sticky sticky-sidebar js-sticky-sidebar">
+                                <div class="sticky-sidebar__sticky js-sticky" data-sticky-min-width="1025">
+                                    <div class="sticky-sidebar__inner">
+                                        <div class="sticky-sidebar__content">
+                                            <div class="p-catalog__filters p-catalog__sidebar-block filters js-filters">
+                                                <div class="filters__backdrop js-filters-backdrop"></div>
+                                                <div class="filters__content js-filters-content">
+                                                    <div class="filters__header u-hidden-pc">
+                                                        <div class="filters__title">Фильтры</div> <button type="button" class="filters__close-button js-filters-close base-button base-button--white"> <span class="base-button__inner"> <span class="base-button__icon"> <svg class="base-icon base-icon-cross">
+                                                                        <use xlink:href="img/icons.svg#cross"></use>
+                                                                    </svg> </span> </span> </button>
+                                                    </div>
+                                                    <div class="filters__inner js-filters-inner">
+                                                        <div class="filters__scrollbar">
+                                                            <div class="filters__items js-accordions">
+                                                                <div class="filters__item js-filters-item filter-item filter-item--dropdown js-accordion is-active is-visible"> <button type="button" class="filter-item__button js-accordion-button" aria-haspopup="true" aria-expanded="true"> <span>Длина, мм</span> <svg class="filter-item__button-icon base-icon base-icon-arrow">
+                                                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                                                        </svg> </button>
+                                                                    <div class="filter-item__content js-accordion-content">
+                                                                        <div class="filter-item__inner">
+                                                                            <div class="filter-item__scrollbar js-scrollbar">
+                                                                                <div class="filter-item__checkboxes">
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox is-checked"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="25" name="length" checked> </span> <span class="base-checkbox__content"> 25 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="50" name="length"> </span> <span class="base-checkbox__content"> 50 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="65" name="length"> </span> <span class="base-checkbox__content"> 65 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="70" name="length"> </span> <span class="base-checkbox__content"> 70 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="90" name="length"> </span> <span class="base-checkbox__content"> 90 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="127" name="length"> </span> <span class="base-checkbox__content"> 127 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="150" name="length"> </span> <span class="base-checkbox__content"> 150 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="170" name="length"> </span> <span class="base-checkbox__content"> 170 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="180" name="length"> </span> <span class="base-checkbox__content"> 180 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="185" name="length"> </span> <span class="base-checkbox__content"> 185 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="190" name="length"> </span> <span class="base-checkbox__content"> 190 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="200" name="length"> </span> <span class="base-checkbox__content"> 200 </span> </label> </div>
+                                                                                </div>
+                                                                            </div> <button type="button" class="filter-item__show-all js-filters-show-all" data-show-text="Показать еще" data-hidden-text="Свернуть">Показать еще 6</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="filters__item js-filters-item filter-item filter-item--dropdown js-accordion"> <button type="button" class="filter-item__button js-accordion-button" aria-haspopup="true" aria-expanded="true"> <span>Ширина, мм</span> <svg class="filter-item__button-icon base-icon base-icon-arrow">
+                                                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                                                        </svg> </button>
+                                                                    <div class="filter-item__content js-accordion-content">
+                                                                        <div class="filter-item__inner">
+                                                                            <div class="filter-item__scrollbar js-scrollbar">
+                                                                                <div class="filter-item__checkboxes">
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="25" name="width"> </span> <span class="base-checkbox__content"> 25 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="50" name="width"> </span> <span class="base-checkbox__content"> 50 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="65" name="width"> </span> <span class="base-checkbox__content"> 65 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="70" name="width"> </span> <span class="base-checkbox__content"> 70 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="90" name="width"> </span> <span class="base-checkbox__content"> 90 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="127" name="width"> </span> <span class="base-checkbox__content"> 127 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="150" name="width"> </span> <span class="base-checkbox__content"> 150 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="170" name="width"> </span> <span class="base-checkbox__content"> 170 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="180" name="width"> </span> <span class="base-checkbox__content"> 180 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="185" name="width"> </span> <span class="base-checkbox__content"> 185 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="190" name="width"> </span> <span class="base-checkbox__content"> 190 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="200" name="width"> </span> <span class="base-checkbox__content"> 200 </span> </label> </div>
+                                                                                </div>
+                                                                            </div> <button type="button" class="filter-item__show-all js-filters-show-all" data-show-text="Показать еще" data-hidden-text="Свернуть">Показать еще 6</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="filters__item js-filters-item filter-item filter-item--dropdown js-accordion"> <button type="button" class="filter-item__button js-accordion-button" aria-haspopup="true" aria-expanded="true"> <span>Размер</span> <svg class="filter-item__button-icon base-icon base-icon-arrow">
+                                                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                                                        </svg> </button>
+                                                                    <div class="filter-item__content js-accordion-content">
+                                                                        <div class="filter-item__inner">
+                                                                            <div class="filter-item__scrollbar js-scrollbar">
+                                                                                <div class="filter-item__checkboxes">
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="1" name="size1"> </span> <span class="base-checkbox__content"> SL8х25 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="2" name="size1"> </span> <span class="base-checkbox__content"> Ph1х25 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="3" name="size1"> </span> <span class="base-checkbox__content"> Ph1х50 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="4" name="size1"> </span> <span class="base-checkbox__content"> Ph2х127 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="5" name="size1"> </span> <span class="base-checkbox__content"> Ph2х150 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="6" name="size1"> </span> <span class="base-checkbox__content"> Ph2х200 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="7" name="size1"> </span> <span class="base-checkbox__content"> Ph2х250 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="8" name="size1"> </span> <span class="base-checkbox__content"> Ph2х300 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="9" name="size1"> </span> <span class="base-checkbox__content"> Ph2х350 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="10" name="size1"> </span> <span class="base-checkbox__content"> Ph2х400 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="11" name="size1"> </span> <span class="base-checkbox__content"> Ph2х450 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="12" name="size1"> </span> <span class="base-checkbox__content"> Ph2х450 </span> </label> </div>
+                                                                                </div>
+                                                                            </div> <button type="button" class="filter-item__show-all js-filters-show-all" data-show-text="Показать еще" data-hidden-text="Свернуть">Показать еще 6</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="filters__item js-filters-item filter-item filter-item--dropdown js-accordion"> <button type="button" class="filter-item__button js-accordion-button" aria-haspopup="true" aria-expanded="true"> <span>Размер</span> <svg class="filter-item__button-icon base-icon base-icon-arrow">
+                                                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                                                        </svg> </button>
+                                                                    <div class="filter-item__content js-accordion-content">
+                                                                        <div class="filter-item__inner">
+                                                                            <div class="filter-item__scrollbar js-scrollbar">
+                                                                                <div class="filter-item__checkboxes">
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="1" name="size2"> </span> <span class="base-checkbox__content"> SL8х25 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="2" name="size2"> </span> <span class="base-checkbox__content"> Ph1х25 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="3" name="size2"> </span> <span class="base-checkbox__content"> Ph1х50 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="4" name="size2"> </span> <span class="base-checkbox__content"> Ph2х127 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="5" name="size2"> </span> <span class="base-checkbox__content"> Ph2х150 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="6" name="size2"> </span> <span class="base-checkbox__content"> Ph2х200 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="7" name="size2"> </span> <span class="base-checkbox__content"> Ph2х250 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="8" name="size2"> </span> <span class="base-checkbox__content"> Ph2х300 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="9" name="size2"> </span> <span class="base-checkbox__content"> Ph2х350 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="10" name="size2"> </span> <span class="base-checkbox__content"> Ph2х400 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="11" name="size2"> </span> <span class="base-checkbox__content"> Ph2х450 </span> </label> </div>
+                                                                                    <div class="filter-item__checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input" value="12" name="size2"> </span> <span class="base-checkbox__content"> Ph2х450 </span> </label> </div>
+                                                                                </div>
+                                                                            </div> <button type="button" class="filter-item__show-all js-filters-show-all" data-show-text="Показать еще" data-hidden-text="Свернуть">Показать еще 6</button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="filters__buttons"> <button type="button" class="filters__button js-filters-close base-button base-button--primary base-button--block"> <span class="base-button__inner"> <span class="base-button__content"> Показать </span> </span> </button> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="p-catalog__category-item catalog-item">
-                            <div class="catalog-item__content">
-                                <div class="catalog-item__title"> <a class="catalog-item__title-link" href="#"> <span>Круги абразивные для УШМ</span> </a> </div>
-                            </div>
-                            <div class="catalog-item__image-wrapper">
-                                <div class="catalog-item__image-box"> <img class="catalog-item__image" src="img/categories/7.png" srcset="img/categories/7@2x.png 2x" alt="" width="96" height="96" loading="lazy"> </div>
-                            </div>
-                        </div>
-                        <div class="p-catalog__category-item catalog-item">
-                            <div class="catalog-item__content">
-                                <div class="catalog-item__title"> <a class="catalog-item__title-link" href="#"> <span>Ленты бесконечные</span> </a> </div>
-                            </div>
-                            <div class="catalog-item__image-wrapper">
-                                <div class="catalog-item__image-box"> <img class="catalog-item__image" src="img/categories/8.png" srcset="img/categories/8@2x.png 2x" alt="" width="96" height="96" loading="lazy"> </div>
-                            </div>
-                        </div>
-                        <div class="p-catalog__category-item catalog-item">
-                            <div class="catalog-item__content">
-                                <div class="catalog-item__title"> <a class="catalog-item__title-link" href="#"> <span>Насадки для миксеров</span> </a> </div>
-                            </div>
-                            <div class="catalog-item__image-wrapper">
-                                <div class="catalog-item__image-box"> <img class="catalog-item__image" src="img/categories/9.png" srcset="img/categories/9@2x.png 2x" alt="" width="96" height="96" loading="lazy"> </div>
-                            </div>
-                        </div>
-                        <div class="p-catalog__category-item catalog-item">
-                            <div class="catalog-item__content">
-                                <div class="catalog-item__title"> <a class="catalog-item__title-link" href="#"> <span>Насадки шестигранные</span> </a> </div>
-                            </div>
-                            <div class="catalog-item__image-wrapper">
-                                <div class="catalog-item__image-box"> <img class="catalog-item__image" src="img/categories/10.png" srcset="img/categories/10@2x.png 2x" alt="" width="96" height="96" loading="lazy"> </div>
-                            </div>
-                        </div>
-                        <div class="p-catalog__category-item catalog-item">
-                            <div class="catalog-item__content">
-                                <div class="catalog-item__title"> <a class="catalog-item__title-link" href="#"> <span>Полотна для лобзиков</span> </a> </div>
-                            </div>
-                            <div class="catalog-item__image-wrapper">
-                                <div class="catalog-item__image-box"> <img class="catalog-item__image" src="img/categories/11.png" srcset="img/categories/11@2x.png 2x" alt="" width="96" height="96" loading="lazy"> </div>
-                            </div>
-                        </div>
-                        <div class="p-catalog__category-item catalog-item">
-                            <div class="catalog-item__content">
-                                <div class="catalog-item__title"> <a class="catalog-item__title-link" href="#"> <span>Сетки абразивные</span> </a> </div>
-                            </div>
-                            <div class="catalog-item__image-wrapper">
-                                <div class="catalog-item__image-box"> <img class="catalog-item__image" src="img/categories/12.png" srcset="img/categories/12@2x.png 2x" alt="" width="96" height="96" loading="lazy"> </div>
-                            </div>
-                        </div>
-                        <div class="p-catalog__category-item catalog-item">
-                            <div class="catalog-item__content">
-                                <div class="catalog-item__title"> <a class="catalog-item__title-link" href="#"> <span>Полотна для сабельных пил</span> </a> </div>
-                            </div>
-                            <div class="catalog-item__image-wrapper">
-                                <div class="catalog-item__image-box"> <img class="catalog-item__image" src="img/categories/13.png" srcset="img/categories/13@2x.png 2x" alt="" width="96" height="96" loading="lazy"> </div>
-                            </div>
-                        </div>
-                        <div class="p-catalog__category-item catalog-item">
-                            <div class="catalog-item__content">
-                                <div class="catalog-item__title"> <a class="catalog-item__title-link" href="#"> <span>Свёрла</span> </a> </div>
-                            </div>
-                            <div class="catalog-item__image-wrapper">
-                                <div class="catalog-item__image-box"> <img class="catalog-item__image" src="img/categories/14.png" srcset="img/categories/14@2x.png 2x" alt="" width="96" height="96" loading="lazy"> </div>
-                            </div>
-                        </div>
-                        <div class="p-catalog__category-item catalog-item">
-                            <div class="catalog-item__content">
-                                <div class="catalog-item__title"> <a class="catalog-item__title-link" href="#"> <span>Хомуты-стяжки</span> </a> </div>
-                            </div>
-                            <div class="catalog-item__image-wrapper">
-                                <div class="catalog-item__image-box"> <img class="catalog-item__image" src="img/categories/15.png" srcset="img/categories/15@2x.png 2x" alt="" width="96" height="96" loading="lazy"> </div>
-                            </div>
-                        </div>
-                        <div class="p-catalog__category-item catalog-item">
-                            <div class="catalog-item__content">
-                                <div class="catalog-item__title"> <a class="catalog-item__title-link" href="#"> <span>Щётки для УШМ</span> </a> </div>
-                            </div>
-                            <div class="catalog-item__image-wrapper">
-                                <div class="catalog-item__image-box"> <img class="catalog-item__image" src="img/categories/16.png" srcset="img/categories/16@2x.png 2x" alt="" width="96" height="96" loading="lazy"> </div>
+                        <div class="p-catalog__layout-content">
+                            <div class="p-catalog__products l-grid l-gap-20">
+                                <div class="p-catalog__products-items l-grid l-grid-cols-3 l-gap-10">
+                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA">
+                                            <div class="product__image-wrapper">
+                                                <div class="product__image-box"> <img class="product__image" src="img/products/2.jpg" srcset="img/products/2@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="product__content">
+                                                <div class="product__head">
+                                                    <div class="product__availability">В наличии</div>
+                                                    <div class="product__sku">Арт. VCD-B0518</div>
+                                                </div>
+                                                <div class="product__title">Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA</div>
+                                                <div class="product__category">Аккумуляторный инструмент</div>
+                                                <div class="product__button-wrapper">
+                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA">
+                                            <div class="product__image-wrapper">
+                                                <div class="product__image-box"> <img class="product__image" src="img/products/2.jpg" srcset="img/products/2@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="product__content">
+                                                <div class="product__head">
+                                                    <div class="product__availability">В наличии</div>
+                                                    <div class="product__sku">Арт. VCD-B0518</div>
+                                                </div>
+                                                <div class="product__title">Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA</div>
+                                                <div class="product__category">Аккумуляторный инструмент</div>
+                                                <div class="product__button-wrapper">
+                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA">
+                                            <div class="product__image-wrapper">
+                                                <div class="product__image-box"> <img class="product__image" src="img/products/2.jpg" srcset="img/products/2@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="product__content">
+                                                <div class="product__head">
+                                                    <div class="product__availability">В наличии</div>
+                                                    <div class="product__sku">Арт. VCD-B0518</div>
+                                                </div>
+                                                <div class="product__title">Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA</div>
+                                                <div class="product__category">Аккумуляторный инструмент</div>
+                                                <div class="product__button-wrapper">
+                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA">
+                                            <div class="product__image-wrapper">
+                                                <div class="product__image-box"> <img class="product__image" src="img/products/2.jpg" srcset="img/products/2@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="product__content">
+                                                <div class="product__head">
+                                                    <div class="product__availability">В наличии</div>
+                                                    <div class="product__sku">Арт. VCD-B0518</div>
+                                                </div>
+                                                <div class="product__title">Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA</div>
+                                                <div class="product__category">Аккумуляторный инструмент</div>
+                                                <div class="product__button-wrapper">
+                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA">
+                                            <div class="product__image-wrapper">
+                                                <div class="product__image-box"> <img class="product__image" src="img/products/2.jpg" srcset="img/products/2@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="product__content">
+                                                <div class="product__head">
+                                                    <div class="product__availability">В наличии</div>
+                                                    <div class="product__sku">Арт. VCD-B0518</div>
+                                                </div>
+                                                <div class="product__title">Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA</div>
+                                                <div class="product__category">Аккумуляторный инструмент</div>
+                                                <div class="product__button-wrapper">
+                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA">
+                                            <div class="product__image-wrapper">
+                                                <div class="product__image-box"> <img class="product__image" src="img/products/2.jpg" srcset="img/products/2@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="product__content">
+                                                <div class="product__head">
+                                                    <div class="product__availability">В наличии</div>
+                                                    <div class="product__sku">Арт. VCD-B0518</div>
+                                                </div>
+                                                <div class="product__title">Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA</div>
+                                                <div class="product__category">Аккумуляторный инструмент</div>
+                                                <div class="product__button-wrapper">
+                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA">
+                                            <div class="product__image-wrapper">
+                                                <div class="product__image-box"> <img class="product__image" src="img/products/2.jpg" srcset="img/products/2@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="product__content">
+                                                <div class="product__head">
+                                                    <div class="product__availability">В наличии</div>
+                                                    <div class="product__sku">Арт. VCD-B0518</div>
+                                                </div>
+                                                <div class="product__title">Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA</div>
+                                                <div class="product__category">Аккумуляторный инструмент</div>
+                                                <div class="product__button-wrapper">
+                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA">
+                                            <div class="product__image-wrapper">
+                                                <div class="product__image-box"> <img class="product__image" src="img/products/2.jpg" srcset="img/products/2@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="product__content">
+                                                <div class="product__head">
+                                                    <div class="product__availability">В наличии</div>
+                                                    <div class="product__sku">Арт. VCD-B0518</div>
+                                                </div>
+                                                <div class="product__title">Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA</div>
+                                                <div class="product__category">Аккумуляторный инструмент</div>
+                                                <div class="product__button-wrapper">
+                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA">
+                                            <div class="product__image-wrapper">
+                                                <div class="product__image-box"> <img class="product__image" src="img/products/2.jpg" srcset="img/products/2@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="product__content">
+                                                <div class="product__head">
+                                                    <div class="product__availability">В наличии</div>
+                                                    <div class="product__sku">Арт. VCD-B0518</div>
+                                                </div>
+                                                <div class="product__title">Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA</div>
+                                                <div class="product__category">Аккумуляторный инструмент</div>
+                                                <div class="product__button-wrapper">
+                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA">
+                                            <div class="product__image-wrapper">
+                                                <div class="product__image-box"> <img class="product__image" src="img/products/2.jpg" srcset="img/products/2@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="product__content">
+                                                <div class="product__head">
+                                                    <div class="product__availability">В наличии</div>
+                                                    <div class="product__sku">Арт. VCD-B0518</div>
+                                                </div>
+                                                <div class="product__title">Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA</div>
+                                                <div class="product__category">Аккумуляторный инструмент</div>
+                                                <div class="product__button-wrapper">
+                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA">
+                                            <div class="product__image-wrapper">
+                                                <div class="product__image-box"> <img class="product__image" src="img/products/2.jpg" srcset="img/products/2@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="product__content">
+                                                <div class="product__head">
+                                                    <div class="product__availability">В наличии</div>
+                                                    <div class="product__sku">Арт. VCD-B0518</div>
+                                                </div>
+                                                <div class="product__title">Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA</div>
+                                                <div class="product__category">Аккумуляторный инструмент</div>
+                                                <div class="product__button-wrapper">
+                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA">
+                                            <div class="product__image-wrapper">
+                                                <div class="product__image-box"> <img class="product__image" src="img/products/2.jpg" srcset="img/products/2@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="product__content">
+                                                <div class="product__head">
+                                                    <div class="product__availability">В наличии</div>
+                                                    <div class="product__sku">Арт. VCD-B0518</div>
+                                                </div>
+                                                <div class="product__title">Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA</div>
+                                                <div class="product__category">Аккумуляторный инструмент</div>
+                                                <div class="product__button-wrapper">
+                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA">
+                                            <div class="product__image-wrapper">
+                                                <div class="product__image-box"> <img class="product__image" src="img/products/2.jpg" srcset="img/products/2@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="product__content">
+                                                <div class="product__head">
+                                                    <div class="product__availability">В наличии</div>
+                                                    <div class="product__sku">Арт. VCD-B0518</div>
+                                                </div>
+                                                <div class="product__title">Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA</div>
+                                                <div class="product__category">Аккумуляторный инструмент</div>
+                                                <div class="product__button-wrapper">
+                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA">
+                                            <div class="product__image-wrapper">
+                                                <div class="product__image-box"> <img class="product__image" src="img/products/2.jpg" srcset="img/products/2@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="product__content">
+                                                <div class="product__head">
+                                                    <div class="product__availability">В наличии</div>
+                                                    <div class="product__sku">Арт. VCD-B0518</div>
+                                                </div>
+                                                <div class="product__title">Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA</div>
+                                                <div class="product__category">Аккумуляторный инструмент</div>
+                                                <div class="product__button-wrapper">
+                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA">
+                                            <div class="product__image-wrapper">
+                                                <div class="product__image-box"> <img class="product__image" src="img/products/2.jpg" srcset="img/products/2@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="product__content">
+                                                <div class="product__head">
+                                                    <div class="product__availability">В наличии</div>
+                                                    <div class="product__sku">Арт. VCD-B0518</div>
+                                                </div>
+                                                <div class="product__title">Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA</div>
+                                                <div class="product__category">Аккумуляторный инструмент</div>
+                                                <div class="product__button-wrapper">
+                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA">
+                                            <div class="product__image-wrapper">
+                                                <div class="product__image-box"> <img class="product__image" src="img/products/2.jpg" srcset="img/products/2@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="product__content">
+                                                <div class="product__head">
+                                                    <div class="product__availability">В наличии</div>
+                                                    <div class="product__sku">Арт. VCD-B0518</div>
+                                                </div>
+                                                <div class="product__title">Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA</div>
+                                                <div class="product__category">Аккумуляторный инструмент</div>
+                                                <div class="product__button-wrapper">
+                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA">
+                                            <div class="product__image-wrapper">
+                                                <div class="product__image-box"> <img class="product__image" src="img/products/2.jpg" srcset="img/products/2@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="product__content">
+                                                <div class="product__head">
+                                                    <div class="product__availability">В наличии</div>
+                                                    <div class="product__sku">Арт. VCD-B0518</div>
+                                                </div>
+                                                <div class="product__title">Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA</div>
+                                                <div class="product__category">Аккумуляторный инструмент</div>
+                                                <div class="product__button-wrapper">
+                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA">
+                                            <div class="product__image-wrapper">
+                                                <div class="product__image-box"> <img class="product__image" src="img/products/2.jpg" srcset="img/products/2@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="product__content">
+                                                <div class="product__head">
+                                                    <div class="product__availability">В наличии</div>
+                                                    <div class="product__sku">Арт. VCD-B0518</div>
+                                                </div>
+                                                <div class="product__title">Угловая шлифмашина аккумуляторная (УШМ) VAG-L0218A-BD VERTA</div>
+                                                <div class="product__category">Аккумуляторный инструмент</div>
+                                                <div class="product__button-wrapper">
+                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                </div> <button type="button" class="p-catalog__more-button base-button base-button--white base-button--size-large base-button--block"> <span class="base-button__inner"> <span class="base-button__content"> Показать ещё </span> </span> </button>
+                                <div class="p-catalog__pagination pagination"> <!-- <button
+        class="pagination__nav pagination__nav--first"
+        type="button"
+    >
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+            <path d="M9 9L15 15L9 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 9L21 15L15 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+     <button
+        class="pagination__nav pagination__nav--prev"
+        type="button"
+    >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M9 6L15 12L9 18"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button> -->
+                                    <div class="pagination__list"> <a class="pagination__link is-active"> <span>1</span> </a> <a class="pagination__link" href="#"> <span>2</span> </a> <a class="pagination__link" href="#"> <span>3</span> </a> <a class="pagination__link" href="#"> <span>4</span> </a> <a class="pagination__link" href="#"> <span>5</span> </a> <a class="pagination__link" href="#"> <span>6</span> </a> </div> <button class="pagination__nav pagination__nav--next" type="button"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                            <path d="M9 6L15 12L9 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg> </button> <button class="pagination__nav pagination__nav--last" type="button"> <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                            <path d="M9 9L15 15L9 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            <path d="M15 9L21 15L15 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg> </button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <section class="products-section section">
-                <div class="products-section__container container">
-                    <div class="products-section__content js-products-swiper-section">
-                        <div class="products-section__header">
-                            <h2 class="products-section__title title">Популярные товары:</h2>
+            <section class="request-section section">
+                <div class="request-section__container container">
+                    <div class="request-section__wrapper">
+                        <div class="request-section__image-wrapper u-hidden-mobile">
+                            <div class="request-section__image-box"> <img class="request-section__image" src="img/request/request.png" srcset="img/request/request@2x.png 2x" alt="" loading="lazy" width="496" height="743"> </div>
                         </div>
-                        <div class="products-section__list">
-                            <div class="products-section__list-item"> <a href="#" class="products-section__list-link"><span>Сетка абразивная Р100 115х280 мм</span></a> </div>
-                            <div class="products-section__list-item"> <a href="#" class="products-section__list-link"><span>Зубило плоское SDS-Plus</span></a> </div>
-                            <div class="products-section__list-item"> <a href="#" class="products-section__list-link"><span>Хомут-стяжка 4,8х250мм</span></a> </div>
-                            <div class="products-section__list-item"> <a href="#" class="products-section__list-link"><span>Хомут-стяжка 4,8х250мм</span></a> </div>
-                            <div class="products-section__list-item"> <a href="#" class="products-section__list-link"><span>Диск алмазный</span></a> </div>
-                            <div class="products-section__list-item"> <a href="#" class="products-section__list-link"><span>Бур по бетону</span></a> </div>
-                            <div class="products-section__list-item"> <a href="#" class="products-section__list-link"><span>Держатель магнитный для насадок H1</span></a> </div>
-                            <div class="products-section__list-item"> <a href="#" class="products-section__list-link"><span>Биты ударные ULTRAPROFI</span></a> </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="products-section section">
-                <div class="products-section__container container">
-                    <div class="products-section__content js-products-swiper-section">
-                        <div class="products-section__header">
-                            <h2 class="products-section__title title">Хиты продаж</h2>
-                        </div>
-                        <div class="swiper products-section__swiper js-products-swiper" data-slides-per-view-992="4">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__product product"> <a href="#" class="product__link" aria-label="Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. VCD-B0518</div>
-                                                </div>
-                                                <div class="product__title">Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA</div>
-                                                <div class="product__category">Аккумуляторный инструмент</div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__product product"> <a href="#" class="product__link" aria-label="Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. VCD-B0518</div>
-                                                </div>
-                                                <div class="product__title">Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA</div>
-                                                <div class="product__category">Аккумуляторный инструмент</div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__product product"> <a href="#" class="product__link" aria-label="Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. VCD-B0518</div>
-                                                </div>
-                                                <div class="product__title">Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA</div>
-                                                <div class="product__category">Аккумуляторный инструмент</div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__product product"> <a href="#" class="product__link" aria-label="Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. VCD-B0518</div>
-                                                </div>
-                                                <div class="product__title">Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA</div>
-                                                <div class="product__category">Аккумуляторный инструмент</div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__product product"> <a href="#" class="product__link" aria-label="Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. VCD-B0518</div>
-                                                </div>
-                                                <div class="product__title">Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA</div>
-                                                <div class="product__category">Аккумуляторный инструмент</div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__product product"> <a href="#" class="product__link" aria-label="Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. VCD-B0518</div>
-                                                </div>
-                                                <div class="product__title">Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA</div>
-                                                <div class="product__category">Аккумуляторный инструмент</div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__product product"> <a href="#" class="product__link" aria-label="Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. VCD-B0518</div>
-                                                </div>
-                                                <div class="product__title">Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA</div>
-                                                <div class="product__category">Аккумуляторный инструмент</div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__product product"> <a href="#" class="product__link" aria-label="Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. VCD-B0518</div>
-                                                </div>
-                                                <div class="product__title">Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA</div>
-                                                <div class="product__category">Аккумуляторный инструмент</div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__product product"> <a href="#" class="product__link" aria-label="Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. VCD-B0518</div>
-                                                </div>
-                                                <div class="product__title">Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA</div>
-                                                <div class="product__category">Аккумуляторный инструмент</div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__product product"> <a href="#" class="product__link" aria-label="Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. VCD-B0518</div>
-                                                </div>
-                                                <div class="product__title">Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA</div>
-                                                <div class="product__category">Аккумуляторный инструмент</div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                            </div>
-                            <div class="products-section__swiper-footer swiper-footer">
-                                <div class="products-section__swiper-scrollbar-wrapper swiper-scrollbar-wrapper">
-                                    <div class="products-section__swiper-scrollbar swiper-scrollbar js-products-swiper-scrollbar"></div>
-                                </div>
-                                <div class="products-section__swiper-control swiper-control u-hidden-mobile-sm"> <button type="button" class="products-section__swiper-prev js-products-swiper-prev swiper-button-prev"> <svg width="29" height="30" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 6L21 15L12 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg> </button> <button type="button" class="products-section__swiper-next js-products-swiper-next swiper-button-next"> <svg width="29" height="30" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 6L21 15L12 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg> </button> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="about-product-section section">
-                <div class="about-product-section__inner">
-                    <div class="container">
-                        <div class="about-product-section__content js-about-product-swiper-section">
-                            <div class="about-product-section__subtitle subtitle">О товаре</div>
-                            <div class="about-product-section__header">
-                                <h2 class="about-product-section__title title title--size-lg">О&nbsp;профессиональном инструменте</h2> <a href="#" class="about-product-section__button button-more button-more--size-sm button-more--see-all base-button base-button--default base-button--outlined base-button--size-small base-button--rounded"> <span class="base-button__inner"> <span class="base-button__content"> Смотреть все </span> <span class="base-button__icon"> <svg class="base-icon base-icon-nav">
-                                                <use xlink:href="img/icons.svg#nav"></use>
-                                            </svg> </span> </span> </a>
-                            </div>
-                            <div class="swiper about-product-section__swiper js-about-product-swiper">
-                                <div class="swiper-wrapper">
-                                    <div class="swiper-slide about-product-section__swiper-item">
-                                        <div class="about-product-section__item category-item">
-                                            <div class="category-item__content">
-                                                <div class="category-item__sku">VHB-2601SRE</div>
-                                                <h3 class="category-item__title"> <a class="category-item__title-link" href="#"> <span>Перфоратор VERTA</span> </a> </h3>
-                                                <div class="category-item__arrow-wrapper">
-                                                    <div class="category-item__arrow-button"> <svg class="base-icon base-icon-nav">
-                                                            <use xlink:href="img/icons.svg#nav"></use>
-                                                        </svg> </div>
-                                                </div>
-                                            </div>
-                                            <div class="category-item__image-wrapper">
-                                                <picture class="category-item__image-box">
-                                                    <source media="(max-width: 1024.98px)" srcset="img/about-product/1-tablet.png 1x, img/about-product/1-tablet@2x.png 2x"> <img class="category-item__image" src="img/about-product/1.png" srcset="img/about-product/1@2x.png 2x" alt="" width="284" height="284" loading="lazy">
-                                                </picture>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide about-product-section__swiper-item">
-                                        <div class="about-product-section__item category-item">
-                                            <div class="category-item__content">
-                                                <div class="category-item__sku">VCSTM-191</div>
-                                                <h3 class="category-item__title"> <a class="category-item__title-link" href="#"> <span>Пила дисковая</span> </a> </h3>
-                                                <div class="category-item__arrow-wrapper">
-                                                    <div class="category-item__arrow-button"> <svg class="base-icon base-icon-nav">
-                                                            <use xlink:href="img/icons.svg#nav"></use>
-                                                        </svg> </div>
-                                                </div>
-                                            </div>
-                                            <div class="category-item__image-wrapper">
-                                                <picture class="category-item__image-box"> <img class="category-item__image" src="img/about-product/2.png" srcset="img/about-product/2@2x.png 2x" alt="" width="284" height="284" loading="lazy"> </picture>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide about-product-section__swiper-item">
-                                        <div class="about-product-section__item category-item">
-                                            <div class="category-item__content">
-                                                <div class="category-item__sku">VHM-10</div>
-                                                <h3 class="category-item__title"> <a class="category-item__title-link" href="#"> <span>Дрель-миксер</span> </a> </h3>
-                                                <div class="category-item__arrow-wrapper">
-                                                    <div class="category-item__arrow-button"> <svg class="base-icon base-icon-nav">
-                                                            <use xlink:href="img/icons.svg#nav"></use>
-                                                        </svg> </div>
-                                                </div>
-                                            </div>
-                                            <div class="category-item__image-wrapper">
-                                                <picture class="category-item__image-box"> <img class="category-item__image" src="img/about-product/3.png" srcset="img/about-product/3@2x.png 2x" alt="" width="284" height="284" loading="lazy"> </picture>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="about-product-section__swiper-footer swiper-footer">
-                                    <div class="about-product-section__swiper-scrollbar-wrapper swiper-scrollbar-wrapper">
-                                        <div class="about-product-section__swiper-scrollbar swiper-scrollbar js-about-product-swiper-scrollbar"></div>
-                                    </div>
-                                    <div class="about-product-section__swiper-control swiper-control u-hidden-mobile-sm"> <button type="button" class="about-product-section__swiper-prev js-about-product-swiper-prev swiper-button-prev"> <svg width="29" height="30" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12 6L21 15L12 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg> </button> <button type="button" class="about-product-section__swiper-next js-about-product-swiper-next swiper-button-next"> <svg width="29" height="30" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
-                                                <path d="M12 6L21 15L12 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                            </svg> </button> </div>
-                                </div>
-                            </div>
+                        <div class="request-section__content">
+                            <h2 class="request-section__title title">Оформите заявку на сайте</h2>
+                            <div class="request-section__text section-text">
+                                <p>Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время и&nbsp;ответим на&nbsp;все интересующие вопросы</p>
+                            </div> <button type="button" data-modal-open="#order-modal" class="request-section__button base-button base-button--secondary"> <span class="base-button__inner"> <span class="base-button__content">
+                                        Задать вопрос
+                                    </span> </span> </button>
                         </div>
                     </div>
                 </div>
@@ -813,7 +880,7 @@
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-mn63ql7z0"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-mn63ql7z0" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-07btc459d"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-07btc459d" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
@@ -821,14 +888,14 @@
                                     <div class="form__column">
                                         <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-1dq77a5fp"> <span>Номер телефона</span> </label> <input id="base-text-field-1dq77a5fp" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-emije8cfm"> <span>Номер телефона</span> </label> <input id="base-text-field-emije8cfm" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-dq8s7he81"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-dq8s7he81" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-tgjhkf26z"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-tgjhkf26z" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
@@ -836,14 +903,14 @@
                                     <div class="form__column">
                                         <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-nun4942cl"> <span>Интересующий товар/услуга</span> </label> <input id="base-text-field-nun4942cl" type="text" name="email" value class="base-text-field__input js-base-text-field-input"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-t6qgzdfft"> <span>Интересующий товар/услуга</span> </label> <input id="base-text-field-t6qgzdfft" type="text" name="email" value class="base-text-field__input js-base-text-field-input"> </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--textarea base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-pssfjd129"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-pssfjd129" name="message" rows="5" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-elci7k0br"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-elci7k0br" name="message" rows="5" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>

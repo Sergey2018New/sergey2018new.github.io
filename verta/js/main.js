@@ -3545,9 +3545,13 @@ const A='<button class="f-button" title="{{CLOSE}}" data-fancybox-close><svg tab
 //     <path d="M17 7.81199L16.188 7L12 11.188L7.81199 7L7 7.81199L11.188 12L7 16.188L7.81199 17L12 12.812L16.188 17L17 16.188L12.812 12L17 7.81199Z" /></svg>`,
 // };
 
+
 function initFancybox() {
     N.bind('[data-fancybox]', {
           zoomEffect: false,
+           backFocus: false,
+    trapFocus: false,
+    placeFocusBack: false,
         idle: false,
         Carousel: {
 
@@ -10607,6 +10611,71 @@ function initSwiper() {
 
         });
     }
+
+
+    new Swiper('.js-gallery-swiper:not(.swiper-initialized)', {
+        modules: [Keyboard, Navigation, freeMode, Scrollbar, Mousewheel],
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+        speed: 400,
+
+        grabCursor: true,
+        // freeMode: {
+        //     enabled: true,
+        //     sticky: false,
+        //      momentum: true,
+        // },
+        mousewheel: {
+            forceToAxis: true,
+            enabled: true,
+        },
+        speed: 400,
+        slidesPerView: 'auto',
+        slidesPerGroup: 1,
+
+        spaceBetween: 20,
+        loop: false,
+        navigation: {
+          prevEl: '.js-gallery-swiper-prev',
+          nextEl: '.js-gallery-swiper-next',
+        },
+        breakpoints: {
+            576: {
+                spaceBetween: 10,
+            },
+        },
+         scrollbar: {
+            el: '.js-gallery-swiper-scrollbar',
+            draggable: true,
+            snapOnRelease: false,
+        },
+        on: {
+            init: function (swiper) {
+                const swiperSection = swiper.el.closest('.js-gallery-swiper-section');
+
+                if (swiperSection) {
+                    if (swiper.isLocked) {
+                        swiperSection.classList.remove('is-swiper-items');
+                    } else {
+                        swiperSection.classList.add('is-swiper-items');
+                    }
+                }
+            },
+            resize: function (swiper) {
+                const swiperSection = swiper.el.closest('.js-gallery-swiper-section');
+
+                if (swiperSection) {
+                    if (swiper.isLocked) {
+                        swiperSection.classList.remove('is-swiper-items');
+                    } else {
+                        swiperSection.classList.add('is-swiper-items');
+                    }
+                }
+            },
+        },
+    });
 
 
     const productGalleryElements = document.querySelectorAll('.js-product-gallery');

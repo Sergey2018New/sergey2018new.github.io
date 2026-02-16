@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Страница новости | Verta</title>
+    <title>Контакты | Verta</title>
     <meta name="description" content="Описание страницы">
     <link rel="icon" href="/favicon/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
@@ -19,6 +19,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Fira+Sans+Condensed:wght@500;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script src="https://unpkg.com/imask"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=391f4ea0-bf90-4603-89b5-cabb30821c5e"></script>
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -250,187 +251,120 @@
                     <nav class="breadcrumbs__inner" role="navigation" aria-label="breadcrumbs">
                         <ol class="breadcrumbs__list">
                             <li class="breadcrumbs__item"> <a href="/" class="breadcrumbs__link"><span>Главная</span></a> </li>
-                            <li class="breadcrumbs__item"> <a href="" class="breadcrumbs__link"><span>Новости</span></a> </li>
-                            <li class="breadcrumbs__item" aria-current="page"> <span>Новая линейка перфораторов уже в продаже</span> </li>
+                            <li class="breadcrumbs__item"> <a href="" class="breadcrumbs__link"><span>Где купить</span></a> </li>
+                            <li class="breadcrumbs__item" aria-current="page"> <span>Контакты</span> </li>
                         </ol>
                     </nav>
                 </div>
             </div>
-            <div class="p-section p-article p-article--new">
+            <div class="p-section p-company">
                 <div class="container">
-                    <div class="p-article__page-title page-title page-title--size-lg">
-                        <h1>Новая линейка перфораторов уже в продаже</h1>
-                    </div>
-                    <div class="p-article__layout-row">
-                        <div class="p-article__layout-column">
-                            <div class="p-article__image-box"> <img class="p-article__image" src="img/news/detail.jpg" srcset="img/news/detail@2x.jpg 2x" width="535" height="484" alt="" loading="lazy"> </div>
-                            <div class="p-article__head-info">
-                                <div class="p-article__category">Новости</div>
-                                <div class="p-article__date">15 февраля 2021</div>
-                            </div>
-                            <div class="p-article__socials socials">
-                                <div class="socials__list"> <a href="#" class="socials__link socials__link--telegram" title="Telegram"> <svg class="socials__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M14.9922 2.5C12.5199 2.5 10.1032 3.23311 8.04756 4.60663C5.99195 5.98015 4.38979 7.93238 3.4437 10.2165C2.4976 12.5005 2.25006 15.0139 2.73238 17.4386C3.21469 19.8634 4.4052 22.0907 6.15336 23.8388C7.90152 25.587 10.1288 26.7775 12.5536 27.2598C14.9783 27.7421 17.4917 27.4946 19.7757 26.5485C22.0598 25.6024 24.012 24.0002 25.3856 21.9446C26.7591 19.889 27.4922 17.4723 27.4922 15C27.4923 13.3584 27.1691 11.7329 26.541 10.2163C25.9128 8.69966 24.9921 7.32162 23.8313 6.16086C22.6706 5.0001 21.2925 4.07936 19.7759 3.45123C18.2593 2.82309 16.6338 2.49986 14.9922 2.5ZM18.9666 21.4406C18.9198 21.5572 18.8486 21.6626 18.7578 21.7495C18.667 21.8364 18.5586 21.9028 18.44 21.9445C18.3214 21.9861 18.1953 22.0018 18.0701 21.9907C17.9449 21.9796 17.8235 21.9418 17.7141 21.88L14.3207 19.2432L12.1428 21.2525C12.0923 21.2898 12.0332 21.3139 11.9709 21.3224C11.9087 21.3309 11.8453 21.3236 11.7866 21.3012L12.2041 17.5656L12.2175 17.5762L12.226 17.5024C12.226 17.5024 18.3322 11.9431 18.581 11.7062C18.8328 11.4699 18.7497 11.4187 18.7497 11.4187C18.7641 11.1305 18.2978 11.4187 18.2978 11.4187L10.2072 16.6237L6.83783 15.4762C6.83783 15.4762 6.32033 15.2906 6.27158 14.8825C6.22033 14.4775 6.85469 14.2575 6.85469 14.2575L20.2509 8.93561C20.2509 8.93561 21.3522 8.44496 21.3522 9.2575L18.9666 21.4406Z" fill="#3AA6EA" />
-                                        </svg> </a><a href="#" class="socials__link socials__link--vk" title="ВКонтакте"> <svg class="socials__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M18.8412 2.5H11.1719C4.16664 2.5 2.5 4.16664 2.5 11.1588V18.8281C2.5 25.8333 4.15368 27.5 11.1588 27.5H18.8281C25.8334 27.5 27.5 25.8463 27.5 18.8411V11.1719C27.5 4.16664 25.8463 2.5 18.8412 2.5ZM22.6823 20.3385H20.8594C20.1693 20.3385 19.9609 19.7786 18.724 18.5416C17.6432 17.5 17.1875 17.3698 16.9141 17.3698C16.5365 17.3698 16.4323 17.4739 16.4323 17.9948V19.6354C16.4323 20.0781 16.2891 20.3385 15.1302 20.3385C14.0057 20.263 12.9152 19.9213 11.9486 19.3418C10.982 18.7623 10.1668 17.9614 9.57031 17.0052C8.1542 15.2425 7.16888 13.1738 6.69274 10.9635C6.69274 10.6901 6.79688 10.4427 7.31774 10.4427H9.14062C9.60938 10.4427 9.77868 10.651 9.96094 11.1328C10.8463 13.7369 12.3568 16.0026 12.9688 16.0026C13.2031 16.0026 13.3073 15.8984 13.3073 15.3125V12.6302C13.2291 11.4062 12.5781 11.302 12.5781 10.8594C12.5867 10.7426 12.6404 10.6337 12.728 10.5559C12.8155 10.4781 12.9299 10.4375 13.0469 10.4427H15.9115C16.3021 10.4427 16.4323 10.638 16.4323 11.1067V14.7266C16.4323 15.1172 16.6016 15.2473 16.7188 15.2473C16.9531 15.2473 17.1354 15.1172 17.5651 14.6875C18.4884 13.5615 19.2429 12.307 19.8047 10.9635C19.862 10.8019 19.9707 10.6634 20.1142 10.5694C20.2576 10.4753 20.4279 10.4308 20.599 10.4427H22.4219C22.9688 10.4427 23.0859 10.7161 22.9688 11.1067C22.3055 12.5921 21.4848 14.0021 20.5209 15.3125C20.3256 15.6119 20.2474 15.7682 20.5209 16.1198C20.7031 16.3932 21.3412 16.927 21.7709 17.4348C22.3958 18.0583 22.9148 18.7796 23.3073 19.5703C23.4635 20.0781 23.2031 20.3385 22.6823 20.3385Z" fill="#3385E2" />
-                                        </svg> </a><a href="#" class="socials__link socials__link--max" title="Max"> <img class="socials__image" src="img/max-logo.png" width="46" height="46" alt="" loading="lazy"> </a> </div>
+                    <div class="p-company__header">
+                        <div class="p-company__title page-title page-title--size-lg">
+                            <h1>Контакты</h1>
+                        </div>
+                        <div class="p-company__tab-menu-wrapper">
+                            <div class="p-company__tab-menu tab-menu">
+                                <div class="tab-menu__inner">
+                                    <div class="tab-menu__list"> <a class="tab-menu__item is-active"> <span>Контакты</span> </a><a href="#" class="tab-menu__item"> <span>Партнёры</span> </a><a href="#" class="tab-menu__item"> <span>Реквизиты</span> </a><a href="#" class="tab-menu__item"> <span>О бренде</span> </a> </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="p-article__layout-column">
-                            <div class="p-article__description description">
-                                <h2>Новая линейка перфораторов уже в&nbsp;продаже</h2>
-                                <p>Ножовки с&nbsp;высоким TPI (10-13) подходят для работы с&nbsp;тонкими материалами, такими как фанера, ламинат, и&nbsp;обеспечивают чистый срез. С&nbsp;другой стороны, ножовки с&nbsp;низким TPI (1-4) предназначены для быстрой, но&nbsp;менее точной распиловки, например, сырого дерева. Универсальные ножовки имеют TPI в&nbsp;диапазоне 5-9 и&nbsp;подходят для большинства столярных работ</p>
-                                <h2>Новая линейка перфораторов уже в&nbsp;продаже</h2>
-                                <p>Ножовки с&nbsp;высоким TPI (10-13) подходят для работы с&nbsp;тонкими материалами, такими как фанера, ламинат, и&nbsp;обеспечивают чистый срез. С&nbsp;другой стороны, ножовки с&nbsp;низким TPI (1-4) предназначены для быстрой, но&nbsp;менее точной распиловки, например, сырого дерева. Универсальные ножовки имеют TPI в&nbsp;диапазоне 5-9 и&nbsp;подходят для большинства столярных работ</p>
-                                <h2>Новая линейка перфораторов уже в&nbsp;продаже</h2>
-                                <p>Ножовки с&nbsp;высоким TPI (10-13) подходят для работы с&nbsp;тонкими материалами, такими как фанера, ламинат, и&nbsp;обеспечивают чистый срез. С&nbsp;другой стороны, ножовки с&nbsp;низким TPI (1-4) предназначены для быстрой, но&nbsp;менее точной распиловки, например, сырого дерева. Универсальные ножовки имеют TPI в&nbsp;диапазоне 5-9 и&nbsp;подходят для большинства столярных работ</p>
+                    </div>
+                    <div class="p-company__contacts">
+                        <div class="p-company__map-block map-block">
+                            <div class="map-block__inner">
+                                <div class="map-block__map">
+                                    <div id="map" style="width: 100%; height: 100%"></div>
+                                    <div>
+                                        <script type="module">
+                                            const observers = {};
+
+                                            function callback(entries, observer) {
+                                                entries.forEach((entry) => {
+                                                    const target = entry.target;
+                                                    if (entry.isIntersecting) {
+                                                        ymaps.ready(function() {
+                                                            const coords = [56.755294, 60.584045];
+                                                            let iconWidth = 70;
+                                                            let iconHeight = 86;
+                                                            const windowWidth = window.innerWidth;
+                                                            let iconOffsetX = 160;
+                                                            let iconOffsetY = 0;
+                                                            if (windowWidth <= 767.98) {
+                                                                iconOffsetY = -190;
+                                                            }
+                                                            if (windowWidth <= 575.98) {
+                                                                iconOffsetX = 0;
+                                                                iconOffsetY = -180;
+                                                            }
+                                                            const myMap = new ymaps.Map("map", {
+                                                                center: coords,
+                                                                zoom: 16,
+                                                                controls: []
+                                                            }, {
+                                                                suppressMapOpenBlock: true,
+                                                                suppressObsoleteBrowserNotifier: true
+                                                            });
+                                                            const myPlacemark = new ymaps.Placemark(coords, {}, {
+                                                                iconLayout: "default#image",
+                                                                iconImageHref: "img/location.svg",
+                                                                iconImageSize: [iconWidth, iconHeight],
+                                                                iconImageOffset: [iconWidth * -0.5 + iconOffsetX, iconHeight * -1 + iconOffsetY]
+                                                            });
+                                                            myMap.geoObjects.add(myPlacemark);
+                                                            myMap.controls.remove("searchControl");
+                                                        });
+                                                        observer.unobserve(target);
+                                                    }
+                                                });
+                                            }
+                                            const mapElement = document.querySelector("#map");
+                                            if (mapElement) {
+                                                observers["map"] = new IntersectionObserver(callback, {
+                                                    rootMargin: "50px"
+                                                });
+                                                observers["map"].observe(mapElement);
+                                            }
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-company__contacts-content">
+                            <div class="p-company__contacts-block p-company__contacts-block--address u-box">
+                                <div class="p-company__address">
+                                    г.&nbsp;Екатеринбург, ул.&nbsp;Окружная, 88Э
+                                </div>
+                                <div class="p-company__working-hours"> <svg class="base-icon base-icon-clock">
+                                        <use xlink:href="img/icons.svg#clock"></use>
+                                    </svg> <span>Пн - Пт: 09:00 - 18:00</span> </div>
+                            </div>
+                            <div class="p-company__contacts-block u-box">
+                                <h3 class="p-company__contacts-block-title">Свяжитесь с&nbsp;нами</h3>
+                                <div class="p-company__contacts-block-text">
+                                    <p>Позвоните нам или напишите
+                                        сообщение. Наши специалисты
+                                        проконсультируют Вас по&nbsp;любому
+                                        вопросу</p>
+                                </div>
+                                <div class="p-company__contacts-items">
+                                    <div class="p-company__contacts-item">
+                                        <div class="p-company__contacts-title">
+                                            Телефон
+                                        </div> <a class="p-company__contacts-phone" href="tel:+73432210311">+7 343 221-03-11</a>
+                                    </div>
+                                    <div class="p-company__contacts-item">
+                                        <div class="p-company__contacts-title">
+                                            E-mail
+                                        </div> <a class="p-company__contacts-email" href="mailto:info@vertatools.ru">info@vertatools.ru</a>
+                                    </div>
+                                </div> <button type="button" data-modal-open="#order-modal" class="p-company__contacts-button base-button base-button--primary base-button--size-large base-button--block"> <span class="base-button__inner"> <span class="base-button__content"> Написать сообщение </span> </span> </button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <section class="articles-section section">
-                <div class="container">
-                    <div class="articles-section__content js-articles-swiper-section">
-                        <div class="articles-section__header">
-                            <h2 class="articles-section__title title title--size-lg">Читать далее</h2> <a href="#" class="articles-section__button button-more button-more--size-sm button-more--see-all base-button base-button--default base-button--outlined base-button--size-small base-button--rounded"> <span class="base-button__inner"> <span class="base-button__content"> Смотреть всё </span> <span class="base-button__icon"> <svg class="base-icon base-icon-nav">
-                                            <use xlink:href="img/icons.svg#nav"></use>
-                                        </svg> </span> </span> </a>
-                        </div>
-                        <div class="swiper articles-section__swiper js-articles-swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/news/1.jpg" srcset="img/news/1@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__head">
-                                                    <div class="article-item__date"> 15 февраля 2021 </div>
-                                                </div>
-                                                <div class="article-item__title">Расширяем границы - новый филиал в Москве</div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/news/2.jpg" srcset="img/news/2@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__head">
-                                                    <div class="article-item__date"> 15 февраля 2021 </div>
-                                                </div>
-                                                <div class="article-item__title">Обновляем конкурс на самых креативных строителей</div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/news/3.jpg" srcset="img/news/3@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__head">
-                                                    <div class="article-item__date"> 15 февраля 2021 </div>
-                                                </div>
-                                                <div class="article-item__title">Новая линейка перфораторов уже в продаже</div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/news/1.jpg" srcset="img/news/1@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__head">
-                                                    <div class="article-item__date"> 15 февраля 2021 </div>
-                                                </div>
-                                                <div class="article-item__title">Расширяем границы - новый филиал в Москве</div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/news/2.jpg" srcset="img/news/2@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__head">
-                                                    <div class="article-item__date"> 15 февраля 2021 </div>
-                                                </div>
-                                                <div class="article-item__title">Обновляем конкурс на самых креативных строителей</div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/news/3.jpg" srcset="img/news/3@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__head">
-                                                    <div class="article-item__date"> 15 февраля 2021 </div>
-                                                </div>
-                                                <div class="article-item__title">Новая линейка перфораторов уже в продаже</div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/news/1.jpg" srcset="img/news/1@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__head">
-                                                    <div class="article-item__date"> 15 февраля 2021 </div>
-                                                </div>
-                                                <div class="article-item__title">Расширяем границы - новый филиал в Москве</div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/news/2.jpg" srcset="img/news/2@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__head">
-                                                    <div class="article-item__date"> 15 февраля 2021 </div>
-                                                </div>
-                                                <div class="article-item__title">Обновляем конкурс на самых креативных строителей</div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/news/3.jpg" srcset="img/news/3@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__head">
-                                                    <div class="article-item__date"> 15 февраля 2021 </div>
-                                                </div>
-                                                <div class="article-item__title">Новая линейка перфораторов уже в продаже</div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                            </div>
-                            <div class="articles-section__swiper-footer swiper-footer">
-                                <div class="articles-section__swiper-scrollbar-wrapper swiper-scrollbar-wrapper">
-                                    <div class="articles-section__swiper-scrollbar swiper-scrollbar js-articles-swiper-scrollbar"></div>
-                                </div>
-                                <div class="articles-section__swiper-control swiper-control u-hidden-mobile-sm"> <button type="button" class="articles-section__swiper-prev js-articles-swiper-prev swiper-button-prev"> <svg width="29" height="30" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 6L21 15L12 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg> </button> <button type="button" class="articles-section__swiper-next js-articles-swiper-next swiper-button-next"> <svg width="29" height="30" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 6L21 15L12 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg> </button> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <section class="request-section section">
                 <div class="request-section__container container">
                     <div class="request-section__wrapper">
@@ -568,7 +502,7 @@
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-sqaypo6hw"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-sqaypo6hw" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-u8k7haoez"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-u8k7haoez" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
@@ -576,14 +510,14 @@
                                     <div class="form__column">
                                         <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-2c2n6qrvt"> <span>Номер телефона</span> </label> <input id="base-text-field-2c2n6qrvt" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-toobzpke3"> <span>Номер телефона</span> </label> <input id="base-text-field-toobzpke3" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-dmq99d3g9"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-dmq99d3g9" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-cp02hidcb"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-cp02hidcb" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
@@ -591,14 +525,14 @@
                                     <div class="form__column">
                                         <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-z69kn7u23"> <span>Интересующий товар/услуга</span> </label> <input id="base-text-field-z69kn7u23" type="text" name="email" value class="base-text-field__input js-base-text-field-input"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-kxr80d0vv"> <span>Интересующий товар/услуга</span> </label> <input id="base-text-field-kxr80d0vv" type="text" name="email" value class="base-text-field__input js-base-text-field-input"> </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--textarea base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-pb6lj8xek"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-pb6lj8xek" name="message" rows="5" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-saf89huz0"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-saf89huz0" name="message" rows="5" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>

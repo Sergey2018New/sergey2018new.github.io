@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Страница новости | Verta</title>
+    <title>О компании | Verta</title>
     <meta name="description" content="Описание страницы">
     <link rel="icon" href="/favicon/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper wrapper-bg-grey">
         <header class="header js-header"> <!-- <div class="header__backdrop js-header-backdrop"></div> -->
             <div class="header__inner">
                 <div class="header__container container">
@@ -250,210 +250,477 @@
                     <nav class="breadcrumbs__inner" role="navigation" aria-label="breadcrumbs">
                         <ol class="breadcrumbs__list">
                             <li class="breadcrumbs__item"> <a href="/" class="breadcrumbs__link"><span>Главная</span></a> </li>
-                            <li class="breadcrumbs__item"> <a href="" class="breadcrumbs__link"><span>Новости</span></a> </li>
-                            <li class="breadcrumbs__item" aria-current="page"> <span>Новая линейка перфораторов уже в продаже</span> </li>
+                            <li class="breadcrumbs__item" aria-current="page"> <span>О компании</span> </li>
                         </ol>
                     </nav>
                 </div>
             </div>
-            <div class="p-section p-article p-article--new">
-                <div class="container">
-                    <div class="p-article__page-title page-title page-title--size-lg">
-                        <h1>Новая линейка перфораторов уже в продаже</h1>
-                    </div>
-                    <div class="p-article__layout-row">
-                        <div class="p-article__layout-column">
-                            <div class="p-article__image-box"> <img class="p-article__image" src="img/news/detail.jpg" srcset="img/news/detail@2x.jpg 2x" width="535" height="484" alt="" loading="lazy"> </div>
-                            <div class="p-article__head-info">
-                                <div class="p-article__category">Новости</div>
-                                <div class="p-article__date">15 февраля 2021</div>
-                            </div>
-                            <div class="p-article__socials socials">
-                                <div class="socials__list"> <a href="#" class="socials__link socials__link--telegram" title="Telegram"> <svg class="socials__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M14.9922 2.5C12.5199 2.5 10.1032 3.23311 8.04756 4.60663C5.99195 5.98015 4.38979 7.93238 3.4437 10.2165C2.4976 12.5005 2.25006 15.0139 2.73238 17.4386C3.21469 19.8634 4.4052 22.0907 6.15336 23.8388C7.90152 25.587 10.1288 26.7775 12.5536 27.2598C14.9783 27.7421 17.4917 27.4946 19.7757 26.5485C22.0598 25.6024 24.012 24.0002 25.3856 21.9446C26.7591 19.889 27.4922 17.4723 27.4922 15C27.4923 13.3584 27.1691 11.7329 26.541 10.2163C25.9128 8.69966 24.9921 7.32162 23.8313 6.16086C22.6706 5.0001 21.2925 4.07936 19.7759 3.45123C18.2593 2.82309 16.6338 2.49986 14.9922 2.5ZM18.9666 21.4406C18.9198 21.5572 18.8486 21.6626 18.7578 21.7495C18.667 21.8364 18.5586 21.9028 18.44 21.9445C18.3214 21.9861 18.1953 22.0018 18.0701 21.9907C17.9449 21.9796 17.8235 21.9418 17.7141 21.88L14.3207 19.2432L12.1428 21.2525C12.0923 21.2898 12.0332 21.3139 11.9709 21.3224C11.9087 21.3309 11.8453 21.3236 11.7866 21.3012L12.2041 17.5656L12.2175 17.5762L12.226 17.5024C12.226 17.5024 18.3322 11.9431 18.581 11.7062C18.8328 11.4699 18.7497 11.4187 18.7497 11.4187C18.7641 11.1305 18.2978 11.4187 18.2978 11.4187L10.2072 16.6237L6.83783 15.4762C6.83783 15.4762 6.32033 15.2906 6.27158 14.8825C6.22033 14.4775 6.85469 14.2575 6.85469 14.2575L20.2509 8.93561C20.2509 8.93561 21.3522 8.44496 21.3522 9.2575L18.9666 21.4406Z" fill="#3AA6EA" />
-                                        </svg> </a><a href="#" class="socials__link socials__link--vk" title="ВКонтакте"> <svg class="socials__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M18.8412 2.5H11.1719C4.16664 2.5 2.5 4.16664 2.5 11.1588V18.8281C2.5 25.8333 4.15368 27.5 11.1588 27.5H18.8281C25.8334 27.5 27.5 25.8463 27.5 18.8411V11.1719C27.5 4.16664 25.8463 2.5 18.8412 2.5ZM22.6823 20.3385H20.8594C20.1693 20.3385 19.9609 19.7786 18.724 18.5416C17.6432 17.5 17.1875 17.3698 16.9141 17.3698C16.5365 17.3698 16.4323 17.4739 16.4323 17.9948V19.6354C16.4323 20.0781 16.2891 20.3385 15.1302 20.3385C14.0057 20.263 12.9152 19.9213 11.9486 19.3418C10.982 18.7623 10.1668 17.9614 9.57031 17.0052C8.1542 15.2425 7.16888 13.1738 6.69274 10.9635C6.69274 10.6901 6.79688 10.4427 7.31774 10.4427H9.14062C9.60938 10.4427 9.77868 10.651 9.96094 11.1328C10.8463 13.7369 12.3568 16.0026 12.9688 16.0026C13.2031 16.0026 13.3073 15.8984 13.3073 15.3125V12.6302C13.2291 11.4062 12.5781 11.302 12.5781 10.8594C12.5867 10.7426 12.6404 10.6337 12.728 10.5559C12.8155 10.4781 12.9299 10.4375 13.0469 10.4427H15.9115C16.3021 10.4427 16.4323 10.638 16.4323 11.1067V14.7266C16.4323 15.1172 16.6016 15.2473 16.7188 15.2473C16.9531 15.2473 17.1354 15.1172 17.5651 14.6875C18.4884 13.5615 19.2429 12.307 19.8047 10.9635C19.862 10.8019 19.9707 10.6634 20.1142 10.5694C20.2576 10.4753 20.4279 10.4308 20.599 10.4427H22.4219C22.9688 10.4427 23.0859 10.7161 22.9688 11.1067C22.3055 12.5921 21.4848 14.0021 20.5209 15.3125C20.3256 15.6119 20.2474 15.7682 20.5209 16.1198C20.7031 16.3932 21.3412 16.927 21.7709 17.4348C22.3958 18.0583 22.9148 18.7796 23.3073 19.5703C23.4635 20.0781 23.2031 20.3385 22.6823 20.3385Z" fill="#3385E2" />
-                                        </svg> </a><a href="#" class="socials__link socials__link--max" title="Max"> <img class="socials__image" src="img/max-logo.png" width="46" height="46" alt="" loading="lazy"> </a> </div>
+            <div class="p-section p-about">
+                <div isOnlyTitle="true" class="p-about__about-section about-section section">
+                    <div class="about-section__inner">
+                        <div class="about-section__container container">
+                            <div class="about-section__row l-grid l-grid-cols-2 l-gap-10">
+                                <div class="about-section__column about-section__column--title">
+                                    <div class="about-section__subtitle subtitle">О&nbsp;бренде</div>
+                                    <h2 class="about-section__title title title--size-lg">VERTA — Движение. Действие. Развитие</h2>
+                                </div>
+                                <div class="about-section__column about-section__column--description">
+                                    <div class="about-section__text section-text">
+                                        <p><strong>VERTA&nbsp;&mdash; это российский бренд, быстро завоевывающий признание среди покупателей. Высоко ценится мастерами благодаря выгодному соотношению &quot;цена-качество</strong></p>
+                                        <p>Электроинструмент и&nbsp;оснастка к&nbsp;нему производятся в&nbsp;соответствие с&nbsp;высокими требованиями отрасли и&nbsp;по&nbsp;международным стандартам качества и&nbsp;безопасности</p>
+                                    </div> <a href="#" class="about-section__button button-more base-button base-button--secondary base-button--outlined"> <span class="base-button__inner"> <span class="base-button__content">
+                                                Читать далее
+                                            </span> <span class="base-button__icon"> <svg class="base-icon base-icon-nav">
+                                                    <use xlink:href="img/icons.svg#nav"></use>
+                                                </svg> </span> </span> </a>
+                                </div>
+                                <div class="about-section__column about-section__column--video l-grid l-gap-10">
+                                    <div class="about-section__video video"> <a href="https://www.youtube.com/watch?v=_hHwz1UWJmI&t=2s" class="video__link" data-fancybox>
+                                            <div class="video__inner">
+                                                <picture class="video__image-box">
+                                                    <source media="(max-width: 767.98px)" srcset="img/about/video-mobile.jpg 1x, img/about/video-mobile@2x.jpg">
+                                                    <source media="(max-width: 1199.98px)" srcset="img/about/video-tablet.jpg 1x, img/about/video-tablet@2x.jpg"> <img class="video__image" src="img/about/video.jpg" srcset="img/about/video@2x.jpg 2x" width="644" height="338" alt="" loading="lazy">
+                                                </picture>
+                                                <div class="video__play">
+                                                    <div class="video__play-inner">
+                                                        <div class="video__play-icon-box"> <svg class="ui-icon ui-icon-play video__play-icon">
+                                                                <use xlink:href="img/icons.svg#play"></use>
+                                                            </svg> </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                </div>
+                                <div class="about-section__column about-section__column--items">
+                                    <div class="about-section__items l-grid l-grid-cols-2 l-gap-10">
+                                        <div class="about-section__item">
+                                            <div class="about-section__item-inner">
+                                                <div class="about-section__item-image-wrapper">
+                                                    <div class="about-section__item-image-box"> <img class="about-section__item-image" src="img/about/innovation.png" srcset="img/about/innovation@2x.png" alt="" loading="lazy"> </div>
+                                                </div>
+                                                <div class="about-section__item-content">
+                                                    <div class="about-section__item-title"> Инновации </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="about-section__item">
+                                            <div class="about-section__item-inner">
+                                                <div class="about-section__item-image-wrapper">
+                                                    <div class="about-section__item-image-box"> <img class="about-section__item-image" src="img/about/quality.png" srcset="img/about/quality@2x.png" alt="" loading="lazy"> </div>
+                                                </div>
+                                                <div class="about-section__item-content">
+                                                    <div class="about-section__item-title"> Качество </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="about-section__item">
+                                            <div class="about-section__item-inner">
+                                                <div class="about-section__item-image-wrapper">
+                                                    <div class="about-section__item-image-box"> <img class="about-section__item-image" src="img/about/responsibility.png" srcset="img/about/responsibility@2x.png" alt="" loading="lazy"> </div>
+                                                </div>
+                                                <div class="about-section__item-content">
+                                                    <div class="about-section__item-title"> Ответственность </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="about-section__item">
+                                            <div class="about-section__item-inner">
+                                                <div class="about-section__item-image-wrapper">
+                                                    <div class="about-section__item-image-box"> <img class="about-section__item-image" src="img/about/availability.png" srcset="img/about/availability@2x.png" alt="" loading="lazy"> </div>
+                                                </div>
+                                                <div class="about-section__item-content">
+                                                    <div class="about-section__item-title"> Доступность </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="p-article__layout-column">
-                            <div class="p-article__description description">
-                                <h2>Новая линейка перфораторов уже в&nbsp;продаже</h2>
-                                <p>Ножовки с&nbsp;высоким TPI (10-13) подходят для работы с&nbsp;тонкими материалами, такими как фанера, ламинат, и&nbsp;обеспечивают чистый срез. С&nbsp;другой стороны, ножовки с&nbsp;низким TPI (1-4) предназначены для быстрой, но&nbsp;менее точной распиловки, например, сырого дерева. Универсальные ножовки имеют TPI в&nbsp;диапазоне 5-9 и&nbsp;подходят для большинства столярных работ</p>
-                                <h2>Новая линейка перфораторов уже в&nbsp;продаже</h2>
-                                <p>Ножовки с&nbsp;высоким TPI (10-13) подходят для работы с&nbsp;тонкими материалами, такими как фанера, ламинат, и&nbsp;обеспечивают чистый срез. С&nbsp;другой стороны, ножовки с&nbsp;низким TPI (1-4) предназначены для быстрой, но&nbsp;менее точной распиловки, например, сырого дерева. Универсальные ножовки имеют TPI в&nbsp;диапазоне 5-9 и&nbsp;подходят для большинства столярных работ</p>
-                                <h2>Новая линейка перфораторов уже в&nbsp;продаже</h2>
-                                <p>Ножовки с&nbsp;высоким TPI (10-13) подходят для работы с&nbsp;тонкими материалами, такими как фанера, ламинат, и&nbsp;обеспечивают чистый срез. С&nbsp;другой стороны, ножовки с&nbsp;низким TPI (1-4) предназначены для быстрой, но&nbsp;менее точной распиловки, например, сырого дерева. Универсальные ножовки имеют TPI в&nbsp;диапазоне 5-9 и&nbsp;подходят для большинства столярных работ</p>
+                    </div>
+                </div>
+                <div class="p-about__advantages-section advantages-section section js-advantages">
+                    <div class="advantages-section__container">
+                        <div class="advantages-section__image-wrapper">
+                            <div class="advantages-section__image-block js-advantages-image-block">
+                                <picture class="advantages-section__image-box js-advantages-image-box">
+                                    <source srcset="img/about-full-image-mobile.jpg, img/about-full-image-mobile@2x.jpg 2x" media="(max-width: 575px)"> <img class="advantages-section__image js-advantages-image" src="img/about-full-image.jpg" srcset="img/about-full-image@2x.jpg 2x" width="1920" height="1245" alt="" loading="lazy">
+                                </picture>
+                            </div>
+                        </div>
+                        <div class="advantages-section__content js-advantages-content">
+                            <div class="advantages-section__spacer"></div>
+                            <div class="advantages-section__container container">
+                                <div class="advantages-section__items">
+                                    <div class="advantages-section__item">
+                                        <div class="advantages-section__item-number"> 01/03 </div>
+                                        <div class="advantages-section__item-title">Низкие цены</div>
+                                        <div class="advantages-section__item-text">
+                                            <p>Мы&nbsp;сохраняем низкие цены благодаря прямым поставкам от&nbsp;проверенных поставщиков.</p>
+                                        </div>
+                                    </div>
+                                    <div class="advantages-section__item">
+                                        <div class="advantages-section__item-number"> 02/03 </div>
+                                        <div class="advantages-section__item-title">Гарантия качества</div>
+                                        <div class="advantages-section__item-text">
+                                            <p>В&nbsp;нашем интернет-магазине только оригинальные товары самого высокого качества.</p>
+                                        </div>
+                                    </div>
+                                    <div class="advantages-section__item">
+                                        <div class="advantages-section__item-number"> 03/03 </div>
+                                        <div class="advantages-section__item-title">Широкий ассортимент</div>
+                                        <div class="advantages-section__item-text">
+                                            <p>Всегда в&nbsp;наличии на&nbsp;складе более 6000&nbsp;товаров.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <section class="articles-section section">
-                <div class="container">
-                    <div class="articles-section__content js-articles-swiper-section">
-                        <div class="articles-section__header">
-                            <h2 class="articles-section__title title title--size-lg">Читать далее</h2> <a href="#" class="articles-section__button button-more button-more--size-sm button-more--see-all base-button base-button--default base-button--outlined base-button--size-small base-button--rounded"> <span class="base-button__inner"> <span class="base-button__content"> Смотреть всё </span> <span class="base-button__icon"> <svg class="base-icon base-icon-nav">
-                                            <use xlink:href="img/icons.svg#nav"></use>
-                                        </svg> </span> </span> </a>
+            <section class="statistics-section section js-stats-animation">
+                <div class="statistics-section__container container">
+                    <div class="statistics-section__content js-stats-animation-content" style="--numberOfItems: 3">
+                        <div class="statistics-section__wave-wrapper"> <span class="statistics-section__wave"></span> </div>
+                        <div class="statistics-section__images"> <img class="statistics-section__left-image" src="img/stats-image-first.png" srcset="img/stats-image-first@2x.png 2x" width="601" height="551" alt=""> <img class="statistics-section__right-image" src="img/stats-image-second.png" srcset="img/stats-image-second@2x.png 2x" width="243" height="237" alt=""> </div>
+                        <div class="statistics-section__scroll js-stats-animation-scroll">
+                            <div class="statistics-section__items">
+                                <div class="statistics-section__item-block">
+                                    <div class="statistics-section__item js-stats-animation-item">
+                                        <div class="statistics-section__item-number"> 6500 </div>
+                                        <div class="statistics-section__item-content">
+                                            <div class="statistics-section__item-title">SKU</div>
+                                            <div class="statistics-section__item-text">Всегда в&nbsp;наличии на&nbsp;складе</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="statistics-section__item-block">
+                                    <div class="statistics-section__item js-stats-animation-item">
+                                        <div class="statistics-section__item-number"> 12 </div>
+                                        <div class="statistics-section__item-content">
+                                            <div class="statistics-section__item-title">Лет на&nbsp;рынке</div>
+                                            <div class="statistics-section__item-text">Работаем для вас с&nbsp;2012 года</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="statistics-section__item-block">
+                                    <div class="statistics-section__item js-stats-animation-item">
+                                        <div class="statistics-section__item-number"> 100 </div>
+                                        <div class="statistics-section__item-content">
+                                            <div class="statistics-section__item-title">Брендов</div>
+                                            <div class="statistics-section__item-text">Представлено в&nbsp;магазине</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="swiper articles-section__swiper js-articles-swiper">
+                    </div>
+                </div>
+            </section>
+            <section class="history-section section">
+                <div class="history-section__container container">
+                    <div class="history-section__content js-swiper-history-section">
+                        <div class="history-section__header">
+                            <h2 class="history-section__title section-title section-title_size_md_sm">Наша история</h2>
+                        </div>
+                        <div class="swiper history-section__swiper js-swiper-history">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/news/1.jpg" srcset="img/news/1@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__head">
-                                                    <div class="article-item__date"> 15 февраля 2021 </div>
-                                                </div>
-                                                <div class="article-item__title">Расширяем границы - новый филиал в Москве</div>
-                                            </div>
-                                        </a> </div>
+                                <div class="swiper-slide history-section__swiper-item">
+                                    <div class="history-section__item">
+                                        <div class="history-section__item-year"> 2011 </div>
+                                        <div class="history-section__item-image-box"> <img class="history-section__item-image" src="img/history/1.jpg" srcset="img/history/1.jpg" width="486" height="360" alt="" loading="lazy"> </div>
+                                        <div class="history-section__item-title">
+                                            Зарождение компании
+                                        </div>
+                                        <div class="history-section__item-text">
+                                            <p>Самый первый заказ начинающие предприниматели приняли прямо в&nbsp;аудитории института во&nbsp;время лекции по&nbsp;квантовой физике. Поступил звонок на&nbsp;мобильный телефон от&nbsp;клиента, который заказал шуруповерт Makita.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/news/2.jpg" srcset="img/news/2@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__head">
-                                                    <div class="article-item__date"> 15 февраля 2021 </div>
-                                                </div>
-                                                <div class="article-item__title">Обновляем конкурс на самых креативных строителей</div>
-                                            </div>
-                                        </a> </div>
+                                <div class="swiper-slide history-section__swiper-item">
+                                    <div class="history-section__item">
+                                        <div class="history-section__item-year"> 2012 </div>
+                                        <div class="history-section__item-image-box"> <img class="history-section__item-image" src="img/history/1.jpg" srcset="img/history/1.jpg" width="486" height="360" alt="" loading="lazy"> </div>
+                                        <div class="history-section__item-title">
+                                            Зарождение компании
+                                        </div>
+                                        <div class="history-section__item-text">
+                                            <p>Самый первый заказ начинающие предприниматели приняли прямо в&nbsp;аудитории института во&nbsp;время лекции по&nbsp;квантовой физике. Поступил звонок на&nbsp;мобильный телефон от&nbsp;клиента, который заказал шуруповерт Makita.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/news/3.jpg" srcset="img/news/3@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__head">
-                                                    <div class="article-item__date"> 15 февраля 2021 </div>
-                                                </div>
-                                                <div class="article-item__title">Новая линейка перфораторов уже в продаже</div>
-                                            </div>
-                                        </a> </div>
+                                <div class="swiper-slide history-section__swiper-item">
+                                    <div class="history-section__item">
+                                        <div class="history-section__item-year"> 2013 </div>
+                                        <div class="history-section__item-image-box"> <img class="history-section__item-image" src="img/history/1.jpg" srcset="img/history/1.jpg" width="486" height="360" alt="" loading="lazy"> </div>
+                                        <div class="history-section__item-title">
+                                            Зарождение компании
+                                        </div>
+                                        <div class="history-section__item-text">
+                                            <p>Самый первый заказ начинающие предприниматели приняли прямо в&nbsp;аудитории института во&nbsp;время лекции по&nbsp;квантовой физике. Поступил звонок на&nbsp;мобильный телефон от&nbsp;клиента, который заказал шуруповерт Makita.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/news/1.jpg" srcset="img/news/1@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__head">
-                                                    <div class="article-item__date"> 15 февраля 2021 </div>
-                                                </div>
-                                                <div class="article-item__title">Расширяем границы - новый филиал в Москве</div>
-                                            </div>
-                                        </a> </div>
+                                <div class="swiper-slide history-section__swiper-item">
+                                    <div class="history-section__item">
+                                        <div class="history-section__item-year"> 2014 </div>
+                                        <div class="history-section__item-image-box"> <img class="history-section__item-image" src="img/history/1.jpg" srcset="img/history/1.jpg" width="486" height="360" alt="" loading="lazy"> </div>
+                                        <div class="history-section__item-title">
+                                            Зарождение компании
+                                        </div>
+                                        <div class="history-section__item-text">
+                                            <p>Самый первый заказ начинающие предприниматели приняли прямо в&nbsp;аудитории института во&nbsp;время лекции по&nbsp;квантовой физике. Поступил звонок на&nbsp;мобильный телефон от&nbsp;клиента, который заказал шуруповерт Makita.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/news/2.jpg" srcset="img/news/2@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__head">
-                                                    <div class="article-item__date"> 15 февраля 2021 </div>
-                                                </div>
-                                                <div class="article-item__title">Обновляем конкурс на самых креативных строителей</div>
-                                            </div>
-                                        </a> </div>
+                                <div class="swiper-slide history-section__swiper-item">
+                                    <div class="history-section__item">
+                                        <div class="history-section__item-year"> 2015 </div>
+                                        <div class="history-section__item-image-box"> <img class="history-section__item-image" src="img/history/1.jpg" srcset="img/history/1.jpg" width="486" height="360" alt="" loading="lazy"> </div>
+                                        <div class="history-section__item-title">
+                                            Зарождение компании
+                                        </div>
+                                        <div class="history-section__item-text">
+                                            <p>Самый первый заказ начинающие предприниматели приняли прямо в&nbsp;аудитории института во&nbsp;время лекции по&nbsp;квантовой физике. Поступил звонок на&nbsp;мобильный телефон от&nbsp;клиента, который заказал шуруповерт Makita.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/news/3.jpg" srcset="img/news/3@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__head">
-                                                    <div class="article-item__date"> 15 февраля 2021 </div>
-                                                </div>
-                                                <div class="article-item__title">Новая линейка перфораторов уже в продаже</div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/news/1.jpg" srcset="img/news/1@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__head">
-                                                    <div class="article-item__date"> 15 февраля 2021 </div>
-                                                </div>
-                                                <div class="article-item__title">Расширяем границы - новый филиал в Москве</div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/news/2.jpg" srcset="img/news/2@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__head">
-                                                    <div class="article-item__date"> 15 февраля 2021 </div>
-                                                </div>
-                                                <div class="article-item__title">Обновляем конкурс на самых креативных строителей</div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/news/3.jpg" srcset="img/news/3@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__head">
-                                                    <div class="article-item__date"> 15 февраля 2021 </div>
-                                                </div>
-                                                <div class="article-item__title">Новая линейка перфораторов уже в продаже</div>
-                                            </div>
-                                        </a> </div>
+                                <div class="swiper-slide history-section__swiper-item">
+                                    <div class="history-section__item">
+                                        <div class="history-section__item-year"> 2016 </div>
+                                        <div class="history-section__item-image-box"> <img class="history-section__item-image" src="img/history/1.jpg" srcset="img/history/1.jpg" width="486" height="360" alt="" loading="lazy"> </div>
+                                        <div class="history-section__item-title">
+                                            Зарождение компании
+                                        </div>
+                                        <div class="history-section__item-text">
+                                            <p>Самый первый заказ начинающие предприниматели приняли прямо в&nbsp;аудитории института во&nbsp;время лекции по&nbsp;квантовой физике. Поступил звонок на&nbsp;мобильный телефон от&nbsp;клиента, который заказал шуруповерт Makita.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="articles-section__swiper-footer swiper-footer">
-                                <div class="articles-section__swiper-scrollbar-wrapper swiper-scrollbar-wrapper">
-                                    <div class="articles-section__swiper-scrollbar swiper-scrollbar js-articles-swiper-scrollbar"></div>
-                                </div>
-                                <div class="articles-section__swiper-control swiper-control u-hidden-mobile-sm"> <button type="button" class="articles-section__swiper-prev js-articles-swiper-prev swiper-button-prev"> <svg width="29" height="30" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 6L21 15L12 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg> </button> <button type="button" class="articles-section__swiper-next js-articles-swiper-next swiper-button-next"> <svg width="29" height="30" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 6L21 15L12 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg> </button> </div>
-                            </div>
+                            <div class="history-section__swiper-control swiper-control"> <button type="button" class="history-section__slider-prev js-swiper-history-prev swiper-button-prev" style="white"> <svg width="29" height="30" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 6L21 15L12 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg> </button> <button type="button" class="history-section__slider-next js-swiper-history-next swiper-button-next" style="white"> <svg width="29" height="30" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 6L21 15L12 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg> </button> </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="request-section section">
-                <div class="request-section__container container">
-                    <div class="request-section__wrapper">
-                        <div class="request-section__image-wrapper u-hidden-mobile">
-                            <div class="request-section__image-box"> <img class="request-section__image" src="img/request/request.png" srcset="img/request/request@2x.png 2x" alt="" loading="lazy" width="496" height="743"> </div>
+            <section class="video-section section">
+                <div class="container">
+                    <div class="video-section__video video video--size-lg"> <a href="https://www.youtube.com/watch?v=_hHwz1UWJmI&t=2s" class="video__link" data-fancybox>
+                            <div class="video__inner">
+                                <picture class="video__image-box"> <img class="video__image" src="img/video.jpg" srcset="img/video@2x.jpg 2x" width="644" height="338" alt="" loading="lazy"> </picture>
+                                <div class="video__play">
+                                    <div class="video__play-inner">
+                                        <div class="video__play-icon-box"> <svg class="ui-icon ui-icon-play video__play-icon">
+                                                <use xlink:href="img/icons.svg#play"></use>
+                                            </svg> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </a> </div>
+                </div>
+            </section>
+            <section class="brands-section section brands-section_style_white">
+                <div class="brands-section__container container">
+                    <div class="brands-section__content js-swiper-brands-section ">
+                        <div class="brands-section__heading">
+                            <h2 class="brands-section__title section-title">Бренды</h2> <a href class="ui-button ui-button_is-circle brands-section__button u-hidden-mobile"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                        <use xlink:href="img/icons.svg#arrow"></use>
+                                    </svg> </span><span class="ui-button__text"> Смотреть все </span> </a>
                         </div>
-                        <div class="request-section__content">
-                            <h2 class="request-section__title title">Оформите заявку на сайте</h2>
-                            <div class="request-section__text section-text">
-                                <p>Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время и&nbsp;ответим на&nbsp;все интересующие вопросы</p>
-                            </div> <button type="button" data-modal-open="#order-modal" class="request-section__button base-button base-button--secondary"> <span class="base-button__inner"> <span class="base-button__content">
-                                        Задать вопрос
-                                    </span> </span> </button>
-                        </div>
+                        <div class="brands-section__items l-flex js-masonry-grid">
+                            <div class="brands-section__item js-masonry-grid-item">
+                                <div class="brands-section__brand-item brand-item">
+                                    <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                            <div class="brand-item__content">
+                                                <div class="brand-item__head">
+                                                    <div class="brand-item__tag">Собственная марка</div>
+                                                </div>
+                                                <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/sibrtec.png" srcset="img/brands/sibrtec@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="brand-item__hidden-content">
+                                                <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/sibrtec.png" srcset="img/brands/sibrtec@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                <div class="brand-item__text">
+                                                    <p>Японский бренд, выпускающий различный электроинструмент и&nbsp;садовую технику. Сейчас компания является абсолютным лидером в&nbsp;данной сфере, регулярно выдает различные новинки.</p>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                </div>
+                            </div>
+                            <div class="brands-section__item js-masonry-grid-item">
+                                <div class="brands-section__brand-item brand-item brand-item_size_md">
+                                    <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                            <div class="brand-item__content">
+                                                <div class="brand-item__head">
+                                                    <div class="brand-item__tag brand-item__tag_popular">Популярный бренд</div>
+                                                </div>
+                                                <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/denzel.png" srcset="img/brands/denzel@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="brand-item__hidden-content">
+                                                <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/denzel.png" srcset="img/brands/denzel@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                <div class="brand-item__text">
+                                                    <p>Японский бренд, выпускающий различный электроинструмент и&nbsp;садовую технику. Сейчас компания является абсолютным лидером в&nbsp;данной сфере, регулярно выдает различные новинки.</p>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                </div>
+                            </div>
+                            <div class="brands-section__item js-masonry-grid-item">
+                                <div class="brands-section__brand-item brand-item brand-item_size_lg">
+                                    <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                            <div class="brand-item__content">
+                                                <div class="brand-item__head">
+                                                    <div class="brand-item__tag brand-item__tag_popular">Популярный бренд</div>
+                                                </div>
+                                                <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/makita.png" srcset="img/brands/makita@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="brand-item__hidden-content">
+                                                <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/makita.png" srcset="img/brands/makita@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                <div class="brand-item__text">
+                                                    <p>Японский бренд, выпускающий различный электроинструмент и&nbsp;садовую технику. Сейчас компания является абсолютным лидером в&nbsp;данной сфере, регулярно выдает различные новинки.</p>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                </div>
+                            </div>
+                            <div class="brands-section__item js-masonry-grid-item">
+                                <div class="brands-section__brand-item brand-item brand-item_size_md">
+                                    <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                            <div class="brand-item__content">
+                                                <div class="brand-item__head">
+                                                    <div class="brand-item__tag brand-item__tag_popular">Популярный бренд</div>
+                                                </div>
+                                                <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/matrix.png" srcset="img/brands/matrix@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="brand-item__hidden-content">
+                                                <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/matrix.png" srcset="img/brands/matrix@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                <div class="brand-item__text">
+                                                    <p>Японский бренд, выпускающий различный электроинструмент и&nbsp;садовую технику. Сейчас компания является абсолютным лидером в&nbsp;данной сфере, регулярно выдает различные новинки.</p>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                </div>
+                            </div>
+                            <div class="brands-section__item js-masonry-grid-item">
+                                <div class="brands-section__brand-item brand-item">
+                                    <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                            <div class="brand-item__content">
+                                                <div class="brand-item__head">
+                                                    <div class="brand-item__tag">Собственная марка</div>
+                                                </div>
+                                                <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/kronwerk.png" srcset="img/brands/kronwerk@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="brand-item__hidden-content">
+                                                <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/kronwerk.png" srcset="img/brands/kronwerk@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                <div class="brand-item__text">
+                                                    <p>Японский бренд, выпускающий различный электроинструмент и&nbsp;садовую технику. Сейчас компания является абсолютным лидером в&nbsp;данной сфере, регулярно выдает различные новинки.</p>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                </div>
+                            </div>
+                            <div class="brands-section__item js-masonry-grid-item">
+                                <div class="brands-section__brand-item brand-item brand-item_size_lg">
+                                    <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                            <div class="brand-item__content">
+                                                <div class="brand-item__head">
+                                                    <div class="brand-item__tag brand-item__tag_popular">Популярный бренд</div>
+                                                </div>
+                                                <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/palisad.png" srcset="img/brands/palisad@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="brand-item__hidden-content">
+                                                <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/palisad.png" srcset="img/brands/palisad@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                <div class="brand-item__text">
+                                                    <p>Японский бренд, выпускающий различный электроинструмент и&nbsp;садовую технику. Сейчас компания является абсолютным лидером в&nbsp;данной сфере, регулярно выдает различные новинки.</p>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                </div>
+                            </div>
+                            <div class="brands-section__item js-masonry-grid-item">
+                                <div class="brands-section__brand-item brand-item brand-item_size_lg">
+                                    <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                            <div class="brand-item__content">
+                                                <div class="brand-item__head">
+                                                    <div class="brand-item__tag brand-item__tag_popular">Популярный бренд</div>
+                                                </div>
+                                                <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/sparta.png" srcset="img/brands/sparta@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="brand-item__hidden-content">
+                                                <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/sparta.png" srcset="img/brands/sparta@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                <div class="brand-item__text">
+                                                    <p>Японский бренд, выпускающий различный электроинструмент и&nbsp;садовую технику. Сейчас компания является абсолютным лидером в&nbsp;данной сфере, регулярно выдает различные новинки.</p>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                </div>
+                            </div>
+                            <div class="brands-section__item js-masonry-grid-item">
+                                <div class="brands-section__brand-item brand-item brand-item_size_lg">
+                                    <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                            <div class="brand-item__content">
+                                                <div class="brand-item__head">
+                                                    <div class="brand-item__tag brand-item__tag_popular">Популярный бренд</div>
+                                                </div>
+                                                <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/stern.png" srcset="img/brands/stern@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="brand-item__hidden-content">
+                                                <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/stern.png" srcset="img/brands/stern@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                <div class="brand-item__text">
+                                                    <p>Японский бренд, выпускающий различный электроинструмент и&nbsp;садовую технику. Сейчас компания является абсолютным лидером в&nbsp;данной сфере, регулярно выдает различные новинки.</p>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                </div>
+                            </div>
+                            <div class="brands-section__item js-masonry-grid-item">
+                                <div class="brands-section__brand-item brand-item">
+                                    <div class="brand-item__inner"> <a href="#" class="brand-item__link">
+                                            <div class="brand-item__content">
+                                                <div class="brand-item__head">
+                                                    <div class="brand-item__tag">Собственная марка</div>
+                                                </div>
+                                                <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/gross.png" srcset="img/brands/gross@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="brand-item__hidden-content">
+                                                <div class="brand-item__logo"> <img class="brand-item__logo-image" src="img/brands/gross.png" srcset="img/brands/gross@2x.png 2x" width="360" height="180" alt="" loading="lazy"> </div>
+                                                <div class="brand-item__text">
+                                                    <p>Японский бренд, выпускающий различный электроинструмент и&nbsp;садовую технику. Сейчас компания является абсолютным лидером в&nbsp;данной сфере, регулярно выдает различные новинки.</p>
+                                                </div>
+                                            </div>
+                                        </a> </div>
+                                </div>
+                            </div>
+                        </div> <a href class="ui-button ui-button_fill ui-button_is-circle brands-section__button brands-section__button_bottom u-visible-mobile"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                </svg> </span><span class="ui-button__text">
+                                Смотреть все </span> </a>
                     </div>
                 </div>
             </section>
-            <section class="brand-section section">
-                <div class="brand-section__inner">
-                    <div class="brand-section__container container">
-                        <div class="brand-section__row">
-                            <div class="brand-section__logo"> <img class="brand-section__logo-image" src="img/logo.svg" width="208" height="54" alt="Verta"> </div>
-                            <div class="brand-section__title title">Движение. Действие. Развитие</div>
+            <section class="cooperation-section section">
+                <div class="cooperation-section__container container">
+                    <div class="cooperation-section__box">
+                        <div class="cooperation-section__image-box">
+                            <picture class="cooperation-section__picture">
+                                <source media="(max-width: 575px)" srcset="img/cooperation-banner/cooperation-banner-575.jpg 1x, img/cooperation-banner/cooperation-banner-575@2x.jpg 2x">
+                                <source media="(max-width: 1024px)" srcset="img/cooperation-banner/cooperation-banner-1024.jpg 1x, img/cooperation-banner/cooperation-banner-1024@2x.jpg 2x"> <img alt="" class="cooperation-section__image" src="img/cooperation-banner/cooperation-banner.jpg" srcset="img/cooperation-banner/cooperation-banner@2x.jpg 2x" width="1920" height="1080" loading="lazy">
+                            </picture>
+                        </div>
+                        <div class="cooperation-section__content">
+                            <h2 class="cooperation-section__subtitle">
+                                Сотрудничество
+                            </h2>
+                            <div class="cooperation-section__title section-title">
+                                <p>Компания CSK нацелена на&nbsp;долгосрочное сотрудничество</p>
+                            </div>
+                            <div class="cooperation-section__buttons"> <button type="button" data-modal-open="#modal-callback" class="ui-button ui-button_style_white ui-button_is-circle cooperation-section__button"><span class="ui-button__circle"> <svg class="ui-icon ui-icon-arrow ui-button__icon">
+                                            <use xlink:href="img/icons.svg#arrow"></use>
+                                        </svg> </span><span class="ui-button__text"> Связаться с&nbsp;нами </span> </button> </div>
                         </div>
                     </div>
                 </div>
@@ -568,7 +835,7 @@
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-sqaypo6hw"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-sqaypo6hw" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-dtwh8925d"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-dtwh8925d" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
@@ -576,14 +843,14 @@
                                     <div class="form__column">
                                         <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-2c2n6qrvt"> <span>Номер телефона</span> </label> <input id="base-text-field-2c2n6qrvt" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-7xvq68819"> <span>Номер телефона</span> </label> <input id="base-text-field-7xvq68819" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-dmq99d3g9"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-dmq99d3g9" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-nnzbydi37"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-nnzbydi37" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
@@ -591,14 +858,14 @@
                                     <div class="form__column">
                                         <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-z69kn7u23"> <span>Интересующий товар/услуга</span> </label> <input id="base-text-field-z69kn7u23" type="text" name="email" value class="base-text-field__input js-base-text-field-input"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-4ynxwedli"> <span>Интересующий товар/услуга</span> </label> <input id="base-text-field-4ynxwedli" type="text" name="email" value class="base-text-field__input js-base-text-field-input"> </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--textarea base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-pb6lj8xek"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-pb6lj8xek" name="message" rows="5" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-610djbodf"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-610djbodf" name="message" rows="5" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
