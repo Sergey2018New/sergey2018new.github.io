@@ -84,17 +84,17 @@ const validateForm = (formEl) => {
                     ];
                 }
 
-                if (field.classList.contains('js-validate-field-phone')) {
-                    fieldOptions = [
-                        defaultFieldOptions,
-                        phoneFieldOptions
-                    ];
+                // if (field.classList.contains('js-validate-field-phone')) {
+                //     fieldOptions = [
+                //         defaultFieldOptions,
+                //         phoneFieldOptions
+                //     ];
 
-                    IMask(field, {
-                        mask: '+{7} (000) 000-00-00',
-                        // lazy: false,
-                    });
-                }
+                //     IMask(field, {
+                //         mask: '+{7} (000) 000-00-00',
+                //         // lazy: false,
+                //     });
+                // }
 
                 const container = field.closest('.js-validate-field-wrapper')?.querySelector('.js-validate-field-error');
                 validate.addField(field, fieldOptions, {

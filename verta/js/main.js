@@ -235,6 +235,22 @@ const t$8=(n,t)=>{a$7(l$7(n)).forEach((r=>{t$d(r,n.class_error),b$4(r);})),t.upd
 
 const g=function(o,s){const e=t$g(o);this._settings=e,this.loadingCount=0,a$8(e,this),m$2(e,this),this.update(s);};g.prototype={update:function(t){const o=this._settings,s=i$8(t,o);n$e(this,s.length),i$e?this.loadAll(s):r$6(o)?a$9(s,o,this):i$9(this._observer,s);},destroy:function(){this._observer&&this._observer.disconnect(),s$a(this),l$7(this._settings).forEach((t=>{m$4(t);})),delete this._observer,delete this._settings,delete this._onlineHandler,delete this.loadingCount,delete this.toLoadCount;},loadAll:function(t){const o=this._settings;i$8(t,o).forEach((t=>{e$b(t,this),n$d(t,o,this);}));},restoreAll:function(){const t=this._settings;l$7(t).forEach((o=>{I$1(o,t);}));}},g.load=(o,i)=>{const e=t$g(i);n$d(o,e);},g.resetStatus=t=>{b$4(t);},e$g&&e$f(g,window.lazyLoadOptions);
 
+function deviceType() {
+  const ua = navigator.userAgent;
+
+  // Планшеты
+  if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
+    return "tablet";
+  }
+
+  // Мобильные телефоны
+  if (/Mobile|Android|iP(hone|od)|IEMobile|BlackBerry|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(ua)) {
+    return "mobile";
+  }
+
+  return "desktop";
+}
+
 function initCheckboxes() {
    // Функция, которая синхронизирует is-checked с input
 
@@ -764,7 +780,7 @@ function initTabs(rootEl) {
                     targetSwitch = target.closest('.js-tabs-switch');
                 }
 
-                const tabsSwitch = document.querySelector(`[data-tabs="${targetSwitch.getAttribute('data-tabs-switch')}"]`);
+                const tabsSwitch = document.querySelector(`.js-tabs[data-tabs="${targetSwitch.getAttribute('data-tabs-switch')}"]`);
 
                 if (tabsSwitch) {
                     const tabsPrev = tabsSwitch.querySelector('.js-tabs-prev');
@@ -10785,10 +10801,10 @@ function initSwiper() {
                 if (productThumbsSwiperEl) {
                     const direction = productThumbsSwiperEl.getAttribute('data-direction') || 'vertical';
                     productThumbsSwiper = new Swiper(productThumbsSwiperEl, {
-                        direction: direction,
-                        modules: [Navigation, EffectFade, Thumb, Mousewheel],
+                        direction: 'horizontal',
+                        modules: [Navigation, Thumb, Mousewheel],
                         speed: 300,
-                        slidesPerView: 'auto',
+                        slidesPerView: 4,
                         spaceBetween: 10,
                         mousewheel: true,
                         loop: false,
@@ -10796,36 +10812,68 @@ function initSwiper() {
                             prevEl: '.js-product-slider-thumbs-prev',
                             nextEl: '.js-product-slider-thumbs-next',
                         },
+                        breakpoints: {
+                            576: {
+                                slidesPerView: 6,
+                                direction: 'horizontal',
+                            },
+                            768: {
+                                slidesPerView: 'auto',
+
+                                direction: direction,
+                            },
+                        },
+                    });
+
+                    productThumbsSwiperEl.addEventListener('click', (event) => {
+                        const {target} = event;
+
+                        const swiperSlideVisible = target.closest('.swiper-slide-visible');
+                        const prevSlide = swiperSlideVisible?.previousElementSibling;
+                        const nextSlide = swiperSlideVisible?.nextElementSibling;
+
+                        if (swiperSlideVisible) {
+                            if (prevSlide && !prevSlide.classList.contains('swiper-slide-visible')) {
+
+                                productThumbsSwiper.slidePrev();
+                            }
+
+                            if (nextSlide && !nextSlide.classList.contains('swiper-slide-visible')) {
+
+                                productThumbsSwiper.slideNext();
+
+                                if (window.innerWidth >= 575 && window.innerWidth <= 767) {
+                                    productThumbsSwiper.slideNext();
+
+                                }
+                            }
+                        }
                     });
                 }
 
                 new Swiper(productSliderSwiperEl, {
-                    modules: [Navigation, EffectFade, Pagination, Thumb],
-                    effect: 'fade',
-                    fadeEffect: {
-                        crossFade: true
-                    },
+                    modules: [Navigation, Thumb],
+                    // effect: 'fade',
+                    // fadeEffect: {
+                    //     crossFade: true
+                    // },
                     speed: 300,
                     slidesPerView: 1,
-                    spaceBetween: 0,
+                    spaceBetween: 22,
                     loop: false,
                     navigation: {
                         prevEl: '.js-product-slider-prev',
                         nextEl: '.js-product-slider-next',
-                    },
-                    pagination: {
-                        el: '.js-product-slider-pagination',
-                        clickable: true,
                     },
                     thumbs: {
                         swiper: productThumbsSwiper || null,
                     },
                     on: {
                         init: function (swiper) {
-                            preloadNext(swiper, 0);
+                            // preloadNext(swiper, 0);
                         },
                         slideChange: function (swiper) {
-                            preloadNext(swiper, 0);
+                            // preloadNext(swiper, 0);
                         },
                       },
                 });
@@ -11131,6 +11179,294 @@ function initSticky() {
             });
         });
     }
+}
+
+/**
+ * Плавная прокрутка к элементу или позиции
+ * @param {Element|Window|Document} target - Целевой элемент
+ * @param {Object} options - Опции прокрутки
+ * @param {number} options.duration - Длительность анимации в мс (по умолчанию 500)
+ * @param {number} options.offset - Смещение от цели в px (по умолчанию 0)
+ * @param {string} options.easing - Тип easing функции ('linear', 'easeInOut', 'easeOutCubic')
+ * @param {Function} options.onComplete - Callback после завершения
+ * @param {number} options.onCompleteDelay - Задержка callback в мс
+ * @returns {Promise} Промис для отслеживания завершения
+ */
+function scrollTo(target, options = {}) {
+    const {
+        duration = 500,
+        offset = 0,
+        easing = 'easeInOut',
+        onComplete = null,
+        onCompleteDelay = 0
+    } = options;
+
+    // Отмена предыдущей анимации
+    if (window.__scrollAnimationFrame) {
+        cancelAnimationFrame(window.__scrollAnimationFrame);
+    }
+
+    // Определение целевой позиции
+    let targetY;
+
+    if (target instanceof Element) {
+        const rect = target.getBoundingClientRect();
+        targetY = window.scrollY + rect.top - offset;
+    } else if (target === window || target === document || typeof target === 'number') {
+        targetY = typeof target === 'number' ? target : 0;
+    } else {
+        return Promise.reject(new Error("Invalid target. Use element, window, document, or number."));
+    }
+
+    const startY = window.scrollY;
+    const diff = targetY - startY;
+
+    // Если разница маленькая, просто прыгаем
+    if (Math.abs(diff) < 1) {
+        window.scrollTo(0, targetY);
+        onComplete?.();
+        return Promise.resolve();
+    }
+
+    // Easing функции
+    const easings = {
+        linear: t => t,
+        easeInOut: t => t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2,
+        easeOutCubic: t => 1 - Math.pow(1 - t, 3),
+        easeInCubic: t => t * t * t
+    };
+
+    const easingFn = easings[easing] || easings.easeInOut;
+
+    let startTime = null;
+
+    return new Promise((resolve) => {
+        function animate(currentTime) {
+            if (!startTime) startTime = currentTime;
+
+            const elapsed = currentTime - startTime;
+            const rawProgress = Math.min(1, elapsed / duration);
+            const easedProgress = easingFn(rawProgress);
+
+            window.scrollTo(0, startY + diff * easedProgress);
+
+            if (elapsed < duration) {
+                window.__scrollAnimationFrame = requestAnimationFrame(animate);
+            } else {
+                // Финальная коррекция
+                window.scrollTo(0, targetY);
+
+                // Callback с задержкой
+                if (onComplete) {
+                    if (onCompleteDelay > 0) {
+                        setTimeout(() => {
+                            onComplete();
+                            resolve();
+                        }, onCompleteDelay);
+                    } else {
+                        onComplete();
+                        resolve();
+                    }
+                } else {
+                    resolve();
+                }
+            }
+        }
+
+        window.__scrollAnimationFrame = requestAnimationFrame(animate);
+    });
+}
+
+/**
+ * Инициализирует обработчики кликов для элементов .js-scroll-to
+ * @param {Object} options - опции для прокрутки (передаются в scrollTo)
+ * @param {HTMLElement|Document|string} [container] - контейнер для поиска элементов (по умолчанию document)
+ * @param {Object} observerOptions - опции для MutationObserver
+ * @returns {Object} объект с методом destroy для очистки
+ */
+function initScrollToHandler(options = {}, container = document, observerOptions = {}) {
+    // Получаем контейнер, если передан селектор
+    const context = container instanceof HTMLElement
+        ? container
+        : (typeof container === 'string'
+            ? document.querySelector(container)
+            : document);
+
+    if (!context) {
+        console.error('Container not found:', container);
+        return {
+            destroy: () => {} // пустая функция для предотвращения ошибок
+        };
+    }
+
+    // Обработчик клика с делегированием
+    const clickHandler = (e) => {
+        const button = e.target.closest('.js-scroll-to');
+        if (!button) return;
+
+        e.preventDefault();
+
+        const targetSelector = button.dataset.goto;
+        if (!targetSelector) {
+            console.warn('data-goto attribute is missing on element:', button);
+            return;
+        }
+
+        // Определяем целевой элемент
+        let targetElement;
+
+        if (targetSelector.startsWith('#')) {
+            targetElement = document.getElementById(targetSelector.slice(1));
+        } else {
+            targetElement = document.querySelector(targetSelector);
+        }
+
+        if (!targetElement) {
+            console.warn(`Target element not found: ${targetSelector}`);
+            return;
+        }
+
+        // Получаем индивидуальные опции из data-атрибутов кнопки
+        const buttonOptions = {
+            ...options,
+            duration: button.dataset.duration
+                ? parseInt(button.dataset.duration, 10)
+                : options.duration,
+            offset: button.dataset.offset
+                ? parseInt(button.dataset.offset, 10)
+                : options.offset,
+            easing: button.dataset.easing || options.easing,
+            onCompleteDelay: button.dataset.onCompleteDelay
+                ? parseInt(button.dataset.onCompleteDelay, 10)
+                : options.onCompleteDelay
+        };
+
+        // Создаем колбэк из data-атрибута если есть
+        let onComplete = options.onComplete;
+        if (button.dataset.onComplete && typeof window[button.dataset.onComplete] === 'function') {
+            onComplete = window[button.dataset.onComplete].bind(button);
+        }
+
+        // Вызываем прокрутку
+        scrollTo(targetElement, {
+            ...buttonOptions,
+            onComplete
+        }).catch(error => {
+            console.error('Scroll failed:', error);
+        });
+    };
+
+    // Добавляем обработчик на контейнер (делегирование)
+    context.addEventListener('click', clickHandler);
+
+    // Настройки MutationObserver по умолчанию
+    const defaultObserverOptions = {
+        childList: true,
+        subtree: true,
+        attributes: false,
+        characterData: false,
+        ...observerOptions
+    };
+
+    // Создаем MutationObserver для отслеживания новых элементов .js-scroll-to
+    const observer = new MutationObserver((mutations) => {
+        let hasNewScrollButtons = false;
+
+        for (const mutation of mutations) {
+            if (mutation.type === 'childList' && mutation.addedNodes.length > 0) {
+                // Проверяем добавленные узлы
+                for (const node of mutation.addedNodes) {
+                    if (node.nodeType === 1) { // Element node
+                        // Проверяем сам элемент
+                        if (node.classList && node.classList.contains('js-scroll-to')) {
+                            hasNewScrollButtons = true;
+                            break;
+                        }
+                        // Проверяем дочерние элементы
+                        if (node.querySelectorAll) {
+                            const nestedButtons = node.querySelectorAll('.js-scroll-to');
+                            if (nestedButtons.length > 0) {
+                                hasNewScrollButtons = true;
+                                break;
+                            }
+                        }
+                    }
+                }
+            }
+
+            if (hasNewScrollButtons) break;
+        }
+
+        if (hasNewScrollButtons) {
+            // Можно вызвать колбэк если нужно
+            if (options.onNewElementsAdded) {
+                options.onNewElementsAdded();
+            }
+
+            // Логирование для отладки
+            if (options.debug) {
+                console.log('New .js-scroll-to elements detected');
+            }
+        }
+    });
+
+    // Запускаем наблюдение
+    observer.observe(context, defaultObserverOptions);
+
+    // Дополнительно: обрабатываем динамическую загрузку через History API (SPA)
+    const handleHistoryChange = () => {
+        // Перепроверяем наличие элементов после навигации в SPA
+        if (options.debug) {
+            console.log('History changed, scroll handler still active');
+        }
+    };
+
+    window.addEventListener('popstate', handleHistoryChange);
+
+    // Для SPA на основе pushState
+    const originalPushState = history.pushState;
+    history.pushState = function() {
+        originalPushState.apply(this, arguments);
+        handleHistoryChange();
+    };
+
+    // Функция для полной очистки
+    function destroy() {
+        context.removeEventListener('click', clickHandler);
+        observer.disconnect();
+        window.removeEventListener('popstate', handleHistoryChange);
+
+        // Восстанавливаем оригинальный pushState если он был изменен
+        if (history.pushState !== originalPushState) {
+            history.pushState = originalPushState;
+        }
+    }
+
+    // Возвращаем объект с методами управления
+    return {
+        destroy,
+
+        // Метод для принудительной переинициализации
+        reinit: () => {
+            destroy();
+            return initScrollToHandler(options, container, observerOptions);
+        },
+
+        // Метод для проверки статуса
+        isActive: () => {
+            return observer && !!context;
+        },
+
+        // Метод для временной приостановки
+        pause: () => {
+            observer.disconnect();
+        },
+
+        // Метод для возобновления
+        resume: () => {
+            observer.observe(context, defaultObserverOptions);
+        }
+    };
 }
 
 function setVariables() {
@@ -12092,6 +12428,26 @@ function initFilters() {
         }
     });
 
+    document.addEventListener('change', (event) => {
+        const { target } = event;
+
+        if (target.classList.contains('js-filters-checkbox')
+        ) {
+            const showButton = document.querySelector('.js-filters-show-button');
+
+            if (showButton) {
+                const rect = target.getBoundingClientRect();
+                const top = rect.top + window.scrollY;
+                const height = target.offsetHeight;
+                const filters = document.querySelector('.js-filters-sidebar');
+                const filtersPosTop = filters ? (filters.getBoundingClientRect().top + window.scrollY) : 0;
+
+                showButton.classList.add('is-active');
+                showButton.style.top = `${top - filtersPosTop + (height / 2)}px`;
+            }
+        }
+    });
+
     document.addEventListener('keydown', (e) => {
         if ((e.code === 'Escape' || e.key === 'Escape') && isFiltersOpen) {
             closeFilters();
@@ -12102,6 +12458,33 @@ function initFilters() {
 
             if (filtersContent) {
                 focusCatcher(e, filtersContent);
+            }
+        }
+    });
+}
+
+function initViewItems() {
+    document.addEventListener('click', (event) => {
+        const { target } = event;
+        const viewButton = target.classList.contains('js-view-button') ? target : target.closest('.js-view-button');
+
+        if (viewButton) {
+            const viewButtonsEl = viewButton.closest('.js-view-buttons');
+
+            if (viewButtonsEl) {
+                const viewButtonsActive = viewButtonsEl.querySelector('.js-view-button.is-active');
+                const viewItems = document.querySelector('.js-view-items');
+                const view = viewButton.getAttribute('data-view');
+
+                if (viewItems) {
+                    if (viewButtonsActive) {
+                        viewButtonsActive.classList.remove('is-active');
+                    }
+
+                    viewItems.classList.remove('is-grid', 'is-list');
+                    viewItems.classList.add(`is-${view}`);
+                    viewButton.classList.add('is-active');
+                }
             }
         }
     });
@@ -12148,6 +12531,11 @@ document.addEventListener('DOMContentLoaded', () => {
     initSwiper();
     initFancybox();
     initSticky();
+    initScrollToHandler({
+        offset: 20
+    });
+
+    document.documentElement.classList.add(deviceType());
 });
 
 // /* Initialization main components ************* */
@@ -12178,6 +12566,7 @@ headerFixed();
 
 // /* Initialization additional scripts ********** */
 initFilters();
+initViewItems();
 
 // Lazy Load
 new g();
