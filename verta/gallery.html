@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Страница статьи | Verta</title>
+    <title>Галерея | Verta</title>
     <meta name="description" content="Описание страницы">
     <link rel="icon" href="/favicon/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
@@ -23,7 +23,7 @@
 </head>
 
 <body>
-    <div class="wrapper page-blog-detail">
+    <div class="wrapper">
         <header class="header js-header"> <!-- <div class="header__backdrop js-header-backdrop"></div> -->
             <div class="header__inner">
                 <div class="header__container container">
@@ -245,436 +245,249 @@
             </div>
         </header>
         <main class="main">
-            <div class="p-section p-article">
-                <div class="p-article__header">
-                    <picture class="p-article__header-image-box">
-                        <source media="(max-width: 1024.98px)" srcset="img/blog/detail-tablet.jpg 1x, img/blog/detail-tablet@2x.jpg 2x"> <img class="p-article__header-image" src="img/blog/detail.jpg" srcset="img/blog/detail@2x.jpg 2x" width="1920" height="670" alt="" loading="lazy">
-                    </picture>
-                    <div class="p-article__header-container container">
-                        <div class="p-article__header-content">
-                            <div class="p-article__page-title page-title page-title--size-lg">
-                                <h1>Что такое OBS и его преимущества</h1>
-                            </div>
-                            <div class="p-article__breadcrumbs breadcrumbs">
-                                <div class="breadcrumbs__container container">
-                                    <nav class="breadcrumbs__inner" role="navigation" aria-label="breadcrumbs">
-                                        <ol class="breadcrumbs__list">
-                                            <li class="breadcrumbs__item"> <a href="/" class="breadcrumbs__link"><span>Главная</span></a> </li>
-                                            <li class="breadcrumbs__item"> <a href="" class="breadcrumbs__link"><span>Статьи</span></a> </li>
-                                            <li class="breadcrumbs__item" aria-current="page"> <span>Что такое OBS и его преимущества</span> </li>
-                                        </ol>
-                                    </nav>
+            <div class="breadcrumbs">
+                <div class="breadcrumbs__container container">
+                    <nav class="breadcrumbs__inner" role="navigation" aria-label="breadcrumbs">
+                        <ol class="breadcrumbs__list">
+                            <li class="breadcrumbs__item"> <a href="/" class="breadcrumbs__link"><span>Главная</span></a> </li>
+                            <li class="breadcrumbs__item" aria-current="page"> <span>Галерея</span> </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="p-section p-blog">
+                <div class="container">
+                    <div class="p-blog__header">
+                        <div class="p-blog__title page-title page-title--size-lg">
+                            <h1>Галерея</h1>
+                        </div>
+                        <div class="p-blog__tab-menu-wrapper">
+                            <div class="p-blog__tab-menu tab-menu">
+                                <div class="tab-menu__inner">
+                                    <div class="tab-menu__list"> <a class="tab-menu__item is-active"> <span>За всё время</span> </a><a href="#" class="tab-menu__item"> <span>2020</span> </a><a href="#" class="tab-menu__item"> <span>2019</span> </a><a href="#" class="tab-menu__item"> <span>2018</span> </a><a href="#" class="tab-menu__item"> <span>2017</span> </a> </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="container">
-                    <div class="p-article__description p-article__description--article description">
-                        <p>Аккумуляторная система One Battery System позволяет использовать один аккумулятор для питания нескольких инструментов. Эта система устраняет необходимость в&nbsp;нескольких батареях, которые могут быть дорогими и&nbsp;занимать много места. Одну батарею можно перезаряжать и&nbsp;использовать с&nbsp;любым инструментом системы, что делает ее&nbsp;более эффективной и&nbsp;удобной</p>
-                        <h2>Преимущества системы One Battery System:</h2>
-                        <ul>
-                            <li>Выгода. Экономит время и&nbsp;деньги, так как не&nbsp;нужно покупать несколько батарей для каждого инструмента.</li>
-                            <li>Универсальность. Один аккумулятор может использоваться для питания различных инструментов, что упрощает хранение и&nbsp;транспортировку</li>
-                            <li>Экономия времени. Замена аккумуляторов между инструментами занимает меньше времени, что увеличивает производительность</li>
-                            <li>Экологичность. Меньшее количество аккумуляторов означает меньше отходов и&nbsp;снижение воздействия на&nbsp;окружающую среду</li>
-                            <li>Простота использования. Меньше аккумуляторов означает меньше проблем с&nbsp;зарядкой и&nbsp;хранением</li>
-                        </ul>
-                        <p>У&nbsp;бренда VERTA как раз присутствует OBS система. <br>
-                            Вы&nbsp;можете приобрести электроинструмент и&nbsp;аккумуляторы по&nbsp;отдельности таких товаров как:</p>
-                        <p>Бесщеточный шуруповерт-дрель (арт. В0518-BD)</p>
-                        <p>Воздуходувка (арт. VCB-L0119)</p>
-                        <p>УШМ (арт. VAG-L0218A)</p>
-                        <p>Гайковерт (арт. VCW-B0418-DB)</p>
-                        <p>Для заказа свяжитесь с&nbsp;нашими менеджерами</p>
+                    <div class="p-blog__gallery l-grid l-gap-20">
+                        <div class="p-blog__gallery-items l-grid l-grid-cols-3 l-gap-10">
+                            <div class="p-blog__gallery-item  category-item">
+                                <div class="category-item__content">
+                                    <div class="category-item__sku">VHB-2601SRE</div>
+                                    <h3 class="category-item__title"> <a class="category-item__title-link" href="#"> <span>Перфоратор VERTA</span> </a> </h3>
+                                    <div class="category-item__arrow-wrapper">
+                                        <div class="category-item__arrow-button"> <svg class="base-icon base-icon-nav">
+                                                <use xlink:href="img/icons.svg#nav"></use>
+                                            </svg> </div>
+                                    </div>
+                                </div>
+                                <div class="category-item__image-wrapper">
+                                    <picture class="category-item__image-box">
+                                        <source media="(max-width: 1024.98px)" srcset="img/about-product/1-tablet.png 1x, img/about-product/1-tablet@2x.png 2x"> <img class="category-item__image" src="img/about-product/1.png" srcset="img/about-product/1@2x.png 2x" alt="" width="284" height="284" loading="lazy">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="p-blog__gallery-item u-class-red category-item">
+                                <div class="category-item__content">
+                                    <div class="category-item__sku">VCSTM-191</div>
+                                    <h3 class="category-item__title"> <a class="category-item__title-link" href="#"> <span>Пила дисковая</span> </a> </h3>
+                                    <div class="category-item__arrow-wrapper">
+                                        <div class="category-item__arrow-button"> <svg class="base-icon base-icon-nav">
+                                                <use xlink:href="img/icons.svg#nav"></use>
+                                            </svg> </div>
+                                    </div>
+                                </div>
+                                <div class="category-item__image-wrapper">
+                                    <picture class="category-item__image-box"> <img class="category-item__image" src="img/about-product/2.png" srcset="img/about-product/2@2x.png 2x" alt="" width="284" height="284" loading="lazy"> </picture>
+                                </div>
+                            </div>
+                            <div class="p-blog__gallery-item u-class-black category-item">
+                                <div class="category-item__content">
+                                    <div class="category-item__sku">VHM-10</div>
+                                    <h3 class="category-item__title"> <a class="category-item__title-link" href="#"> <span>Дрель-миксер</span> </a> </h3>
+                                    <div class="category-item__arrow-wrapper">
+                                        <div class="category-item__arrow-button"> <svg class="base-icon base-icon-nav">
+                                                <use xlink:href="img/icons.svg#nav"></use>
+                                            </svg> </div>
+                                    </div>
+                                </div>
+                                <div class="category-item__image-wrapper">
+                                    <picture class="category-item__image-box"> <img class="category-item__image" src="img/about-product/3.png" srcset="img/about-product/3@2x.png 2x" alt="" width="284" height="284" loading="lazy"> </picture>
+                                </div>
+                            </div>
+                            <div class="p-blog__gallery-item u-class-red category-item">
+                                <div class="category-item__content">
+                                    <div class="category-item__sku">VCSTM-191</div>
+                                    <h3 class="category-item__title"> <a class="category-item__title-link" href="#"> <span>Пила дисковая</span> </a> </h3>
+                                    <div class="category-item__arrow-wrapper">
+                                        <div class="category-item__arrow-button"> <svg class="base-icon base-icon-nav">
+                                                <use xlink:href="img/icons.svg#nav"></use>
+                                            </svg> </div>
+                                    </div>
+                                </div>
+                                <div class="category-item__image-wrapper">
+                                    <picture class="category-item__image-box"> <img class="category-item__image" src="img/about-product/2.png" srcset="img/about-product/2@2x.png 2x" alt="" width="284" height="284" loading="lazy"> </picture>
+                                </div>
+                            </div>
+                            <div class="p-blog__gallery-item  category-item">
+                                <div class="category-item__content">
+                                    <div class="category-item__sku">VHB-2601SRE</div>
+                                    <h3 class="category-item__title"> <a class="category-item__title-link" href="#"> <span>Перфоратор VERTA</span> </a> </h3>
+                                    <div class="category-item__arrow-wrapper">
+                                        <div class="category-item__arrow-button"> <svg class="base-icon base-icon-nav">
+                                                <use xlink:href="img/icons.svg#nav"></use>
+                                            </svg> </div>
+                                    </div>
+                                </div>
+                                <div class="category-item__image-wrapper">
+                                    <picture class="category-item__image-box">
+                                        <source media="(max-width: 1024.98px)" srcset="img/about-product/1-tablet.png 1x, img/about-product/1-tablet@2x.png 2x"> <img class="category-item__image" src="img/about-product/1.png" srcset="img/about-product/1@2x.png 2x" alt="" width="284" height="284" loading="lazy">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="p-blog__gallery-item u-class-black category-item">
+                                <div class="category-item__content">
+                                    <div class="category-item__sku">VHM-10</div>
+                                    <h3 class="category-item__title"> <a class="category-item__title-link" href="#"> <span>Дрель-миксер</span> </a> </h3>
+                                    <div class="category-item__arrow-wrapper">
+                                        <div class="category-item__arrow-button"> <svg class="base-icon base-icon-nav">
+                                                <use xlink:href="img/icons.svg#nav"></use>
+                                            </svg> </div>
+                                    </div>
+                                </div>
+                                <div class="category-item__image-wrapper">
+                                    <picture class="category-item__image-box"> <img class="category-item__image" src="img/about-product/3.png" srcset="img/about-product/3@2x.png 2x" alt="" width="284" height="284" loading="lazy"> </picture>
+                                </div>
+                            </div>
+                            <div class="p-blog__gallery-item u-class-black category-item">
+                                <div class="category-item__content">
+                                    <div class="category-item__sku">VHM-10</div>
+                                    <h3 class="category-item__title"> <a class="category-item__title-link" href="#"> <span>Дрель-миксер</span> </a> </h3>
+                                    <div class="category-item__arrow-wrapper">
+                                        <div class="category-item__arrow-button"> <svg class="base-icon base-icon-nav">
+                                                <use xlink:href="img/icons.svg#nav"></use>
+                                            </svg> </div>
+                                    </div>
+                                </div>
+                                <div class="category-item__image-wrapper">
+                                    <picture class="category-item__image-box"> <img class="category-item__image" src="img/about-product/3.png" srcset="img/about-product/3@2x.png 2x" alt="" width="284" height="284" loading="lazy"> </picture>
+                                </div>
+                            </div>
+                            <div class="p-blog__gallery-item  category-item">
+                                <div class="category-item__content">
+                                    <div class="category-item__sku">VHB-2601SRE</div>
+                                    <h3 class="category-item__title"> <a class="category-item__title-link" href="#"> <span>Перфоратор VERTA</span> </a> </h3>
+                                    <div class="category-item__arrow-wrapper">
+                                        <div class="category-item__arrow-button"> <svg class="base-icon base-icon-nav">
+                                                <use xlink:href="img/icons.svg#nav"></use>
+                                            </svg> </div>
+                                    </div>
+                                </div>
+                                <div class="category-item__image-wrapper">
+                                    <picture class="category-item__image-box">
+                                        <source media="(max-width: 1024.98px)" srcset="img/about-product/1-tablet.png 1x, img/about-product/1-tablet@2x.png 2x"> <img class="category-item__image" src="img/about-product/1.png" srcset="img/about-product/1@2x.png 2x" alt="" width="284" height="284" loading="lazy">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="p-blog__gallery-item u-class-red category-item">
+                                <div class="category-item__content">
+                                    <div class="category-item__sku">VCSTM-191</div>
+                                    <h3 class="category-item__title"> <a class="category-item__title-link" href="#"> <span>Пила дисковая</span> </a> </h3>
+                                    <div class="category-item__arrow-wrapper">
+                                        <div class="category-item__arrow-button"> <svg class="base-icon base-icon-nav">
+                                                <use xlink:href="img/icons.svg#nav"></use>
+                                            </svg> </div>
+                                    </div>
+                                </div>
+                                <div class="category-item__image-wrapper">
+                                    <picture class="category-item__image-box"> <img class="category-item__image" src="img/about-product/2.png" srcset="img/about-product/2@2x.png 2x" alt="" width="284" height="284" loading="lazy"> </picture>
+                                </div>
+                            </div>
+                            <div class="p-blog__gallery-item  category-item">
+                                <div class="category-item__content">
+                                    <div class="category-item__sku">VHB-2601SRE</div>
+                                    <h3 class="category-item__title"> <a class="category-item__title-link" href="#"> <span>Перфоратор VERTA</span> </a> </h3>
+                                    <div class="category-item__arrow-wrapper">
+                                        <div class="category-item__arrow-button"> <svg class="base-icon base-icon-nav">
+                                                <use xlink:href="img/icons.svg#nav"></use>
+                                            </svg> </div>
+                                    </div>
+                                </div>
+                                <div class="category-item__image-wrapper">
+                                    <picture class="category-item__image-box">
+                                        <source media="(max-width: 1024.98px)" srcset="img/about-product/1-tablet.png 1x, img/about-product/1-tablet@2x.png 2x"> <img class="category-item__image" src="img/about-product/1.png" srcset="img/about-product/1@2x.png 2x" alt="" width="284" height="284" loading="lazy">
+                                    </picture>
+                                </div>
+                            </div>
+                            <div class="p-blog__gallery-item u-class-red category-item">
+                                <div class="category-item__content">
+                                    <div class="category-item__sku">VCSTM-191</div>
+                                    <h3 class="category-item__title"> <a class="category-item__title-link" href="#"> <span>Пила дисковая</span> </a> </h3>
+                                    <div class="category-item__arrow-wrapper">
+                                        <div class="category-item__arrow-button"> <svg class="base-icon base-icon-nav">
+                                                <use xlink:href="img/icons.svg#nav"></use>
+                                            </svg> </div>
+                                    </div>
+                                </div>
+                                <div class="category-item__image-wrapper">
+                                    <picture class="category-item__image-box"> <img class="category-item__image" src="img/about-product/2.png" srcset="img/about-product/2@2x.png 2x" alt="" width="284" height="284" loading="lazy"> </picture>
+                                </div>
+                            </div>
+                            <div class="p-blog__gallery-item u-class-black category-item">
+                                <div class="category-item__content">
+                                    <div class="category-item__sku">VHM-10</div>
+                                    <h3 class="category-item__title"> <a class="category-item__title-link" href="#"> <span>Дрель-миксер</span> </a> </h3>
+                                    <div class="category-item__arrow-wrapper">
+                                        <div class="category-item__arrow-button"> <svg class="base-icon base-icon-nav">
+                                                <use xlink:href="img/icons.svg#nav"></use>
+                                            </svg> </div>
+                                    </div>
+                                </div>
+                                <div class="category-item__image-wrapper">
+                                    <picture class="category-item__image-box"> <img class="category-item__image" src="img/about-product/3.png" srcset="img/about-product/3@2x.png 2x" alt="" width="284" height="284" loading="lazy"> </picture>
+                                </div>
+                            </div>
+                        </div> <button type="button" class="p-blog__more-button base-button base-button--white base-button--size-large base-button--block"> <span class="base-button__inner"> <span class="base-button__content"> Показать ещё </span> </span> </button>
+                        <div class="p-blog__pagination pagination"> <!-- <button
+        class="pagination__nav pagination__nav--first"
+        type="button"
+    >
+        <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+            <path d="M9 9L15 15L9 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M15 9L21 15L15 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button>
+     <button
+        class="pagination__nav pagination__nav--prev"
+        type="button"
+    >
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M9 6L15 12L9 18"  stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+    </button> -->
+                            <div class="pagination__list"> <a class="pagination__link is-active"> <span>1</span> </a> <a class="pagination__link" href="#"> <span>2</span> </a> <a class="pagination__link" href="#"> <span>3</span> </a> <a class="pagination__link" href="#"> <span>4</span> </a> <a class="pagination__link" href="#"> <span>5</span> </a> <a class="pagination__link" href="#"> <span>6</span> </a> </div> <button class="pagination__nav pagination__nav--next" type="button"> <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                    <path d="M9 6L15 12L9 18" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg> </button> <button class="pagination__nav pagination__nav--last" type="button"> <svg width="30" height="30" viewBox="0 0 30 30" fill="none">
+                                    <path d="M9 9L15 15L9 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                    <path d="M15 9L21 15L15 21" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                </svg> </button>
+                        </div>
                     </div>
                 </div>
             </div>
-            <section class="gallery-section section">
-                <div class="container">
-                    <div class="gallery-section__content js-gallery-swiper-section">
-                        <div class="gallery-section__header">
-                            <h2 class="gallery-section__title title title--size-lg">Фотогалерея</h2>
+            <section class="request-section section">
+                <div class="request-section__container container">
+                    <div class="request-section__wrapper">
+                        <div class="request-section__image-wrapper u-hidden-mobile">
+                            <div class="request-section__image-box"> <img class="request-section__image" src="img/request/request.png" srcset="img/request/request@2x.png 2x" alt="" loading="lazy" width="496" height="743"> </div>
                         </div>
-                        <div class="swiper gallery-section__swiper js-gallery-swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide gallery-section__swiper-slide">
-                                    <div class="gallery-section__item gallery-item"> <a href="img/gallery-section/1-full.jpg" class="gallery-item__inner" data-fancybox="gallery" data-thumb="img/gallery-section/1-thumb.jpg">
-                                            <picture class="gallery-item__image-box">
-                                                <source media="(max-width: 575.98px)" srcset="img/gallery-section/1-mobile.jpg 1x, img/gallery-section/1-mobile@2x.jpg 2x"> <img class="gallery-item__image" src="img/gallery-section/1.jpg" srcset="img/gallery-section/1@2x.jpg 2x" width="1298" height="890" alt="" loading="lazy">
-                                            </picture>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide gallery-section__swiper-slide">
-                                    <div class="gallery-section__item gallery-item"> <a href="img/gallery-section/1-full.jpg" class="gallery-item__inner" data-fancybox="gallery" data-thumb="img/gallery-section/1-thumb.jpg">
-                                            <picture class="gallery-item__image-box">
-                                                <source media="(max-width: 575.98px)" srcset="img/gallery-section/1-mobile.jpg 1x, img/gallery-section/1-mobile@2x.jpg 2x"> <img class="gallery-item__image" src="img/gallery-section/1.jpg" srcset="img/gallery-section/1@2x.jpg 2x" width="1298" height="890" alt="" loading="lazy">
-                                            </picture>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide gallery-section__swiper-slide">
-                                    <div class="gallery-section__item gallery-item"> <a href="img/gallery-section/1-full.jpg" class="gallery-item__inner" data-fancybox="gallery" data-thumb="img/gallery-section/1-thumb.jpg">
-                                            <picture class="gallery-item__image-box">
-                                                <source media="(max-width: 575.98px)" srcset="img/gallery-section/1-mobile.jpg 1x, img/gallery-section/1-mobile@2x.jpg 2x"> <img class="gallery-item__image" src="img/gallery-section/1.jpg" srcset="img/gallery-section/1@2x.jpg 2x" width="1298" height="890" alt="" loading="lazy">
-                                            </picture>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide gallery-section__swiper-slide">
-                                    <div class="gallery-section__item gallery-item"> <a href="img/gallery-section/1-full.jpg" class="gallery-item__inner" data-fancybox="gallery" data-thumb="img/gallery-section/1-thumb.jpg">
-                                            <picture class="gallery-item__image-box">
-                                                <source media="(max-width: 575.98px)" srcset="img/gallery-section/1-mobile.jpg 1x, img/gallery-section/1-mobile@2x.jpg 2x"> <img class="gallery-item__image" src="img/gallery-section/1.jpg" srcset="img/gallery-section/1@2x.jpg 2x" width="1298" height="890" alt="" loading="lazy">
-                                            </picture>
-                                        </a> </div>
-                                </div>
-                            </div>
-                            <div class="gallery-section__swiper-footer swiper-footer">
-                                <div class="gallery-section__swiper-scrollbar-wrapper swiper-scrollbar-wrapper">
-                                    <div class="gallery-section__swiper-scrollbar swiper-scrollbar js-gallery-swiper-scrollbar"></div>
-                                </div>
-                                <div class="gallery-section__swiper-control swiper-control"> <button type="button" class="gallery-section__swiper-prev js-gallery-swiper-prev swiper-button-prev"> <svg width="29" height="30" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 6L21 15L12 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg> </button> <button type="button" class="gallery-section__swiper-next js-gallery-swiper-next swiper-button-next"> <svg width="29" height="30" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 6L21 15L12 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg> </button> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="products-section section">
-                <div class="products-section__container container">
-                    <div class="products-section__content js-products-swiper-section">
-                        <div class="products-section__header">
-                            <h2 class="products-section__title title title--size-lg">Наши товары</h2>
-                        </div>
-                        <div class="swiper products-section__swiper js-products-swiper" data-slides-per-view-992="4">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__product product"> <a href="#" class="product__link" aria-label="Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. VCD-B0518</div>
-                                                </div>
-                                                <div class="product__title-wrapper">
-                                                    <div class="product__title">Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA</div>
-                                                </div>
-                                                <div class="product__category">Аккумуляторный инструмент</div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__product product"> <a href="#" class="product__link" aria-label="Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. VCD-B0518</div>
-                                                </div>
-                                                <div class="product__title-wrapper">
-                                                    <div class="product__title">Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA</div>
-                                                </div>
-                                                <div class="product__category">Аккумуляторный инструмент</div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__product product"> <a href="#" class="product__link" aria-label="Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. VCD-B0518</div>
-                                                </div>
-                                                <div class="product__title-wrapper">
-                                                    <div class="product__title">Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA</div>
-                                                </div>
-                                                <div class="product__category">Аккумуляторный инструмент</div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__product product"> <a href="#" class="product__link" aria-label="Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. VCD-B0518</div>
-                                                </div>
-                                                <div class="product__title-wrapper">
-                                                    <div class="product__title">Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA</div>
-                                                </div>
-                                                <div class="product__category">Аккумуляторный инструмент</div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__product product"> <a href="#" class="product__link" aria-label="Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. VCD-B0518</div>
-                                                </div>
-                                                <div class="product__title-wrapper">
-                                                    <div class="product__title">Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA</div>
-                                                </div>
-                                                <div class="product__category">Аккумуляторный инструмент</div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__product product"> <a href="#" class="product__link" aria-label="Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. VCD-B0518</div>
-                                                </div>
-                                                <div class="product__title-wrapper">
-                                                    <div class="product__title">Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA</div>
-                                                </div>
-                                                <div class="product__category">Аккумуляторный инструмент</div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__product product"> <a href="#" class="product__link" aria-label="Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. VCD-B0518</div>
-                                                </div>
-                                                <div class="product__title-wrapper">
-                                                    <div class="product__title">Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA</div>
-                                                </div>
-                                                <div class="product__category">Аккумуляторный инструмент</div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__product product"> <a href="#" class="product__link" aria-label="Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. VCD-B0518</div>
-                                                </div>
-                                                <div class="product__title-wrapper">
-                                                    <div class="product__title">Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA</div>
-                                                </div>
-                                                <div class="product__category">Аккумуляторный инструмент</div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__product product"> <a href="#" class="product__link" aria-label="Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. VCD-B0518</div>
-                                                </div>
-                                                <div class="product__title-wrapper">
-                                                    <div class="product__title">Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA</div>
-                                                </div>
-                                                <div class="product__category">Аккумуляторный инструмент</div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide products-section__swiper-item">
-                                    <div class="products-section__product product"> <a href="#" class="product__link" aria-label="Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="285" height="250" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. VCD-B0518</div>
-                                                </div>
-                                                <div class="product__title-wrapper">
-                                                    <div class="product__title">Дрель-шуруповерт аккумуляторная бесщеточная VCD-B0518 VERTA</div>
-                                                </div>
-                                                <div class="product__category">Аккумуляторный инструмент</div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--size-small"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                            </div>
-                            <div class="products-section__swiper-footer swiper-footer">
-                                <div class="products-section__swiper-scrollbar-wrapper swiper-scrollbar-wrapper">
-                                    <div class="products-section__swiper-scrollbar swiper-scrollbar js-products-swiper-scrollbar"></div>
-                                </div>
-                                <div class="products-section__swiper-control swiper-control u-hidden-mobile-sm"> <button type="button" class="products-section__swiper-prev js-products-swiper-prev swiper-button-prev"> <svg width="29" height="30" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 6L21 15L12 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg> </button> <button type="button" class="products-section__swiper-next js-products-swiper-next swiper-button-next"> <svg width="29" height="30" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 6L21 15L12 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg> </button> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="articles-section section">
-                <div class="container">
-                    <div class="articles-section__content js-articles-swiper-section">
-                        <div class="articles-section__header">
-                            <h2 class="articles-section__title title title--size-lg">Статьи</h2> <a href="#" class="articles-section__button button-more button-more--size-sm button-more--see-all base-button base-button--default base-button--outlined base-button--size-small base-button--rounded"> <span class="base-button__inner"> <span class="base-button__content"> Смотреть всё </span> <span class="base-button__icon"> <svg class="base-icon base-icon-nav">
-                                            <use xlink:href="img/icons.svg#nav"></use>
-                                        </svg> </span> </span> </a>
-                        </div>
-                        <div class="swiper articles-section__swiper js-articles-swiper">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/articles/1.jpg" srcset="img/articles/1@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__title">Расширяем границы - новый филиал в Москве</div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/articles/2.jpg" srcset="img/articles/2@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__title">Обновляем конкурс на самых креативных строителей</div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/articles/3.jpg" srcset="img/articles/3@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__title">Новая линейка перфораторов уже в продаже</div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/articles/1.jpg" srcset="img/articles/1@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__title">Расширяем границы - новый филиал в Москве</div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/articles/2.jpg" srcset="img/articles/2@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__title">Обновляем конкурс на самых креативных строителей</div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/articles/3.jpg" srcset="img/articles/3@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__title">Новая линейка перфораторов уже в продаже</div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/articles/1.jpg" srcset="img/articles/1@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__title">Расширяем границы - новый филиал в Москве</div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/articles/2.jpg" srcset="img/articles/2@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__title">Обновляем конкурс на самых креативных строителей</div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                                <div class="swiper-slide articles-section__swiper-slide">
-                                    <div class="articles-section__item article-item"> <a href="#" class="article-item__link">
-                                            <div class="article-item__image-wrapper">
-                                                <div class="article-item__image-box"> <img class="article-item__image" src="img/articles/3.jpg" srcset="img/articles/3@2x.jpg 2x" width="426" height="272" alt="" loading="lazy"> </div>
-                                            </div>
-                                            <div class="article-item__content">
-                                                <div class="article-item__title">Новая линейка перфораторов уже в продаже</div>
-                                            </div>
-                                        </a> </div>
-                                </div>
-                            </div>
-                            <div class="articles-section__swiper-footer swiper-footer">
-                                <div class="articles-section__swiper-scrollbar-wrapper swiper-scrollbar-wrapper">
-                                    <div class="articles-section__swiper-scrollbar swiper-scrollbar js-articles-swiper-scrollbar"></div>
-                                </div>
-                                <div class="articles-section__swiper-control swiper-control u-hidden-mobile-sm"> <button type="button" class="articles-section__swiper-prev js-articles-swiper-prev swiper-button-prev"> <svg width="29" height="30" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 6L21 15L12 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg> </button> <button type="button" class="articles-section__swiper-next js-articles-swiper-next swiper-button-next"> <svg width="29" height="30" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 6L21 15L12 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
-                                        </svg> </button> </div>
-                            </div>
+                        <div class="request-section__content">
+                            <h2 class="request-section__title title">Оформите заявку на сайте</h2>
+                            <div class="request-section__text section-text">
+                                <p>Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время и&nbsp;ответим на&nbsp;все интересующие вопросы</p>
+                            </div> <button type="button" data-modal-open="#order-modal" class="request-section__button base-button base-button--secondary"> <span class="base-button__inner"> <span class="base-button__content">
+                                        Задать вопрос
+                                    </span> </span> </button>
                         </div>
                     </div>
                 </div>
@@ -799,7 +612,7 @@
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-cip7sngxc"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-cip7sngxc" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-a7uhj702k"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-a7uhj702k" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
@@ -807,14 +620,14 @@
                                     <div class="form__column">
                                         <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-1oruhkntz"> <span>Номер телефона</span> </label> <input id="base-text-field-1oruhkntz" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-2n9mbjpa7"> <span>Номер телефона</span> </label> <input id="base-text-field-2n9mbjpa7" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-h0agfrzh3"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-h0agfrzh3" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-jdx3xmyyp"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-jdx3xmyyp" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
@@ -822,14 +635,14 @@
                                     <div class="form__column">
                                         <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-ouznziq11"> <span>Интересующий товар/услуга</span> </label> <input id="base-text-field-ouznziq11" type="text" name="email" value class="base-text-field__input js-base-text-field-input"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-xji4xn0os"> <span>Интересующий товар/услуга</span> </label> <input id="base-text-field-xji4xn0os" type="text" name="email" value class="base-text-field__input js-base-text-field-input"> </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--textarea base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-vukk7id20"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-vukk7id20" name="message" rows="5" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-lyks07604"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-lyks07604" name="message" rows="5" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
