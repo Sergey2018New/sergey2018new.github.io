@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Контакты | Verta</title>
+    <title>Дилерам | Verta</title>
     <meta name="description" content="Описание страницы">
     <link rel="icon" href="/favicon/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
@@ -19,7 +19,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Fira+Sans+Condensed:wght@500;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script src="https://unpkg.com/imask"></script>
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=391f4ea0-bf90-4603-89b5-cabb30821c5e"></script>
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -251,120 +250,137 @@
                     <nav class="breadcrumbs__inner" role="navigation" aria-label="breadcrumbs">
                         <ol class="breadcrumbs__list">
                             <li class="breadcrumbs__item"> <a href="/" class="breadcrumbs__link"><span>Главная</span></a> </li>
-                            <li class="breadcrumbs__item"> <a href="" class="breadcrumbs__link"><span>Где купить</span></a> </li>
-                            <li class="breadcrumbs__item" aria-current="page"> <span>Контакты</span> </li>
+                            <li class="breadcrumbs__item" aria-current="page"> <span>Дилерам</span> </li>
                         </ol>
                     </nav>
                 </div>
             </div>
-            <div class="p-section p-company">
+            <div class="p-section p-dealers">
                 <div class="container">
-                    <div class="p-company__header">
-                        <div class="p-company__title page-title page-title--size-lg">
-                            <h1>Контакты</h1>
-                        </div>
-                        <div class="p-company__tab-menu-wrapper">
-                            <div class="p-company__tab-menu tab-menu">
-                                <div class="tab-menu__inner">
-                                    <div class="tab-menu__list"> <a class="tab-menu__item is-active"> <span>Контакты</span> </a><a href="#" class="tab-menu__item"> <span>Партнёры</span> </a><a href="#" class="tab-menu__item"> <span>Реквизиты</span> </a><a href="#" class="tab-menu__item"> <span>О бренде</span> </a> </div>
-                                </div>
-                            </div>
+                    <div class="p-dealers__header">
+                        <picture class="p-dealers__header-image-box">
+                            <source media="(max-width: 575.98px)" srcset="img/dealers/dealers-mobile.jpg 1x, img/dealers/dealers-mobile@2x.jpg 2x">
+                            <source media="(max-width: 991.98px)" srcset="img/dealers/dealers-tablet.jpg 1x, img/dealers/dealers-tablet@2x.jpg 2x"> <img class="p-dealers__header-image" src="img/dealers/dealers.jpg" srcset="img/dealers/dealers@2x.jpg 2x" width="1298" height="474" alt="" loading="lazy">
+                        </picture>
+                        <div class="p-dealers__header-content">
+                            <div class="p-dealers__page-title page-title page-title--size-xl">
+                                <h1>Дилерам</h1>
+                            </div> <a href="#" class="p-dealers__button button-more base-button base-button--white"> <span class="base-button__inner"> <span class="base-button__content">
+                                        Подробнее
+                                    </span> <span class="base-button__icon"> <svg class="base-icon base-icon-nav">
+                                            <use xlink:href="img/icons.svg#nav"></use>
+                                        </svg> </span> </span> </a>
                         </div>
                     </div>
-                    <div class="p-company__contacts">
-                        <div class="p-company__map-block map-block">
-                            <div class="map-block__inner">
-                                <div class="map-block__map">
-                                    <div id="map" style="width: 100%; height: 100%"></div>
-                                    <div>
-                                        <script type="module">
-                                            const observers = {};
-
-                                            function callback(entries, observer) {
-                                                entries.forEach((entry) => {
-                                                    const target = entry.target;
-                                                    if (entry.isIntersecting) {
-                                                        ymaps.ready(function() {
-                                                            const coords = [56.755294, 60.584045];
-                                                            let iconWidth = 70;
-                                                            let iconHeight = 86;
-                                                            const windowWidth = window.innerWidth;
-                                                            let iconOffsetX = 160;
-                                                            let iconOffsetY = 0;
-                                                            if (windowWidth <= 767.98) {
-                                                                iconOffsetY = -190;
-                                                            }
-                                                            if (windowWidth <= 575.98) {
-                                                                iconOffsetX = 0;
-                                                                iconOffsetY = -180;
-                                                            }
-                                                            const myMap = new ymaps.Map("map", {
-                                                                center: coords,
-                                                                zoom: 16,
-                                                                controls: []
-                                                            }, {
-                                                                suppressMapOpenBlock: true,
-                                                                suppressObsoleteBrowserNotifier: true
-                                                            });
-                                                            const myPlacemark = new ymaps.Placemark(coords, {}, {
-                                                                iconLayout: "default#image",
-                                                                iconImageHref: "img/location.svg",
-                                                                iconImageSize: [iconWidth, iconHeight],
-                                                                iconImageOffset: [iconWidth * -0.5 + iconOffsetX, iconHeight * -1 + iconOffsetY]
-                                                            });
-                                                            myMap.geoObjects.add(myPlacemark);
-                                                            myMap.controls.remove("searchControl");
-                                                        });
-                                                        observer.unobserve(target);
-                                                    }
-                                                });
-                                            }
-                                            const mapElement = document.querySelector("#map");
-                                            if (mapElement) {
-                                                observers["map"] = new IntersectionObserver(callback, {
-                                                    rootMargin: "50px"
-                                                });
-                                                observers["map"].observe(mapElement);
-                                            }
-                                        </script>
-                                    </div>
-                                </div>
+                    <div class="p-dealers__description-row l-grid l-grid-cols-2 l-gap-40 l-align-center">
+                        <div class="p-dealers__description-column">
+                            <div class="p-dealers__description">
+                                <p>В&nbsp;течение 12&nbsp;лет присутствия на&nbsp;российском рынке бренд VERTA успешно зарекомендовал себя, как надежного производителя для профессиональных строителей и&nbsp;ремонтных бригад</p>
+                                <p>Наше производство всегда прислушивается к&nbsp;обратной связи от&nbsp;потребителей и&nbsp;постоянно совершенствует продукты VERTA</p>
                             </div>
                         </div>
-                        <div class="p-company__contacts-content">
-                            <div class="p-company__contacts-block p-company__contacts-block--address u-box">
-                                <div class="p-company__address">
-                                    г.&nbsp;Екатеринбург, ул.&nbsp;Окружная, 88Э
-                                </div>
-                                <div class="p-company__working-hours"> <svg class="base-icon base-icon-clock">
-                                        <use xlink:href="img/icons.svg#clock"></use>
-                                    </svg> <span>Пн - Пт: 09:00 - 18:00</span> </div>
-                            </div>
-                            <div class="p-company__contacts-block u-box">
-                                <h3 class="p-company__contacts-block-title">Свяжитесь с&nbsp;нами</h3>
-                                <div class="p-company__contacts-block-text">
-                                    <p>Позвоните нам или напишите
-                                        сообщение. Наши специалисты
-                                        проконсультируют Вас по&nbsp;любому
-                                        вопросу</p>
-                                </div>
-                                <div class="p-company__contacts-items">
-                                    <div class="p-company__contacts-item">
-                                        <div class="p-company__contacts-title">
-                                            Телефон
-                                        </div> <a class="p-company__contacts-phone" href="tel:+73432210311">+7 343 221-03-11</a>
-                                    </div>
-                                    <div class="p-company__contacts-item">
-                                        <div class="p-company__contacts-title">
-                                            E-mail
-                                        </div> <a class="p-company__contacts-email" href="mailto:info@vertatools.ru">info@vertatools.ru</a>
-                                    </div>
-                                </div> <button type="button" data-modal-open="#order-modal" class="p-company__contacts-button base-button base-button--primary base-button--size-large base-button--block"> <span class="base-button__inner"> <span class="base-button__content"> Написать сообщение </span> </span> </button>
+                        <div class="p-dealers__description-column">
+                            <div class="p-dealers__description p-dealers__description--second">
+                                <p><strong>Инструменты от&nbsp;VERTA&nbsp;&mdash; это впечатляющие результаты работы с&nbsp;минимальными финансовыми и&nbsp;физическими усилиями</strong></p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+            <section class="advantages-section section advantages-section--we-offer">
+                <div class="advantages-section__inner">
+                    <div class="advantages-section__container container">
+                        <div class="advantages-section__header">
+                            <h2 class="advantages-section__title title title--size-lg">Мне предлагаем стать нашим официальным представителем в&nbsp;регионе, если:</h2>
+                        </div>
+                        <div class="advantages-section__items l-grid l-grid-cols-3 l-gap-10">
+                            <div class="advantages-section__item">
+                                <div class="advantages-section__item-icon-box"> <svg class="advantages-section__item-icon base-icon base-icon-bag">
+                                        <use xlink:href="img/icons.svg#bag"></use>
+                                    </svg> </div>
+                                <div class="advantages-section__item-text">
+                                    <p>У&nbsp;вас есть успешный рознично-торговый бизнес и&nbsp;пул лояльных клиентов</p>
+                                </div>
+                            </div>
+                            <div class="advantages-section__item">
+                                <div class="advantages-section__item-icon-box"> <svg class="advantages-section__item-icon base-icon base-icon-drill">
+                                        <use xlink:href="img/icons.svg#drill"></use>
+                                    </svg> </div>
+                                <div class="advantages-section__item-text">
+                                    <p>Вы&nbsp;являетесь поставщиком строительного инструмента для различных групп потребителей и&nbsp;постоянно расширяете свой ассортимент за&nbsp;счет актуальных товаров</p>
+                                </div>
+                            </div>
+                            <div class="advantages-section__item">
+                                <div class="advantages-section__item-icon-box"> <svg class="advantages-section__item-icon base-icon base-icon-shop">
+                                        <use xlink:href="img/icons.svg#shop"></use>
+                                    </svg> </div>
+                                <div class="advantages-section__item-text">
+                                    <p>У&nbsp;вас есть шоурумы, где вы&nbsp;можете разместить стенды с&nbsp;товарами бренда VERTA.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="advantages-section section">
+                <div class="advantages-section__inner">
+                    <div class="advantages-section__container container">
+                        <div class="advantages-section__header">
+                            <h2 class="advantages-section__title title title--size-lg">Мы гарантируем</h2>
+                        </div>
+                        <div class="advantages-section__items l-grid l-grid-cols-3 l-gap-10">
+                            <div class="advantages-section__item">
+                                <div class="advantages-section__item-icon-box"> <svg class="advantages-section__item-icon base-icon base-icon-price-tag">
+                                        <use xlink:href="img/icons.svg#price-tag"></use>
+                                    </svg> </div>
+                                <div class="advantages-section__item-text">
+                                    <p>Выгодные цены для наших партнеров и&nbsp;контроль за&nbsp;рекомендовано-розничными ценами</p>
+                                </div>
+                            </div>
+                            <div class="advantages-section__item">
+                                <div class="advantages-section__item-icon-box"> <svg class="advantages-section__item-icon base-icon base-icon-support">
+                                        <use xlink:href="img/icons.svg#support"></use>
+                                    </svg> </div>
+                                <div class="advantages-section__item-text">
+                                    <p>Техническую и&nbsp;информационную оперативную поддержку каждого клиента</p>
+                                </div>
+                            </div>
+                            <div class="advantages-section__item">
+                                <div class="advantages-section__item-icon-box"> <svg class="advantages-section__item-icon base-icon base-icon-check-arc">
+                                        <use xlink:href="img/icons.svg#check-arc"></use>
+                                    </svg> </div>
+                                <div class="advantages-section__item-text">
+                                    <p>Бесплатные и&nbsp;оперативные консультации технологов по&nbsp;подбору и&nbsp;применению продукции</p>
+                                </div>
+                            </div>
+                            <div class="advantages-section__item advantages-section__item--education">
+                                <div class="advantages-section__item-icon-box"> <svg class="advantages-section__item-icon base-icon base-icon-education">
+                                        <use xlink:href="img/icons.svg#education"></use>
+                                    </svg> </div>
+                                <div class="advantages-section__item-text">
+                                    <p>Бесплатное обучение и&nbsp;презентационные материалы</p>
+                                </div>
+                            </div>
+                            <div class="advantages-section__item">
+                                <div class="advantages-section__item-icon-box"> <svg class="advantages-section__item-icon base-icon base-icon-promotion">
+                                        <use xlink:href="img/icons.svg#promotion"></use>
+                                    </svg> </div>
+                                <div class="advantages-section__item-text">
+                                    <p>Рекламная поддержка каждого клиента</p>
+                                </div>
+                            </div>
+                            <div class="advantages-section__item advantages-section__item--visit">
+                                <div class="advantages-section__item-icon-box"> <svg class="advantages-section__item-icon base-icon base-icon-truck">
+                                        <use xlink:href="img/icons.svg#truck"></use>
+                                    </svg> </div>
+                                <div class="advantages-section__item-text">
+                                    <p>Выезд наших специалистов на&nbsp;объект</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section class="request-section section">
                 <div class="request-section__container container">
                     <div class="request-section__wrapper">
@@ -502,7 +518,7 @@
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-vs0iskj7d"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-vs0iskj7d" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-j0chdu6jk"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-j0chdu6jk" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
@@ -510,14 +526,14 @@
                                     <div class="form__column">
                                         <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-5mh76704g"> <span>Номер телефона</span> </label> <input id="base-text-field-5mh76704g" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-9ttrd8ge3"> <span>Номер телефона</span> </label> <input id="base-text-field-9ttrd8ge3" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-x5d70hghp"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-x5d70hghp" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-do62qtsee"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-do62qtsee" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
@@ -525,14 +541,14 @@
                                     <div class="form__column">
                                         <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-uwa82q9oe"> <span>Интересующий товар/услуга</span> </label> <input id="base-text-field-uwa82q9oe" type="text" name="email" value class="base-text-field__input js-base-text-field-input"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-wb8vwgpfh"> <span>Интересующий товар/услуга</span> </label> <input id="base-text-field-wb8vwgpfh" type="text" name="email" value class="base-text-field__input js-base-text-field-input"> </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--textarea base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-3p3260mx5"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-3p3260mx5" name="message" rows="5" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-hfgozb27a"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-hfgozb27a" name="message" rows="5" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
