@@ -16,7 +16,7 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Fira+Sans+Condensed:wght@500;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Fira+Sans+Condensed:wght@400;500;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script src="https://unpkg.com/imask"></script>
     <link rel="stylesheet" href="css/main.css">
@@ -291,7 +291,7 @@
                 </div>
             </div>
             <section class="gallery-section section">
-                <div class="container">
+                <div class="gallery-section__container container">
                     <div class="gallery-section__content js-gallery-swiper-section">
                         <div class="gallery-section__header">
                             <h2 class="gallery-section__title title title--size-lg">Фотогалерея</h2>
@@ -679,12 +679,14 @@
                     </div>
                 </div>
             </section>
-            <section class="brand-section section">
+            <section class="brand-section section brand-section--full">
                 <div class="brand-section__inner">
                     <div class="brand-section__container container">
-                        <div class="brand-section__row">
-                            <div class="brand-section__logo"> <img class="brand-section__logo-image" src="img/logo.svg" width="208" height="54" alt="Verta"> </div>
-                            <div class="brand-section__title title">Движение. Действие. Развитие</div>
+                        <div class="brand-section__content">
+                            <div class="brand-section__row">
+                                <div class="brand-section__logo"> <img class="brand-section__logo-image" src="img/logo.svg" width="208" height="54" alt="Verta"> </div>
+                                <div class="brand-section__title title">Движение. Действие. Развитие</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -799,7 +801,7 @@
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-hrr5v7x6k"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-hrr5v7x6k" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-a1j8vc7dj"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-a1j8vc7dj" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
@@ -807,14 +809,14 @@
                                     <div class="form__column">
                                         <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-rv2m18t1k"> <span>Номер телефона</span> </label> <input id="base-text-field-rv2m18t1k" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-9usbh3qu9"> <span>Номер телефона</span> </label> <input id="base-text-field-9usbh3qu9" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-ohzzv0qu7"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-ohzzv0qu7" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-y674ekbgv"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-y674ekbgv" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
@@ -822,14 +824,14 @@
                                     <div class="form__column">
                                         <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-s3y44ol9h"> <span>Интересующий товар/услуга</span> </label> <input id="base-text-field-s3y44ol9h" type="text" name="email" value class="base-text-field__input js-base-text-field-input"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-dba75zd3h"> <span>Интересующий товар/услуга</span> </label> <input id="base-text-field-dba75zd3h" type="text" name="email" value class="base-text-field__input js-base-text-field-input"> </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--textarea base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-31ins77sl"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-31ins77sl" name="message" rows="5" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-w4tv87e0q"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-w4tv87e0q" name="message" rows="5" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>

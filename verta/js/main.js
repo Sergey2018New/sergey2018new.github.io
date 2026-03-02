@@ -3569,6 +3569,8 @@ function initFancybox() {
     trapFocus: false,
     placeFocusBack: false,
         idle: false,
+          Hash: false,
+
         Carousel: {
 
             Thumbs: {
@@ -10338,15 +10340,11 @@ function initSwiper() {
         progressEl.classList.remove('is-animating');
         progressEl.style.setProperty('--duration', `${delay}ms`);
 
-        // перезапуск анимации (обязательно)
         void progressEl.offsetWidth;
 
         progressEl.classList.add('is-animating');
-        // progressEl.style.setProperty(
-        //     'animation-duration',
-        //     `${delay}ms`
-        // );
     }
+
     const homeSlider = document.querySelector('.js-home-swiper:not(.swiper-initialized)');
 
     if (homeSlider) {
@@ -10388,31 +10386,6 @@ function initSwiper() {
                 },
             },
         });
-
-        // homeSwiper.on('autoplayTimeLeft', (s, time, progress) => {
-        //     const progressCircleEl = s.el.querySelector('.swiper-button-progress-circle');
-        //     const percentProgress = progress * 100;
-        //     let radius;
-        //     let dashArray;
-        //     let dashOffset;
-
-        //     if (progressCircleEl) {
-        //         radius = progressCircleEl.getAttribute('r');
-        //         dashArray = 2 * 3.14 * radius;
-        //         dashOffset = dashArray - dashArray * (100 - percentProgress) / 100;
-
-        //         progressCircleEl.setAttribute('stroke-dasharray', dashArray.toFixed(3));
-        //         progressCircleEl.setAttribute('stroke-dashoffset', dashOffset.toFixed(3));
-        //     }
-        // });
-
-        // if (homeSliderProgressLine) {
-        //     homeSwiper.on('autoplayTimeLeft', (s, time, progress) => {
-        //         homeSliderProgressLine.style.width = `${(1 - progress) * 100}%`;
-        //     });
-
-
-        // }
     }
 
     new Swiper('.js-articles-swiper:not(.swiper-initialized)', {
@@ -10693,101 +10666,6 @@ function initSwiper() {
         },
     });
 
-
-    const productGalleryElements = document.querySelectorAll('.js-product-gallery');
-
-    for (let i = 0; i < productGalleryElements.length; i++) {
-        const productGallery = productGalleryElements[i];
-        const productGallerySwiperEl = productGallery.querySelector('.js-product-gallery-swiper:not(.swiper-initialized)');
-        const productGalleryPagination = productGallery.querySelector('.js-product-gallery-pagination');
-        const productGalleryThumbsEl = productGallery.querySelector('.js-product-gallery-thumbs');
-        const productGalleryThumbsPrevEl = productGallery.querySelector('.js-product-gallery-thumbs-prev');
-        const productGalleryThumbsNextEl = productGallery.querySelector('.js-product-gallery-thumbs-next');
-
-        let productGalleryThumbsSwiper;
-        let numberOfSlidesDefault = 7;
-
-        if (productGallerySwiperEl) {
-            let numberOfSlides = productGallerySwiperEl.querySelectorAll('.swiper-slide').length;
-
-            if (productGalleryThumbsEl) {
-                if (numberOfSlides <= numberOfSlidesDefault) {
-                    productGallery.classList.add('is-thumbs-width-auto');
-                }
-
-                productGalleryThumbsSwiper = new Swiper(productGalleryThumbsEl, {
-                    modules: [Navigation, freeMode],
-                    slidesPerView: 3,
-                    spaceBetween: 12,
-                    loop: true,
-                    navigation: {
-                        prevEl: productGalleryThumbsPrevEl,
-                        nextEl: productGalleryThumbsNextEl,
-                    },
-
-                    // freeMode: {
-                    //     enabled: true,
-                    // },
-                    breakpoints: {
-                        768: {
-                            slidesPerView: numberOfSlides > numberOfSlidesDefault ? numberOfSlidesDefault : 'auto',
-                            spaceBetween: 12,
-                        },
-                        1200: {
-                            slidesPerView: numberOfSlides > numberOfSlidesDefault ? numberOfSlidesDefault - 2 : 'auto',
-                            spaceBetween: 12,
-                        },
-                        1340: {
-                            spaceBetween: 12,
-                            slidesPerView: numberOfSlides > numberOfSlidesDefault ? numberOfSlidesDefault : 'auto',
-                        },
-                    },
-                });
-            }
-
-            new Swiper(productGallerySwiperEl, {
-                modules: [Thumb, Pagination],
-                slidesPerView: 1,
-                spaceBetween: 30,
-                loop: true,
-
-                pagination: {
-                    el: productGalleryPagination,
-                    clickable: true,
-                },
-                thumbs: {
-                    swiper: productGalleryThumbsSwiper ? productGalleryThumbsSwiper : null,
-                },
-            });
-        }
-    }
-
-    new Swiper('.js-categories-slider:not(.swiper-initialized)', {
-        modules: [Keyboard, freeMode, Navigation],
-        keyboard: {
-            enabled: true,
-            onlyInViewport: true,
-        },
-        grabCursor: true,
-        freeMode: true,
-        slidesPerView: 'auto',
-        slidesPerGroup: 2,
-        spaceBetween: 0,
-        loop: false,
-        navigation: {
-            prevEl: '.js-categories-slider-prev',
-            nextEl: '.js-categories-slider-next',
-          },
-        breakpoints: {
-            768: {
-                slidesPerGroup: 3,
-            },
-            1025: {
-                slidesPerGroup: 4,
-            },
-        },
-    });
-
     const productSliders = document.querySelectorAll('.js-product-slider');
 
     if (productSliders.length) {
@@ -10880,177 +10758,7 @@ function initSwiper() {
             }
         });
     }
-
-    new Swiper('.js-swiper-history:not(.swiper-initialized)', {
-        modules: [Keyboard, Navigation, freeMode],
-        keyboard: {
-            enabled: true,
-            onlyInViewport: true,
-        },
-        grabCursor: true,
-        freeMode: false,
-        slidesPerView: 'auto',
-        slidesPerGroup: 1,
-        spaceBetween: 20,
-        loop: true,
-        centeredSlides: true,
-        navigation: {
-          prevEl: '.js-swiper-history-prev',
-          nextEl: '.js-swiper-history-next',
-        },
-        breakpoints: {
-            576: {
-                spaceBetween: 0,
-                 freeMode: true,
-            },
-            768: {
-                spaceBetween: 0,
-                 freeMode: true,
-            },
-            992: {
-                spaceBetween: 0,
-                 freeMode: true,
-            },
-            1200: {
-                spaceBetween: 0,
-                 freeMode: true,
-            },
-        },
-        on: {
-            init: function (swiper) {
-                const swiperSection = swiper.el.closest('.js-swiper-history-section');
-
-                if (swiperSection) {
-                    if (swiper.isLocked) {
-                        swiperSection.classList.remove('is-swiper-items');
-                    } else {
-                        swiperSection.classList.add('is-swiper-items');
-                    }
-                }
-
-                // swiper.slideTo(1, 0);
-            },
-            resize: function (swiper) {
-                const swiperSection = swiper.el.closest('.js-swiper-history-section');
-
-                if (swiperSection) {
-                    if (swiper.isLocked) {
-                        swiperSection.classList.remove('is-swiper-items');
-                    } else {
-                        swiperSection.classList.add('is-swiper-items');
-                    }
-                }
-            },
-        },
-    });
-
-    const historySliders = document.querySelectorAll('.js-history-slider');
-
-    if (historySliders.length) {
-        historySliders.forEach((historySliderEl) => {
-            const historySliderSwiperEl = historySliderEl.querySelector('.js-history-slider-swiper:not(.swiper-initialized)');
-            const historyThumbsSwiperEl = historySliderEl.querySelector('.js-history-slider-thumbs');
-            const historyPreviewSwiperEl = historySliderEl.querySelector('.js-history-slider-preview');
-
-            if (historySliderSwiperEl) {
-                let historyThumbsSwiper;
-                let historyPreviewSwiper;
-
-                if (historyThumbsSwiperEl) {
-                    historyThumbsSwiper = new Swiper(historyThumbsSwiperEl, {
-                        modules: [EffectFade, Thumb],
-                        grabCursor: true,
-                        speed: 500,
-                        slidesPerView: 'auto',
-                        // spaceBetween: 30,
-                        loop: false,
-                    });
-                }
-
-                if (historyPreviewSwiperEl) {
-                    historyPreviewSwiper = new Swiper(historyPreviewSwiperEl, {
-                        modules: [EffectFade, Thumb],
-                        effect: 'fade',
-                        fadeEffect: {
-                            crossFade: true
-                        },
-                        speed: 500,
-                        slidesPerView: 1,
-                        spaceBetween: 0,
-                        loop: false,
-                        allowTouchMove: false,
-                        on: {
-                            init: function (swiper) {
-                                preloadNext(swiper, 0);
-                            },
-                            slideChange: function (swiper) {
-                                preloadNext(swiper, 0);
-                            },
-                          },
-                    });
-
-                    historyPreviewSwiper.slideTo(1);
-                }
-
-                new Swiper(historySliderSwiperEl, {
-                    modules: [Navigation, EffectFade, Thumb],
-                    grabCursor: true,
-                    effect: 'fade',
-                    fadeEffect: {
-                        crossFade: true
-                    },
-                    speed: 500,
-                    slidesPerView: 1,
-                    spaceBetween: 0,
-                    loop: false,
-                    navigation: {
-                        prevEl: '.js-history-slider-prev',
-                        nextEl: '.js-history-slider-next',
-                    },
-                    thumbs: {
-                        swiper: historyThumbsSwiper || null,
-                    },
-                    on: {
-                        init: function (swiper) {
-                            preloadNext(swiper, 0);
-                        },
-                        slideChange: function (swiper) {
-                            preloadNext(swiper, 0);
-                            if (historyPreviewSwiper) {
-                                historyPreviewSwiper.slideTo(swiper.realIndex + 1);
-
-                                if (swiper.progress >= 1) {
-                                    historyPreviewSwiperEl.classList.add('is-hidden');
-                                } else {
-                                    historyPreviewSwiperEl.classList.remove('is-hidden');
-                                }
-                            }
-                        },
-                      },
-                });
-
-
-            }
-        });
-    }
-
-    function preloadNext(swiper, n) {
-        swiper
-            .slides
-            .slice(swiper.activeIndex, swiper.activeIndex + n + 1)
-            .forEach(s => {
-                let img = s.querySelector('img');
-                let source = s.querySelector('source');
-
-                if (img) {
-                    img.setAttribute('src', img.getAttribute('data-src'));
-                    img.setAttribute('srcset', img.getAttribute('data-srcset'));
-                    img.classList.add('loaded');
-                }
-
-                source ? source.setAttribute('srcset', source.getAttribute('data-srcset')) : '';
-            });
-    }}
+}
 
 function getDefaultExportFromCjs (x) {
 	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
@@ -12490,6 +12198,62 @@ function initViewItems() {
     });
 }
 
+function initTimeline() {
+    const timelineItems = document.querySelectorAll(".js-timeline-item");
+    const timelineYears = document.querySelectorAll(".js-timeline-year");
+
+    if (!timelineItems?.length) return;
+
+    let activeIndex = 0;
+    const firstTimelineYearValue = timelineItems[0].getAttribute('data-year');
+    timelineItems[0].classList.add("is-active");
+
+    if (firstTimelineYearValue) {
+        const firstYearEl = document.querySelector(`.js-timeline-year[data-year="${firstTimelineYearValue}"]`);
+
+        if (firstYearEl) {
+            firstYearEl.classList.add('is-active');
+        }
+    }
+
+    onScroll();
+
+    function onScroll() {
+        const triggerPoint = window.innerHeight * 0.5; // 40% высоты экрана
+
+        timelineItems.forEach((item, index) => {
+            const rect = item.getBoundingClientRect();
+
+            // когда верх элемента дошёл до triggerPoint или выше
+            if (rect.top <= triggerPoint) {
+                activeIndex = index;
+            }
+        });
+
+        timelineItems.forEach(el => el.classList.remove("is-active"));
+        timelineYears.forEach(el => el.classList.remove("is-active"));
+
+        const timelineActive = timelineItems[activeIndex];
+
+        if (timelineActive) {
+            const timelineActiveYear = timelineActive.getAttribute('data-year');
+
+            const yearEl = document.querySelector(`.js-timeline-year[data-year="${timelineActiveYear}"]`);
+
+            timelineActive.classList.add("is-active");
+
+            if (yearEl) {
+                yearEl.classList.add("is-active");
+
+            }
+        }
+
+
+    }
+
+    window.addEventListener("scroll", onScroll);
+}
+
 document.addEventListener('change', function (e) {
     if (e.target.classList.contains('js-agreement-checkbox')) {
         const form = e.target.closest('form');
@@ -12519,6 +12283,8 @@ function updateAgreementButton(form) {
 // /* Import vendor ************************** */
 
 document.addEventListener('DOMContentLoaded', () => {
+    document.documentElement.classList.add(deviceType());
+
     initCheckboxes();
     initBaseTextField();
     initAccordions();
@@ -12534,25 +12300,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollToHandler({
         offset: 20
     });
-
-    document.documentElement.classList.add(deviceType());
 });
-
-// /* Initialization main components ************* */
-// setNotify();
-// setCounter();
-// setAttach();
-// setAnimation();
-// setTicker();
-// setAlert();
-// setDatepickerCalendar();
-
-// /* Initialization additional components ******* */
-
-// initMasonry();
-// initParallax();
-// initUislider();
-// initTooltip();
 
 // /* Initialization common scripts ********** */
 setVariables();
@@ -12567,6 +12315,7 @@ headerFixed();
 // /* Initialization additional scripts ********** */
 initFilters();
 initViewItems();
+initTimeline();
 
 // Lazy Load
 new g();
@@ -12584,32 +12333,3 @@ document.addEventListener('content:updated', e => {
     initScrollbar(container);
     initSwiper();
 });
-
-window.ajaxLoaded = () => {
-    // const phoneMaskInputs = document.querySelectorAll('.js-validate-field-phone');
-
-    // document.documentElement.updateDropdowns();
-
-    // setTabs();
-    // setFieldBox();
-    // setAttach();
-    // setAnimation();
-    // setTicker();
-    // // initTooltip();
-    // initScrollbar();
-    // initParallax();
-    // initSwiper();
-    // initMasonry();
-    // initUislider();
-
-    // if (phoneMaskInputs.length) {
-    //     for (let index = 0; index < phoneMaskInputs.length; index++) {
-    //         const phoneMaskEl = phoneMaskInputs[index];
-
-    //         IMask(phoneMaskEl, {
-    //             mask: '+{7} (000) 000-00-00',
-    //             // lazy: false,
-    //         });
-    //     }
-    // }
-};

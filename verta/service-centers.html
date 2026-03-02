@@ -16,9 +16,10 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Fira+Sans+Condensed:wght@500;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Fira+Sans+Condensed:wght@400;500;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script src="https://unpkg.com/imask"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=391f4ea0-bf90-4603-89b5-cabb30821c5e"></script>
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -361,31 +362,178 @@
                     </div>
                 </div>
             </section>
-            <section class="faq-section section">
-                <div class="faq-section__container container">
-                    <div class="faq-section__header">
-                        <div class="faq-section__subtitle subtitle"></div>
-                        <h2 class="faq-section__title title title--size-lg">Сервисные центры</h2>
+            <section class="service-centers section">
+                <div class="service-centers__container container">
+                    <div class="service-centers__header">
+                        <div class="service-centers__subtitle subtitle"></div>
+                        <h2 class="service-centers__title title title--size-lg">Сервисные центры</h2>
                     </div>
-                    <div class="faq-section__items">
-                        <div class="faq-section__item accordion js-accordion"> <button type="button" class="accordion__header js-accordion-button" aria-expanded="false"> <span class="accordion__title">Как стать дистрибьютором продукции торговой марки VERTA?</span> <span class="accordion__header-icon"></span> </button>
-                            <div class="accordion__content js-accordion-content">
-                                <div class="accordion__inner">
-                                    <div class="accordion__text">
-                                        <p>В&nbsp;этом разделе публикуем ответы на&nbsp;популярные вопросы. Не&nbsp;нашли ответов? Свяжитесь с&nbsp;нами по&nbsp;почте или телефону для консультации. Расскажем детали и&nbsp;подготовим индивидуальные условия сотрудничества</p>
-                                    </div>
-                                </div>
+                    <div class="service-centers__items">
+                        <div class="service-centers__item">
+                            <div class="service-centers__column service-centers__column--image">
+                                <div class="service-centers__item-image-box"> <img class="service-centers__item-image" src="img/placeholder.png" alt="" loading="lazy" width="156" height="156"> </div>
                             </div>
+                            <div class="service-centers__column service-centers__column--address">
+                                <div class="service-centers__item-address">
+                                    г.&nbsp;Екатеринбург, ул&nbsp;окружная, 88Э
+                                </div>
+                                <div class="service-centers__item-working-hours"> <svg class="base-icon base-icon-clock">
+                                        <use xlink:href="img/icons.svg#clock"></use>
+                                    </svg> <span>Пн-Пт: 09:00-18:00</span> </div>
+                            </div>
+                            <div class="service-centers__column service-centers__column--contacts">
+                                <div class="service-centers__item-contacts"> <a class="service-centers__item-contacts-phone" href="tel:+73432210311"> <svg class="base-icon base-icon-phone">
+                                            <use xlink:href="img/icons.svg#phone"></use>
+                                        </svg> <span>+7 343 221-03-11</span> </a> <a class="service-centers__item-contacts-email" href="mailto:info@vertatools.ru"> <svg class="base-icon base-icon-mail">
+                                            <use xlink:href="img/icons.svg#mail"></use>
+                                        </svg> <span>info@vertatools.ru</span> </a> </div>
+                            </div>
+                            <div class="service-centers__column service-centers__column--button"> <button type="button" class="service-centers__item-button base-button base-button--primary base-button--link base-button--size-auto"> <span class="base-button__inner"> <span class="base-button__icon"> <svg class="base-icon base-icon-location-pin">
+                                                <use xlink:href="img/icons.svg#location-pin"></use>
+                                            </svg> </span> <span class="base-button__content">
+                                            На карте
+                                        </span> </span> </button> </div>
+                            <div class="service-centers__column service-centers__column--arrow"> <svg class="service-centers__item-arrow base-icon base-icon-arrow">
+                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                </svg> </div>
+                        </div>
+                        <div class="service-centers__item">
+                            <div class="service-centers__column service-centers__column--image">
+                                <div class="service-centers__item-image-box"> <img class="service-centers__item-image" src="img/placeholder.png" alt="" loading="lazy" width="156" height="156"> </div>
+                            </div>
+                            <div class="service-centers__column service-centers__column--address">
+                                <div class="service-centers__item-address">
+                                    г.&nbsp;Екатеринбург, ул&nbsp;окружная, 88Э
+                                </div>
+                                <div class="service-centers__item-working-hours"> <svg class="base-icon base-icon-clock">
+                                        <use xlink:href="img/icons.svg#clock"></use>
+                                    </svg> <span>Пн-Пт: 09:00-18:00</span> </div>
+                            </div>
+                            <div class="service-centers__column service-centers__column--contacts">
+                                <div class="service-centers__item-contacts"> <a class="service-centers__item-contacts-phone" href="tel:+73432210311"> <svg class="base-icon base-icon-phone">
+                                            <use xlink:href="img/icons.svg#phone"></use>
+                                        </svg> <span>+7 343 221-03-11</span> </a> <a class="service-centers__item-contacts-email" href="mailto:info@vertatools.ru"> <svg class="base-icon base-icon-mail">
+                                            <use xlink:href="img/icons.svg#mail"></use>
+                                        </svg> <span>info@vertatools.ru</span> </a> </div>
+                            </div>
+                            <div class="service-centers__column service-centers__column--button"> <button type="button" class="service-centers__item-button base-button base-button--primary base-button--link base-button--size-auto"> <span class="base-button__inner"> <span class="base-button__icon"> <svg class="base-icon base-icon-location-pin">
+                                                <use xlink:href="img/icons.svg#location-pin"></use>
+                                            </svg> </span> <span class="base-button__content">
+                                            На карте
+                                        </span> </span> </button> </div>
+                            <div class="service-centers__column service-centers__column--arrow"> <svg class="service-centers__item-arrow base-icon base-icon-arrow">
+                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                </svg> </div>
+                        </div>
+                        <div class="service-centers__item">
+                            <div class="service-centers__column service-centers__column--image">
+                                <div class="service-centers__item-image-box"> <img class="service-centers__item-image" src="img/placeholder.png" alt="" loading="lazy" width="156" height="156"> </div>
+                            </div>
+                            <div class="service-centers__column service-centers__column--address">
+                                <div class="service-centers__item-address">
+                                    г.&nbsp;Екатеринбург, ул&nbsp;окружная, 88Э
+                                </div>
+                                <div class="service-centers__item-working-hours"> <svg class="base-icon base-icon-clock">
+                                        <use xlink:href="img/icons.svg#clock"></use>
+                                    </svg> <span>Пн-Пт: 09:00-18:00</span> </div>
+                            </div>
+                            <div class="service-centers__column service-centers__column--contacts">
+                                <div class="service-centers__item-contacts"> <a class="service-centers__item-contacts-phone" href="tel:+73432210311"> <svg class="base-icon base-icon-phone">
+                                            <use xlink:href="img/icons.svg#phone"></use>
+                                        </svg> <span>+7 343 221-03-11</span> </a> <a class="service-centers__item-contacts-email" href="mailto:info@vertatools.ru"> <svg class="base-icon base-icon-mail">
+                                            <use xlink:href="img/icons.svg#mail"></use>
+                                        </svg> <span>info@vertatools.ru</span> </a> </div>
+                            </div>
+                            <div class="service-centers__column service-centers__column--button"> <button type="button" class="service-centers__item-button base-button base-button--primary base-button--link base-button--size-auto"> <span class="base-button__inner"> <span class="base-button__icon"> <svg class="base-icon base-icon-location-pin">
+                                                <use xlink:href="img/icons.svg#location-pin"></use>
+                                            </svg> </span> <span class="base-button__content">
+                                            На карте
+                                        </span> </span> </button> </div>
+                            <div class="service-centers__column service-centers__column--arrow"> <svg class="service-centers__item-arrow base-icon base-icon-arrow">
+                                    <use xlink:href="img/icons.svg#arrow"></use>
+                                </svg> </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section class="faq-section section">
-                <div class="faq-section__container container">
-                    <div class="faq-section__header">
-                        <div class="faq-section__subtitle subtitle"></div>
-                        <h2 class="faq-section__title title title--size-lg">На карте города</h2>
+            <section class="map-section section">
+                <div class="map-section__container container">
+                    <div class="map-section__header">
+                        <div class="map-section__subtitle subtitle"></div>
+                        <h2 class="map-section__title title title--size-lg">На карте города</h2>
                     </div>
+                    <div class="map-section__map-wrapper">
+                        <div id="service-centers-map" style="width: 100%; height: 100%;"></div>
+                    </div>
+                    <script type="module">
+                        const observers = {};
+
+                        function callback(entries, observer) {
+                            entries.forEach((entry) => {
+                                const target = entry.target;
+                                if (entry.isIntersecting) {
+                                    ymaps.ready(function() {
+                                        const points = [{
+                                                id: 1,
+                                                coords: [56.755294, 60.584045]
+                                            },
+                                            {
+                                                id: 2,
+                                                coords: [56.758376, 60.595761]
+                                            }
+                                        ];
+                                        let iconWidth = 70;
+                                        let iconHeight = 86;
+                                        if (window.innerWidth <= 767.98) {
+                                            iconWidth = 44;
+                                            iconHeight = 54;
+                                        }
+                                        const myMap = new ymaps.Map("service-centers-map", {
+                                            center: points[0].coords,
+                                            zoom: 16,
+                                            controls: [
+                                                "zoomControl",
+                                                "fullscreenControl"
+                                            ]
+                                        }, {
+                                            suppressMapOpenBlock: true,
+                                            suppressObsoleteBrowserNotifier: true
+                                        });
+                                        const coordsArray = [];
+                                        points.forEach((point) => {
+                                            const placemark = new ymaps.Placemark(point.coords, {}, {
+                                                iconLayout: "default#image",
+                                                iconImageHref: "img/location.svg",
+                                                iconImageSize: [iconWidth, iconHeight],
+                                                iconImageOffset: [iconWidth * -0.5, iconHeight * -1]
+                                            });
+                                            myMap.geoObjects.add(placemark);
+                                            coordsArray.push(point.coords);
+                                        });
+                                        myMap.controls.remove("searchControl");
+                                        if (coordsArray.length === 1) {
+                                            myMap.setCenter(coordsArray[0], 16);
+                                        } else if (coordsArray.length > 1) {
+                                            myMap.setBounds(coordsArray, {
+                                                checkZoomRange: true,
+                                                zoomMargin: 50,
+                                                useMapMargin: true
+                                            });
+                                        }
+                                        myMap.behaviors.disable("scrollZoom");
+                                    });
+                                    observer.unobserve(target);
+                                }
+                            });
+                        }
+                        const mapElement = document.querySelector("#service-centers-map");
+                        if (mapElement) {
+                            observers["service-centers-map"] = new IntersectionObserver(callback, {
+                                rootMargin: "50px"
+                            });
+                            observers["service-centers-map"].observe(mapElement);
+                        }
+                    </script>
                 </div>
             </section>
             <section class="faq-section section">
@@ -457,12 +605,14 @@
                     </div>
                 </div>
             </section>
-            <section class="brand-section section">
+            <section class="brand-section section brand-section--full">
                 <div class="brand-section__inner">
                     <div class="brand-section__container container">
-                        <div class="brand-section__row">
-                            <div class="brand-section__logo"> <img class="brand-section__logo-image" src="img/logo.svg" width="208" height="54" alt="Verta"> </div>
-                            <div class="brand-section__title title">Движение. Действие. Развитие</div>
+                        <div class="brand-section__content">
+                            <div class="brand-section__row">
+                                <div class="brand-section__logo"> <img class="brand-section__logo-image" src="img/logo.svg" width="208" height="54" alt="Verta"> </div>
+                                <div class="brand-section__title title">Движение. Действие. Развитие</div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -577,7 +727,7 @@
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-r5r9pewae"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-r5r9pewae" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-uxp6a6hol"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-uxp6a6hol" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
@@ -585,14 +735,14 @@
                                     <div class="form__column">
                                         <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-r0dw98erg"> <span>Номер телефона</span> </label> <input id="base-text-field-r0dw98erg" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-vhm7buw40"> <span>Номер телефона</span> </label> <input id="base-text-field-vhm7buw40" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-81ba5393o"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-81ba5393o" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-s6erjv6l1"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-s6erjv6l1" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
@@ -600,14 +750,14 @@
                                     <div class="form__column">
                                         <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-msbwkl8cv"> <span>Интересующий товар/услуга</span> </label> <input id="base-text-field-msbwkl8cv" type="text" name="email" value class="base-text-field__input js-base-text-field-input"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-n1o8hx8rb"> <span>Интересующий товар/услуга</span> </label> <input id="base-text-field-n1o8hx8rb" type="text" name="email" value class="base-text-field__input js-base-text-field-input"> </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--textarea base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-zwc8oq0hi"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-zwc8oq0hi" name="message" rows="5" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-39zcjzadp"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-39zcjzadp" name="message" rows="5" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>

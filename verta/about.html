@@ -16,14 +16,14 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Fira+Sans+Condensed:wght@500;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800&family=Fira+Sans+Condensed:wght@400;500;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
     <script src="https://unpkg.com/imask"></script>
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <div class="wrapper">
+    <div class="wrapper page-about">
         <header class="header js-header"> <!-- <div class="header__backdrop js-header-backdrop"></div> -->
             <div class="header__inner">
                 <div class="header__container container">
@@ -245,21 +245,379 @@
             </div>
         </header>
         <main class="main">
-            <div class="breadcrumbs">
-                <div class="breadcrumbs__container container">
-                    <nav class="breadcrumbs__inner" role="navigation" aria-label="breadcrumbs">
-                        <ol class="breadcrumbs__list">
-                            <li class="breadcrumbs__item"> <a href="/" class="breadcrumbs__link"><span>Главная</span></a> </li>
-                            <li class="breadcrumbs__item" aria-current="page"> <span>О бренде</span> </li>
-                        </ol>
-                    </nav>
-                </div>
-            </div>
             <div class="p-section p-about">
-                <div class="p-about__page-title page-title page-title--size-lg">
-                    <h1>О бренде</h1>
+                <div class="p-about__header">
+                    <picture class="p-about__header-image-box">
+                        <source media="(max-width: 575.98px)" srcset="img/about/about-mobile.jpg 1x, img/about/about-mobile@2x.jpg 2x">
+                        <source media="(max-width: 1024.98px)" srcset="img/about/about-tablet.jpg 1x, img/about/about-tablet@2x.jpg 2x"> <img class="p-about__header-image" src="img/about/about.jpg" srcset="img/about/about@2x.jpg 2x" width="1920" height="670" alt="" loading="lazy">
+                    </picture>
+                    <div class="p-about__header-container container">
+                        <div class="p-about__header-content">
+                            <h1 class="p-about__page-title page-title">
+                                VERTA&nbsp;&mdash; российский бренд-производитель строительного электроинструмента
+                            </h1>
+                            <div class="p-about__main-text">
+                                <p>Для профессионалов, ремонтно-строительных бригад и&nbsp;любителей. Ассортимент бренда объединяет в&nbsp;себе модели на&nbsp;стыке повседневности и&nbsp;инноваций</p>
+                            </div>
+                            <div class="p-about__button-wrapper"> <button type="button" data-modal-open="#order-modal" class="p-about__button button-more base-button base-button--white"> <span class="base-button__inner"> <span class="base-button__content">
+                                            Сделать заказ
+                                        </span> <span class="base-button__icon"> <svg class="base-icon base-icon-nav">
+                                                <use xlink:href="img/icons.svg#nav"></use>
+                                            </svg> </span> </span> </button> </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+            <section class="statistics-section section">
+                <div class="statistics-section__container container">
+                    <div class="statistics-section__content u-box">
+                        <div class="statistics-section__items l-grid l-grid-cols-4">
+                            <div class="statistics-section__item">
+                                <div class="statistics-section__item">
+                                    <div class="statistics-section__item-number"> 5 </div>
+                                    <div class="statistics-section__item-text">Производственных площадок в&nbsp;Китае</div>
+                                </div>
+                            </div>
+                            <div class="statistics-section__item">
+                                <div class="statistics-section__item">
+                                    <div class="statistics-section__item-number"> 469 </div>
+                                    <div class="statistics-section__item-text">Товаров VERTA в&nbsp;ассортименте</div>
+                                </div>
+                            </div>
+                            <div class="statistics-section__item">
+                                <div class="statistics-section__item">
+                                    <div class="statistics-section__item-number"> 10 500 </div>
+                                    <div class="statistics-section__item-text">Общая площадь складов</div>
+                                </div>
+                            </div>
+                            <div class="statistics-section__item">
+                                <div class="statistics-section__item">
+                                    <div class="statistics-section__item-number"> 500 </div>
+                                    <div class="statistics-section__item-text">Сотрудников в&nbsp;Китае и&nbsp;России</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="brand-section section brand-section--short">
+                <div class="brand-section__inner">
+                    <div class="brand-section__container container">
+                        <div class="brand-section__content">
+                            <div class="brand-section__row">
+                                <div class="brand-section__logo"> <img class="brand-section__logo-image" src="img/logo.svg" width="208" height="54" alt="Verta"> </div>
+                                <div class="brand-section__title title">Движение. Действие. Развитие</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about-section--short about-section section">
+                <div class="about-section__inner">
+                    <div class="about-section__container container">
+                        <div class="about-section__row l-grid l-grid-cols-2 l-gap-10">
+                            <div class="about-section__column about-section__column--items">
+                                <div class="about-section__items l-grid l-grid-cols-2 l-gap-10">
+                                    <div class="about-section__item">
+                                        <div class="about-section__item-inner">
+                                            <div class="about-section__item-image-wrapper">
+                                                <div class="about-section__item-image-box"> <img class="about-section__item-image" src="img/about/innovation.png" srcset="img/about/innovation@2x.png" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="about-section__item-content">
+                                                <div class="about-section__item-title"> Инновации </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="about-section__item">
+                                        <div class="about-section__item-inner">
+                                            <div class="about-section__item-image-wrapper">
+                                                <div class="about-section__item-image-box"> <img class="about-section__item-image" src="img/about/quality.png" srcset="img/about/quality@2x.png" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="about-section__item-content">
+                                                <div class="about-section__item-title"> Качество </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="about-section__item">
+                                        <div class="about-section__item-inner">
+                                            <div class="about-section__item-image-wrapper">
+                                                <div class="about-section__item-image-box"> <img class="about-section__item-image" src="img/about/responsibility.png" srcset="img/about/responsibility@2x.png" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="about-section__item-content">
+                                                <div class="about-section__item-title"> Ответственность </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="about-section__item">
+                                        <div class="about-section__item-inner">
+                                            <div class="about-section__item-image-wrapper">
+                                                <div class="about-section__item-image-box"> <img class="about-section__item-image" src="img/about/availability.png" srcset="img/about/availability@2x.png" alt="" loading="lazy"> </div>
+                                            </div>
+                                            <div class="about-section__item-content">
+                                                <div class="about-section__item-title"> Доступность </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="brand-history section">
+                <div class="brand-history__inner">
+                    <div class="brand-history__container container">
+                        <div class="brand-history__row l-grid l-grid-cols-2 l-gap-10">
+                            <div class="brand-history__column brand-history__column--title">
+                                <div class="brand-history__sticky sticky-sidebar js-sticky-sidebar">
+                                    <div class="sticky-sidebar__sticky js-sticky" data-sticky-min-width="768">
+                                        <div class="sticky-sidebar__inner">
+                                            <div class="sticky-sidebar__content">
+                                                <h2 class="brand-history__title title title--size-lg">История бренда</h2>
+                                                <div class="brand-history__years u-hidden-mobile">
+                                                    <div class="brand-history__year js-timeline-year" data-year="2013">
+                                                        20<span>13</span> </div>
+                                                    <div class="brand-history__year js-timeline-year" data-year="2015">
+                                                        20<span>15</span> </div>
+                                                    <div class="brand-history__year js-timeline-year" data-year="2019">
+                                                        20<span>19</span> </div>
+                                                    <div class="brand-history__year js-timeline-year" data-year="2021">
+                                                        20<span>21</span> </div>
+                                                    <div class="brand-history__year js-timeline-year" data-year="2025">
+                                                        20<span>25</span> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="brand-history__column brand-history__column--timeline">
+                                <div class="brand-history__timeline timeline js-timeline">
+                                    <div class="timeline__items l-grid l-gap-10">
+                                        <div class="timeline__item js-timeline-item" data-year="2013">
+                                            <div class="timeline__item-circle"></div>
+                                            <div class="timeline__item-line"></div>
+                                            <div class="timeline__item-inner">
+                                                <div class="timeline__item-content">
+                                                    <div class="timeline__item-header">
+                                                        <div class="timeline__item-title">2013 год</div>
+                                                    </div>
+                                                    <div class="timeline__item-text">
+                                                        <p>Основание бренда VERTA и&nbsp;запуск на&nbsp;российский рынок строительного миксера</p>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__item-image-wrapper">
+                                                    <div class="timeline__item-image-box"> <img class="timeline__item-image" width="290" width="383" src="img/history/1.png" srcset="img/history/1.png" alt="" loading="lazy"> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="timeline__item js-timeline-item" data-year="2015">
+                                            <div class="timeline__item-circle"></div>
+                                            <div class="timeline__item-line"></div>
+                                            <div class="timeline__item-inner">
+                                                <div class="timeline__item-content">
+                                                    <div class="timeline__item-header">
+                                                        <div class="timeline__item-title">2015 год</div>
+                                                    </div>
+                                                    <div class="timeline__item-text">
+                                                        <p>Расширение ассортиментной линейки остнасткой к&nbsp;поставяемым инструментам</p>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__item-image-wrapper">
+                                                    <div class="timeline__item-image-box"> <img class="timeline__item-image" width="290" width="383" src="img/history/2.png" srcset="img/history/2@2x.png 2x" alt="" loading="lazy"> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="timeline__item js-timeline-item" data-year="2019">
+                                            <div class="timeline__item-circle"></div>
+                                            <div class="timeline__item-line"></div>
+                                            <div class="timeline__item-inner">
+                                                <div class="timeline__item-content">
+                                                    <div class="timeline__item-header">
+                                                        <div class="timeline__item-title">2019 год</div>
+                                                    </div>
+                                                    <div class="timeline__item-text">
+                                                        <p>Запуск профессиональной линейки ULTRA PROFI c&nbsp;расширенными возможностями инструментов</p>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__item-image-wrapper">
+                                                    <div class="timeline__item-image-box"> <img class="timeline__item-image" width="290" width="383" src="img/history/3.png" srcset="img/history/3@2x.png 2x" alt="" loading="lazy"> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="timeline__item js-timeline-item" data-year="2021">
+                                            <div class="timeline__item-circle"></div>
+                                            <div class="timeline__item-line"></div>
+                                            <div class="timeline__item-inner">
+                                                <div class="timeline__item-content">
+                                                    <div class="timeline__item-header">
+                                                        <div class="timeline__item-title">2021 год</div>
+                                                    </div>
+                                                    <div class="timeline__item-text">
+                                                        <p>Внедрение системы OBS для аккумуляторного электроинструмента</p>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__item-image-wrapper">
+                                                    <div class="timeline__item-image-box"> <img class="timeline__item-image" width="290" width="383" src="img/history/4.png" srcset="img/history/4@2x.png 2x" alt="" loading="lazy"> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="timeline__item js-timeline-item" data-year="2025">
+                                            <div class="timeline__item-circle"></div>
+                                            <div class="timeline__item-line"></div>
+                                            <div class="timeline__item-inner">
+                                                <div class="timeline__item-content">
+                                                    <div class="timeline__item-header">
+                                                        <div class="timeline__item-title">2025 год</div>
+                                                    </div>
+                                                    <div class="timeline__item-text">
+                                                        <p>Расширение ассортимента: строительный фен и&nbsp;цепная пила</p>
+                                                    </div>
+                                                </div>
+                                                <div class="timeline__item-image-wrapper">
+                                                    <div class="timeline__item-image-box"> <img class="timeline__item-image" width="290" width="383" src="img/history/5.png" srcset="img/history/5@2x.png 2x" alt="" loading="lazy"> </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="production-section section">
+                <div class="container">
+                    <div class="production-section__row l-grid l-gap-40">
+                        <div class="production-section__column">
+                            <h2 class="production-section__title title title--size-lg u-visible-desktop-sm">Производство</h2>
+                            <div class="production-section__description description">
+                                <div class="production-section__text">
+                                    <p>Все наши производственные процессы размещены на&nbsp;5&nbsp;различных площадках в&nbsp;Китае. Это позволяет осуществлять дополнительный контроль качества на&nbsp;каждом этапе производства и&nbsp;сборки инструмента</p>
+                                </div>
+                                <div class="production-section__text">
+                                    <ul class="production-section__list u-styled-list">
+                                        <li>Наши производственные площадки ежегодно подтверждают стандарт ISO 9001</li>
+                                        <li>Непрерывный процесс модернизации оборудования на&nbsp;заводах позволяет оперативно реагировать на&nbsp;запрос клиентов по&nbsp;качеству, функциям и&nbsp;материалам</li>
+                                        <li>В&nbsp;разработке новых моделей участвуют высококвалифицированные специалисты из&nbsp;России и&nbsp;Китая</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="production-section__column production-section__column--gallery">
+                            <h2 class="production-section__title title title--size-lg u-hidden-desktop-sm">Производство</h2>
+                            <div class="production-section__gallery gallery-section section">
+                                <div class="gallery-section__container container">
+                                    <div class="gallery-section__content js-gallery-swiper-section">
+                                        <div class="swiper gallery-section__swiper js-gallery-swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide gallery-section__swiper-slide">
+                                                    <div class="gallery-section__item gallery-item"> <a href="img/production-section/1-full.jpg" class="gallery-item__inner" data-fancybox="gallery" data-thumb="img/production-section/1-thumb.jpg">
+                                                            <picture class="gallery-item__image-box">
+                                                                <source media="(max-width: 575.98px)" srcset="img/production-section/1-mobile.jpg 1x, img/production-section/1-mobile@2x.jpg 2x"> <img class="gallery-item__image" src="img/production-section/1.jpg" srcset="img/production-section/1@2x.jpg 2x" width="1298" height="890" alt="" loading="lazy">
+                                                            </picture>
+                                                        </a> </div>
+                                                </div>
+                                                <div class="swiper-slide gallery-section__swiper-slide">
+                                                    <div class="gallery-section__item gallery-item"> <a href="img/production-section/1-full.jpg" class="gallery-item__inner" data-fancybox="gallery" data-thumb="img/production-section/1-thumb.jpg">
+                                                            <picture class="gallery-item__image-box">
+                                                                <source media="(max-width: 575.98px)" srcset="img/production-section/1-mobile.jpg 1x, img/production-section/1-mobile@2x.jpg 2x"> <img class="gallery-item__image" src="img/production-section/1.jpg" srcset="img/production-section/1@2x.jpg 2x" width="1298" height="890" alt="" loading="lazy">
+                                                            </picture>
+                                                        </a> </div>
+                                                </div>
+                                                <div class="swiper-slide gallery-section__swiper-slide">
+                                                    <div class="gallery-section__item gallery-item"> <a href="img/production-section/1-full.jpg" class="gallery-item__inner" data-fancybox="gallery" data-thumb="img/production-section/1-thumb.jpg">
+                                                            <picture class="gallery-item__image-box">
+                                                                <source media="(max-width: 575.98px)" srcset="img/production-section/1-mobile.jpg 1x, img/production-section/1-mobile@2x.jpg 2x"> <img class="gallery-item__image" src="img/production-section/1.jpg" srcset="img/production-section/1@2x.jpg 2x" width="1298" height="890" alt="" loading="lazy">
+                                                            </picture>
+                                                        </a> </div>
+                                                </div>
+                                                <div class="swiper-slide gallery-section__swiper-slide">
+                                                    <div class="gallery-section__item gallery-item"> <a href="img/production-section/1-full.jpg" class="gallery-item__inner" data-fancybox="gallery" data-thumb="img/production-section/1-thumb.jpg">
+                                                            <picture class="gallery-item__image-box">
+                                                                <source media="(max-width: 575.98px)" srcset="img/production-section/1-mobile.jpg 1x, img/production-section/1-mobile@2x.jpg 2x"> <img class="gallery-item__image" src="img/production-section/1.jpg" srcset="img/production-section/1@2x.jpg 2x" width="1298" height="890" alt="" loading="lazy">
+                                                            </picture>
+                                                        </a> </div>
+                                                </div>
+                                            </div>
+                                            <div class="gallery-section__swiper-footer swiper-footer">
+                                                <div class="gallery-section__swiper-scrollbar-wrapper swiper-scrollbar-wrapper">
+                                                    <div class="gallery-section__swiper-scrollbar swiper-scrollbar js-gallery-swiper-scrollbar"></div>
+                                                </div>
+                                                <div class="gallery-section__swiper-control swiper-control"> <button type="button" class="gallery-section__swiper-prev js-gallery-swiper-prev swiper-button-prev"> <svg width="29" height="30" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M12 6L21 15L12 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg> </button> <button type="button" class="gallery-section__swiper-next js-gallery-swiper-next swiper-button-next"> <svg width="29" height="30" viewBox="0 0 29 30" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M12 6L21 15L12 24" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                        </svg> </button> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="nav-section section">
+                <div class="nav-section__container container">
+                    <div class="nav-section__content">
+                        <div class="nav-section__items l-grid l-grid-cols-4 l-gap-10"> <a class="nav-section__item nav-section__item--hover" href="#">
+                                <div class="nav-section__item-icon-box"> <svg class="nav-section__item-icon base-icon base-icon-phone">
+                                        <use xlink:href="img/icons.svg#phone"></use>
+                                    </svg> </div>
+                                <div class="nav-section__item-title">Связаться</div>
+                            </a><a class="nav-section__item nav-section__item--hover" href="#">
+                                <div class="nav-section__item-icon-box"> <svg class="nav-section__item-icon base-icon base-icon-shop">
+                                        <use xlink:href="img/icons.svg#shop"></use>
+                                    </svg> </div>
+                                <div class="nav-section__item-title">Дилерам</div>
+                            </a><a class="nav-section__item nav-section__item--hover" href="#">
+                                <div class="nav-section__item-icon-box"> <svg class="nav-section__item-icon base-icon base-icon-gear">
+                                        <use xlink:href="img/icons.svg#gear"></use>
+                                    </svg> </div>
+                                <div class="nav-section__item-title">Сервисные центры</div>
+                            </a><a class="nav-section__item nav-section__item--hover" href="#">
+                                <div class="nav-section__item-icon-box"> <svg class="nav-section__item-icon base-icon base-icon-drill">
+                                        <use xlink:href="img/icons.svg#drill"></use>
+                                    </svg> </div>
+                                <div class="nav-section__item-title">Где купить</div>
+                            </a> </div>
+                    </div>
+                </div>
+            </section>
+            <section class="request-section section">
+                <div class="request-section__container container">
+                    <div class="request-section__wrapper">
+                        <div class="request-section__image-wrapper u-hidden-mobile">
+                            <div class="request-section__image-box"> <img class="request-section__image" src="img/request/request.png" srcset="img/request/request@2x.png 2x" alt="" loading="lazy" width="496" height="743"> </div>
+                        </div>
+                        <div class="request-section__content">
+                            <h2 class="request-section__title title">Оформите заявку на сайте</h2>
+                            <div class="request-section__text section-text">
+                                <p>Мы&nbsp;свяжемся с&nbsp;Вами в&nbsp;ближайшее время и&nbsp;ответим на&nbsp;все интересующие вопросы</p>
+                            </div> <button type="button" data-modal-open="#order-modal" class="request-section__button base-button base-button--secondary"> <span class="base-button__inner"> <span class="base-button__content">
+                                        Задать вопрос
+                                    </span> </span> </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="seo-section section">
+                <div class="seo-section__container container">
+                    <div class="seo-section__content u-box">
+                        <h2 class="seo-section__title title title--size-lg">SEO заголовок</h2>
+                        <div class="seo-section__text description">
+                            <p>Все наши производственные процессы размещены на&nbsp;5&nbsp;различных площадках в&nbsp;Китае. Это позволяет осуществлять дополнительный контроль качества на&nbsp;каждом этапе производства и&nbsp;сборки инструмента.</p>
+                            <p>Все наши производственные процессы размещены на&nbsp;5&nbsp;различных площадках в&nbsp;Китае. Это позволяет осуществлять дополнительный контроль качества на&nbsp;каждом этапе производства и&nbsp;сборки инструмента.</p>
+                        </div>
+                        <div class="seo-section__button-wrapper"> <a href="#" class="seo-section__button button-more base-button base-button--secondary base-button--outlined"> <span class="base-button__inner"> <span class="base-button__content">
+                                        Читать далее
+                                    </span> <span class="base-button__icon"> <svg class="base-icon base-icon-nav">
+                                            <use xlink:href="img/icons.svg#nav"></use>
+                                        </svg> </span> </span> </a> </div>
+                    </div>
+                </div>
+            </section>
         </main>
         <footer class="footer js-footer">
             <div class="footer__inner">
@@ -370,7 +728,7 @@
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-9e39f9tj9"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-9e39f9tj9" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-pnuo6xhje"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-pnuo6xhje" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
@@ -378,14 +736,14 @@
                                     <div class="form__column">
                                         <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-95kl51hxo"> <span>Номер телефона</span> </label> <input id="base-text-field-95kl51hxo" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-rawzu41u9"> <span>Номер телефона</span> </label> <input id="base-text-field-rawzu41u9" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-jdpvs7cp7"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-jdpvs7cp7" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-obn248qxt"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-obn248qxt" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
@@ -393,14 +751,14 @@
                                     <div class="form__column">
                                         <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-faufiim22"> <span>Интересующий товар/услуга</span> </label> <input id="base-text-field-faufiim22" type="text" name="email" value class="base-text-field__input js-base-text-field-input"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-avg9f9btc"> <span>Интересующий товар/услуга</span> </label> <input id="base-text-field-avg9f9btc" type="text" name="email" value class="base-text-field__input js-base-text-field-input"> </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--textarea base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-maf2m4ptt"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-maf2m4ptt" name="message" rows="5" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-l376mu8bz"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-l376mu8bz" name="message" rows="5" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
