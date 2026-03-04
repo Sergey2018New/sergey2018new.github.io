@@ -393,9 +393,9 @@
                                             </svg> </span> <span class="base-button__content">
                                             На карте
                                         </span> </span> </button> </div>
-                            <div class="service-centers__column service-centers__column--arrow"> <svg class="service-centers__item-arrow base-icon base-icon-arrow">
-                                    <use xlink:href="img/icons.svg#arrow"></use>
-                                </svg> </div>
+                            <div class="service-centers__column service-centers__column--arrow"> <a href="#" class="service-centers__item-arrow-button"> <svg class="service-centers__item-arrow base-icon base-icon-arrow">
+                                        <use xlink:href="img/icons.svg#arrow"></use>
+                                    </svg> </a> </div>
                         </div>
                         <div class="service-centers__item">
                             <div class="service-centers__column service-centers__column--image">
@@ -421,9 +421,9 @@
                                             </svg> </span> <span class="base-button__content">
                                             На карте
                                         </span> </span> </button> </div>
-                            <div class="service-centers__column service-centers__column--arrow"> <svg class="service-centers__item-arrow base-icon base-icon-arrow">
-                                    <use xlink:href="img/icons.svg#arrow"></use>
-                                </svg> </div>
+                            <div class="service-centers__column service-centers__column--arrow"> <a href="#" class="service-centers__item-arrow-button"> <svg class="service-centers__item-arrow base-icon base-icon-arrow">
+                                        <use xlink:href="img/icons.svg#arrow"></use>
+                                    </svg> </a> </div>
                         </div>
                         <div class="service-centers__item">
                             <div class="service-centers__column service-centers__column--image">
@@ -449,9 +449,9 @@
                                             </svg> </span> <span class="base-button__content">
                                             На карте
                                         </span> </span> </button> </div>
-                            <div class="service-centers__column service-centers__column--arrow"> <svg class="service-centers__item-arrow base-icon base-icon-arrow">
-                                    <use xlink:href="img/icons.svg#arrow"></use>
-                                </svg> </div>
+                            <div class="service-centers__column service-centers__column--arrow"> <a href="#" class="service-centers__item-arrow-button"> <svg class="service-centers__item-arrow base-icon base-icon-arrow">
+                                        <use xlink:href="img/icons.svg#arrow"></use>
+                                    </svg> </a> </div>
                         </div>
                     </div>
                 </div>
@@ -502,10 +502,31 @@
                                         const coordsArray = [];
                                         points.forEach((point) => {
                                             const placemark = new ymaps.Placemark(point.coords, {}, {
-                                                iconLayout: "default#image",
-                                                iconImageHref: "img/location.svg",
+                                                iconLayout: "default#imageWithContent",
+                                                iconImageHref: "",
+                                                // Пустая строка вместо изображения
                                                 iconImageSize: [iconWidth, iconHeight],
-                                                iconImageOffset: [iconWidth * -0.5, iconHeight * -1]
+                                                iconImageOffset: [iconWidth * -0.5, iconHeight * -1],
+                                                iconContentLayout: ymaps.templateLayoutFactory.createClass(
+                                                    `<div
+                                                class="custom-marker"
+                                                data-id="${point.id}"
+                                                style="width: ${iconWidth}px; height: ${iconHeight}px;}"
+                                            ></div>`
+                                                ),
+                                                iconContentOffset: [0, 0]
+                                            });
+                                            placemark.events.add("mouseenter", function(e) {
+                                                const markerElement = document.querySelector(`.custom-marker[data-id="${point.id}"]`);
+                                                if (markerElement) {
+                                                    markerElement.classList.add("is-hover");
+                                                }
+                                            });
+                                            placemark.events.add("mouseleave", function(e) {
+                                                const markerElement = document.querySelector(`.custom-marker[data-id="${point.id}"]`);
+                                                if (markerElement) {
+                                                    markerElement.classList.remove("is-hover");
+                                                }
                                             });
                                             myMap.geoObjects.add(placemark);
                                             coordsArray.push(point.coords);
@@ -727,7 +748,7 @@
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-uxp6a6hol"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-uxp6a6hol" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-9ome87ssy"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-9ome87ssy" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
@@ -735,14 +756,14 @@
                                     <div class="form__column">
                                         <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-vhm7buw40"> <span>Номер телефона</span> </label> <input id="base-text-field-vhm7buw40" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-et33ibbn9"> <span>Номер телефона</span> </label> <input id="base-text-field-et33ibbn9" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-s6erjv6l1"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-s6erjv6l1" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-sgyge1id5"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-sgyge1id5" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
@@ -750,14 +771,14 @@
                                     <div class="form__column">
                                         <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-n1o8hx8rb"> <span>Интересующий товар/услуга</span> </label> <input id="base-text-field-n1o8hx8rb" type="text" name="email" value class="base-text-field__input js-base-text-field-input"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-rp1o3bbq1"> <span>Интересующий товар/услуга</span> </label> <input id="base-text-field-rp1o3bbq1" type="text" name="email" value class="base-text-field__input js-base-text-field-input"> </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--textarea base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-39zcjzadp"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-39zcjzadp" name="message" rows="5" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-7qyeswbsy"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-7qyeswbsy" name="message" rows="5" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>

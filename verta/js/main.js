@@ -398,7 +398,7 @@ function initBaseTextField(root = document) {
 		* .js-accordion - accordion block
 			** If it is necessary to close neighboring accordions, then specify the data-accordion-one attribute
 			** If you want to always display the active accordion (without the possibility of closing), then specify the data-accordion-visible attribute
-			** If by default you want to show the accordion, then you need to specify the classes .is-active.is-visible
+			** If by default you want to show the accordion, then you need to specify the classes .is-open.is-visible
 		* .js-accordion-button - open/close dropdown content button
 		* .js-accordion-content - drop-down content
 */
@@ -423,9 +423,15 @@ function initAccordions(accordionsContainer, duration = 300) {
         const accordionContent = accordionEl.querySelector('.js-accordion-content');
         let isOpen = true;
         const eventOpened = new Event('accordionOpened', {
-            bubbles: true
+            detail: {
+                accordionEl: accordionEl,
+            },
+            bubbles: true,
         });
         const eventClosed = new Event('accordionClosed', {
+             detail: {
+                accordionEl: accordionEl,
+            },
             bubbles: true
         });
         const accordionItem = () => {
@@ -433,12 +439,12 @@ function initAccordions(accordionsContainer, duration = 300) {
 
             if (accordionEl.hasAttribute('data-accordion-one')) {
                 const accordionsEl = accordionEl.closest('.js-accordions');
-                const accordionActive = accordionsEl ? accordionsEl.querySelector('.js-accordion.is-active') : null;
+                const accordionActive = accordionsEl ? accordionsEl.querySelector('.js-accordion.is-open') : null;
 
                 if (accordionActive && accordionActive !== accordionEl) {
                     const accordionActiveContent = accordionActive.querySelector('.js-accordion-content');
 
-                    accordionActive.classList.remove('is-active');
+                    accordionActive.classList.remove('is-open');
                     accordionButton.setAttribute('aria-expanded', 'false');
 
                     if (accordionActiveContent) {
@@ -453,21 +459,19 @@ function initAccordions(accordionsContainer, duration = 300) {
                 }
             }
 
-            accordionEl.classList.toggle('is-active');
+            accordionEl.classList.toggle('is-open');
 
             accordionContent.style.maxHeight = `${accordionContent.scrollHeight}px`;
 
-            if (accordionEl.classList.contains('is-active')) {
+            if (accordionEl.classList.contains('is-open')) {
                 accordionButton.setAttribute('aria-expanded', 'true');
+
                 setTimeout(() => {
                     accordionEl.classList.add('is-visible');
-                }, duration);
-
-                setTimeout(() => {
                     accordionContent.style.maxHeight = null;
+                    accordionEl.dispatchEvent(eventOpened);
                 }, duration);
 
-                accordionEl.dispatchEvent(eventOpened);
             } else {
                 accordionButton.setAttribute('aria-expanded', 'false');
                 accordionEl.classList.remove('is-visible');
@@ -476,7 +480,10 @@ function initAccordions(accordionsContainer, duration = 300) {
                     accordionContent.style.maxHeight = null;
                 }, 1);
 
-                accordionEl.dispatchEvent(eventClosed);
+                setTimeout(() => {
+                    accordionEl.dispatchEvent(eventClosed);
+                }, duration);
+
             }
 
             setTimeout(() => {
@@ -488,7 +495,7 @@ function initAccordions(accordionsContainer, duration = 300) {
         accordionEl.classList.add('is-accordion-init');
 
         if (accordionButton && accordionContent) {
-            if (accordionEl.classList.contains('is-active')) {
+            if (accordionEl.classList.contains('is-open')) {
                 accordionButton.setAttribute('aria-expanded', 'true');
             }
 
@@ -499,7 +506,7 @@ function initAccordions(accordionsContainer, duration = 300) {
 
                 if (isOpen) {
                     if (isVisible) {
-                        if (!accordionEl.classList.contains('is-active')) {
+                        if (!accordionEl.classList.contains('is-open')) {
                             accordionItem ();
                         }
                     } else {
@@ -10760,133 +10767,272 @@ function initSwiper() {
     }
 }
 
-function getDefaultExportFromCjs (x) {
-	return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, 'default') ? x['default'] : x;
-}
+class StickyElement {
+  constructor(container) {
+    this.container = container;
+    this.sticky = container.querySelector('.sticky-element');
 
-var hcSticky$2 = {exports: {}};
+    if (!this.sticky) return;
 
-/*
- * HC-Sticky
- * =========
- * Version: 2.2.7
- * Author: Some Web Media
- * Author URL: https://github.com/somewebmedia
- * Plugin URL: https://github.com/somewebmedia/hc-sticky
- * Description: JavaScript library that makes any element on your page visible while you scroll
- * License: MIT
- */
-var hcSticky$1 = hcSticky$2.exports;
+    this.topOffset = parseInt(container.dataset.topOffset) || 20;
+    this.bottomOffset = parseInt(container.dataset.bottomOffset) || 20;
 
-var hasRequiredHcSticky;
+    this.stickyStyles = {};
+    this.lastScroll = 0;
+    this.stickyTop = 0;
+    this.containerTop = 0;
+    this.containerHeight = 0;
+    this.stickyHeight = 0;
+    this.stickyWidth = 0;
+    this.containerWidth = 0;
+    this.isShortSticky = false;
+    this.prevStickyOffset = 0;
+    this.prevPosition = null;
 
-function requireHcSticky () {
-	if (hasRequiredHcSticky) return hcSticky$2.exports;
-	hasRequiredHcSticky = 1;
-	(function (module) {
-!function(t,e){{if(!t.document)throw new Error("HC-Sticky requires a browser to run.");module.exports=e(t);}}("undefined"!=typeof window?window:hcSticky$1,function(V){var i,n,Q=V.document,U={top:0,bottom:0,bottomEnd:0,innerTop:0,innerSticker:null,stickyClass:"sticky",stickTo:null,followScroll:true,responsive:null,mobileFirst:false,onStart:null,onStop:null,onBeforeResize:null,onResize:null,resizeDebounce:100,disable:false},Y=function(t,e,o){console.warn("%cHC Sticky:%c "+o+"%c '"+t+"'%c is now deprecated and will be removed. Use%c '"+e+"'%c instead.","color: #fa253b","color: default","color: #5595c6","color: default","color: #5595c6","color: default");},$=function(n,f){var o=this;if(f=f||{},!(n="string"==typeof n?Q.querySelector(n):n))return  false;f.queries&&Y("queries","responsive","option"),f.queryFlow&&Y("queryFlow","mobileFirst","option");var p={},u=$.Helpers,s=n.parentNode;"static"===u.getStyle(s,"position")&&(s.style.position="relative");function d(t){u.isEmptyObject(t=t||{})&&!u.isEmptyObject(p)||(p=Object.assign({},U,p,t));}function t(){return p.disable}function e(){var t,e=p.responsive||p.queries;if(e){var o=V.innerWidth;if(t=f,(p=Object.assign({},U,t||{})).mobileFirst)for(var i in e)i<=o&&!u.isEmptyObject(e[i])&&d(e[i]);else {var n,s=[];for(n in e){var r={};r[n]=e[n],s.push(r);}for(var l=s.length-1;0<=l;l--){var a=s[l],c=Object.keys(a)[0];o<=c&&!u.isEmptyObject(a[c])&&d(a[c]);}}}}function i(){var t,e,o,i;I.css=(t=n,e=u.getCascadedStyle(t),o=u.getStyle(t),i={height:t.offsetHeight+"px",left:e.left,right:e.right,top:e.top,bottom:e.bottom,position:o.position,display:o.display,verticalAlign:o.verticalAlign,boxSizing:o.boxSizing,marginLeft:e.marginLeft,marginRight:e.marginRight,marginTop:e.marginTop,marginBottom:e.marginBottom,paddingLeft:e.paddingLeft,paddingRight:e.paddingRight},e.float&&(i.float=e.float||"none"),e.cssFloat&&(i.cssFloat=e.cssFloat||"none"),o.MozBoxSizing&&(i.MozBoxSizing=o.MozBoxSizing),i.width="auto"!==e.width?e.width:"border-box"===i.boxSizing||"border-box"===i.MozBoxSizing?t.offsetWidth+"px":o.width,i),P.init(),y=!(!p.stickTo||!("document"===p.stickTo||p.stickTo.nodeType&&9===p.stickTo.nodeType||"object"==typeof p.stickTo&&p.stickTo instanceof("undefined"!=typeof HTMLDocument?HTMLDocument:Document))),h=p.stickTo?y?Q:u.getElement(p.stickTo):s,z=(R=function(){var t=n.offsetHeight+(parseInt(I.css.marginTop)||0)+(parseInt(I.css.marginBottom)||0),e=(z||0)-t;return  -1<=e&&e<=1?z:t})(),v=(H=function(){return y?Math.max(Q.documentElement.clientHeight,Q.body.scrollHeight,Q.documentElement.scrollHeight,Q.body.offsetHeight,Q.documentElement.offsetHeight):h.offsetHeight})(),S=y?0:u.offset(h).top,w=p.stickTo?y?0:u.offset(s).top:S,E=V.innerHeight,N=n.offsetTop-(parseInt(I.css.marginTop)||0),b=u.getElement(p.innerSticker),L=isNaN(p.top)&&-1<p.top.indexOf("%")?parseFloat(p.top)/100*E:p.top,k=isNaN(p.bottom)&&-1<p.bottom.indexOf("%")?parseFloat(p.bottom)/100*E:p.bottom,x=b?b.offsetTop:p.innerTop||0,T=isNaN(p.bottomEnd)&&-1<p.bottomEnd.indexOf("%")?parseFloat(p.bottomEnd)/100*E:p.bottomEnd,j=S-L+x+N;}function r(){z=R(),v=H(),O=S+v-L-T,C=E<z;var t,e=V.pageYOffset||Q.documentElement.scrollTop,o=u.offset(n).top,i=o-e;B=e<F?"up":"down",A=e-F,j<(F=e)?O+L+(C?k:0)-(p.followScroll&&C?0:L)<=e+z-x-(E-(j-x)<z-x&&p.followScroll&&0<(t=z-E-x)?t:0)?I.release({position:"absolute",bottom:w+s.offsetHeight-O-L}):C&&p.followScroll?"down"==B?i+z+k<=E+.9?I.stick({bottom:k}):"fixed"===I.position&&I.release({position:"absolute",top:o-L-j-A+x}):Math.ceil(i+x)<0&&"fixed"===I.position?I.release({position:"absolute",top:o-L-j+x-A}):e+L-x<=o&&I.stick({top:L-x}):I.stick({top:L-x}):I.release({stop:true});}function l(){M&&(V.removeEventListener("scroll",r,u.supportsPassive),M=false);}function a(){null!==n.offsetParent&&"none"!==u.getStyle(n,"display")?(i(),v<z?l():(r(),M||(V.addEventListener("scroll",r,u.supportsPassive),M=true))):l();}function c(){n.style.position="",n.style.left="",n.style.top="",n.style.bottom="",n.style.width="",n.classList?n.classList.remove(p.stickyClass):n.className=n.className.replace(new RegExp("(^|\\b)"+p.stickyClass.split(" ").join("|")+"(\\b|$)","gi")," "),I.css={},!(I.position=null)===P.isAttached&&P.detach();}function g(){c(),e(),(t()?l:a)();}function m(){q&&(V.removeEventListener("resize",W,u.supportsPassive),q=false),l();}var y,h,b,v,S,w,E,L,k,x,T,j,O,C,z,N,H,R,A,B,I={css:{},position:null,stick:function(t){t=t||{},u.hasClass(n,p.stickyClass)||(false===P.isAttached&&P.attach(),I.position="fixed",n.style.position="fixed",n.style.left=P.offsetLeft+"px",n.style.width=P.width,void 0===t.bottom?n.style.bottom="auto":n.style.bottom=t.bottom+"px",void 0===t.top?n.style.top="auto":n.style.top=t.top+"px",n.classList?n.classList.add(p.stickyClass):n.className+=" "+p.stickyClass,p.onStart&&p.onStart.call(n,Object.assign({},p)));},release:function(t){var e;(t=t||{}).stop=t.stop||false,true!==t.stop&&"fixed"!==I.position&&null!==I.position&&(void 0===t.top&&void 0===t.bottom||void 0!==t.top&&(parseInt(u.getStyle(n,"top"))||0)===t.top||void 0!==t.bottom&&(parseInt(u.getStyle(n,"bottom"))||0)===t.bottom)||(true===t.stop?true===P.isAttached&&P.detach():false===P.isAttached&&P.attach(),e=t.position||I.css.position,I.position=e,n.style.position=e,n.style.left=true===t.stop?I.css.left:P.positionLeft+"px",n.style.width=("absolute"!==e?I.css:P).width,void 0===t.bottom?n.style.bottom=true===t.stop?"":"auto":n.style.bottom=t.bottom+"px",void 0===t.top?n.style.top=true===t.stop?"":"auto":n.style.top=t.top+"px",n.classList?n.classList.remove(p.stickyClass):n.className=n.className.replace(new RegExp("(^|\\b)"+p.stickyClass.split(" ").join("|")+"(\\b|$)","gi")," "),p.onStop&&p.onStop.call(n,Object.assign({},p)));}},P={el:Q.createElement("div"),offsetLeft:null,positionLeft:null,width:null,isAttached:false,init:function(){for(var t in P.el.className="sticky-spacer",I.css)P.el.style[t]=I.css[t];P.el.style["z-index"]="-1";var e=u.getStyle(n);P.offsetLeft=u.offset(n).left-(parseInt(e.marginLeft)||0),P.positionLeft=u.position(n).left,P.width=u.getStyle(n,"width");},attach:function(){s.insertBefore(P.el,n),P.isAttached=true;},detach:function(){P.el=s.removeChild(P.el),P.isAttached=false;}},F=V.pageYOffset||Q.documentElement.scrollTop,M=false,q=false,D=function(){p.onBeforeResize&&p.onBeforeResize.call(n,Object.assign({},p)),g(),p.onResize&&p.onResize.call(n,Object.assign({},p));},W=p.resizeDebounce?u.debounce(D,p.resizeDebounce):D,D=function(){q||(V.addEventListener("resize",W,u.supportsPassive),q=true),e(),(t()?l:a)();};this.options=function(t){return t?p[t]:Object.assign({},p)},this.refresh=g,this.update=function(t){d(t),f=Object.assign({},f,t||{}),g();},this.attach=D,this.detach=m,this.destroy=function(){m(),c();},this.triggerMethod=function(t,e){"function"==typeof o[t]&&o[t](e);},this.reinit=function(){Y("reinit","refresh","method"),g();},d(f),D(),V.addEventListener("load",g);};return void 0!==V.jQuery&&(i=V.jQuery,n="hcSticky",i.fn.extend({hcSticky:function(e,o){return this.length?"options"===e?i.data(this.get(0),n).options():this.each(function(){var t=i.data(this,n);t?t.triggerMethod(e,o):(t=new $(this,e),i.data(this,n,t));}):this}})),V.hcSticky=V.hcSticky||$,$}),function(a){var t=a.hcSticky,c=a.document;"function"!=typeof Object.assign&&Object.defineProperty(Object,"assign",{value:function(t,e){if(null==t)throw new TypeError("Cannot convert undefined or null to object");for(var o=Object(t),i=1;i<arguments.length;i++){var n=arguments[i];if(null!=n)for(var s in n)Object.prototype.hasOwnProperty.call(n,s)&&(o[s]=n[s]);}return o},writable:true,configurable:true}),Array.prototype.forEach||(Array.prototype.forEach=function(t){var e,o;if(null==this)throw new TypeError("this is null or not defined");var i,n=Object(this),s=n.length>>>0;if("function"!=typeof t)throw new TypeError(t+" is not a function");for(1<arguments.length&&(e=arguments[1]),o=0;o<s;)o in n&&(i=n[o],t.call(e,i,o,n)),o++;});var e=false;try{var o=Object.defineProperty({},"passive",{get:function(){e={passive:!1};}});a.addEventListener("testPassive",null,o),a.removeEventListener("testPassive",null,o);}catch(t){}function n(t,e){return a.getComputedStyle?e?c.defaultView.getComputedStyle(t,null).getPropertyValue(e):c.defaultView.getComputedStyle(t,null):t.currentStyle?e?t.currentStyle[e.replace(/-\w/g,function(t){return t.toUpperCase().replace("-","")})]:t.currentStyle:void 0}function s(t){var e=t.getBoundingClientRect(),o=a.pageYOffset||c.documentElement.scrollTop,t=a.pageXOffset||c.documentElement.scrollLeft;return {top:e.top+o,left:e.left+t}}t.Helpers={supportsPassive:e,isEmptyObject:function(t){for(var e in t)return  false;return  true},debounce:function(i,n,s){var r;return function(){var t=this,e=arguments,o=s&&!r;clearTimeout(r),r=setTimeout(function(){r=null,s||i.apply(t,e);},n),o&&i.apply(t,e);}},hasClass:function(t,e){return t.classList?t.classList.contains(e):new RegExp("(^| )"+e+"( |$)","gi").test(t.className)},offset:s,position:function(t){var e=t.offsetParent,o=s(e),i=s(t),e=n(e),t=n(t);return o.top+=parseInt(e.borderTopWidth)||0,o.left+=parseInt(e.borderLeftWidth)||0,{top:i.top-o.top-(parseInt(t.marginTop)||0),left:i.left-o.left-(parseInt(t.marginLeft)||0)}},getElement:function(t){var e=null;return "string"==typeof t?e=c.querySelector(t):a.jQuery&&t instanceof a.jQuery&&t.length?e=t[0]:t instanceof Element&&(e=t),e},getStyle:n,getCascadedStyle:function(t){var e,o=t.cloneNode(true);o.style.display="none",Array.prototype.slice.call(o.querySelectorAll('input[type="radio"]')).forEach(function(t){t.removeAttribute("name");}),t.parentNode.insertBefore(o,t.nextSibling),o.currentStyle?e=o.currentStyle:a.getComputedStyle&&(e=c.defaultView.getComputedStyle(o,null));var i,n,s,r={};for(i in e)!isNaN(i)||"string"!=typeof e[i]&&"number"!=typeof e[i]||(r[i]=e[i]);if(Object.keys(r).length<3)for(var l in r={},e)isNaN(l)||(r[e[l].replace(/-\w/g,function(t){return t.toUpperCase().replace("-","")})]=e.getPropertyValue(e[l]));return r.margin||"auto"!==r.marginLeft?r.margin||r.marginLeft!==r.marginRight||r.marginLeft!==r.marginTop||r.marginLeft!==r.marginBottom||(r.margin=r.marginLeft):r.margin="auto",r.margin||"0px"!==r.marginLeft||"0px"!==r.marginRight||(s=(n=t.offsetLeft-t.parentNode.offsetLeft)-(parseInt(r.left)||0)-(parseInt(r.right)||0),0!=(s=t.parentNode.offsetWidth-t.offsetWidth-n-(parseInt(r.right)||0)+(parseInt(r.left)||0)-s)&&1!=s||(r.margin="auto")),o.parentNode.removeChild(o),o=null,r}};}(window); 
-	} (hcSticky$2));
-	return hcSticky$2.exports;
-}
+    // Bind methods
+    this.onScroll = this.onScroll.bind(this);
+    this.updatePosition = this.updatePosition.bind(this);
+    this.updateWidth = this.updateWidth.bind(this);
+    this.forceUpdateWidth = this.forceUpdateWidth.bind(this);
 
-var hcStickyExports = requireHcSticky();
-const hcSticky = /*@__PURE__*/getDefaultExportFromCjs(hcStickyExports);
+    this.init();
+  }
 
-/**
- * Sticky
-*/
-function initSticky() {
-    const stickyElements = document.querySelectorAll('.js-sticky');
+  init() {
+    // Обновляем позицию и ширину сразу
+    this.updatePosition();
+    this.forceUpdateWidth();
 
-    if (stickyElements.length) {
-        stickyElements.forEach((stickyEl) => {
-            const minWidth = parseInt(stickyEl.getAttribute('data-sticky-min-width')) || 1025;
-            const stickyStyle = getComputedStyle(stickyEl);
-            const stickySidebar = stickyEl.closest('.js-sticky-sidebar');
+    // Добавляем слушатели событий
+    window.addEventListener('scroll', this.onScroll, { passive: true });
 
-            let timer;
-            let sticky;
-            const setSticky = () => {
-                sticky = new hcSticky(stickyEl, {
-                    stickyClass: 'is-fixed',
-                });
-                if (stickySidebar) {
-                    stickySidebar.classList.add('is-sticky-init');
+    // Наблюдаем за изменениями размеров контейнера (это главное!)
+    this.containerObserver = new ResizeObserver((entries) => {
+      // При изменении размера контейнера обновляем ширину
+      this.forceUpdateWidth();
+      this.updatePosition();
+    });
 
-                }
-            };
-
-            if (window.innerWidth >= minWidth) {
-                setSticky();
-            }
-
-            window.addEventListener('resize', () => {
-                if (window.innerWidth >= minWidth) {
-                    if (!sticky) {
-                        setSticky();
-                    }
-                } else {
-                    if (sticky) {
-                        sticky.destroy();
-                        sticky = null;
-
-                        if (stickySidebar) {
-                            stickySidebar.classList.remove('is-sticky-init');
-
-                        }
-
-                    }
-                }
-            });
-
-            document.addEventListener('accordionOpened', () => {
-                if (sticky) {
-                    const stylePosition = stickyStyle.getPropertyValue('position');
-                    const styleTop = stickyEl.style.top;
-
-                    if (stylePosition === 'absolute' && styleTop === 'auto') {
-                        if (timer) {
-                            clearInterval(timer);
-                        }
-
-                        timer = setInterval(() => {
-                            sticky.update();
-                        }, 1);
-
-                        setTimeout(() => {
-                            clearInterval(timer);
-                            timer = null;
-                        }, 300);
-                    }
-                }
-            });
-
-            document.addEventListener('accordionClosed', (event) => {
-                if (sticky) {
-                    const stylePosition = stickyStyle.getPropertyValue('position');
-                    const styleTop = stickyEl.style.top;
-
-                    if (!event.target.closest('.js-sticky') || stylePosition === 'absolute' && styleTop === 'auto') {
-
-                        setTimeout(() => {
-                            if (timer) {
-                                clearInterval(timer);
-                            }
-
-                            timer = setInterval(() => {
-                                sticky.update();
-                            }, 1);
-
-                            setTimeout(() => {
-                                clearInterval(timer);
-                                timer = null;
-                            }, 300);
-                        }, event.target.closest('.js-sticky') ? 300 : 0);
-                    }
-                }
-            });
-        });
+    if (this.container) {
+      this.containerObserver.observe(this.container);
     }
+
+    // Наблюдаем за самим sticky на случай изменения его размеров
+    this.stickyObserver = new ResizeObserver(() => {
+      this.forceUpdateWidth();
+    });
+
+    if (this.sticky) {
+      this.stickyObserver.observe(this.sticky);
+    }
+
+    // Добавляем этот экземпляр в глобальный массив
+    if (!window.__stickyInstances) {
+      window.__stickyInstances = [];
+    }
+    window.__stickyInstances.push(this);
+  }
+
+  destroy() {
+    window.removeEventListener('scroll', this.onScroll);
+
+    if (this.containerObserver) {
+      this.containerObserver.disconnect();
+    }
+
+    if (this.stickyObserver) {
+      this.stickyObserver.disconnect();
+    }
+
+    // Удаляем из глобального массива
+    if (window.__stickyInstances) {
+      const index = window.__stickyInstances.indexOf(this);
+      if (index > -1) {
+        window.__stickyInstances.splice(index, 1);
+      }
+    }
+  }
+
+  forceUpdateWidth() {
+    // Немедленное обновление
+    this.updateWidth();
+  }
+
+  updateWidth() {
+    if (!this.container || !this.sticky) return;
+
+    // ПОЛУЧАЕМ ШИРИНУ КОНТЕЙНЕРА, А НЕ STICKY!
+    const containerWidth = this.container.offsetWidth ||
+                          this.container.clientWidth ||
+                          this.container.getBoundingClientRect().width;
+
+    const roundedContainerWidth = Math.round(containerWidth);
+
+    // Сохраняем ширину контейнера
+    if (roundedContainerWidth > 0) {
+      this.containerWidth = roundedContainerWidth;
+
+      // Устанавливаем CSS переменную на sticky элемент с шириной контейнера
+      // Это позволяет sticky элементу знать ширину своего контейнера
+      this.sticky.style.setProperty('--sticky-width', `${roundedContainerWidth}px`);
+
+      // Также сохраняем ширину самого sticky для других нужд
+      const stickyWidth = this.sticky.offsetWidth ||
+                         this.sticky.clientWidth ||
+                         this.sticky.getBoundingClientRect().width;
+      this.stickyWidth = Math.round(stickyWidth);
+    }
+  }
+
+  updatePosition() {
+    if (!this.container || !this.sticky) return;
+
+    const scrollTop = Math.round(window.scrollY || window.pageYOffset);
+    const containerRect = this.container.getBoundingClientRect();
+    const stickyRect = this.sticky.getBoundingClientRect();
+
+    this.containerTop = Math.ceil(containerRect.top) + scrollTop;
+    this.containerHeight = Math.ceil(this.container.offsetHeight);
+    this.stickyHeight = Math.ceil(this.sticky.offsetHeight);
+    this.stickyTop = Math.ceil(stickyRect.top) + scrollTop;
+
+    this.onScroll();
+  }
+
+  updateSticky() {
+    this.forceUpdateWidth();
+    this.updatePosition();
+    this.onScroll();
+  }
+
+  onScroll() {
+    if (!this.sticky || !this.container) return;
+
+    const scrollTop = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const stickyRect = this.sticky.getBoundingClientRect();
+
+    const startSticky = this.containerTop - this.topOffset;
+    const stickyElementTop = stickyRect.top + scrollTop;
+
+    const scrollingDown = scrollTop > this.lastScroll;
+    this.lastScroll = scrollTop;
+    this.isShortSticky = false;
+
+    const diff = Math.abs(this.stickyHeight - this.containerHeight);
+
+    this.sticky.classList.remove('is-short-sticky');
+
+    if (diff < 5) {
+      this.setStickyStyle({});
+      return;
+    }
+
+    if (this.stickyHeight <= windowHeight - this.topOffset - this.bottomOffset) {
+      this.isShortSticky = true;
+      this.sticky.classList.add('is-short-sticky');
+      this.setStickyStyle({ position: 'sticky' });
+      return;
+    }
+
+    if (scrollTop >= startSticky) {
+      const scrollBottom = scrollTop + windowHeight;
+      const stickyElementBottom = stickyElementTop + this.stickyHeight;
+      const stickyOffsetToWindowTop = stickyElementTop - scrollTop;
+      const stickyOffsetToContainer = stickyElementTop - this.containerTop;
+
+      const isStickyBottom = (scrollBottom - this.bottomOffset >= stickyElementBottom - this.bottomOffset);
+      const isPositionBottom = scrollBottom - this.bottomOffset >= this.containerTop + this.containerHeight - this.bottomOffset;
+
+      if (scrollingDown) {
+        if (scrollTop >= this.containerTop + this.topOffset) {
+          if (isPositionBottom) {
+            if (this.stickyHeight >= this.containerHeight - 2) {
+              this.setStickyStyle({});
+              return;
+            }
+            this.setStickyStyle({ position: 'sticky', top: this.topOffset + 'px', bottom: 'auto' });
+          } else if (isStickyBottom) {
+            this.setStickyStyle({ position: 'fixed', bottom: this.bottomOffset + 'px', top: 'auto' });
+          } else {
+            this.setStickyStyle({ position: 'absolute', top: Math.round(stickyOffsetToContainer) + 'px' });
+          }
+        }
+      } else {
+        if (Math.abs(stickyOffsetToWindowTop) > 0) {
+          if (stickyOffsetToWindowTop >= 0) {
+            this.setStickyStyle({ position: 'sticky' });
+          } else if (!isPositionBottom) {
+            this.setStickyStyle({ position: 'absolute', top: Math.round(stickyOffsetToContainer) + 'px' });
+          }
+        }
+      }
+    } else {
+      this.setStickyStyle({});
+    }
+  }
+
+  setStickyStyle(newStyle) {
+    if (!this.sticky) return;
+
+    if (this.prevPosition === newStyle.position) {
+      if (newStyle.position === 'absolute') {
+        const diff = Math.abs(
+          (parseInt(newStyle.top) || 0) - (parseInt(this.stickyStyles.top) || 0)
+        );
+        if (diff < 2) return;
+      } else {
+        return;
+      }
+    }
+
+    this.stickyStyles = newStyle;
+    this.prevPosition = newStyle.position;
+
+    // Применяем стили
+    Object.assign(this.sticky.style, {
+      position: newStyle.position || '',
+      top: newStyle.top || '',
+      bottom: newStyle.bottom || ''
+    });
+
+    // Убеждаемся, что CSS переменная с шириной контейнера установлена
+    if (this.containerWidth > 0) {
+      this.sticky.style.setProperty('--sticky-width', `${this.containerWidth}px`);
+    }
+  }
+}
+
+// Функция для инициализации всех sticky
+function initAllSticky() {
+  const containers = document.querySelectorAll('.js-sticky-container');
+
+  containers.forEach(container => {
+    if (!container._stickyInstance) {
+      const instance = new StickyElement(container);
+      container._stickyInstance = instance;
+    }
+  });
+
+  return window.__stickyInstances || [];
+}
+
+// Автоматическая инициализация
+if (typeof document !== 'undefined') {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => {
+      initAllSticky();
+    });
+  } else {
+    initAllSticky();
+  }
+}
+
+// Для Astro
+if (typeof window !== 'undefined') {
+  window.addEventListener('astro:page-load', () => {
+    initAllSticky();
+  });
 }
 
 /**
@@ -12033,7 +12179,7 @@ function initFilters() {
                 filtersContent.setAttribute('aria-disabled', false);
 
                 setTimeout(() => {
-                    filtersContent.classList.add('is-active');
+                    filtersContent.classList.add('is-open');
                 }, 1);
             }
 
@@ -12064,9 +12210,7 @@ function initFilters() {
         if (isFiltersReady && filtersEl) {
             const filtersToggleButton = document.querySelector('.js-filters-toggle-button');
             const filtersContent = filtersEl.querySelector('.js-filters-content');
-            filtersEl.querySelector('.js-filters-inner');
             const filtersBackdrop = filtersEl.querySelector('.js-filters-backdrop');
-            filtersEl.querySelector('.js-filters-close');
             isFiltersReady = false;
             isFiltersOpen = false;
 
@@ -12079,7 +12223,7 @@ function initFilters() {
             }
 
             if (filtersContent) {
-                filtersContent.classList.remove('is-active');
+                filtersContent.classList.remove('is-open');
                 filtersContent.setAttribute('aria-disabled', true);
 
                 setTimeout(() => {
@@ -12095,6 +12239,24 @@ function initFilters() {
                 isFiltersReady = true;
             }, delay);
         }
+    };
+
+    const updateShowButtonPosition = (targetEl) => {
+        if (!targetEl) return;
+
+        const filters = targetEl.closest('.js-filters');
+
+        if (!filters) return;
+
+        const showButton = document.querySelector('.js-filters-show-button');
+        const filtersItemActive = filters.querySelector('.js-filters-item.is-active');
+
+        console.log(filtersItemActive);
+
+        if (!filtersItemActive || !showButton) return;
+
+        const height = filtersItemActive.offsetHeight;
+        showButton.style.top = `${filtersItemActive.offsetTop + height / 2}px`;
     };
 
     document.addEventListener('click', (event) => {
@@ -12134,6 +12296,17 @@ function initFilters() {
                 filterItem.classList.toggle('is-show-all');
             }
         }
+        if (
+            target.classList.contains('js-filters-item-button')
+            || target.closest('.js-filters-item-button')
+        ) {
+            const showButton = document.querySelector('.js-filters-show-button');
+            const filtersItem = target.classList.contains('js-filters-item') ? target : target.closest('.js-filters-item');
+
+            if (showButton && filtersItem.classList.contains('is-active')) {
+                showButton.classList.remove('is-active');
+            }
+        }
     });
 
     document.addEventListener('change', (event) => {
@@ -12141,17 +12314,20 @@ function initFilters() {
 
         if (target.classList.contains('js-filters-checkbox')
         ) {
+            const filters = target.closest('.js-filters');
             const showButton = document.querySelector('.js-filters-show-button');
+            const filtersItem = target.closest('.js-filters-item');
+            const filtersItemActive = filters.querySelector('.js-filters-item.is-active');
 
-            if (showButton) {
-                const rect = target.getBoundingClientRect();
-                const top = rect.top + window.scrollY;
-                const height = target.offsetHeight;
-                const filters = document.querySelector('.js-filters-sidebar');
-                const filtersPosTop = filters ? (filters.getBoundingClientRect().top + window.scrollY) : 0;
+            if (showButton && filtersItem) {
+                if (filtersItemActive) {
+                    filtersItemActive.classList.remove('is-active');
+                }
 
+                filtersItem.classList.add('is-active');
                 showButton.classList.add('is-active');
-                showButton.style.top = `${top - filtersPosTop + (height / 2)}px`;
+
+                updateShowButtonPosition(target);
             }
         }
     });
@@ -12168,6 +12344,14 @@ function initFilters() {
                 focusCatcher(e, filtersContent);
             }
         }
+    });
+
+    document.addEventListener('accordionOpened', e => {
+        updateShowButtonPosition(e.target);
+    });
+
+    document.addEventListener('accordionClosed', e => {
+        updateShowButtonPosition(e.target);
     });
 }
 
@@ -12296,7 +12480,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initScrollbar();
     initSwiper();
     initFancybox();
-    initSticky();
+    initAllSticky();
     initScrollToHandler({
         offset: 20
     });
