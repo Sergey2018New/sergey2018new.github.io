@@ -8074,7 +8074,7 @@ select::-ms-clear {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: inherit;
-  transition: 0.8s transform;
+  transition: 0.5s transform;
   will-change: transform;
 }
 .video__play {
