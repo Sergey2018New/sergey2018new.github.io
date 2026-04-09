@@ -18360,7 +18360,7 @@ input::-ms-clear {
   }
 }
 
-@media (max-width: 1400px) {
+@media (min-width: 1400px) {
   .products-section_secondary .products-section__swiper {
     --slidesPerView: 5;
   }
