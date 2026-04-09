@@ -7170,7 +7170,7 @@ input::-ms-clear {
 
 .product__slider-dots {
   position: absolute;
-  bottom: 0;
+  bottom: -1.2rem;
   left: 0;
   width: 100%;
   display: flex;
@@ -7790,6 +7790,10 @@ input::-ms-clear {
   }
 }
 
+.product_secondary .product__image-wrapper {
+  padding: 1rem;
+}
+
 @media (max-width: 1024.98px) {
   .product_secondary .product__image-wrapper {
     margin-top: 1rem;
@@ -7851,6 +7855,7 @@ input::-ms-clear {
 .product_secondary .product__button {
   width: 100%;
   height: 4.4rem;
+  font-size: 1.4rem;
 }
 
 /* ------- Search Form ------- */
@@ -18355,6 +18360,12 @@ input::-ms-clear {
   }
 }
 
+@media (max-width: 1400px) {
+  .products-section_secondary .products-section__swiper {
+    --slidesPerView: 5;
+  }
+}
+
 .our-promotions__inner {
   position: relative;
 }
@@ -20819,6 +20830,12 @@ input::-ms-clear {
   grid-column: -1/1;
 }
 
+@media (max-width: 575.98px) {
+  .p-catalog__goods .product__button {
+    font-size: 1.2rem;
+  }
+}
+
 .p-catalog__goods.is-grid .product__parameters {
   display: none;
 }
@@ -20853,14 +20870,12 @@ input::-ms-clear {
 }
 
 .p-catalog__goods.is-list .p-catalog__product {
-  border: none;
   display: grid;
   grid-template-columns: 26.6rem minmax(0, 1fr) auto;
   grid-template-areas: "image content header" "image content footer";
   -moz-column-gap: 2rem;
        column-gap: 2rem;
-  padding: 0;
-  border-radius: 0;
+  padding: 2.4rem;
   background: none;
 }
 
@@ -20894,9 +20909,7 @@ input::-ms-clear {
   grid-area: image;
   height: 28.4rem;
   padding: 1rem 1.2rem 3.4rem;
-  border-radius: var(--radius, 2rem);
   overflow: hidden;
-  border: 1px solid var(--color-grey-200, #E9E9E9);
 }
 
 @media (max-width: 1024.98px) {
@@ -21452,11 +21465,19 @@ input::-ms-clear {
   --category-image-height: 6rem;
 }
 
+@media (max-width: 767.98px) {
+  .p-catalog__categories-item {
+    min-height: 7.3rem;
+    display: flex;
+  }
+}
+
 .p-catalog__categories-item .category-item__link {
   gap: 1.5rem;
   background: none;
   padding: 2rem;
   border: 1px solid var(--color-grey-200, #E9E9E9);
+  min-height: 100%;
 }
 
 .p-catalog__categories-item .category-item__link:hover {
@@ -21493,7 +21514,7 @@ input::-ms-clear {
 }
 
 .p-catalog__categories-item .category-item__title {
-  line-height: 1.1;
+  line-height: 1.2;
   font-size: var(--text-sm, 14px);
   font-weight: 400;
 }
