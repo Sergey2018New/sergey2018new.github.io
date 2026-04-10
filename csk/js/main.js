@@ -53482,7 +53482,7 @@ function setShowMoreList() {
 function initProductImages(root = document) {
   const SELECTOR = '.js-product-images';
   const INIT_FLAG = 'inited';
-  const DELAY = 50;
+  const DELAY = 0;
 
   const sliders = root.querySelectorAll(SELECTOR);
 
