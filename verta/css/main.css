@@ -8872,16 +8872,30 @@ select::-ms-clear {
     overflow: hidden;
     display: none;
     transition: 0.4s opacity;
+    opacity: 0;
+    visibility: hidden;
     background: var(--color-white, #fff);
     will-change: opacity;
-  }
-  .filters__content.is-active {
-    display: flex;
   }
 }
 @media (max-width: 1199.98px) and (max-height: 430px) {
   .filters__content {
     padding-bottom: 0;
+  }
+}
+@media (max-width: 1199.98px) {
+  .filters__content.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+.filters__content.is-visible {
+  display: flex;
+}
+@media (max-width: 1199.98px) {
+  .filters__content.is-visible {
+    max-height: none;
+    overflow: visible;
   }
 }
 .filters__backdrop {
