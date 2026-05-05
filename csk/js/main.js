@@ -53486,11 +53486,15 @@ function initProductImages(root = document) {
 
   const sliders = root.querySelectorAll(SELECTOR);
 
-   sliders.forEach((slider) => {
+    sliders.forEach((slider) => {
     if (slider.dataset[INIT_FLAG]) return;
-    slider.dataset[INIT_FLAG] = 'true';
 
     const images = slider.querySelectorAll('.js-product-images-img');
+    if (images && images.length < 2) return;
+
+    slider.dataset[INIT_FLAG] = 'true';
+
+
     let loaded = new Set([0]);
     let hoverTimeout = null;
     let lastIndex = 0;
