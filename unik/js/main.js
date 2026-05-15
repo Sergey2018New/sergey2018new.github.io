@@ -10474,7 +10474,7 @@ function initSwiper() {
                 slidesPerGroup: 2,
                 spaceBetween: 12,
                 loop: false,
-                speed: 400,
+                speed: 600,
                 navigation: {
                   prevEl: '.js-products-swiper-prev',
                   nextEl: '.js-products-swiper-next',
@@ -10548,7 +10548,7 @@ function initSwiper() {
             enabled: true,
             onlyInViewport: true,
         },
-        speed: 400,
+        speed: 600,
 
         grabCursor: true,
        freeMode: true,
@@ -10561,7 +10561,6 @@ function initSwiper() {
             draggable: true,
             snapOnRelease: false,
         },
-        speed: 400,
         slidesPerView: 2,
         slidesPerGroup: 2,
         spaceBetween: 12,
@@ -10574,6 +10573,11 @@ function initSwiper() {
             576: {
                 slidesPerView: 2,
                 slidesPerGroup: 2,
+                spaceBetween: 16,
+            },
+             768: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
                 spaceBetween: 16,
             },
              1025: {
@@ -10621,7 +10625,7 @@ function initSwiper() {
             enabled: true,
             onlyInViewport: true,
         },
-        speed: 400,
+        speed: 600,
 
         grabCursor: true,
         freeMode: {
@@ -10633,7 +10637,6 @@ function initSwiper() {
             forceToAxis: true,
             enabled: true,
         },
-        speed: 400,
         slidesPerView: 'auto',
         slidesPerGroup: 1,
 
@@ -10697,7 +10700,7 @@ function initSwiper() {
             enabled: true,
             onlyInViewport: true,
         },
-        speed: 400,
+        speed: 600,
 
         grabCursor: true,
         freeMode: {
@@ -10709,7 +10712,6 @@ function initSwiper() {
             forceToAxis: true,
             enabled: true,
         },
-        speed: 400,
         slidesPerView: 'auto',
         slidesPerGroup: 1,
 
