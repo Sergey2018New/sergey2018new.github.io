@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Партнёры | Unik</title>
+    <meta name="description" content="Описание страницы">
+    <link rel="icon" href="/favicon/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/favicon/icon-192x192.png">
+    <link rel="manifest" href="/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/just-validate@latest/dist/just-validate.production.min.js"></script>
+    <script src="https://unpkg.com/imask"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header js-header"> <!-- <div class="header__backdrop js-header-backdrop"></div> -->
+            <div class="header__inner">
+                <div class="header__container container">
+                    <div class="header__logo-wrapper"> <a href="/" class="header__logo"> <img class="header__logo-image" src="img/logo.svg" width="114" height="58" alt="Unik"> </a> </div>
+                    <div class="header__menu-wrapper">
+                        <div class="menu header__menu js-menu"> <!-- <div class="menu__backdrop js-menu-backdrop"></div> --> <button class="menu__burger js-menu-burger" type="button" aria-label="Навигационное меню"> <svg class="menu__burger-icon base-icon base-icon-menu-2">
+                                    <use xlink:href="img/icons.svg#menu-2"></use>
+                                </svg> </button>
+                            <div class="menu__popup js-menu-popup" aria-disabled="true">
+                                <nav class="menu__container js-menu-container">
+                                    <div class="menu__header u-hidden-pc"> <a href="/" class="menu__logo"> <img class="menu__logo-image" src="img/logo.svg" width="110" height="54" alt="Unik"> </a> <button class="menu__back js-menu-back" type="button" aria-label="Назад"> <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M21 26L11 16L21 6.00001" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg> </button> <button type="button" class="menu__close js-menu-close" aria-label="Закрыть"> <svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8 24L24 8M8 8L24 24" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                                            </svg> </button> </div>
+                                    <div class="menu__content">
+                                        <ul class="menu__list">
+                                            <li class="menu__item menu__item--catalog">
+                                                <div class="menu__catalog js-menu-catalog"> <button type="button" class="menu__catalog-button js-menu-catalog-button"> <svg class="menu__catalog-button-icon base-icon base-icon-menu">
+                                                            <use xlink:href="img/icons.svg#menu"></use>
+                                                        </svg> <span class="menu__catalog-button-text">Каталог</span> </button>
+                                                    <div class="menu__catalog-popup js-menu-catalog-popup">
+                                                        <div class="menu__catalog-popup-scroll js-menu-catalog-scroll">
+                                                            <div class="menu__catalog-popup-content">
+                                                                <div class="menu__catalog-title u-hidden-pc">Каталог</div>
+                                                                <div class="menu__catalog-row ">
+                                                                    <div class="menu__catalog-column">
+                                                                        <div class="menu__catalog-list">
+                                                                            <div class="menu__catalog-item js-menu-catalog-dropdown menu__catalog-item--dropdown"> <a href="#" class="menu__catalog-link js-menu-catalog-link"> <span>Специализированный инструмент</span> </a>
+                                                                                <div class="menu__catalog-submenu js-menu-catalog-submenu">
+                                                                                    <div class="menu__catalog-submenu-title u-hidden-desktop-sm"> <a href="#" class="menu__catalog-submenu-link"> <span>Специализированный инструмент</span> </a> </div>
+                                                                                    <ul class="menu__catalog-submenu-list">
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Гвозди для пневматического нейлера</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Заклепочник</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Лезвия для строительных ножей</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Отвертки</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Степлеры</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Скобы для степлера</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Строительные ножи</span> </a> </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="menu__catalog-item js-menu-catalog-dropdown menu__catalog-item--dropdown"> <a href="#" class="menu__catalog-link js-menu-catalog-link"> <span>Малярный инструмент</span> </a>
+                                                                                <div class="menu__catalog-submenu js-menu-catalog-submenu">
+                                                                                    <div class="menu__catalog-submenu-title u-hidden-desktop-sm"> <a href="#" class="menu__catalog-submenu-link"> <span>Малярный инструмент</span> </a> </div>
+                                                                                    <ul class="menu__catalog-submenu-list">
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Бюгели</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Валики</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Кисти</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Маркеры</span> </a> </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="menu__catalog-column">
+                                                                        <div class="menu__catalog-list">
+                                                                            <div class="menu__catalog-item js-menu-catalog-dropdown menu__catalog-item--dropdown"> <a href="#" class="menu__catalog-link js-menu-catalog-link"> <span>Штукатурный инструмент</span> </a>
+                                                                                <div class="menu__catalog-submenu js-menu-catalog-submenu">
+                                                                                    <div class="menu__catalog-submenu-title u-hidden-desktop-sm"> <a href="#" class="menu__catalog-submenu-link"> <span>Штукатурный инструмент</span> </a> </div>
+                                                                                    <ul class="menu__catalog-submenu-list">
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Гладилки</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Кельмы</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Пистолеты для пен и&nbsp;герметиков</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Правило</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Тёрки</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Шпатели</span> </a> </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="menu__catalog-item js-menu-catalog-dropdown menu__catalog-item--dropdown"> <a href="#" class="menu__catalog-link js-menu-catalog-link"> <span>Инструмент измерительный</span> </a>
+                                                                                <div class="menu__catalog-submenu js-menu-catalog-submenu">
+                                                                                    <div class="menu__catalog-submenu-title u-hidden-desktop-sm"> <a href="#" class="menu__catalog-submenu-link"> <span>Инструмент измерительный</span> </a> </div>
+                                                                                    <ul class="menu__catalog-submenu-list">
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Рулетки</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Угольники</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Уровни</span> </a> </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="menu__catalog-column">
+                                                                        <div class="menu__catalog-list">
+                                                                            <div class="menu__catalog-item js-menu-catalog-dropdown menu__catalog-item--dropdown"> <a href="#" class="menu__catalog-link js-menu-catalog-link"> <span>Столярный инструмент</span> </a>
+                                                                                <div class="menu__catalog-submenu js-menu-catalog-submenu">
+                                                                                    <div class="menu__catalog-submenu-title u-hidden-desktop-sm"> <a href="#" class="menu__catalog-submenu-link"> <span>Столярный инструмент</span> </a> </div>
+                                                                                    <ul class="menu__catalog-submenu-list">
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Кайло</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Киянки</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Молотки</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Топоры</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Щётки</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Ножовки</span> </a> </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="menu__catalog-item js-menu-catalog-dropdown menu__catalog-item--dropdown"> <a href="#" class="menu__catalog-link js-menu-catalog-link"> <span>Инструмент для строительной площадки</span> </a>
+                                                                                <div class="menu__catalog-submenu js-menu-catalog-submenu">
+                                                                                    <div class="menu__catalog-submenu-title u-hidden-desktop-sm"> <a href="#" class="menu__catalog-submenu-link"> <span>Инструмент для строительной площадки</span> </a> </div>
+                                                                                    <ul class="menu__catalog-submenu-list">
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Мешки</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Щётки</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Тачки</span> </a> </li>
+                                                                                        <li> <a href="#" class="menu__catalog-submenu-link"> <span>Лопаты</span> </a> </li>
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="menu__item"> <a href="#" class="menu__link"> <span>О бренде</span> </a> </li>
+                                            <li class="menu__item"> <a href="#" class="menu__link"> <span>Контакты</span> </a> </li>
+                                            <li class="menu__item"> <a href="#" class="menu__link"> <span>Где купить</span> </a> </li>
+                                        </ul>
+                                    </div>
+                                    <div class="menu__footer js-menu-footer u-hidden-pc">
+                                        <div class="menu__contacts">
+                                            <div class="menu__contacts-item">
+                                                <div class="menu__contacts-title">Адрес</div>
+                                                <div class="menu__contacts-text">г. Екатеринбург, ул. Окружная 88Э</div>
+                                            </div>
+                                            <div class="menu__contacts-item">
+                                                <div class="menu__contacts-title">Режим работы</div>
+                                                <div class="menu__contacts-text">Пн. – Пт.: с 9:00 до 18:00</div>
+                                            </div> <button type="button" data-modal-open="#modal-callback" class="menu__contacts-button base-button base-button--primary base-button--rounded"> <span class="base-button__inner"> <span class="base-button__content"> Сделать заказ </span> </span> </button>
+                                            <div class="menu__contacts-socials socials">
+                                                <div class="socials__list"> <a href="#" class="socials__link socials__link--telegram" title="Telegram"> <svg class="socials__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M14.9922 2.5C12.5199 2.5 10.1032 3.23311 8.04756 4.60663C5.99195 5.98015 4.38979 7.93238 3.4437 10.2165C2.4976 12.5005 2.25006 15.0139 2.73238 17.4386C3.21469 19.8634 4.4052 22.0907 6.15336 23.8388C7.90152 25.587 10.1288 26.7775 12.5536 27.2598C14.9783 27.7421 17.4917 27.4946 19.7757 26.5485C22.0598 25.6024 24.012 24.0002 25.3856 21.9446C26.7591 19.889 27.4922 17.4723 27.4922 15C27.4923 13.3584 27.1691 11.7329 26.541 10.2163C25.9128 8.69966 24.9921 7.32162 23.8313 6.16086C22.6706 5.0001 21.2925 4.07936 19.7759 3.45123C18.2593 2.82309 16.6338 2.49986 14.9922 2.5ZM18.9666 21.4406C18.9198 21.5572 18.8486 21.6626 18.7578 21.7495C18.667 21.8364 18.5586 21.9028 18.44 21.9445C18.3214 21.9861 18.1953 22.0018 18.0701 21.9907C17.9449 21.9796 17.8235 21.9418 17.7141 21.88L14.3207 19.2432L12.1428 21.2525C12.0923 21.2898 12.0332 21.3139 11.9709 21.3224C11.9087 21.3309 11.8453 21.3236 11.7866 21.3012L12.2041 17.5656L12.2175 17.5762L12.226 17.5024C12.226 17.5024 18.3322 11.9431 18.581 11.7062C18.8328 11.4699 18.7497 11.4187 18.7497 11.4187C18.7641 11.1305 18.2978 11.4187 18.2978 11.4187L10.2072 16.6237L6.83783 15.4762C6.83783 15.4762 6.32033 15.2906 6.27158 14.8825C6.22033 14.4775 6.85469 14.2575 6.85469 14.2575L20.2509 8.93561C20.2509 8.93561 21.3522 8.44496 21.3522 9.2575L18.9666 21.4406Z" fill="#3AA6EA" />
+                                                        </svg> </a><a href="#" class="socials__link socials__link--vk" title="ВКонтакте"> <svg class="socials__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                            <path d="M18.8412 2.5H11.1719C4.16664 2.5 2.5 4.16664 2.5 11.1588V18.8281C2.5 25.8333 4.15368 27.5 11.1588 27.5H18.8281C25.8334 27.5 27.5 25.8463 27.5 18.8411V11.1719C27.5 4.16664 25.8463 2.5 18.8412 2.5ZM22.6823 20.3385H20.8594C20.1693 20.3385 19.9609 19.7786 18.724 18.5416C17.6432 17.5 17.1875 17.3698 16.9141 17.3698C16.5365 17.3698 16.4323 17.4739 16.4323 17.9948V19.6354C16.4323 20.0781 16.2891 20.3385 15.1302 20.3385C14.0057 20.263 12.9152 19.9213 11.9486 19.3418C10.982 18.7623 10.1668 17.9614 9.57031 17.0052C8.1542 15.2425 7.16888 13.1738 6.69274 10.9635C6.69274 10.6901 6.79688 10.4427 7.31774 10.4427H9.14062C9.60938 10.4427 9.77868 10.651 9.96094 11.1328C10.8463 13.7369 12.3568 16.0026 12.9688 16.0026C13.2031 16.0026 13.3073 15.8984 13.3073 15.3125V12.6302C13.2291 11.4062 12.5781 11.302 12.5781 10.8594C12.5867 10.7426 12.6404 10.6337 12.728 10.5559C12.8155 10.4781 12.9299 10.4375 13.0469 10.4427H15.9115C16.3021 10.4427 16.4323 10.638 16.4323 11.1067V14.7266C16.4323 15.1172 16.6016 15.2473 16.7188 15.2473C16.9531 15.2473 17.1354 15.1172 17.5651 14.6875C18.4884 13.5615 19.2429 12.307 19.8047 10.9635C19.862 10.8019 19.9707 10.6634 20.1142 10.5694C20.2576 10.4753 20.4279 10.4308 20.599 10.4427H22.4219C22.9688 10.4427 23.0859 10.7161 22.9688 11.1067C22.3055 12.5921 21.4848 14.0021 20.5209 15.3125C20.3256 15.6119 20.2474 15.7682 20.5209 16.1198C20.7031 16.3932 21.3412 16.927 21.7709 17.4348C22.3958 18.0583 22.9148 18.7796 23.3073 19.5703C23.4635 20.0781 23.2031 20.3385 22.6823 20.3385Z" fill="#3385E2" />
+                                                        </svg> </a><a href="#" class="socials__link socials__link--max" title="Max"> <img class="socials__image" src="img/max-logo.png" width="30" height="30" alt="" loading="lazy"> </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="header__controls">
+                        <div class="header__controls-item header__controls-item--contacts">
+                            <div class="header__contacts">
+                                <div class="header__contacts-phone-area"> <a class="header__contacts-phone" href="tel:+73432860321"> <svg class="u-hidden-desktop base-icon base-icon-phone">
+                                            <use xlink:href="img/icons.svg#phone"></use>
+                                        </svg> <span class="u-visible-desktop">+7 343 286 03 21</span> </a>
+                                    <div class="header__contacts-popup">
+                                        <div class="header__contacts-item">
+                                            <div class="header__contacts-title">Адрес</div>
+                                            <div class="header__contacts-text">г. Екатеринбург, ул.&nbsp;Окружная&nbsp;88Э</div>
+                                        </div>
+                                        <div class="header__contacts-item">
+                                            <div class="header__contacts-title">Режим работы</div>
+                                            <div class="header__contacts-text">Пн. – Пт.: с 9:00 до 18:00</div>
+                                        </div>
+                                        <div class="header__contacts-socials socials">
+                                            <div class="socials__list"> <a href="#" class="socials__link socials__link--telegram" title="Telegram"> <svg class="socials__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M14.9922 2.5C12.5199 2.5 10.1032 3.23311 8.04756 4.60663C5.99195 5.98015 4.38979 7.93238 3.4437 10.2165C2.4976 12.5005 2.25006 15.0139 2.73238 17.4386C3.21469 19.8634 4.4052 22.0907 6.15336 23.8388C7.90152 25.587 10.1288 26.7775 12.5536 27.2598C14.9783 27.7421 17.4917 27.4946 19.7757 26.5485C22.0598 25.6024 24.012 24.0002 25.3856 21.9446C26.7591 19.889 27.4922 17.4723 27.4922 15C27.4923 13.3584 27.1691 11.7329 26.541 10.2163C25.9128 8.69966 24.9921 7.32162 23.8313 6.16086C22.6706 5.0001 21.2925 4.07936 19.7759 3.45123C18.2593 2.82309 16.6338 2.49986 14.9922 2.5ZM18.9666 21.4406C18.9198 21.5572 18.8486 21.6626 18.7578 21.7495C18.667 21.8364 18.5586 21.9028 18.44 21.9445C18.3214 21.9861 18.1953 22.0018 18.0701 21.9907C17.9449 21.9796 17.8235 21.9418 17.7141 21.88L14.3207 19.2432L12.1428 21.2525C12.0923 21.2898 12.0332 21.3139 11.9709 21.3224C11.9087 21.3309 11.8453 21.3236 11.7866 21.3012L12.2041 17.5656L12.2175 17.5762L12.226 17.5024C12.226 17.5024 18.3322 11.9431 18.581 11.7062C18.8328 11.4699 18.7497 11.4187 18.7497 11.4187C18.7641 11.1305 18.2978 11.4187 18.2978 11.4187L10.2072 16.6237L6.83783 15.4762C6.83783 15.4762 6.32033 15.2906 6.27158 14.8825C6.22033 14.4775 6.85469 14.2575 6.85469 14.2575L20.2509 8.93561C20.2509 8.93561 21.3522 8.44496 21.3522 9.2575L18.9666 21.4406Z" fill="#3AA6EA" />
+                                                    </svg> </a><a href="#" class="socials__link socials__link--vk" title="ВКонтакте"> <svg class="socials__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M18.8412 2.5H11.1719C4.16664 2.5 2.5 4.16664 2.5 11.1588V18.8281C2.5 25.8333 4.15368 27.5 11.1588 27.5H18.8281C25.8334 27.5 27.5 25.8463 27.5 18.8411V11.1719C27.5 4.16664 25.8463 2.5 18.8412 2.5ZM22.6823 20.3385H20.8594C20.1693 20.3385 19.9609 19.7786 18.724 18.5416C17.6432 17.5 17.1875 17.3698 16.9141 17.3698C16.5365 17.3698 16.4323 17.4739 16.4323 17.9948V19.6354C16.4323 20.0781 16.2891 20.3385 15.1302 20.3385C14.0057 20.263 12.9152 19.9213 11.9486 19.3418C10.982 18.7623 10.1668 17.9614 9.57031 17.0052C8.1542 15.2425 7.16888 13.1738 6.69274 10.9635C6.69274 10.6901 6.79688 10.4427 7.31774 10.4427H9.14062C9.60938 10.4427 9.77868 10.651 9.96094 11.1328C10.8463 13.7369 12.3568 16.0026 12.9688 16.0026C13.2031 16.0026 13.3073 15.8984 13.3073 15.3125V12.6302C13.2291 11.4062 12.5781 11.302 12.5781 10.8594C12.5867 10.7426 12.6404 10.6337 12.728 10.5559C12.8155 10.4781 12.9299 10.4375 13.0469 10.4427H15.9115C16.3021 10.4427 16.4323 10.638 16.4323 11.1067V14.7266C16.4323 15.1172 16.6016 15.2473 16.7188 15.2473C16.9531 15.2473 17.1354 15.1172 17.5651 14.6875C18.4884 13.5615 19.2429 12.307 19.8047 10.9635C19.862 10.8019 19.9707 10.6634 20.1142 10.5694C20.2576 10.4753 20.4279 10.4308 20.599 10.4427H22.4219C22.9688 10.4427 23.0859 10.7161 22.9688 11.1067C22.3055 12.5921 21.4848 14.0021 20.5209 15.3125C20.3256 15.6119 20.2474 15.7682 20.5209 16.1198C20.7031 16.3932 21.3412 16.927 21.7709 17.4348C22.3958 18.0583 22.9148 18.7796 23.3073 19.5703C23.4635 20.0781 23.2031 20.3385 22.6823 20.3385Z" fill="#3385E2" />
+                                                    </svg> </a><a href="#" class="socials__link socials__link--max" title="Max"> <img class="socials__image" src="img/max-logo.png" width="30" height="30" alt="" loading="lazy"> </a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header__contacts-address u-visible-desktop">г. Екатеринбург, Россия</div>
+                            </div>
+                        </div>
+                        <div class="header__controls-item header__controls-item--search ">
+                            <div class="header__search js-header-search"> <button type="button" title="Открыть строку поиска" class="header__control-button header__search-button js-header-search-open u-hidden-mobile-m base-button base-button--primary base-button--light base-button--rounded base-button--icon-only"> <span class="base-button__inner"> <span class="base-button__icon"> <svg class="base-icon base-icon-search">
+                                                <use xlink:href="img/icons.svg#search"></use>
+                                            </svg> </span> </span> </button>
+                                <div class="header__search-popup js-header-search-popup">
+                                    <div class="header__search-content">
+                                        <form action="#" class="header__search-form search-form js-search-form">
+                                            <div class="search-form__box"> <button type="submit" class="search-form__submit"> <svg class="search-form__submit-icon base-icon base-icon-search">
+                                                        <use xlink:href="img/icons.svg#search"></use>
+                                                    </svg> </button> <input type="text" class="search-form__input js-search-form-input js-header-search-input" placeholder="Поиск по сайту"> <button class="search-form__clear js-search-form-clear js-header-search-clear" type="button" aria-label="Очистить строку поиска"> <span class="search-form__clear-text">Очистить</span> <svg class="search-form__clear-icon base-icon base-icon-cross">
+                                                        <use xlink:href="img/icons.svg#cross"></use>
+                                                    </svg> </button> </div>
+                                        </form>
+                                    </div>
+                                    <div class="search-result header__search-result js-header-search-result">
+                                        <div class="search-result__scrollbar">
+                                            <div class="search-result__products">
+                                                <div class="search-result__product"> <a href="#" class="search-result__product-link" title="Лопата совковая из рельсовой стали, с ребром жесткости, без черенка UNIK">
+                                                        <div class="search-result__product-image-box"> <img class="search-result__product-image" src="img/search/product.png" srcset="img/search/product@2x.png 2x" width="50" height="50" alt=""> </div>
+                                                        <div class="search-result__product-content">
+                                                            <div class="search-result__product-title">Лопата совковая из рельсовой стали, с ребром жесткости, без черенка UNIK</div>
+                                                        </div>
+                                                    </a> </div>
+                                                <div class="search-result__product"> <a href="#" class="search-result__product-link" title="Лопата совковая из рельсовой стали, с ребром жесткости, без черенка UNIK">
+                                                        <div class="search-result__product-image-box"> <img class="search-result__product-image" src="img/search/product.png" srcset="img/search/product@2x.png 2x" width="50" height="50" alt=""> </div>
+                                                        <div class="search-result__product-content">
+                                                            <div class="search-result__product-title">Лопата совковая из рельсовой стали, с ребром жесткости, без черенка UNIK</div>
+                                                        </div>
+                                                    </a> </div>
+                                                <div class="search-result__product"> <a href="#" class="search-result__product-link" title="Лопата совковая из рельсовой стали, с ребром жесткости, без черенка UNIK">
+                                                        <div class="search-result__product-image-box"> <img class="search-result__product-image" src="img/search/product.png" srcset="img/search/product@2x.png 2x" width="50" height="50" alt=""> </div>
+                                                        <div class="search-result__product-content">
+                                                            <div class="search-result__product-title">Лопата совковая из рельсовой стали, с ребром жесткости, без черенка UNIK</div>
+                                                        </div>
+                                                    </a> </div>
+                                                <div class="search-result__product"> <a href="#" class="search-result__product-link" title="Лопата совковая из рельсовой стали, с ребром жесткости, без черенка UNIK">
+                                                        <div class="search-result__product-image-box"> <img class="search-result__product-image" src="img/search/product.png" srcset="img/search/product@2x.png 2x" width="50" height="50" alt=""> </div>
+                                                        <div class="search-result__product-content">
+                                                            <div class="search-result__product-title">Лопата совковая из рельсовой стали, с ребром жесткости, без черенка UNIK</div>
+                                                        </div>
+                                                    </a> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__controls-item u-visible-desktop"> <button type="button" data-modal-open="#order-modal" class="header__request-button base-button base-button--secondary base-button--rounded"> <span class="base-button__inner"> <span class="base-button__content"> Оставить заявку </span> </span> </button> </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <div class="breadcrumbs u-hidden-mobile">
+                <div class="breadcrumbs__container container">
+                    <nav class="breadcrumbs__inner" role="navigation" aria-label="breadcrumbs">
+                        <ol class="breadcrumbs__list">
+                            <li class="breadcrumbs__item"> <a href="/" class="breadcrumbs__link"><span>Главная</span></a> </li>
+                            <li class="breadcrumbs__item"> <a href="" class="breadcrumbs__link"><span>Где купить</span></a> </li>
+                            <li class="breadcrumbs__item" aria-current="page"> <span>Партнёры</span> </li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+            <div class="p-section p-company">
+                <div class="container">
+                    <div class="p-company__header">
+                        <div class="p-company__title page-title">
+                            <h1>Партнёры</h1>
+                        </div>
+                        <div class="p-company__tab-menu-wrapper">
+                            <div class="p-company__tab-menu tab-menu tab-menu--mobile-menu js-tabs-menu-mobile">
+                                <div class="tab-menu__inner"> <button class="tab-menu__button js-tabs-menu-mobile-button u-visible-mobile" type="button"> <span>Партнёры</span> <svg width="16" height="21" viewBox="0 0 16 21" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M12 9L8 13L4 9" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"></path>
+                                        </svg> </button>
+                                    <div class="tab-menu__list"> <a href="#" class="tab-menu__item js-tabs-menu-mobile-item"> <span>Контакты</span> </a><a class="tab-menu__item is-active js-tabs-menu-mobile-item"> <span>Партнёры</span> </a><a href="#" class="tab-menu__item js-tabs-menu-mobile-item"> <span>Реквизиты</span> </a> </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-company__partners">
+                        <h2 class="p-company__partners-title title title--size-md">
+                            Оптовые продажи
+                        </h2>
+                        <div class="p-company__partners-items l-grid l-gap-10">
+                            <div class="p-company__partners-item partner-item">
+                                <div class="partner-item__image-wrapper">
+                                    <div class="partner-item__image-box"> <img class="partner-item__image" src="img/partners/verta.png" srcset="img/partners/verta@2x.png" alt="" width="230" height="88" loading="lazy"> </div>
+                                </div>
+                                <div class="partner-item__content">
+                                    <div class="partner-item__contacts">
+                                        <div class="partner-item__contacts-item partner-item__contacts-item--phone">
+                                            <div class="partner-item__contacts-title">
+                                                Телефон
+                                            </div> <a class="partner-item__contacts-link" href="tel:+73432860321">+7 343 286-03-21</a>
+                                        </div>
+                                        <div class="partner-item__contacts-item">
+                                            <div class="partner-item__contacts-title">
+                                                Сайт
+                                            </div> <a class="partner-item__contacts-link" href="https://verta.ru/" target="_blank"> verta.ru <svg width="13" height="17" viewBox="0 0 13 17" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.8249 15.1736L11.8249 5.05782L1.7091 5.05782M11.8249 5.05782L1.42007 15.4627" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg> </a>
+                                        </div>
+                                        <div class="partner-item__contacts-item">
+                                            <div class="partner-item__contacts-title">
+                                                E-mail
+                                            </div> <a class="partner-item__contacts-link" href="mailto:info@vertatools.ru">info@vertatools.ru</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="p-company__partners-title title title--size-md">
+                            Розничные продажи
+                        </h2>
+                        <div class="p-company__partners-items l-grid l-gap-10">
+                            <div class="p-company__partners-item partner-item">
+                                <div class="partner-item__image-wrapper">
+                                    <div class="partner-item__image-box"> <img class="partner-item__image" src="img/partners/csk.png" srcset="img/partners/csk@2x.png" alt="" width="230" height="88" loading="lazy"> </div>
+                                </div>
+                                <div class="partner-item__content">
+                                    <div class="partner-item__contacts">
+                                        <div class="partner-item__contacts-item partner-item__contacts-item--phone">
+                                            <div class="partner-item__contacts-title">
+                                                Телефон
+                                            </div> <a class="partner-item__contacts-link" href="tel:+73432860321">+7 343 286-03-21</a>
+                                        </div>
+                                        <div class="partner-item__contacts-item">
+                                            <div class="partner-item__contacts-title">
+                                                Сайт
+                                            </div> <a class="partner-item__contacts-link" href="https://csk66.ru/" target="_blank"> csk66.ru <svg width="13" height="17" viewBox="0 0 13 17" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M11.8249 15.1736L11.8249 5.05782L1.7091 5.05782M11.8249 5.05782L1.42007 15.4627" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                                                </svg> </a>
+                                        </div>
+                                        <div class="partner-item__contacts-item">
+                                            <div class="partner-item__contacts-title">
+                                                E-mail
+                                            </div> <a class="partner-item__contacts-link" href="mailto:info@vertatools.ru">info@vertatools.ru</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <section class="feedback-section section feedback-section--secondary">
+                <div class="feedback-section__inner">
+                    <div class="feedback-section__bg-wrapper pattern-bg-wrapper">
+                        <picture class="feedback-section__bg pattern-bg">
+                            <source media="(max-width: 768.98px)" srcset="img/pattern-bg-2-mobile.svg">
+                            <source media="(max-width: 1024.98px)" srcset="img/pattern-bg-2-tablet.svg">
+                            <img class="pattern-bg__image" src="img/pattern-bg-2.svg" width="2295" height="1581" alt="" loading="lazy">
+                        </picture>
+                    </div>
+                    <div class="feedback-section__image-wrapper u-hidden-mobile-sm">
+                        <div class="feedback-section__image-box"> <img class="feedback-section__image" src="img/feedback/feedback.png" srcset="img/feedback/feedback@2x.png 2x" alt="" loading="lazy" width="776" height="532"> </div>
+                    </div>
+                    <div class="feedback-section__container container">
+                        <div class="feedback-section__content">
+                            <div class="feedback-section__text-content">
+                                <h2 class="feedback-section__title title">Поможем выбрать инструмент для Вас</h2>
+                                <div class="feedback-section__text section-text">
+                                    <p>Заполните форму, мы&nbsp;перезвоним и&nbsp;поможем определиться с&nbsp;выбором</p>
+                                </div>
+                            </div> <button type="button" data-modal-open="#order-modal" class="feedback-section__button u-hidden-desktop base-button base-button--white base-button--rounded"> <span class="base-button__inner"> <span class="base-button__content">
+                                        Задать вопрос
+                                    </span> </span> </button>
+                            <form action="#" class="feedback-section__form form l-grid l-gap-15 js-validate-form u-visible-desktop">
+                                <div class="feedback-section__form-grid l-grid l-grid-cols-3 l-gap-20">
+                                    <div class="form__column">
+                                        <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined">
+                                            <div class="base-text-field__control js-base-text-field-control">
+                                                <div class="base-text-field__field"> <input type="text" name="name" value placeholder="Введите ваше имя" class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined">
+                                            <div class="base-text-field__control js-base-text-field-control">
+                                                <div class="base-text-field__field"> <input type="text" name="phone" value placeholder="+7 (982) 669-00-00" class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-phone" class="js-validate-field js-validate-field-phone"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column"> <button type="submit" class="feedback-section__form-submit is-validate-disabled base-button base-button--primary base-button--block base-button--rounded"> <span class="base-button__inner"> <span class="base-button__content"> Оставить заявку </span> </span> </button> </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer class="footer js-footer">
+            <div class="footer__inner">
+                <div class="footer__bg-wrapper pattern-bg-wrapper">
+                    <picture class="footer__bg pattern-bg">
+                        <source media="(max-width: 768.98px)" srcset="img/pattern-bg-2-mobile.svg">
+                        <source media="(max-width: 1024.98px)" srcset="img/pattern-bg-2-tablet.svg"> <img class="pattern-bg__image" src="img/pattern-bg-2.svg" width="2295" height="1581" alt="" loading="lazy">
+                    </picture>
+                </div>
+                <div class="footer__inner-content">
+                    <div class="footer__top">
+                        <div class="footer__container container">
+                            <div class="footer__row">
+                                <div class="footer__column footer__column--logo">
+                                    <div class="footer__logo-wrapper"> <a href="/" class="footer__logo"> <img class="footer__logo-image" src="img/logo-white.svg" alt="UNIK" width="138" height="58"> </a> </div>
+                                    <ul class="footer__menu footer__menu--policy">
+                                        <li> <a href="#" class="footer__menu-link">Политика обработки персональных данных</a> </li>
+                                    </ul>
+                                </div>
+                                <div class="footer__column footer__column--catalog">
+                                    <div class="footer__block">
+                                        <div class="footer__title">Каталог</div>
+                                        <ul class="footer__menu">
+                                            <li> <a href="#" class="footer__menu-link">Специализированный инструмент</a> </li>
+                                            <li> <a href="#" class="footer__menu-link">Малярный инструмент</a> </li>
+                                            <li> <a href="#" class="footer__menu-link">Измерительный инструмент</a> </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="footer__column footer__column--about">
+                                    <div class="footer__block">
+                                        <div class="footer__title">О бренде</div>
+                                        <ul class="footer__menu">
+                                            <li> <a href="#" class="footer__menu-link">О бренде</a> </li>
+                                            <li> <a href="#" class="footer__menu-link">Партнеры</a> </li>
+                                            <li> <a href="#" class="footer__menu-link">Реквизиты</a> </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="footer__column footer__column--contacts">
+                                    <div class="footer__title">Контакты</div>
+                                    <div class="footer__contacts">
+                                        <div class="footer__contacts-item"> <a href="tel:+73432210311" class="footer__contacts-phone">+ 7 (343) 221-03-11</a> </div>
+                                        <div class="footer__contacts-item"> <a href="mailto:info@unik-pro.ru" class="footer__contacts-email">info@unik-pro.ru</a> </div>
+                                        <div class="footer__contacts-item">
+                                            <div class="footer__contacts-text">г. Екатеринбург, ул.&nbsp;Окружная&nbsp;88Э</div>
+                                        </div>
+                                    </div>
+                                    <div class="footer__socials socials">
+                                        <div class="socials__list"> <a href="#" class="socials__link socials__link--vk" title="ВКонтакте"> <svg class="socials__icon" width="16" height="10" viewBox="0 0 16 10" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M6.51006 6.97139V0H9.06915V3.86108C11.1164 3.60367 12.4102 1.17977 12.8011 0H15.4669C15.147 2.4668 13.0322 4.36159 11.9481 4.9336C13.7608 5.52348 16 8.36566 16 9.97444H13.2277C12.204 7.22879 10.0288 6.39937 9.06915 6.32787V9.97444C3.04463 10.4035 -0.154229 5.3626 0.00571988 0H2.67143C2.83138 5.04085 5.39046 6.54238 6.51006 6.97139Z" />
+                                                </svg> </a><a href="#" class="socials__link socials__link--telegram" title="Telegram"> <svg class="socials__icon" width="16" height="13" viewBox="0 0 16 13" xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M1.09992 5.59642C5.39488 3.76182 8.25885 2.55233 9.69185 1.96797C13.7834 0.299503 14.6335 0.00967244 15.1877 0.000102042C15.3095 -0.00200286 15.5821 0.0276103 15.7586 0.168038C15.9076 0.286613 15.9486 0.44679 15.9683 0.559212C15.9879 0.671633 16.0123 0.927733 15.9929 1.12784C15.7712 3.41185 14.8118 8.95454 14.3237 11.5127C14.1172 12.5951 13.7105 12.958 13.3169 12.9936C12.4613 13.0707 11.8116 12.4392 10.9829 11.9067C9.68624 11.0733 8.9537 10.5545 7.69503 9.74133C6.24043 8.80154 7.18338 8.28502 8.01236 7.44087C8.22931 7.21995 11.999 3.8583 12.0719 3.55334C12.0811 3.5152 12.0895 3.37304 12.0034 3.29797C11.9172 3.2229 11.7901 3.24857 11.6983 3.26899C11.5683 3.29792 9.4968 4.64029 5.48389 7.29607C4.89591 7.69192 4.36333 7.88479 3.88616 7.87468C3.36012 7.86354 2.34822 7.58307 1.59598 7.34334C0.673328 7.04929 -0.0599784 6.89383 0.00387615 6.39445C0.0371355 6.13434 0.402482 5.86833 1.09992 5.59642Z" />
+                                                </svg> </a><a href="#" class="socials__link socials__link--rutube" title="Rutube"> <svg class="socials__icon" width="16" height="14" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg">
+                                                    <g>
+                                                        <path d="M8.42959 8.46574H2.51033V6.09419H8.42959C8.77534 6.09419 9.01576 6.15521 9.1364 6.26176C9.25706 6.36832 9.3318 6.56595 9.3318 6.85465V7.70619C9.3318 8.01038 9.25706 8.20801 9.1364 8.31457C9.01576 8.42112 8.77534 8.46665 8.42959 8.46665V8.46574ZM8.83567 3.85834H0V14.0003H2.51033V10.7007H7.1366L9.3318 14.0003H12.1429L9.72257 10.6852C10.6149 10.5513 11.0156 10.2745 11.346 9.81818C11.6764 9.36191 11.8421 8.63241 11.8421 7.65884V6.89836C11.8421 6.32096 11.7818 5.86468 11.6764 5.51496C11.5711 5.16524 11.391 4.86105 11.1353 4.58784C10.8652 4.32918 10.5644 4.14704 10.2034 4.02499C9.84233 3.91844 9.39121 3.85742 8.83567 3.85742V3.85834Z" />
+                                                        <path d="M14.0714 3.85714C15.1365 3.85714 16 2.99369 16 1.92857C16 0.863451 15.1365 0 14.0714 0C13.0063 0 12.1428 0.863451 12.1428 1.92857C12.1428 2.99369 13.0063 3.85714 14.0714 3.85714Z" />
+                                                    </g>
+                                                </svg> </a> </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__bottom">
+                        <div class="footer__container container">
+                            <div class="footer__bottom-content">
+                                <div class="footer__bottom-text">
+                                    <p>Производитель оставляет за&nbsp;собой право вносить изменения в&nbsp;изделия без предварительного уведомления. Приведенные иллюстрации не&nbsp;являются обязательными. Ответственность за&nbsp;опечатки исключается. Информация, указанная на&nbsp;сайте, не&nbsp;является публичной офертой и&nbsp;носит ознакомительный характер</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <div class="order-modal modal js-modal" id="order-modal" aria-hidden="true" tabindex="-1">
+        <div class="modal__wrap js-modal-wrap">
+            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="Заказать товар">
+                <div class="modal__inner js-modal-scrollbar">
+                    <div class="modal__inner-content">
+                        <div class="modal__header">
+                            <div class="modal__title">Заказать товар</div> <button class="modal__close js-modal-close" type="button" aria-label="Закрыть"> <svg class="modal__close-icon" width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path d="M21.5498 19.6624L15.8875 14L21.5498 8.33765C21.8001 8.08735 21.9407 7.74789 21.9407 7.39392C21.9407 7.03996 21.8001 6.70049 21.5498 6.4502C21.2995 6.1999 20.96 6.05929 20.6061 6.05929C20.2521 6.05929 19.9126 6.1999 19.6624 6.4502L14 12.1125L8.33765 6.4502C8.08735 6.1999 7.74789 6.05929 7.39392 6.05929C7.03996 6.05929 6.70049 6.1999 6.4502 6.4502C6.1999 6.70049 6.05929 7.03996 6.05929 7.39392C6.05929 7.74789 6.1999 8.08735 6.4502 8.33765L12.1125 14L6.4502 19.6624C6.1999 19.9126 6.05929 20.2521 6.05929 20.6061C6.05929 20.96 6.1999 21.2995 6.4502 21.5498C6.70049 21.8001 7.03995 21.9407 7.39392 21.9407C7.74789 21.9407 8.08735 21.8001 8.33765 21.5498L14 15.8875L19.6624 21.5498C19.9126 21.8001 20.2521 21.9407 20.6061 21.9407C20.96 21.9407 21.2995 21.8001 21.5498 21.5498C21.8001 21.2995 21.9407 20.96 21.9407 20.6061C21.9407 20.2521 21.8001 19.9126 21.5498 19.6624Z"></path>
+                                    </g>
+                                </svg> </button>
+                        </div>
+                        <div class="modal__content js-modal-content">
+                            <div class="modal__text">
+                                <p>Менеджеры компании с&nbsp;радостью ответят на&nbsp;ваши вопросы и&nbsp;произведут расчет стоимости услуг и&nbsp;подготовят индивидуальное коммерческое предложение</p>
+                            </div>
+                            <form action="#" class="modal__form form l-grid l-gap-15 js-validate-form">
+                                <div class="modal__form-grid l-grid l-gap-15">
+                                    <div class="form__column">
+                                        <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
+                                            <div class="base-text-field__control js-base-text-field-control">
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-pm7340cic"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-pm7340cic" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
+                                            </div>
+                                            <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
+                                            <div class="base-text-field__control js-base-text-field-control">
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-qpe6gkdby"> <span>Номер телефона</span> </label> <input id="base-text-field-qpe6gkdby" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
+                                            <div class="base-text-field__control js-base-text-field-control">
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-v8dcahroz"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-v8dcahroz" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
+                                            </div>
+                                            <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
+                                        </div>
+                                    </div>
+                                    <div class="form__column">
+                                        <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--textarea base-text-field--float-label">
+                                            <div class="base-text-field__control js-base-text-field-control">
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-9uxq1trtg"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-9uxq1trtg" name="message" rows="4" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
+                                            </div>
+                                            <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal__form-footer l-grid l-gap-25">
+                                    <div class="modal__form-agreement form__agreement">
+                                        <div class="form__agreement-checkbox base-checkbox js-checkbox"> <label class="base-checkbox__label"> <span class="base-checkbox__box"> <input type="checkbox" class="base-checkbox__input js-checkbox-input js-agreement-checkbox" name="agreement" class="js-agreement-checkbox"> </span> <span class="base-checkbox__content">
+                                                    Я&nbsp;ознакомлен с&nbsp;<a href="#">политикой в&nbsp;отношении обработки персональных данных</a> и&nbsp;даю согласие на&nbsp;<a href="#">обработку моих персональных данных</a> </span> </label> </div>
+                                    </div>
+                                    <div class="modal__form-button-wrapper"> <button type="submit" disabled class="modal__form-submit js-agreement-button base-button base-button--primary base-button--light base-button--block base-button--rounded is-disabled"> <span class="base-button__inner"> <span class="base-button__content"> Отправить </span> </span> </button> </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="success-modal modal js-modal" id="success-modal" aria-hidden="true" tabindex="-1">
+        <div class="modal__wrap js-modal-wrap">
+            <div class="modal__window js-modal-window" role="dialog" aria-modal="true" aria-label="Спасибо за вашу заявку!">
+                <div class="modal__inner js-modal-scrollbar">
+                    <div class="modal__inner-content">
+                        <div class="modal__header">
+                            <div class="modal__title u-center">Спасибо за вашу заявку!</div> <button class="modal__close js-modal-close" type="button" aria-label="Закрыть"> <svg class="modal__close-icon" width="28" height="28" viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <path d="M21.5498 19.6624L15.8875 14L21.5498 8.33765C21.8001 8.08735 21.9407 7.74789 21.9407 7.39392C21.9407 7.03996 21.8001 6.70049 21.5498 6.4502C21.2995 6.1999 20.96 6.05929 20.6061 6.05929C20.2521 6.05929 19.9126 6.1999 19.6624 6.4502L14 12.1125L8.33765 6.4502C8.08735 6.1999 7.74789 6.05929 7.39392 6.05929C7.03996 6.05929 6.70049 6.1999 6.4502 6.4502C6.1999 6.70049 6.05929 7.03996 6.05929 7.39392C6.05929 7.74789 6.1999 8.08735 6.4502 8.33765L12.1125 14L6.4502 19.6624C6.1999 19.9126 6.05929 20.2521 6.05929 20.6061C6.05929 20.96 6.1999 21.2995 6.4502 21.5498C6.70049 21.8001 7.03995 21.9407 7.39392 21.9407C7.74789 21.9407 8.08735 21.8001 8.33765 21.5498L14 15.8875L19.6624 21.5498C19.9126 21.8001 20.2521 21.9407 20.6061 21.9407C20.96 21.9407 21.2995 21.8001 21.5498 21.5498C21.8001 21.2995 21.9407 20.96 21.9407 20.6061C21.9407 20.2521 21.8001 19.9126 21.5498 19.6624Z"></path>
+                                    </g>
+                                </svg> </button>
+                        </div>
+                        <div class="modal__content js-modal-content">
+                            <div class="modal__text u-center">
+                                <p>Мы свяжемся с&nbsp;вами в ближайшее время.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="js/main.js"></script>
+    <script src="js/validation.js"></script>
+</body>
+
+</html>
