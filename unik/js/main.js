@@ -513,6 +513,8 @@ function initAccordions(accordionsContainer, duration = 300) {
 		* .js-tabs-button - button that opens the menu list (for adaptive)
 		* .js-tabs-button-text - the text of the button that opens the menu list (for adaptive)
 			** The attribute value is substituted from the active menu item from the data-value attribute
+		* .js-tabs-menu-mobile-button-text - alternative button for mobile menu
+		* .js-tabs-item-text - text element inside tab item for updating mobile button
 
 	* Functional attributes (can be specified on any HTML element):
 		* .js-tabs-switch - adds an HTML element the ability to switch given tabs
@@ -546,12 +548,51 @@ function initTabs(rootEl) {
         };
 
         /**
+            * Update mobile button text
+            * @param  {Element} tabCurrent - Current active tab element
+            * @param  {Element} tabsButton - Mobile menu button
+            * @param  {Element} mobileButton - Alternative mobile button
+        */
+        const updateMobileButtonText = (tabCurrent, tabsButton, mobileButton) => {
+            // Get text from .js-tabs-item-text inside active tab
+            const tabItemText = tabCurrent.querySelector('.js-tabs-item-text');
+            let buttonText = '';
+
+            // Priority: .js-tabs-item-text > data-value attribute > empty string
+            if (tabItemText) {
+                buttonText = tabItemText.textContent.trim();
+            } else if (tabCurrent.getAttribute('data-value')) {
+                buttonText = tabCurrent.getAttribute('data-value');
+            }
+
+            // Update main tabs button text if exists
+            if (tabsButton) {
+                const tabsButtonText = tabsButton.querySelector('.js-tabs-button-text');
+                if (tabsButtonText) {
+                    tabsButtonText.textContent = buttonText;
+                }
+            }
+
+            // Update alternative mobile button text if exists
+            if (mobileButton) {
+                const mobileButtonText = mobileButton.querySelector('.js-tabs-button-text');
+                if (mobileButtonText) {
+                    mobileButtonText.textContent = buttonText;
+                } else {
+                    // If no inner text element, update button's own text content
+                    mobileButton.textContent = buttonText;
+                }
+            }
+        };
+
+        /**
             * Change tab
             * @param  {Element} tabs - HTML element of tabs
             * @param  {Element} tabCurrent - Tab panel HTML element
             * @param  {Element} tabsButton - Tab dropdown button HTML element
+            * @param  {Element} mobileButton - Alternative mobile button HTML element
         */
-        const moveTab = (tabs, tabCurrent, tabsButton) => {
+        const moveTab = (tabs, tabCurrent, tabsButton, mobileButton) => {
             if (!tabs || !tabCurrent) return;
 
             const tabActive = tabs.querySelector('.js-tabs-item.is-active');
@@ -574,13 +615,8 @@ function initTabs(rootEl) {
                 panelCurrent.classList.add('is-active');
             }
 
-            if (tabsButton) {
-                const tabsButtonText = tabsButton.querySelector('.js-tabs-button-text');
-
-                if (tabsButtonText) {
-                    tabsButtonText.textContent = tabCurrent.getAttribute('data-value') || '';
-                }
-            }
+            // Update button text using the new function
+            updateMobileButtonText(tabCurrent, tabsButton, mobileButton);
         };
 
         /**
@@ -609,6 +645,7 @@ function initTabs(rootEl) {
 
             let tabActive = tabs.querySelector('.js-tabs-item.is-active');
             let tabsButton = tabs.querySelector('.js-tabs-button');
+            let mobileButton = tabs.querySelector('.js-tabs-menu-mobile-button-text');
 
             if (tabActive) {
                 let tabCurrent = tabActive.nextElementSibling;
@@ -618,7 +655,7 @@ function initTabs(rootEl) {
                 }
 
                 if (tabCurrent) {
-                    moveTab(tabs, tabCurrent, tabsButton);
+                    moveTab(tabs, tabCurrent, tabsButton, mobileButton);
 
                     if (tabsBackdrop) {
                         changeBackdrop (tabs, tabsBackdrop);
@@ -655,6 +692,7 @@ function initTabs(rootEl) {
 
         const setTabs = (tabs) => {
             const tabsButton = tabs.querySelector('.js-tabs-button');
+            const mobileButton = tabs.querySelector('.js-tabs-menu-mobile-button-text');
             const tabsMenu = tabs.querySelector('.js-tabs-menu');
             const tabsList = tabs.querySelector('.js-tabs-list');
             const tabsItems = tabsMenu ? tabsMenu.querySelectorAll('.js-tabs-item') : '';
@@ -667,6 +705,12 @@ function initTabs(rootEl) {
             changeBackdrop(tabs, tabsBackdrop);
             isDisabledTabNavigation(tabs, tabsPrev, tabsNext);
 
+            // Initialize active tab text in mobile buttons
+            const activeTab = tabs.querySelector('.js-tabs-item.is-active');
+            if (activeTab) {
+                updateMobileButtonText(activeTab, tabsButton, mobileButton);
+            }
+
             window.addEventListener('resize', () => {
                 changeBackdrop(tabs, tabsBackdrop);
             });
@@ -676,7 +720,7 @@ function initTabs(rootEl) {
                     tabItem.addEventListener('click', (event) => {
                         const target = event.currentTarget;
 
-                        moveTab(tabs, target, tabsButton);
+                        moveTab(tabs, target, tabsButton, mobileButton);
                         changeBackdrop(tabs, tabsBackdrop);
                         isDisabledTabNavigation(tabs, tabsPrev, tabsNext);
                     });
@@ -753,9 +797,10 @@ function initTabs(rootEl) {
                     const tabCurrent = tabsSwitch.querySelector(`.js-tabs-item[data-tabs-id="${targetSwitch.getAttribute('data-tabs-switch-pane')}"]`);
                     const tabsBackdrop = tabsSwitch.querySelector('.js-tabs-backdrop');
                     const tabsButton = tabsSwitch.querySelector('.js-tabs-button');
+                    const mobileButton = tabsSwitch.querySelector('.js-tabs-menu-mobile-button-text');
 
                     if (tabCurrent) {
-                        moveTab(tabsSwitch, tabCurrent, tabsButton);
+                        moveTab(tabsSwitch, tabCurrent, tabsButton, mobileButton);
                         changeBackdrop (tabsSwitch, tabsBackdrop);
                         isDisabledTabNavigation(tabsSwitch, tabsPrev, tabsNext);
                     }
@@ -11560,7 +11605,7 @@ function initMobileTabMenu() {
         const menuItems = menu.querySelectorAll('.js-tabs-menu-mobile-item');
         menuItems.forEach(item => {
             item.addEventListener('click', () => {
-                if (window.innerWidth < 768 && menu.classList.contains('is-mobile-open')) {
+                if (menu.classList.contains('is-mobile-open')) {
                     closeMobileMenu(menu, button);
                 }
             });
@@ -12654,6 +12699,200 @@ function initViewItems() {
     });
 }
 
+// profitable-slider.js
+class ProfitableSlider {
+    constructor(container) {
+        this.container = container;
+        this.items = Array.from(container.querySelectorAll('.js-profitable-slider-item'));
+        this.progressBar = container.querySelector('.js-profitable-slider-progress');
+        this.currentIndex = this.items.findIndex(item => item.classList.contains('is-active'));
+        this.interval = null;
+        this.autoPlayDelay = 5000;
+        this.progressInterval = null;
+        this.isPlaying = true;
+
+        if (this.currentIndex === -1 && this.items.length > 0) {
+            this.currentIndex = 0;
+            this.items[0].classList.add('is-active');
+        }
+
+        this.init();
+    }
+
+    init() {
+        this.startAutoPlay();
+        this.updateProgressBar();
+        this.bindEvents();
+    }
+
+    bindEvents() {
+        // this.container.addEventListener('mouseenter', () => {
+        //     this.stopAutoPlay();
+        // });
+
+        // this.container.addEventListener('mouseleave', () => {
+        //     if (this.isPlaying) {
+        //         this.startAutoPlay();
+        //         this.updateProgressBar();
+        //     }
+        // });
+    }
+
+    startAutoPlay() {
+        this.stopAutoPlay();
+        this.interval = setInterval(() => {
+            this.nextSlide();
+        }, this.autoPlayDelay);
+        this.isPlaying = true;
+    }
+
+    stopAutoPlay() {
+        if (this.interval) {
+            clearInterval(this.interval);
+            this.interval = null;
+        }
+        this.stopProgressAnimation();
+    }
+
+    stopProgressAnimation() {
+        if (this.progressInterval) {
+            clearTimeout(this.progressInterval);
+            this.progressInterval = null;
+        }
+        if (this.progressBar) {
+            this.progressBar.style.transition = 'none';
+            this.progressBar.style.width = '0%';
+            this.progressBar.offsetHeight;
+        }
+    }
+
+    updateProgressBar() {
+        if (!this.progressBar) return;
+
+        this.stopProgressAnimation();
+
+        this.progressBar.style.transition = 'none';
+        this.progressBar.style.width = '0%';
+
+        setTimeout(() => {
+            this.progressBar.style.transition = `width ${this.autoPlayDelay}ms linear`;
+            this.progressBar.style.width = '100%';
+        }, 50);
+    }
+
+    updateSlideImages(index) {
+        const activeItem = this.items[index];
+        if (!activeItem) return;
+
+        const images = activeItem.querySelectorAll('.js-profitable-slider-image');
+        const sources = activeItem.querySelectorAll('source');
+
+        images.forEach(img => {
+            const dataSrc = img.getAttribute('data-src');
+            const dataSrcset = img.getAttribute('data-srcset');
+
+            if (dataSrc && !img.getAttribute('src')) {
+                img.setAttribute('src', dataSrc);
+                img.removeAttribute('data-src');
+            }
+
+            if (dataSrcset && !img.getAttribute('srcset')) {
+                img.setAttribute('srcset', dataSrcset);
+                img.removeAttribute('data-srcset');
+            }
+        });
+
+        sources.forEach(source => {
+            const dataSrcset = source.getAttribute('data-srcset');
+
+            if (dataSrcset && !source.getAttribute('srcset')) {
+                source.setAttribute('srcset', dataSrcset);
+                source.removeAttribute('data-srcset');
+            }
+        });
+    }
+
+    setActiveSlide(index) {
+        if (index === this.currentIndex) return;
+        if (index < 0) index = this.items.length - 1;
+        if (index >= this.items.length) index = 0;
+
+        this.items.forEach(item => {
+            item.classList.remove('is-active');
+        });
+
+        this.items[index].classList.add('is-active');
+        this.updateSlideImages(index);
+        this.currentIndex = index;
+
+        if (this.isPlaying) {
+            this.startAutoPlay();
+            this.updateProgressBar();
+        }
+
+        const event = new CustomEvent('slideChange', {
+            detail: { index: this.currentIndex, total: this.items.length }
+        });
+        this.container.dispatchEvent(event);
+    }
+
+    nextSlide() {
+        this.setActiveSlide(this.currentIndex + 1);
+    }
+
+    prevSlide() {
+        this.setActiveSlide(this.currentIndex - 1);
+    }
+
+    destroy() {
+        this.stopAutoPlay();
+        this.items = null;
+        this.progressBar = null;
+    }
+}
+
+// Экспортируем функцию инициализации
+function initProfitableSliders() {
+    const sliders = document.querySelectorAll('.js-profitable-slider');
+
+    sliders.forEach(slider => {
+        if (!slider.profitableSlider) {
+            slider.profitableSlider = new ProfitableSlider(slider);
+        }
+    });
+
+    // Загружаем изображения для активных слайдов
+    const activeSlides = document.querySelectorAll('.js-profitable-slider-item.is-active');
+    activeSlides.forEach(slide => {
+        const images = slide.querySelectorAll('.js-profitable-slider-image');
+        const sources = slide.querySelectorAll('source');
+
+        images.forEach(img => {
+            const dataSrc = img.getAttribute('data-src');
+            const dataSrcset = img.getAttribute('data-srcset');
+
+            if (dataSrc && !img.getAttribute('src')) {
+                img.setAttribute('src', dataSrc);
+                img.removeAttribute('data-src');
+            }
+
+            if (dataSrcset && !img.getAttribute('srcset')) {
+                img.setAttribute('srcset', dataSrcset);
+                img.removeAttribute('data-srcset');
+            }
+        });
+
+        sources.forEach(source => {
+            const dataSrcset = source.getAttribute('data-srcset');
+
+            if (dataSrcset && !source.getAttribute('srcset')) {
+                source.setAttribute('srcset', dataSrcset);
+                source.removeAttribute('data-srcset');
+            }
+        });
+    });
+}
+
 document.addEventListener('change', function (e) {
     if (e.target.classList.contains('js-agreement-checkbox')) {
         const form = e.target.closest('form');
@@ -12702,6 +12941,9 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     initMobileTabMenu();
+
+    initProfitableSliders();
+
 });
 
 // /* Initialization common scripts ********** */
