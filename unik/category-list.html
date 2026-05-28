@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <title>Результаты поиска | Unik</title>
+    <title>Каталог - Молотки | Unik</title>
     <meta name="description" content="Описание страницы">
     <link rel="icon" href="/favicon/favicon.ico" sizes="any">
     <link rel="icon" href="/favicon/favicon.svg" type="image/svg+xml">
@@ -263,15 +263,46 @@
             <div class="p-section p-catalog">
                 <div class="container">
                     <div class="p-catalog__page-title page-title">
-                        <h1>Результаты поиска</h1>
+                        <h1>Молотки</h1>
                     </div>
-                    <form action="#" class="p-catalog__search-form search-form js-search-form">
-                        <div class="search-form__box"> <button type="submit" class="search-form__submit"> <svg class="search-form__submit-icon base-icon base-icon-search">
-                                    <use xlink:href="img/icons.svg#search"></use>
-                                </svg> </button> <input type="text" class="search-form__input js-search-form-input " value="Молоток" placeholder="Найти"> <button class="search-form__clear js-search-form-clear " type="button" aria-label="Очистить строку поиска"> <span class="search-form__clear-text">Очистить</span> <svg class="search-form__clear-icon base-icon base-icon-cross">
-                                    <use xlink:href="img/icons.svg#cross"></use>
-                                </svg> </button> </div>
-                    </form>
+                    <div class="p-catalog__found-categories">
+                        <div class="p-catalog__found-categories-swiper swiper js-found-categories-swiper">
+                            <div class="swiper-wrapper">
+                                <div class="p-catalog__found-categories-item swiper-slide category-item">
+                                    <div class="category-item__content">
+                                        <h3 class="category-item__title"> <a class="category-item__title-link" href="#"> <span>Молоток слесарный</span> </a> </h3>
+                                    </div>
+                                    <div class="category-item__image-wrapper">
+                                        <picture class="category-item__image-box"> <img class="category-item__image" src="img/hammer.jpg" srcset="img/hammer@2x.jpg" alt="" width="280" height="240" loading="lazy"> </picture>
+                                    </div>
+                                </div>
+                                <div class="p-catalog__found-categories-item swiper-slide category-item">
+                                    <div class="category-item__content">
+                                        <h3 class="category-item__title"> <a class="category-item__title-link" href="#"> <span>Молоток слесарный</span> </a> </h3>
+                                    </div>
+                                    <div class="category-item__image-wrapper">
+                                        <picture class="category-item__image-box"> <img class="category-item__image" src="img/hammer.jpg" srcset="img/hammer@2x.jpg" alt="" width="280" height="240" loading="lazy"> </picture>
+                                    </div>
+                                </div>
+                                <div class="p-catalog__found-categories-item swiper-slide category-item">
+                                    <div class="category-item__content">
+                                        <h3 class="category-item__title"> <a class="category-item__title-link" href="#"> <span>Молоток слесарный</span> </a> </h3>
+                                    </div>
+                                    <div class="category-item__image-wrapper">
+                                        <picture class="category-item__image-box"> <img class="category-item__image" src="img/hammer.jpg" srcset="img/hammer@2x.jpg" alt="" width="280" height="240" loading="lazy"> </picture>
+                                    </div>
+                                </div>
+                                <div class="p-catalog__found-categories-item swiper-slide category-item">
+                                    <div class="category-item__content">
+                                        <h3 class="category-item__title"> <a class="category-item__title-link" href="#"> <span>Молоток слесарный</span> </a> </h3>
+                                    </div>
+                                    <div class="category-item__image-wrapper">
+                                        <picture class="category-item__image-box"> <img class="category-item__image" src="img/hammer.jpg" srcset="img/hammer@2x.jpg" alt="" width="280" height="240" loading="lazy"> </picture>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     <div class="p-catalog__layout-row">
                         <div class="p-catalog__sidebar js-filters-sidebar">
                             <div class="sticky-container js-sticky-container p-catalog__sticky" data-top-offset="10" data-bottom-offset="10">
@@ -401,292 +432,16 @@
                                         </div>
                                     </div>
                                     <div class="p-catalog__filters-view-right u-hidden-mobile">
-                                        <div class="p-catalog__filters-view-buttons js-view-buttons"> <button type="button" data-view="grid" class="p-catalog__filters-view-button js-view-button is-active base-button base-button--white base-button--icon-only"> <span class="base-button__inner"> <span class="base-button__icon"> <svg class="base-icon base-icon-grid">
+                                        <div class="p-catalog__filters-view-buttons js-view-buttons"> <button type="button" data-view="grid" class="p-catalog__filters-view-button js-view-button  base-button base-button--white base-button--icon-only"> <span class="base-button__inner"> <span class="base-button__icon"> <svg class="base-icon base-icon-grid">
                                                             <use xlink:href="img/icons.svg#grid"></use>
-                                                        </svg> </span> </span> </button> <button type="button" data-view="list" class="p-catalog__filters-view-button js-view-button  base-button base-button--white base-button--icon-only"> <span class="base-button__inner"> <span class="base-button__icon"> <svg class="base-icon base-icon-list">
+                                                        </svg> </span> </span> </button> <button type="button" data-view="list" class="p-catalog__filters-view-button js-view-button is-active base-button base-button--white base-button--icon-only"> <span class="base-button__inner"> <span class="base-button__icon"> <svg class="base-icon base-icon-list">
                                                             <use xlink:href="img/icons.svg#list"></use>
                                                         </svg> </span> </span> </button> </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="p-catalog__products l-grid js-view-items is-grid">
+                            <div class="p-catalog__products l-grid js-view-items is-list">
                                 <div class="p-catalog__products-items l-grid l-grid-cols-3">
-                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Лопата совковая из рельсовой стали, с ребром жёсткости без черенка UNIK">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="280" height="280" alt="" loading="lazy"> </div>
-                                                <div class="product__tags">
-                                                    <div class="product__tag">Pro</div>
-                                                </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. U5680</div>
-                                                </div>
-                                                <div class="product__title-wrapper">
-                                                    <div class="product__title">Лопата совковая из рельсовой стали, с ребром жёсткости без черенка UNIK</div>
-                                                </div>
-                                                <div class="product__characteristics">
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Max. размер оснастки, мм </div>
-                                                        <div class="product__characteristics-value"> <span>13</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Размер </div>
-                                                        <div class="product__characteristics-value"> <span>4,8 х 29 мм</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Вид товара </div>
-                                                        <div class="product__characteristics-value"> <span>Дрель-шуруповерт</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Частота вращения, об/мин </div>
-                                                        <div class="product__characteristics-value"> <span>0-450/0-1600</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Гарантия производителя </div>
-                                                        <div class="product__characteristics-value"> <span>1 год</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Тип товара </div>
-                                                        <div class="product__characteristics-value"> <span>Аккумуляторная</span> </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--rounded"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Лопата совковая из рельсовой стали, с ребром жёсткости без черенка UNIK">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="280" height="280" alt="" loading="lazy"> </div>
-                                                <div class="product__tags">
-                                                    <div class="product__tag">Pro</div>
-                                                </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. U5680</div>
-                                                </div>
-                                                <div class="product__title-wrapper">
-                                                    <div class="product__title">Лопата совковая из рельсовой стали, с ребром жёсткости без черенка UNIK</div>
-                                                </div>
-                                                <div class="product__characteristics">
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Max. размер оснастки, мм </div>
-                                                        <div class="product__characteristics-value"> <span>13</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Размер </div>
-                                                        <div class="product__characteristics-value"> <span>4,8 х 29 мм</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Вид товара </div>
-                                                        <div class="product__characteristics-value"> <span>Дрель-шуруповерт</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Частота вращения, об/мин </div>
-                                                        <div class="product__characteristics-value"> <span>0-450/0-1600</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Гарантия производителя </div>
-                                                        <div class="product__characteristics-value"> <span>1 год</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Тип товара </div>
-                                                        <div class="product__characteristics-value"> <span>Аккумуляторная</span> </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--rounded"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Лопата совковая из рельсовой стали, с ребром жёсткости без черенка UNIK">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="280" height="280" alt="" loading="lazy"> </div>
-                                                <div class="product__tags">
-                                                    <div class="product__tag">Pro</div>
-                                                </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. U5680</div>
-                                                </div>
-                                                <div class="product__title-wrapper">
-                                                    <div class="product__title">Лопата совковая из рельсовой стали, с ребром жёсткости без черенка UNIK</div>
-                                                </div>
-                                                <div class="product__characteristics">
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Max. размер оснастки, мм </div>
-                                                        <div class="product__characteristics-value"> <span>13</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Размер </div>
-                                                        <div class="product__characteristics-value"> <span>4,8 х 29 мм</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Вид товара </div>
-                                                        <div class="product__characteristics-value"> <span>Дрель-шуруповерт</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Частота вращения, об/мин </div>
-                                                        <div class="product__characteristics-value"> <span>0-450/0-1600</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Гарантия производителя </div>
-                                                        <div class="product__characteristics-value"> <span>1 год</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Тип товара </div>
-                                                        <div class="product__characteristics-value"> <span>Аккумуляторная</span> </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--rounded"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Лопата совковая из рельсовой стали, с ребром жёсткости без черенка UNIK">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="280" height="280" alt="" loading="lazy"> </div>
-                                                <div class="product__tags">
-                                                    <div class="product__tag">Pro</div>
-                                                </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. U5680</div>
-                                                </div>
-                                                <div class="product__title-wrapper">
-                                                    <div class="product__title">Лопата совковая из рельсовой стали, с ребром жёсткости без черенка UNIK</div>
-                                                </div>
-                                                <div class="product__characteristics">
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Max. размер оснастки, мм </div>
-                                                        <div class="product__characteristics-value"> <span>13</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Размер </div>
-                                                        <div class="product__characteristics-value"> <span>4,8 х 29 мм</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Вид товара </div>
-                                                        <div class="product__characteristics-value"> <span>Дрель-шуруповерт</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Частота вращения, об/мин </div>
-                                                        <div class="product__characteristics-value"> <span>0-450/0-1600</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Гарантия производителя </div>
-                                                        <div class="product__characteristics-value"> <span>1 год</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Тип товара </div>
-                                                        <div class="product__characteristics-value"> <span>Аккумуляторная</span> </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--rounded"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Лопата совковая из рельсовой стали, с ребром жёсткости без черенка UNIK">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="280" height="280" alt="" loading="lazy"> </div>
-                                                <div class="product__tags">
-                                                    <div class="product__tag">Pro</div>
-                                                </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. U5680</div>
-                                                </div>
-                                                <div class="product__title-wrapper">
-                                                    <div class="product__title">Лопата совковая из рельсовой стали, с ребром жёсткости без черенка UNIK</div>
-                                                </div>
-                                                <div class="product__characteristics">
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Max. размер оснастки, мм </div>
-                                                        <div class="product__characteristics-value"> <span>13</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Размер </div>
-                                                        <div class="product__characteristics-value"> <span>4,8 х 29 мм</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Вид товара </div>
-                                                        <div class="product__characteristics-value"> <span>Дрель-шуруповерт</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Частота вращения, об/мин </div>
-                                                        <div class="product__characteristics-value"> <span>0-450/0-1600</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Гарантия производителя </div>
-                                                        <div class="product__characteristics-value"> <span>1 год</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Тип товара </div>
-                                                        <div class="product__characteristics-value"> <span>Аккумуляторная</span> </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--rounded"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
-                                    <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Лопата совковая из рельсовой стали, с ребром жёсткости без черенка UNIK">
-                                            <div class="product__image-wrapper">
-                                                <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="280" height="280" alt="" loading="lazy"> </div>
-                                                <div class="product__tags">
-                                                    <div class="product__tag">Pro</div>
-                                                </div>
-                                            </div>
-                                            <div class="product__content">
-                                                <div class="product__head">
-                                                    <div class="product__availability">В наличии</div>
-                                                    <div class="product__sku">Арт. U5680</div>
-                                                </div>
-                                                <div class="product__title-wrapper">
-                                                    <div class="product__title">Лопата совковая из рельсовой стали, с ребром жёсткости без черенка UNIK</div>
-                                                </div>
-                                                <div class="product__characteristics">
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Max. размер оснастки, мм </div>
-                                                        <div class="product__characteristics-value"> <span>13</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Размер </div>
-                                                        <div class="product__characteristics-value"> <span>4,8 х 29 мм</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Вид товара </div>
-                                                        <div class="product__characteristics-value"> <span>Дрель-шуруповерт</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Частота вращения, об/мин </div>
-                                                        <div class="product__characteristics-value"> <span>0-450/0-1600</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Гарантия производителя </div>
-                                                        <div class="product__characteristics-value"> <span>1 год</span> </div>
-                                                    </div>
-                                                    <div class="product__characteristics-item">
-                                                        <div class="product__characteristics-name"> Тип товара </div>
-                                                        <div class="product__characteristics-value"> <span>Аккумуляторная</span> </div>
-                                                    </div>
-                                                </div>
-                                                <div class="product__button-wrapper">
-                                                    <div class="product__button base-button base-button--primary base-button--rounded"> <span class="base-button__inner"> <span class="base-button__content"> Подробнее </span> </span> </div>
-                                                </div>
-                                            </div>
-                                        </a> </div>
                                     <div class="p-catalog__product product"> <a href="#" class="product__link" aria-label="Лопата совковая из рельсовой стали, с ребром жёсткости без черенка UNIK">
                                             <div class="product__image-wrapper">
                                                 <div class="product__image-box"> <img class="product__image" src="img/products/1.jpg" srcset="img/products/1@2x.jpg 2x" width="280" height="280" alt="" loading="lazy"> </div>
@@ -1136,7 +891,7 @@
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-qvl4gb2y2"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-qvl4gb2y2" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-5cazi8k48"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-5cazi8k48" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
@@ -1144,14 +899,14 @@
                                     <div class="form__column">
                                         <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-yfge88ggk"> <span>Номер телефона</span> </label> <input id="base-text-field-yfge88ggk" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-itsshb1y5"> <span>Номер телефона</span> </label> <input id="base-text-field-itsshb1y5" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-aykqd8a36"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-aykqd8a36" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-pnzr8taei"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-pnzr8taei" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
@@ -1159,7 +914,7 @@
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--textarea base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-euf5jhjpp"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-euf5jhjpp" name="message" rows="4" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-9q5z51gij"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-9q5z51gij" name="message" rows="4" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>

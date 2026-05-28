@@ -10509,6 +10509,7 @@ function initSwiper() {
 
         window.addEventListener('resize', categoriesSwiperInit);
     }
+
     if (document.querySelector('.js-featured-categories-swiper:not(.swiper-initialized)')) {
 
         const categoriesSwiperInit = () => {
@@ -10549,6 +10550,47 @@ function initSwiper() {
         };
 
         categoriesSwiperInit();
+    }
+
+     if (document.querySelector('.js-found-categories-swiper:not(.swiper-initialized)')) {
+        let categoriesSwiperInstance;
+
+        const categoriesSwiperInit = () => {
+            if (window.innerWidth < 1025 && !categoriesSwiperInstance) {
+                categoriesSwiperInstance = new Swiper('.js-found-categories-swiper:not(.swiper-initialized)', {
+                    modules: [freeMode],
+                    slidesPerView: 'auto',
+                    spaceBetween: 12,
+                    freeMode: {
+                        enabled: true,
+                    },
+                    //  scrollbar: {
+                    //     el: '.js-categories-swiper-scrollbar',
+                    //     draggable: true,
+                    //     snapOnRelease: false,
+                    // },
+                    breakpoints: {
+                        768: {
+                             slidesPerView: 3,
+                            slidesPerGroup: 3,
+                            spaceBetween: 18,
+                        },
+                        992: {
+                             slidesPerView: 4,
+                            slidesPerGroup: 4,
+                            spaceBetween: 18,
+                        },
+                    }
+                });
+            } else if (window.innerWidth >= 1025 && categoriesSwiperInstance) {
+                categoriesSwiperInstance.destroy(true, true);
+                categoriesSwiperInstance = null;
+            }
+        };
+
+        categoriesSwiperInit();
+
+        window.addEventListener('resize', categoriesSwiperInit);
     }
 
     const productsSwiperElements = document.querySelectorAll('.js-products-swiper:not(.swiper-initialized)');
