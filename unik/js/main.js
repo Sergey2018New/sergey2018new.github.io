@@ -11264,38 +11264,41 @@ if (homeContentSlider && homeImageSlider) {
     }
 
     if (document.querySelector('.js-catalog-gallery-swiper:not(.swiper-initialized)')) {
-        let catalogGallerySwiperInstance;
 
         const catalogGallerySwiperInit = () => {
-            if (window.innerWidth < 1025 && !catalogGallerySwiperInstance) {
-                catalogGallerySwiperInstance = new Swiper('.js-catalog-gallery-swiper:not(.swiper-initialized)', {
-                    modules: [freeMode, Scrollbar],
-                    slidesPerView: 'auto',
-                    spaceBetween: 12,
-                    freeMode: {
-                        enabled: true,
+            new Swiper('.js-catalog-gallery-swiper:not(.swiper-initialized)', {
+                modules: [freeMode, Scrollbar, Pagination, Navigation],
+                slidesPerView: 'auto',
+                spaceBetween: 12,
+                freeMode: {
+                    enabled: true,
+                },
+                speed: 600,
+                navigation: {
+                    prevEl: '.js-catalog-gallery-swiper-prev',
+                    nextEl: '.js-catalog-gallery-swiper-next',
+                },
+                scrollbar: {
+                    el: '.js-catalog-gallery-swiper-scrollbar',
+                    draggable: true,
+                    snapOnRelease: false,
+                },
+                pagination: {
+                    el: '.js-catalog-gallery-swiper-pagination',
+                    type: 'bullets',
+                    clickable: true,
+                },
+                breakpoints: {
+                    1025: {
+                        freeMode: {
+                            enabled: false,
+                        },
                     },
-                    scrollbar: {
-                        el: '.js-catalog-gallery-swiper-scrollbar',
-                        draggable: true,
-                        snapOnRelease: false,
-                    },
-                    // breakpoints: {
-                    //     768: {
-                    //         slidesPerView: 2,
-                    //         slidesPerGroup: 2,
-                    //     },
-                    // },
-                });
-            } else if (window.innerWidth >= 1025 && catalogGallerySwiperInstance) {
-                catalogGallerySwiperInstance.destroy(true, true);
-                catalogGallerySwiperInstance = null;
-            }
+                },
+            });
         };
 
         catalogGallerySwiperInit();
-
-        window.addEventListener('resize', catalogGallerySwiperInit);
     }
 }
 
