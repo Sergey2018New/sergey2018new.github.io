@@ -253,10 +253,10 @@
                     <div class="home-section__bg-wrapper pattern-bg-wrapper u-visible-desktop">
                         <div class="home-section__bg pattern-bg"> <img class="pattern-bg__image" src="img/home-pattern-bg.png" width="2176" height="730" alt=""> </div>
                     </div>
-                    <div class="home-section__swiper-wrapper">
-                        <div class="swiper home-section__swiper js-home-swiper">
+                    <div class="home-section__swiper-wrapper"> <!-- Слайдер с контентом (opacity эффект) -->
+                        <div class="swiper home-section__content-swiper js-home-content-swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide home-section__slide">
+                                <div class="swiper-slide home-section__content-slide">
                                     <div class="home-section__slide-container container">
                                         <div class="home-section__slide-content">
                                             <div class="home-section__slide-content-inner">
@@ -271,13 +271,9 @@
                                                             </span> </span> </button> </div>
                                             </div>
                                         </div>
-                                        <picture class="home-section__slide-image-box u-hidden-mobile">
-                                            <source media="(max-width: 1024.98px)" srcset="img/home-section/product-1-tablet.png 1x, img/home-section/product-1-tablet@2x.png 2x">
-                                            <img alt="" class="home-section__slide-image" src="img/home-section/product-1.png" srcset="img/home-section/product-1@2x.png 2x" width="742" height="690" fetchpriority="high">
-                                        </picture>
                                     </div>
                                 </div>
-                                <div class="swiper-slide home-section__slide">
+                                <div class="swiper-slide home-section__content-slide">
                                     <div class="home-section__slide-container container">
                                         <div class="home-section__slide-content">
                                             <div class="home-section__slide-content-inner">
@@ -292,10 +288,9 @@
                                                             </span> </span> </button> </div>
                                             </div>
                                         </div>
-                                        <picture class="home-section__slide-image-box u-hidden-mobile"> <img alt="" class="home-section__slide-image" src="img/home-section/product-2.png" srcset="img/home-section/product-2@2x.png 2x" width="742" height="690" loading="lazy"> </picture>
                                     </div>
                                 </div>
-                                <div class="swiper-slide home-section__slide">
+                                <div class="swiper-slide home-section__content-slide">
                                     <div class="home-section__slide-container container">
                                         <div class="home-section__slide-content">
                                             <div class="home-section__slide-content-inner">
@@ -310,10 +305,9 @@
                                                             </span> </span> </button> </div>
                                             </div>
                                         </div>
-                                        <picture class="home-section__slide-image-box u-hidden-mobile"> <img alt="" class="home-section__slide-image" src="img/home-section/product-1.png" srcset="img/home-section/product-1@2x.png 2x" width="742" height="690" loading="lazy"> </picture>
                                     </div>
                                 </div>
-                                <div class="swiper-slide home-section__slide">
+                                <div class="swiper-slide home-section__content-slide">
                                     <div class="home-section__slide-container container">
                                         <div class="home-section__slide-content">
                                             <div class="home-section__slide-content-inner">
@@ -328,7 +322,6 @@
                                                             </span> </span> </button> </div>
                                             </div>
                                         </div>
-                                        <picture class="home-section__slide-image-box u-hidden-mobile"> <img alt="" class="home-section__slide-image" src="img/home-section/product-2.png" srcset="img/home-section/product-2@2x.png 2x" width="742" height="690" loading="lazy"> </picture>
                                     </div>
                                 </div>
                             </div>
@@ -340,6 +333,32 @@
                                         </svg> </button> </div>
                             </div>
                             <div class="home-section__swiper-pagination swiper-pagination js-home-swiper-pagination"></div>
+                        </div> <!-- Слайдер с изображениями (обычный слайд) -->
+                        <div class="swiper home-section__image-swiper js-home-image-swiper u-hidden-mobile">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide home-section__image-slide">
+                                    <div class="home-section__slide-container container">
+                                        <picture class="home-section__slide-image-box ">
+                                            <source media="(max-width: 1024.98px)" srcset="img/home-section/product-1-tablet.png 1x, img/home-section/product-1-tablet@2x.png 2x"> <img alt="" class="home-section__slide-image" src="img/home-section/product-1.png" srcset="img/home-section/product-1@2x.png 2x" width="742" height="690" fetchpriority="high">
+                                        </picture>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide home-section__image-slide">
+                                    <div class="home-section__slide-container container">
+                                        <picture class="home-section__slide-image-box "> <img alt="" class="home-section__slide-image" src="img/home-section/product-2.png" srcset="img/home-section/product-2@2x.png 2x" width="742" height="690" loading="lazy"> </picture>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide home-section__image-slide">
+                                    <div class="home-section__slide-container container">
+                                        <picture class="home-section__slide-image-box "> <img alt="" class="home-section__slide-image" src="img/home-section/product-1.png" srcset="img/home-section/product-1@2x.png 2x" width="742" height="690" loading="lazy"> </picture>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide home-section__image-slide">
+                                    <div class="home-section__slide-container container">
+                                        <picture class="home-section__slide-image-box "> <img alt="" class="home-section__slide-image" src="img/home-section/product-2.png" srcset="img/home-section/product-2@2x.png 2x" width="742" height="690" loading="lazy"> </picture>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1726,7 +1745,7 @@
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-ymoscixnj"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-ymoscixnj" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-t8jrr2tp2"> <span>Ваше имя<span class="u-required">*</span></span> </label> <input id="base-text-field-t8jrr2tp2" type="text" name="name" value class="base-text-field__input js-base-text-field-input js-validate-field" class="js-validate-field"> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
@@ -1734,14 +1753,14 @@
                                     <div class="form__column">
                                         <div class="base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-woxckxoli"> <span>Номер телефона</span> </label> <input id="base-text-field-woxckxoli" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-qs9niwd76"> <span>Номер телефона</span> </label> <input id="base-text-field-qs9niwd76" type="text" name="phone" value class="base-text-field__input js-base-text-field-input"> </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-36jagdrq5"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-36jagdrq5" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-n8qo95jao"> <span>E-mail<span class="u-required">*</span></span> </label> <input id="base-text-field-n8qo95jao" type="text" name="email" value class="base-text-field__input js-base-text-field-input js-validate-field js-validate-field-email" class="js-validate-field js-validate-field-email"> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
@@ -1749,7 +1768,7 @@
                                     <div class="form__column">
                                         <div class="js-validate-field-wrapper base-text-field js-base-text-field base-text-field--outlined base-text-field--textarea base-text-field--float-label">
                                             <div class="base-text-field__control js-base-text-field-control">
-                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-qlry78s7c"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-qlry78s7c" name="message" rows="4" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
+                                                <div class="base-text-field__field"> <label class="base-text-field__float-label" for="base-text-field-cz9s2vtw5"> <span>Сообщение<span class="u-required">*</span></span> </label> <textarea id="base-text-field-cz9s2vtw5" name="message" rows="4" class="base-text-field__textarea js-base-text-field-input js-validate-field" class="js-validate-field"></textarea> </div>
                                             </div>
                                             <div class="base-text-field__message base-text-field__message--error js-validate-field-error"></div>
                                         </div>
