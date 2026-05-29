@@ -11008,7 +11008,7 @@ function initSwiper() {
         let catalogGallerySwiperInstance;
 
         const catalogGallerySwiperInit = () => {
-            if (window.innerWidth < 1024 && !catalogGallerySwiperInstance) {
+            if (window.innerWidth < 1025 && !catalogGallerySwiperInstance) {
                 catalogGallerySwiperInstance = new Swiper('.js-catalog-gallery-swiper:not(.swiper-initialized)', {
                     modules: [freeMode, Scrollbar],
                     slidesPerView: 'auto',
@@ -11021,12 +11021,12 @@ function initSwiper() {
                         draggable: true,
                         snapOnRelease: false,
                     },
-                    breakpoints: {
-                        768: {
-                            slidesPerView: 2,
-                            slidesPerGroup: 2,
-                        },
-                    },
+                    // breakpoints: {
+                    //     768: {
+                    //         slidesPerView: 2,
+                    //         slidesPerGroup: 2,
+                    //     },
+                    // },
                 });
             } else if (window.innerWidth >= 1025 && catalogGallerySwiperInstance) {
                 catalogGallerySwiperInstance.destroy(true, true);
