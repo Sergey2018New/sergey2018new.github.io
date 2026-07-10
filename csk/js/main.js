@@ -45723,6 +45723,8 @@ function initSwiper() {
         swiperProducts.forEach((swiperEl) => {
             const desktopSlidesPerView = Number(swiperEl.getAttribute('data-desktop-slides-per-view') || 4);
             const desktopSlidesPerGroup = Number(swiperEl.getAttribute('data-desktop-slides-per-group') || 4);
+            const tabletSlidesPerView = (isNumeric(swiperEl.getAttribute('data-tablet-slides-per-view')) ? Number(swiperEl.getAttribute('data-tablet-slides-per-view')) : swiperEl.getAttribute('data-tablet-slides-per-view')) || 3;
+            const tabletSlidesPerGroup = (isNumeric(swiperEl.getAttribute('data-tablet-slides-per-group')) ? Number(swiperEl.getAttribute('data-tablet-slides-per-group')) : swiperEl.getAttribute('data-tablet-slides-per-group')) || 3;
             const desktopSpaceBetween = Number(swiperEl.getAttribute('data-desktop-space-between') || 20);
 
             new Swiper(swiperEl, {
@@ -45755,8 +45757,8 @@ function initSwiper() {
                     768: {
                         // slidesPerView: 'auto',
                         // slidesPerGroup: 1,
-                          slidesPerView: 3,
-                        slidesPerGroup: 3,
+                          slidesPerView: tabletSlidesPerView,
+                        slidesPerGroup: tabletSlidesPerGroup,
                         spaceBetween: 16,
                     },
                     992: {
@@ -46230,7 +46232,11 @@ function initSwiper() {
 
                 source ? source.setAttribute('srcset', source.getAttribute('data-srcset')) : '';
             });
-    }}
+    }    function isNumeric(str) {
+    if (typeof str !== "string") return false;
+    return !isNaN(Number(str)) && isFinite(str);
+    }
+}
 
 var masonry = {exports: {}};
 
