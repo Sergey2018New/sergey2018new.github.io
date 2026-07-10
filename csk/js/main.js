@@ -45659,7 +45659,7 @@ function initSwiper() {
     }
 
     new Swiper('.js-swiper-articles:not(.swiper-initialized)', {
-        modules: [Keyboard, Navigation, freeMode],
+        modules: [Keyboard, Navigation, freeMode, Mousewheel],
         keyboard: {
             enabled: true,
             onlyInViewport: true,
@@ -45670,20 +45670,25 @@ function initSwiper() {
         slidesPerGroup: 1,
         spaceBetween: 16,
         loop: false,
+           speed: 450,
+        mousewheel: {
+            forceToAxis: true,
+            enabled: true,
+        },
         navigation: {
           prevEl: '.js-swiper-articles-prev',
           nextEl: '.js-swiper-articles-next',
         },
         breakpoints: {
-            576: {
-                slidesPerView: 2,
-                slidesPerGroup: 2,
-                spaceBetween: 20,
-            },
             992: {
                 slidesPerView: 3,
                 slidesPerGroup: 3,
                 spaceBetween: 20,
+            },
+            1200: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                spaceBetween: 24,
             },
         },
         on: {
@@ -45718,9 +45723,10 @@ function initSwiper() {
         swiperProducts.forEach((swiperEl) => {
             const desktopSlidesPerView = Number(swiperEl.getAttribute('data-desktop-slides-per-view') || 4);
             const desktopSlidesPerGroup = Number(swiperEl.getAttribute('data-desktop-slides-per-group') || 4);
+            const desktopSpaceBetween = Number(swiperEl.getAttribute('data-desktop-space-between') || 20);
 
             new Swiper(swiperEl, {
-                modules: [Keyboard, Navigation, freeMode],
+                modules: [Keyboard, Navigation, freeMode, Mousewheel],
                 keyboard: {
                     enabled: true,
                     onlyInViewport: true,
@@ -45729,13 +45735,23 @@ function initSwiper() {
                 freeMode: true,
                 slidesPerView: 'auto',
                 slidesPerGroup: 1,
-                spaceBetween: 16,
+                spaceBetween: 12,
                 loop: false,
+                    speed: 450,
+                mousewheel: {
+                    forceToAxis: true,
+                    enabled: true,
+                },
                 navigation: {
                   prevEl: '.js-swiper-products-prev',
                   nextEl: '.js-swiper-products-next',
                 },
                 breakpoints: {
+                    576: {
+                        slidesPerView: 'auto',
+                        slidesPerGroup: 1,
+                        spaceBetween: 16,
+                    },
                     768: {
                         // slidesPerView: 'auto',
                         // slidesPerGroup: 1,
@@ -45746,12 +45762,12 @@ function initSwiper() {
                     992: {
                         slidesPerView: 4,
                         slidesPerGroup: 4,
-                        spaceBetween: 20,
+                        spaceBetween: desktopSpaceBetween,
                     },
                     1400: {
                         slidesPerView: desktopSlidesPerView,
                         slidesPerGroup: desktopSlidesPerGroup,
-                        spaceBetween: 20,
+                        spaceBetween: desktopSpaceBetween,
                     },
                 },
                 on: {
@@ -45851,8 +45867,8 @@ function initSwiper() {
         }
     }
 
-    new Swiper('.js-categories-slider:not(.swiper-initialized)', {
-        modules: [Keyboard, freeMode, Navigation],
+    new Swiper('.js-categories-swiper:not(.swiper-initialized)', {
+        modules: [Keyboard, freeMode, Navigation, Mousewheel],
         keyboard: {
             enabled: true,
             onlyInViewport: true,
@@ -45860,19 +45876,38 @@ function initSwiper() {
         grabCursor: true,
         freeMode: true,
         slidesPerView: 'auto',
-        slidesPerGroup: 2,
-        spaceBetween: 0,
+        slidesPerGroup: 1,
+        spaceBetween: 16,
         loop: false,
+        speed: 450,
+        mousewheel: {
+            forceToAxis: true,
+            enabled: true,
+        },
         navigation: {
-            prevEl: '.js-categories-slider-prev',
-            nextEl: '.js-categories-slider-next',
+            prevEl: '.js-categories-swiper-prev',
+            nextEl: '.js-categories-swiper-next',
           },
         breakpoints: {
-            768: {
+            992: {
+                slidesPerView: 3,
                 slidesPerGroup: 3,
+                spaceBetween: 16,
             },
             1025: {
+                slidesPerView: 3,
+                slidesPerGroup: 3,
+                spaceBetween: 24,
+            },
+            1200: {
+                slidesPerView: 4,
                 slidesPerGroup: 4,
+                spaceBetween: 24,
+            },
+            1340: {
+                slidesPerView: 5,
+                slidesPerGroup: 5,
+                spaceBetween: 24,
             },
         },
     });
@@ -46092,7 +46127,7 @@ function initSwiper() {
     }
 
      new Swiper('.js-swiper-brands:not(.swiper-initialized)', {
-        modules: [Keyboard, Navigation, freeMode],
+        modules: [Keyboard, Navigation, freeMode, Mousewheel],
         keyboard: {
             enabled: true,
             onlyInViewport: true,
@@ -46104,12 +46139,17 @@ function initSwiper() {
         spaceBetween: 16,
         loop: false,
         navigation: {
-          prevEl: '.js-swiper-brands-prev',
-          nextEl: '.js-swiper-brands-next',
+            prevEl: '.js-swiper-brands-prev',
+            nextEl: '.js-swiper-brands-next',
+        },
+        speed: 450,
+        mousewheel: {
+            forceToAxis: true,
+            enabled: true,
         },
         breakpoints: {
             768: {
-                spaceBetween: 16,
+                spaceBetween: 14,
                 slidesPerView: 3,
                 slidesPerGroup: 3,
             },
@@ -46117,6 +46157,11 @@ function initSwiper() {
                 spaceBetween: 20,
                 slidesPerView: 4,
                 slidesPerGroup: 4,
+            },
+            1200: {
+                spaceBetween: 24,
+                slidesPerView: 6,
+                slidesPerGroup: 6,
             },
         },
         on: {
@@ -46144,6 +46189,30 @@ function initSwiper() {
             },
         },
     });
+
+    if (document.querySelector('.js-swiper-features:not(.swiper-initialized)')) {
+        let featuresSwiperInstance;
+
+        const featuresSwiperInit = () => {
+            if (window.innerWidth < 992 && !featuresSwiperInstance) {
+                featuresSwiperInstance = new Swiper('.js-swiper-features:not(.swiper-initialized)', {
+                    modules: [freeMode],
+                    slidesPerView: 'auto',
+                    spaceBetween: 16,
+                    freeMode: {
+                        enabled: true,
+                    },
+                });
+            } else if (window.innerWidth >= 992 && featuresSwiperInstance) {
+                featuresSwiperInstance.destroy(true, true);
+                featuresSwiperInstance = null;
+            }
+        };
+
+        featuresSwiperInit();
+
+        window.addEventListener('resize', featuresSwiperInit);
+    }
 
     function preloadNext(swiper, n) {
         swiper
