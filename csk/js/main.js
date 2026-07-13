@@ -45670,7 +45670,7 @@ function initSwiper() {
         slidesPerGroup: 1,
         spaceBetween: 16,
         loop: false,
-           speed: 450,
+           speed: 550,
         mousewheel: {
             forceToAxis: true,
             enabled: true,
@@ -46144,7 +46144,7 @@ function initSwiper() {
             prevEl: '.js-swiper-brands-prev',
             nextEl: '.js-swiper-brands-next',
         },
-        speed: 450,
+        speed: 500,
         mousewheel: {
             forceToAxis: true,
             enabled: true,
@@ -46158,12 +46158,12 @@ function initSwiper() {
             992: {
                 spaceBetween: 20,
                 slidesPerView: 4,
-                slidesPerGroup: 4,
+                slidesPerGroup: 2,
             },
             1200: {
                 spaceBetween: 24,
                 slidesPerView: 6,
-                slidesPerGroup: 6,
+                slidesPerGroup: 3,
             },
         },
         on: {
