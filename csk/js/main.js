@@ -38860,6 +38860,23 @@ function initScrollbar() {
     };
 }
 
+function initSelect() {
+	const selectItems = document.querySelectorAll('.js-select');
+
+	selectItems.forEach((el) => {
+        new SlimSelect({
+            select: el,
+             settings: {
+                showSearch: false,
+                modal: 'off',
+            },
+
+        });
+	});
+
+
+}
+
 /*
 	  --------
 	|   MODAL  |
@@ -45869,50 +45886,62 @@ function initSwiper() {
         }
     }
 
-    new Swiper('.js-categories-swiper:not(.swiper-initialized)', {
-        modules: [Keyboard, freeMode, Navigation, Mousewheel],
-        keyboard: {
-            enabled: true,
-            onlyInViewport: true,
-        },
-        grabCursor: true,
-        freeMode: true,
-        slidesPerView: 'auto',
-        slidesPerGroup: 1,
-        spaceBetween: 16,
-        loop: false,
-        speed: 450,
-        mousewheel: {
-            forceToAxis: true,
-            enabled: true,
-        },
-        navigation: {
-            prevEl: '.js-categories-swiper-prev',
-            nextEl: '.js-categories-swiper-next',
-          },
-        breakpoints: {
-            992: {
-                slidesPerView: 3,
-                slidesPerGroup: 3,
+    const swiperCategoriesAll = document.querySelectorAll('.js-categories-swiper:not(.swiper-initialized)');
+
+    if (swiperCategoriesAll?.length) {
+        swiperCategoriesAll.forEach((swiperEl) => {
+            const desktopSlidesPerView = Number(swiperEl.getAttribute('data-desktop-slides-per-view') || 5);
+            const desktopSlidesPerGroup = Number(swiperEl.getAttribute('data-desktop-slides-per-group') || 5);
+            const netbookSlidesPerView = Number(swiperEl.getAttribute('data-netbook-slides-per-view') || 4);
+            const netbookSlidesPerGroup = Number(swiperEl.getAttribute('data-netbook-slides-per-group') || 4);
+
+            new Swiper(swiperEl, {
+                modules: [Keyboard, freeMode, Navigation, Mousewheel],
+                keyboard: {
+                    enabled: true,
+                    onlyInViewport: true,
+                },
+                grabCursor: true,
+                freeMode: true,
+                slidesPerView: 'auto',
+                slidesPerGroup: 1,
                 spaceBetween: 16,
-            },
-            1025: {
-                slidesPerView: 3,
-                slidesPerGroup: 3,
-                spaceBetween: 24,
-            },
-            1200: {
-                slidesPerView: 4,
-                slidesPerGroup: 4,
-                spaceBetween: 24,
-            },
-            1340: {
-                slidesPerView: 5,
-                slidesPerGroup: 5,
-                spaceBetween: 24,
-            },
-        },
-    });
+                loop: false,
+                speed: 450,
+                mousewheel: {
+                    forceToAxis: true,
+                    enabled: true,
+                },
+                navigation: {
+                    prevEl: '.js-categories-swiper-prev',
+                    nextEl: '.js-categories-swiper-next',
+                },
+                breakpoints: {
+                    992: {
+                        slidesPerView: 3,
+                        slidesPerGroup: 3,
+                        spaceBetween: 16,
+                    },
+                    1025: {
+                        slidesPerView: 3,
+                        slidesPerGroup: 3,
+                        spaceBetween: 24,
+                    },
+                    1200: {
+                        slidesPerView: netbookSlidesPerView,
+                        slidesPerGroup: netbookSlidesPerGroup,
+                        spaceBetween: 24,
+                    },
+                    1340: {
+                        slidesPerView: desktopSlidesPerView,
+                        slidesPerGroup: desktopSlidesPerGroup,
+                        spaceBetween: 24,
+                    },
+                },
+            });
+
+        });
+    }
 
     const productSliders = document.querySelectorAll('.js-product-slider');
 
@@ -46215,6 +46244,33 @@ function initSwiper() {
 
         window.addEventListener('resize', featuresSwiperInit);
     }
+
+    new Swiper('.js-swiper-promo:not(.swiper-initialized)', {
+        modules: [Keyboard, Navigation, Mousewheel],
+        keyboard: {
+            enabled: true,
+            onlyInViewport: true,
+        },
+        grabCursor: true,
+        slidesPerView: 1,
+        slidesPerGroup: 1,
+        spaceBetween: 16,
+        loop: false,
+        navigation: {
+            prevEl: '.js-swiper-promo-prev',
+            nextEl: '.js-swiper-promo-next',
+        },
+        speed: 700,
+        mousewheel: {
+            forceToAxis: true,
+            enabled: true,
+        },
+        breakpoints: {
+            768: {
+                spaceBetween: 20,
+            },
+        },
+    });
 
     function preloadNext(swiper, n) {
         swiper
@@ -53958,6 +54014,7 @@ setAlert();
 setDatepickerCalendar();
 initScrollbar();
 modal.init();
+initSelect();
 
 // /* Initialization additional components ******* */
 initFancybox();
